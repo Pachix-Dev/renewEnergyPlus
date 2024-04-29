@@ -81,9 +81,9 @@ const base = lang === 'es' ? '' : `/${lang}`
             id='dropdownExhibitors'
             data-dropdown-toggle='dropdownNavbar1'
             data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 text-blue-950 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
           >
-            {t('menu.option1.title')}
+            {t('menu.submenu_1.title')}
             <svg
               class='w-2.5 h-2.5 ml-2.5'
               aria-hidden='true'
@@ -127,7 +127,7 @@ const base = lang === 'es' ? '' : `/${lang}`
         <li>
           <a
             href={`${base}/#summit`}
-            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 lg:border-none border-gray-300 border-b text-blue-950 font-bold'
+            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 lg:border-none border-gray-300 border-b font-bold'
             aria-current='page'>{t('menu.option2.title')}</a
           >
         </li>
@@ -136,7 +136,7 @@ const base = lang === 'es' ? '' : `/${lang}`
             id='dropdownExhibitors'
             data-dropdown-toggle='dropdownNavbar2'
             data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 text-blue-950 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
           >
             {t('menu.option3.title')}
             <svg
@@ -171,17 +171,6 @@ const base = lang === 'es' ? '' : `/${lang}`
                   class='block px-4 py-2'>{t('menu.option3.subMenu.option1')}</a
                 >
               </li>
-              {
-                /*<li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href='/files/MANUAL-DEL-EXPOSITOR-AMOF-ES.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'
-                >
-                  {t('menu.option3.subMenu.option2')}
-                </a>
-              </li> */
-              }
               <li class='hover:bg-blue-100 font-semibold'>
                 <a href={`${base}/#perfil-expositor`} class='block px-4 py-2'
                   >{t('menu.option3.subMenu.option3')}
@@ -232,14 +221,14 @@ const base = lang === 'es' ? '' : `/${lang}`
         <li>
           <a
             href={`${base}/#visitantes`}
-            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 lg:border-none border-gray-300 border-b text-blue-950 font-bold'
+            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 lg:border-none border-gray-300 border-b font-bold'
             aria-current='page'>{t('menu.option4.title')}</a
           >
         </li>
         <li>
           <a
             href={`${base}/#contactanos`}
-            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 text-blue-950 font-bold'
+            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 font-bold'
             aria-current='page'>{t('menu.option5.title')}</a
           >
         </li>
