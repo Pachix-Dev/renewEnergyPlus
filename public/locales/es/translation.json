@@ -35,7 +35,7 @@
             "directory": "Directorio de expositores"
         },
         "submenu_5": {
-            "title": "MEDIA HUB",
+            "title": "CONTACTO",
             "option_1": "Galería"
         },
         "banner": "¡Regístrate ahora!",
@@ -59,7 +59,7 @@
         "energy_night_date": "Miércoles <br /><p>17 de <span>abril</span> 2024</p> 19:00 hrs",
         "solar_bg_video": "LA <strong>FERIA DEL FUTURO<br /> ENERGÉTICO</strong> DE MÉXICO <br /><br />Abril 17 - 19, 2024 <br />Expo Guadalajara",
         "solar_date_hours": "miércoles 17, 11:00 am – 6:00 pm<br />jueves 18, 11:00 am – 6:00 pm<br />viernes 19, 11:00 am – 5:00 pm",
-        "solar_description": "evoluciona hacia <strong>RE+ MEXICO</strong>, dando un paso trascendental para abarcar todas las energías limpias. Esta nueva etapa será clave para marcar el rumbo del futuro energético renovable de nuestro país.",
+        "solar_description": "evoluciona hacia <strong> RE+ MEXICO </strong>, dando un paso trascendental para abarcar todas las energías limpias. Esta nueva etapa será clave para marcar el rumbo del futuro energético renovable de nuestro país.",
         "gallery": "Galería",
         "more_videos": "VIDEOS",
         "more_gallery": "GALERÍA",
@@ -159,7 +159,7 @@
                 "desc3":"PRÓXIMAMENTE"
             }
         },
-        "button_contact": "enviar mensaje",
+        "button_contact": "Enviar mensaje",
         "sponsors": {
             "title": "¿Quieres ser patrocinador?",
             "description": "Descarga nuestro brochure para patrocinadores "

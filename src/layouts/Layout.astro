@@ -8,6 +8,7 @@ const { title } = Astro.props
 import Menu from '../components/Menu.astro'
 import i18next, { t } from 'i18next'
 import { HeadHrefLangs } from 'astro-i18next/components'
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ import { HeadHrefLangs } from 'astro-i18next/components'
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
     <HeadHrefLangs />
+    <ViewTransitions />
   </head>
   <body>
     <Menu />

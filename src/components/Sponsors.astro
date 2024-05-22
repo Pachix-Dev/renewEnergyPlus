@@ -1,0 +1,176 @@
+---
+import i18next, { t } from 'i18next';
+---
+
+<section>
+	<p class='text-3xl font-bold text-center pt-20'>
+		{t('home.sponsor_platinum')}
+	</p>
+	<img
+		src='/img/sponsors/Huawei.webp'
+		alt='Logotipo Huawei'
+		class='w-[200px] h-[45px] m-auto mt-4'
+	/>
+	<p class='text-3xl font-bold text-center pt-10'>
+		{t('home.sponsor_gold')}
+	</p>
+	<div class='flex justify-center gap-14 mt-5 '>
+		<img
+			src='/img/sponsors/quartux.webp'
+			alt=''
+			class='w-[196px] h-[98px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/longi.webp'
+			alt=''
+			class='w-[196px] h-[98px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/enlight.webp'
+			alt=''
+			class='w-[196px] h-[98px] my-auto mx-3'
+		/>
+	</div>
+	<p class='text-3xl font-bold text-center pt-10'>
+		{t('home.sponsor')}
+	</p>
+	<div class='flex justify-center gap-14 mt-5'>
+		<img
+			src='/img/sponsors/hitachi.webp'
+			alt=''
+			class='w-[150px] h-[117px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/SUNPOWER.webp'
+			alt=''
+			class='w-[170px] h-[40px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/S-5logo.webp'
+			alt=''
+			class='w-[100px] h-[100px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/korepower.webp'
+			alt=''
+			class='w-[240px] h-[120px] my-auto mx-3'
+		/>
+	</div>
+	<div class='flex mx-auto max-w-max gap-14 mt-5 '>
+		<img
+			src='/img/sponsors/apSystems.webp'
+			alt=''
+			class='w-[200px] h-[50px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/trina-solar.webp'
+			alt=''
+			class='w-[200px] h-[100px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/BayWar.webp'
+			alt=''
+			class='w-[250px] h-[96px] my-auto mx-3'
+		/>
+	</div>
+	<div class='flex mx-auto max-w-max gap-14 mt-5 mb-14'>
+		<img
+			src='/img/sponsors/solargamo.webp'
+			alt=''
+			class='w-[200px] h-[89px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/antai.webp'
+			alt=''
+			class='w-[150px] h-[63px] my-auto mx-3'
+		/>
+		<img
+			src='/img/sponsors/seraphim.webp'
+			alt=''
+			class='w-[200px] h-[100px] my-auto mx-3'
+		/>
+	</div>
+	<button class="button m-auto text-6xl font-bold">
+		<p>COMO SER PATROCINADOR </p>
+		<svg fill="currentColor" viewBox="0 0 24 24" class="icon mr-5 my-5">
+			<path
+				clip-rule="evenodd"
+				d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+				fill-rule="evenodd"
+			></path>
+		</svg>
+	</button>
+	
+</section>
+<style>
+	.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background: rgb(188,1,0);
+	background: linear-gradient(90deg, rgba(188,1,0,1) 0%, rgba(215,105,1,1) 100%);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+</style>

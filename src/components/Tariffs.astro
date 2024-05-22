@@ -1,0 +1,175 @@
+---
+import i18next, { t } from 'i18next';
+import Profile from '../components/Profile.astro'
+---
+
+<section
+	class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(216,106,3,1)_100%)] text-white py-10'
+>
+	<p class='text-center p-5 text-3xl font-bold'>RE+ MEXICO STANDS 2025</p>
+	<p
+		class='text-center m-5 text-xl italic'
+		set:html={t('home.rates.sub-title')}
+	/>
+	<div class='grid grid-cols-3 gap-5 mx-28 text-center'>
+		<div class='bg-white p-4 rounded-md justify-center'>
+			<p
+				class='text-black font-bold text-3xl'
+				set:html={t(`home.rates.item1.title1`)}
+			/>
+			<div class='flex justify-center py-5'>
+				<div class='px-3 w-full container'>
+					<p
+						class='text-red-700 mb-4 text-sm font-bold'
+						set:html={t(`home.rates.item1.price1-title`)}
+					/>
+					<p class='text-black mb-4' set:html={t(`home.rates.item1.price1`)} />
+				</div>
+				<div class='px-3 w-full container'>
+					<p
+						class='text-red-700 mt-5 mb-4 text-sm font-bold'
+						set:html={t(`home.rates.item1.price2-title`)}
+					/>
+					<p class='text-black mb-4' set:html={t(`home.rates.item1.priece2`)} />
+				</div>
+			</div>
+			<p
+				class='text-black text-2xl py-2 font-bold'
+				set:html={t(`home.rates.item1.title2`)}
+			/>
+
+			<ul class='list-group text-black text-xl py-2 list-group-flush fs-5'>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item1.topic1`)}
+				/>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item1.topic2`)}
+				/>
+			</ul>
+			<p
+				class='text-black text-xl my-4 font-bold'
+				set:html={t(`home.rates.item1.topic3`)}
+			/>
+		</div>
+
+		<div class='bg-white p-4 rounded-md justify-center'>
+			<p
+				class='text-black font-bold text-3xl'
+				set:html={t(`home.rates.item2.title1`)}
+			/>
+			<div class='flex justify-center py-5'>
+				<div class='px-3 w-full container'>
+					<p
+						class='text-red-700 mb-4 text-sm font-bold'
+						set:html={t(`home.rates.item1.price1-title`)}
+					/>
+					<p class='text-black mb-4' set:html={t(`home.rates.item1.price1`)} />
+				</div>
+				<div class='px-3 w-full container'>
+					<p
+						class='text-red-700 mt-5 mb-4 text-sm font-bold'
+						set:html={t(`home.rates.item1.price2-title`)}
+					/>
+					<p class='text-black mb-4' set:html={t(`home.rates.item1.priece2`)} />
+				</div>
+			</div>
+			<p
+				class='text-black text-2xl py-2 font-bold'
+				set:html={t(`home.rates.item2.title2`)}
+			/>
+			<ul class='list-group text-black text-xl py-2 list-group-flush fs-5'>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item2.topic1`)}
+				/>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item2.topic2`)}
+				/>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item2.topic3`)}
+				/>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item2.topic4`)}
+				/>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item2.topic5`)}
+				/>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item2.topic6`)}
+				/>
+				<li
+					class='list-group-item py-2 border-b border-gray-300'
+					set:html={t(`home.rates.item2.topic7`)}
+				/>
+				<li
+					class='list-group-item py-2'
+					set:html={t(`home.rates.item2.topic8`)}
+				/>
+			</ul>
+		</div>
+		<div
+		class='bg-white p-4 rounded-md justify-center'
+	>
+		<p
+			class='text-black font-bold p-4 text-3xl'
+			set:html={t(`home.rates.item3.title1`)}
+		/>
+		<p class='text-black p-4 text-xl' set:html={t(`home.rates.item3.desc1`)} />
+		<p class='text-black p-4 text-xl' set:html={t(`home.rates.item3.desc2`)} />
+		<p
+			class='text-black p-4 font-bold text-3xl'
+			set:html={t(`home.rates.item3.desc3`)}
+		/>
+	</div>
+	</div>
+	
+	<p
+		class='text-white mt-4 p-4 font-bold text-center text-3xl'
+		set:html={t('home.title-visitor-profile')}
+	/>
+	<div class='die grid grid-cols-3 gap-6 mx-20'>
+		<Profile text="home.visitor-profile.item_1"/>
+    <Profile text="home.visitor-profile.item_5"/>
+    <Profile text="home.visitor-profile.item_9"/>
+    <Profile text="home.visitor-profile.item_2"/>
+    <Profile text="home.visitor-profile.item_6"/>
+    <Profile text="home.visitor-profile.item_10"/>
+    <Profile text="home.visitor-profile.item_3"/>
+    <Profile text="home.visitor-profile.item_7"/>
+    <Profile text="home.visitor-profile.item_11"/>
+    <Profile text="home.visitor-profile.item_4"/>
+    <Profile text="home.visitor-profile.item_8"/>
+		</div>
+	</div>
+</section>
+
+<style>
+	@keyframes show {
+		from {
+			opacity: 0;
+			scale: 10%;
+		}
+		to {
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+	.die{
+		view-timeline-name: --card;
+		view-timeline-axis: block;
+
+		animation-timeline: --card;
+		animation-name: show;
+
+		animation-range: entry 60% cover 60%;
+		animation-fill-mode: both;
+	}
+</style>
+

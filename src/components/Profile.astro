@@ -1,0 +1,15 @@
+---
+const {text} = Astro.props
+import i18next, { t } from 'i18next';
+---
+<div class='bg-white flex px-4 py-2 rounded-md h-auto items-center '>
+  <img
+    src='/img/icon_check.webp'
+    alt='Icono de Check'
+    class='w-12 h-12 my-auto'
+  />  
+  <p
+    class='text-black p-4 text-md font-medium italic'
+    set:html={t(`${text}`)}
+  />
+</div>

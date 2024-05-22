@@ -1,0 +1,73 @@
+---
+import i18next, { t } from 'i18next';
+import { MarqueeReact } from './MarqueeReact';
+import {
+	aliados1,
+	aliados2,
+	Broadcasting1,
+	Broadcasting2,
+} from '../data/constanst_aliados';
+---
+
+<section class='py-10'>
+	<p class='text-[#6C757D] font-bold text-4xl text-center py-10'>
+		{t('home.organized_by')} :
+	</p>
+	<div class='flex justify-around'>
+		<img
+			src='/img/italianExhibitionGroup.webp'
+			alt='Logo Italian Exhibition Gropup'
+			class='w-[150px] h-[82px] my-auto'
+		/>
+		<img
+			src='/img/deutscheMesse.webp'
+			alt='Logo DeutscheMesse'
+			class='w-[250px] h-[54px] my-auto'
+		/>
+		<img
+			src='/img/RE_Events_orange.webp'
+			alt='Logo RE Events Orange'
+			class='w-[100px] h-[80px] my-auto'
+		/>
+		<img
+			src='/img/snec-logo-new.webp'
+			alt='Logo DeutscheMesse'
+			class='w-[228px] h-[114px] my-auto'
+		/>
+	</div>
+	<p class='text-[#6C757D] font-bold text-4xl text-center py-10'>
+		{t('home.powered_by')}
+	</p>
+	<div class='flex justify-around'>
+		<img
+			src='/img/amif.webp'
+			alt='Logo amif'
+			class='w-[200px] h-[59px] my-auto'
+		/>
+		<img
+			src='/img/asolmex.webp'
+			alt='Logo Asolmex'
+			class='w-[150px] h-[150px] my-auto'
+		/>
+		<img
+			src='/img/seiaSolarEnergy.webp'
+			alt='Logo seia Solar Energy'
+			class='w-[200px] h-[62px] my-auto'
+		/>
+		<img
+			src='/img/SmartElectric.webp'
+			alt='Logo Smart Electric'
+			class='w-[200px] h-[62px] my-auto'
+		/>
+	</div>
+	<p class='text-[#6C757D] font-bold text-4xl text-center py-10'>
+		{t('home.strategic_partners')} :
+	</p>
+	<MarqueeReact images={aliados1} , direction='left' client:only="react" />
+	<MarqueeReact images={aliados2} client:only="react" />
+	<p class='text-[#6C757D] font-bold text-4xl text-center py-10'>
+		Broadcasting Media Partner
+	</p>
+	<MarqueeReact images={Broadcasting1} client:only="react" />
+	<MarqueeReact images={Broadcasting2} , direction='left' client:only="react" />
+</section>

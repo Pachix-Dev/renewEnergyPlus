@@ -1,0 +1,45 @@
+---
+import 'photoswipe/style.css';
+import i18next, { t } from 'i18next';
+---
+
+<p class='text-center text-3xl text-[#ED6B04] m-7 font-bold'>
+  {t('menu.submenu_5.option_1')} SMM 2024
+</p>
+<div class="grid grid-cols-3 max-w-6xl gap-10 mx-auto" id="gallery">
+  <a href="/img/gallery/2024/solar2024-1.webp" data-pswp-width="1920" data-pswp-height="1280"   target="_blank">
+    <img src="/img/gallery/2024/solar2024-1.webp" alt="" ></a>
+  <a href="/img/gallery/2024/solar2024-2.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+    <img src="/img/gallery/2024/solar2024-2.webp" alt="" '></a>
+  <a href="/img/gallery/2024/solar2024-3.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+    <img src="/img/gallery/2024/solar2024-3.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-4.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-4.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-5.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-5.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-6.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-6.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-7.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-7.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-8.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-8.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-9.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-9.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-10.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-10.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-11.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-11.webp" alt=""></a>
+  <a href="/img/gallery/2024/solar2024-12.webp" data-pswp-width="1920" data-pswp-height="1280"  target="_blank">
+  <img src="/img/gallery/2024/solar2024-12.webp" alt=""></a>
+</div>
+
+<script >
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe')
+  });
+  lightbox.init();
+  </script>
+

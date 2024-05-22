@@ -1,238 +1,274 @@
 ---
-import i18next, { t } from 'i18next'
-import { LanguageSelector } from 'astro-i18next/components'
+import i18next, { t } from 'i18next';
+import { LanguageSelector } from 'astro-i18next/components';
 
-const lang = i18next.language
-const base = lang === 'es' ? '' : `/${lang}`
+const lang = i18next.language;
+const base = lang === 'es' ? '' : `/${lang}`;
 ---
 
 <nav class='bg-gray-800 sticky top-0 z-10'>
-  <div
-    class='flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-6'
-  >
-    <a
-      href={`${base}/`}
-      class='flex items-center space-x-3 rtl:space-x-reverse'
-    >
-      <img
-        src='/img/logoREPLUS.webp'
-        class='lg:h-20 h-28 ms-5 me-5 lg:my-0 my-4'
-        alt='Renew Energy Plus 2025'
-      />
-    </a>
-    <div class='flex items-center md:order-2 button-language'>
-      {
-        i18next.language === 'en' ? (
-          <img
-            src='/img/flag-us.svg'
-            alt='us flag'
-            class='h-6 w-6 rounded-full mr-2'
-          />
-        ) : (
-          <img
-            src='/img/flag-mexico.svg'
-            alt='México flag'
-            class='h-6 w-6 rounded-full mr-2'
-          />
-        )
-      }
-      <LanguageSelector
-        showFlag={true}
-        aria-label='Select language'
-        class='block w-full p-2.5 rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
-      />
-    </div>
-    <div
-      class='flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse'
-    >
-      <button
-        data-collapse-toggle='mega-menu'
-        type='button'
-        class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'
-        aria-controls='mega-menu'
-        aria-expanded='false'
-      >
-        <span class='sr-only'>Open main menu</span>
-        <svg
-          class='w-5 h-5'
-          aria-hidden='true'
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 17 14'
-        >
-          <path
-            stroke='currentColor'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='2'
-            d='M1 1h15M1 7h15M1 13h15'></path>
-        </svg>
-      </button>
-    </div>
-    <div
-      id='mega-menu'
-      class='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
-    >
-      <ul
-        class='flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse'
-      >
-        <li>
-          <button
-            id='dropdownExhibitors'
-            data-dropdown-toggle='dropdownNavbar1'
-            data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
-          >
-            {t('menu.submenu_1.title')}
-            <svg
-              class='w-2.5 h-2.5 ml-2.5'
-              aria-hidden='true'
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 10 6'
-            >
-              <path
-                stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='m1 1 4 4 4-4'></path>
-            </svg>
-          </button>
-          <div
-            id='dropdownNavbar1'
-            class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-auto'
-          >
-            <ul
-              class='py-2 text-sm text-gray-700'
-              aria-labelledby='dropdownLargeButton'
-            >
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/#acerca-de-amof`} class='block px-4 py-2'
-                  >{t('menu.option1.subMenu.option1')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href='https://igeco.mx/history'
-                  target='_blank'
-                  class='block px-4 py-2'
-                >
-                  {t('menu.option1.subMenu.option2')}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a
-            href={`${base}/#summit`}
-            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 lg:border-none border-gray-300 border-b font-bold'
-            aria-current='page'>{t('menu.option2.title')}</a
-          >
-        </li>
-        <li>
-          <button
-            id='dropdownExhibitors'
-            data-dropdown-toggle='dropdownNavbar2'
-            data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
-          >
-            {t('menu.option3.title')}
-            <svg
-              class='w-2.5 h-2.5 ml-2.5'
-              aria-hidden='true'
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 10 6'
-            >
-              <path
-                stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='m1 1 4 4 4-4'></path>
-            </svg>
-          </button>
-          <div
-            id='dropdownNavbar2'
-            class='dropdown z-[100] hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-auto'
-          >
-            <ul
-              class='py-2 text-sm text-gray-700'
-              aria-labelledby='dropdownLargeButton'
-            >
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href={i18next.language === 'en'
-                    ? '/files/AFTERSHOW-REPORT-AMOF-ENG-2023.pdf'
-                    : '/files/AFTERSHOW-REPORT-AMOF-ESP-2023.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2'>{t('menu.option3.subMenu.option1')}</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/#perfil-expositor`} class='block px-4 py-2'
-                  >{t('menu.option3.subMenu.option3')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/#porque-asistir`} class='block px-4 py-2'
-                  >{t('menu.option3.subMenu.option4')}</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href={i18next.language === 'en'
-                    ? '/files/AMOF_FACTSHEET_ENG_2024_ACC_031124.pdf'
-                    : '/files/AMOF_FACTSHEET_ESP_2024_ACC_031124.pdf'}
-                  target='_blank'
-                  target='_blank'
-                  class='block px-4 py-2'>{t('menu.option3.subMenu.option5')}</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href='/files/Plano-AMOF-2024.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'>{t('menu.option3.subMenu.option6')}</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href='/files/AMOF_2024_space_agreement_ED_031124.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'>{t('menu.option3.subMenu.option7')}</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/#tarifas`} class='block px-4 py-2'
-                  >{t('menu.option3.subMenu.option8')}</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/toolkit`} class='block px-4 py-2'
-                  >{t('menu.option3.subMenu.option9')}</a
-                >
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a
-            href={`${base}/#visitantes`}
-            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 lg:border-none border-gray-300 border-b font-bold'
-            aria-current='page'>{t('menu.option4.title')}</a
-          >
-        </li>
-        <li>
-          <a
-            href={`${base}/#contactanos`}
-            class='block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 font-bold'
-            aria-current='page'>{t('menu.option5.title')}</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
+	<div
+		class='flex justify-between  mx-6 px-6 py-3'
+	>
+		<a
+			href={`${base}/`}
+			class='flex items-center space-x-3 rtl:space-x-reverse'
+		>
+			<img
+				src='/img/logoREPLUS.webp'
+				class='w-24 h-auto lg:h-20 ms-5 me-5 lg:my-0 my-4'
+				alt='Renew Energy Plus 2025'
+			/>
+		</a>
+		
+		<div
+			class='flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse'
+		>
+			<button
+				data-collapse-toggle='mega-menu'
+				type='button'
+				class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'
+				aria-controls='mega-menu'
+				aria-expanded='false'
+			>
+				<span class='sr-only'>Open main menu</span>
+			</button>
+		</div>
+		<div class='flex items-center md:order-2 button-language'>
+			<LanguageSelector
+				showFlag={true}
+				aria-label='Select language'
+				class='block w-full p-2.5 rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+			/>
+		</div>
+		<div
+			id='mega-menu'
+			class='text-white items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
+		>
+			<ul
+				class='flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse'
+			>
+				<li>
+					<button
+						id='dropdownExhibitors'
+						data-dropdown-toggle='dropdownNavbar1'
+						data-dropdown-trigger='hover'
+						class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+					>
+						{t('menu.submenu_1.title')}
+					</button>
+					<div
+						id='dropdownNavbar1'
+						class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+					>
+						<ul
+							class='py-2 text-sm text-gray-700'
+							aria-labelledby='dropdownLargeButton'
+						>
+							<li class='hover:bg-blue-100 font-semibold'>
+
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_1.option_1')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_1.option_2')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_1.option_3')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_1.option_4')}
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<button
+						id='dropdownExhibitors'
+						data-dropdown-toggle='dropdownNavbar2'
+						data-dropdown-trigger='hover'
+						class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+					>
+						{t('menu.submenu_2.title')}
+					</button>
+					<div
+						id='dropdownNavbar2'
+						class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+					>
+						<ul
+							class='py-2 text-sm text-gray-700'
+							aria-labelledby='dropdownLargeButton'
+						>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_1')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_2')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_3')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_4')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_5')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_6')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_7')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_8')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_9')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_10')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_11')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_12')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_2.option_13')}
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<button
+						id='dropdownExhibitors'
+						data-dropdown-toggle='dropdownNavbar3'
+						data-dropdown-trigger='hover'
+						class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+					>
+						{t('menu.submenu_3.title')}
+					</button>
+					<div
+						id='dropdownNavbar3'
+						class='dropdown z-[100] hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+					>
+						<ul
+							class='py-2 text-sm text-gray-700'
+							aria-labelledby='dropdownLargeButton'
+						>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a
+									href={i18next.language === 'en'
+										? '/files/AFTERSHOW-REPORT-AMOF-ENG-2023.pdf'
+										: '/files/AFTERSHOW-REPORT-AMOF-ESP-2023.pdf'}
+									target='_blank'
+									class='block px-4 py-2'>{t('menu.submenu_3.option_1')}</a
+								>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href={`${base}/#perfil-expositor`} class='block px-4 py-2'
+									>{t('menu.submenu_3.option_2')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href={`${base}/#porque-asistir`} class='block px-4 py-2'
+									>{t('menu.submenu_3.option_3')}</a
+								>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<button
+						id='dropdownExhibitors'
+						data-dropdown-toggle='dropdownNavbar4'
+						data-dropdown-trigger='hover'
+						class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+					>
+						{t('menu.submenu_4.title')}
+					</button>
+					<div
+						id='dropdownNavbar4'
+						class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+					>
+						<ul
+							class='py-2 text-sm text-gray-700'
+							aria-labelledby='dropdownLargeButton'
+						>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_4.results')}
+								</a>
+							</li>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_4.directory')}
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<button
+						id='dropdownExhibitors'
+						data-dropdown-toggle='dropdownNavbar4'
+						data-dropdown-trigger='hover'
+						class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+					>
+						{t('menu.submenu_5.title')}
+					</button>
+					<div
+						id='dropdownNavbar5'
+						class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+					>
+						<ul
+							class='py-2 text-sm text-gray-700'
+							aria-labelledby='dropdownLargeButton'
+						>
+							<li class='hover:bg-blue-100 font-semibold'>
+								<a href='' target='_blank' class='block px-4 py-2'>
+									{t('menu.submenu_5.option_1')}
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
