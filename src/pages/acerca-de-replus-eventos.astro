@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro"
+import i18next, { t } from 'i18next';
+
+
+---
+<Layout title='Renew Energy Plus'>
+  <section class='bg-[#EFEFEF] my-12 py-10'>
+  <div class='flex justify-between items-center m-12 '>
+    <p class='text-2xl font-bold'>{t('AboutReEvents.title')}</p>
+    <img src="/img/RE_Events_orange.webp" alt="logo Re+ Events" class='w-28'>
+    </div>
+    <p class='mx-12' set:html={t('AboutReEvents.description')}></p>
+  </section>
+</Layout>
+  

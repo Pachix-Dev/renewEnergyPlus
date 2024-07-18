@@ -8,23 +8,15 @@ import Sponsors from '../components/Sponsors.astro';
 import Tariffs from '../components/Tariffs.astro';
 import Card from '../components/Card.astro';
 import { MarqueeReact } from '../components/MarqueeReact';
-import {
-	exhibitors1,
-	exhibitors2,
-	exhibitors3,
-	exhibitors4,
-	exhibitors5,
-	exhibitors6,
-} from '../data/constanst_logos';
+
 import Contacts from '../components/Contacts.astro';
 import Logos from '../components/Logos.astro';
-import Footer from '../components/Footer.astro';
 import type { visibilityChangeEvent } from '@tsparticles/engine';
-import Galeria from '../components/Galeria.astro'
-import  Responsive  from '../components/Videos.jsx';
-import Results from '../components/Results.astro'
-import Testimonials from '../components/Testimonials.astro'
+import Galeria from '../components/Galeria.astro';
+import Results from '../components/Results.astro';
+import Testimonials from '../components/Testimonials.astro';
 import BuyersProfessional from '../components/BuyersProfessional.astro';
+import Exhibitors from '../components/Exhibitors.astro';
 
 changeLanguage('es');
 ---
@@ -35,36 +27,34 @@ changeLanguage('es');
 		class='bg-white align-middle w-72 sm:w-[420px] m-auto py-12 sm:text-xl text-justify'
 	>
 		<p class='text-[#ed6b06] sm:text-2xl font-bold my-4'>RE+ MEXICO</p><strong
-			>RE+ MEXICO</strong
+			>Solar+ Storage MEXICO 2024 </strong
 		>
-		<p set:html={t('home.solar_description')}></p>
+		<p set:html={t('home.solar_description')} />
 	</div>
 	<Content />
 	<Sponsors />
-	<Results/>
-	<Testimonials/>
-	<BuyersProfessional/>
-
-	<p class='text-[#6C757D] text-3xl text-center font-bold p-10'>
-		{t('menu.submenu_2.title')} 2024
-	</p>
-	<MarqueeReact images={exhibitors1} client:only="react"/>
-	<MarqueeReact images={exhibitors2} , direction='left' client:only="react"/>
-	<MarqueeReact images={exhibitors3} client:only="react" />
-	<MarqueeReact images={exhibitors4} , direction='left' client:only="react" />
-	<MarqueeReact images={exhibitors5} client:only="react" />
-	<MarqueeReact images={exhibitors6} , direction='left' client:only="react" />
-	<p class='text-[#6C757D] text-3xl text-center font-bold p-10'>
-		{t('home.title-testimonials')}
-	</p>
-	 <!--        <Responsive client:only="react"/>  -->
-	<Contacts />      
+	<!-- <Card />
+	<Tariffs/>
+	<Results />
+	<Testimonials />
+	<BuyersProfessional />
+	<Exhibitors /> -->
+	
+	<!-- <Responsive client:only="react"/> -->
+	<!-- <div
+		class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(215,105,1,1)_100%)] pb-10'
+	>
+		<Contacts />
+	<div
+			class='transition duration-300 bg-white hover:bg-[#0CCB67] hover:text-white px-10 mx-auto w-[450px] text-center font-bold text-3xl p-3 rounded-lg my-5'
+		>
+			<p>{t('contactForm.title')}</p>
+		</div>
+	</div>
 	<Galeria />
 
-
-	<Logos />                    
-	<Footer />
-</Layout> 
+	<Logos />
+</Layout> -->
 
 <script>
 	import '@justinribeiro/lite-youtube';

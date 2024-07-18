@@ -3,34 +3,31 @@ import { MarqueeReact } from '../components/MarqueeReact';
 import { buyers1, buyers2, buyers3, buyers4 } from '../data/constanst_buyers';
 ---
 
-<section>
+<section class=''>
 	<p class='text-center text-5xl font-bold text-[#ed6b06] m-8'>
 		Professional Buyers
 	</p>
-	<div class='flex flex-row justify-center'>
-    <div class='w-[420px] content-center'>
+
+	<div class='flex justify-between mx-10 items-center'>
 		<div
-			class=' m-auto relative flex justify-center h-[300px] w-[160px] border-4 border-black rounded-2xl bg-gray-50'
-			style='  box-shadow: 5px 5px 2.5px 6px rgb(209, 218, 218)'
+			class='relative p-3 animate-spin drop-shadow-3xl bg-gradient-to-bl from-orange-400 via-purple-400 to-purple-600 h-[440px] w-[440px] aspect-square rounded-full'
 		>
-			<span
-				class='border-4 border-black bg-black w-20 h-2 rounded-br-xl rounded-bl-xl'
+			<div
+				class='rounded-full h-full w-full bg-slate-100 dark:bg-zinc-900 background-blur-md'
 			>
-				<p class='text-center text-3xl my-28 mx-auto'>
-					80%
-				</p>
-			</span>
-
-			<span
-				class='absolute -right-2 top-14 border-4 border-black h-7 rounded-md'
-			></span>
-
-			<span
-				class='absolute -right-2 bottom-36 border-4 border-black h-10 rounded-md'
-			></span>
+			</div>
 		</div>
-  </div>
-		<div class='basis-2'>
+		<div class="absolute text-[#ed6b06] z-1 m-[70px] text-center">
+		 
+			<p class=' text-8xl font-extrabold m-auto'>
+				+85 %
+			</p>
+			<p class='text-3xl font-extrabold  m-auto'>
+				de los visitantes son <br>tomadores de decisión
+			</p>
+		</div>
+
+		<div class='basis-2 w-[800px]'>
 			<MarqueeReact images={buyers1} client:only='react' />
 			<MarqueeReact images={buyers2} , direction='left' client:only='react' />
 			<MarqueeReact images={buyers3} client:only='react' />
@@ -38,3 +35,4 @@ import { buyers1, buyers2, buyers3, buyers4 } from '../data/constanst_buyers';
 		</div>
 	</div>
 </section>
+

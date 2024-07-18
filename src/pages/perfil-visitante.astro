@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import i18next, { t } from 'i18next';
+---
+
+<Layout title='Renew Energy Plus'>
+	<section>
+		<div class='px-20 my-16 pt-10 bg-[#EFEFEF]'>
+			<p class='pb-5'><i>SOLAR + STORAGE MEXICO</i></p>
+			<p class='bg-[#EFEFEF] text-5xl font-bold'>{t('VisitorProfile.title')}</p>
+			<div class='flex container'>
+				<div class='w-1/2 p-10 bg-[#EFEFEF]'>
+					<p class='text-sm' set:html={t('VisitorProfile.description')} />
+				</div>
+				<div
+					class="bg-[url('/img/bgVisitorProfile.webp')] w-1/2 bg-fixed bg-center bg-cover m-5"
+				>
+				</div>
+			</div>
+			<div class='flex'>
+				<div
+					class="bg-[url('/img/bgVisitorProfile2.webp')] w-1/2 bg-fixed bg-center bg-cover m-5"
+				>
+				</div>
+				<div class='px-12 w-1/2 py-16 bg-[#EFEFEF]'>
+					<p class='text-sm' set:html={t('VisitorProfile.description2')} />
+				</div>
+			</div>
+		</div>
+	</section></Layout
+>
+<style>
+	ul {
+		padding-left: 2rem;
+		list-style-type: none;
+	}
+
+	ul li {
+		padding-left: 2rem;
+		background-image: url('/img/cog.svg');
+		background-position: 0 0;
+		background-size: 1.6rem 1.6rem;
+		background-repeat: no-repeat;
+	}
+</style>
