@@ -1,12 +1,45 @@
 ---
-import { imageConfig } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
-import i18next, { t } from 'i18next';
-import Galeria from '../components/Galeria.astro';
+import Layout from '../layouts/Layout.astro'
+import { t } from 'i18next'
+import Galeria from '../components/Galeria.astro'
+import {
+  gallery2024,
+  gallery2023,
+  gallery2022,
+  gallery2021,
+  gallery2019,
+} from '../data/constans_gallery.js'
 ---
 
 <Layout title='Renew Energy Plus'>
-  <section class='my-10'>
-    <Galeria />
+  <section class='my-10 container mx-auto px-4'>
+    <p class='text-center text-3xl text-[#ED6B04] m-7 font-bold uppercase'>
+      {t('menu.submenu_5.option_1')} SMM 2024
+    </p>
+    <Galeria images={gallery2024} />
+    <p
+      class='mt-10 text-center text-3xl text-[#ED6B04] m-7 font-bold uppercase'
+    >
+      {t('menu.submenu_5.option_1')} SMM 2023
+    </p>
+    <Galeria images={gallery2023} />
+    <p
+      class='mt-10 text-center text-3xl text-[#ED6B04] m-7 font-bold uppercase'
+    >
+      {t('menu.submenu_5.option_1')} SPM 2022
+    </p>
+    <Galeria images={gallery2022} />
+    <p
+      class='mt-10 text-center text-3xl text-[#ED6B04] m-7 font-bold uppercase'
+    >
+      {t('menu.submenu_5.option_1')} SPM 2021
+    </p>
+    <Galeria images={gallery2021} />
+    <p
+      class='mt-10 text-center text-3xl text-[#ED6B04] m-7 font-bold uppercase'
+    >
+      {t('menu.submenu_5.option_1')} SPM 2019
+    </p>
+    <Galeria images={gallery2019} />
   </section>
 </Layout>
