@@ -1,25 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import i18next, { t } from 'i18next';
+import Layout from '../layouts/Layout.astro'
+import i18next, { t } from 'i18next'
 ---
 
 <Layout title='Renew Energy Plus'>
-	<section class=''>
-	<div class='pt-10 bg-[#EFEFEF]'>
-		<p class='bg-[#EFEFEF] text-5xl font-bold p-20'>{t('WhyVisit.title')}</p>
-		<div class='flex px-14'>
-			<div class='pl-12 w-1/2 pb-10 bg-[#EFEFEF]'>
-				<p class='text-sm' set:html={t('WhyVisit.description')} />
-			</div>
-			<div class=" bg-[url('/img/bgWhyvisit.webp')] w-1/2 bg-fixed bg-center bg-cover m-5"></div>
-				
-			</div>
-		</div>
-		<img
-			src='/img/PorQueAsistir.webp'
-			alt=''
-			class='bg-[#EFEFEF] pb-14 mb-14'
-		/>
-	</div>
-</section>
+  <section class=''>
+    <div class='pt-10 bg-[#EFEFEF]'>
+      <p class='bg-[#EFEFEF] text-5xl font-bold p-20'>{t('WhyVisit.title')}</p>
+      <div class='grid md:grid-cols-2 gap-5'>
+        <div class='pl-12 pb-10 bg-[#EFEFEF]'>
+          <p class='text-sm' set:html={t('WhyVisit.description')} />
+        </div>
+        <img class='m-5 object-cover h-full' src='/img/bgWhyvisit.webp' />
+      </div>
+    </div>
+    <img
+      src='/img/PorQueAsistir.webp'
+      alt=''
+      class='bg-[#EFEFEF] pb-14 mb-14'
+    />
+  </section>
 </Layout>

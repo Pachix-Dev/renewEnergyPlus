@@ -248,18 +248,88 @@ const base = lang === 'es' ? '' : `/${lang}`
               class='py-2 text-sm text-gray-700'
               aria-labelledby='dropdownLargeButton'
             >
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class='font-semibold'>
+                <span class='ps-2 text-gray-500 font-bold'>SSM 2024</span>
                 <a
-                  href='/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ESP_AF_2024_v3.pdf'
+                  href={i18next.language === 'es'
+                    ? '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ESP_AF_2024_v3.pdf'
+                    : '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ENG_AF_2024_v3.pdf'}
                   target='_blank'
-                  class='block px-4 py-2'>{t('menu.submenu_4.results')}</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.results')}
+                </a>
                 <a
                   href='/doc/DIRECTORIO SOLAR 2024_ACC_09_05_2024.pdf'
                   target='_blank'
-                  class='block px-4 py-2'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.directory')}
+                </a>
+              </li>
+              <li class='font-semibold'>
+                <span class='ps-2 text-gray-500 font-bold'>SSM 2023</span>
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2023-ESP.pdf'
+                    : '/doc/RESULTS-REPORT-SSM-2023-ENG.pdf'}
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.results')}
+                </a>
+                <a
+                  href='/doc/Directorio-SSM-2023.pdf'
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.directory')}
+                </a>
+              </li>
+              <li class='font-semibold'>
+                <span class='ps-2 text-gray-500 font-bold'>SPM 2022</span>
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2022-ESP.pdf'
+                    : '/doc/RESULTS-REPORT-SSM-2022-ENG.pdf'}
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.results')}
+                </a>
+                <a
+                  href='/doc/Directorio-SSM-2022.pdf'
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.directory')}
+                </a>
+              </li>
+              <li class='font-semibold'>
+                <span class='ps-2 text-gray-500 font-bold'>SPM 2021</span>
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2021-ESP.pdf'
+                    : '/doc/RESULTS-REPORT-SSM-2021-ENG.pdf'}
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.results')}
+                </a>
+                <a
+                  href='/doc/Directorio-SSM-2021.pdf'
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.directory')}
+                </a>
+              </li>
+              <li class='font-semibold'>
+                <span class='ps-2 text-gray-500 font-bold'>SPM 2019</span>
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2019-ESP.pdf'
+                    : '/doc/RESULTS-REPORT-SSM-2019-ENG.pdf'}
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.results')}
+                </a>
+                <a
+                  href='/doc/Directorio-SSM-2021.pdf'
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
                   >{t('menu.submenu_4.directory')}
                 </a>
               </li>
