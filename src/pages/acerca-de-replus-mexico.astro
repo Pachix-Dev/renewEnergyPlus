@@ -1,26 +1,26 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import i18next, { t } from 'i18next';
-
-
+import Layout from '../layouts/Layout.astro'
+import { t } from 'i18next'
 ---
 
 <Layout title='Renew Energy Plus'>
-<section class=' m-10 '>
-<p class='text-3xl font-bold'>{t('AboutSSM.title')}</p>
-<div class='flex my-7'>
-  <div class='bg-[#EFEFEF] p-5 mr-5'>
-    <p class='font-bold my-5 '>RE+ MEXICO</p>
-    <p class='' set:html={t('AboutSSM.description')}></p>
-    <p class='font-bold my-5' set:html={t('AboutSSM.description2')}></p>
-
-  </div>
-  <img src="/img/gallerySSM2023-7.webp" alt="" class='w-[620px] h-auto'>
-</div>
-  
-  
-  </div>
-</section>
-
-
+  <section class='m-10'>
+    <p class='my-5 text-gray-500 italic'>RE+ MEXICO</p>
+    <p class='text-3xl font-bold'>{t('AboutSSM.title')}</p>
+    <div class='grid md:grid-cols-2 my-7'>
+      <div class='bg-[#EFEFEF] p-5 mr-5'>
+        <p class='font-bold my-5'>RE+ MEXICO</p>
+        <p class='' set:html={t('AboutSSM.description')} />
+        <p
+          class='font-bold my-5 text-center'
+          set:html={t('AboutSSM.description2')}
+        />
+      </div>
+      <img
+        src='/img/gallerySSM2023-7.webp'
+        alt=''
+        class='object-cover h-full'
+      />
+    </div>
+  </section>
 </Layout>

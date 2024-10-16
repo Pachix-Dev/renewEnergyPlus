@@ -1,53 +1,63 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import i18next, { t } from 'i18next';
+import Layout from '../layouts/Layout.astro'
+import { t } from 'i18next'
 ---
 
 <Layout title='Renew Energy Plus'>
-	<div class='bg-[#EFEFEF] p-10 my-5'>
-		<p class='italic'>SOLAR + STORAGE MEXICO</p>
-		<p class='text-3xl font-bold'>{t('menu.submenu_2.option_4')}</p>
-	</div>
-	<div class='flex mx-16 mt-5 mb-16 text-center text-2xl font-bold gap-4 '>
-		<div >
-			<a href='/doc/D-GE-010-KIT-BANQUETES-2023-Rev-6-1.pdf' target="_blank" class='w-[216px] h-[113px]'
-				><img
-					src='/img/servicios-expositores/kit-de-banquetes-2023.webp'
-					alt=''
-          
-				/>
-			</a>
-			<p>KIT BANQUETES 2023</p>
-		</div>
-		<div >
-			<a href='/doc/F-CO-014-Catering-2023-Rev-1-12oct.xlsx' target="_blank"  class='w-[216px] h-[113px]'
-				><img
-					src='/img/servicios-expositores/FORMATO-GENERAL-DE-CONTRATACION-A-EXPOSITORES.webp'
-					alt=''
-         
-				/>
-			</a>
-			<p>FORMATO GENERAL DE CONTRATACIÓN A EXPOSITORES</p>
-		</div>
-		<div >
-			<a href='/doc/servicios-expositores/Formato-de-Contratacion-General-Servicios-Complementarios-2023.xlsx'  class='w-[216px] h-[113px]'
-				><img
-					src='/img/servicios-expositores/FORMATO-DE-CONTRATACION-DE-ALIMENTOS-Y-BEBIDAS.webp'
-					alt=''
-        
-				/>
-			</a>
-			<p>FORMATO DE CONTRATACIÓN DE ALIMENTOS Y BEBIDAS</p>
-		</div>
-		<div >
-			<a href='/doc/servicios-expositores/Shipping-Instructions-SOLARpower.pdf' class='w-[216px] h-[113px]'
-				><img
-					src='/img/servicios-expositores/instrucciones_de_embarque.webp'
-					alt=''
-         
-				/>
-			</a>
-			<p class='mt-4'>INSTRUCCIONES DE EMBARQUE</p>
-		</div>
-	</div>
+  <div class='bg-[#EFEFEF] p-10 my-5'>
+    <p class='italic'>SOLAR + STORAGE MEXICO</p>
+    <p class='text-3xl font-bold'>{t('menu.submenu_2.option_4')}</p>
+  </div>
+  <div class='flex mx-16 mt-5 mb-16 text-center text-2xl font-bold gap-4'>
+    <div>
+      <a
+        href='/doc/D-GE-010-KIT-BANQUETES-2023-Rev-6-1.pdf'
+        target='_blank'
+        class='w-[216px] h-[113px]'
+        ><img
+          src='/img/servicios-expositores/kit-de-banquetes-2023.webp'
+          alt=''
+        />
+      </a>
+      <p>KIT BANQUETES 2023</p>
+    </div>
+    <div>
+      <a
+        href='/doc/F-CO-014-Catering-2023-Rev-1-12oct.xlsx'
+        download
+        target='_blank'
+        class='w-[216px] h-[113px]'
+        ><img
+          src='/img/servicios-expositores/FORMATO-GENERAL-DE-CONTRATACION-A-EXPOSITORES.webp'
+          alt=''
+        />
+      </a>
+      <p>FORMATO GENERAL DE CONTRATACIÓN A EXPOSITORES</p>
+    </div>
+    <div>
+      <a
+        href='/doc/Formato-de-Contratacion-General-Servicios-Complementarios-2023.xlsx'
+        target='_blank'
+        download
+        class='w-[216px] h-[113px]'
+        ><img
+          src='/img/servicios-expositores/FORMATO-DE-CONTRATACION-DE-ALIMENTOS-Y-BEBIDAS.webp'
+          alt=''
+        />
+      </a>
+      <p>FORMATO DE CONTRATACIÓN DE ALIMENTOS Y BEBIDAS</p>
+    </div>
+    <div>
+      <a
+        href='/doc/Shipping-Instructions-SOLARpower.pdf'
+        target='_blank'
+        class='w-[216px] h-[113px]'
+        ><img
+          src='/img/servicios-expositores/instrucciones_de_embarque.webp'
+          alt=''
+        />
+      </a>
+      <p class='mt-4'>INSTRUCCIONES DE EMBARQUE</p>
+    </div>
+  </div>
 </Layout>

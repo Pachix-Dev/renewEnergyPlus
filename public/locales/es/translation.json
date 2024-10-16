@@ -12,11 +12,11 @@
             "option_1": "Contacto",
             "option_2": "Por qué exponer",
             "option_3": "Perfil del expositor",
-            "option_4": "Servicios a Expositor                     es",
+            "option_4": "Servicios a Expositor",
             "option_5": "Patrocinios RE+ 2024",
             "option_6": "Factsheet RE+ 2025",
             "option_7": "Contrato RE+ 2025",
-            "option_8": "Plano RE+",
+            "option_8": "Plano RE+ 2025",
             "option_9": "PROGRAMA DE CONFERENCIAS PREMIUM",
             "option_10": "Tarifas",
             "option_11": "Toolkit",
@@ -31,7 +31,7 @@
             "option_3": "Visados"
         },
         "submenu_4": {
-            "title": "Ediciones SSM",
+            "title": "EDICIONES SSM",
             "results": "Resultados",
             "directory": "Directorio de expositores"
         },

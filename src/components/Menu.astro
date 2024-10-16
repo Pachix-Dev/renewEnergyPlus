@@ -7,9 +7,7 @@ const base = lang === 'es' ? '' : `/${lang}`
 ---
 
 <nav class='bg-gray-800 sticky top-0 z-10'>
-  <div
-    class='flex flex-wrap justify-between gap-[50px] max-w-screen-xl mx-6 px-6 py-3'
-  >
+  <div class='flex flex-wrap justify-between gap-10 px-6 py-3'>
     <a
       href={`${base}/`}
       class='flex items-center space-x-3 rtl:space-x-reverse'
@@ -45,7 +43,7 @@ const base = lang === 'es' ? '' : `/${lang}`
       class='text-white items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
     >
       <ul
-        class='flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse'
+        class='flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase'
       >
         <li>
           <button
@@ -115,6 +113,47 @@ const base = lang === 'es' ? '' : `/${lang}`
               aria-labelledby='dropdownLargeButton'
             >
               <li class='hover:bg-blue-100 font-semibold'>
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/RE_MEX_2025_FS__ES_AC_compressed.pdf'
+                    : '/doc/RE_MEX_2025_FS__ENG_AC_compressed.pdf'}
+                  target='_blank'
+                  class='block px-4 py-2'
+                >
+                  {t('menu.submenu_2.option_6')}
+                </a>
+              </li>
+              <li class='hover:bg-blue-100 font-semibold'>
+                <a
+                  href='/doc/REMEX_2025_SpaceAgreement_V2_23_08_24.pdf'
+                  target='_blank'
+                  class='block px-4 py-2'
+                >
+                  {t('menu.submenu_2.option_7')}
+                </a>
+              </li>
+
+              <li class='hover:bg-blue-100 font-semibold'>
+                <a
+                  href='/doc/RE+_MEX_2025_101524_BCD-Model.pdf'
+                  target='_blank'
+                  class='block px-4 py-2'
+                >
+                  {t('menu.submenu_2.option_8')}
+                </a>
+              </li>
+              <li class='hover:bg-blue-100 font-semibold'>
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/RE+_MEXICO_SPONSORSHIPS_2025_ESP_v3.pdf'
+                    : '/doc/RE+_MEXICO_SPONSORSHIPS_2025_ENG_v3.pdf'}
+                  target='_blank'
+                  class='block px-4 py-2'
+                >
+                  {t('menu.submenu_2.option_14')}
+                </a>
+              </li>
+              <li class='hover:bg-blue-100 font-semibold'>
                 <a href={`${base}/contacto`} class='block px-4 py-2'>
                   {t('menu.submenu_2.option_1')}
                 </a>
@@ -138,56 +177,8 @@ const base = lang === 'es' ? '' : `/${lang}`
                 </a>
               </li>
               <li class='hover:bg-blue-100 font-semibold'>
-                <a href='' target='_blank' class='block px-4 py-2'>
-                  {t('menu.submenu_2.option_5')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href='/doc/RE+MEX_2025_FS_ESP_AC_24-04-2024.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'
-                >
-                  {t('menu.submenu_2.option_6')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href='/doc/REMEX_2025_SpaceAgreement_ED_160524.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'
-                >
-                  {t('menu.submenu_2.option_7')}
-                </a>
-              </li>
-
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href='/doc/REMEX_2025-v6-042424-reserve-floor-plan.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'
-                >
-                  {t('menu.submenu_2.option_8')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
                 <a href={`${base}/programa-premium`} class='block px-4 py-2'>
                   {t('menu.submenu_2.option_9')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href='' target='_blank' class='block px-4 py-2'>
-                  {t('menu.submenu_2.option_10')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href='' target='_blank' class='block px-4 py-2'>
-                  {t('menu.submenu_2.option_11')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href='' target='_blank' class='block px-4 py-2'>
-                  {t('menu.submenu_2.option_12')}
                 </a>
               </li>
               <li class='hover:bg-blue-100 font-semibold'>
