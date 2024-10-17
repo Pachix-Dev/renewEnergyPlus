@@ -1,62 +1,103 @@
 ---
-import { changeLanguage } from 'i18next'
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 import Content from '../components/Content.astro'
-import i18next, { t } from 'i18next'
+import i18next, { t, changeLanguage } from 'i18next'
 import Sponsors from '../components/Sponsors.astro'
 import Tariffs from '../components/Tariffs.astro'
 import Card from '../components/Card.astro'
 import { MarqueeReact } from '../components/MarqueeReact'
-
 import Contacts from '../components/Contacts.astro'
 import Logos from '../components/Logos.astro'
-import type { visibilityChangeEvent } from '@tsparticles/engine'
 import Galeria from '../components/Galeria.astro'
 import Results from '../components/Results.astro'
 import Testimonials from '../components/Testimonials.astro'
 import BuyersProfessional from '../components/BuyersProfessional.astro'
 import Exhibitors from '../components/Exhibitors.astro'
+import { gallery2024 } from '../data/constans_gallery'
 
 changeLanguage('es')
 ---
 
 <Layout title='RE+ México'>
   <Hero />
-  <div
-    class='bg-white align-middle w-72 sm:w-[420px] m-auto py-12 sm:text-xl text-justify'
-  >
-    <p class='text-[#ed6b06] sm:text-2xl font-bold my-4'>RE+ MEXICO</p><strong
-      >Solar+ Storage MEXICO 2024
-    </strong>
-    <p set:html={t('home.solar_description')} />
-  </div>
+  <section class='container mx-auto px-4 grid md:grid-cols-2 gap-10 py-10'>
+    <div class='bg-white py-12 sm:text-xl text-justify'>
+      <p class='text-[#ed6b06] sm:text-2xl font-bold my-4'>RE+ MEXICO</p>
+      <span class='font-bold'>Solar+ Storage MEXICO 2024 </span>
+      <span set:html={t('home.solar_description')} />
+    </div>
+    <lite-youtube
+      videoid='A4IS71JxSDc'
+      posterquality='maxresdefault'
+      params='controls=0&enablejsapi=1'></lite-youtube>
+  </section>
   <Content />
   <Sponsors />
-  <!-- <Card />
-	<Tariffs/>
-	<Results />
-	<Testimonials />
-	<BuyersProfessional />
-	<Exhibitors /> -->
 
-  <!-- <Responsive client:only="react"/> -->
-  <!-- <div
-		class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(215,105,1,1)_100%)] pb-10'
-	>
-		<Contacts />
-	<div
-			class='transition duration-300 bg-white hover:bg-[#0CCB67] hover:text-white px-10 mx-auto w-[450px] text-center font-bold text-3xl p-3 rounded-lg my-5'
-		>
-			<p>{t('contactForm.title')}</p>
-		</div>
-	</div>
-	<Galeria />
+  <Card />
+  <Tariffs />
 
-	<Logos />
-</Layout> -->
+  <Testimonials />
+  <BuyersProfessional />
+  <Exhibitors />
+  <section class='container mx-auto px-4 my-10'>
+    <p class='text-[#6C757D] text-3xl text-center font-bold p-10'>
+      {t('home.title-testimonials')}
+    </p>
+    <div class='grid md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-5'>
+      <lite-youtube
+        videoid='4yjpMxuDMTA'
+        posterquality='maxresdefault'
+        params='controls=0&enablejsapi=1'
+        class='rounded-lg h-96 w-60'></lite-youtube>
+      <lite-youtube
+        videoid='Ws9BBT7zILk'
+        posterquality='maxresdefault'
+        params='controls=0&enablejsapi=1'
+        class='rounded-lg h-96 w-60'></lite-youtube>
+      <lite-youtube
+        videoid='Ca1D_cxJYbs'
+        posterquality='maxresdefault'
+        params='controls=0&enablejsapi=1'
+        class='rounded-lg h-96 w-60'></lite-youtube>
+      <lite-youtube
+        videoid='JiP0kqlvXFw'
+        posterquality='maxresdefault'
+        params='controls=0&enablejsapi=1'
+        class='rounded-lg h-96 w-60'></lite-youtube>
+      <lite-youtube
+        videoid='4h8S2b3j_I4'
+        posterquality='maxresdefault'
+        params='controls=0&enablejsapi=1'
+        class='rounded-lg h-96 w-60'></lite-youtube>
+      <lite-youtube
+        videoid='470LAzxXxJs'
+        posterquality='maxresdefault'
+        params='controls=0&enablejsapi=1'
+        class='rounded-lg h-96 w-60'></lite-youtube>
+    </div>
+  </section>
 
-  <script>
-    import '@justinribeiro/lite-youtube'
-  </script>
+  <div
+    class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(215,105,1,1)_100%)] pb-10'
+  >
+    <Contacts />
+    <div
+      class='transition duration-300 bg-white hover:bg-[#0CCB67] hover:text-white px-10 mx-auto w-[450px] text-center font-bold text-3xl p-3 rounded-lg my-5'
+    >
+      <p>{t('contactForm.title')}</p>
+    </div>
+  </div>
+  <section class='container mx-auto px-4'>
+    <p class='text-center text-3xl text-[#ED6B04] m-7 font-bold uppercase'>
+      {t('menu.submenu_5.option_1')} SMM 2024
+    </p>
+    <Galeria images={gallery2024} />
+  </section>
+  <Logos />
 </Layout>
+
+<script>
+  import '@justinribeiro/lite-youtube'
+</script>

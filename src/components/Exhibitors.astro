@@ -1,21 +1,24 @@
 ---
-import { MarqueeReact } from '../components/MarqueeReact';
-import {exhibitors1,exhibitors2,exhibitors3,exhibitors4,exhibitors5,exhibitors6,
-} from '../data/constanst_logos';
-import i18next, { t } from 'i18next';
+import { MarqueeReact } from '../components/MarqueeReact'
+import {
+  exhibitors1,
+  exhibitors2,
+  exhibitors3,
+  exhibitors4,
+  exhibitors5,
+  exhibitors6,
+} from '../data/constanst_logos'
+import { t } from 'i18next'
 ---
 
-<section class="">
+<section class=''>
   <p class='text-[#ed6b06] text-5xl text-center font-bold p-10'>
-		{t('menu.submenu_2.title')} 2024
-	</p>
-	<MarqueeReact images={exhibitors1} client:only='react' />
-	<MarqueeReact images={exhibitors2} , direction='left' client:only='react' />
-	<MarqueeReact images={exhibitors3} client:only='react' />
-	<MarqueeReact images={exhibitors4} , direction='left' client:only='react' />
-	<MarqueeReact images={exhibitors5} client:only='react' />
-	<MarqueeReact images={exhibitors6} , direction='left' client:only='react' />
-	<p class='text-[#6C757D] text-3xl text-center font-bold p-10'>
-		{t('home.title-testimonials')}
-	</p>
+    {t('menu.submenu_2.title')} 2024
+  </p>
+  <MarqueeReact images={exhibitors1} client:only='react' />
+  <MarqueeReact images={exhibitors2} , direction='left' client:only='react' />
+  <MarqueeReact images={exhibitors3} client:only='react' />
+  <MarqueeReact images={exhibitors4} , direction='left' client:only='react' />
+  <MarqueeReact images={exhibitors5} client:only='react' />
+  <MarqueeReact images={exhibitors6} , direction='left' client:only='react' />
 </section>

@@ -1,175 +1,276 @@
 ---
-import i18next, { t } from 'i18next';
+import i18next, { t } from 'i18next'
 import Profile from '../components/Profile.astro'
 ---
 
 <section
-	class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(216,106,3,1)_100%)] text-white py-10'
+  class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(216,106,3,1)_100%)] text-white py-10'
 >
-	<p class='text-center p-5 text-3xl font-bold'>RE+ MEXICO STANDS 2025</p>
-	<p
-		class='text-center m-5 text-xl italic'
-		set:html={t('home.rates.sub-title')}
-	/>
-	<div class='grid grid-cols-3 gap-5 mx-28 text-center'>
-		<div class='bg-white p-4 rounded-md justify-center'>
-			<p
-				class='text-black font-bold text-3xl'
-				set:html={t(`home.rates.item1.title1`)}
-			/>
-			<div class='flex justify-center py-5'>
-				<div class='px-3 w-full container'>
-					<p
-						class='text-red-700 mb-4 text-sm font-bold'
-						set:html={t(`home.rates.item1.price1-title`)}
-					/>
-					<p class='text-black mb-4' set:html={t(`home.rates.item1.price1`)} />
-				</div>
-				<div class='px-3 w-full container'>
-					<p
-						class='text-red-700 mt-5 mb-4 text-sm font-bold'
-						set:html={t(`home.rates.item1.price2-title`)}
-					/>
-					<p class='text-black mb-4' set:html={t(`home.rates.item1.priece2`)} />
-				</div>
-			</div>
-			<p
-				class='text-black text-2xl py-2 font-bold'
-				set:html={t(`home.rates.item1.title2`)}
-			/>
+  <p class='text-center p-5 text-3xl font-bold'>RE+ MEXICO STANDS 2025</p>
+  <p
+    class='text-center m-5 text-xl italic'
+    set:html={t('home.rates.sub-title')}
+  />
+  <div class='grid lg:grid-cols-3 gap-5 mx-28 text-center'>
+    <div class='bg-white p-4 rounded-md justify-center'>
+      <p
+        class='text-black font-bold text-3xl'
+        set:html={t(`home.rates.item1.title1`)}
+      />
+      <div class='flex justify-center py-5'>
+        <div class='px-3 w-full container'>
+          <p
+            class='text-red-700 mb-4 text-lg font-bold'
+            set:html={t(`home.rates.item1.price1-title`)}
+          />
+          <p
+            class='text-black mb-4 font-extrabold'
+            set:html={t(`home.rates.item1.price1`)}
+          />
+        </div>
+        <div class='px-3 w-full container'>
+          <p
+            class='text-red-700 mt-5 mb-4 text-lg font-bold'
+            set:html={t(`home.rates.item1.price2-title`)}
+          />
+          <p
+            class='text-black mb-4 font-extrabold'
+            set:html={t(`home.rates.item1.priece2`)}
+          />
+        </div>
+      </div>
+      <p
+        class='text-black text-2xl py-2 font-bold'
+        set:html={t(`home.rates.item1.title2`)}
+      />
 
-			<ul class='list-group text-black text-xl py-2 list-group-flush fs-5'>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item1.topic1`)}
-				/>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item1.topic2`)}
-				/>
-			</ul>
-			<p
-				class='text-black text-xl my-4 font-bold'
-				set:html={t(`home.rates.item1.topic3`)}
-			/>
-		</div>
+      <ul class='list-group text-black text-xl py-2 list-group-flush fs-5'>
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item1.topic1`)}
+        />
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item1.topic2`)}
+        />
+      </ul>
+      <p
+        class='text-black text-xl my-4 font-bold'
+        set:html={t(`home.rates.item1.topic3`)}
+      />
+    </div>
+    <div class='bg-white p-4 rounded-md justify-center'>
+      <p
+        class='text-black font-bold text-3xl'
+        set:html={t(`home.rates.item2.title1`)}
+      />
+      <div class='flex justify-center py-5'>
+        <div class='px-3 w-full container'>
+          <p
+            class='text-red-700 mb-4 text-lg font-bold'
+            set:html={t(`home.rates.item1.price1-title`)}
+          />
+          <p
+            class='text-black mb-4 font-extrabold'
+            set:html={t(`home.rates.item2.price1`)}
+          />
+        </div>
+        <div class='px-3 w-full container'>
+          <p
+            class='text-red-700 mt-5 mb-4 text-lg font-bold'
+            set:html={t(`home.rates.item2.price2-title`)}
+          />
+          <p
+            class='text-black mb-4 font-extrabold'
+            set:html={t(`home.rates.item2.price2`)}
+          />
+        </div>
+      </div>
+      <p
+        class='text-black text-2xl py-2 font-bold'
+        set:html={t(`home.rates.item2.title2`)}
+      />
+      <ul class='list-group text-black text-xl py-2 list-group-flush fs-5'>
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item2.topic1`)}
+        />
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item2.topic2`)}
+        />
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item2.topic3`)}
+        />
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item2.topic4`)}
+        />
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item2.topic5`)}
+        />
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item2.topic6`)}
+        />
+        <li
+          class='list-group-item py-2 border-b border-gray-300'
+          set:html={t(`home.rates.item2.topic7`)}
+        />
+        <li
+          class='list-group-item py-2'
+          set:html={t(`home.rates.item2.topic8`)}
+        />
+      </ul>
+    </div>
+    <div class='bg-white p-4 rounded-md justify-center'>
+      <p
+        class='text-black font-bold p-4 text-3xl'
+        set:html={t(`home.rates.item3.title1`)}
+      />
+      <p
+        class='text-black p-4 text-xl'
+        set:html={t(`home.rates.item3.desc1`)}
+      />
+      <p
+        class='text-black p-4 text-xl'
+        set:html={t(`home.rates.item3.desc2`)}
+      />
+      <div class='mx-auto flex'>
+        <a
+          href={i18next.language === 'es'
+            ? '/doc/RE+_MEXICO_SPONSORSHIPS_2025_ESP_v3.pdf'
+            : '/doc/RE+_MEXICO_SPONSORSHIPS_2025_ENG_v3.pdf'}
+          target='_blank'
+          class='button mx-auto text-3xl md:text-6xl font-bold'
+        >
+          <p>Saver más</p>
+          <svg fill='currentColor' viewBox='0 0 24 24' class='icon mr-5 my-2'>
+            <path
+              clip-rule='evenodd'
+              d='M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z'
+              fill-rule='evenodd'></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <p
+    class='text-white mt-4 p-4 font-bold text-center text-3xl'
+    set:html={t('home.title-visitor-profile')}
+  />
 
-		<div class='bg-white p-4 rounded-md justify-center'>
-			<p
-				class='text-black font-bold text-3xl'
-				set:html={t(`home.rates.item2.title1`)}
-			/>
-			<div class='flex justify-center py-5'>
-				<div class='px-3 w-full container'>
-					<p
-						class='text-red-700 mb-4 text-sm font-bold'
-						set:html={t(`home.rates.item1.price1-title`)}
-					/>
-					<p class='text-black mb-4' set:html={t(`home.rates.item1.price1`)} />
-				</div>
-				<div class='px-3 w-full container'>
-					<p
-						class='text-red-700 mt-5 mb-4 text-sm font-bold'
-						set:html={t(`home.rates.item1.price2-title`)}
-					/>
-					<p class='text-black mb-4' set:html={t(`home.rates.item1.priece2`)} />
-				</div>
-			</div>
-			<p
-				class='text-black text-2xl py-2 font-bold'
-				set:html={t(`home.rates.item2.title2`)}
-			/>
-			<ul class='list-group text-black text-xl py-2 list-group-flush fs-5'>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item2.topic1`)}
-				/>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item2.topic2`)}
-				/>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item2.topic3`)}
-				/>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item2.topic4`)}
-				/>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item2.topic5`)}
-				/>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item2.topic6`)}
-				/>
-				<li
-					class='list-group-item py-2 border-b border-gray-300'
-					set:html={t(`home.rates.item2.topic7`)}
-				/>
-				<li
-					class='list-group-item py-2'
-					set:html={t(`home.rates.item2.topic8`)}
-				/>
-			</ul>
-		</div>
-		<div
-		class='bg-white p-4 rounded-md justify-center'
-	>
-		<p
-			class='text-black font-bold p-4 text-3xl'
-			set:html={t(`home.rates.item3.title1`)}
-		/>
-		<p class='text-black p-4 text-xl' set:html={t(`home.rates.item3.desc1`)} />
-		<p class='text-black p-4 text-xl' set:html={t(`home.rates.item3.desc2`)} />
-		<p
-			class='text-black p-4 font-bold text-3xl'
-			set:html={t(`home.rates.item3.desc3`)}
-		/>
-	</div>
-	</div>
-	
-	<p
-		class='text-white mt-4 p-4 font-bold text-center text-3xl'
-		set:html={t('home.title-visitor-profile')}
-	/>
-	<div class='die grid grid-cols-3 gap-6 mx-20'>
-		<Profile text="home.visitor-profile.item_1"/>
-    <Profile text="home.visitor-profile.item_5"/>
-    <Profile text="home.visitor-profile.item_9"/>
-    <Profile text="home.visitor-profile.item_2"/>
-    <Profile text="home.visitor-profile.item_6"/>
-    <Profile text="home.visitor-profile.item_10"/>
-    <Profile text="home.visitor-profile.item_3"/>
-    <Profile text="home.visitor-profile.item_7"/>
-    <Profile text="home.visitor-profile.item_11"/>
-    <Profile text="home.visitor-profile.item_4"/>
-    <Profile text="home.visitor-profile.item_8"/>
-		</div>
-	</div>
+  <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mx-20'>
+    <Profile text='home.visitor-profile.item_1' />
+    <Profile text='home.visitor-profile.item_5' />
+    <Profile text='home.visitor-profile.item_9' />
+    <Profile text='home.visitor-profile.item_2' />
+    <Profile text='home.visitor-profile.item_6' />
+    <Profile text='home.visitor-profile.item_10' />
+    <Profile text='home.visitor-profile.item_3' />
+    <Profile text='home.visitor-profile.item_7' />
+    <Profile text='home.visitor-profile.item_11' />
+    <Profile text='home.visitor-profile.item_4' />
+    <Profile text='home.visitor-profile.item_8' />
+  </div>
 </section>
 
 <style>
-	@keyframes show {
-		from {
-			opacity: 0;
-			scale: 10%;
-		}
-		to {
-			opacity: 1;
-			scale: 100%;
-		}
-	}
-	.die{
-		view-timeline-name: --card;
-		view-timeline-axis: block;
+  .button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background: rgb(188, 1, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(188, 1, 0, 1) 0%,
+      rgba(215, 105, 1, 1) 100%
+    );
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
 
-		animation-timeline: --card;
-		animation-name: show;
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
 
-		animation-range: entry 60% cover 60%;
-		animation-fill-mode: both;
-	}
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+
+  .button::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+
+    60% {
+      left: 100%;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 10%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  .die {
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+
+    animation-timeline: --card;
+    animation-name: show;
+
+    animation-range: entry 60% cover 60%;
+    animation-fill-mode: both;
+  }
 </style>
-
