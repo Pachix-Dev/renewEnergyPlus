@@ -1,137 +1,110 @@
 ---
-import i18next, { t } from 'i18next';
+import { t } from 'i18next'
 ---
 
-<section
-	
->
-	<p class='text-white text-3xl text-center font-bold p-10'>
-		{t('footer.contact')}
-	</p>
-	<div class='cards sm:flex mx-24 gap-20 justify-around text-xl'>
-		<div class='text-center text-white'>
-			<img
-				src='/img/samuel-ramirez.webp'
-				alt='Samuel Ramírez'
-				class='rounded-full w-28 mx-auto my-6'
-			/>
-			<span class='font-bold'>México, Centro & Sudamérica </span>
-			<p class='mt-5'>Samuel Ramírez</p>
-			<a href='mailto:samuel.ramirez@igeco.mx' class='justify-center'>
-				<div class='flex'>
-					<svg
-						class='mx-2'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='#1d7e7a'
-						viewBox='0 0 24 24'
-						stroke-width='1.5'
-						stroke='currentColor'
-						width='20'
-						><path
-							stroke-linecap='round'
-							stroke-linejoin='round'
-							d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
-						></path></svg
-					>
-					<p>samuel.ramirez@igeco.mx</p>
-				</div>
-				<button
-					class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
-				>
-					{t('home.button_contact')}
-				</button>
-			</a>
-		</div>
-		<div class='text-center text-white'>
-			<img
-				src='/img/raymanWu.webp'
-				alt='Rayman Wu'
-				class='rounded-full w-28 mx-auto my-6'
-			/>
-			<span class='font-bold'>China </span>
-			<p class='mt-5'>Rayman Wu</p>
-			<a href='mailto:info@snec.org.cn' class='justify-center'>
-				<div class='flex'>
-					<svg
-						class='mx-2'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='#1d7e7a'
-						viewBox='0 0 24 24'
-						stroke-width='1.5'
-						stroke='currentColor'
-						width='20'
-						><path
-							stroke-linecap='round'
-							stroke-linejoin='round'
-							d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
-						></path></svg
-					>
-					<p>info@snec.org.cn</p>
-				</div>
-				<button
-					class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
-				>
-					{t('home.button_contact')}
-				</button>
-			</a>
-		</div>
-		<div class='text-center text-white'>
-			<img
-				src='/img/Pamela-velazquez.webp'
-				alt='Pamela Velazco'
-				class='rounded-full w-28 mx-auto my-6'
-			/>
-			<span class='font-bold'>USA </span>
-			<p class='mt-5'>Pamela Velazco</p>
-			<a href='mailto: pvelazco@re-plus.com' class='justify-center'>
-				<div class='flex'>
-					<svg
-						class='mx-2'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='#1d7e7a'
-						viewBox='0 0 24 24'
-						stroke-width='1.5'
-						stroke='currentColor'
-						width='20'
-						><path
-							stroke-linecap='round'
-							stroke-linejoin='round'
-							d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
-						></path></svg
-					>
-					<p>pvelazco@re-plus.com</p>
-				</div>
-				<button
-					class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
-				>
-					{t('home.button_contact')}
-				</button>
-			</a>
-		</div>
-	</div>
-	
-
+<section>
+  <p class='text-white text-3xl text-center font-bold p-10'>
+    {t('footer.contact')}
+  </p>
+  <div class='sm:flex mx-24 gap-20 justify-around text-xl'>
+    <div class='text-center text-white'>
+      <img
+        src='/img/samuel-ramirez.webp'
+        alt='Samuel Ramírez'
+        class='rounded-full w-28 mx-auto my-6'
+      />
+      <span class='font-bold'>México, Centro & Sudamérica </span>
+      <p class='mt-5'>Samuel Ramírez</p>
+      <a href='mailto:samuel.ramirez@igeco.mx' class='justify-center'>
+        <div class='flex'>
+          <svg
+            class='mx-2'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='#1d7e7a'
+            viewBox='0 0 24 24'
+            stroke-width='1.5'
+            stroke='currentColor'
+            width='20'
+            ><path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
+            ></path></svg
+          >
+          <p>samuel.ramirez@igeco.mx</p>
+        </div>
+        <button
+          class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
+        >
+          {t('home.button_contact')}
+        </button>
+      </a>
+    </div>
+    <div class='text-center text-white'>
+      <img
+        src='/img/raymanWu.webp'
+        alt='Rayman Wu'
+        class='rounded-full w-28 mx-auto my-6'
+      />
+      <span class='font-bold'>China </span>
+      <p class='mt-5'>Rayman Wu</p>
+      <a href='mailto:info@snec.org.cn' class='justify-center'>
+        <div class='flex'>
+          <svg
+            class='mx-2'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='#1d7e7a'
+            viewBox='0 0 24 24'
+            stroke-width='1.5'
+            stroke='currentColor'
+            width='20'
+            ><path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
+            ></path></svg
+          >
+          <p>info@snec.org.cn</p>
+        </div>
+        <button
+          class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
+        >
+          {t('home.button_contact')}
+        </button>
+      </a>
+    </div>
+    <div class='text-center text-white'>
+      <img
+        src='/img/Pamela-velazquez.webp'
+        alt='Pamela Velazco'
+        class='rounded-full w-28 mx-auto my-6'
+      />
+      <span class='font-bold'>USA </span>
+      <p class='mt-5'>Pamela Velazco</p>
+      <a href='mailto: pvelazco@re-plus.com' class='justify-center'>
+        <div class='flex'>
+          <svg
+            class='mx-2'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='#1d7e7a'
+            viewBox='0 0 24 24'
+            stroke-width='1.5'
+            stroke='currentColor'
+            width='20'
+            ><path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
+            ></path></svg
+          >
+          <p>pvelazco@re-plus.com</p>
+        </div>
+        <button
+          class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
+        >
+          {t('home.button_contact')}
+        </button>
+      </a>
+    </div>
+  </div>
 </section>
-
-<style>
-  @keyframes show {
-    from {
-      opacity: 0;
-      scale: 10%;
-    }
-    to {
-      opacity: 1;
-      scale: 100%;
-    }
-  }
-  .cards{
-    view-timeline-name: --card;
-    view-timeline-axis: block;
-
-    animation-timeline: --card;
-    animation-name: show;
-
-    animation-range: entry 60% cover 60%;
-    animation-fill-mode: both;
-  }
-</style>

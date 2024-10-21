@@ -1,0 +1,25 @@
+{
+  "name": "replus-mexico-app",
+  "version": "1.0.0",
+  "description": "Aplicacion para registros y formularios del sitio we",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file .env --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ReplusMexico"
+  ],
+  "author": "Fabian Yapura Claros",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.3",
+    "pdfkit": "^0.15.0",
+    "qrcode": "^1.5.4",
+    "resend": "^4.0.0",
+    "uuid": "^10.0.0"
+  }
+}

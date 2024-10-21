@@ -3,7 +3,7 @@ import { MarqueeReact } from '../components/MarqueeReact'
 import { buyers1, buyers2, buyers3, buyers4 } from '../data/constanst_buyers'
 ---
 
-<section class=''>
+<section class='container mx-auto px-4'>
   <p class='text-center text-5xl font-bold text-[#ed6b06] m-8'>
     Professional Buyers
   </p>
@@ -11,7 +11,7 @@ import { buyers1, buyers2, buyers3, buyers4 } from '../data/constanst_buyers'
   <div class='grid lg:flex lg:justify-center mx-10 items-center'>
     <div class='flex items-center justify-center'>
       <div
-        class='relative p-3 animate-spin drop-shadow-3xl bg-gradient-to-bl from-orange-400 via-purple-400 to-purple-600 h-[440px] w-[440px] aspect-square rounded-full'
+        class='relative p-3 lg:animate-spin drop-shadow-3xl bg-gradient-to-bl from-orange-400 via-purple-400 to-purple-600 h-[320px] w-[320px] aspect-square rounded-full'
       >
         <div
           class='rounded-full h-full w-full bg-slate-100 dark:bg-zinc-900 background-blur-md'
@@ -19,18 +19,15 @@ import { buyers1, buyers2, buyers3, buyers4 } from '../data/constanst_buyers'
         </div>
       </div>
       <div class='absolute text-[#ed6b06] z-1 m-[70px] text-center'>
-        <p class='text-8xl font-extrabold m-auto'>+85 %</p>
-        <p class='text-3xl font-extrabold m-auto'>
+        <p class='text-6xl font-extrabold m-auto'>+85 %</p>
+        <p class='text-2xl font-extrabold m-auto'>
           de los visitantes son <br />tomadores de decisión
         </p>
       </div>
     </div>
-
-    <div class='basis-2 w-[800px]'>
-      <MarqueeReact images={buyers1} client:only='react' />
-      <MarqueeReact images={buyers2} , direction='left' client:only='react' />
-      <MarqueeReact images={buyers3} client:only='react' />
-      <MarqueeReact images={buyers4} , direction='left' client:only='react' />
-    </div>
   </div>
+  <MarqueeReact images={buyers1} client:only='react' />
+  <MarqueeReact images={buyers2} , direction='left' client:only='react' />
+  <MarqueeReact images={buyers3} client:only='react' />
+  <MarqueeReact images={buyers4} , direction='left' client:only='react' />
 </section>

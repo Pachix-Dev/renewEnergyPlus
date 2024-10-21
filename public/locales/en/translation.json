@@ -60,7 +60,7 @@
         "energy_night_description": "An exclusive networking event for <strong>executives and industry leaders.</strong><br /> <span>¡Don't miss out on this opportunity!",
         "energy_night_date": "Wednesday <br /><p><span>April</span> 17th, 2024</p> 19:00 hrs",
         "solar_bg_video": "THE <strong>FUTURE OF ENERGY</strong> IN MEXICO <strong>EXPO</strong> <br /> <span>April 17th - 19th, 2024 <br />Expo Guadalajara</span>",
-        "solar_date_hours": "Wednesday, 17th - 11:00 am - 6:00 pm<br />Thursday, 18th - 11:00 am - 6:00 pm<br />Friday, 19th - 11:00 am - 5:00 pm",
+        "solar_date_hours": "Wednesday, 5th - 11:00 am - 6:00 pm<br />Thursday, 6th - 11:00 am - 6:00 pm<br />Friday, 7th - 11:00 am - 5:00 pm",
         "solar_description": " evolves into <strong>RE+ MEXICO</strong>, taking a transcendental step towards embracing all clean energies. This new stage will be key in setting the course for the renewable energy future of our country.",
         "gallery": "Gallery",
         "more_videos": "VIDEOS",
@@ -168,7 +168,13 @@
         "energy_date": "Wednesday, April 17th, 2024",
         "energy_description2": "THE MOST IMPORTANT NETWORKING EVENT FOR THE PHOTOVOLTAIC INDUSTRY",
         "energy_button": "GAIN ACCESS",
-        "more_info": "More information"
+        "more_info": "More information",
+        "title_register": "THE MOST IMPORTANT WEEK OF ENERGY IS APPROACHING",
+        "days": "days",
+        "hours": "hours",
+        "minutes": "minutes",
+        "seconds": "seconds",
+        "free_register": "FREE REGISTRATION"
     },
     "AboutSSM": {
         "title": "ABOUT RE+ MEXICO",

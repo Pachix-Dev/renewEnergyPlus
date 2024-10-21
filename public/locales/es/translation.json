@@ -59,7 +59,7 @@
         "energy_night_description": "Un evento exclusivo de networking para <strong>empresarios y líderes</strong> de la industria.<br /> <span>¡No pierdas esta oportunidad!",
         "energy_night_date": "Miércoles <br /><p>17 de <span>abril</span> 2024</p> 19:00 hrs",
         "solar_bg_video": "LA <strong>FERIA DEL FUTURO<br /> ENERGÉTICO</strong> DE MÉXICO <br /><br />Abril 17 - 19, 2024 <br />Expo Guadalajara",
-        "solar_date_hours": "miércoles 17, 11:00 am – 6:00 pm<br />jueves 18, 11:00 am – 6:00 pm<br />viernes 19, 11:00 am – 5:00 pm",
+        "solar_date_hours": "miércoles 5, 11:00 am – 6:00 pm<br />jueves 6, 11:00 am – 6:00 pm<br />viernes 7, 11:00 am – 5:00 pm",
         "solar_description": "evoluciona hacia <strong>RE+ MEXICO</strong>, dando un paso trascendental para abarcar todas las energías limpias. Esta nueva etapa será clave para marcar el rumbo del futuro energético renovable de nuestro país.",
         "gallery": "Galería",
         "more_videos": "VIDEOS",
@@ -168,7 +168,13 @@
         "energy_date": "miércoles 17 de Abril de 2024",
         "energy_description2": "EL EVENTO MÁS IMPORTANTE DE NETWORKING DE LA INDUSTRIA FOTOVOLTAICA",
         "energy_button": "ADQUIRIR ACCESO",
-        "more_info": "Saber más"
+        "more_info": "Saber más",
+        "title_register": "LA SEMANA MÁS IMPORTANTE DE LA ENERGIA SE ACERCA",
+        "days": "días",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "segundos",
+        "free_register": "REGISTRO GRATUITO"
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",

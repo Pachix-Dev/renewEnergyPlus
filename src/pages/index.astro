@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
-import Content from '../components/Content.astro'
+
 import i18next, { t, changeLanguage } from 'i18next'
 import Sponsors from '../components/Sponsors.astro'
 import Tariffs from '../components/Tariffs.astro'
@@ -15,12 +15,14 @@ import Testimonials from '../components/Testimonials.astro'
 import BuyersProfessional from '../components/BuyersProfessional.astro'
 import Exhibitors from '../components/Exhibitors.astro'
 import { gallery2024 } from '../data/constans_gallery'
+import FreeRegiter from '../components/home/FreeRegiter.astro'
 
 changeLanguage('es')
 ---
 
 <Layout title='RE+ México'>
   <Hero />
+  <FreeRegiter />
   <section class='container mx-auto px-4 grid md:grid-cols-2 gap-10 py-10'>
     <div class='bg-white py-12 sm:text-xl text-justify'>
       <p class='text-[#ed6b06] sm:text-2xl font-bold my-4'>RE+ MEXICO</p>
@@ -32,12 +34,10 @@ changeLanguage('es')
       posterquality='maxresdefault'
       params='controls=0&enablejsapi=1'></lite-youtube>
   </section>
-  <Content />
-  <Sponsors />
 
+  <Sponsors />
   <Card />
   <Tariffs />
-
   <Testimonials />
   <BuyersProfessional />
   <Exhibitors />
@@ -78,13 +78,12 @@ changeLanguage('es')
         class='rounded-lg h-96 w-60'></lite-youtube>
     </div>
   </section>
-
   <div
     class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(215,105,1,1)_100%)] pb-10'
   >
     <Contacts />
     <div
-      class='transition duration-300 bg-white hover:bg-[#0CCB67] hover:text-white px-10 mx-auto w-[450px] text-center font-bold text-3xl p-3 rounded-lg my-5'
+      class='transition duration-300 bg-white hover:bg-[#0CCB67] hover:text-white px-5 mx-auto text-center font-bold text-xl p-3 rounded-lg my-5 w-72'
     >
       <p>{t('contactForm.title')}</p>
     </div>

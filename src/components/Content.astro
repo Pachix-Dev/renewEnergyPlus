@@ -2,41 +2,40 @@
 import i18next, { t } from 'i18next'
 ---
 
-<section class='bg-white items-center mx-8'>
-  <div class='grid sm:flex sm:justify-between gap-5 text-[5px] xl:text-lg'>
-    <a
-      href={i18next.language === 'es'
-        ? '/doc/RE_MEX_2025_FS__ES_AC_compressed.pdf'
-        : '/doc/RE_MEX_2025_FS__ENG_AC_compressed.pdf'}
-      target='_blank'
-      class='button w-full py-4 text-white'
-    >
-      <span>{t('menu.submenu_2.option_6')}</span>
-    </a>
-    <a
-      href='/doc/RE+_MEX_2025_101524_BCD-Model.pdf'
-      target='_blank'
-      class='button w-full py-4 text-white'
-    >
-      <span>{t('menu.submenu_2.option_8')}</span>
-    </a>
-    <a
-      href='/doc/REMEX_2025_SpaceAgreement_V2_23_08_24.pdf'
-      target='_blank'
-      class='button w-full py-4 text-white'
-    >
-      <span>{t('menu.submenu_2.option_7')}</span>
-    </a>
-    <a
-      href={i18next.language === 'es'
-        ? '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ESP_AF_2024_v3.pdf'
-        : '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ENG_AF_2024_v3.pdf'}
-      class='button w-full py-4 text-white'
-    >
-      <span>{t('menu.submenu_4.results')} 2024</span>
-    </a>
-  </div>
-</section>
+<div class='grid sm:flex sm:justify-between gap-5 text-[5px] xl:text-lg'>
+  <a
+    href={i18next.language === 'es'
+      ? '/doc/RE_MEX_2025_FS__ES_AC_compressed.pdf'
+      : '/doc/RE_MEX_2025_FS__ENG_AC_compressed.pdf'}
+    target='_blank'
+    class='button w-full py-4 text-white'
+  >
+    <span>{t('menu.submenu_2.option_6')}</span>
+  </a>
+  <a
+    href='/doc/RE+_MEX_2025_101524_BCD-Model.pdf'
+    target='_blank'
+    class='button w-full py-4 text-white'
+  >
+    <span>{t('menu.submenu_2.option_8')}</span>
+  </a>
+  <a
+    href='/doc/REMEX_2025_SpaceAgreement_V2_23_08_24.pdf'
+    target='_blank'
+    class='button w-full py-4 text-white'
+  >
+    <span>{t('menu.submenu_2.option_7')}</span>
+  </a>
+  <a
+    href={i18next.language === 'es'
+      ? '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ESP_AF_2024_v3.pdf'
+      : '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ENG_AF_2024_v3.pdf'}
+    class='button w-full py-4 text-white'
+  >
+    <span>{t('menu.submenu_4.results')} 2024</span>
+  </a>
+</div>
+
 <style>
   .button {
     position: relative;
