@@ -6,7 +6,7 @@ export function Stepper({ translates }) {
     <div className='p-4 text-black font-bold'>
       <ol className='flex items-center w-full text-sm font-medium text-center text-gray-500 sm:text-base'>
         <li
-          className={`${step >= 0 ? 'text-[#E42128]' : ''} 
+          className={`${step >= 0 ? 'text-[#FF5800]' : ''} 
             flex md:w-full items-center sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10`}
         >
           <span className="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 ">
@@ -25,7 +25,7 @@ export function Stepper({ translates }) {
           </span>
         </li>
         <li
-          className={`${step >= 1 ? 'text-[#E42128]' : ''} 
+          className={`${step >= 1 ? 'text-[#FF5800]' : ''} 
           flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10`}
         >
           <span className="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200">
@@ -47,7 +47,7 @@ export function Stepper({ translates }) {
             </span>
           </span>
         </li>
-        <li className={`${step >= 2 ? 'text-[#E42128]' : ''} `}>
+        <li className={`${step >= 2 ? 'text-[#FF5800]' : ''} `}>
           <span className="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200">
             {step >= 1 ? (
               <svg

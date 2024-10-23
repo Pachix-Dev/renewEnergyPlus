@@ -470,7 +470,7 @@ export function StepOne({ translates }) {
           )}
         </div>
       </div>
-      <div className='w-full flex justify-end'>
+      <div className='mt-5 w-full flex justify-end'>
         <button className='button' onClick={handleSubmit(incrementStep)}>
           {translates.continue}
         </button>

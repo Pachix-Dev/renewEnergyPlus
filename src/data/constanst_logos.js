@@ -762,7 +762,24 @@ const exhibitors6 = [
 
 const sponsors = [
 	{
-		
+		src:'/img/sponsors/Huawei.webp',
+    	alt: 'Logotipo Huawei',
+		width: 250,
+	},
+	{
+		src: '/img/sponsors/quartux.webp',
+      	alt: 'quartux',
+		width: 230,
+	},
+	{
+		src: '/img/sponsors/longi.webp',
+      	alt: 'longi',
+		width: 200,
+	},
+	{
+		src: '/img/sponsors/enlight.webp',
+      	alt: 'enlight',
+		width: 250,
 	}
 ]
 export {

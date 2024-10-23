@@ -105,7 +105,7 @@ export function StepTwo({ translates }) {
     <>
       <div className='grid md:grid-cols-2 gap-6 mt-10'>
         <div>
-          <p className='text-white'>
+          <p className='text-black'>
             {translates.company_name} <span className='text-red-600'>*</span>
           </p>
           <div className='relative mt-2'>
@@ -146,7 +146,7 @@ export function StepTwo({ translates }) {
           )}
         </div>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.industry} <span className='text-red-600'>*</span>
           </p>
           <select
@@ -214,7 +214,7 @@ export function StepTwo({ translates }) {
       </div>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.position} <span className='text-red-600'>*</span>
           </p>
           <select
@@ -223,7 +223,7 @@ export function StepTwo({ translates }) {
               onChange: (e) => setPosition(e.target.value),
             })}
             defaultValue={position}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black'
           >
             <option value=''>{translates.select_option}</option>
             <option value={translates.position_1}>
@@ -246,7 +246,7 @@ export function StepTwo({ translates }) {
           )}
         </div>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.area} <span className='text-red-600'>*</span>
           </p>
           <select
@@ -255,7 +255,7 @@ export function StepTwo({ translates }) {
               onChange: (e) => setArea(e.target.value),
             })}
             defaultValue={area}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black uppercase'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
           >
             <option value=''>{translates.select_option}</option>
             {translates.list_area.map((area, index) => (
@@ -270,7 +270,7 @@ export function StepTwo({ translates }) {
         </div>
       </div>
       <div className='mt-3'>
-        <p className='text-white'>
+        <p className='text-black'>
           {translates.adrdress} <span className='text-red-600'>*</span>
         </p>
         <div className='relative mt-2'>
@@ -315,7 +315,7 @@ export function StepTwo({ translates }) {
       </div>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.country} <span className='text-red-600'>*</span>
           </p>
           <select
@@ -324,7 +324,7 @@ export function StepTwo({ translates }) {
               onChange: (e) => setCountry(e.target.value),
             })}
             defaultValue={country}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black'
           >
             <option value=''>{translates.select_option}</option>
             {countries.map((country) => (
@@ -340,7 +340,7 @@ export function StepTwo({ translates }) {
           )}
         </div>
         <div>
-          <p className='text-white'>
+          <p className='text-black'>
             {translates.postal_code} <span className='text-red-600'>*</span>
           </p>
           <div className='relative mt-2'>
@@ -392,7 +392,7 @@ export function StepTwo({ translates }) {
 
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='text-white'>
+          <p className='text-black'>
             {translates.state} <span className='text-red-600'>*</span>
           </p>
           <div className='relative mt-2'>
@@ -429,7 +429,7 @@ export function StepTwo({ translates }) {
           )}
         </div>
         <div>
-          <p className='text-white'>
+          <p className='text-black'>
             {translates.municipality} <span className='text-red-600'>*</span>
           </p>
           <div className='relative mt-2'>
@@ -472,7 +472,7 @@ export function StepTwo({ translates }) {
       </div>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='text-white'>
+          <p className='text-black'>
             {translates.colony}
             {country === 'Mexico' ? (
               <span className='text-red-600'>*</span>
@@ -487,7 +487,7 @@ export function StepTwo({ translates }) {
                   required: `${translates.requiered}`,
                   onChange: (e) => setColonia(e.target.value),
                 })}
-                className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black'
+                className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black'
               >
                 <option value=''>{translates.select_option}</option>
                 {colonias.length > 0 &&
@@ -535,7 +535,7 @@ export function StepTwo({ translates }) {
           )}
         </div>
         <div>
-          <p className='text-white'>
+          <p className='text-black'>
             {translates.city} <span className='text-red-600'>*</span>
           </p>
           <div className='relative mt-2'>
@@ -578,7 +578,7 @@ export function StepTwo({ translates }) {
 
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='text-white'>{translates.website}</p>
+          <p className='text-black'>{translates.website}</p>
           <div className='relative mt-2'>
             <input
               type='text'
@@ -609,7 +609,7 @@ export function StepTwo({ translates }) {
           </div>
         </div>
         <div>
-          <p className='text-white'>{translates.company_phone} </p>
+          <p className='text-black'>{translates.company_phone} </p>
           <div className='relative mt-2'>
             <input
               type='tel'
@@ -652,11 +652,8 @@ export function StepTwo({ translates }) {
         </div>
       </div>
 
-      <div className='flex justify-between'>
-        <button
-          className='px-3 py-2 bg-[#E42128] hover:bg-red-700 rounded-2xl text-white font-bold mt-5 flex gap-2'
-          onClick={decrementStep}
-        >
+      <div className='flex justify-between mt-5'>
+        <button className='button' onClick={decrementStep}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -673,10 +670,7 @@ export function StepTwo({ translates }) {
           </svg>
           {translates.back}
         </button>
-        <button
-          className='px-3 py-2 bg-[#E42128] hover:bg-red-700 rounded-2xl text-white font-bold mt-5 flex gap-2'
-          onClick={handleSubmit(incrementStep)}
-        >
+        <button className='button' onClick={handleSubmit(incrementStep)}>
           {translates.continue}
         </button>
       </div>

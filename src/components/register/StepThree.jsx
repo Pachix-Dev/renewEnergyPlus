@@ -135,7 +135,7 @@ export function StepThree({ translates, currentLanguage }) {
     <>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.how_find} <span className='text-red-600'>*</span>
           </p>
           <select
@@ -144,7 +144,7 @@ export function StepThree({ translates, currentLanguage }) {
               onChange: (e) => setEventKnowledge(e.target.value),
             })}
             defaultValue={eventKnowledge}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black uppercase'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
           >
             <option value=''>{translates.select_option}</option>
             <option value='ESPECTACULAR'>{translates.spectacular}</option>
@@ -171,7 +171,7 @@ export function StepThree({ translates, currentLanguage }) {
           )}
         </div>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.product_interest}{' '}
             <span className='text-red-600'>*</span>
           </p>
@@ -181,7 +181,7 @@ export function StepThree({ translates, currentLanguage }) {
               onChange: (e) => setProductInterest(e.target.value),
             })}
             defaultValue={productInterest}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black uppercase'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
           >
             <option value=''>{translates.select_option}</option>
             {translates.list_interest_product.map((item, index) => (
@@ -199,7 +199,7 @@ export function StepThree({ translates, currentLanguage }) {
       </div>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.level_influence} <span className='text-red-600'>*</span>
           </p>
           <select
@@ -208,7 +208,7 @@ export function StepThree({ translates, currentLanguage }) {
               onChange: (e) => setLevelInfluence(e.target.value),
             })}
             defaultValue={levelInfluence}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black uppercase'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
           >
             <option value=''>{translates.select_option}</option>
             <option value='APRUEBO COMPRAS'>
@@ -228,7 +228,7 @@ export function StepThree({ translates, currentLanguage }) {
           )}
         </div>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.wanna_be_exhibitor}{' '}
             <span className='text-red-600'>*</span>
           </p>
@@ -238,7 +238,7 @@ export function StepThree({ translates, currentLanguage }) {
               onChange: (e) => setWannaBeExhibitor(e.target.value),
             })}
             defaultValue={wannaBeExhibitor}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black uppercase'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
           >
             <option value=''>{translates.select_option}</option>
             <option value='SI'>{translates.yes}</option>
@@ -253,7 +253,7 @@ export function StepThree({ translates, currentLanguage }) {
       </div>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
-          <p className='font-semibold text-white'>
+          <p className='font-semibold text-black'>
             {translates.already_visited}
           </p>
           <MultiSelect
@@ -261,7 +261,7 @@ export function StepThree({ translates, currentLanguage }) {
             value={alreadyVisited}
             onChange={setAlreadyVisited}
             labelledBy='Select'
-            className='mt-2 w-full text-sm text-white *:text-black uppercase'
+            className='mt-2 w-full text-sm text-black *:text-black uppercase'
             hasSelectAll={false}
           />
           {/*<select
@@ -269,7 +269,7 @@ export function StepThree({ translates, currentLanguage }) {
               onChange: (e) => setAlreadyVisited(e.target.value),
             })}
             defaultValue={alreadyVisited}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black'
+            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black'
           >
             <option value=''>{translates.select_option}</option>
             <option value='Expo Manufactura'>Expo Manufactura</option>
@@ -295,11 +295,8 @@ export function StepThree({ translates, currentLanguage }) {
           )}*/}
         </div>
       </div>
-      <div className='flex justify-between'>
-        <button
-          className='px-3 py-2 bg-[#E42128] hover:bg-red-700 rounded-2xl font-bold text-white  mt-5 flex gap-2'
-          onClick={decrementStep}
-        >
+      <div className='flex justify-between mt-5'>
+        <button className='button' onClick={decrementStep}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -316,10 +313,7 @@ export function StepThree({ translates, currentLanguage }) {
           </svg>{' '}
           {translates.back}
         </button>
-        <button
-          className='px-3 py-2 bg-[#E42128] hover:bg-red-700 font-bold rounded-2xl text-white  mt-5 flex gap-2'
-          onClick={handleSubmit(handleRegister)}
-        >
+        <button className='button' onClick={handleSubmit(handleRegister)}>
           {translates.finish}
         </button>
       </div>
@@ -346,7 +340,7 @@ export function StepThree({ translates, currentLanguage }) {
                   fill='currentFill'
                 />
               </svg>
-              <span className='font-bold text-white text-2xl'>
+              <span className='font-bold text-black text-2xl'>
                 Estamos procesando la información por favor espere...
               </span>
             </p>
