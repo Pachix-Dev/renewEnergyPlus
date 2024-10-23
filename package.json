@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "^3.1.2",
     "@astrojs/tailwind": "^5.1.0",
     "@justinribeiro/lite-youtube": "^1.5.0",
+    "@paypal/react-paypal-js": "^8.7.0",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
@@ -23,15 +24,18 @@
     "@types/react-dom": "^18.2.25",
     "astro": "^4.6.1",
     "astro-i18next": "^1.0.0-beta.21",
-    "flowbite": "^2.3.0",        
+    "flowbite": "^2.3.0",
     "photoswipe": "^5.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
     "react-hook-form": "^7.53.0",
+    "react-multi-select-component": "^4.3.4",
+    "react-phone-number-input": "^3.4.9",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "zustand": "^5.0.0"
   }
 }

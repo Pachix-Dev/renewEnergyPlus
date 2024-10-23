@@ -759,6 +759,12 @@ const exhibitors6 = [
 		height: 110,
 	},
 ];
+
+const sponsors = [
+	{
+		
+	}
+]
 export {
 	exhibitors1,
 	exhibitors2,
@@ -766,4 +772,5 @@ export {
 	exhibitors4,
 	exhibitors5,
 	exhibitors6,
+	sponsors
 };
