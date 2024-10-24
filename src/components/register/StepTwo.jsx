@@ -158,50 +158,54 @@ export function StepTwo({ translates }) {
             className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm *:text-black'
           >
             <option value=''>{translates.select_option}</option>
-            <option value='INGENIERIA'>{translates.industry_option_1}</option>
-            <option value='SECTOR EDUCATIVO'>
+            <option value='INSTALADORES'>{translates.industry_option_1}</option>
+            <option value='INTEGRADORES SOLARES'>
               {translates.industry_option_2}
             </option>
-            <option value='AUTOMOTRIZ'>{translates.industry_option_3}</option>
-            <option value='ELECTRICIDAD Y ELECTRÓNICA'>
+            <option value='PROVEEDORES DE TECNOLOGÍA SOLAR'>
+              {translates.industry_option_3}
+            </option>
+            <option value='DISTRIBUIDORES DE PANELES SOLARES'>
               {translates.industry_option_4}
             </option>
-            <option value='SISTEMAS INTEGRADORES'>
+            <option value='EMPRESAS DE LA INDUSTRIA ELÉCTRICA'>
               {translates.industry_option_5}
             </option>
-            <option value='INDUSTRIA DE MAQUINARIA DE HERRAMIENTA'>
+            <option value='INGENIERÍA DE PROYECTOS'>
               {translates.industry_option_6}
             </option>
-            <option value='GOBIERNO'>{translates.industry_option_7}</option>
-            <option value='LOGÍSTICA Y CADENA DE SUMINISTROS'>
-              {translates.industry_option_8}
+            <option value='CONTRATISTAS EPC'>
+              {translates.industry_option_7}
             </option>
-            <option value='PROCESOS INDUSTRIALES (ACERO, PETRÓLEO Y QUÍMICO)'>
+            <option value='FABRICANTES'>{translates.industry_option_8}</option>
+            <option value='SERVICIOS DE CONSULTORÍA'>
               {translates.industry_option_9}
             </option>
-            <option value='ALIMENTOS Y BEBIDAS'>
+            <option value='INVERSIONISTAS'>
               {translates.industry_option_10}
             </option>
-            <option value='TELECOMUNICACIONES'>
+            <option value='GENERADORES DE ENERGÍA INDEPENDIENTES'>
               {translates.industry_option_11}
             </option>
-            <option value='INGENIERÍA DE PLANTAS Y MECÁNICA'>
+            <option value='PROPIETARIOS DE PARQUES SOLARES'>
               {translates.industry_option_12}
             </option>
-            <option value='AEROESPACIAL'>
+            <option value='DESARROLLADORES INMOBILIARIOS'>
               {translates.industry_option_13}
             </option>
-            <option value='CUIDADO DE LA SALUD'>
+            <option value='DESARROLLADORES COPORATIVOS'>
               {translates.industry_option_14}
             </option>
-            <option value='FACILIDADES E INFRAESTRUCTURA Y SOLUCIONES URBANAS'>
+            <option value='DESARROLLADORES DE PARQUES INDUSTRIALES'>
               {translates.industry_option_15}
             </option>
-            <option value='CÁMARAS Y ASOCIACIONES'>
+            <option value='INSTITUCIONES SECTORIALES'>
               {translates.industry_option_16}
             </option>
-            <option value='EMBALAJE'>{translates.industry_option_17}</option>
-            <option value='BIOTECNOLOGÍA Y FARMACÉUTICA'>
+            <option value='CENTROS DE INVESTIGACIÓN'>
+              {translates.industry_option_17}
+            </option>
+            <option value='INNOVACIÓN Y UNIVERSIDADES'>
               {translates.industry_option_18}
             </option>
           </select>

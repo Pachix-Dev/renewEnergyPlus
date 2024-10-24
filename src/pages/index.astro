@@ -2,15 +2,13 @@
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 
-import i18next, { t, changeLanguage } from 'i18next'
+import { t, changeLanguage } from 'i18next'
 import Sponsors from '../components/Sponsors.astro'
 import Tariffs from '../components/Tariffs.astro'
 import Card from '../components/Card.astro'
-import { MarqueeReact } from '../components/MarqueeReact'
 import Contacts from '../components/Contacts.astro'
 import Logos from '../components/Logos.astro'
 import Galeria from '../components/Galeria.astro'
-import Results from '../components/Results.astro'
 import Testimonials from '../components/Testimonials.astro'
 import BuyersProfessional from '../components/BuyersProfessional.astro'
 import Exhibitors from '../components/Exhibitors.astro'
@@ -34,7 +32,6 @@ changeLanguage('es')
       posterquality='maxresdefault'
       params='controls=0&enablejsapi=1'></lite-youtube>
   </section>
-
   <Sponsors />
   <Card />
   <Tariffs />

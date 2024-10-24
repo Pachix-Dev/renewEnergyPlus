@@ -71,8 +71,9 @@ export function StepThree({ translates, currentLanguage }) {
     formState: { errors },
   } = useForm({})
 
-  const urlbase = 'https://industrialtransformation.mx/server/'
-  //const urlbase = 'http://localhost:3010/'
+  const urlbase = import.meta.env.DEV
+    ? 'http://localhost:3010/'
+    : 'https://re-plus-mexico.com.mx/server/'
 
   const handleRegister = async () => {
     setProcessing(true)
@@ -91,7 +92,6 @@ export function StepThree({ translates, currentLanguage }) {
         genre,
         nacionality,
         code_invitation,
-
         company,
         industry,
         position,
@@ -105,7 +105,6 @@ export function StepThree({ translates, currentLanguage }) {
         postalCode,
         webPage,
         phoneCompany,
-
         eventKnowledge,
         productInterest,
         levelInfluence,
@@ -118,8 +117,7 @@ export function StepThree({ translates, currentLanguage }) {
     if (orderData?.status) {
       //clear()
       setCompleteRegister(true)
-      //setInvoiceDownToLoad(orderData?.invoice)
-      setInvoiceDownToLoad(orderData?.insertId)
+      setInvoiceDownToLoad(orderData?.invoice)
       currentLanguage === 'es'
         ? (window.location.href = '/gracias-por-registrarte')
         : (window.location.href = '/en/gracias-por-registrarte')
@@ -264,35 +262,6 @@ export function StepThree({ translates, currentLanguage }) {
             className='mt-2 w-full text-sm text-black *:text-black uppercase'
             hasSelectAll={false}
           />
-          {/*<select
-            {...register('alreadyVisited', {
-              onChange: (e) => setAlreadyVisited(e.target.value),
-            })}
-            defaultValue={alreadyVisited}
-            className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black'
-          >
-            <option value=''>{translates.select_option}</option>
-            <option value='Expo Manufactura'>Expo Manufactura</option>
-            <option value='Expomaq'>Expomaq</option>
-            <option value='Fabtech'>Fabtech</option>
-            <option value='Tecma'>Tecma</option>
-            <option value='The Logistics World'>The Logistics World</option>
-            <option value='Automate'>Automate</option>
-            <option value='Expo Logística y Transporte'>
-              Expo Logística y Transporte
-            </option>
-            <option value='Expo Pack'>Expo Pack</option>
-            <option value='Expo Eléctrica'>Expo Eléctrica</option>
-            <option value='Meximold'>Meximold</option>
-            <option value='Fitma'>Fitma</option>
-            <option value='Fitma'>ITMS </option>
-            <option value='Fitma'>Hannover Messe (Alemania)</option>
-          </select>
-          {errors.alreadyVisited && (
-            <p className='text-[#ffe200] font-light'>
-              {errors.alreadyVisited.message}
-            </p>
-          )}*/}
         </div>
       </div>
       <div className='flex justify-between mt-5'>

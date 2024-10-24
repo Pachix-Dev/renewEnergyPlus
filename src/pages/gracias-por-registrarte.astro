@@ -1,0 +1,70 @@
+---
+import i18next, { changeLanguage, t } from 'i18next'
+import Layout from '../layouts/Layout.astro'
+import Confettti from '../components/shared/Confetti'
+import { Redirect } from '../components/shared/Redirect.jsx'
+import { DonwloadAccess } from '../components/register/DonwloadAccess'
+import MarqueeSponsors from '../components/register/MarqueeSponsors.astro'
+import { sponsors } from '../data/constanst_logos'
+
+changeLanguage('es')
+
+const currentLanguage = i18next.language
+---
+
+<Layout title='ITM  | Gracias por contactarnos'>
+  <Redirect client:only='react' />
+  <div class='w-screen h-full p-5 lg:p-20'>
+    <div
+      class='px-4 ecomondo-bloq-1 w-full h-full text-color flex flex-col items-center justify-center relative'
+    >
+      <Confettti client:visible />
+
+      <div class='grid md:flex gap-6 place-items-center w-full justify-center'>
+        <div class='grid place-items-center place-content-center w-full'>
+          <div
+            class=`box text-center lg:text-6xl text-5xl after:content-['${t('thanks_page.title2')}']`
+            id='box1'
+          >
+            {t('thanks_page.title')}
+          </div>
+          {
+            /* <p
+            class='font-bold text-center'
+            set:html={t('thanks_page.description')}
+          />*/
+          }
+          <p
+            class='mt-5 font-bold text-center text-xl'
+            set:html={t('thanks_page.description')}
+          />
+          <DonwloadAccess
+            client:only='react'
+            text={t('thanks_page.download_pass')}
+          />
+        </div>
+      </div>
+    </div>
+    <section class='my-10 max-w-screen-lg mx-auto'>
+      <MarqueeSponsors partners={sponsors} isLeftToRight />
+    </section>
+  </div>
+</Layout>
+<style>
+  .box {
+    color: black;
+    font-weight: 800;
+  }
+
+  #box1::after {
+    display: flex;
+    transform: rotateX(180deg);
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 10%,
+      rgba(255, 255, 255, 0.5)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+</style>

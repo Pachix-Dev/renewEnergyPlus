@@ -24,6 +24,7 @@
     "@types/react-dom": "^18.2.25",
     "astro": "^4.6.1",
     "astro-i18next": "^1.0.0-beta.21",
+    "canvas-confetti": "^1.9.3",
     "flowbite": "^2.3.0",
     "photoswipe": "^5.4.3",
     "react": "^18.2.0",

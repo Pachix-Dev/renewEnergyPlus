@@ -11,7 +11,7 @@ import {email_template_amof_eng} from './TemplateEmailAmofEng.js';
 import {email_template_oktoberfest} from './TemplateOktoberfest.js';
 import {email_template_oktoberfest_en} from './TemplateOktoberfestEn.js';
 
-import { generatePDFInvoice, generatePDF_freePass, generatePDF_freePass_amof, generatePDF_freePass_futuristic, generateQRDataURL, generatePDFInvoiceOktoberfest } from './generatePdf.js';
+import { generatePDFInvoice, generatePDF_freePass_ecomondo, generateQRDataURL, } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 
@@ -794,24 +794,6 @@ app.post('/marcar-pago-vip', async (req, res) => {
 });
 
 
-// get info futuristic minds 
-app.get('/get-info-student/:uuid', async (req, res) => {
-    const { uuid } = req.params;
-    const response = await RegisterModel.get_info_student(uuid);
-    if(response.status){
-        return res.send({
-            status: true,
-            records: response.result
-        })
-    }else{
-        return res.status(500).send({
-            status: false,
-            message: 'No se encontraron resultados...'
-        });
-    }    
-});
-
-
 /* EMAIL AMOF */
 async function sendEmailAmof(data, pdfAtch = null, paypal_id_transaction = null){    
     try{
@@ -846,39 +828,6 @@ async function sendEmailAmof(data, pdfAtch = null, paypal_id_transaction = null)
     }    
 }
 
-/* EMAIL FUTURISTIC */
-async function sendEmailFuturistic(data, pdfAtch = null, paypal_id_transaction = null){    
-    try{
-        
-        const emailContent =   await email_template_futuristic({ ...data });
-
-        await resend.emails.send({
-            from: 'FUTURISTIC MINDS 2024 <noreply@industrialtransformation.mx>',
-            to: data.email,
-            subject: 'Confirmación de registro FUTURISTIC MINDS 2024',
-            html: emailContent,
-            attachments: [
-                {
-                    filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://industrialtransformation.mx/invoices/${paypal_id_transaction}.pdf`,
-                    content_type: 'application/pdf'
-                },
-              ],           
-        })        
-
-        return {
-            status: true,
-            message: 'Gracias por registrarte, te hemos enviado un correo de confirmación a tu bandeja de entrada...'
-        };
-
-    } catch (err) {
-        console.log(err);
-        return {
-            status: false,
-            message: 'No pudimos enviarte el correo de confirmación de tu registro, por favor descarga tu registro en este pagina y presentalo hasta el dia del evento...'
-        };              
-    }    
-}
 
 /* EMAIL ITM */
 async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){    
@@ -916,41 +865,6 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
     }    
 }
 
-/* EMAIL OKTOBERFEST */
-async function sendEmailOktoberfest(data, pdfAtch = null, paypal_id_transaction = null){    
-    try{
-       
-        
-        const emailContent = data.currentLanguage === 'es' ?  await email_template_oktoberfest({ ...data }) : await email_template_oktoberfest_en({ ...data });
-       
-        await resend.emails.send({
-            from: 'OKTOBERFEST LEÓN 2024 <noreply@industrialtransformation.mx>',
-            to: data.email,
-            subject: 'Gracias por tu compra, te esperamos en OKTOBERFEST LEÓN 2024',
-            html: emailContent,
-            attachments: [
-                {
-                    filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://industrialtransformation.mx/invoices/${paypal_id_transaction}.pdf`,
-                    content_type: 'application/pdf'
-                },
-              ],           
-        })
-        
-
-        return {
-            status: true,
-            message: 'Gracias por tu compra, te hemos enviado un correo de confirmación a tu bandeja de entrada...'
-        };
-
-    } catch (err) {
-        console.log(err);
-        return {
-            status: false,
-            message: 'No pudimos enviarte el correo de confirmación de tu registro, por favor descarga tu registro en este pagina y presentalo hasta el dia del evento...'
-        };              
-    }    
-}
 
 function get_access_token() {
     const auth = `${client_id}:${client_secret}`
