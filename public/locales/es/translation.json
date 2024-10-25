@@ -405,7 +405,7 @@
     "thanks_page":{
         "title": "Gracias por registrarte",
         "title2": "Gracias_por_registrarte",
-        "description": "Tu registro ha sido exitoso, te hemos enviado un correo con tu gafete de acceso al evento...",
+        "description": "Tu registro ha sido exitoso, te hemos enviado un correo con tu gafete de acceso al evento o también puedes descargarlo dando click en el boton descargar tu gafete",
         "download_pass": "Descargar tu gafete",
         "download_invoice": "Descargar tu recibo de compra",
         "thanks_purchasing": "Gracias por tu compra",

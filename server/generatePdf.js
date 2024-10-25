@@ -360,7 +360,7 @@ async function generatePDF_freePass( body, uuid) {
     doc.restore();
 
     
-    body.typeRegister === 'VISITANTE' ? doc.image('img/header_ITM.png', 0, 0, { width: 305 }) : doc.image('img/bannerGafete.jpg', 0, 0, { width: 305 });       
+    doc.image('img/header_gafete.jpg', 0, 0, { width: 305 })       
     // aqui iria el QR con info del usuario    
     doc.image(qrMainUser, 90, 120, { width: 120 });
     
@@ -375,7 +375,7 @@ async function generatePDF_freePass( body, uuid) {
     .moveDown(0.5)
     .text(body.company);
 
-    body.typeRegister === 'VISITANTE' ? doc.image('img/footer_ITM.jpg', 0, 328, { width: 305 }) : doc.image('img/footer_medio.jpg', 0, 328, { width: 305 });
+    body.typeRegister === 'VISITANTE' ? doc.image('img/footer_gafete.jpg', 0, 328, { width: 305 }) : doc.image('img/footer_prensa_gafete.jpg', 0, 328, { width: 305 });
     doc
     .font('Helvetica-Bold')
     .fontSize(17)
@@ -394,11 +394,11 @@ async function generatePDF_freePass( body, uuid) {
     .fontSize(8)
     .text('1.', 330)
     .font('Helvetica')
-    .text('Tu gafete es tu pase a la exposición de ITM 2024. Deberás portarlo en todo momento.', 345, 75, {
+    .text('Tu gafete es tu pase a la exposición de RE+ MEXICO. Deberás portarlo en todo momento.', 345, 75, {
         width: 250,
         align: 'justify'
     })  
-    doc.text('Your badge is your access pass to ITM 2024 tradeshow. You must wear it at all times.',{
+    doc.text('Your badge is your access pass to RE+ MEXICO tradeshow. You must wear it at all times.',{
         width: 250,
         align: 'justify'
     })
@@ -427,7 +427,7 @@ async function generatePDF_freePass( body, uuid) {
     })
     .fillColor('#1E92D0')
     .font('Helvetica-Bold')
-    .text(' #ITM2024 ', { continued: true })
+    .text(' #REPLUSMEXICO ', { continued: true })
     .fillColor('black')
     .font('Helvetica')
     .text(' en tus posteos en redes sociales.')
@@ -437,7 +437,7 @@ async function generatePDF_freePass( body, uuid) {
     })
     .fillColor('#1E92D0')
     .font('Helvetica-Bold')
-    .text(' #ITM2024 ', { continued: true })
+    .text(' #REPLUSMEXICO ', { continued: true })
     .fillColor('black')
     .font('Helvetica')
     .text(' on your social media posts.')
@@ -450,17 +450,17 @@ async function generatePDF_freePass( body, uuid) {
         align: 'center'
     })
     .moveDown(1)
-    .text('Octubre')
-    .text('October')
-    .text('(9)   11:00 am – 19:00 hrs', 330, 250, {
+    .text('Marzo')
+    .text('March')
+    .text('(5)   11:00 am – 18:00 hrs', 330, 250, {
         width: 250,    
         align: 'center'
     })
-    .text('(10)  11:00 am – 19:00 hrs', 330, 260, {
+    .text('(6)  11:00 am – 18:00 hrs', 330, 260, {
         width: 250,    
         align: 'center'
     })
-    .text('(11)  11:00 am – 17:00 hrs', 330, 270, {
+    .text('(7)  11:00 am – 17:00 hrs', 330, 270, {
         width: 250,    
         align: 'center'
     })
@@ -470,7 +470,7 @@ async function generatePDF_freePass( body, uuid) {
         align: 'center'
     });
 
-    body.typeRegister === 'VISITANTE' ? doc.image('img/footer-itm-2-new.jpg', 307, 328, { width: 306 }) : doc.image('img/footer-itm-2_medio-new.jpg', 307, 328, { width: 306 });;
+    doc.image('img/footer2_gafete.jpg', 307, 328, { width: 306 });
     
     doc.save();
     // Rotate and draw some text
@@ -554,7 +554,7 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
     doc.restore();
     
    
-    body.typeRegister === 'VISITANTE' ?  doc.image('img/header-amof.jpg', 0, 0, { width: 305 }) : doc.image('img/bannerGafete.jpg', 0, 0, { width: 305 });
+    doc.image('img/header_ecomondo_gafete.jpg', 0, 0, { width: 305 })
     // aqui iria el QR con info del usuario    
     doc.image(qrMainUser, 90, 120, { width: 120 });
     
@@ -569,7 +569,7 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
     .moveDown(0.5)
     .text(body.company);
 
-    body.typeRegister === 'VISITANTE' ? doc.image('img/footer_ITM.jpg', 0, 328, { width: 305 }) : doc.image('img/footer_medio.jpg', 0, 328, { width: 305 });
+    body.typeRegister === 'VISITANTE' ? doc.image('img/footer_ecomondo_gafete.jpg', 0, 328, { width: 305 }) : doc.image('img/footer_prensa_ecomondo_gafete.jpg', 0, 328, { width: 305 });
     doc
     .font('Helvetica-Bold')
     .fontSize(17)
@@ -664,7 +664,7 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
         align: 'center'
     });
 
-    body.typeRegister === 'VISITANTE' ? doc.image('img/footer-itm-2-new.jpg', 307, 328, { width: 306 }) : doc.image('img/footer-itm-2_medio-new.jpg', 307, 328, { width: 306 });;
+    doc.image('img/footer2_ecomondo_gafete.jpg', 307, 328, { width: 306 })<
     
     doc.save();
     // Rotate and draw some text

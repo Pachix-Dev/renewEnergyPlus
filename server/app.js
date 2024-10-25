@@ -5,13 +5,12 @@ import { v4 as uuidv4 } from 'uuid';
 import {RegisterModel} from './db.js';
 import {email_template} from './TemplateEmail.js';
 import {email_template_eng} from './TemplateEmailEng.js';
-import {email_template_futuristic} from './TemplateFuturistic.js';
 import {email_template_amof} from './TemplateEmailAmof.js';
 import {email_template_amof_eng} from './TemplateEmailAmofEng.js';
 import {email_template_oktoberfest} from './TemplateOktoberfest.js';
-import {email_template_oktoberfest_en} from './TemplateOktoberfestEn.js';
 
-import { generatePDFInvoice, generatePDF_freePass_ecomondo, generateQRDataURL, } from './generatePdf.js';
+
+import { generatePDFInvoice, generatePDF_freePass, generatePDF_freePass_ecomondo, generateQRDataURL, } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 
@@ -170,12 +169,48 @@ app.post('/free-register', async (req, res) => {
             });
         }                 
 
-        //const pdfAtch = await generatePDF_freePass(body, data.uuid );
+        const pdfAtch = await generatePDF_freePass(body, data.uuid );
 
-        //const mailResponse = await sendEmail(data, pdfAtch, data.uuid);   
+        const mailResponse = await sendEmail(data, pdfAtch, data.uuid);   
 
         return res.send({
-            ...userResponse,            
+            invoice: data.uuid,
+            ...mailResponse,            
+        });                
+               
+    } catch (err) {
+        console.log(err);
+        res.status(500).send({
+            status: false,
+            message: 'hubo un error al procesar tu registro, por favor intenta mas tarde...'
+        });
+    }
+});
+
+app.post('/free-register-ecomondo', async (req, res) => {
+    const { body } = req;
+    
+    try {        
+        const data = { 
+            uuid: uuidv4(),            
+            ...body
+        };          
+        const userResponse = await RegisterModel.create_user_ecomondo({ ...data }); 
+
+        if(!userResponse.status){
+            return  res.status(500).send({
+                ...userResponse
+            });
+        }
+                
+
+        const pdfAtch = await generatePDF_freePass_ecomondo(body, data.uuid);
+
+        const mailResponse = await sendEmailFuturistic(data, pdfAtch, data.uuid);   
+
+        return res.send({
+            ...mailResponse,
+            invoice: `${data.uuid}.pdf`
         });                
                
     } catch (err) {
@@ -309,41 +344,7 @@ app.post('/upgrade-user', async (req, res) => {
     }
 });
 
-// Create student register
-app.post('/free-register-futuristic', async (req, res) => {
-    const { body } = req;
-    
-    try {        
-        const data = { 
-            uuid: uuidv4(),            
-            ...body
-        };          
-        const userResponse = await RegisterModel.create_user_futuristic({ ...data }); 
 
-        if(!userResponse.status){
-            return  res.status(500).send({
-                ...userResponse
-            });
-        }
-                
-
-        const pdfAtch = await generatePDF_freePass_futuristic(body, data.uuid);
-
-        const mailResponse = await sendEmailFuturistic(data, pdfAtch, data.uuid);   
-
-        return res.send({
-            ...mailResponse,
-            invoice: `${data.uuid}.pdf`
-        });                
-               
-    } catch (err) {
-        console.log(err);
-        res.status(500).send({
-            status: false,
-            message: 'hubo un error al procesar tu registro, por favor intenta mas tarde...'
-        });
-    }
-});
 
 // Create amof registration
 app.post('/free-register-amof', async (req, res) => {

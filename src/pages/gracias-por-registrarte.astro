@@ -14,7 +14,7 @@ const currentLanguage = i18next.language
 
 <Layout title='ITM  | Gracias por contactarnos'>
   <Redirect client:only='react' />
-  <div class='w-screen h-full p-5 lg:p-20'>
+  <div class='p-5 lg:p-20'>
     <div
       class='px-4 ecomondo-bloq-1 w-full h-full text-color flex flex-col items-center justify-center relative'
     >
@@ -23,19 +23,14 @@ const currentLanguage = i18next.language
       <div class='grid md:flex gap-6 place-items-center w-full justify-center'>
         <div class='grid place-items-center place-content-center w-full'>
           <div
-            class=`box text-center lg:text-6xl text-5xl after:content-['${t('thanks_page.title2')}']`
+            class=`box uppercase text-center lg:text-6xl text-5xl after:content-['${t('thanks_page.title2')}'`
             id='box1'
           >
             {t('thanks_page.title')}
           </div>
-          {
-            /* <p
-            class='font-bold text-center'
-            set:html={t('thanks_page.description')}
-          />*/
-          }
-          <p
-            class='mt-5 font-bold text-center text-xl'
+
+          <div
+            class='mt-10 font-bold text-center text-xl'
             set:html={t('thanks_page.description')}
           />
           <DonwloadAccess

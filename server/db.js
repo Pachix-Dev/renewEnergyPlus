@@ -139,6 +139,91 @@ export class RegisterModel {
       }
   }
 
+  static async create_user_ecomondo ({
+    uuid,             
+    name,
+    paternSurname,
+    maternSurname,
+    email,
+    phone,
+    typeRegister,
+    genre,
+    nacionality,
+    code_invitation,
+
+    company,
+    industry,
+    position,
+    area,
+    country,
+    municipality,
+    state,
+    city,
+    address,
+    colonia,
+    postalCode,
+    webPage,
+    phoneCompany,
+
+    eventKnowledge,
+    productInterest,
+    levelInfluence,
+    wannaBeExhibitor,
+    alreadyVisited,
+  }) {
+    const connection = await mysql.createConnection(config)
+    try {      
+      const [result] = await connection.query(
+        'INSERT INTO users (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited, user_ecomondo ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, ?)',
+        [
+          uuid,             
+          name,
+          paternSurname,
+          maternSurname,
+          email,
+          phone,
+          typeRegister,
+          genre,
+          nacionality,
+          code_invitation,
+  
+          company,
+          industry,
+          position,
+          area,
+          country,
+          municipality,
+          state,
+          city,
+          address,
+          colonia,
+          postalCode,
+          webPage,
+          phoneCompany,
+  
+          eventKnowledge,
+          productInterest,
+          levelInfluence,
+          wannaBeExhibitor,
+          alreadyVisited,
+          "si"   
+        ]
+      )
+                              
+      return {
+        status: true,
+        insertId: result.insertId,
+        ...result,
+      }
+    }catch (error) {
+      console.log(error)
+      return hableError(error)          
+    }
+    finally {
+      await connection.end()
+    }
+  }
+  
   static async save_order (user_id, paypal_id_order,paypal_id_transaction, total) {
     const connection = await mysql.createConnection(config)
     try {      
@@ -268,170 +353,7 @@ export class RegisterModel {
     }
   }
 
-  // Create student register
-  static async create_user_futuristic ({
-    uuid,             
-    name,
-    paternSurname,
-    maternSurname,
-    email,
-    phone,
-    typeRegister,
-    genre,
-    nacionality,    
-
-    institution,
-    level_education,
-    semestres, 
-    programEducation,   
-    country,
-    municipality,
-    state,
-    city,
-    address,
-    colonia,
-    postalCode,
-    webPage,
-    schoolPhone,
-
-    eventKnowledge,
-    areaInterest,
-    hour_date_1,   
-  }) {
-    const connection = await mysql.createConnection(config)
-    try {      
-      const [result] = await connection.query(
-        'INSERT INTO users_students (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, institution, level_education, semestres, programEducation, country, municipality, state, city, address, colonia, postalCode, webPage, schoolPhone, eventKnowledge, areaInterest, hour_date_1 ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, ?, ?)',
-        [
-          uuid,             
-          name,
-          paternSurname,
-          maternSurname,
-          email,
-          phone,
-          typeRegister,
-          genre,
-          nacionality,          
-  
-          institution,
-          level_education,
-          semestres,
-          programEducation,
-          country,
-          municipality,
-          state,
-          city,
-          address,
-          colonia,
-          postalCode,
-          webPage,
-          schoolPhone,
-                    
-          eventKnowledge,
-          areaInterest,
-          hour_date_1                         
-        ]
-      )
-                              
-      return {
-        status: true,
-        insertId: result.insertId,
-        ...result,
-      }
-    }catch (error) {
-      console.log(error)
-      return hableError(error)          
-    }
-    finally {
-      await connection.end()
-    }
-  }
-
-  // create user amof
-  static async create_user_amof ({
-    uuid,             
-    name,
-    paternSurname,
-    maternSurname,
-    email,
-    phone,
-    typeRegister,
-    genre,
-    nacionality,
-    code_invitation,
-
-    company,
-    industry,
-    position,
-    area,
-    country,
-    municipality,
-    state,
-    city,
-    address,
-    colonia,
-    postalCode,
-    webPage,
-    phoneCompany,
-
-    eventKnowledge,
-    productInterest,
-    levelInfluence,
-    wannaBeExhibitor,
-    alreadyVisited,
-  }) {
-    const connection = await mysql.createConnection(config)
-    try {      
-      const [result] = await connection.query(
-        'INSERT INTO users (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited, user_amof ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, ?)',
-        [
-          uuid,             
-          name,
-          paternSurname,
-          maternSurname,
-          email,
-          phone,
-          typeRegister,
-          genre,
-          nacionality,
-          code_invitation,
-  
-          company,
-          industry,
-          position,
-          area,
-          country,
-          municipality,
-          state,
-          city,
-          address,
-          colonia,
-          postalCode,
-          webPage,
-          phoneCompany,
-  
-          eventKnowledge,
-          productInterest,
-          levelInfluence,
-          wannaBeExhibitor,
-          alreadyVisited,
-          "si"   
-        ]
-      )
-                              
-      return {
-        status: true,
-        insertId: result.insertId,
-        ...result,
-      }
-    }catch (error) {
-      console.log(error)
-      return hableError(error)          
-    }
-    finally {
-      await connection.end()
-    }
-  }
+ 
 
   // get product to calculate total
   static async get_products () {
