@@ -1,6 +1,5 @@
 import mysql from 'mysql2/promise';
-
-
+import 'dotenv/config';
 const config = {
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -26,34 +25,34 @@ const hableError = (error) => {
 
 export class RegisterModel {
 
-    static async create_suscriber ({               
-        name,        
-        email,
-       
-      }) {
-        const connection = await mysql.createConnection(config)
-        try {      
-          const [result] = await connection.query(
-            'INSERT INTO boletin ( name, email ) VALUES (?,?)',
-            [                      
-              name,              
-              email,             
-            ]
-          )
-                                  
-          return {
-            status: true,
-            insertId: result.insertId,
-            ...result,
-          }
-        }catch (error) {
-          console.log(error)
-          return hableError(error)          
+  static async create_suscriber ({               
+      name,        
+      email,
+      
+    }) {
+      const connection = await mysql.createConnection(config)
+      try {      
+        const [result] = await connection.query(
+          'INSERT INTO boletin ( name, email ) VALUES (?,?)',
+          [                      
+            name,              
+            email,             
+          ]
+        )
+                                
+        return {
+          status: true,
+          insertId: result.insertId,
+          ...result,
         }
-        finally {
-          await connection.end()
-        }
-    }
+      }catch (error) {
+        console.log(error)
+        return hableError(error)          
+      }
+      finally {
+        await connection.end()
+      }
+  }
   
   static async create_user ({
       uuid,             
@@ -66,7 +65,6 @@ export class RegisterModel {
       genre,
       nacionality,
       code_invitation,
-
       company,
       industry,
       position,
@@ -80,7 +78,6 @@ export class RegisterModel {
       postalCode,
       webPage,
       phoneCompany,
-
       eventKnowledge,
       productInterest,
       levelInfluence,
@@ -101,8 +98,7 @@ export class RegisterModel {
             typeRegister,
             genre,
             nacionality,
-            code_invitation,
-    
+            code_invitation,    
             company,
             industry,
             position,
@@ -116,7 +112,6 @@ export class RegisterModel {
             postalCode,
             webPage,
             phoneCompany,
-    
             eventKnowledge,
             productInterest,
             levelInfluence,
@@ -327,6 +322,7 @@ export class RegisterModel {
       await connection.end() // Close the connection
     }
   }
+
   // use code cortesia
   static async use_code_cortesia (code_cortesia) {
     const connection = await mysql.createConnection(config)
@@ -352,8 +348,6 @@ export class RegisterModel {
       await connection.end() // Close the connection
     }
   }
-
- 
 
   // get product to calculate total
   static async get_products () {
@@ -452,7 +446,6 @@ export class RegisterModel {
       await connection.end() // Close the connection
     }
   }
-
 
   // endpoints for scanner
   static async get_info_student (uuid) {
@@ -622,8 +615,5 @@ export class RegisterModel {
       await connection.end() // Close the connection
     }
   }
-  
-
-  
 
 }
