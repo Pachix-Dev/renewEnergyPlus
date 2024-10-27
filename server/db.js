@@ -237,32 +237,6 @@ export class RegisterModel {
     }
   }
 
-  static async get_postal_code ({cp}) {
-    const connection = await mysql.createConnection(config)
-    try {      
-      const [result] = await connection.query(
-        'SELECT * FROM postal_code WHERE d_CP = ? OR d_codigo = ?',
-        [
-          cp,
-          cp
-        ]
-      )
-      if (result.length === 0) {
-        return {
-          status: false,
-          message: 'Código postal no encontrado, por favor verifica tu código postal.',    
-        }
-      }else{
-        return {
-          status: true,
-          result
-        }                
-      }
-    } finally {
-      await connection.end() // Close the connection
-    }
-  }
-  
 	static async get_user_by_email(email, requireNonVip = false) {
 		const connection = await mysql.createConnection(config)
 		try {
