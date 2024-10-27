@@ -6,7 +6,7 @@ const email_template = async ({ name, paternSurname, maternSurname}) => {
     <tbody>
         <tr>
           <td colspan="2" align="center">
-            <img src="https://re-plus-mexico.com.mx/header-ITM-register.jpg" alt="re+ mexico" width="550">         
+            <img src="https://re-plus-mexico.com.mx/header_gafete.jpg" alt="re+ mexico" width="550">         
           </td>
         </tr>        
         <tr>
@@ -15,51 +15,47 @@ const email_template = async ({ name, paternSurname, maternSurname}) => {
               BIENVENIDO, ${name} ${paternSurname} ${maternSurname}. <BR /> TU REGISTRO SE HA REALIZADO CON ÉXITO.
             </h2>
             <h2 style='text-align: center;'>
-              GRACIAS POR FORMAR PARTE DE <span style="color:#E42128;font-weight:bold;">INDUSTRIAL TRANSFORMATION MEXICO 2024, </span>PRODUCTOS Y SOLUCIONES PARA LA FÁBRICA INTELIGENTE.
+              GRACIAS POR FORMAR PARTE DE <span style="color:#E42128;font-weight:bold;">RE+ MEXICO 2025, </span>LA FERIA DEL FUTURO ENERGÉTICO DE MÉXICO.
             </h2>
             <div style="text-align: justify;font-size:22px;">
-              Descubre las últimas tendencias, innovaciones, conocimientos, herramientas y tecnologías que traen para ti los líderes globales en <strong>Automatización, Fábrica Inteligente y Soluciones de Logística Digital,</strong> y que están transformando el futuro de la industria.                    
+              Descubre las últimas tendencias, innovaciones, conocimientos y tecnologías en Componentes y Equipo Solar, Almacenamiento de Energía, Tecnología Térmica, Inversores e Infraestructura de Red, que serán necesarias para emprender aceleradamente la transición energética renovable global.                   
             </div>
             <div style="text-align:center;padding:20px;margin-top:25px;">
               <div style="background: #E42128;padding:20px;border-radius:20px;">
-                <a style="text-decoration:none; color: white;font-weight:bold;" href="https://industrialtransformation.mx/programa" target='_blank'>                 
-                  CONSULTA EL PROGRAMA DE EVENTOS PARALELOS A ITM 2024
+                <a style="text-decoration:none; color: white;font-weight:bold;" href="https://re-plus-mexico.igeco.mx/conference-program" target='_blank'>                 
+                  CONSULTA EL PROGRAMA DE RE+ MEXICO
                 </a>
               </div>
               <p style="margin-top:40px;margin-bottom: 40px;">
-                Te esperamos en la sexta edición de <strong>INDUSTRIAL TRANSFORMATION MEXICO del 9 al 11 de octubre, Poliforum, León, Guanajuato.</strong>
+                Te esperamos en la sexta edición de <strong>RE+ MEXICO del 5 al 7 de marzo, Expo, Guadalajara, Jalisco.</strong>
               </p>
               <div style="background: #E42128;color:white;border-radius: 20px;padding:20px;">               
                <p><strong>HORARIOS:</strong></p>
-               <p>miércoles 9 y jueves 10 de  11:00 am - 7:00 pm hrs</p>
-               <p>viernes 11 de 11:00 am - 5:00 pm hrs</p>
+               <p>miércoles 5 y jueves 6, 11:00 am – 6:00 pm </p>              
+               <p>viernes 7, 11:00 am – 5:00 pm </p>
               </div>
             </div>               
             <p style="font-weight:bold;font-size:20px;text-align: center;">AÑADIR AL CALENDARIO</p>
             <div style="text-align:center;padding:20px;margin: 20px;">
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20241009T170000Z%2F20241012T010000Z&details=Industrial%20Transformation%20Mexico%20es%20un%20evento%20interesante%20e%20inclusivo%20en%20el%20que%20los%20actores%20clave%20y%20los%20grupos%20objetivo%20se%20re%C3%BAnen%20para%20crear%20redes%20y%20oportunidades%20de%20intercambio%20de%20conocimientos%20para%20el%20%C3%A9xito%20empresarial.%0A&location=Poliforum%2C%20Le%C3%B3n&text=INDUSTRIAL%20TRANSFORMATION%20MEXICO%202024"
+              <a style="background: #1E293B;color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250305T170000Z%2F20250308T000000Z&details=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&location=Expo%20Guadalajara%2C%20Jalisco&text=RE%2B%20MEXICO%202025"
               target="_blank">                        
                 Google
               </a>
-            </div>
-            <div style="text-align:center;padding:20px;margin: 20px;">              
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Industrial%20Transformation%20Mexico%20es%20un%20evento%20interesante%20e%20inclusivo%20en%20el%20que%20los%20actores%20clave%20y%20los%20grupos%20objetivo%20se%20re%C3%BAnen%20para%20crear%20redes%20y%20oportunidades%20de%20intercambio%20de%20conocimientos%20para%20el%20%C3%A9xito%20empresarial.%0A&enddt=2024-10-11T19%3A00%3A00&location=Poliforum%2C%20Le%C3%B3n&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2024-10-09T11%3A00%3A00&subject=INDUSTRIAL%20TRANSFORMATION%20MEXICO%202024"
+              <a style="background: #1E293B;color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&enddt=2025-03-07T18%3A00%3A00&location=Expo%20Guadalajara%2C%20Jalisco&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2025-03-05T11%3A00%3A00&subject=RE%2B%20MEXICO%202025"
               target="_blank">                       
                 Outlook
               </a>
-            </div>                   
+            </div>                            
             <div style="text-align:center;padding:20px;margin: 20px;">
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Industrial%2520Transformation%2520Mexico%2520es%2520un%2520evento%2520interesante%2520e%2520inclusivo%2520en%2520el%2520que%2520los%2520actores%2520clave%2520y%2520los%2520grupos%2520objetivo%2520se%2520re%25C3%25BAnen%2520para%2520crear%2520redes%2520y%2520oportunidades%2520de%2520intercambio%2520de%2520conocimientos%2520para%2520el%2520%25C3%25A9xito%2520empresarial.%250A&dur=false&et=20241012T010000Z&in_loc=Poliforum%2C+Le%C3%B3n&st=20241009T170000Z&title=INDUSTRIAL%2520TRANSFORMATION%2520MEXICO%25202024&v=60"
-              target="_blank">
-                
-              <i>Y!</i> Yahoo!
+              <a style="background: #1E293B;color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Discover%2520the%2520latest%2520trends%252C%2520innovations%252C%2520knowledge%2520and%2520technologies%2520in%2520Solar%2520Components%2520and%2520Equipment%252C%2520Energy%2520Storage%252C%2520Thermal%2520Technology%252C%2520Inverters%2520and%2520Grid%2520Infrastructure%252C%2520which%2520will%2520be%2520needed%2520to%2520accelerate%2520the%2520global%2520renewable%2520energy%2520transition.&dur=false&et=20250308T000000Z&in_loc=Expo+Guadalajara%2C+Jalisco&st=20250305T170000Z&title=RE%252B%2520MEXICO%25202025&v=60"
+              target="_blank">                
+                <i>Y!</i> Yahoo!
               </a>
-            </div>
-            <div style="text-align:center;padding:20px;margin: 20px;">                            
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://industrialtransformation.mx/icalendar.ics" donwload target="_blank">  
+              <a style="background: #1E293B;color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://re-plus-mexico.com.mx/calendar-replusmexico-eng.ics" donwload target="_blank">  
                 iCalendar
-              </a>
+            </a> 
             </div>
+                       
             <p style="font-size:15px;line-height:21px;margin:16px 0px;font-weight:bold">
               INSTRUCCIONES PARA TU VISITA:
             </p>
@@ -73,9 +69,7 @@ const email_template = async ({ name, paternSurname, maternSurname}) => {
               <li>
                 Tu acceso es único e intransferible y debe estar visible durante toda tu visita.
               </li>
-              <li>
-                En caso de perder tu gafete, no habrá reimpresiones en el piso expositor. Por lo cual, se tendrá que generar una compra de boleto para su ingreso con un costo de $300 MXN.
-              </li>                  
+                               
             </ul>                                                          
           </td>      
         </tr>               
@@ -89,8 +83,8 @@ const email_template = async ({ name, paternSurname, maternSurname}) => {
           </td>
           <td style="padding:20px;" align="center">
             <div style="background: #E42128;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/files/Floorplan_ITM_2024_31.05.2023.pdf" target="_blank">
-                PLANO ITM 2024
+              <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/doc/RE+_MEX_2025_101524_BCD-Model.pdf" target="_blank">
+                PLANO DEL EVENTO
               </a>
             </div>         
           </td>
@@ -105,7 +99,7 @@ const email_template = async ({ name, paternSurname, maternSurname}) => {
           </td>
           <td style="padding:20px;" align="center">
             <div style="background: #E42128;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx" target="_blank">
+              <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/registro/" target="_blank">
                 INVITA A UN COLEGA
               </a>
             </div>        

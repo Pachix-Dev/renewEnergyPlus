@@ -701,7 +701,9 @@ app.get('/generate-pdf', async (req, res) => {
 
 app.get('/template-email', async (req, res) => {
     const data = {
-        name: 'Juan Perez',
+        name: 'Juan',
+        paternSurname: 'Perez',
+        maternSurname: 'Suarez',
         email: 'Pachi.claros@gmaail.com',
         phone: '4775690282',
         hour: '10:00 am',
@@ -710,7 +712,7 @@ app.get('/template-email', async (req, res) => {
             {name: 'item 2', quantity: 2},
         ]
     }
-    const emailContent = await email_template_oktoberfest({ ...data });
+    const emailContent = await email_template({ ...data });
     res.send(emailContent);
 });
 
@@ -846,7 +848,7 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
             attachments: [
                 {
                     filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://industrialtransformation.mx/invoices/${paypal_id_transaction}.pdf`,
+                    path: `https://re-plus-mexico.com.mx/invoices/${paypal_id_transaction}.pdf`,
                     content_type: 'application/pdf'
                 },
               ],           

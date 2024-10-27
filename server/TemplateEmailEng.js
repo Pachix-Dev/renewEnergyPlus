@@ -15,25 +15,25 @@ const email_template_eng = async ({ name, paternSurname, maternSurname}) => {
               WELCOME, ${name} ${paternSurname} ${maternSurname}.<BR /> YOUR REGISTRATION WAS SUCCESSFUL.
             </h2>
             <h2 style='text-align: center;'>
-              THANK YOU FOR BEING PART OF <span style="color:#E94568;font-weight:bold;">INDUSTRIAL TRANSFORMATION MEXICO 2024, </span>PRODUCTS AND SOLUTIONS FOR THE SMART FACTORY.
+              THANK YOU FOR BEING PART OF <span style="color:#E94568;font-weight:bold;">RE+ MEXICO 2024, </span>THE FAIR OF MEXICO'S ENERGY FUTURE.
             </h2>
             <div style="text-align: justify;font-size:22px;">
-              Discover the latest trends, innovations, insights, tools and technologies brought to you by global leaders in <strong>Automation, Smart Factory and Digital Logistics Solutions,</strong> that are transforming the future of the industry.                    
+              Discover the latest trends, innovations, knowledge and technologies in Solar Components and Equipment, Energy Storage, Thermal Technology, Inverters and Grid Infrastructure, which will be needed to accelerate the global renewable energy transition.                  
             </div>
             <div style="text-align:center;padding:20px;margin-top:25px;">
               <p style="background: #E42128;padding:20px;border-radius:20px;margin:20px;width:fit-content;margin:auto;">
                 <a style="text-decoration:none; color: white;font-weight:bold;" href="https://industrialtransformation.mx/programa" target='_blank'>                 
-                  SEE THE PROGRAM OF EVENTS PARALLEL TO ITM 2024
+                  SEE THE PROGRAM OF RE+ MEXICO
                 </a>
               <p>
               <p style="margin-top:40px;margin-bottom: 40px;">
-                We look forward to seeing you at the sixth edition of <strong>INDUSTRIAL TRANSFORMATION MEXICO from October 9 to 11, Poliforum, Leon, Guanajuato.</strong>
+                We look forward to seeing you at the sixth edition of <strong>RE+ MEXICO from March 5 to 7, Expo Guadalajara, Jalisco.</strong>
               </p>
               <div style="background: #E42128;color:white;width:fit-content;border-radius: 20px;padding:20px;margin:auto;position:relative;">
                
                <p><strong>SCHEDULES:</strong></p>
-               <p>Wednesday 9 and Thursday 10 from 11:00 am - 7:00 pm hrs.</p>
-               <p>Friday 11 from 11:00 am - 5:00 pm hrs</p>
+               <p>Wednesday 5 and Thursday 6 from 11:00 am - 6:00 pm</p>
+               <p>Friday 7 from 11:00 am - 5:00 pm hrs</p>
               </div>
             </div>               
             <p style="font-weight:bold;font-size:20px;text-align: center;">ADD TO CALENDAR</p>
