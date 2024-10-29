@@ -27,8 +27,7 @@ export class RegisterModel {
 
   static async create_suscriber ({               
       name,        
-      email,
-      
+      email,      
     }) {
       const connection = await mysql.createConnection(config)
       try {      
@@ -53,6 +52,34 @@ export class RegisterModel {
         await connection.end()
       }
   }
+
+  static async create_suscriber_ecomondo ({               
+    name,        
+    email,      
+  }) {
+    const connection = await mysql.createConnection(config)
+    try {      
+      const [result] = await connection.query(
+        'INSERT INTO boletin_ecomondo ( name, email ) VALUES (?,?)',
+        [                      
+          name,              
+          email,             
+        ]
+      )
+                              
+      return {
+        status: true,
+        insertId: result.insertId,
+        ...result,
+      }
+    }catch (error) {
+      console.log(error)
+      return hableError(error)          
+    }
+    finally {
+      await connection.end()
+    }
+}
   
   static async create_user ({
       uuid,             

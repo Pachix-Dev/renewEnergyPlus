@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import i18next, { changeLanguage } from "i18next";
+import { toolkit_es, toolkit_en } from "../data/constanst_logos";
+import LightBoxToolkit from "../components/LightBoxToolkit.jsx";
+
+changeLanguage("es");
+---
+
+<Layout title='ECOMONDO MEXICO | TOOLKIT '>
+  <section class='container mx-auto lg:w-[1050px] p-8 pt-10 mb-10'>
+    <LightBoxToolkit
+      images={i18next.language === 'en' ? toolkit_en : toolkit_es}
+      client:visible
+    />
+  </section>
+</Layout>
+../components/LightBox.jsx

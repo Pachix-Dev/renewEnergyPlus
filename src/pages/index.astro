@@ -1,21 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Hero from '../components/Hero.astro'
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import { t, changeLanguage } from "i18next";
+import Sponsors from "../components/Sponsors.astro";
+import Tariffs from "../components/Tariffs.astro";
+import Card from "../components/Card.astro";
+import Contacts from "../components/Contacts.astro";
+import Logos from "../components/Logos.astro";
+import Galeria from "../components/Galeria.astro";
+import Testimonials from "../components/Testimonials.astro";
+import BuyersProfessional from "../components/BuyersProfessional.astro";
+import Exhibitors from "../components/Exhibitors.astro";
+import { gallery2024 } from "../data/constans_gallery";
+import FreeRegiter from "../components/home/FreeRegiter.astro";
 
-import { t, changeLanguage } from 'i18next'
-import Sponsors from '../components/Sponsors.astro'
-import Tariffs from '../components/Tariffs.astro'
-import Card from '../components/Card.astro'
-import Contacts from '../components/Contacts.astro'
-import Logos from '../components/Logos.astro'
-import Galeria from '../components/Galeria.astro'
-import Testimonials from '../components/Testimonials.astro'
-import BuyersProfessional from '../components/BuyersProfessional.astro'
-import Exhibitors from '../components/Exhibitors.astro'
-import { gallery2024 } from '../data/constans_gallery'
-import FreeRegiter from '../components/home/FreeRegiter.astro'
-
-changeLanguage('es')
+changeLanguage("es");
 ---
 
 <Layout title='RE+ México'>

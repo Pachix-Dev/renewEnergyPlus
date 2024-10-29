@@ -1,5 +1,5 @@
 
-const email_template_amof_eng = async ({ name, paternSurname, maternSurname}) => {          
+const email_template_ecomondo_eng = async ({ name, paternSurname, maternSurname}) => {          
     return (
         `<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="max-width: 680px;">
          <tbody>
@@ -36,29 +36,26 @@ const email_template_amof_eng = async ({ name, paternSurname, maternSurname}) =>
                  </div>               
                  <p style="font-weight:bold;font-size:20px;text-align: center;">ADD TO CALENDAR</p>
                  <div style="text-align:center;padding:20px;margin: 20px;">
-                   <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20241009T170000Z%2F20241012T010000Z&details=Americas%27%20mobility%20of%20the%20future%20es%20el%20escaparate%20de%20la%20movilidad%20del%20futuro%2C%20con%20un%20programa%20integral%20de%20conferencias%20magistrales%2C%20paneles%20de%20discusi%C3%B3n%20y%20presentaciones%20de%20proyecto%2C%20en%20b%C3%BAsqueda%20de%20desarrollar%20la%20intersecci%C3%B3n%20entre%20la%20forma%20de%20movilidad%20actual%20y%20el%20futuro%20de%20la%20movilidad%3B%20la%20industria%204.0.%20Conoce%20los%20avances%20m%C3%A1s%20recientes%20en%20la%20industria%20de%20la%20electromovilidad%2C%20las%20ciudades%20inteligentes%20y%20los%20desarrollos%20tecnol%C3%B3gicos%20de%20movilidad%20en%20su%20piso%20de%20exposici%C3%B3n.%0A&location=Le%C3%B3n%2C%20poliforum&text=AMERICAS%C2%B4%20mobility%20of%20the%20future"
-                   target="_blank">                        
-                     Google
-                   </a>
-                 </div>
-                 <div style="text-align:center;padding:20px;margin: 20px;">              
-                   <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Americas%27%20mobility%20of%20the%20future%20es%20el%20escaparate%20de%20la%20movilidad%20del%20futuro%2C%20con%20un%20programa%20integral%20de%20conferencias%20magistrales%2C%20paneles%20de%20discusi%C3%B3n%20y%20presentaciones%20de%20proyecto%2C%20en%20b%C3%BAsqueda%20de%20desarrollar%20la%20intersecci%C3%B3n%20entre%20la%20forma%20de%20movilidad%20actual%20y%20el%20futuro%20de%20la%20movilidad%3B%20la%20industria%204.0.%20Conoce%20los%20avances%20m%C3%A1s%20recientes%20en%20la%20industria%20de%20la%20electromovilidad%2C%20las%20ciudades%20inteligentes%20y%20los%20desarrollos%20tecnol%C3%B3gicos%20de%20movilidad%20en%20su%20piso%20de%20exposici%C3%B3n.%0A&enddt=2024-10-11T19%3A00%3A00&location=Le%C3%B3n%2C%20poliforum&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2024-10-09T11%3A00%3A00&subject=AMERICAS%C2%B4%20mobility%20of%20the%20future"
-                   target="_blank">                       
-                     Outlook
-                   </a>
-                 </div>                   
-                 <div style="text-align:center;padding:20px;margin: 20px;">
-                   <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Americas%27%2520mobility%2520of%2520the%2520future%2520es%2520el%2520escaparate%2520de%2520la%2520movilidad%2520del%2520futuro%252C%2520con%2520un%2520programa%2520integral%2520de%2520conferencias%2520magistrales%252C%2520paneles%2520de%2520discusi%25C3%25B3n%2520y%2520presentaciones%2520de%2520proyecto%252C%2520en%2520b%25C3%25BAsqueda%2520de%2520desarrollar%2520la%2520intersecci%25C3%25B3n%2520entre%2520la%2520forma%2520de%2520movilidad%2520actual%2520y%2520el%2520futuro%2520de%2520la%2520movilidad%253B%2520la%2520industria%25204.0.%2520Conoce%2520los%2520avances%2520m%25C3%25A1s%2520recientes%2520en%2520la%2520industria%2520de%2520la%2520electromovilidad%252C%2520las%2520ciudades%2520inteligentes%2520y%2520los%2520desarrollos%2520tecnol%25C3%25B3gicos%2520de%2520movilidad%2520en%2520su%2520piso%2520de%2520exposici%25C3%25B3n.%250A&dur=false&et=20241012T010000Z&in_loc=Le%C3%B3n%2C+poliforum&st=20241009T170000Z&title=AMERICAS%25C2%25B4%2520mobility%2520of%2520the%2520future&v=60"
-                   target="_blank">
-                     
-                   <i>Y!</i> Yahoo!
-                   </a>
-                 </div>
-                 <div style="text-align:center;padding:20px;margin: 20px;">                            
-                   <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://amofexpo.igeco.mx/icalendaramof.ics" donwload target="_blank">  
-                     iCalendar
-                   </a>
-                 </div>
+              <a style="background: #031B0C;color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250305T170000Z%2F20250308T000000Z&details=Ecomondo%20Mexico%20facilitates%20and%20accelerates%20business%20and%20networking%20opportunities%20between%20leading%20exponents%20of%20environmental%20technology%20solutions%20and%20key%20industry%20decision%20makers%20globally%20to%20promote%20the%20transition%20to%20a%20more%20sustainable%20future.&location=Expo%20Guadalajara%2C%20Jalisco&text=ECOMONDO%20MEXICO%202025"
+              target="_blank">                        
+                Google
+              </a>
+              <a style="background: #031B0C;color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Ecomondo%20Mexico%20facilitates%20and%20accelerates%20business%20and%20networking%20opportunities%20between%20leading%20exponents%20of%20environmental%20technology%20solutions%20and%20key%20industry%20decision%20makers%20globally%20to%20promote%20the%20transition%20to%20a%20more%20sustainable%20future.&enddt=2025-03-07T18%3A00%3A00&location=Expo%20Guadalajara%2C%20Jalisco&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2025-03-05T11%3A00%3A00&subject=ECOMONDO%20MEXICO%202025"
+              target="_blank">                       
+                Outlook
+              </a>
+            </div>
+                           
+            <div style="text-align:center;padding:20px;margin: 20px;">
+              <a style="background: #031B0C;color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Ecomondo%2520Mexico%2520facilitates%2520and%2520accelerates%2520business%2520and%2520networking%2520opportunities%2520between%2520leading%2520exponents%2520of%2520environmental%2520technology%2520solutions%2520and%2520key%2520industry%2520decision%2520makers%2520globally%2520to%2520promote%2520the%2520transition%2520to%2520a%2520more%2520sustainable%2520future.&dur=false&et=20250308T000000Z&in_loc=Expo+Guadalajara%2C+Jalisco&st=20250305T170000Z&title=ECOMONDO%2520MEXICO%25202025&v=60"
+              target="_blank">
+                
+              <i>Y!</i> Yahoo!
+              </a>
+              <a style="background: #031B0C;color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://re-plus-mexico.com.mx/calendar-ecomondo-eng.ics" donwload target="_blank">  
+                iCalendar
+              </a>
+            </div>  
                  <p style="font-size:15px;line-height:21px;margin:16px 0px;font-weight:bold">
                     INSTRUCTIONS FOR YOUR VISIT:
                  </p>
@@ -71,10 +68,7 @@ const email_template_amof_eng = async ({ name, paternSurname, maternSurname}) =>
                    </li>
                    <li>
                      Tu acceso es único e intransferible y debe estar visible durante toda tu visita.
-                   </li>
-                   <li>
-                     In case you lose your badge, there will be no reprints on the exhibit floor. Therefore, you will have to purchase a ticket for admission at a cost of $300 MXN.
-                   </li>                  
+                   </li>                                
                  </ul>                                                          
                </td>      
              </tr>               
@@ -97,14 +91,14 @@ const email_template_amof_eng = async ({ name, paternSurname, maternSurname}) =>
              <tr>
                <td style="padding:20px;" align="center">
                 <div style="background: #001A78;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-                 <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/hotels" target="_blank">
+                 <a style="text-decoration:none;color:white;" href="https://ecomondomexico.com.mx/hotels/" target="_blank">
                    BOOK YOUR ACCOMMODATION HERE <br />WITH PREFERENTIAL RATE
                  </a>
                 </div>           
                </td>
                <td style="padding:20px;" align="center">
                  <div style="background: #001A78;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-                   <a style="text-decoration:none;color:white;" href="https://amofexpo.igeco.mx/registro" target="_blank">
+                   <a style="text-decoration:none;color:white;" href="https://ecomondomexico.com.mx/registro/" target="_blank">
                      INVITE A COLLEAGUE
                    </a>
                  </div>        
@@ -123,5 +117,5 @@ const email_template_amof_eng = async ({ name, paternSurname, maternSurname}) =>
          )
     }
   
-  export {email_template_amof_eng}
+  export {email_template_ecomondo_eng}
   

@@ -6,11 +6,11 @@ import { v4 as uuidv4 } from 'uuid';
 import {RegisterModel} from './db.js';
 import {email_template} from './TemplateEmail.js';
 import {email_template_eng} from './TemplateEmailEng.js';
-import {email_template_amof} from './TemplateEmailAmof.js';
-import {email_template_amof_eng} from './TemplateEmailAmofEng.js';
+import {email_template_ecomondo} from './TemplateEmailEcomondo.js';
+import {email_template_ecomondo_eng} from './TemplateEmailEcomondoEng.js';
 
 
-import { generatePDFInvoice, generatePDF_freePass, generatePDF_freePass_ecomondo, generateQRDataURL, } from './generatePdf.js';
+import { generatePDF_freePass, generatePDF_freePass_ecomondo, generateQRDataURL, } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 
@@ -54,6 +54,22 @@ app.post('/susbribe-email', async (req, res) => {
     });   
 
 })
+
+app.post('/susbribe-email-ecomondo', async (req, res) => {
+    const { body } = req;
+    const userResponse = await RegisterModel.create_suscriber_ecomondo({...body}); 
+
+    if(!userResponse.status){
+        return  res.status(500).send({
+            ...userResponse
+        });
+    }                    
+    return res.send({
+        ...userResponse,            
+    });   
+
+})
+
 app.post('/free-register', async (req, res) => {
     const { body } = req;
 
@@ -104,10 +120,8 @@ app.post('/free-register-ecomondo', async (req, res) => {
             });
         }
                 
-
         const pdfAtch = await generatePDF_freePass_ecomondo(body, data.uuid);
-
-        const mailResponse = await sendEmailFuturistic(data, pdfAtch, data.uuid);   
+        const mailResponse = await sendEmailEcomondo(data, pdfAtch, data.uuid);   
 
         return res.send({
             ...mailResponse,
@@ -333,7 +347,7 @@ app.get('/template-email', async (req, res) => {
             {name: 'item 2', quantity: 2},
         ]
     }
-    const emailContent = await email_template({ ...data });
+    const emailContent = await email_template_ecomondo({ ...data });
     res.send(emailContent);
 });
 
@@ -341,17 +355,17 @@ app.get('/template-email', async (req, res) => {
 async function sendEmailEcomondo(data, pdfAtch = null, paypal_id_transaction = null){    
     try{
 
-        const emailContent = data.currentLanguage === 'es' ?  await email_template_amof({ ...data }) : await email_template_amof_eng({ ...data });
+        const emailContent = data.currentLanguage === 'es' ?  await email_template_ecomondo({ ...data }) : await email_template_ecomondo_eng({ ...data });
 
         await resend.emails.send({
-            from: 'AMOF 2024 <noreply@industrialtransformation.mx>',
+            from: 'ECOMONDO 2025 <noreply@industrialtransformation.mx>',
             to: data.email,
-            subject: 'Confirmación de pre registro AMERICAS´ mobility of the future 2024',
+            subject: 'Confirmación de pre registro ECOMONDO MEXICO 2025',
             html: emailContent,
             attachments: [
                 {
                     filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://industrialtransformation.mx/invoices/${paypal_id_transaction}.pdf`,
+                    path: `https://re-plus-mexico.com.mx/invoices/${paypal_id_transaction}.pdf`,
                     content_type: 'application/pdf'
                 },
               ],           
@@ -371,7 +385,6 @@ async function sendEmailEcomondo(data, pdfAtch = null, paypal_id_transaction = n
     }    
 }
 
-
 /* EMAIL RE+ MEXICO */
 async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){    
     try{
@@ -380,9 +393,9 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
         const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });
        
         await resend.emails.send({
-            from: 'ITM 2024 <noreply@industrialtransformation.mx>',
+            from: 'RE+ MEXICO 2025 <noreply@industrialtransformation.mx>',
             to: data.email,
-            subject: 'Confirmación de pre registro ITM 2024',
+            subject: 'Confirmación de pre registro RE+ MEXICO 2025',
             html: emailContent,
             attachments: [
                 {

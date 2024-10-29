@@ -1,105 +1,109 @@
 ---
 import Contacts from "../../components/Contacts.astro";
 import Layout from "../../layouts/Layout.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 ---
 
-<Layout title='Renew Energy Plus'>
-  
+<Layout title='RE+ Contacto'>
   <section>
-    <img src='/img/BgContact.webp' alt="fondo contacto" class="fixed z-[-10]">
-     <Contacts />
-    </div>
-    <div class="bg-white ">
-          <p class='relative text-5xl font-bold z-0 text-center p-10'>{t('contactForm.title')}</p>
-          <div class='mx-10'>
-            <p class='form-label my-3'>{t('footer.name')}</p>
-            <input
-              name='name'
-              required
-              autocomplete='false'
-              type='text'
-              id='formBasicPassword'
-              class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full '
-            />
-          </div>
-          <div class='mb-3 mx-10'>
-            <p class='form-label my-3'>{t('footer.email')}</p
-            ><input
-              name='email'
-              required=''
-              autocomplete='false'
-              type='email'
-              id='formBasicEmail'
-              class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
-            /></div>
-            <div class='mx-10'>
-              <p class='form-label my-3'>{t('contactForm.subject')}</p>
-              <input
-                name='name'
-                required
-                autocomplete='false'
-                type='text'
-                id='formBasicPassword'
-                class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full '
-              />
-            </div>
-            <div class='mx-10'>
-              <p class='form-label my-3'>{t('contactForm.message')}</p>
-              <input
-                name='name'
-                required
-                autocomplete='false'
-                type='text'
-                id='formBasicPassword'
-                class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full '
-              />
-            </div>
-            <div class='py-5 px-10'>
-              <div style='width: 304px; height: 78px;'>
-                <div>
-                  <iframe
-                    title='reCAPTCHA'
-                    width='304'
-                    height='78'
-                    role='presentation'
-                    name='a-u4y91gs0yq3c'
-                    frameborder='0'
-                    scrolling='no'
-                    sandbox='allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation'
-                    src='https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LeljqwnAAAAAHcToBhu6iq8o4kahL9sopQjC1A3&co=aHR0cHM6Ly9yZS1wbHVzLW1leGljby5pZ2Vjby5teDo0NDM.&hl=es&type=image&v=V6_85qpc2Xf2sbe3xTnRte7m&theme=light&size=normal&badge=bottomright&cb=ikhnqtfrmy71'
-                  ></iframe>
-                </div><textarea
-                  id='g-recaptcha-response'
-                  name='g-recaptcha-response'
-                  class='g-recaptcha-response'
-                  style='width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;'
-                ></textarea>
-              </div><iframe style='display: none;'></iframe>
-              
-            </div>
-            <button class='bg-black px-5 rounded-lg text-white text-xl font-bold mx-10'>
-              <p class='form-label my-3'>{t('contactForm.send')}</p>
-            </button>
-            <div class='flex justify-center items-center py-10'>
-              <img src="/img/igeco_logo_negro.webp" alt="logo igeco" class='w-[200px] h-[116px]  m-10'>
-              
-              <div class='text-center my-auto border-l-[1px] border-black pl-5' >
-                <p><strong>IGECO <br></strong>
-                  Blvd. Francisco Villa 102, piso 14<br>
-                  Col. Oriental 37510 <br>
-                  León Guanajuato, México <br>
-                  Tel. +49 511 89-0</p>
-                  <div class='text-blue-600'>
-                   <a href="mailto:info@igeco.mx" target="_blank">info@igeco.mx</a>
-                   |
-                   <a href="https://www.igeco.mx" target="_blank">www.igeco.mx</a>
-                  </div>
-              </div>
-            </div>
-    </div>
+    <img src='/img/BgContact.webp' alt='fondo contacto' class='fixed z-[-10]' />
+    <Contacts />
   </section>
+  <div class='bg-white'>
+    <p class='relative text-5xl font-bold z-0 text-center p-10'>
+      {t('contactForm.title')}
+    </p>
+    <div class='mx-10'>
+      <p class='form-label my-3'>{t('footer.name')}</p>
+      <input
+        name='name'
+        required
+        autocomplete='false'
+        type='text'
+        id='formBasicPassword'
+        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+      />
+    </div>
+    <div class='mb-3 mx-10'>
+      <p class='form-label my-3'>{t('footer.email')}</p><input
+        name='email'
+        required=''
+        autocomplete='false'
+        type='email'
+        id='formBasicEmail'
+        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+      />
+    </div>
+    <div class='mx-10'>
+      <p class='form-label my-3'>{t('contactForm.subject')}</p>
+      <input
+        name='name'
+        required
+        autocomplete='false'
+        type='text'
+        id='formBasicPassword'
+        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+      />
+    </div>
+    <div class='mx-10'>
+      <p class='form-label my-3'>{t('contactForm.message')}</p>
+      <input
+        name='name'
+        required
+        autocomplete='false'
+        type='text'
+        id='formBasicPassword'
+        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+      />
+    </div>
+    <div class='py-5 px-10'>
+      <div style='width: 304px; height: 78px;'>
+        <div>
+          <iframe
+            title='reCAPTCHA'
+            width='304'
+            height='78'
+            role='presentation'
+            name='a-u4y91gs0yq3c'
+            frameborder='0'
+            scrolling='no'
+            sandbox='allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation'
+            src='https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LeljqwnAAAAAHcToBhu6iq8o4kahL9sopQjC1A3&co=aHR0cHM6Ly9yZS1wbHVzLW1leGljby5pZ2Vjby5teDo0NDM.&hl=es&type=image&v=V6_85qpc2Xf2sbe3xTnRte7m&theme=light&size=normal&badge=bottomright&cb=ikhnqtfrmy71'
+          ></iframe>
+        </div><textarea
+          id='g-recaptcha-response'
+          name='g-recaptcha-response'
+          class='g-recaptcha-response'
+          style='width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;'
+        ></textarea>
+      </div><iframe style='display: none;'></iframe>
+    </div>
+    <button class='bg-black px-5 rounded-lg text-white text-xl font-bold mx-10'>
+      <p class='form-label my-3'>{t('contactForm.send')}</p>
+    </button>
+    <div class='flex justify-center items-center py-10'>
+      <img
+        src='/img/igeco_logo_negro.webp'
+        alt='logo igeco'
+        class='w-[200px] h-[116px] m-10'
+      />
 
+      <div class='text-center my-auto border-l-[1px] border-black pl-5'>
+        <p>
+          <strong>IGECO <br /></strong>
+          Blvd. Francisco Villa 102, piso 14<br />
+          Col. Oriental 37510 <br />
+          León Guanajuato, México <br />
+          Tel. +49 511 89-0
+        </p>
+        <div class='text-blue-600'>
+          <a href='mailto:info@igeco.mx' target='_blank'>info@igeco.mx</a>
+          |
+          <a href='https://www.igeco.mx' target='_blank'>www.igeco.mx</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
