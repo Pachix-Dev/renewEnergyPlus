@@ -588,11 +588,11 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
     .fontSize(8)
     .text('1.', 330)
     .font('Helvetica')
-    .text('Tu gafete es tu pase a la exposición de AMOF 2024. Deberás portarlo en todo momento.', 345, 75, {
+    .text('Tu gafete es tu pase a la exposición de ECOMONDO 2025. Deberás portarlo en todo momento.', 345, 75, {
         width: 250,
         align: 'justify'
     })  
-    doc.text('Your badge is your access pass to AMOF 2024 tradeshow. You must wear it at all times.',{
+    doc.text('Your badge is your access pass to ECOMONDO 2025 tradeshow. You must wear it at all times.',{
         width: 250,
         align: 'justify'
     })
@@ -621,7 +621,7 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
     })
     .fillColor('#1E92D0')
     .font('Helvetica-Bold')
-    .text(' #AMOF2024 ', { continued: true })
+    .text(' #ECOMONDO2025 ', { continued: true })
     .fillColor('black')
     .font('Helvetica')
     .text(' en tus posteos en redes sociales.')
@@ -631,7 +631,7 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
     })
     .fillColor('#1E92D0')
     .font('Helvetica-Bold')
-    .text(' #AMOF2024 ', { continued: true })
+    .text(' #ECOMONDO2025 ', { continued: true })
     .fillColor('black')
     .font('Helvetica')
     .text(' on your social media posts.')
@@ -646,11 +646,11 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
     .moveDown(1)
     .text('Octubre')
     .text('October')
-    .text('(9)   11:00 am – 19:00 hrs', 330, 250, {
+    .text('(9)   11:00 am – 18:00 hrs', 330, 250, {
         width: 250,    
         align: 'center'
     })
-    .text('(10)  11:00 am – 19:00 hrs', 330, 260, {
+    .text('(10)  11:00 am – 18:00 hrs', 330, 260, {
         width: 250,    
         align: 'center'
     })
