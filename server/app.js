@@ -125,7 +125,7 @@ app.post('/free-register-ecomondo', async (req, res) => {
 
         return res.send({
             ...mailResponse,
-            invoice: `${data.uuid}.pdf`
+            invoice: `${data.uuid}`
         });                
                
     } catch (err) {
