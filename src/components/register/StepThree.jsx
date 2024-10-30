@@ -163,7 +163,7 @@ export function StepThree({ translates, currentLanguage }) {
             <option value='TELEMARKETING'>TELEMARKETING</option>
           </select>
           {errors.eventKnowledge && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.eventKnowledge.message}
             </p>
           )}
@@ -189,7 +189,7 @@ export function StepThree({ translates, currentLanguage }) {
             ))}
           </select>
           {errors.productInterest && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.productInterest.message}
             </p>
           )}
@@ -220,7 +220,7 @@ export function StepThree({ translates, currentLanguage }) {
             </option>
           </select>
           {errors.levelInfluence && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.levelInfluence.message}
             </p>
           )}
@@ -243,7 +243,7 @@ export function StepThree({ translates, currentLanguage }) {
             <option value='NO'>{translates.no}</option>
           </select>
           {errors.wannaBeExhibitor && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.wannaBeExhibitor.message}
             </p>
           )}

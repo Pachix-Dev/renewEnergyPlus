@@ -98,7 +98,7 @@ export function StepTwo({ translates }) {
 
   const isDisabled =
     country === 'Mexico'
-      ? 'w-full rounded-lg bg-gray-600 border border-gray-200 p-4 pe-12 text-sm shadow-sm'
+      ? 'w-full rounded-lg bg-gray-600 border border-gray-200 p-4 pe-12 text-sm shadow-sm text-white'
       : 'w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm shadow-sm'
 
   return (
@@ -140,9 +140,7 @@ export function StepTwo({ translates }) {
             </span>
           </div>
           {errors.company && (
-            <p className='text-[#ffe200] font-light'>
-              {errors.company.message}
-            </p>
+            <p className='text-red-600 font-light'>{errors.company.message}</p>
           )}
         </div>
         <div>
@@ -210,9 +208,7 @@ export function StepTwo({ translates }) {
             </option>
           </select>
           {errors.industry && (
-            <p className='text-[#ffe200] font-light'>
-              {errors.industry.message}
-            </p>
+            <p className='text-red-600 font-light'>{errors.industry.message}</p>
           )}
         </div>
       </div>
@@ -244,9 +240,7 @@ export function StepTwo({ translates }) {
             </option>
           </select>
           {errors.position && (
-            <p className='text-[#ffe200] font-light'>
-              {errors.position.message}
-            </p>
+            <p className='text-red-600 font-light'>{errors.position.message}</p>
           )}
         </div>
         <div>
@@ -269,7 +263,7 @@ export function StepTwo({ translates }) {
             ))}
           </select>
           {errors.area && (
-            <p className='text-[#ffe200] font-light'>{errors.area.message}</p>
+            <p className='text-red-600 font-light'>{errors.area.message}</p>
           )}
         </div>
       </div>
@@ -314,7 +308,7 @@ export function StepTwo({ translates }) {
           </span>
         </div>
         {errors.address && (
-          <p className='text-[#ffe200] font-light'>{errors.address.message}</p>
+          <p className='text-red-600 font-light'>{errors.address.message}</p>
         )}
       </div>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
@@ -338,9 +332,7 @@ export function StepTwo({ translates }) {
             ))}
           </select>
           {errors.country && (
-            <p className='text-[#ffe200] font-light'>
-              {errors.country.message}
-            </p>
+            <p className='text-red-600 font-light'>{errors.country.message}</p>
           )}
         </div>
         <div>
@@ -384,10 +376,10 @@ export function StepTwo({ translates }) {
             </span>
           </div>
 
-          <p className='text-[#ffe200] font-light'>{messagePostalCode}</p>
+          <p className='text-red-600 font-light'>{messagePostalCode}</p>
 
           {errors.postalCode && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.postalCode.message}
             </p>
           )}
@@ -429,7 +421,7 @@ export function StepTwo({ translates }) {
             </span>
           </div>
           {errors.state && (
-            <p className='text-[#ffe200] font-light'>{errors.state.message}</p>
+            <p className='text-red-600 font-light'>{errors.state.message}</p>
           )}
         </div>
         <div>
@@ -468,7 +460,7 @@ export function StepTwo({ translates }) {
             </span>
           </div>
           {errors.municipality && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.municipality.message}
             </p>
           )}
@@ -533,9 +525,7 @@ export function StepTwo({ translates }) {
             </span>
           </div>
           {errors.colonia && (
-            <p className='text-[#ffe200] font-light'>
-              {errors.colonia.message}
-            </p>
+            <p className='text-red-600 font-light'>{errors.colonia.message}</p>
           )}
         </div>
         <div>
@@ -575,7 +565,7 @@ export function StepTwo({ translates }) {
             </span>
           </div>
           {errors.city && (
-            <p className='text-[#ffe200] font-light'>{errors.city.message}</p>
+            <p className='text-red-600 font-light'>{errors.city.message}</p>
           )}
         </div>
       </div>
@@ -649,7 +639,7 @@ export function StepTwo({ translates }) {
             </span>
           </div>
           {errors.phoneCompany && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.phoneCompany.message}
             </p>
           )}

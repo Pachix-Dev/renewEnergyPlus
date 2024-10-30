@@ -151,7 +151,7 @@ export function StepOne({ translates }) {
             </li>
           </ul>
           {errors.radio && (
-            <p className='text-[#ffe200] font-light'>{errors.radio.message}</p>
+            <p className='text-red-600 font-light'>{errors.radio.message}</p>
           )}
         </div>
         <div>
@@ -177,7 +177,7 @@ export function StepOne({ translates }) {
             </option>
           </select>
           {errors.typeRegister && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.typeRegister.message}
             </p>
           )}
@@ -234,7 +234,7 @@ export function StepOne({ translates }) {
             </span>
           </div>
           {errors.name && (
-            <p className='text-[#ffe200] font-light'>{errors.name.message}</p>
+            <p className='text-red-600 font-light'>{errors.name.message}</p>
           )}
         </div>
         <div>
@@ -286,7 +286,7 @@ export function StepOne({ translates }) {
             </span>
           </div>
           {errors.paternSurname && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.paternSurname.message}
             </p>
           )}
@@ -337,7 +337,7 @@ export function StepOne({ translates }) {
             </span>
           </div>
           {errors.maternSurname && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.maternSurname.message}
             </p>
           )}
@@ -386,7 +386,7 @@ export function StepOne({ translates }) {
             </span>
           </div>
           {errors.email && (
-            <p className='text-[#ffe200] font-light'>{errors.email.message}</p>
+            <p className='text-red-600 font-light'>{errors.email.message}</p>
           )}
         </div>
         <div>
@@ -441,7 +441,7 @@ export function StepOne({ translates }) {
             />
           </div>
           {errors.phone && (
-            <p className='text-[#ffe200] font-light'>{errors.phone.message}</p>
+            <p className='text-red-600 font-light'>{errors.phone.message}</p>
           )}
         </div>
         <div>
@@ -464,7 +464,7 @@ export function StepOne({ translates }) {
             ))}
           </select>
           {errors.nacionality && (
-            <p className='text-[#ffe200] font-light'>
+            <p className='text-red-600 font-light'>
               {errors.nacionality.message}
             </p>
           )}
