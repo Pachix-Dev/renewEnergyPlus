@@ -470,8 +470,8 @@ async function generatePDF_freePass( body, uuid) {
         align: 'center'
     });
 
-    doc.image('img/footer2_gafete.jpg', 307, 328, { width: 306 });
-    
+    body.typeRegister === 'VISITANTE' ? doc.image('img/footer2_gafete.jpg', 307, 328, { width: 306 }) : doc.image('img/footer2_prensa_gafete.jpg', 307, 328, { width: 306 });
+
     doc.save();
     // Rotate and draw some text
     doc.rotate(180, {origin: [150, 305]})
@@ -664,8 +664,8 @@ async function generatePDF_freePass_ecomondo( body, uuid) {
         align: 'center'
     });
 
-    doc.image('img/footer2_ecomondo_gafete.jpg', 307, 328, { width: 306 })<
-    
+    body.typeRegister === 'VISITANTE' ? doc.image('img/footer2_ecomondo_gafete.jpg', 307, 328, { width: 306 }) : doc.image('img/footer_2_prensa_ecomondo_gafete.jpg', 307, 328, { width: 306 });
+        
     doc.save();
     // Rotate and draw some text
     doc.rotate(180, {origin: [150, 305]})
