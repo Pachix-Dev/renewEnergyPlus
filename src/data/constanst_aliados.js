@@ -6,6 +6,7 @@ const aliados1 = [
   {link: '',src: '/img/aliadosEstrategicos/aliados1/AlianzaEnergetica.webp', alt: 'Logo Alianza Energetica', width: 200, height: 67,},
   {link: '',src: '/img/aliadosEstrategicos/aliados1/ahk.webp', alt: 'Logo Ahk', width: 250, height: 65,},
   {link: '',src: '/img/aliadosEstrategicos/aliados1/80-amsoc.webp', alt: 'Logo 80-Amsoc', width: 150, height: 98,},
+  {link: '',src: '/img/aliadosEstrategicos/aliados1/anes.webp', alt: 'Logo 80-Amsoc', width: 110, height: 98,},
 
 ];
 const aliados2 = [
