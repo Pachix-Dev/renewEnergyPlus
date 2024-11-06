@@ -6,7 +6,7 @@ const email_template_eng = async ({ name, paternSurname, maternSurname}) => {
     <tbody>
         <tr>
           <td colspan="2" align="center">
-            <img src="https://industrialtransformation.mx/header-ITM-register-eng.jpg" alt="logo" width="550">               
+            <img src="https://re-plus-mexico.com.mx/header_gafete.jpg" alt="logo" width="550">               
           </td>
         </tr>        
         <tr>
@@ -22,7 +22,7 @@ const email_template_eng = async ({ name, paternSurname, maternSurname}) => {
             </div>
             <div style="text-align:center;padding:20px;margin-top:25px;">
               <p style="background: #E42128;padding:20px;border-radius:20px;margin:20px;width:fit-content;margin:auto;">
-                <a style="text-decoration:none; color: white;font-weight:bold;" href="https://industrialtransformation.mx/programa" target='_blank'>                 
+                <a style="text-decoration:none; color: white;font-weight:bold;" href="https://re-plus-mexico.com.mx/programa-premium/" target='_blank'>                 
                   SEE THE PROGRAM OF RE+ MEXICO
                 </a>
               <p>
@@ -38,26 +38,26 @@ const email_template_eng = async ({ name, paternSurname, maternSurname}) => {
             </div>               
             <p style="font-weight:bold;font-size:20px;text-align: center;">ADD TO CALENDAR</p>
             <div style="text-align:center;padding:20px;margin: 20px;">
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20241009T170000Z%2F20241012T010000Z&details=Industrial%20Transformation%20Mexico%20es%20un%20evento%20interesante%20e%20inclusivo%20en%20el%20que%20los%20actores%20clave%20y%20los%20grupos%20objetivo%20se%20re%C3%BAnen%20para%20crear%20redes%20y%20oportunidades%20de%20intercambio%20de%20conocimientos%20para%20el%20%C3%A9xito%20empresarial.%0A&location=Poliforum%2C%20Le%C3%B3n&text=INDUSTRIAL%20TRANSFORMATION%20MEXICO%202024"
+              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250305T170000Z%2F20250308T000000Z&details=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&location=Expo%2C%20Guadalajara%2C%20Jalisco&text=Re%2B%20MEXICO"
               target="_blank">                        
                 Google
               </a>                           
             </div>
             <div style="text-align:center;padding:20px;margin: 20px;">
-                 <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Industrial%20Transformation%20Mexico%20es%20un%20evento%20interesante%20e%20inclusivo%20en%20el%20que%20los%20actores%20clave%20y%20los%20grupos%20objetivo%20se%20re%C3%BAnen%20para%20crear%20redes%20y%20oportunidades%20de%20intercambio%20de%20conocimientos%20para%20el%20%C3%A9xito%20empresarial.%0A&enddt=2024-10-11T19%3A00%3A00&location=Poliforum%2C%20Le%C3%B3n&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2024-10-09T11%3A00%3A00&subject=INDUSTRIAL%20TRANSFORMATION%20MEXICO%202024
+                 <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&enddt=2025-03-07T18%3A00%3A00&location=Expo%2C%20Guadalajara%2C%20Jalisco&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2025-03-05T11%3A00%3A00&subject=Re%2B%20MEXICO"
               target="_blank">                       
                 Outlook
               </a>
             </div>                   
             <div style="text-align:center;padding:20px;margin: 20px;">
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Industrial%2520Transformation%2520Mexico%2520es%2520un%2520evento%2520interesante%2520e%2520inclusivo%2520en%2520el%2520que%2520los%2520actores%2520clave%2520y%2520los%2520grupos%2520objetivo%2520se%2520re%25C3%25BAnen%2520para%2520crear%2520redes%2520y%2520oportunidades%2520de%2520intercambio%2520de%2520conocimientos%2520para%2520el%2520%25C3%25A9xito%2520empresarial.%250A&dur=false&et=20241012T010000Z&in_loc=Poliforum%2C+Le%C3%B3n&st=20241009T170000Z&title=INDUSTRIAL%2520TRANSFORMATION%2520MEXICO%25202024&v=60"
+              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Discover%2520the%2520latest%2520trends%252C%2520innovations%252C%2520knowledge%2520and%2520technologies%2520in%2520Solar%2520Components%2520and%2520Equipment%252C%2520Energy%2520Storage%252C%2520Thermal%2520Technology%252C%2520Inverters%2520and%2520Grid%2520Infrastructure%252C%2520which%2520will%2520be%2520needed%2520to%2520accelerate%2520the%2520global%2520renewable%2520energy%2520transition.&dur=false&et=20250308T000000Z&in_loc=Expo%2C+Guadalajara%2C+Jalisco&st=20250305T170000Z&title=Re%252B%2520MEXICO&v=60"
               target="_blank">
                 
               <i>Y!</i> Yahoo!
               </a>                            
             </div>
             <div style="text-align:center;padding:20px;margin: 20px;">
-                <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://industrialtransformation.mx/icalendar.ics" donwload target="_blank">  
+                <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://re-plus-mexico.com.mx/calendar-replusmexico-eng.ics" donwload target="_blank">  
                 iCalendar
               </a>
             </div>
@@ -73,25 +73,22 @@ const email_template_eng = async ({ name, paternSurname, maternSurname}) => {
               </li>
               <li>
                 Your access is unique and non-transferable and must be visible throughout your visit.
-              </li>
-              <li>
-                In case you lose your badge, there will be no reprints on the exhibit floor. Therefore, you will have to purchase a ticket for admission at a cost of $300 MXN.
-              </li>                  
+              </li>                                
             </ul>                                                          
           </td>      
         </tr>               
         <tr>
           <td style="padding:20px;" align="center">
             <p style="background: #E42128;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;">
+              <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/doc/RE+_MEX_2025_101524_BCD-Model.pdf" target="_blank">
                 FIND OUT ABOUT ALL OUR EVENTS
               </a>
             </p>          
           </td>
           <td style="padding:20px;" align="center">
             <p style="background: #E42128;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/files/Floorplan_ITM_2024_31.05.2023.pdf" target="_blank">
-                ITM 2024 FLOOR PLAN 
+              <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/doc/RE+_MEX_2025_101524_BCD-Model.pdf" target="_blank">
+                2025 FLOOR PLAN 
               </a>
             </p>         
           </td>
@@ -99,14 +96,14 @@ const email_template_eng = async ({ name, paternSurname, maternSurname}) => {
         <tr>
           <td style="padding:20px;" align="center">
            <p style="background: #E42128;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-            <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/hotels" target="_blank">
+            <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/hoteles/" target="_blank">
               BOOK HERE YOUR LODGING<br /> WITH PREFERENTIAL RATES
             </a>
            </p>           
           </td>
           <td style="padding:20px;" align="center">
             <p style="background: #E42128;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/registro" target="_blank">
+              <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/registro/" target="_blank">
                 INVITE A COLLEAGUE
               </a>          
           </td>
