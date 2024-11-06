@@ -521,4 +521,4 @@ async function generatePDF_freePass( body, uuid) {
 
 
 
-export { generatePDFInvoice, generatePDF_freePass, generatePDF_freePass_ecomondo, generateQRDataURL };
+export { generatePDFInvoice, generatePDF_freePass, generateQRDataURL };
