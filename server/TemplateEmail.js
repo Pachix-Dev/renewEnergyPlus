@@ -22,7 +22,7 @@ const email_template = async ({ name, paternSurname, maternSurname}) => {
             </div>
             <div style="text-align:center;padding:20px;margin-top:25px;">
               <div style="background: #E42128;padding:20px;border-radius:20px;">
-                <a style="text-decoration:none; color: white;font-weight:bold;" href="https://re-plus-mexico.igeco.mx/conference-program" target='_blank'>                 
+                <a style="text-decoration:none; color: white;font-weight:bold;" href="https://re-plus-mexico.com.mx/programa-premium/" target='_blank'>                 
                   CONSULTA EL PROGRAMA DE RE+ MEXICO
                 </a>
               </div>
