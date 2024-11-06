@@ -6,11 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import {RegisterModel} from './db.js';
 import {email_template} from './TemplateEmail.js';
 import {email_template_eng} from './TemplateEmailEng.js';
-import {email_template_ecomondo} from './TemplateEmailEcomondo.js';
-import {email_template_ecomondo_eng} from './TemplateEmailEcomondoEng.js';
 
-
-import { generatePDF_freePass, generatePDF_freePass_ecomondo, generateQRDataURL, } from './generatePdf.js';
+import { generatePDF_freePass, generateQRDataURL, } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 
@@ -55,21 +52,6 @@ app.post('/susbribe-email', async (req, res) => {
 
 })
 
-app.post('/susbribe-email-ecomondo', async (req, res) => {
-    const { body } = req;
-    const userResponse = await RegisterModel.create_suscriber_ecomondo({...body}); 
-
-    if(!userResponse.status){
-        return  res.status(500).send({
-            ...userResponse
-        });
-    }                    
-    return res.send({
-        ...userResponse,            
-    });   
-
-})
-
 app.post('/free-register', async (req, res) => {
     const { body } = req;
 
@@ -93,39 +75,6 @@ app.post('/free-register', async (req, res) => {
         return res.send({
             invoice: data.uuid,
             ...mailResponse,            
-        });                
-               
-    } catch (err) {
-        console.log(err);
-        res.status(500).send({
-            status: false,
-            message: 'hubo un error al procesar tu registro, por favor intenta mas tarde...'
-        });
-    }
-});
-
-app.post('/free-register-ecomondo', async (req, res) => {
-    const { body } = req;
-    
-    try {        
-        const data = { 
-            uuid: uuidv4(),            
-            ...body
-        };          
-        const userResponse = await RegisterModel.create_user_ecomondo({ ...data }); 
-
-        if(!userResponse.status){
-            return  res.status(500).send({
-                ...userResponse
-            });
-        }
-                
-        const pdfAtch = await generatePDF_freePass_ecomondo(body, data.uuid);
-        const mailResponse = await sendEmailEcomondo(data, pdfAtch, data.uuid);   
-
-        return res.send({
-            ...mailResponse,
-            invoice: `${data.uuid}`
         });                
                
     } catch (err) {
@@ -351,40 +300,6 @@ app.get('/template-email', async (req, res) => {
     res.send(emailContent);
 });
 
-/* EMAIL ECOMONDO */
-async function sendEmailEcomondo(data, pdfAtch = null, paypal_id_transaction = null){    
-    try{
-
-        const emailContent = data.currentLanguage === 'es' ?  await email_template_ecomondo({ ...data }) : await email_template_ecomondo_eng({ ...data });
-
-        await resend.emails.send({
-            from: 'ECOMONDO 2025 <noreply@industrialtransformation.mx>',
-            to: data.email,
-            subject: 'Confirmación de pre registro ECOMONDO MEXICO 2025',
-            html: emailContent,
-            attachments: [
-                {
-                    filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://re-plus-mexico.com.mx/invoices/${paypal_id_transaction}.pdf`,
-                    content_type: 'application/pdf'
-                },
-              ],           
-        })
-        
-        return {
-            status: true,
-            message: 'Gracias por registrarte, te hemos enviado un correo de confirmación a tu bandeja de entrada...'
-        };
-
-    } catch (err) {
-        console.log(err);
-        return {
-            status: false,
-            message: 'No pudimos enviarte el correo de confirmación de tu registro, por favor descarga tu registro en este pagina y presentalo hasta el dia del evento...'
-        };              
-    }    
-}
-
 /* EMAIL RE+ MEXICO */
 async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){    
     try{
@@ -393,7 +308,7 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
         const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });
        
         await resend.emails.send({
-            from: 'RE+ MEXICO 2025 <noreply@industrialtransformation.mx>',
+            from: 'RE+ MEXICO 2025 <noreply@re-plus-mexico.com.mx>',
             to: data.email,
             subject: 'Confirmación de pre registro RE+ MEXICO 2025',
             html: emailContent,
