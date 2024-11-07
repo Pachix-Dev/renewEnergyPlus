@@ -47,22 +47,19 @@ export function StepThree({ translates, currentLanguage }) {
   const [processing, setProcessing] = useState(false)
 
   const options = [
-    { label: 'Expo Manufactura', value: 'Expo Manufactura' },
-    { label: 'Expomaq', value: 'Expomaq' },
-    { label: 'Fabtech', value: 'Fabtech' },
-    { label: 'Tecma', value: 'Tecma' },
-    { label: 'The Logistics World', value: 'The Logistics World' },
-    { label: 'Automate', value: 'Automate' },
-    {
-      label: 'Expo Logística y Transporte',
-      value: 'Expo Logística y Transporte',
-    },
-    { label: 'Expo Pack', value: 'Expo Pack' },
+    { label: 'Intersolar Mexico', value: 'Intersolar Mexico' },
     { label: 'Expo Eléctrica', value: 'Expo Eléctrica' },
-    { label: 'Meximold', value: 'Meximold' },
-    { label: 'Fitma', value: 'Fitma' },
-    { label: 'ITMS', value: 'ITMS' },
-    { label: 'Hannover Messe (Alemania)', value: 'Hannover Messe (Alemania)' },
+    {
+      label: 'Congreso de Energía Jalisco',
+      value: 'Congreso de Energía Jalisco',
+    },
+    { label: 'Energyear', value: 'Energyear' },
+    { label: 'Expo Solar Colombia', value: 'Expo Solar Colombia' },
+    { label: 'Intersolar Brasil', value: 'Intersolar Brasil' },
+    {
+      label: 'RE+ Las Vegas',
+      value: 'ETC',
+    },
   ]
 
   const {
