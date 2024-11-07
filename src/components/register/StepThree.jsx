@@ -58,7 +58,11 @@ export function StepThree({ translates, currentLanguage }) {
     { label: 'Intersolar Brasil', value: 'Intersolar Brasil' },
     {
       label: 'RE+ Las Vegas',
-      value: 'ETC',
+      value: 'RE+ Las Vegas',
+    },
+    {
+      label: 'Electricity Transformation Canada',
+      value: 'Electricity Transformation Canada',
     },
   ]
 
