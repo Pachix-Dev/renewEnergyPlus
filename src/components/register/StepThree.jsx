@@ -146,10 +146,9 @@ export function StepThree({ translates, currentLanguage }) {
             className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
           >
             <option value=''>{translates.select_option}</option>
+            <option value='FACEBOOK'>FACEBOOK</option>
             <option value='ESPECTACULAR'>{translates.spectacular}</option>
             <option value='PAGINA WEB'>{translates.website}</option>
-            <option value='CORREO ELÉCTRONICO/MAILING'>MAILING</option>
-            <option value='FACEBOOK'>FACEBOOK</option>
             <option value='TWITTER'>TWITTER</option>
             <option value='LINKEDIN'>LINKEDIN</option>
             <option value='INSTAGRAM'>INSTAGRAM</option>
