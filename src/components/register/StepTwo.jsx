@@ -425,14 +425,11 @@ export function StepTwo({ translates }) {
           )}
         </div>
         <div>
-          <p className='text-black'>
-            {translates.municipality} <span className='text-red-600'>*</span>
-          </p>
+          <p className='text-black'>{translates.municipality}</p>
           <div className='relative mt-2'>
             <input
               type='text'
               {...register('municipality', {
-                required: `${translates.requiered}`,
                 onChange: (e) => setMunicipality(e.target.value),
               })}
               name='municipality'
@@ -459,11 +456,6 @@ export function StepTwo({ translates }) {
               </svg>
             </span>
           </div>
-          {errors.municipality && (
-            <p className='text-red-600 font-light'>
-              {errors.municipality.message}
-            </p>
-          )}
         </div>
       </div>
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
