@@ -33,7 +33,7 @@ const hotels = [
     phone: '+52 33 3669 32 00',
     email: 'ventas3figdl@posadas.com',
     code: 'RE+ MEXICO 2025 / ECOMONDO 2025',
-    link: '',
+    link: 'https://www.corpo-rate.com/login?groupId=G1T4RI@FIG',
     time_walk: '7 ',
     time_drive: '5 ',
     whatsapp: ''
