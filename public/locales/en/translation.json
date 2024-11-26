@@ -224,10 +224,10 @@
         "title_s": "Speakers",
         "subtitle_s": "Get inspired by our amazing speakers.",
         "day": "Day",
-        "month": "April",
-        "day_1": "Wednesday, April 17th ",
-        "day_2": "Thursday, April 18th",
-        "day_3": "Friday, April 19th",
+        "month": "March",
+        "day_1": "Wednesday, March 05",
+        "day_2": "Thursday, March 06",
+        "day_3": "Friday, March 07",
         "stages": "Stages",
         "about": "About",
         "speech": "Speech",
@@ -422,5 +422,8 @@
         "sucess_purchasing": "Fantastic! your purchase was successfully processed.",
         "email_sent": "You will receive a confirmation email soon!",
         "description_2": "Please go to the cashier's office with this number to pay and pick up your badge."
+    },
+    "enlightenmentArea":{
+        "description": "offers you multiple spaces for promotion and presence before and during the exhibition to attract professional buyers and obtain a greater return on investment for your participation."
     }
 }

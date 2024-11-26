@@ -1,0 +1,263 @@
+---
+import { conferences } from "../data/constans_enlightenment";
+import { t, changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
+
+changeLanguage("es");
+---
+
+<Layout title={`ITM | ${t('program.title')}`}>
+  <main class='mx-5 md:mx-16 lg:mx-32 pb-5'>
+    <h1 class='text-left text-[#ed6b06] text-5xl font-extrabold py-5'>
+      Enlightenment Area
+    </h1>
+    <p class='text-xl'>
+      <strong>RE+ MEXICO </strong>{t('enlightenmentArea.description')}
+    </p>
+    <section class='mt-10'>
+      <div class='mb-4 border-b border-gray-200'>
+        <ul
+          class='flex flex-wrap -mb-px text-sm font-medium text-center'
+          id='default-styled-tab'
+          data-tabs-toggle='#default-styled-tab-content'
+          role='tablist'
+        >
+          <li class='me-2' role='presentation'>
+            <button
+              class='inline-block p-4 border-b-2 rounded-t-lg'
+              id='profile-tab'
+              data-tabs-target='#profile'
+              type='button'
+              role='tab'
+              aria-controls='profile'
+              aria-selected='false'
+            >
+              {t('program.day_1')}
+            </button>
+          </li>
+          <li class='me-2' role='presentation'>
+            <button
+              class='inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300'
+              id='dashboard-tab'
+              data-tabs-target='#dashboard'
+              type='button'
+              role='tab'
+              aria-controls='dashboard'
+              aria-selected='false'>{t('program.day_2')}</button
+            >
+          </li>
+          <li class='me-2' role='presentation'>
+            <button
+              class='inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300'
+              id='settings-tab'
+              data-tabs-target='#settings'
+              type='button'
+              role='tab'
+              aria-controls='settings'
+              aria-selected='false'>{t('program.day_3')}</button
+            >
+          </li>
+        </ul>
+      </div>
+      <div id='default-tab-content'>
+        <div
+          class='hidden p-4 rounded-lg'
+          id='profile'
+          role='tabpanel'
+          aria-labelledby='profile-tab'
+        >
+          <table class='text-white text-xl text-left w-full'>
+            <thead class='bg-gray-700'>
+              <tr>
+                <th class='px-6 py-3'>Horarios</th>
+                <th class='px-6 py-3'></th>
+                <th class='px-6 py-3'>Inversión *</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                conferences.day_1.map((conference) => (
+                  <tr class='border-b'>
+                    <td class='px-6 py-4'>{conference.hour}</td>
+                    <td class='px-6 py-4'>{conference.name}</td>
+                    <td class='px-6 py-4'>{conference.status}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <div
+          class='hidden p-4 rounded-lg'
+          id='dashboard'
+          role='tabpanel'
+          aria-labelledby='dashboard-tab'
+        >
+          <table class='text-white text-xl text-left w-full'>
+            <thead class='bg-gray-700'>
+              <tr>
+                <th class='px-6 py-3'>Horarios</th>
+                <th class='px-6 py-3'></th>
+                <th class='px-6 py-3'>Inversión *</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                conferences.day_2.map((conference) => (
+                  <tr class='border-b'>
+                    <td class='px-6 py-4'>{conference.hour}</td>
+                    <td class='px-6 py-4'>{conference.name}</td>
+                    <td class='px-6 py-4'>{conference.status}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <div
+          class='hidden p-4 rounded-lg mx-auto'
+          id='settings'
+          role='tabpanel'
+          aria-labelledby='settings-tab'
+        >
+          <table class='text-white text-xl text-left w-full'>
+            <thead class='bg-gray-700'>
+              <tr>
+                <th class='px-6 py-3'>Horarios</th>
+                <th class='px-6 py-3'></th>
+                <th class='px-6 py-3'>Inversión *</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                conferences.day_1.map((conference) => (
+                  <tr class='border-b'>
+                    <td class='px-6 py-4'>{conference.hour}</td>
+                    <td class='px-6 py-4'>{conference.name}</td>
+                    <td class='px-6 py-4'>{conference.status}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class='mx-auto flex mt-10'>
+        <a
+          href='/doc/ENLIGHTENMENT-AREA-202-ESP-111424.pdf'
+          target='_blank'
+          class='button mx-auto text-3xl md:text-6xl font-bold'
+        >
+          <p>Saber más</p>
+          <svg fill='currentColor' viewBox='0 0 24 24' class='icon mr-5 my-2'>
+            <path
+              clip-rule='evenodd'
+              d='M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z'
+              fill-rule='evenodd'></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+<style>
+  body {
+    background-color: #111827;
+    color: white;
+  }
+  .button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background: rgb(188, 1, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(188, 1, 0, 1) 0%,
+      rgba(215, 105, 1, 1) 100%
+    );
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+
+  .button::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+
+    60% {
+      left: 100%;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 10%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  .die {
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+
+    animation-timeline: --card;
+    animation-name: show;
+
+    animation-range: entry 60% cover 60%;
+    animation-fill-mode: both;
+  }
+</style>

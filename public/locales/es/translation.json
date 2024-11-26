@@ -224,10 +224,10 @@
         "title_s": "Ponentes",
         "subtitle_s": "Déjate inspirar por nuestros increíbles ponentes.",
         "day": "Día",
-        "month": "de abril",
-        "day_1": "miércoles 17 de abril",
-        "day_2": "jueves 18 de abril",
-        "day_3": "viernes 19 de abril",
+        "month": "de marzo",
+        "day_1": "miércoles 05 de marzo",
+        "day_2": "jueves 06 de marzo",
+        "day_3": "viernes 07 de marzo",
         "stages": "Escenarios",
         "about": "Acerca de",
         "speech": "Ponencia",
@@ -422,5 +422,8 @@
         "sucess_purchasing": "¡Fantástico! haz tu compra fue procesada correctamente.",
         "email_sent": "¡Pronto recibiras un correo de confirmación!",
         "description_2": "Por favor pasa al modulo de caja con este numero para pagar y recoger tu gafete."
+    },
+    "enlightenmentArea":{
+        "description": "le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación."
     }
 }
