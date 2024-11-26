@@ -29,7 +29,7 @@ const hotels = [
     src: '/hotel_fiesta_inn.webp',
     name: 'Fiesta Inn Guadalajara Expo',
     address: 'AV. Mariano Otero 1550 Rinconada del Sol.',
-    rate: '$1,700.00 MXN',
+    rate: '$2,088.01 MXN',
     phone: '+52 33 3669 32 00',
     email: 'ventas3figdl@posadas.com',
     code: 'RE+ MEXICO 2025 / ECOMONDO 2025',
