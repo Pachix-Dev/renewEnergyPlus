@@ -19,6 +19,7 @@ const aliados2 = [
   {link: '',src: '/img/aliadosEstrategicos/aliados2/EUPD-Research.webp', alt: 'logo EUPD Research', width: 200, height: 38,},
 ];
 const Broadcasting1 = [
+  {link: '',src: '/img/logoga.webp', alt: 'Logo World Energy', width: 200, height: 68,},
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting1/pv-magazine-group.webp', alt: 'Logo PV Magazine Group', width: 200, height: 68,},
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting1/onlineCosmos.webp', alt: 'Logo Online Cosmos', width: 154, height: 68,},
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting1/mexicoIndustry.webp', alt: 'Logo Mexico Industry', width: 150, height: 53,},
