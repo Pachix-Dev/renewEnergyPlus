@@ -46,7 +46,7 @@ const hotels = [
     phone: '33 3880 9200',
     email: 'ventas1gdex@posadas.com',
     code: 'RE+ MEXICO 2025 / ECOMONDO 2025',
-    link: '',
+    link: 'https://www.corpo-rate.com/login?groupId=G1T5ST@OGX',
     time_walk: '19 ',
     time_drive: '5 ',
     whatsapp: ''
