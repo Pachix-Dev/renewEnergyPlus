@@ -1,26 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
+import { program_premium } from "../data/constans_program_premium";
 
 changeLanguage("es");
 ---
 
 <Layout title='RE+ Mexico | programa premium'>
-  <div class='bg text-center text-white p-16 font-bold mb-14'>
-    <p class='sombra text-6xl text-shado'>{t('program.title_1')}</p>
-    <p class='text-4xl mt-10'>{t('program.comming_soon')}</p>
+  <div class='bg-[#111827] text-black p-16 font-bold'>
+    <h1 class='text-left text-[#ed6b06] text-5xl font-extrabold py-5'>
+      {t('program.title_1')}
+    </h1>
+    <div class='mt-10 text-white'>
+      {
+        program_premium.map((program, index) => {
+          return (
+            <p class='my-5'>
+              {index + 1}.- {program.title}
+            </p>
+          )
+        })
+      }
+    </div>
   </div>
 </Layout>
-<style>
-  .bg {
-    background: rgb(150, 76, 172);
-    background: linear-gradient(
-      90deg,
-      rgba(150, 76, 172, 1) 0%,
-      rgba(204, 159, 240, 1) 100%
-    );
-  }
-  .sombra {
-    text-shadow: 5px 5px 12px #000000;
-  }
-</style>
