@@ -16,7 +16,7 @@ export const conferences = {
             id: 3,
             hour: '13:30 – 14:00',
             name: 'BATTERY DEPOT',
-            status: 'RESERVADO',
+            status: 'VENDIDO',
         },
         {
             id: 4,
@@ -78,7 +78,7 @@ export const conferences = {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'EXEL SOLAR',
-            status: 'RESERVADO',
+            status: 'VENDIDO',
         },
         {
             id: 6,
