@@ -1,0 +1,46 @@
+---
+import LayoutCheckout from "../layouts/LayoutCheckout.astro";
+import { CheckoutForm } from "../components/ecommerce/CheckoutForm.jsx";
+import { Resume } from "../components/ecommerce/Resume.jsx";
+import { Total } from "../components/ecommerce/Total.jsx";
+import i18next, { changeLanguage, t } from "i18next";
+import { RedirectREPLUS } from "../components/ecommerce/RedirectREPLUS";
+
+changeLanguage("es");
+
+const currentLanguage = i18next.language;
+const translate = t("ecommerce");
+---
+
+<LayoutCheckout title='Re+ Mexico | Programa Premium Checkout'>
+  <RedirectREPLUS client:only />
+  <main class='sm:p-10 w-full sm:w-3/5 order-2 sm:order-1 p-4'>
+    <div
+      class='flex items-center gap-5 bg-gray-700 p-2 text-white rounded-md mb-5'
+    >
+      <img
+        src='/img/logoREPLUS.webp'
+        alt='REPLUS MEXICO'
+        class='w-24 drop-shadow-xl'
+      />
+      <p class='font-extrabold text-3xl'>
+        {t('ecommerce.description')}
+        <br />
+      </p>
+    </div>
+    <CheckoutForm
+      currentLanguage={currentLanguage}
+      translate={translate}
+      client:only
+    />
+  </main>
+  <aside
+    class='sm:fixed right-0 top-0 z-50 p-5 w-full sm:w-2/5 order-1 sm:order-2 bg-[#f7f7f8] h-auto sm:h-full border shadow-lg'
+  >
+    <p class='text-center text-2xl font-bold hidden md:block text-black'>
+      Resumen del pedido
+    </p>
+    <Resume client:only translate={translate} />
+    <Total client:only />
+  </aside>
+</LayoutCheckout>

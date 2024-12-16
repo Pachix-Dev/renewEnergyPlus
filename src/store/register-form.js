@@ -4,7 +4,9 @@ import { persist } from "zustand/middleware";
 const useRegisterForm = create( 
     persist(
         (set) => ({     
-            step: 0,            
+            step: 0,
+            idUser: 0,
+            uuid: "",            
             name: "",
             paternSurname: "",
             maternSurname: "",
@@ -38,9 +40,12 @@ const useRegisterForm = create(
             
             complete_register: false,
             invoiceDownToLoad: "",
-            item:{},
+            items: [],
+            total: 0,
             code_cortesia: "",
             
+            setIdUser: (idUser) => set({ idUser }),
+            setUuid: (uuid) => set({ uuid }),
             setName: (name) => set({ name }),
             setPaternSurname: (paternSurname) => set({ paternSurname }),
             setMaternSurname: (maternSurname) => set({ maternSurname }),
@@ -83,12 +88,41 @@ const useRegisterForm = create(
             decrementStep: () => set((state) => ({ 
                 step: state.step - 1 
             })),
-
-            addTocart: (item) => set(() => ({
-                item: {...item}
-            })),
+            
+            addToCart: (item) => set((state) => {
+                const itemWithId1Exists = state.items.some(i => i.id === 1);
+                const itemAlreadyExists = state.items.some(i => i.id === item.id);
+            
+                if (item.id === 1) {
+                    return {
+                        items: [{ ...item }],
+                        total: item.price // Asumiendo que el objeto item tiene una propiedad price
+                    };
+                } else if (itemWithId1Exists || itemAlreadyExists) {
+                    // No agregar más productos si ya existe un ítem con id 1 o si el producto ya está en el carrito
+                    return state;
+                } else {
+                    const newItems = [...state.items, { ...item }];
+                    const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
+                    return {
+                        items: newItems,
+                        total: newTotal
+                    };
+                }
+            }),
+            
+            removeToCart: (id) => set((state) => {
+                const newItems = state.items.filter((item) => item.id !== id);
+                const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
+                return {
+                    items: newItems,
+                    total: newTotal
+                };
+            }),
 
             clear: () => set({ 
+                idUser: 0,
+                uuid: "",
                 step: 0,            
                 name: "",
                 paternSurname: "",
@@ -119,7 +153,7 @@ const useRegisterForm = create(
                 levelInfluence: "",
                 wannaBeExhibitor: "",
                 alreadyVisited: [],
-                item:{},
+                items:[],
                 code_cortesia: ""        
             })
         }), 

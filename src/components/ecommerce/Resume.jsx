@@ -1,0 +1,31 @@
+import { useRegisterForm } from '../../store/register-form'
+
+export function Resume({ translate }) {
+  const { items } = useRegisterForm()
+
+  function formatAmountMXN(amount) {
+    const formattedAmount = new Intl.NumberFormat('es-MX', {
+      style: 'currency',
+      currency: 'MXN',
+      minimumFractionDigits: 2,
+    }).format(amount)
+
+    return formattedAmount
+  }
+
+  return (
+    <div className='grid gap-6'>
+      {items.map((item) => (
+        <div
+          key={item.id}
+          className='grid md:flex justify-between items-end gap-5 rounded-xl shadow-md p-4 bg-white relative'
+        >
+          <div>
+            <h3 className='text-md'>{item.name}</h3>
+          </div>
+          <p className='text-3xl'>{formatAmountMXN(item.price)}</p>
+        </div>
+      ))}
+    </div>
+  )
+}

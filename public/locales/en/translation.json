@@ -21,7 +21,7 @@
             "option_10": "Rates",
             "option_11": "Promotional Material",
             "option_12": "Exhibitor's manual",
-            "option_13": "EXPO HALL EDUCATION",
+            "option_13": "FREE CONTENT",
             "option_14": "I WANT TO BE A SPONSOR"
         },
         "submenu_3": {
@@ -425,5 +425,35 @@
     },
     "enlightenmentArea":{
         "description": "offers you multiple spaces for promotion and presence before and during the exhibition to attract professional buyers and obtain a greater return on investment for your participation."
+    },
+    "ecommerce": {
+        "description": "Purchase your access to the conference program and Energy Night",
+        "addtocart": "Add to cart",
+        "resume": "Order summary",
+        "continue": "Continue",
+        "empty_cart": "Empty cart",
+        "back_to_shop": "Back to shop",
+        "register_data": "Register your data",
+        "edit": "Edit",
+        "check_info": "Check your information",
+        "required": "Required field",
+        "fullname": "Enter you full name",
+        "spacesNotAllowed": "Blank spaces at the beginning or end of the name, or symbols are not accepted.",
+        "email": "Enter your email",
+        "novalidEmail": "Please enter a valid email address",
+        "phone": "Enter your phone",
+        "novalidPhone": "Please enter a valid phone number",
+        "company": "Enter your company",
+        "disclamer_1": "No changes, cancellations or refunds are accepted.",
+        "disclamer_2": "Remember you must present an official ID.",        
+        "disclamer_3": "Minors must be accompanied by 1 adult",
+        "disclamer_4": "If you want an invoice, send an email to emmanuel.heredia@igeco.mx <br /> PLEASE ATTACH THE FOLLOWING DOCUMENTS: <br /> - PROOF OF TAX SITUATION <br /> - PHOTO OF THE PURCHASE RECEIPT <br /> - INDICATE THE METHOD OF PAYMENT (CREDIT OR DEBIT CARD) <br /> - USE OF CFDI",
+        "disclamer_5": "Maximum invoicing date October 25, 2024",
+        "disclamer_6": "Tipping NOT included",
+        "method_payment": "Payment method",
+        "select_hour": "On what day and at what time do you need your table?",
+        "select_default": "Select an schedule",
+        "text_select": "Select the day and time chosen to attend the event, this reservation includes a table space for up to 10 people",     
+        "comments": "Aditional comments"
     }
 }

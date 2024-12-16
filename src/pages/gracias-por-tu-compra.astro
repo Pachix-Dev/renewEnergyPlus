@@ -1,5 +1,5 @@
 ---
-import i18next, { changeLanguage, t } from "i18next";
+import { changeLanguage, t } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import Confettti from "../components/shared/Confetti";
 import { Redirect } from "../components/shared/Redirect.jsx";
@@ -8,11 +8,9 @@ import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
 import { sponsors } from "../data/constanst_logos";
 
 changeLanguage("es");
-
-const currentLanguage = i18next.language;
 ---
 
-<Layout title='RE+ Mexico | Gracias por registrarte'>
+<Layout title='RE+ Mexico | Gracias por tu Compra'>
   <Redirect client:only='react' />
   <section class='my-10 max-w-screen-lg mx-auto'>
     <MarqueeSponsors partners={sponsors} isLeftToRight />

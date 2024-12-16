@@ -1,0 +1,26 @@
+---
+import { changeLanguage, t } from "i18next";
+import { Upgrade } from "../../components/ecommerce/Upgrade.jsx";
+import { sponsors } from "../../data/constanst_logos.js";
+import MarqueeSponsors from "../../components/register/MarqueeSponsors.astro";
+import LayoutCheckout from "../../layouts/LayoutCheckout.astro";
+
+changeLanguage("en");
+---
+
+<LayoutCheckout title='ACCESO PROGRAMA VIP'>
+  <main class='mt-10 md:mt-20 mx-6 py-10'>
+    <section class='mb-10 max-w-screen-lg mx-auto flex gap-6'>
+      <MarqueeSponsors partners={sponsors} isLeftToRight />
+    </section>
+    <h1
+      class='text-[#ED6E0B] text-3xl md:text-5xl leading-snug font-extrabold text-center uppercase'
+    >
+      Adquiere tu programa de conferencias vip <br />
+    </h1>
+    <p class='text-center font-bold text-lg md:text-2xl uppercase'>
+      da el salto y disfruta de todas nuestras ventajas
+    </p>
+    <Upgrade client:only='react' />
+  </main>
+</LayoutCheckout>

@@ -7,9 +7,11 @@ import {RegisterModel} from './db.js';
 import {email_template} from './TemplateEmail.js';
 import {email_template_eng} from './TemplateEmailEng.js';
 
-import { generatePDF_freePass, generateQRDataURL, } from './generatePdf.js';
+import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
+import { MercadoPagoConfig, Payment } from 'mercadopago';
+
 
 const { json } = pkg
 const app = express()
@@ -31,11 +33,158 @@ app.use(cors({
 
 
 const PORT = process.env.PORT || 3010
-const environment = process.env.ENVIRONMENT || 'sandbox';
-const client_id = process.env.CLIENT_ID;
-const client_secret = process.env.CLIENT_SECRET;
-const endpoint_url = environment === 'sandbox' ? 'https://api-m.sandbox.paypal.com' : 'https://api-m.paypal.com';
+
+const mercadopago =  new MercadoPagoConfig({
+    accessToken: process.env.MP_ACCESS_TOKEN,
+    options: {
+        timeout: 5000,
+    }
+});
+const payment = new Payment(mercadopago);
+
 const resend = new Resend(process.env.RESEND_APIKEY)
+
+app.post('/create-order-replus', async (req, res) => {
+    try {
+        const { body } = req;
+        let total = 0;
+        
+        const get_products = await RegisterModel.get_products();
+
+        if (!get_products.status) {
+            return res.status(500).send({
+                status: false,
+                message: 'No se encontraron productos...'
+            });
+        }
+
+        const products = get_products.result;
+        
+        body.items.forEach(item => {
+            const product = products.find(product => product.id == item.id);
+            total += product.price;
+
+            if(!product){
+                return res.status(500).send({
+                    status: false,
+                    message: 'Producto no encontrado...'
+                });
+            }            
+        });
+        
+        if (total !== body.total) {
+            return res.status(400).send({
+                status: false,
+                message: 'Tu compra no pudo ser procesada, la información no es válida...'
+            });
+        }
+        
+        const id_items = body.items.map(item => item.id)
+        //validar si es usuario ya compro alguno de estos items        
+        const userResponse = await RegisterModel.check_buy_products(body.idUser, id_items);
+
+        if (!userResponse.status) {
+            return res.status(400).send({
+                status: false,
+                message: userResponse.message
+            });
+        }
+
+        const paymentData = {
+            token: body?.paymentData.token,
+            transaction_amount: total,
+            description: 'Replus Ecommerce 2025 - '+ id_items.toString(),
+            payment_method_id: body?.paymentData.payment_method_id,
+            payer: { email: body?.paymentData.payer.email },
+            installments: 1,
+        };
+
+        
+
+        const resp = await payment.create({ body: paymentData });
+        
+        if (resp.status === "approved") {                        
+            await RegisterModel.save_order(body.idUser, id_items, resp.id, '', body.total);
+                        
+            const pdfAtch = await generatePDFInvoice(resp.id, body);
+            const mailResponse = await sendEmail(body, pdfAtch, resp.id);
+
+            return res.send({
+                ...mailResponse,
+                invoice: `${resp.id}.pdf`
+            });
+           
+        } else {
+            return res.status(400).send({
+                status: false,
+                message: 'El pago no fue aprobado...'
+            });
+        }
+
+    } catch (error) {
+        console.error('Error en /create-order-replus:', error.message);
+        return res.status(500).send({
+            status: false,
+            message: 'Ocurrió un error al procesar la solicitud.',
+            error: error.message
+        });
+    }
+});
+
+
+app.post('/complete-order-replus', async (req, res) => {
+    const { body } = req;
+    const userResponse = await RegisterModel.get_user_by_email(body.email);
+    if (!userResponse.status) {
+        return res.status(404).send({
+            message: userResponse.error
+        });
+    }
+    try {
+        const data = { 
+            total: body.total,
+            item: body.item,
+            ...userResponse.user
+        };
+        
+        const access_token = await get_access_token();
+        const response = await fetch(endpoint_url + '/v2/checkout/orders/' + body.orderID + '/capture', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${access_token}`
+            }
+        });
+        const json = await response.json();
+        if (json.id) {
+            if(json.purchase_units[0].payments.captures[0].status === 'COMPLETED' || json.purchase_units[0].payments.captures[0].status === 'PENDING' ){
+                
+                const paypal_id_order = json.id;
+                const paypal_id_transaction = json.purchase_units[0].payments.captures[0].id;                     
+                await RegisterModel.save_order(data.id, paypal_id_order, paypal_id_transaction, body.total);
+
+                const pdfAtch = await generatePDFInvoice(paypal_id_transaction, data, data.uuid);
+
+                const mailResponse = await sendEmail(data, pdfAtch, paypal_id_transaction);   
+        
+                return res.send({
+                    ...mailResponse,
+                    invoice: `${paypal_id_transaction}.pdf`
+                });                
+            }
+        } else {        
+            return res.status(500).send({
+                status: false,
+                message: 'Tu compra no pudo ser procesada, hay un problema con tu metodo de pago por favor intenta mas tarde...'
+            });
+        }       
+    } catch (err) {
+        return res.status(500).send({
+            status: false,
+            message: 'hubo un error al procesar tu compra, por favor intenta mas tarde...'
+        });
+    }
+});
 
 app.post('/susbribe-email', async (req, res) => {
     const { body } = req;
@@ -83,6 +232,16 @@ app.post('/free-register', async (req, res) => {
             status: false,
             message: 'hubo un error al procesar tu registro, por favor intenta mas tarde...'
         });
+    }
+});
+
+app.get('/get-user-by-email', async (req, res) => {
+    const { email } = req.query;
+    const user = await RegisterModel.get_user_by_email(email);
+    if (user) {
+        return res.status(200).send(user);
+    } else {
+        return res.status(404).send({ message: 'No se encontró el usuario' });
     }
 });
 

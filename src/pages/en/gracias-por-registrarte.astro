@@ -14,6 +14,9 @@ const currentLanguage = i18next.language;
 
 <Layout title='RE+ Mexico | Gracias por registrarte'>
   <Redirect client:only='react' />
+  <section class='my-10 max-w-screen-lg mx-auto'>
+    <MarqueeSponsors partners={sponsors} isLeftToRight />
+  </section>
   <div class='p-5 lg:p-20'>
     <div
       class='px-4 ecomondo-bloq-1 w-full h-full text-color flex flex-col items-center justify-center relative'
@@ -40,9 +43,6 @@ const currentLanguage = i18next.language;
         </div>
       </div>
     </div>
-    <section class='my-10 max-w-screen-lg mx-auto'>
-      <MarqueeSponsors partners={sponsors} isLeftToRight />
-    </section>
   </div>
 </Layout>
 <style>

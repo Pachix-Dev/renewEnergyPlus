@@ -1,0 +1,51 @@
+---
+import { changeLanguage, t } from "i18next";
+import { Items } from "../../components/ecommerce/Items";
+import Products from "../../components/ecommerce/Products.astro";
+import { Total } from "../../components/ecommerce/Total.jsx";
+import LayoutCheckout from "../../layouts/LayoutCheckout.astro";
+import { RedirectREPLUS } from "../../components/ecommerce/RedirectREPLUS";
+
+changeLanguage("en");
+
+const translate = t("ecommerce", { returnObjects: true });
+---
+
+<LayoutCheckout title='RE+ Mexico | productos'>
+  <RedirectREPLUS client:only />
+  <main class='md:flex grid'>
+    <section class='p-5 sm:p-10 w-full sm:w-3/5 sm:order-1'>
+      <div
+        class='flex items-center gap-5 bg-gray-700 p-2 text-white rounded-md'
+      >
+        <img
+          src='/img/logoREPLUS.webp'
+          alt='REPLUS MEXICO'
+          class='w-24 drop-shadow-xl'
+        />
+        <p class='font-extrabold text-3xl'>
+          {t('ecommerce.description')}
+          <br />
+        </p>
+      </div>
+      <Products />
+    </section>
+    <aside
+      class='sm:fixed right-0 top-0 z-50 p-5 w-full sm:w-2/5 sm:order-2 bg-[#f7f7f8] h-auto sm:h-full border rounded-lg shadow-lg overflow-y-scroll'
+    >
+      <p class='text-center text-2xl font-bold hidden md:block text-black'>
+        {t('ecommerce.resume')}
+      </p>
+
+      <Items client:only translate={translate} />
+      <Total client:only />
+
+      <a
+        href='/programa-premium-checkout'
+        class='bg-black p-4 text-white text-4xl flex rounded-xl justify-center items-center w-full mt-5 hover:bg-gray-800'
+      >
+        {t('ecommerce.continue')}
+      </a>
+    </aside>
+  </main>
+</LayoutCheckout>

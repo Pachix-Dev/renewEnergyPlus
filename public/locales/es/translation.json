@@ -21,7 +21,7 @@
             "option_10": "Tarifas",
             "option_11": "Toolkit",
             "option_12": "Manual del expositor",
-            "option_13": "CONTENIDO EDUCATIVO EN PISO EXPOSITOR",
+            "option_13": "CONTENIDO GRATUITO",
             "option_14": "QUIERO SER PATROCINADOR"
         },
         "submenu_3": {
@@ -424,6 +424,36 @@
         "description_2": "Por favor pasa al modulo de caja con este numero para pagar y recoger tu gafete."
     },
     "enlightenmentArea":{
-        "description": "le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación."
+        "description": "Enlighten the space of knowledge, innovation, success stories, trends, technologies and solutions in the solar sector through a training talk. If you are looking for new business opportunities and to increase your potential contacts in Latin America, this is the ideal space for you."
+    },
+    "ecommerce": {
+        "description": "Adquiere tu acceso al programa de conferencias y a la Energy Night",
+        "addtocart": "Agregar al carrito",
+        "resume": "Resumen del pedido",
+        "continue": "Continuar",
+        "empty_cart": "Tu carrito está vacío",
+        "back_to_shop": "Volver a la tienda",
+        "register_data": "Regístra tus datos",
+        "edit": "Editar",
+        "check_info": "Por favor revisa que la información sea correcta.",
+        "required": "Campo requerido",
+        "fullname": "Ingresa tu nombre completo",
+        "spacesNotAllowed": "No se aceptan espacios en blanco al inicio o final del nombre, ni simbolos",
+        "email": "Ingresa tu correo electrónico",
+        "novalidEmail": "Por favor ingresa un correo válido",
+        "phone": "Ingresa tu teléfono",
+        "novalidPhone": "Por favor ingresa un teléfono válido",
+        "company": "Ingresa el nombre de tu empresa",
+        "disclamer_1": "No se aceptan cambios, cancelaciones o devoluciones.",
+        "disclamer_2": "Recuerda que deberás presentar una identificación oficial.",
+        "disclamer_3": "Los menores de edad deben ingresar en compañía de 1 adulto",
+        "disclamer_4": "Si deseas factura envie un correo a emmanuel.heredia@igeco.mx <br /> FAVOR DE ADJUNTAR LOS SIGUIENTES DOCUMENTOS: <br /> - CONSTANCIA SITUACIÓN FISCAL <br /> - FOTO DEL RECIBO DE COMPRA <br /> - INDICAR EL MÉTODO DE PAGO (TARJETA DE CREDITO O DEBITO) <br />- USO DE CFDI",
+        "disclamer_5": "Fecha máxima de facturación 25 de octubre de 2024",
+        "disclamer_6": "Propina NO incluida",
+        "method_payment": "Método de pago",
+        "select_hour": "¿En qué día y en que horario requieres tu mesa?",
+        "select_default": "Selecciona un horario",
+        "text_select": "Seleccióne el día y horario elegido para asistir al evento, esta reserva incluye el espacio de una mesa para hasta 10 personas",         
+        "comments": "Comentarios adicionales"      
     }
 }

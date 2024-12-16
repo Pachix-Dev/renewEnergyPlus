@@ -1,0 +1,138 @@
+---
+import { AddCart } from './AddCart.jsx'
+import { t } from 'i18next'
+
+const translate = t('ecommerce', { returnObjects: true })
+
+const products = [
+  {
+    id: 1,
+    name: 'PASE COMPLETO, ENERGY NIGHT Y VIP AREA',
+    name_en: 'FULL PASS, ENERGY NIGHT AND VIP AREA',
+    price: 6500,
+    included: [
+      '3 días de conferencias 05, 06 y 07 marzo 2025',
+      '1 Pase para nuestra "Energy Night',
+      'Acceso a la VIP AREA',
+      'Incluye Coffee',
+    ],
+    included_en: [
+      '3 days of conferences 05, 06 and 07 March 2025',
+      '1 Pass for our "Energy Night',
+      'Access to the VIP AREA',
+      'Includes Coffee',
+    ],
+  },
+  {
+    id: 2,
+    name: 'ENERGY NIGHT Miércoles 05 de Marzo',
+    name_en: 'ENERGY NIGHT Wednesday, March 05th',
+    price: 1000,
+    included: [
+      '1 Entrada para la Energia Night con acceso a bebidas ilimitadas y snack.',
+      'Acceso miércoles 05 de marzo en Desfilia, Expo Guadalajara.',
+      'Recepción 6:30 pm',
+      'Inicio del evento 7.00 pm',
+      'Fin del evento 10:00 pm',
+    ],
+    included_en: [
+      '1 Ticket for the Energy Night with unlimited drinks and snacks.',
+      'Access Wednesday, March 5 at Desfilia, Expo Guadalajara.',
+      'Reception 6:30 pm',
+      'Event start 7.00 pm',
+      'Event end 10:00 pm',
+    ],
+  },
+  {
+    id: 3,
+    name: 'Pase de conferencia del día miércoles 05 de marzo',
+    name_en: 'Conference Day Pass Wednesday, March 05th',
+    price: 2500,
+    included: [
+      'Conferencias día miércoles 05 de marzo',
+      'Acceso a la VIP AREA',
+      'Incluye coffee break',
+    ],
+    included_en: [
+      'Conferences Wednesday, March 5th',
+      'Access to VIP AREA in the showroom',
+      'Includes coffee break',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Pase de conferencia del día jueves 06 de marzo',
+    name_en: 'Conference Day Pass Thursday, March 06th',
+    price: 2500,
+    included: [
+      'Conferencias día jueves 06 de marzo',
+      'Acceso a la VIP AREA',
+      'Incluye coffee break',
+    ],
+    included_en: [
+      'Conferences Thursday, March 6th',
+      'Access to VIP AREA in the showroom',
+      'Includes coffee break',
+    ],
+  },
+  {
+    id: 5,
+    name: 'Pase de conferencia del día viernes 07 de marzo',
+    name_en: 'Conference Day Pass Friday, March 07th',
+    price: 2500,
+    included: [
+      'Conferencias día viernes 07 de marzo',
+      'Acceso a la VIP AREA',
+      'Incluye coffee break',
+    ],
+    included_en: [
+      'Conferences friday, March 7th',
+      'Access to VIP AREA in the showroom',
+      'Includes coffee break',
+    ],
+  },
+]
+---
+
+<div class='mt-10 grid lg:grid-cols-2 xl:grid-cols-3 gap-5 justify-center'>
+  {
+    products.map((product) => (
+      <div class='w-full max-w-sm  p-4 bg-white  rounded-lg shadow-xl'>
+        <div class='flex flex-col h-full justify-between'>
+          <div class='flex justify-between'>
+            <h5 class='mb-4 text-xl font-medium text-black '>{product.name}</h5>
+          </div>
+          <div class='flex items-baseline text-black '>
+            <span class='text-3xl font-semibold'>$</span>
+            <span class='text-4xl font-extrabold tracking-tight'>
+              {product.price.toLocaleString('es-MX', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </span>
+            <span class='font-bold'>MXN</span>
+          </div>
+          <ul role='list' class='space-y-5 my-7'>
+            {product.included.map((list) => (
+              <li class='flex items-center'>
+                <svg
+                  class='flex-shrink-0 w-4 h-4 text-blue-600 '
+                  aria-hidden='true'
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z' />
+                </svg>
+                <span class='text-base font-normal leading-tight text-gray-500  ms-3'>
+                  {list}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <AddCart item={product} translate={translate} client:only />
+        </div>
+      </div>
+    ))
+  }
+</div>

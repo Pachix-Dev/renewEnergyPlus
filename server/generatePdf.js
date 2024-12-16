@@ -39,7 +39,7 @@ function getSpanishDateString(date) {
 }
 
 // Function to generate PDF invoice
-async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
+async function generatePDFInvoice(paypal_id_transaction, body) {
 
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
@@ -49,7 +49,7 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
 
     const doc = new PDFDocument();
     const pdfStream = fs.createWriteStream(pdfSave);            
-    const logoVev = path.resolve(__dirname, 'img/Logo_ITM.jpg');     
+    const logoVev = path.resolve(__dirname, 'img/repluslogocolor.png');     
       
     doc.pipe(pdfStream);             
     doc.image(logoVev, 50, 45, { width: 100 });    
@@ -107,8 +107,22 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
         .moveTo(50, 300)
         .lineTo(550, 300)
         .stroke();
-        
-    doc    
+    
+    body.items.map((item, index) => {
+        doc
+        .fontSize(10)
+        .text(item.name, 50, 280 + (index + 1)*30)
+        .text(formatAmountMXN(item.price), 320, 280 + (index + 1)*30)
+        .text(1, 430, 280 + (index + 1)*30)
+        .text(formatAmountMXN(item.price * 1), 0, 280 + (index + 1)*30, { align: "right" });
+        doc
+        .strokeColor("#aaaaaa")
+        .lineWidth(1)
+        .moveTo(50, 280 + (index + 1)*30 + 20)
+        .lineTo(550, 280 + (index + 1)*30 + 20)
+        .stroke();
+    });
+    /*doc    
     .fontSize(10)
     .text(body.item.name, 50, 310)
     .text(formatAmountMXN('5000'), 330, 310 )
@@ -120,20 +134,16 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
     .lineWidth(1)
     .moveTo(50, 330)
     .lineTo(550, 330)
-    .stroke();
+    .stroke();*/
     
     doc.moveDown(2);    
     doc
         .fontSize(10)
-        .text('Subtotal:       $5,000', { width: 540, align: "right" });
-    doc
-        .fontSize(10)
-        .text('IVA:            $8,00 ', { width: 540, align: "right" });   
-
+        .text('Subtotal:       '+formatAmountMXN(body.total), { width: 540, align: "right" });   
     doc
         .fontSize(10)
         .font("Helvetica-Bold")
-        .text('TOTAL:          $5,800' , { width: 540, align: "right" });    
+        .text('TOTAL:          '+formatAmountMXN(body.total) , { width: 540, align: "right" });    
     
     doc.moveDown(5)
         .font("Helvetica-Bold")        
@@ -144,13 +154,13 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
         .text("- FOTO DEL RECIBO DE COMPRA", 55)
         .text("- INDICAR EL MÉTODO DE PAGO (TARJETA DE CREDITO O DEBITO)", 55)
         .text("- USO DE CFDI", 55)
-        .text("* FECHA MÁXIMA DE FACTURACIÓN 25 DE OCTUBRE DE 2024")
+        .text("* FECHA MÁXIMA DE FACTURACIÓN 25 DE MARZO DE 2025")
 
-    const qrMainUser = await generateQRDataURL(uuid);
+    const qrMainUser = await generateQRDataURL(body.uuid);
     doc.addPage();
-    // Draw a dashed cross in the middle of the document
-    const midX = doc.page.width / 2;
-    const midY = doc.page.height / 2;
+     // Draw a dashed cross in the middle of the document
+     const midX = doc.page.width / 2;
+     const midY = doc.page.height / 2;
  
      doc.save();
      doc.lineWidth(2);
@@ -166,8 +176,8 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
          .stroke();
      doc.restore();
  
- 
-     doc.image('img/bannerGafete.jpg', 0, 0, { width: 305 });
+     
+     doc.image('img/header_gafete.jpg', 0, 0, { width: 305 })       
      // aqui iria el QR con info del usuario    
      doc.image(qrMainUser, 90, 120, { width: 120 });
      
@@ -182,7 +192,7 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
      .moveDown(0.5)
      .text(body.company);
  
-     doc.image('img/footer_programa_vip.jpg', 0, 328, { width: 305 });
+     doc.image('img/footer_programa_gafete.jpg', 0, 328, { width: 305 });
      doc
      .font('Helvetica-Bold')
      .fontSize(17)
@@ -201,11 +211,11 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
      .fontSize(8)
      .text('1.', 330)
      .font('Helvetica')
-     .text('Tu gafete es tu pase a la exposición de ITM 2024. Deberás portarlo en todo momento.', 345, 75, {
+     .text('Tu gafete es tu pase a la exposición de RE+ MEXICO. Deberás portarlo en todo momento.', 345, 75, {
          width: 250,
          align: 'justify'
      })  
-     doc.text('Your badge is your access pass to ITM 2024 tradeshow. You must wear it at all times.',{
+     doc.text('Your badge is your access pass to RE+ MEXICO tradeshow. You must wear it at all times.',{
          width: 250,
          align: 'justify'
      })
@@ -234,7 +244,7 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
      })
      .fillColor('#1E92D0')
      .font('Helvetica-Bold')
-     .text(' #ITM2024 ', { continued: true })
+     .text(' #REPLUSMEXICO ', { continued: true })
      .fillColor('black')
      .font('Helvetica')
      .text(' en tus posteos en redes sociales.')
@@ -244,7 +254,7 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
      })
      .fillColor('#1E92D0')
      .font('Helvetica-Bold')
-     .text(' #ITM2024 ', { continued: true })
+     .text(' #REPLUSMEXICO ', { continued: true })
      .fillColor('black')
      .font('Helvetica')
      .text(' on your social media posts.')
@@ -257,17 +267,17 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
          align: 'center'
      })
      .moveDown(1)
-     .text('Octubre')
-     .text('October')
-     .text('(9)   11:00 am – 19:00 hrs', 330, 250, {
+     .text('Marzo')
+     .text('March')
+     .text('(5)   11:00 am – 18:00 hrs', 330, 250, {
          width: 250,    
          align: 'center'
      })
-     .text('(10)  11:00 am – 19:00 hrs', 330, 260, {
+     .text('(6)  11:00 am – 18:00 hrs', 330, 260, {
          width: 250,    
          align: 'center'
      })
-     .text('(11)  11:00 am – 17:00 hrs', 330, 270, {
+     .text('(7)  11:00 am – 17:00 hrs', 330, 270, {
          width: 250,    
          align: 'center'
      })
@@ -277,8 +287,8 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
          align: 'center'
      });
  
-     doc.image('img/footer2_programa_vip-new.jpg', 307, 328, { width: 306 });;
-     
+     doc.image('img/footer2_prensa_gafete.jpg', 307, 328, { width: 306 });
+ 
      doc.save();
      // Rotate and draw some text
      doc.rotate(180, {origin: [150, 305]})
@@ -321,8 +331,8 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
  
      // Restore the previous state to avoid rotating everything else
      doc.restore();       
-
-    doc.end();
+ 
+     doc.end();
     return pdfSave;
 }
 
