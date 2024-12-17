@@ -390,7 +390,9 @@ export function StepOne({ translates }) {
           )}
         </div>
         <div>
-          <p className='mt-5 text-black'>{translates.code_invitation}</p>
+          <p className='mt-5 text-black font-bold'>
+            {translates.placeholder_code_invitation}
+          </p>
           <div className='relative mt-2 '>
             <input
               type='text'
