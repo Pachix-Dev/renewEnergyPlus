@@ -6,6 +6,8 @@ import MarqueeSponsors from "../../components/register/MarqueeSponsors.astro";
 import LayoutCheckout from "../../layouts/LayoutCheckout.astro";
 
 changeLanguage("en");
+
+const ecommerceTranslations = t("ecommerce", { returnObjects: true });
 ---
 
 <LayoutCheckout title='ACCESO PROGRAMA VIP'>
@@ -16,11 +18,12 @@ changeLanguage("en");
     <h1
       class='text-[#ED6E0B] text-3xl md:text-5xl leading-snug font-extrabold text-center uppercase'
     >
-      Adquiere tu programa de conferencias vip <br />
+      {t('ecommerce.title')}
+      <br />
     </h1>
     <p class='text-center font-bold text-lg md:text-2xl uppercase'>
-      da el salto y disfruta de todas nuestras ventajas
+      {t('ecommerce.text_1')}
     </p>
-    <Upgrade client:only='react' />
+    <Upgrade translates={ecommerceTranslations} client:only='react' />
   </main>
 </LayoutCheckout>

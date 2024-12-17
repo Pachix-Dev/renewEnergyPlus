@@ -427,6 +427,12 @@
         "description": "Enlighten the space of knowledge, innovation, success stories, trends, technologies and solutions in the solar sector through a training talk. If you are looking for new business opportunities and to increase your potential contacts in Latin America, this is the ideal space for you."
     },
     "ecommerce": {
+        "title": "Adquiere tu programa de conferencias vip",
+        "text_1": "da el salto y disfruta de todas nuestras ventajas",
+        "text_2": "Ingresa el correo con el que te registraste",
+        "text_3": "Verificar",
+        "text_4": "Registrate gratis",
+        "text_5": "Si aun no te haz registrado ingresa aqui",
         "description": "Adquiere tu acceso al programa de conferencias y a la Energy Night",
         "addtocart": "Agregar al carrito",
         "resume": "Resumen del pedido",
@@ -454,6 +460,6 @@
         "select_hour": "¿En qué día y en que horario requieres tu mesa?",
         "select_default": "Selecciona un horario",
         "text_select": "Seleccióne el día y horario elegido para asistir al evento, esta reserva incluye el espacio de una mesa para hasta 10 personas",         
-        "comments": "Comentarios adicionales"      
+        "comments": "Comentarios adicionales"   
     }
 }

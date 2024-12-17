@@ -427,6 +427,12 @@
         "description": "offers you multiple spaces for promotion and presence before and during the exhibition to attract professional buyers and obtain a greater return on investment for your participation."
     },
     "ecommerce": {
+        "title": "Purchase your vip conference program",
+        "text_1": "take the leap and enjoy all our advantages",
+        "text_2": "Enter the email address you registered with",
+        "text_3": "Verify",
+        "text_4": "Register for free",
+        "text_5": "If you have not registered yet, enter here",
         "description": "Purchase your access to the conference program and Energy Night",
         "addtocart": "Add to cart",
         "resume": "Order summary",

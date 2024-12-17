@@ -5,6 +5,8 @@ import { initMercadoPago, CardPayment } from '@mercadopago/sdk-react'
 initMercadoPago('TEST-095f1368-d3e7-4f78-988b-f86fe5867695')
 
 export function CheckoutForm({ currentLanguage, translate }) {
+  const lang = currentLanguage === 'es' ? '' : '/en'
+  console.log(lang)
   const {
     items,
     idUser,
@@ -29,8 +31,8 @@ export function CheckoutForm({ currentLanguage, translate }) {
       <div className='flex-1 flex flex-col justify-center items-center h-screen'>
         <p className='text-2xl font-bold'>{translate.empty_cart}</p>
         <a
-          href='/programa-premium-productos'
-          className='bg-[#002C5B] hover:bg-[#941E81] text-white rounded-lg p-4 mt-5'
+          href={`${lang}/programa-premium-productos`}
+          className='bg-[#002C5B] hover:bg-[#ED6E0B] text-white rounded-lg p-4 mt-5'
         >
           {translate.back_to_shop}
         </a>

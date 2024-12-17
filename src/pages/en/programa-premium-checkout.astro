@@ -9,7 +9,7 @@ import { RedirectREPLUS } from "../../components/ecommerce/RedirectREPLUS";
 changeLanguage("en");
 
 const currentLanguage = i18next.language;
-const translate = t("ecommerce");
+const ecommerceTranslations = t("ecommerce", { returnObjects: true });
 ---
 
 <LayoutCheckout title='Re+ Mexico | Programa Premium Checkout'>
@@ -30,7 +30,7 @@ const translate = t("ecommerce");
     </div>
     <CheckoutForm
       currentLanguage={currentLanguage}
-      translate={translate}
+      translate={ecommerceTranslations}
       client:only
     />
   </main>
@@ -38,9 +38,9 @@ const translate = t("ecommerce");
     class='sm:fixed right-0 top-0 z-50 p-5 w-full sm:w-2/5 order-1 sm:order-2 bg-[#f7f7f8] h-auto sm:h-full border shadow-lg'
   >
     <p class='text-center text-2xl font-bold hidden md:block text-black'>
-      Resumen del pedido
+      {t('ecommerce.resume')}
     </p>
-    <Resume client:only translate={translate} />
+    <Resume client:only currentLanguage={currentLanguage} />
     <Total client:only />
   </aside>
 </LayoutCheckout>

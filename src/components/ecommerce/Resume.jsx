@@ -1,6 +1,6 @@
 import { useRegisterForm } from '../../store/register-form'
 
-export function Resume({ translate }) {
+export function Resume({ currentLanguage }) {
   const { items } = useRegisterForm()
 
   function formatAmountMXN(amount) {
@@ -21,7 +21,9 @@ export function Resume({ translate }) {
           className='grid md:flex justify-between items-end gap-5 rounded-xl shadow-md p-4 bg-white relative'
         >
           <div>
-            <h3 className='text-md'>{item.name}</h3>
+            <h3 className='text-md'>
+              {currentLanguage === 'es' ? item.name : item.name_en}
+            </h3>
           </div>
           <p className='text-3xl'>{formatAmountMXN(item.price)}</p>
         </div>

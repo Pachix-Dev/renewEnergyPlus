@@ -1,7 +1,7 @@
 import { useRegisterForm } from '../../store/register-form'
 
-export function Items({ translate }) {
-  const { items, updateQuantity, removeToCart } = useRegisterForm()
+export function Items({ currentLanguage }) {
+  const { items, removeToCart } = useRegisterForm()
 
   function formatAmountMXN(amount) {
     const formattedAmount = new Intl.NumberFormat('es-MX', {
@@ -37,7 +37,9 @@ export function Items({ translate }) {
               />
             </svg>
           </div>
-          <p className='text-md'>{item.name}</p>
+          <p className='text-md'>
+            {currentLanguage === 'es' ? item.name : item.name_en}
+          </p>
           <p className='text-3xl'>{formatAmountMXN(item.price)}</p>
         </div>
       ))}

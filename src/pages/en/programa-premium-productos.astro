@@ -1,5 +1,5 @@
 ---
-import { changeLanguage, t } from "i18next";
+import i18next, { changeLanguage, t } from "i18next";
 import { Items } from "../../components/ecommerce/Items";
 import Products from "../../components/ecommerce/Products.astro";
 import { Total } from "../../components/ecommerce/Total.jsx";
@@ -8,7 +8,9 @@ import { RedirectREPLUS } from "../../components/ecommerce/RedirectREPLUS";
 
 changeLanguage("en");
 
-const translate = t("ecommerce", { returnObjects: true });
+const currentLanguage = i18next.language;
+const lang = i18next.language;
+const base = lang === "es" ? "" : `/${lang}`;
 ---
 
 <LayoutCheckout title='RE+ Mexico | productos'>
@@ -37,11 +39,11 @@ const translate = t("ecommerce", { returnObjects: true });
         {t('ecommerce.resume')}
       </p>
 
-      <Items client:only translate={translate} />
+      <Items client:only currentLanguage={currentLanguage} />
       <Total client:only />
 
       <a
-        href='/programa-premium-checkout'
+        href={`${base}/programa-premium-checkout`}
         class='bg-black p-4 text-white text-4xl flex rounded-xl justify-center items-center w-full mt-5 hover:bg-gray-800'
       >
         {t('ecommerce.continue')}

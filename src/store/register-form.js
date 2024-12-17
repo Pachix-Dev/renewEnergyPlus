@@ -154,6 +154,7 @@ const useRegisterForm = create(
                 wannaBeExhibitor: "",
                 alreadyVisited: [],
                 items:[],
+                total: 0,
                 code_cortesia: ""        
             })
         }), 

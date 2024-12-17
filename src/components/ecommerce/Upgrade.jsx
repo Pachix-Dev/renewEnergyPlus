@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useRegisterForm } from '../../store/register-form.js'
 
-export function Upgrade() {
+export function Upgrade({ translates }) {
+  console.log(translates)
   const {
     email,
     setEmail,
@@ -24,9 +25,9 @@ export function Upgrade() {
     : 'https://re-plus-mexico.com.mx/server/'
 
   const verifyUser = async () => {
+    clear()
     const response = await fetch(urlbase + 'get-user-by-email?email=' + email)
     const data = await response.json()
-    console.log(data)
     if (data.status) {
       setUser(true)
       setEmail(data.email)
@@ -58,7 +59,7 @@ export function Upgrade() {
           htmlFor='email'
           className='md:text-left w-fit md:absolute bg-black md:-top-6 md:left-2 md:px-3 py-2 text-white rounded-lg'
         >
-          Ingresa el correo con el que te registraste
+          {translates.text_2}
         </label>
         <input
           className={`bg-transparent w-full ring-1 rounded-lg ${
@@ -76,7 +77,7 @@ export function Upgrade() {
           onClick={verifyUser}
           disabled={user}
         >
-          Verificar
+          {translates.text_3}
         </button>
         {message && (
           <p className='text-red-600 font-bold text-center pt-5 text-xl'>
@@ -86,12 +87,13 @@ export function Upgrade() {
       </div>
 
       <p className='mt-5 text-center'>
-        Si aun no te haz registrado ingresa aqui{' -> '}
+        {translates.text_5}
+        {' -> '}
         <a
           href='/registro'
           className='px-3 py-2 bg-[#ED6E0B] hover:bg-red-700 font-bold rounded-2xl text-white  mt-5  gap-2'
         >
-          Registrate gratis
+          {translates.text_4}
         </a>
       </p>
     </>
