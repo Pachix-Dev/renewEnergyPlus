@@ -122,20 +122,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
         .lineTo(550, 280 + (index + 1)*30 + 20)
         .stroke();
     });
-    /*doc    
-    .fontSize(10)
-    .text(body.item.name, 50, 310)
-    .text(formatAmountMXN('5000'), 330, 310 )
-    .text('1', 450, 310)
-    .text(formatAmountMXN('5000'), 0, 310, { align: "right" });
-    
-    doc
-    .strokeColor("#aaaaaa")
-    .lineWidth(1)
-    .moveTo(50, 330)
-    .lineTo(550, 330)
-    .stroke();*/
-    
+          
     doc.moveDown(2);    
     doc
         .fontSize(10)
