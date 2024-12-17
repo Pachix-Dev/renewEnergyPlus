@@ -79,7 +79,7 @@ export class RegisterModel {
     finally {
       await connection.end()
     }
-}
+  }
   
   static async create_user ({
       uuid,             
@@ -336,8 +336,6 @@ export class RegisterModel {
       await connection.end() // Close the connection
     }
   }
-
-
   
   static async get_info_user (uuid) {
     const connection = await mysql.createConnection(config)

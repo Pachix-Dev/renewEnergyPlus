@@ -98,9 +98,7 @@ app.post('/create-order-replus', async (req, res) => {
             payer: { email: body?.paymentData.payer.email },
             installments: 1,
         };
-
         
-
         const resp = await payment.create({ body: paymentData });
         
         if (resp.status === "approved") {                        
@@ -130,7 +128,6 @@ app.post('/create-order-replus', async (req, res) => {
         });
     }
 });
-
 
 app.post('/complete-order-replus', async (req, res) => {
     const { body } = req;
@@ -222,8 +219,8 @@ app.post('/free-register', async (req, res) => {
         const mailResponse = await sendEmail(data, pdfAtch, data.uuid);   
 
         return res.send({
-            invoice: data.uuid,
-            ...mailResponse,            
+            invoice:  `${data.uuid}.pdf`,
+            ...mailResponse,
         });                
                
     } catch (err) {
