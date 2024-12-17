@@ -5,7 +5,7 @@ export function DonwloadAccess({ text }) {
   return (
     <>
       <a
-        href={`/invoices/${invoiceDownToLoad}.pdf`}
+        href={`/invoices/${invoiceDownToLoad}`}
         target='_blank'
         className='mt-5 button'
       >

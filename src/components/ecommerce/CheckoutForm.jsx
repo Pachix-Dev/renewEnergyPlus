@@ -6,7 +6,7 @@ initMercadoPago('TEST-095f1368-d3e7-4f78-988b-f86fe5867695')
 
 export function CheckoutForm({ currentLanguage, translate }) {
   const lang = currentLanguage === 'es' ? '' : '/en'
-  console.log(lang)
+
   const {
     items,
     idUser,
@@ -73,7 +73,7 @@ export function CheckoutForm({ currentLanguage, translate }) {
 
     const order = await response.json()
     if (order?.status) {
-      clear()
+      //clear()
       setCompleteRegister(true)
       setInvoiceDownToLoad(order?.invoice)
       currentLanguage === 'es'
