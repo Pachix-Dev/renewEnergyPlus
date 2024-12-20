@@ -21,7 +21,7 @@
             "option_10": "Tarifas",
             "option_11": "Toolkit",
             "option_12": "Manual del expositor",
-            "option_13": "CONTENIDO GRATUITO",
+            "option_13": "CONTENIDO EDUCATIVO GRATUITO",
             "option_14": "QUIERO SER PATROCINADOR"
         },
         "submenu_3": {
@@ -225,9 +225,9 @@
         "subtitle_s": "Déjate inspirar por nuestros increíbles ponentes.",
         "day": "Día",
         "month": "de marzo",
-        "day_1": "miércoles 05 de marzo",
-        "day_2": "jueves 06 de marzo",
-        "day_3": "viernes 07 de marzo",
+        "day_1": "miércoles 5 de marzo",
+        "day_2": "jueves 6 de marzo",
+        "day_3": "viernes 7 de marzo",
         "stages": "Escenarios",
         "about": "Acerca de",
         "speech": "Ponencia",
@@ -424,7 +424,10 @@
         "description_2": "Por favor pasa al modulo de caja con este numero para pagar y recoger tu gafete."
     },
     "enlightenmentArea":{
-        "description": "Enlighten the space of knowledge, innovation, success stories, trends, technologies and solutions in the solar sector through a training talk. If you are looking for new business opportunities and to increase your potential contacts in Latin America, this is the ideal space for you."
+        "description": "RE+ MEXICO le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación. Ilumine el espacio del conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector solar mediante unaplática de capacitación. Si está buscando nuevas oportunidades de negocios e incrementar sus contactos potenciales en América Latina, este es el espacio ideal para usted."
+    },
+    "installer_innovationArea":{
+        "description": "El Área de Instaladores e Innovación en el piso de exhibición de RE+ México proporcionará una actualización sobre eventos actuales, tendencias, innovaciones, investigación y análisis en las industrias solar, de almacenamiento y de energía limpia. Reciba capacitación técnica integral y de calidad por parte de instructores certificados, incluyendo estrategias y consejos para sistemas de almacenamiento de energía."
     },
     "ecommerce": {
         "title": "Adquiere tu programa de conferencias vip",
