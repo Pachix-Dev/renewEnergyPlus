@@ -238,7 +238,9 @@
             "title": "Get your conference program",
             "preventa": "Price : $7,500 MXN",
             "includes": "INCLUDES </br> Conference program + Energy Night"
-        }
+        },
+        "text_1": "Live the VIP experience with our Premium Conference Program!",
+        "text_2": "Are you ready to take your knowledge and connections to the next level? Our Premium Conference Program gives you exclusive access to the most innovative talks and influential industry experts."
     },
     "counterDown": {
         "description": "<strong>An exclusive networking event for executives and industry leaders where you will be able to</strong> create strategic networks AND meet new business.",

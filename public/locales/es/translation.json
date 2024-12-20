@@ -238,7 +238,9 @@
             "title": "Adquiere tu programa de conferencias",
             "preventa": "Precio : $7,500 MXN",
             "includes": "INCLUYE <br /> Programa de Conferencias + Energy Night"
-        }
+        },
+        "text_1": "¡Vive la experiencia VIP con nuestro Programa de Conferencias Premium!",
+        "text_2": "¿Estás listo para llevar tus conocimientos y conexiones al siguiente nivel? Nuestro Programa de Conferencias Premium te ofrece acceso exclusivo a las charlas más innovadoras y a los expertos más influyentes de la industria."
     },
     "counterDown": {
         "description": "<strong>Un evento exclusivo de networking para empresarios y líderes de la industria donde podrás</strong> crear redes estratégicas Y conocer nuevos negocios.",

@@ -8,7 +8,7 @@ export function Program({ conferences, translate, language }) {
           onClick={() => setDay(conferences.day_1)}
           className='bg-[#A9001B] rounded-md hover:bg-[#C64E08] hover:scale-105 ease-in-out duration-300 p-5'
         >
-          <span class='text-white z-10 font-extrabold text-xl'>
+          <span className='text-white z-10 font-extrabold text-xl'>
             {translate.day_1}
           </span>
         </button>
@@ -16,7 +16,7 @@ export function Program({ conferences, translate, language }) {
           onClick={() => setDay(conferences.day_2)}
           className='bg-[#A9001B] rounded-md hover:bg-[#C64E08] hover:scale-105 ease-in-out duration-300 p-5'
         >
-          <span class='text-white z-10 font-extrabold text-xl'>
+          <span className='text-white z-10 font-extrabold text-xl'>
             {translate.day_2}
           </span>
         </button>
@@ -24,14 +24,17 @@ export function Program({ conferences, translate, language }) {
           onClick={() => setDay(conferences.day_3)}
           className='bg-[#A9001B] rounded-md hover:bg-[#C64E08] hover:scale-105 ease-in-out duration-300 p-5'
         >
-          <span class='text-white z-10 font-extrabold text-xl'>
+          <span className='text-white z-10 font-extrabold text-xl'>
             {translate.day_3}
           </span>
         </button>
       </div>
-      {day.map((conference) => {
+      {day.map((conference, index) => {
         return (
-          <div className='flex gap-20 text-white my-10 bg-black/50 shadow-md p-6 rounded-md'>
+          <div
+            key={index}
+            className='flex gap-20 text-white my-10 bg-black/50 shadow-md p-6 rounded-md'
+          >
             <div className='flex gap-2 items-center'>
               {' '}
               <svg
@@ -55,9 +58,7 @@ export function Program({ conferences, translate, language }) {
                 {language === 'es' ? conference.title : conference.title_en}{' '}
               </p>
               <span className='bg-green-700 p-1 rounded-md italic'>
-                {language === 'es'
-                  ? conference.tag
-                  : conference?.tag_en | conference.tag}
+                {language === 'es' ? conference.tag : conference?.tag_en}
               </span>
             </div>
           </div>
