@@ -1,5 +1,5 @@
 
-const email_template = async ({ name, paternSurname, maternSurname}) => {          
+const email_template = async ({ name, paternSurname, maternSurname=''}) => {          
     
     return (
    `<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="max-width: 680px;">
