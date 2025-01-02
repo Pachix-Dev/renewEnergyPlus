@@ -139,7 +139,7 @@ app.post('/webhook-mp', async (req, res) => {
     const body = req.body;
     console.log('webhook-mp', body);
     try{
-        const response = await fetch('https://api.mercadopago.com/v1/payments/'+body.dataId, {
+        const response = await fetch('https://api.mercadopago.com/v1/payments/'+body.data.id, {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer '+process.env.MP_ACCESS_TOKEN
