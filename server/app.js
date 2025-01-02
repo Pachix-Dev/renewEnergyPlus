@@ -99,8 +99,7 @@ app.post('/create-order-replus', async (req, res) => {
                     first_name: body?.name,
                     last_name: body?.paternSurname,
                     email: body?.paymentData.payer.email },
-            statement_descriptor: "REPLUSMEXICO2025",
-            notification_url: "https://re-plus-mexico.com.mx/server/webhook-mp",
+            statement_descriptor: "REPLUSMEXICO2025",            
             external_reference: body.uuid,
             installments: 1,
         };
