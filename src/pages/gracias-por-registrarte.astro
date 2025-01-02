@@ -10,6 +10,7 @@ import { sponsors } from "../data/constanst_logos";
 changeLanguage("es");
 
 const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
 <Layout title='RE+ Mexico | Gracias por registrarte'>
@@ -43,6 +44,18 @@ const currentLanguage = i18next.language;
         </div>
       </div>
     </div>
+    <div
+      class='container mx-auto pt-20 px-4 grid place-items-center gap-5 rounded-xl'
+    >
+      <a
+        href={`${base}/acceso-programa-vip`}
+        class='card p-5 hover:scale-105 ease-in-out duration-300'
+      >
+        <span class='text-white z-10 font-extrabold text-xl'
+          >{t('program.button1')}</span
+        >
+      </a>
+    </div>
   </div>
 </Layout>
 <style>
@@ -61,5 +74,51 @@ const currentLanguage = i18next.language;
     );
     -webkit-background-clip: text;
     color: transparent;
+  }
+  .card {
+    width: fit-content;
+    background: #f6f6f6;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    background-image: linear-gradient(
+      90deg,
+      rgba(188, 1, 0, 1) 0%,
+      rgba(215, 105, 1, 1) 100%
+    );
+    height: 30px;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(
+      90deg,
+      rgba(188, 1, 0, 1) 0%,
+      rgba(215, 105, 1, 1) 100%
+    );
+    inset: 5px;
+    border-radius: 15px;
   }
 </style>

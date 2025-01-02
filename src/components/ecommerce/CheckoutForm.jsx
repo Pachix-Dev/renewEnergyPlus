@@ -2,7 +2,11 @@ import { useRegisterForm } from '../../store/register-form'
 import { useState } from 'react'
 
 import { initMercadoPago, CardPayment } from '@mercadopago/sdk-react'
-initMercadoPago('TEST-095f1368-d3e7-4f78-988b-f86fe5867695')
+initMercadoPago(
+  import.meta.env.DEV
+    ? 'TEST-095f1368-d3e7-4f78-988b-f86fe5867695'
+    : 'APP_USR-7dd15365-5549-4628-bec2-24702340fc1f'
+)
 
 export function CheckoutForm({ currentLanguage, translate }) {
   const lang = currentLanguage === 'es' ? '' : '/en'
