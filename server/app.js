@@ -100,6 +100,7 @@ app.post('/create-order-replus', async (req, res) => {
                     last_name: body?.paternSurname,
                     email: body?.paymentData.payer.email },
             statement_descriptor: "REPLUSMEXICO2025",
+            notification_url: "https://re-plus-mexico.com.mx/server/webhook-mp",
             installments: 1,
         };
         
@@ -133,59 +134,27 @@ app.post('/create-order-replus', async (req, res) => {
     }
 });
 
-app.post('/complete-order-replus', async (req, res) => {
-    const { body } = req;
-    const userResponse = await RegisterModel.get_user_by_email(body.email);
-    if (!userResponse.status) {
-        return res.status(404).send({
-            message: userResponse.error
-        });
-    }
-    try {
-        const data = { 
-            total: body.total,
-            item: body.item,
-            ...userResponse.user
-        };
-        
-        const access_token = await get_access_token();
-        const response = await fetch(endpoint_url + '/v2/checkout/orders/' + body.orderID + '/capture', {
-            method: 'POST',
+app.post('/webhook-mp', async (req, res) => {
+    const paymentId = req.query.id;
+    try{
+        const response = await fetch('https://api.mercadopago.com/v1/payments/'+paymentId, {
+            method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${access_token}`
+                'Authorization': 'Bearer '+process.env.MP_ACCESS_TOKEN
             }
         });
-        const json = await response.json();
-        if (json.id) {
-            if(json.purchase_units[0].payments.captures[0].status === 'COMPLETED' || json.purchase_units[0].payments.captures[0].status === 'PENDING' ){
-                
-                const paypal_id_order = json.id;
-                const paypal_id_transaction = json.purchase_units[0].payments.captures[0].id;                     
-                await RegisterModel.save_order(data.id, paypal_id_order, paypal_id_transaction, body.total);
 
-                const pdfAtch = await generatePDFInvoice(paypal_id_transaction, data, data.uuid);
-
-                const mailResponse = await sendEmail(data, pdfAtch, paypal_id_transaction);   
-        
-                return res.send({
-                    ...mailResponse,
-                    invoice: `${paypal_id_transaction}.pdf`
-                });                
-            }
-        } else {        
-            return res.status(500).send({
-                status: false,
-                message: 'Tu compra no pudo ser procesada, hay un problema con tu metodo de pago por favor intenta mas tarde...'
-            });
-        }       
-    } catch (err) {
-        return res.status(500).send({
-            status: false,
-            message: 'hubo un error al procesar tu compra, por favor intenta mas tarde...'
-        });
+        if(response.ok){
+            const payment = await response.json();
+            console.log('webhook-mp', payment);
+            return res.status(200).send({status: true});
+        }
+    }catch(err){
+        console.log(err);
+        return res.status(500).send({status: false});
     }
 });
+
 
 app.post('/susbribe-email', async (req, res) => {
     const { body } = req;
@@ -496,23 +465,6 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
     }    
 }
 
-
-function get_access_token() {
-    const auth = `${client_id}:${client_secret}`
-    const data = 'grant_type=client_credentials'
-    return fetch(endpoint_url + '/v1/oauth2/token', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': `Basic ${Buffer.from(auth).toString('base64')}`
-            },
-            body: data
-        })
-        .then(res => res.json())
-        .then(json => {
-            return json.access_token;
-        })
-}
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
