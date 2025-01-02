@@ -136,15 +136,17 @@ app.post('/create-order-replus', async (req, res) => {
 });
 
 app.post('/webhook-mp', async (req, res) => {
-    const paymentId = req.query.id;
+    const body = req.body;
+    console.log('webhook-mp', body);
     try{
-        const response = await fetch('https://api.mercadopago.com/v1/payments/'+paymentId, {
+        const response = await fetch('https://api.mercadopago.com/v1/payments/'+body.dataId, {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer '+process.env.MP_ACCESS_TOKEN
             }
         });
 
+        console.log(response);
         if(response.ok){
             const payment = await response.json();
             console.log('webhook-mp', payment);
@@ -426,7 +428,7 @@ app.get('/template-email', async (req, res) => {
             {name: 'item 2', quantity: 2},
         ]
     }
-    const emailContent = await email_template_ecomondo({ ...data });
+    const emailContent = await email_template({ ...data });
     res.send(emailContent);
 });
 
