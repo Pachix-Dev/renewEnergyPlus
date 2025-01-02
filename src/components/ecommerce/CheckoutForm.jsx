@@ -53,6 +53,7 @@ export function CheckoutForm({ currentLanguage, translate }) {
   }
 
   const handlePaymentSubmit = async (paymentData) => {
+    console.log(paymentData)
     setProcessing(true)
     const response = await fetch(urlbase + 'create-order-replus', {
       method: 'POST',

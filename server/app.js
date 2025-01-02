@@ -89,13 +89,17 @@ app.post('/create-order-replus', async (req, res) => {
                 message: userResponse.message
             });
         }
-
+        
         const paymentData = {
             token: body?.paymentData.token,
             transaction_amount: total,
             description: 'Replus Ecommerce 2025 - '+ id_items.toString(),
             payment_method_id: body?.paymentData.payment_method_id,
-            payer: { email: body?.paymentData.payer.email },
+            payer: { 
+                    first_name: body?.name,
+                    last_name: body?.paternSurname,
+                    email: body?.paymentData.payer.email },
+            statement_descriptor: "REPLUSMEXICO2025",
             installments: 1,
         };
         
