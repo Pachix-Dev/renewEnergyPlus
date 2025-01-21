@@ -11,6 +11,22 @@ export const conferences = {
             hour: '12:45 – 13:15',
             name: 'METERING',
             status: 'VENDIDO',
+            title: 'Equipos y métodos de prueba para Sistemas Fotovoltaicos',
+            title_en: 'Equipment and test methods for Photovoltaic Systems',
+            resume: 'Diagnóstico y evaluación de eficiencia de Sistemas Fotovoltaicos por medio de Equipos Trazadores de Curvas IV, de acuerdo con las normativas y requerimientos para la instalación y mantenimiento preventivo de paneles solares.',
+            resume_en: 'Diagnosis and evaluation of efficiency of Photovoltaic Systems through IV Curve Tracer Equipment, according to the regulations and requirements for the installation and preventive maintenance of solar panels.',    
+            speakers: [
+                {       
+                    id: 1,                
+                    name: 'Joel Robinson',
+                    bio: 'Profesional con amplia experiencia en el campo de generación de energía con sistemas fotovoltáicos. Contribuye actualmente y de manera clave al lanzamiento de varias iniciativas y soluciones técnicas en equipos de medición y evaluación de eficiencia en Paneles Fotovoltáicos. Actualmente trabaja en el desarrollo comercial de la línea de productos renovables de SEAWARD para el mercado norteamericano. ',
+                    bio_en: 'Professional with extensive experience in the field of power generation with photovoltaic systems. He is currently a key contributor to the launching of several initiatives and technical solutions in measurement equipment and evaluation of efficiency in Photovoltaic Panels. He is currently working on the commercial development of SEAWARD´s renewable product line for the North American market. ',
+                    position: 'Business Development Manager, SEAWARD Solar Products Norteamérica',
+                    email: 'jademiguel@metering.com.mx',
+                    phone: '55 45 69 41 39',
+                },                
+            ],            
+              
         },
         {
             id: 3,

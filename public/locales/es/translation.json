@@ -427,7 +427,10 @@
         "description_2": "Por favor pasa al modulo de caja con este numero para pagar y recoger tu gafete."
     },
     "enlightenmentArea":{
-        "description": "RE+ MEXICO le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación. Ilumine el espacio del conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector solar mediante unaplática de capacitación. Si está buscando nuevas oportunidades de negocios e incrementar sus contactos potenciales en América Latina, este es el espacio ideal para usted."
+        "description": "RE+ MEXICO le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación. Ilumine el espacio del conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector solar mediante unaplática de capacitación. Si está buscando nuevas oportunidades de negocios e incrementar sus contactos potenciales en América Latina, este es el espacio ideal para usted.",
+        "hour": "Horarios",
+        "title": "Tema",
+        "speaker": "Ponente"
     },
     "installer_innovationArea":{
         "description": "El Área de Instaladores e Innovación en el piso de exhibición de RE+ México proporcionará una actualización sobre eventos actuales, tendencias, innovaciones, investigación y análisis en las industrias solar, de almacenamiento y de energía limpia. Reciba capacitación técnica integral y de calidad por parte de instructores certificados, incluyendo estrategias y consejos para sistemas de almacenamiento de energía."

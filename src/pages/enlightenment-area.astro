@@ -1,9 +1,9 @@
 ---
-import { conferences } from '../../data/constans_enlightenment'
-import { t, changeLanguage } from 'i18next'
-import Layout from '../../layouts/Layout.astro'
+import { conferences } from "../data/constans_enlightenment";
+import { t, changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
 
-changeLanguage('es')
+changeLanguage("es");
 ---
 
 <Layout title={`RE+ MEXICO | Enligtenment Area`}>
@@ -69,9 +69,9 @@ changeLanguage('es')
           <table class='text-white text-xl text-left w-full'>
             <thead class='bg-gray-700'>
               <tr>
-                <th class='px-6 py-3'>{t('enlightenmentArea.hour')}</th>
-                <th class='px-6 py-3'>{t('enlightenmentArea.title')}</th>
-                <th class='px-6 py-3'>{t('enlightenmentArea.speaker')}</th>
+                <th class='px-6 py-3'>Horarios</th>
+                <th class='px-6 py-3'></th>
+                <th class='px-6 py-3'>Inversión *</th>
               </tr>
             </thead>
             <tbody>
@@ -79,15 +79,7 @@ changeLanguage('es')
                 conferences.day_1.map((conference) => (
                   <tr class='border-b'>
                     <td class='px-6 py-4'>{conference.hour}</td>
-                    <td class='px-6 py-4'>
-                      <p class='mb-2 font-bold'>
-                        {conference.title}{' '}
-                        <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
-                          {conference.name}
-                        </span>
-                      </p>
-                      <p>{conference.resume}</p>
-                    </td>
+                    <td class='px-6 py-4'>{conference.name}</td>
                     <td class='px-6 py-4'>{conference.status}</td>
                   </tr>
                 ))
