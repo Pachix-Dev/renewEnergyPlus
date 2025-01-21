@@ -25,7 +25,6 @@ export function Upgrade({ translates }) {
     : 'https://re-plus-mexico.com.mx/server/'
 
   const verifyUser = async () => {
-    clear()
     const response = await fetch(urlbase + 'get-user-by-email?email=' + email)
     const data = await response.json()
     if (data.status) {
@@ -39,10 +38,9 @@ export function Upgrade({ translates }) {
       setUuid(data.uuid)
       setCompany(data.company)
       setPosition(data.position)
-      window.location.href = '/programa-premium-productos'
+      window.location.href = '/programa-premium-checkout'
     } else {
       setUser(false)
-      clear()
       setMessage(data.error)
     }
   }

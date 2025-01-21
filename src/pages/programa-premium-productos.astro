@@ -4,7 +4,7 @@ import { Items } from "../components/ecommerce/Items";
 import Products from "../components/ecommerce/Products.astro";
 import { Total } from "../components/ecommerce/Total.jsx";
 import LayoutCheckout from "../layouts/LayoutCheckout.astro";
-import { RedirectREPLUS } from "../components/ecommerce/RedirectREPLUS";
+import { Continue } from "../components/ecommerce/Continue.jsx";
 
 changeLanguage("es");
 
@@ -14,7 +14,6 @@ const base = lang === "es" ? "" : `/${lang}`;
 ---
 
 <LayoutCheckout title='RE+ Mexico | productos'>
-  <RedirectREPLUS client:only />
   <main class='md:flex grid'>
     <section class='p-5 sm:p-10 w-full sm:w-3/5 sm:order-1'>
       <div
@@ -41,13 +40,7 @@ const base = lang === "es" ? "" : `/${lang}`;
 
       <Items client:only currentLanguage={currentLanguage} />
       <Total client:only />
-
-      <a
-        href={`${base}/programa-premium-checkout`}
-        class='bg-black p-4 text-white text-4xl flex rounded-xl justify-center items-center w-full mt-5 hover:bg-gray-800'
-      >
-        {t('ecommerce.continue')}
-      </a>
+      <Continue client:only translate={t('ecommerce.continue')} base={base} />
     </aside>
   </main>
 </LayoutCheckout>
