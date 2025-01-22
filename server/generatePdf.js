@@ -225,7 +225,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
      
      doc
      .font('Helvetica-Bold')
-     .text('HORARIOS / SCHEDULE',{
+     .text('HORARIOS / SCHEDULE', 330, 240,{
          width: 250,    
          align: 'center'
      })
@@ -394,7 +394,7 @@ async function generatePDF_freePass( body, uuid) {
     
     doc
     .font('Helvetica-Bold')
-    .text('HORARIOS / SCHEDULE',{
+    .text('HORARIOS / SCHEDULE', 330, 240,{
         width: 250,    
         align: 'center'
     })
