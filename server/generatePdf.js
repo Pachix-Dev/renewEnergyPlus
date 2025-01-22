@@ -434,7 +434,7 @@ async function generatePDF_freePass( body, uuid) {
     .text('Viernes/Friday  11:00 am – 5:00 pm', 330, 270, {
         width: 250,    
         align: 'center'
-    })
+    });
     
 
     body.typeRegister === 'VISITANTE' ? doc.image('img/footer2_gafete.jpg', 307, 328, { width: 306 }) : doc.image('img/footer2_prensa_gafete.jpg', 307, 328, { width: 306 });
