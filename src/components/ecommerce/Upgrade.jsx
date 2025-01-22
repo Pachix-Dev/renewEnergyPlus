@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useRegisterForm } from '../../store/register-form.js'
 
 export function Upgrade({ translates }) {
-  console.log(translates)
   const {
     email,
     setEmail,
@@ -14,7 +13,7 @@ export function Upgrade({ translates }) {
     setPosition,
     setIdUser,
     setUuid,
-    clear,
+    clear_info_verify,
   } = useRegisterForm()
 
   const [message, setMessage] = useState('')
@@ -38,10 +37,13 @@ export function Upgrade({ translates }) {
       setUuid(data.uuid)
       setCompany(data.company)
       setPosition(data.position)
-      window.location.href = '/programa-premium-checkout'
     } else {
+      clear_info_verify()
       setUser(false)
       setMessage(data.error)
+      setTimeout(() => {
+        setMessage('')
+      }, 3000)
     }
   }
 
@@ -52,7 +54,7 @@ export function Upgrade({ translates }) {
 
   return (
     <>
-      <div className='flex flex-col gap-1 md:block md:relative lg:mx-auto lg:w-2/3 xl:w-1/2 mt-5 md:mt-20'>
+      <div className='flex flex-col gap-1 md:block md:relative lg:w-2/3 xl:w-1/2 mt-10'>
         <label
           htmlFor='email'
           className='md:text-left w-fit md:absolute bg-black md:-top-6 md:left-2 md:px-3 py-2 text-white rounded-lg'
@@ -84,7 +86,7 @@ export function Upgrade({ translates }) {
         )}
       </div>
 
-      <p className='mt-5 text-center'>
+      <p className='mt-5'>
         {translates.text_5}
         {' -> '}
         <a

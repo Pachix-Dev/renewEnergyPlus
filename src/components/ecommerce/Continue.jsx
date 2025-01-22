@@ -6,7 +6,7 @@ export function Continue({ translate, base }) {
   return (
     <>
       <a
-        href={`${base}/acceso-programa-vip`}
+        href={`${base}/programa-premium-checkout`}
         className={`bg-black p-4 text-white text-4xl flex rounded-xl justify-center items-center w-full mt-5 ${
           isDisabled
             ? 'cursor-not-allowed opacity-50 pointer-events-none'

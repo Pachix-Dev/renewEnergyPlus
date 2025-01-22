@@ -156,7 +156,20 @@ const useRegisterForm = create(
                 items:[],
                 total: 0,
                 code_cortesia: ""        
+            }),
+
+            clear_info_verify: () => set({
+                idUser: 0,
+                uuid: "",
+                name: "",
+                paternSurname: "",
+                maternSurname: "",
+                email: "",
+                phone: "",
+                company: "",                
+                position: "",                                             
             })
+
         }), 
         { name: "register-form" }
     )
