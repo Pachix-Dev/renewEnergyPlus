@@ -6,7 +6,7 @@ export function RedirectREPLUS() {
 
   useEffect(() => {
     if (name === '' || email === '' || idUser === '') {
-      window.location.href = '/acceso-programa-vip'
+      window.location.href = '/programa-premium-productos'
     }
   }, [name, email, idUser])
 
