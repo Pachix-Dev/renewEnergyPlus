@@ -389,8 +389,32 @@ async function generatePDF_freePass( body, uuid) {
         width: 250,
         align: 'justify'
     })
-    .moveDown(1)    
-    .moveDown(2);
+    .moveDown(1); 
+     doc.font('Helvetica-Bold')
+     .fontSize(8)
+     .text('3.', 330)
+     .font('Helvetica')
+     .text('Disfruta tu visita y utiliza el hashtag', 345, 175, {
+         width: 250,    
+         continued: true
+     })
+     .fillColor('#1E92D0')
+     .font('Helvetica-Bold')
+     .text(' #REPLUSMEXICO ', { continued: true })
+     .fillColor('black')
+     .font('Helvetica')
+     .text(' en tus posteos en redes sociales.')
+     .text('Enjoy your visit and use the hashtag', {
+         width: 250,    
+         continued: true
+     })
+     .fillColor('#1E92D0')
+     .font('Helvetica-Bold')
+     .text(' #REPLUSMEXICO ', { continued: true })
+     .fillColor('black')
+     .font('Helvetica')
+     .text(' on your social media posts.')
+     .moveDown(2);
     
     doc
     .font('Helvetica-Bold')
