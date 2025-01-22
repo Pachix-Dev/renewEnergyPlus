@@ -3,7 +3,6 @@ import { conferences } from "../../../data/constans_enlightenment";
 import i18next, { t, changeLanguage } from "i18next";
 import Layout from "../../../layouts/Layout.astro";
 import { Speaker } from "../../../components/program-free/Speaker.jsx";
-import MyModal from "../../../components/program-free/MyModal.astro";
 
 changeLanguage("en");
 
@@ -147,7 +146,7 @@ const language = i18next.language;
                     </td>
                     <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) =>{
                       return (
-                        <MyModal speaker={speaker} index={index}/>
+                        <Speaker speaker={speaker} language={language} client:load />
                       )
                     })}</td>
                   </tr>
