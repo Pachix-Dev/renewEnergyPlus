@@ -1,9 +1,12 @@
 ---
 import { conferences } from "../../../data/constans_enlightenment";
-import { t, changeLanguage } from "i18next";
+import i18next, { t, changeLanguage } from "i18next";
 import Layout from "../../../layouts/Layout.astro";
+import { Speaker } from "../../../components/program-free/Speaker.jsx";
 
 changeLanguage("en");
+
+const language = i18next.language;
 ---
 
 <Layout title={`RE+ MEXICO | Enligtenment Area`}>
@@ -69,18 +72,37 @@ changeLanguage("en");
           <table class='text-white text-xl text-left w-full'>
             <thead class='bg-gray-700'>
               <tr>
-                <th class='px-6 py-3'>Horarios</th>
-                <th class='px-6 py-3'></th>
-                <th class='px-6 py-3'>Inversión *</th>
+                <th class='px-6 py-3'>
+                  {t('enlightenmentArea.hour')}
+                </th>
+                <th class='px-6 py-3'>{t('enlightenmentArea.title')}</th>
+                <th class='px-6 py-3'>{t('enlightenmentArea.speaker')}</th>
               </tr>
             </thead>
             <tbody>
               {
                 conferences.day_1.map((conference) => (
                   <tr class='border-b'>
-                    <td class='px-6 py-4'>{conference.hour}</td>
-                    <td class='px-6 py-4'>{conference.name}</td>
-                    <td class='px-6 py-4'>{conference.status}</td>
+                    <td class='px-1 py-4 flex gap-2 justify-center items-center '> 
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                      <span class="text-sm">{conference.hour}</span>
+                    </td>
+                    <td class='px-6 py-4'>
+                      <p class='mb-2 font-bold'>
+                        {i18next.language === 'es' ? conference.title : conference.title_en}{' '}
+                        <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
+                          {conference.name}
+                        </span>
+                      </p>
+                      <p>{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
+                    </td>
+                    <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) => {
+                      return (
+                        <Speaker speaker={speaker} language={language} client:load />
+                      )
+                    })}</td>
                   </tr>
                 ))
               }
@@ -96,18 +118,37 @@ changeLanguage("en");
           <table class='text-white text-xl text-left w-full'>
             <thead class='bg-gray-700'>
               <tr>
-                <th class='px-6 py-3'>Horarios</th>
-                <th class='px-6 py-3'></th>
-                <th class='px-6 py-3'>Inversión *</th>
+                <th class='px-6 py-3'>
+                  {t('enlightenmentArea.hour')}
+                </th>
+                <th class='px-6 py-3'>{t('enlightenmentArea.title')}</th>
+                <th class='px-6 py-3'>{t('enlightenmentArea.speaker')}</th>
               </tr>
             </thead>
             <tbody>
               {
                 conferences.day_2.map((conference) => (
-                  <tr class='border-b'>
-                    <td class='px-6 py-4'>{conference.hour}</td>
-                    <td class='px-6 py-4'>{conference.name}</td>
-                    <td class='px-6 py-4'>{conference.status}</td>
+                <tr class='border-b'>
+                    <td class='px-1 py-4 flex gap-2 justify-center items-center '> 
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                      <span class="text-sm">{conference.hour}</span>
+                    </td>
+                    <td class='px-6 py-4'>
+                      <p class='mb-2 font-bold'>
+                        {i18next.language === 'es' ? conference.title : conference.title_en}{' '}
+                        <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
+                          {conference.name}
+                        </span>
+                      </p>
+                      <p>{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
+                    </td>
+                    <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) =>{
+                      return (
+                        <Speaker speaker={speaker} language={language} client:load />
+                      )
+                    })}</td>
                   </tr>
                 ))
               }

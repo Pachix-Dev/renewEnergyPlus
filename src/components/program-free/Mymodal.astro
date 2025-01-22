@@ -1,0 +1,74 @@
+---
+import i18next from "i18next";
+// Props: We're assuming speaker details are passed as props.
+const { speaker, index } = Astro.props;
+---
+
+<!-- Modal Container -->
+<div id={`default-modal-${index}`} tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-4xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <span class="text-black text-sm flex gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    </svg>
+                    {speaker.email}
+                </span>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide={`default-modal-${index}`} aria-label="Close modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-4 md:p-5 space-y-4 grid grid-cols-2 gap-5">
+                <img src={speaker.imagenes} class="w-full object-fill my-auto" />
+                <div>
+                    <h3 class="text-black">{speaker.name}</h3>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        {i18next.language === 'es' ? speaker.bio : speaker.bio_en}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Thumbnail and Open Button -->
+<div class="grid place-items-center">
+    <div class="w-20 h-20 rounded-full overflow-hidden flex justify-center items-center">
+        <img
+            data-modal-target={`default-modal-${index}`}
+            data-modal-toggle={`default-modal-${index}`}
+            class="object-cover w-full h-full cursor-pointer"
+            src={speaker.imagenes}
+            alt={speaker.name}
+        />
+    </div>
+    <span class="text-center">{speaker.name}</span>
+</div>
+
+<script type="module">
+    // Modal Open/Close Functionality
+    const modalButtons = document.querySelectorAll('[data-modal-toggle]');
+    const modals = document.querySelectorAll('[id^="default-modal-"]');
+    
+    modalButtons.forEach(button => {
+        const targetModalId = button.getAttribute('data-modal-toggle');
+        const targetModal = document.getElementById(targetModalId);
+        
+        button.addEventListener('click', () => {
+            targetModal.classList.remove('hidden'); // Show the modal
+        });
+    });
+    
+    modals.forEach(modal => {
+        const closeButtons = modal.querySelectorAll('[data-modal-hide]');
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modal.classList.add('hidden'); // Hide the modal
+            });
+        });
+    });
+</script>
