@@ -4,7 +4,7 @@ const Modal = ({ isOpen, onClose, speaker, language }) => {
   
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-70">
-        <div className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-4/5 md:w-3/4 lg:w-1/2">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-full  md:w-5/6 lg:w-3/4">
           <div className="flex justify-end mb-4">
             <button
               onClick={onClose}
@@ -28,13 +28,13 @@ const Modal = ({ isOpen, onClose, speaker, language }) => {
           </div>
   
           <div className="flex flex-col sm:flex-row gap-6">
-            <div className="w-6000 h-6000 overflow-hidden">
+            
               <img
                 src={speaker.imagenes}
                 alt={speaker.name}
-                className="object-cover w-full h-full" 
+                className="object-cover h-full w-[250px] md:w-[350px] mx-auto"
               />
-            </div>
+            
   
             
             <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left">

@@ -87,24 +87,25 @@ const language = i18next.language;
               {
                 conferences.day_1.map((conference) => (
                   <tr class='border-b'>
-                    <td class='px-1 py-4 flex gap-2 justify-center items-center '> 
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                      </svg>
+                    <td class='px-1 py-4 '> 
+                      <div class='flex gap-2 justify-center items-center'> 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        <span class="text-sm flex-auto p-1">{conference.hour}</span>
+                      </div>
                       <div>
-                      <span class="text-sm flex-auto p-1">{conference.hour}</span>
-                      <span class="text-sm ">{conference.duracion}</span>
-                    </div>
-
+                          <span class="text-sm ">{conference.duracion}</span>
+                        </div>
+  
                     </td>
                     <td class='px-6 py-4'>
                       <p class='mb-2 font-bold text-2xl'>
                         {i18next.language === 'es' ? conference.title : conference.title_en}{' '}
-                        <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
-                          {conference.name}
-                        </span>
+                        
                       </p>
                       <p class="text-justify">{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
+                      <img class='mt-5' src={conference.logos} width={150} />
                     </td>
                     <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) => {
                       
@@ -112,8 +113,7 @@ const language = i18next.language;
                         
                         <Speaker speaker={speaker} language={language} client:load />
                         <p class="gap-6 text-center text-white-600 text-xs flex p-1">{speaker.name}</p>
-
-                        
+ 
                       )
                     })}</td>
                   </tr>
@@ -156,11 +156,10 @@ const language = i18next.language;
                     <td class='px-6 py-4'>
                       <p class='mb-2 font-bold text-2xl'>
                         {i18next.language === 'es' ? conference.title : conference.title_en}{' '}
-                        <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
-                          {conference.name}
-                        </span>
+                        
                       </p>
                       <p class="text-justify">{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
+                      <img class='mt-5' src={conference.logos} width={150} />
                     </td>
                     <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) =>{
                       return (
@@ -207,11 +206,10 @@ const language = i18next.language;
                   <td class='px-6 py-4'>
                     <p class='mb-2 font-bold text-2xl'>
                       {i18next.language === 'es' ? conference.title : conference.title_en}{' '}
-                      <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
-                        {conference.name}
-                      </span>
+                      
                     </p>
-                    <p class="text-justify">{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
+                  <p class="text-justify">{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
+                  <img class='mt-5' src={conference.logos} width={150} />
                   </td>
                   <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) =>{
                     return (
