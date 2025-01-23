@@ -6,13 +6,17 @@ export const conferences = {
             id: 1,            
             hour: '12:00 – 12:30',
             name: 'HITACHI',
-            status: 'VENDIDO',            
+            status: 'VENDIDO', 
+            duracion:'30 min.' ,
+            logos:''      
         },
         {
             id: 2,
             hour: '12:45 – 13:15',
             name: 'METERING',
             status: 'VENDIDO',
+             duracion:'30 min.',
+             logos:'',
             title: 'Equipos y métodos de prueba para Sistemas Fotovoltaicos',
             title_en: 'Equipment and test methods for Photovoltaic Systems',
             resume: 'Diagnóstico y evaluación de eficiencia de Sistemas Fotovoltaicos por medio de Equipos Trazadores de Curvas IV, de acuerdo con las normativas y requerimientos para la instalación y mantenimiento preventivo de paneles solares.',
@@ -37,18 +41,24 @@ export const conferences = {
             hour: '13:30 – 14:00',
             name: 'BATTERY DEPOT',
             status: 'VENDIDO',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 4,
             hour: '14:00 – 15:00',
             name: 'BREAK',
             status: '',
+             duracion:'60 min.',
+             logos:''
         },
         {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'AP SYSTEMS',
             status: 'VENDIDO',
+             duracion:'30 min.',
+             logos:'',
             title:'Tendencias en el mercado Latinoaméricano para tecnología de conversión energética',
             title_en:'Latin American Market Trends for Energy Conversion Technology',
             resume:'APsystems presenta las nuevas tendencias en tecnología MLPE y almacenamiento de energía. Año con año la tecnología APsystems desarrolla nuevas soluciones creadas especialmente para el mercado de México y Latinoamérica. Conoce el nuevo microinversor DS3-LV y una solución más potente para el Power Conversion Systems de APstorage.',
@@ -71,18 +81,24 @@ export const conferences = {
             hour: '15:45 – 16:15',
             name: 'EXEL SOLAR',
             status: 'RESERVADO',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 7,
             hour: '16:30 – 17:00',
             name: 'LIVOLTEK',
             status: 'RESERVADO',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 8,
             hour: '17:15 – 18:00',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'45 min.',
+             logos:''
         }
     ],
     day_2: [
@@ -90,43 +106,50 @@ export const conferences = {
             id: 1,            
             hour: '12:00 – 12:30',
             name: 'LONGI',
-            status: 'VENDIDO',            
+            status: 'VENDIDO',
+            duracion:'30 min'        
         },
         {
             id: 2,
             hour: '12:45 – 13:15',
             name: 'SOLARMAX',
             status: 'VENDIDO',
+            duracion:'30 min'
         },
         {
             id: 3,
             hour: '13:30 – 14:00',
             name: 'S-5!',
             status: 'RESERVADO',
+            duracion:'30 min'
         },
         {
             id: 4,
             hour: '14:00 – 15:00',
             name: 'BREAK',
             status: '',
+            duracion:'60 minutos',
         },
         {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'EXEL SOLAR',
             status: 'VENDIDO',
+            duracion:'30 min'
         },
         {
             id: 6,
             hour: '15:45 – 16:15',
             name: 'SOLAREVER',
             status: 'VENDIDO',
+            duracion:'30 min'
         },
         {
             id: 7,
             hour: '16:30 – 17:00',
             name: 'ORKA',
             status: 'VENDIDO',
+            duracion:'30 min',
             title: 'Reducción de costos a través de la utilización de baterías y sistemas de manejo de energía. / Cost reduction through the use of batteries and energy management systems.',
             title_en: 'Cost reduction through the use of batteries and energy management systems. / Cost reduction through the use of batteries and energy management systems.',
             resume: ' En esta sesión presentaremos la extensa funcionalidad que otorgan los nuevos sistemas de almacenamiento y de manejo de energía para reducir costos en empresas manufactureras así como en sitios comerciales y oficinas. Adicionalmente presentaremos opciones disponibles para implementar estos sistemas sin inversión inicial y el aprovechamiento de créditos fiscales.',
@@ -149,6 +172,7 @@ export const conferences = {
             hour: '17:15 – 18:00',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+            duracion:'45 min'
         }
     ],
     day_3: [
@@ -156,21 +180,23 @@ export const conferences = {
             id: 1,            
             hour: '12:00 – 12:30',
             name: 'BATTERY DEPOT',
-            status: 'RESERVADO',  
-            title: 'Reducción de costos a través de la utilización de baterías y sistemas de manejo de energía. / Cost reduction through the use of batteries and energy management systems.',
-            title_en: 'Cost reduction through the use of batteries and energy management systems. / Cost reduction through the use of batteries and energy management systems.',
-            resume: ' En esta sesión presentaremos la extensa funcionalidad que otorgan los nuevos sistemas de almacenamiento y de manejo de energía para reducir costos en empresas manufactureras así como en sitios comerciales y oficinas. Adicionalmente presentaremos opciones disponibles para implementar estos sistemas sin inversión inicial y el aprovechamiento de créditos fiscales.',
-            resume_en: 'In this session we will present the extensive functionality that new energy storage and energy management systems provide to reduce costs in manufacturing companies as well as in commercial sites and offices. Additionally, we will present options available to implement these systems without initial investment and the use of tax credits.',    
+            status: 'RESERVADO', 
+            duracion:'30 min.', 
+            logos:'',
+            title: '',
+            title_en: '',
+            resume: ' ',
+            resume_en: '',    
             speakers: [
                 {       
                     id: 1,                
-                    name: 'Daniel Roig',
-                    bio: 'Daniel Roig es Ingeniero en Electrónica y Comunicaciones del Tecnológico de Monterrey y graduado de la escuela de negocios de Harvard donde obtuvo su Maestría en Administración. Consta adicionalmente con estudios en energía sustentable del Massachussets Instituto of Technology MITx. En la actualidad es Director General de Orka Energía Renovable, la cual se especializa en ofrecer soluciones de punta en energía renovable, especialmente en las áreas de almacenamiento y sistemas de manejo de energía. / Daniel Roig is an Electronics and Communications Engineer from the Tecnológico de Monterrey and a graduate of the Harvard Business School where he obtained his MBA. He also has studies in sustainable energy from the Massachusetts Institute of Technology MITx. He is currently CEO of Orka Energía Renovable, which specializes in offering cutting-edge solutions in renewable energy, especially in the areas of energy storage and energy management systems. ',
-                    bio_en: 'Daniel Roig is an Electronic and Communications Engineer from Tecnológico de Monterrey and a graduate of Harvard Business School where he obtained his Master’s Degree in Management. It also consists of studies in sustainable energy of the Massachusetts Institute of Technology MITx. He is currently Managing Director of Orka Energía Renewable, which specializes in offering cutting-edge solutions in renewable energy, especially in the areas of storage and energy management systems',
-                    position: 'Director General / CEO',
-                    email: 'daniel@orka.ventures',
-                    phone: '52-55-5432-5258',
-                    imagenes:'/img/6mar-DanielRoig-Orka.jpg',
+                    name: '',
+                    bio: ' ',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                    imagenes:'',
                 },                
             ],            
         },
@@ -179,24 +205,32 @@ export const conferences = {
             hour: '12:45 – 13:15',
             name: 'SOLAREVER',
             status: 'VENDIDO',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 3,
             hour: '13:30 – 14:00',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 4,
             hour: '14:15 – 14:45',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'30 min.',
+             logos:''
         },
     ]
 }
