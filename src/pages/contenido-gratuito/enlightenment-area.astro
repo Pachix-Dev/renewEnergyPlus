@@ -62,13 +62,17 @@ const language = i18next.language;
           </li>
         </ul>
       </div>
+
+
+
       <div id='default-tab-content'>
+
+        
         <div
           class='hidden p-4 rounded-lg'
           id='profile'
           role='tabpanel'
-          aria-labelledby='profile-tab'
-        >
+          aria-labelledby='profile-tab'>
           <table class='text-white text-xl text-left w-full'>
             <thead class='bg-gray-700'>
               <tr>
@@ -109,12 +113,12 @@ const language = i18next.language;
             </tbody>
           </table>
         </div>
+
         <div
           class='hidden p-4 rounded-lg'
           id='dashboard'
           role='tabpanel'
-          aria-labelledby='dashboard-tab'
-        >
+          aria-labelledby='dashboard-tab' >
           <table class='text-white text-xl text-left w-full'>
             <thead class='bg-gray-700'>
               <tr>
@@ -155,70 +159,57 @@ const language = i18next.language;
             </tbody>
           </table>
         </div>
+        
         <div
           class='hidden p-4 rounded-lg mx-auto'
           id='settings'
           role='tabpanel'
           aria-labelledby='settings-tab'
         >
-          <table class='text-white text-xl text-left w-full'>
-            <thead class='bg-gray-700'>
-              <tr>
-                <th class='px-6 py-3'>
-                  {t('enlightenmentArea.hour')}
-                </th>
-                <th class='px-6 py-3'>{t('enlightenmentArea.title')}</th>
-                <th class='px-6 py-3'>{t('enlightenmentArea.speaker')}</th>
-              </tr>
-            </thead>
-            <tbody>
-            </table>
-          </div>
-          <div
-            class='hidden p-4 rounded-lg'
-            id='dashboard'
-            role='tabpanel'
-            aria-labelledby='dashboard-tab'
-          >
-            <table class='text-white text-xl text-left w-full'>
-              <thead class='bg-gray-700'>
-                <tr>
-                  <th class='px-6 py-3'>
-                    {t('enlightenmentArea.hour')}
-                  </th>
-                  <th class='px-6 py-3'>{t('enlightenmentArea.title')}</th>
-                  <th class='px-6 py-3'>{t('enlightenmentArea.speaker')}</th>
+        <table class='text-white text-xl text-left w-full'>
+          <thead class='bg-gray-700'>
+            <tr>
+              <th class='px-6 py-3'>
+                {t('enlightenmentArea.hour')}
+              </th>
+              <th class='px-6 py-3'>{t('enlightenmentArea.title')}</th>
+              <th class='px-6 py-3'>{t('enlightenmentArea.speaker')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              conferences.day_3.map((conference) => (
+              <tr class='border-b'>
+                  <td class='px-1 py-4 flex gap-2 justify-center items-center '> 
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <span class="text-sm">{conference.hour}</span>
+                  </td>
+                  <td class='px-6 py-4'>
+                    <p class='mb-2 font-bold'>
+                      {i18next.language === 'es' ? conference.title : conference.title_en}{' '}
+                      <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
+                        {conference.name}
+                      </span>
+                    </p>
+                    <p>{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
+                  </td>
+                  <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) =>{
+                    return (
+                      <Speaker speaker={speaker} language={language} client:load />
+                    )
+                  })}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {
-                  conferences.day_3.map((conference) => (
-                  <tr class='border-b'>
-                      <td class='px-1 py-4 flex gap-2 justify-center items-center '> 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                        <span class="text-sm">{conference.hour}</span>
-                      </td>
-                      <td class='px-6 py-4'>
-                        <p class='mb-2 font-bold'>
-                          {i18next.language === 'es' ? conference.title : conference.title_en}{' '}
-                          <span class='bg-[#CA3601] rounded-md text-sm p-1 font-bold'>
-                            {conference.name}
-                          </span>
-                        </p>
-                        <p>{ i18next.language === 'es' ? conference.resume: conference.resume_en}</p>
-                      </td>
-                      <td class='px-6 py-4'>{conference.speakers?.map((speaker, index) =>{
-                        return (
-                          <Speaker speaker={speaker} language={language} client:load />
-                        )
-                      })}</td>
-                    </tr>
-                  ))
-                }
-            </tbody>
-          </table>
+              ))
+            }
+          </tbody>
+        </table>
+
+            
+          </div>
+          
+            
         </div>
       </div>
       <div class='mx-auto flex mt-10'>
