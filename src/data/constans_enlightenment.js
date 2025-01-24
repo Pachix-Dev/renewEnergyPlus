@@ -1,4 +1,5 @@
 import { title } from "process";
+import Logos from "../components/Logos.astro";
 
 export const conferences = {
     day_1: [
@@ -6,13 +7,17 @@ export const conferences = {
             id: 1,            
             hour: '12:00 – 12:30',
             name: 'HITACHI',
-            status: 'VENDIDO',            
+            status: 'VENDIDO', 
+            duracion:'30 min.' ,
+            logos:'/img/sponsors/hitachi.webp'      
         },
         {
             id: 2,
             hour: '12:45 – 13:15',
             name: 'METERING',
             status: 'VENDIDO',
+             duracion:'30 min.',
+             logos:'/img/sponsors/metering.webp',
             title: 'Equipos y métodos de prueba para Sistemas Fotovoltaicos',
             title_en: 'Equipment and test methods for Photovoltaic Systems',
             resume: 'Diagnóstico y evaluación de eficiencia de Sistemas Fotovoltaicos por medio de Equipos Trazadores de Curvas IV, de acuerdo con las normativas y requerimientos para la instalación y mantenimiento preventivo de paneles solares.',
@@ -37,18 +42,24 @@ export const conferences = {
             hour: '13:30 – 14:00',
             name: 'BATTERY DEPOT',
             status: 'VENDIDO',
+             duracion:'30 min.',
+             logos:'/img/sponsors/batterydepot.webp'
         },
         {
             id: 4,
             hour: '14:00 – 15:00',
             name: 'BREAK',
             status: '',
+             duracion:'60 min.',
+             logos:''
         },
         {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'AP SYSTEMS',
             status: 'VENDIDO',
+            duracion:'30 min.',
+            logos:'/img/sponsors/APsystemss.webp',
             title:'Tendencias en el mercado Latinoaméricano para tecnología de conversión energética',
             title_en:'Latin American Market Trends for Energy Conversion Technology',
             resume:'APsystems presenta las nuevas tendencias en tecnología MLPE y almacenamiento de energía. Año con año la tecnología APsystems desarrolla nuevas soluciones creadas especialmente para el mercado de México y Latinoamérica. Conoce el nuevo microinversor DS3-LV y una solución más potente para el Power Conversion Systems de APstorage.',
@@ -71,18 +82,24 @@ export const conferences = {
             hour: '15:45 – 16:15',
             name: 'EXEL SOLAR',
             status: 'RESERVADO',
+             duracion:'30 min.',
+             logos:'/img/sponsors/EXELSOLAR.webp'
         },
         {
             id: 7,
             hour: '16:30 – 17:00',
             name: 'LIVOLTEK',
             status: 'RESERVADO',
+             duracion:'30 min.',
+             logos:'/img/sponsors/livoltek-0420.webp'
         },
         {
             id: 8,
             hour: '17:15 – 18:00',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'45 min.',
+             logos:''
         }
     ],
     day_2: [
@@ -90,43 +107,57 @@ export const conferences = {
             id: 1,            
             hour: '12:00 – 12:30',
             name: 'LONGI',
-            status: 'VENDIDO',            
+            status: 'VENDIDO',
+            duracion:'30 min',
+            logos:'/img/sponsors/longi.webp'      
         },
         {
             id: 2,
             hour: '12:45 – 13:15',
             name: 'SOLARMAX',
             status: 'VENDIDO',
+            duracion:'30 min',
+            logos:'/img/sponsors/SolarMax.webp'
         },
         {
             id: 3,
             hour: '13:30 – 14:00',
             name: 'S-5!',
             status: 'RESERVADO',
+            duracion:'30 min',
+            logos:'/img/sponsors/S-5!.webp'
         },
         {
             id: 4,
             hour: '14:00 – 15:00',
             name: 'BREAK',
             status: '',
+            duracion:'60 minutos',
+            logos:''
         },
         {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'EXEL SOLAR',
             status: 'VENDIDO',
+            duracion:'30 min',
+            logos:'/img/sponsors/EXELSOLAR.webp'
         },
         {
             id: 6,
             hour: '15:45 – 16:15',
             name: 'SOLAREVER',
             status: 'VENDIDO',
+            duracion:'30 min',
+            logos:'/img/sponsors/Longi-Solar.webp'
         },
         {
             id: 7,
             hour: '16:30 – 17:00',
             name: 'ORKA',
             status: 'VENDIDO',
+            duracion:'30 min',
+            logos:'/img/sponsors/ORKA-LOGO.webp',
             title: 'Reducción de costos a través de la utilización de baterías y sistemas de manejo de energía. / Cost reduction through the use of batteries and energy management systems.',
             title_en: 'Cost reduction through the use of batteries and energy management systems. / Cost reduction through the use of batteries and energy management systems.',
             resume: ' En esta sesión presentaremos la extensa funcionalidad que otorgan los nuevos sistemas de almacenamiento y de manejo de energía para reducir costos en empresas manufactureras así como en sitios comerciales y oficinas. Adicionalmente presentaremos opciones disponibles para implementar estos sistemas sin inversión inicial y el aprovechamiento de créditos fiscales.',
@@ -149,6 +180,8 @@ export const conferences = {
             hour: '17:15 – 18:00',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+            duracion:'45 min',
+            logos:''
         }
     ],
     day_3: [
@@ -156,31 +189,57 @@ export const conferences = {
             id: 1,            
             hour: '12:00 – 12:30',
             name: 'BATTERY DEPOT',
-            status: 'RESERVADO',            
+            status: 'RESERVADO', 
+            duracion:'30 min.', 
+            logos:'/img/sponsors/batterydepot.webp',
+            title: '',
+            title_en: '',
+            resume: ' ',
+            resume_en: '',    
+            speakers: [
+                {       
+                    id: 1,                
+                    name: '',
+                    bio: ' ',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                    imagenes:'',
+                },                
+            ],            
         },
         {
             id: 2,
             hour: '12:45 – 13:15',
-            name: 'SOLAREVER',
+            name: 'BATTERY DEPOT',
             status: 'VENDIDO',
+             duracion:'30 min.',
+             logos:'/img/sponsors/batterydepot.webp'
         },
         {
             id: 3,
             hour: '13:30 – 14:00',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 4,
             hour: '14:15 – 14:45',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'30 min.',
+             logos:''
         },
         {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
+             duracion:'30 min.',
+             logos:''
         },
     ]
 }
