@@ -120,6 +120,20 @@ const useRegisterForm = create(
                 };
             }),
 
+            addDiscount: (item) => set((state) => {
+                const itemAlreadyExists = state.items.some(i => i.id === item.id);
+                if (itemAlreadyExists) {
+                    return state;
+                } else {
+                    const newItems = [...state.items, { ...item }];
+                    const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
+                    return {
+                        items: newItems,
+                        total: newTotal,                        
+                    };
+                }
+            }),
+
             clear: () => set({ 
                 idUser: 0,
                 uuid: "",

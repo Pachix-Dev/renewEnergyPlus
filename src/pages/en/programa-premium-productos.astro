@@ -5,6 +5,7 @@ import Products from "../../components/ecommerce/Products.astro";
 import { Total } from "../../components/ecommerce/Total.jsx";
 import LayoutCheckout from "../../layouts/LayoutCheckout.astro";
 import { Continue } from "../../components/ecommerce/Continue.jsx";
+import { Coupon } from "../../components/ecommerce/Coupon.jsx";
 
 changeLanguage("en");
 
@@ -40,6 +41,7 @@ const base = lang === "es" ? "" : `/${lang}`;
 
       <Items client:only currentLanguage={currentLanguage} />
       <Total client:only />
+      <Coupon client:only />
       <Continue client:only translate={t('ecommerce.continue')} base={base} />
     </aside>
   </main>
