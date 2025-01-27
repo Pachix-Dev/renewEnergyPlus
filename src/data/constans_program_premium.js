@@ -1,13 +1,13 @@
 export const program_premium = {
     day_1: [
         {
-            hour: '12:00 - 12:30',
+            hour: '12:00 - 12:45',
             title: 'Estrategia Nacional del Sector Eléctrico',
             title_en: 'National Electricity Sector Strategy',
             tag: 'Conferencia',
             tag_en: 'Conference',
             color:'#1F2937',
-            duración:'30 min',
+            duración:'45 min',
             resume: '¿Cuáles son los alcances de la nueva política energética en materia de electricidad? ¿Cuál es el nuevo rol de la planeación? ¿Cómo se propone impulsar la transición energética?',
             resume_en: 'What is the scope of the new energy policy on electricity? What is the new role of planning? How is it proposed to promote the energy transition?',    
             speakers: [
@@ -75,17 +75,14 @@ export const program_premium = {
                     email: '',
                     phone: '',
                    nameem:''
-
-
-                   
                 },    
                           
             ],    
         },
         {
             hour: '14:00 - 14:45',
-            title: 'Oportunidades y Beneficios del Abasto Aislado Renovable',
-            title_en: 'Opportunities and Benefits of Isolated Renewable Supply',
+            title: 'Oportunidades del Abasto Aislado renovable',
+            title_en: 'Opportunities for Isolated Renewable Supply',
             tag: 'Panel', 
             tag_en: 'Panel',
             color: '#016A02' ,
@@ -95,8 +92,8 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'',              
-                    name: '',
+                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
+                    name: 'Humberto Alarcón',
                     bio: '',
                     bio_en: '',
                     position: '',
@@ -132,6 +129,32 @@ export const program_premium = {
                     phone: '',
                     nameem:''
                    
+                },  
+                {       
+                    id: 2,  
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    name: 'Angie Soto',
+                    bio: '',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                   
+
+                   
+                },       
+                {       
+                    id: 3,  
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    name: 'María José Treviño',
+                    bio: '',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                   
+
+                   
                 },                
             ],    
             
@@ -149,7 +172,7 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'',              
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
                     name: 'Manuel Herrera',
                     bio: '',
                     bio_en: '',
@@ -162,13 +185,13 @@ export const program_premium = {
             ],    
         }, 
         {
-            hour: '12:00 - 12:45',
+            hour: '12:00 - 12:30',
             title: 'Lecciones aprendidas de la incorporación de renovables en Alemania',
             title_en: 'Lessons learned from the incorporation of renewables in Germany',
             tag: 'Conferencia',
             tag_en: 'Conference',
             color: '#016A02',
-            duración:'25 min',
+            duración:'30 min',
             resume: 'Alemania es líder en la transición energética global. Se analizarán los desafíos que la integración de fuentes renovables, tanto en gran escala como en sistemas distribuidos, ha implicado para Alemania y las experiencias en el desarrollo regulatorio y de política energética en ese país.',
             resume_en: 'Germany is a leader in the global energy transition. The challenges that the integration of renewable sources, both on a large scale and in distributed systems, has posed for Germany will be analysed, as well as experiences in the development of energy policy and regulation in that country.',    
             speakers: [
@@ -188,15 +211,15 @@ export const program_premium = {
 
         },
         {
-            hour: '13:15 - 13:45',
-            title: 'Hacia un futuro sostenible: el impacto del personal calificado en la energía solar',
-            title_en: 'Towards a sustainable future: the impact of skilled personnel on solar energy',
-            tag: 'Conferencia',
-            tag_en: 'Conference',
+            hour: '13:00 - 13:30',
+            title: 'Economía circular en el sector solar: desafíos y oportunidades para el reciclaje de paneles',
+            title_en: 'Circular economy in the solar sector: challenges and opportunities for panel recycling',
+            tag: 'Panel',
+            tag_en: 'Panel',
             color: '#016A02',
             duración:'30 min',
-            resume: 'Se discutirá la evolución de los estándares técnicos de CONOCER, las certificaciones y las mejores prácticas que los profesionales del sector deben seguir, así como la importancia de contar con personal capacitado y actualizado frente a los avances tecnológicos en la industria solar.',
-            resume_en: 'The evolution of CONOCER technical standards, certifications and best practices that professionals in the sector must follow will be discussed, as well as the importance of having trained and updated personnel in the face of technological advances in the solar industry.',    
+            resume: 'El crecimiento de la energía solar plantea el reto de gestionar los paneles al final de su vida útil, con un estimado de 36,500 toneladas de residuos solares en México, según la Agencia Internacional de Energías Renovables. Se explorarán los desafíos regulatorios, tecnológicos y económicos del reciclaje fotovoltaico, así como las oportunidades para recuperar materiales valiosos y fomentar modelos de negocio sostenibles. También se analizarán las estrategias necesarias para impulsar una economía circular que reduce el impacto ambiental y genera valor en la industria solar.',
+            resume_en: 'The growth of solar energy poses the challenge of managing panels at the end of their life, with an estimated 36,500 tons of solar waste in Mexico, according to the International Renewable Energy Agency. The regulatory, technological and economic challenges of PV recycling will be explored, as well as opportunities to recover valuable materials and promote sustainable business models. Strategies needed to drive a circular economy that reduces environmental impact and generates value in the solar industry will also be discussed.',    
             speakers: [
                 {       
                     id: 1,  
@@ -212,7 +235,57 @@ export const program_premium = {
                    
                 },                
             ],    
-        }  
+        } ,
+        {
+            hour: '13:30 - 14:15',
+            title: 'Hacia un futuro sostenible: el impacto del personal calificado en la energía solar',
+            title_en: 'Towards a sustainable future: the impact of skilled personnel on solar energy',
+            tag: 'Conferencia',
+            tag_en: 'Conference',
+            color: '#016A02',
+            duración:'45 min',
+            resume: 'Se discutirá la evolución de los estándares técnicos de CONOCER, las certificaciones y las mejores prácticas que los profesionales del sector deben seguir, así como la importancia de contar con personal capacitado y actualizado frente a los avances tecnológicos en la industria solar.',
+            resume_en: 'The evolution of CONOCER technical standards, certifications and best practices that professionals in the sector must follow will be discussed, as well as the importance of having trained and updated personnel in the face of technological advances in the solar industry.',    
+            speakers: [
+                {       
+                    id: 1,  
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    name: 'Ximena Cantú',
+                    bio: '',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                    nameem:''
+                   
+                },  
+                {       
+                    id: 2,  
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    name: 'Isabel Studer',
+                    bio: '',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                    nameem:''
+                   
+                },  
+                {       
+                    id: 3,  
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    name: 'Julián Lasky',
+                    bio: '',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                    nameem:''
+                   
+                },               
+            ],    
+        },
+         
     ],
     day_3:[
         {
@@ -228,7 +301,7 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'',              
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
                     name: 'Emmanuel Moctezuma ',
                     bio: '',
                     bio_en: '',
@@ -237,7 +310,19 @@ export const program_premium = {
                     phone: '',
                     nameem:''
                    
-                },                
+                },   
+                {       
+                    id: 2,  
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    name: 'Catalina Delgado ',
+                    bio: '',
+                    bio_en: '',
+                    position: '',
+                    email: '',
+                    phone: '',
+                    nameem:''
+                   
+                },               
             ],    
         },
         {
@@ -253,7 +338,7 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'',              
+                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
                     name: 'Luisa Sierra',
                     bio: '',
                     bio_en: '',
