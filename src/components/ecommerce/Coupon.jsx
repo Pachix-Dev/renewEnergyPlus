@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { useRegisterForm } from '../../store/register-form.js'
 
-export function Coupon() {
+export function Coupon({ text1, text2 }) {
   const [couponCode, setCouponCode] = useState('')
   const [couponStatus, setCouponStatus] = useState('')
   const [isValidCoupon, setIsValidCoupon] = useState(null)
 
-  const { addDiscount } = useRegisterForm()
+  const { addDiscount, items } = useRegisterForm()
 
   const handleCouponChange = (e) => {
     setCouponCode(e.target.value)
@@ -16,11 +16,23 @@ export function Coupon() {
 
   const checkCoupon = async () => {
     if (couponCode === 'REPLUSMEXICO500') {
-      setCouponStatus('Cupon valido, limitado a 1 solo uso!')
+      if (!items.find((item) => item.id === 1)) {
+        setCouponStatus(text1)
+        setIsValidCoupon(false)
+        setTimeout(() => setCouponStatus(''), 3000)
+        setCouponCode('')
+        return
+      }
+      setCouponStatus(text2)
       setIsValidCoupon(true)
       setCouponCode('')
       addDiscount(
-        { id: 99, name: 'Cupon de descuento', price: -500 },
+        {
+          id: 99,
+          name: 'Cupon de descuento',
+          name_en: 'Discount Coupon',
+          price: -500,
+        },
         'GENERAL'
       )
     } else {

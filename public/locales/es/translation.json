@@ -470,6 +470,8 @@
         "select_hour": "¿En qué día y en que horario requieres tu mesa?",
         "select_default": "Selecciona un horario",
         "text_select": "Seleccióne el día y horario elegido para asistir al evento, esta reserva incluye el espacio de una mesa para hasta 10 personas",         
-        "comments": "Comentarios adicionales"   
+        "comments": "Comentarios adicionales",
+        "cupon_text": "El CUPON SOLO APLICA PARA PASE COMPLETO, ENERGY NIGHT Y VIP AREA",
+        "cupon": "Cupon valido, limitado a 1 solo uso!"
     }
 }

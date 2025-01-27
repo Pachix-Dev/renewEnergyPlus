@@ -229,9 +229,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
          width: 250,    
          align: 'center'
      })
-     .moveDown(1)
-     .text('Marzo')
-     .text('March')
+     .moveDown(1)     
      .text('Miércoles/Wednesday   11:00 am – 6:00 pm', 330, 250, {
          width: 250,    
          align: 'center'

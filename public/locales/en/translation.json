@@ -470,6 +470,8 @@
         "select_hour": "On what day and at what time do you need your table?",
         "select_default": "Select an schedule",
         "text_select": "Select the day and time chosen to attend the event, this reservation includes a table space for up to 10 people",     
-        "comments": "Aditional comments"
+        "comments": "Aditional comments",
+        "cupon_text": "COUPON ONLY APPLIES FOR FULL PASS, ENERGY NIGHT & VIP AREA",
+        "cupon": "Coupon valid, limited to 1 use only!"
     }
 }
