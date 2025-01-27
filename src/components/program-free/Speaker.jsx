@@ -13,7 +13,11 @@ console.log(speaker)
                 ''
               : 
               <>
-                <img onClick={handleOpenModal} src={speaker.imagenes} className="rounded-full h-[80px] object-cover object-top w-full cursor-pointer transform transition-transform duration-300 hover:scale-110"/>
+                <img 
+                onClick={handleOpenModal} 
+                src={speaker.imagenes} 
+                className="rounded-full h-[100px] w-[100px] object-cover object-top p-2 justify-center cursor-pointer transform transition-transform duration-300 hover:scale-110"
+                />
                 <Modal isOpen={isModalOpen} onClose={handleCloseModal} speaker={speaker} language={language} />
                 </>
             }

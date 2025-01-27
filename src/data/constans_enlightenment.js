@@ -23,13 +23,14 @@ export const conferences = {
             resume: 'Diagnóstico y evaluación de eficiencia de Sistemas Fotovoltaicos por medio de Equipos Trazadores de Curvas IV, de acuerdo con las normativas y requerimientos para la instalación y mantenimiento preventivo de paneles solares.',
             resume_en: 'Diagnosis and evaluation of efficiency of Photovoltaic Systems through IV Curve Tracer Equipment, according to the regulations and requirements for the installation and preventive maintenance of solar panels.',    
             speakers: [
-                {       
+                {   nameem: 'HITACHI',   
                     id: 1,  
                     imagenes:'/img/5mar-JoelRobinson-Metering.jpg',              
                     name: 'Joel Robinson',
                     bio: 'Profesional con amplia experiencia en el campo de generación de energía con sistemas fotovoltáicos. Contribuye actualmente y de manera clave al lanzamiento de varias iniciativas y soluciones técnicas en equipos de medición y evaluación de eficiencia en Paneles Fotovoltáicos. Actualmente trabaja en el desarrollo comercial de la línea de productos renovables de SEAWARD para el mercado norteamericano. ',
                     bio_en: 'Professional with extensive experience in the field of power generation with photovoltaic systems. He is currently a key contributor to the launching of several initiatives and technical solutions in measurement equipment and evaluation of efficiency in Photovoltaic Panels. He is currently working on the commercial development of SEAWARD´s renewable product line for the North American market. ',
-                    position: 'Business Development Manager, SEAWARD Solar Products Norteamérica',
+                    position_en: 'Business Development Manager, SEAWARD Solar Products Norteamérica',
+                    position:'Gerente de desarrollo empresarial, SEAWARD Solar Products Norteamérica',
                     email: 'jademiguel@metering.com.mx',
                     phone: '55 45 69 41 39',
                    
@@ -66,11 +67,13 @@ export const conferences = {
             resume_en:'APsystems presents new trends in MLPE technology and energy storage. Year after year APsystems technology develops new solutions created especially for the Mexican and Latin American market. Meet the new DS3-LV microinverter and a more powerful solution for APstorage Power Conversion Systems.',
             speakers: [
                 {       
-                    id: 1,                
+                    id: 1,  
+                    nameem: 'AP SYSTEMS',              
                     name: 'José Cataño',
                     bio: 'El Ing. Cataño ha tenido una carrera técnica desde pequeño durante su preparatoria, posteriormente se graduó como Ingeniero en Mantenimiento Industrial en la Universidad Tecnológica de Jalisco. En 2019 comenzó en el área de sistemas con la empresa Gen-t para Herbalife Nutrition, después apoyó como consultor externo para el ERP Oracle. Ha tenido experiencia en apps de negocio, administración de negocios, base de datos y administración de base de datos usando Power BI.',
                     bio_en: 'Mr. Cataño has had a technical career since childhood during his high school, later graduated as an Engineer in Industrial Maintenance from the Technological University of Jalisco. In 2019 he started in the area of systems with the company Gen-t for Herbalife Nutrition, then supported as an external consultant for the ERP Oracle. She has had experience in business apps, business management, database and database management using Power BI.',
-                    position: 'Technical Support Specialist',
+                    position_en: 'Technical Support Specialist',
+                    position:'especialista de soporte técnico',
                     email: 'jose.catano@apsystems.com',
                     phone: '52 33 26179699',
                     imagenes:'/img/5mar-JoséCataño-APSystem.png',
@@ -164,11 +167,13 @@ export const conferences = {
             resume_en: 'In this session we will present the extensive functionality that new energy storage and energy management systems provide to reduce costs in manufacturing companies as well as in commercial sites and offices. Additionally, we will present options available to implement these systems without initial investment and the use of tax credits.',    
             speakers: [
                 {       
-                    id: 1,                
+                    id: 1, 
+                    nameem: 'ORKA',               
                     name: 'Daniel Roig',
                     bio: 'Daniel Roig es Ingeniero en Electrónica y Comunicaciones del Tecnológico de Monterrey y graduado de la escuela de negocios de Harvard donde obtuvo su Maestría en Administración. Consta adicionalmente con estudios en energía sustentable del Massachussets Instituto of Technology MITx. En la actualidad es Director General de Orka Energía Renovable, la cual se especializa en ofrecer soluciones de punta en energía renovable, especialmente en las áreas de almacenamiento y sistemas de manejo de energía. / Daniel Roig is an Electronics and Communications Engineer from the Tecnológico de Monterrey and a graduate of the Harvard Business School where he obtained his MBA. He also has studies in sustainable energy from the Massachusetts Institute of Technology MITx. He is currently CEO of Orka Energía Renovable, which specializes in offering cutting-edge solutions in renewable energy, especially in the areas of energy storage and energy management systems. ',
                     bio_en: 'Daniel Roig is an Electronic and Communications Engineer from Tecnológico de Monterrey and a graduate of Harvard Business School where he obtained his Master’s Degree in Management. It also consists of studies in sustainable energy of the Massachusetts Institute of Technology MITx. He is currently Managing Director of Orka Energía Renewable, which specializes in offering cutting-edge solutions in renewable energy, especially in the areas of storage and energy management systems',
-                    position: 'Director General / CEO',
+                    position_en: 'Director General/ CEO',
+                    position:'Director General / CEO',
                     email: 'daniel@orka.ventures',
                     phone: '52-55-5432-5258',
                     imagenes:'/img/6mar-DanielRoig-Orka.jpg',
@@ -203,6 +208,7 @@ export const conferences = {
                     bio: ' ',
                     bio_en: '',
                     position: '',
+                    position_en: '',
                     email: '',
                     phone: '',
                     imagenes:'',
