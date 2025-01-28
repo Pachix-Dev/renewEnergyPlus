@@ -59,8 +59,8 @@ export function Program({ conferences, translate, language }) {
                 speaker.name && (
                   <div key={index} className='flex items-center justify-center'>
                     <div className="mr-6 w-50 h-32 items-center">
-  <Speaker speaker={speaker} language={language} />
-</div>
+              <Speaker speaker={speaker} language={language} />
+            </div>
 
                     <h1 className='text-white text-sm md:text-lg font-semibold mt-2 flex items-center p-1 bg-custom-orange rounded-lg w-60 h-13'>
   <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='currentColor' className='size-4 md:size-5 mr-2'>
