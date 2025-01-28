@@ -1,15 +1,14 @@
 ---
 import { conferences } from "../../data/constans_enlightenment";
 import i18next, { t, changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
+import LayoutFreeContent from "../../layouts/LayoutFreeContent.astro";
 import { Speaker } from "../../components/program-free/Speaker.jsx";
 
 changeLanguage("es");
 
 const language = i18next.language;
 ---
-
-<Layout title={`RE+ MEXICO | Enligtenment Area`}>
+<LayoutFreeContent title={`RE+ MEXICO | Enligtenment Area`}>
   <main class='mx-5 md:mx-16 lg:mx-32 pb-5'>
     <h1 class='text-left text-[#ed6b06] text-5xl font-extrabold py-5'>
       Enlightenment Area
@@ -245,7 +244,7 @@ const language = i18next.language;
       </div>
     </section>
   </main>
-</Layout>
+</LayoutFreeContent>
 <style>
   body {
     background-color: #111827;
