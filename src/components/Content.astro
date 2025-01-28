@@ -1,5 +1,7 @@
 ---
 import i18next, { t } from 'i18next'
+const lang = i18next.language
+const base = i18next.language === 'es' ? '' : `/${lang}`
 ---
 
 <div class='grid sm:flex sm:justify-between gap-5 text-[5px] xl:text-lg'>
@@ -20,19 +22,16 @@ import i18next, { t } from 'i18next'
     <span>{t('menu.submenu_2.option_8')}</span>
   </a>
   <a
-    href='/doc/REMEX_2025_SpaceAgreement_V2_23_08_24.pdf'
-    target='_blank'
+    href={`${base}/contenido-gratuito/enlightenment-area`}
     class='button w-full py-4 text-white'
   >
-    <span>{t('menu.submenu_2.option_7')}</span>
+    <span>Enlightenment Area</span>
   </a>
   <a
-    href={i18next.language === 'es'
-      ? '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ESP_AF_2024_v3.pdf'
-      : '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ENG_AF_2024_v3.pdf'}
+    href={`${base}/contenido-gratuito/installer-innovation-area`}
     class='button w-full py-4 text-white'
   >
-    <span>{t('menu.submenu_4.results')} 2024</span>
+    <span>Installer & Innovation Area</span>
   </a>
 </div>
 
