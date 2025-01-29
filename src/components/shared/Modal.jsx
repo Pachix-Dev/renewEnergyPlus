@@ -36,9 +36,9 @@ const Modal = ({ isOpen, onClose, speaker, language }) => {
           />
 
          {speaker.nameem !== "" && (
-  <div className="absolute bottom-0 left-0 right-0 bg-custom-orange text-white text-center font-semibold px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-tr-xl will-change-auto">
-    {speaker.nameem}
-  </div>
+    <div className="absolute bottom-3 left-3 bg-custom-orange text-white text-xs md:text-sm px-3 py-1 rounded-full hidden sm:flex items-center shadow-lg">
+  {speaker.nameem}
+</div>
 )}
 
 
