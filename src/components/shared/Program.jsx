@@ -55,25 +55,38 @@ export function Program({ conferences, translate, language }) {
                 </span>
               </div>
               <div className='gap-10 p-3'>
-              {conference.speakers?.map((speaker, index) => (
-                speaker.name && (
-                  <div key={index} className='flex items-center justify-center'>
-                    <div className="mr-6 w-50 h-32 items-center">
-              <Speaker speaker={speaker} language={language} />
-            </div>
+                {conference.speakers?.map(
+                  (speaker, index) =>
+                    speaker.name && (
+                      <div
+                        key={index}
+                        className='flex items-center justify-center'
+                      >
+                        <div className='mr-6 w-50 h-32 items-center'>
+                          <Speaker speaker={speaker} language={language} />
+                        </div>
 
-                    <h1 className='text-white text-sm md:text-lg font-semibold mt-2 flex items-center p-1 bg-custom-orange rounded-lg w-60 h-13'>
-  <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='currentColor' className='size-4 md:size-5 mr-2'>
-    <path strokeLinecap='round' strokeLinejoin='round' d='M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z' />
-  </svg>
-  {speaker.name}
-</h1>
-
-                  </div>
-                )
-              ))}
-</div>
-
+                        <h1 className='text-white text-sm md:text-lg font-semibold mt-2 flex items-center p-1 bg-custom-orange rounded-lg w-60 h-13'>
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            strokeWidth='1.5'
+                            stroke='currentColor'
+                            className='size-4 md:size-5 mr-2'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              d='M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z'
+                            />
+                          </svg>
+                          {speaker.name}
+                        </h1>
+                      </div>
+                    )
+                )}
+              </div>
             </div>
           </div>
         ))}

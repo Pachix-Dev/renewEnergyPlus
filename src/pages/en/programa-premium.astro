@@ -24,10 +24,12 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
   </video>
 
   <div class='container mx-auto px-4 py-10'>
-    <h1 class='text-left sm:text-center text-[#ed6b06] text-3xl sm:text-4xl md:text-5xl font-extrabold py-5'>
+    <h1
+      class='text-left sm:text-center text-[#ed6b06] text-3xl sm:text-4xl md:text-5xl font-extrabold py-5'
+    >
       {t('program.title_1')}
     </h1>
-    
+
     <div class='text-white text-lg'>
       <p>
         {t('program.text_1')}
@@ -36,14 +38,16 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         {t('program.text_2')}
       </p>
     </div>
+  </div>
+  <div>
     <div
-      class='container mx-auto py-5 px-4 grid place-items-center gap-5 rounded-xl'
+      class='mx-auto py-5 px-4 grid place-items-center gap-5 rounded-xl sticky top-24 z-50'
     >
       <a
         href={`${base}/programa-premium-productos`}
         class='card p-5 hover:scale-105 ease-in-out duration-300'
       >
-        <span class='text-white z-10 font-extrabold text-xl'
+        <span class='text-white z-10 font-extrabold text-xl text-center'
           >{t('program.button2')}</span
         >
       </a>
