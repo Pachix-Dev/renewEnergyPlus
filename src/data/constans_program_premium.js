@@ -83,14 +83,14 @@ export const program_premium = {
         },
         {
             hour: '14:00 - 14:45',
-            title: 'Oportunidades del Abasto Aislado renovable',
-            title_en: 'Opportunities for Isolated Renewable Supply',
+            title: 'Oportunidades de autoconsumo renovable ',
+            title_en: 'Oportunidades del Autoconsumo Renovable ',
             tag: 'Panel', 
             tag_en: 'Panel',
             color: '#016A02' ,
             duración:'45 min',
-            resume: 'Ante la inminente publicación de nueva regulación en el sector eléctrico, el Abasto Aislado se posiciona como una opción clave para el desarrollo de proyectos de energía renovable ¿Cuál es el alcance que se espera de las nuevas reglas para el Abasto Aislado renovable y cómo pueden permitir impulsar aún más esta figura?',
-            resume_en: 'With the imminent publication of new regulations in the electricity sector, Isolated Supply is positioned as a key option for the development of renewable energy projects. What is the expected scope of the new rules for renewable Isolated Supply and how can they further promote this figure?',    
+            resume: 'Ante la inminente publicación de nueva regulación en el sector eléctrico, el Autoconsumo se posiciona como una opción clave para el desarrollo de proyectos de energía renovable ¿Cuál es el alcance que se espera de las nuevas reglas para el Autoconsumo renovable y cómo pueden permitir impulsar aún más esta figura?',
+            resume_en: 'With the imminent publication of new regulations in the electricity sector, Self-consumption is positioned as a key option for the development of renewable energy projects. What is the expected scope of the new rules for renewable self-consumption and how can they further promote this figure?',    
             speakers: [
                 {       
                     id: 1,  
