@@ -1,0 +1,12 @@
+---
+import { conferences } from "../../data/constans_enlightenment";
+import i18next, { t, changeLanguage } from "i18next";
+import LayoutFreeContent from "../../layouts/LayoutFreeContent.astro";
+import { Speaker } from "../../components/program-free/Speaker.jsx";
+
+changeLanguage("es");
+
+const language = i18next.language;
+---
+
+<LayoutFreeContent title={`RE+ MEXICO | Enligtenment Area`} />

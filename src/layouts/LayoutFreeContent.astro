@@ -1,0 +1,121 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+
+import Menu from '../components/Menu.astro'
+import i18next, { t } from 'i18next'
+import { HeadHrefLangs } from 'astro-i18next/components'
+import Footer from '../components/Footer.astro'
+import Submenu from '../components/Submenu.astro'
+---
+
+<!doctype html>
+<html lang={i18next.language}>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/webp' href='/img/favicon32x32.webp' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <HeadHrefLangs />
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-6GJCSFD2EH'
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-6GJCSFD2EH')
+    </script>
+    <!-- End Google tag (gtag.js) -->
+
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-M425LL8X')
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script is:inline>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments)
+        }
+        if (!f._fbq) f._fbq = n
+        n.push = n
+        n.loaded = !0
+        n.version = '2.0'
+        n.queue = []
+        t = b.createElement(e)
+        t.async = !0
+        t.src = v
+        s = b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t, s)
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      )
+      fbq('init', '1047851480332189')
+      fbq('track', 'PageView')
+    </script>
+    <noscript
+      ><img
+        height='1'
+        width='1'
+        style='display:none'
+        src='https://www.facebook.com/tr?id=1047851480332189&ev=PageView&noscript=1'
+      /></noscript
+    >
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src='https://www.googletagmanager.com/ns.html?id=GTM-M425LL8X'
+        height='0'
+        width='0'
+        style='display:none;visibility:hidden'></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+
+    <Menu />
+    <Submenu />
+    <slot />
+    <Footer />
+    <script
+      is:inline
+      src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js'
+    ></script>
+    <style is:global>
+      @font-face {
+        font-family: 'Tungsten-Medium';
+        src: url('/fonts/Tungsten-Medium.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </body>
+</html>
