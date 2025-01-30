@@ -221,6 +221,58 @@ app.post('/free-register', async (req, res) => {
     }
 });
 
+app.post('/free-register-sitio', async (req, res) => {
+    const { body } = req;
+
+    try {        
+        const data = { 
+            uuid: uuidv4(),            
+            ...body
+        };          
+        const userResponse = await RegisterModel.create_user_sitio({ ...data }); 
+        
+        if(!userResponse.status){
+            return  res.status(500).send({
+                ...userResponse
+            });
+        }                 
+                
+        return res.send({
+            uuid:  data.uuid,
+            status: true,
+            message: 'Tu registro fue exitoso...'
+        });                
+               
+    } catch (err) {
+        console.log(err);
+        res.status(500).send({
+            status: false,
+            message: 'hubo un error al procesar tu registro, por favor intenta mas tarde...'
+        });
+    }
+});
+
+app.post('/update-print-user', async (req, res) => {
+    const { body } = req;
+    const userResponse = await RegisterModel.update_print_user(body.uuid);
+
+    if (userResponse) {
+        return res.send({ success: true });
+    } else {
+        return res.send({ success: false });
+    }
+});
+
+app.get('/search-user', async (req, res) => {
+    const { uuid } = req.query;
+    const user = await RegisterModel.search_user(uuid);
+    if (user) {
+        return res.status(200).send(user);
+    } else {
+        return res.status(404).send({ message: 'No se encontró el usuario' });
+    }
+});
+
 app.get('/get-user-by-email', async (req, res) => {
     const { email } = req.query;
     const user = await RegisterModel.get_user_by_email(email);
