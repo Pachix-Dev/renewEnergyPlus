@@ -1,15 +1,13 @@
-import { title } from "process";
-import Logos from "../components/Logos.astro";
 
 export const conferences = {
     day_1: [
         {
             id: 1,            
             hour: '12:00 – 12:30',
-            name: 'HITACHI',
+            name: 'HUAWEI',
             status: 'VENDIDO', 
             duracion:'30 min.' ,
-            logos:'/img/sponsors/hitachi.webp'      
+            logos:'/img/sponsors/Huawei.webp'      
         },
         {
             id: 2,
@@ -84,25 +82,25 @@ export const conferences = {
             id: 6,
             hour: '15:45 – 16:15',
             name: 'EXEL SOLAR',
-            status: 'RESERVADO',
+            status: 'VENDIDO',
              duracion:'30 min.',
              logos:'/img/sponsors/EXELSOLAR.webp'
         },
         {
             id: 7,
             hour: '16:30 – 17:00',
-            name: 'LIVOLTEK',
-            status: 'RESERVADO',
+            name: 'ECOFLOW',
+            status: 'VENDIDO',
              duracion:'30 min.',
-             logos:'/img/sponsors/livoltek-0420.webp'
+             logos:'/img/sponsors/EcoFlow.webp'
         },
         {
             id: 8,
             hour: '17:15 – 18:00',
-            name: 'DISPONIBLE',
-            status: '$1,500 USD',
+            name: 'LEDVANCE MEXICO',
+            status: 'VENDIDO',
              duracion:'45 min.',
-             logos:''
+             logos:'/img/sponsors/leadvance.webp',
         }
     ],
     day_2: [
@@ -183,10 +181,10 @@ export const conferences = {
         {
             id: 8,
             hour: '17:15 – 18:00',
-            name: 'DISPONIBLE',
-            status: '$1,500 USD',
+            name: 'HUAWEI',
+            status: 'VENDIDO',
             duracion:'45 min',
-            logos:''
+            logos:'/img/sponsors/Huawei.webp'
         }
     ],
     day_3: [
@@ -226,16 +224,16 @@ export const conferences = {
         {
             id: 3,
             hour: '13:30 – 14:00',
-            name: 'DISPONIBLE',
-            status: '$1,500 USD',
+            name: 'WEIDMULLER',
+            status: 'RESERVADO',
              duracion:'30 min.',
-             logos:''
+             logos:'/img/expo/carousel3/weidmuller.webp'
         },
         {
             id: 4,
             hour: '14:15 – 14:45',
-            name: 'DISPONIBLE',
-            status: '$1,500 USD',
+            name: 'BIOESOL',
+            status: 'VENDIDO',
              duracion:'30 min.',
              logos:''
         },
