@@ -337,7 +337,7 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'img/speakers-conferencia-premium/EmmanuelMoctezuma-Fotografía.webp',              
+                    imagenes:'/img/speakers-conferencia-premium/EmmanuelMoctezuma-Fotografía.webp',              
                     name: 'Emmanuel Moctezuma ',
                     bio: 'Emmanuel es Ingeniero Mecánico Administrativo por el Tecnológico de Monterrey, México, graduado en 2008. De igual manera, graduado de la Maestría en Energía por la Universidad de Auckland, Nueva Zelanda. Inició su carrera profesional en el sector petrolero como Ingeniero de Campo en la compañía de servicios petroleros SCHLUMBERGER, atendiendo pozos y plataformas en países como México, Colombia, Emiratos Árabes Unidos y Estados Unidos. Cuenta con más de 13 años de experiencia en el área comercial, estrategia y desarrollo de negocios para diversas empresas trasnacionales, como ALFA LAVAL, GENERAL ELECTRIC y SIEMENS, gestionando cuentas y proyectos dentro del sector energético, tanto convencional como renovable.',
                     bio_en: 'Emmanuel is an Administrative Mechanical Engineer from the Tecnológico de Monterrey, Mexico, graduated in 2008. Also, Master of Energy from the University of Auckland, New Zealand. He started his career in the oil sector as a field engineer at the SCHLUMBERGER oil services company, servicing wells and platforms in countries such as Mexico, Colombia, the United Arab Emirates and the United States. He has over 13 years of experience in commercial, strategy and business development for several transnational companies such as ALFA LAVAL, GENERAL ELECTRIC and SIEMENS, managing accounts and projects within the conventional and renewable energy sector.',
@@ -350,7 +350,7 @@ export const program_premium = {
                 },   
                 {       
                     id: 2,  
-                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
                     name: 'Catalina Delgado ',
                     bio: '',
                     bio_en: '',
@@ -363,7 +363,7 @@ export const program_premium = {
                 }, 
                 {       
                     id: 3,  
-                    imagenes:'img/speakers-conferencia-premium/EnriqueGarduño-Fotografía.webp',              
+                    imagenes:'/img/speakers-conferencia-premium/EnriqueGarduño-Fotografía.webp',              
                     name: 'Enrique Garduño',
                     bio: 'Enrique Garduño Olivas es un distinguido profesional con una sólida formación académica y una profunda pasión por la innovación en energía sustentable. Es Ingeniero Químico por la UNAM, además de contar con estudios en Economía por el ITAM. Su enfoque en el desarrollo de soluciones de energía sustentable lo ha situado como uno de los pioneros líderes en la industria fotovoltaica y de almacenamiento de energía de México. Además, ha destacado en la implementación de sistemas de híbridos y proyectos relacionados con microrredes. Su profundo conocimiento y experiencia en cuestiones medioambientales han dejado una huella significativa en diversas empresas con las que ha colaborado.',
                     bio_en: 'Enrique Garduño Olivas is a distinguished professional with a solid academic background and a deep passion for innovation in sustainable energy. He is a chemical engineer from UNAM, and has studies in economics from ITAM. His focus on developing sustainable energy solutions has positioned him as one of the leading pioneers in Mexico’s photovoltaic and energy storage industry. He has also excelled in the implementation of hybrid systems and projects related to micro-grids. His in-depth knowledge and experience of environmental issues have left a significant mark on several companies with whom he has worked.',
@@ -389,7 +389,7 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'img/speakers-conferencia-premium/Luisa-Fotografía.webp',              
+                    imagenes:'/img/speakers-conferencia-premium/Luisa-Fotografía.webp',              
                     name: 'Luisa Sierra',
                     bio: 'Anteriormente, se desempeñó como directora del Programa de Energía en la Iniciativa Climática de México (ICM). Es arquitecta y cuenta con una Maestría en Planeación Urbana por University College London. Además, posee diplomas en política pública, matemáticas y estadística, y en finanzas corporativas. Es autora y coautora de diversas publicaciones y reportes enfocados en cambio climático, energía y transporte. Su experiencia abarca temas como, presupuestos de carbono y rutas de descarbonización a nivel nacional y estatal, planificación del sector eléctrico, transporte, hidrocarburos y combustibles alternativos. Ha dirigido desde hace más de 6 años, el seguimiento y colaboración con institutos internacionales y es parte de la red internacional de think tanks en energía (INETTT).',
                     bio_en: 'Previously, she served as the Director of the Energy Program at the Mexico Climate Initiative (ICM). She is an architect and holds a Master’s degree in Urban Planning from University College London. He also holds degrees in public policy, mathematics and statistics, and corporate finance. Author and co-author of several publications and reports focusing on climate change, energy and transport. His expertise covers topics such as, carbon budgets and decarbonization routes at national and state level, electricity sector planning, transport, hydrocarbons and alternative fuels. For more than 6 years, he has led the follow-up and collaboration with international institutes and is part of the international network of think tanks in energy (INETTT).',
@@ -440,7 +440,7 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
                     name: 'Fernando del Cueto',
                     bio: '',
                     bio_en: '',
@@ -453,7 +453,7 @@ export const program_premium = {
                 }, 
                 {       
                     id: 2,  
-                    imagenes:'img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
                     name: 'Paulina Beck',
                     bio: '',
                     bio_en: '',
@@ -466,7 +466,7 @@ export const program_premium = {
                 }, 
                 {       
                     id: 3,  
-                    imagenes:'img/speakers-conferencia-premium/Gilberto_Sánchez-Fotografía-transformed.webp',              
+                    imagenes:'/img/speakers-conferencia-premium/Gilberto_Sánchez-Fotografía-transformed.webp',              
                     name: 'Gilberto Sánchez',
                     bio: 'Es vicepresidente de la Asociación Nacional de Energía Solar AC para el periodo 2024-2026. Cuenta con mas de 12 años de experiencia en el Sector Eléctrico. Como Empresario, su empresa ha desarrollado más de 400 proyectos de Generación Limpia Distribuida en el Sector Industrial, Comercial y Domestico. Como Consultor ha asesorado a diferentes empresas para la implementación de proyectos de generación de energía y participación en el mercado eléctrico mayorista de México. Formó parte del Programa Especial de Transición Energética en 2016 para determinar la Regulación para Generación Distribuida en México. En la actualidad sigue participando en diferentes mesas de trabajo para el Desarrollo y Actualización de diferentes Normas y Regulación del Sector.',
                     bio_en: 'He is vice president of the National Association for Solar Energy AC for the period 2024-2026. He has more than 12 years of experience in the electrical sector. As an entrepreneur, your company has developed more than 400 projects of Distributed Clean Generation in the Industrial, Commercial and Domestic Sector. As a consultant he has advised different companies for the implementation of power generation projects and participation in the wholesale electricity market of Mexico. Participated in the Special Energy Transition Program in 2016 to determine the Regulation for Distributed Generation in Mexico. Currently continues to participate in different working groups for the development and updating of different standards and regulations of the sector.',
