@@ -119,7 +119,6 @@ export function StepThreeSitio({ translates, currentLanguage }) {
 
     const orderData = await response.json()
     if (orderData?.status) {
-      clear()
       setCompleteRegister(true)
       setUuid(orderData?.uuid)
       currentLanguage === 'es'

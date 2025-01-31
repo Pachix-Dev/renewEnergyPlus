@@ -140,6 +140,7 @@ const useRegisterForm = create(
                 uuid: "",
                 step: 0,            
                 name: "",
+                email: "",
                 paternSurname: "",
                 maternSurname: "",               
                 phone: "",
