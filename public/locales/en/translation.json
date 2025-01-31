@@ -470,6 +470,17 @@
         "select_hour": "On what day and at what time do you need your table?",
         "select_default": "Select an schedule",
         "text_select": "Select the day and time chosen to attend the event, this reservation includes a table space for up to 10 people",     
-        "comments": "Aditional comments"
+        "comments": "Aditional comments",
+        "cupon_text": "COUPON ONLY APPLIES FOR FULL PASS, ENERGY NIGHT & VIP AREA",
+        "cupon": "Coupon valid, limited to 1 use only!"
+    },
+    "installer_award":{
+        "text_1": "Show your excellence in the Solar Industry!",
+        "text_2": "Participate in the Installer Award Mexico 2025, get a prestigious recognition that highlights your experience and positions you as a leader in the market.",
+        "text_3": "The Installer Award is presented in 22 countries, celebrating the achievements of the best professionals worldwide.",
+        "text_4": "Stand out with exclusive marketing benefits and international recognition.",
+        "text_5": "I want to become a sponsor",
+        "text_6": "REGISTER TO THE CALL",
+        "text_7": "Don't miss the awards ceremony on <strong>March 5, 2025 at 5:15pm at RE+ Mexico</strong> (Installers & Innovation Area, Guadalajara.)"
     }
 }

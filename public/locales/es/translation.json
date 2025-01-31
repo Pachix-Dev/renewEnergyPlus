@@ -470,6 +470,17 @@
         "select_hour": "¿En qué día y en que horario requieres tu mesa?",
         "select_default": "Selecciona un horario",
         "text_select": "Seleccióne el día y horario elegido para asistir al evento, esta reserva incluye el espacio de una mesa para hasta 10 personas",         
-        "comments": "Comentarios adicionales"   
+        "comments": "Comentarios adicionales",
+        "cupon_text": "El CUPON SOLO APLICA PARA PASE COMPLETO, ENERGY NIGHT Y VIP AREA",
+        "cupon": "Cupon valido, limitado a 1 solo uso!"
+    },
+    "installer_award":{
+        "text_1": "¡Demuestra tu excelencia en la Industria Solar!",
+        "text_2": "Participa en el <strong>Installer Award México 2025</strong>, obtén un prestigioso reconocimiento destaca tu experiencia y te posiciona como un líder en el mercado.",
+        "text_3": "El Installer Award se otorga en 22 países, celebrando los logros de los mejores profesionales a nivel mundial.",
+        "text_4": "Destácate con beneficios exclusivos de marketing y un reconocimiento a nivel internacional.",
+        "text_5": "quiero ser patrocinador",
+        "text_6": "REGÍSTRATE A LA CONVOCATORIA",
+        "text_7": "No te pierdas la ceremonia de premiación el <strong>5 de marzo de 2025 a las 5:15pm en RE+ México</strong> (Installers & Innovation Area, Guadalajara.)"
     }
 }

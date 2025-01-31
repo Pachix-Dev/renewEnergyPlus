@@ -1,0 +1,147 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import i18next, { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
+---
+
+<Layout title='RE+ Mexico | Installer Award Mexico'>
+  <section class="bg-[url('/img/bgaward.webp')] bg-cover bg-center py-10">
+    <div class='container mx-auto px-4 text-center grid gap-20 mt-20'>
+      <img src='/img/eupd.webp' alt='Installer Award Mexico' width='200' />
+      <div class='bg-[#BF1309] text-white text-lg md:text-6xl font-bold p-5'>
+        {t('installer_award.text_1')}
+      </div>
+    </div>
+  </section>
+  <section class="bg-[url('/img/bgaward2.webp')] bg-cover bg-center py-20">
+    <div class='container mx-auto px-4 text-center'>
+      <div
+        class='bg-white text-black text-xl md:text-3xl p-5'
+        set:html={t('installer_award.text_2')}
+      />
+      <div class='grid md:grid-cols-2 gap-5'>
+        <div class='grid justify-between'>
+          <img
+            src='/img/awardimg1.webp'
+            alt='Installer Award Mexico'
+            class='w-full object-cover rounded-md'
+          />
+          <div
+            class='bg-white text-black text-xl md:text-3xl flex justify-center items-center p-5'
+          >
+            {t('installer_award.text_3')}
+          </div>
+        </div>
+        <img
+          src='/img/awardimg2.webp'
+          alt='Installer Award Mexico'
+          class='w-full object-cover rounded-md'
+        />
+      </div>
+    </div>
+  </section>
+  <section class='container mx-auto px-4 text-center py-20'>
+    <p class='text-xl md:text-4xl'>{t('installer_award.text_4')}</p>
+    <a
+      href={i18next.language === 'es'
+        ? '/doc/2025-Installer-Awards-Reception-Sponsorships-ESP-compressed.pdf'
+        : '/doc/2025-Installer-Awards-Reception-Sponsorships-ENG-compressed.pdf'}
+      target='_blank'
+      class='mt-10 button w-full py-4 text-white'
+    >
+      <span class='uppercase text-2xl md:text-6xl'
+        >{t('installer_award.text_5')}</span
+      >
+    </a>
+  </section>
+  <section class="bg-[url('/img/bgaward3.webp')]">
+    <div class='container mx-auto px-4 py-20 text-center grid gap-20'>
+      <a
+        href='https://survey.eupd-research.com/index.php?r=survey/index&sid=499871&lang=es'
+        target='_blank'
+        class='mt-10 button w-full py-4 text-white'
+      >
+        <span class='uppercase text-2xl md:text-6xl'
+          >{t('installer_award.text_6')}</span
+        >
+      </a>
+      <p class='text-xl md:text-4xl' set:html={t('installer_award.text_7')} />
+    </div>
+  </section>
+</Layout>
+<style>
+  .button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 1rem;
+    padding-inline: 1.25rem;
+    background: rgb(188, 1, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(188, 1, 0, 1) 0%,
+      rgba(215, 105, 1, 1) 100%
+    );
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+
+  .button::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+
+    60% {
+      left: 100%;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+</style>

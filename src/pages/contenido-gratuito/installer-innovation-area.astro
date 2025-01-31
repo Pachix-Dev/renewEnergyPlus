@@ -1,14 +1,22 @@
 ---
+<<<<<<< HEAD
 import i18next, { t, changeLanguage } from "i18next";
 import LayoutFreeContent from "../../layouts/LayoutFreeContent.astro";
 import { Speaker } from "../../components/program-free/Speaker.jsx";
 import { installerInnovation } from "../../data/constans_installer_innovation";
+=======
+import { conferences } from "../../data/constans_enlightenment";
+import i18next, { t, changeLanguage } from "i18next";
+import LayoutFreeContent from "../../layouts/LayoutFreeContent.astro";
+import { Speaker } from "../../components/program-free/Speaker.jsx";
+>>>>>>> d65788e26d20a7f20ff0d4b569e69bfa11be8525
 
 changeLanguage("es");
 
 const language = i18next.language;
 ---
 
+<<<<<<< HEAD
 <LayoutFreeContent title={`RE+ MEXICO | Enligtenment Area`}>
   <main class='mx-5 md:mx-16 lg:mx-32 pb-5'>
     <h1
@@ -391,3 +399,6 @@ const language = i18next.language;
     animation-fill-mode: both;
   }
 </style>
+=======
+<LayoutFreeContent title={`RE+ MEXICO | Enligtenment Area`} />
+>>>>>>> d65788e26d20a7f20ff0d4b569e69bfa11be8525

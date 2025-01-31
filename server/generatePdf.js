@@ -220,51 +220,25 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
          width: 250,
          align: 'justify'
      })
-     .moveDown(1); 
-     doc.font('Helvetica-Bold')
-     .fontSize(8)
-     .text('3.', 330)
-     .font('Helvetica')
-     .text('Disfruta tu visita y utiliza el hashtag', 345, 175, {
-         width: 250,    
-         continued: true
-     })
-     .fillColor('#1E92D0')
-     .font('Helvetica-Bold')
-     .text(' #REPLUSMEXICO ', { continued: true })
-     .fillColor('black')
-     .font('Helvetica')
-     .text(' en tus posteos en redes sociales.')
-     .text('Enjoy your visit and use the hashtag', {
-         width: 250,    
-         continued: true
-     })
-     .fillColor('#1E92D0')
-     .font('Helvetica-Bold')
-     .text(' #REPLUSMEXICO ', { continued: true })
-     .fillColor('black')
-     .font('Helvetica')
-     .text(' on your social media posts.')
+     .moveDown(1)     
      .moveDown(2);
      
      doc
      .font('Helvetica-Bold')
-     .text('HORARIOS / SCHEDULE',{
+     .text('HORARIOS / SCHEDULE', 325, 240,{
          width: 250,    
          align: 'center'
      })
-     .moveDown(1)
-     .text('Marzo')
-     .text('March')
-     .text('(5)   11:00 am – 18:00 hrs', 330, 250, {
+     .moveDown(1)     
+     .text('Miércoles/Wednesday   11:00 am – 6:00 pm', 330, 250, {
          width: 250,    
          align: 'center'
      })
-     .text('(6)  11:00 am – 18:00 hrs', 330, 260, {
+     .text('Jueves/Thursday  11:00 am – 6:00 pm', 330, 260, {
          width: 250,    
          align: 'center'
      })
-     .text('(7)  11:00 am – 17:00 hrs', 330, 270, {
+     .text('Viernes/Friday  11:00 am – 5:00 pm', 330, 270, {
          width: 250,    
          align: 'center'
      })
@@ -414,58 +388,52 @@ async function generatePDF_freePass( body, uuid) {
         align: 'justify'
     })
     .moveDown(1); 
-    doc.font('Helvetica-Bold')
-    .fontSize(8)
-    .text('3.', 330)
-    .font('Helvetica')
-    .text('Disfruta tu visita y utiliza el hashtag', 345, 175, {
-        width: 250,    
-        continued: true
-    })
-    .fillColor('#1E92D0')
-    .font('Helvetica-Bold')
-    .text(' #REPLUSMEXICO ', { continued: true })
-    .fillColor('black')
-    .font('Helvetica')
-    .text(' en tus posteos en redes sociales.')
-    .text('Enjoy your visit and use the hashtag', {
-        width: 250,    
-        continued: true
-    })
-    .fillColor('#1E92D0')
-    .font('Helvetica-Bold')
-    .text(' #REPLUSMEXICO ', { continued: true })
-    .fillColor('black')
-    .font('Helvetica')
-    .text(' on your social media posts.')
-    .moveDown(2);
+     doc.font('Helvetica-Bold')
+     .fontSize(8)
+     .text('3.', 330)
+     .font('Helvetica')
+     .text('Disfruta tu visita y utiliza el hashtag', 345, 175, {
+         width: 250,    
+         continued: true
+     })
+     .fillColor('#1E92D0')
+     .font('Helvetica-Bold')
+     .text(' #REPLUSMEXICO ', { continued: true })
+     .fillColor('black')
+     .font('Helvetica')
+     .text(' en tus posteos en redes sociales.')
+     .text('Enjoy your visit and use the hashtag', {
+         width: 250,    
+         continued: true
+     })
+     .fillColor('#1E92D0')
+     .font('Helvetica-Bold')
+     .text(' #REPLUSMEXICO ', { continued: true })
+     .fillColor('black')
+     .font('Helvetica')
+     .text(' on your social media posts.')
+     .moveDown(2);
     
     doc
     .font('Helvetica-Bold')
-    .text('HORARIOS / SCHEDULE',{
+    .text('HORARIOS / SCHEDULE', 325, 240,{
         width: 250,    
         align: 'center'
     })
-    .moveDown(1)
-    .text('Marzo')
-    .text('March')
-    .text('(5)   11:00 am – 18:00 hrs', 330, 250, {
+    .moveDown(1)    
+    .text('Miércoles/Wednesday   11:00 am – 6:00 pm', 330, 250, {
         width: 250,    
         align: 'center'
     })
-    .text('(6)  11:00 am – 18:00 hrs', 330, 260, {
+    .text('Jueves/Thursday  11:00 am – 6:00 pm', 330, 260, {
         width: 250,    
         align: 'center'
     })
-    .text('(7)  11:00 am – 17:00 hrs', 330, 270, {
-        width: 250,    
-        align: 'center'
-    })
-    .moveDown(1)
-    .text('ITALIAN GERMAN EXHIBITION COMPANY MEXICO', {
+    .text('Viernes/Friday  11:00 am – 5:00 pm', 330, 270, {
         width: 250,    
         align: 'center'
     });
+    
 
     body.typeRegister === 'VISITANTE' ? doc.image('img/footer2_gafete.jpg', 307, 328, { width: 306 }) : doc.image('img/footer2_prensa_gafete.jpg', 307, 328, { width: 306 });
 

@@ -48,7 +48,20 @@ app.post('/create-order-replus', async (req, res) => {
     try {
         const { body } = req;
         let total = 0;
-        
+
+        // Check if the items are unique
+        const ids = [];        
+        body.items.forEach((item) => {
+            if (ids.includes(item.id)) {                
+                return res.status(500).send({
+                    status: false,
+                    message: 'Tu compra no pudo ser procesada, la información no es válida...'
+                });
+            } else {
+                ids.push(item.id); // Add unique id to the list
+            }
+        });
+
         const get_products = await RegisterModel.get_products();
 
         if (!get_products.status) {
@@ -67,7 +80,7 @@ app.post('/create-order-replus', async (req, res) => {
             if(!product){
                 return res.status(500).send({
                     status: false,
-                    message: 'Producto no encontrado...'
+                    message: 'Error producto no encontrado...'
                 });
             }            
         });

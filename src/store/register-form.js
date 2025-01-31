@@ -111,13 +111,28 @@ const useRegisterForm = create(
                 }
             }),
             
-            removeToCart: (id) => set((state) => {
+            removeToCart: (id) => set((state) => {                
                 const newItems = state.items.filter((item) => item.id !== id);
                 const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
+
                 return {
-                    items: newItems,
-                    total: newTotal
+                    items: id === 1 ? [] : newItems,
+                    total: id === 1 ? 0 : newTotal
                 };
+            }),
+
+            addDiscount: (item) => set((state) => {
+                const itemAlreadyExists = state.items.some(i => i.id === item.id);
+                if (itemAlreadyExists) {
+                    return state;
+                } else {
+                    const newItems = [...state.items, { ...item }];
+                    const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
+                    return {
+                        items: newItems,
+                        total: newTotal,                        
+                    };
+                }
             }),
 
             clear: () => set({ 
