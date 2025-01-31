@@ -1,22 +1,14 @@
 ---
-<<<<<<< HEAD
-import i18next, { t, changeLanguage } from "i18next";
-import LayoutFreeContent from "../../layouts/LayoutFreeContent.astro";
-import { Speaker } from "../../components/program-free/Speaker.jsx";
-import { installerInnovation } from "../../data/constans_installer_innovation";
-=======
-import { conferences } from "../../data/constans_enlightenment";
-import i18next, { t, changeLanguage } from "i18next";
-import LayoutFreeContent from "../../layouts/LayoutFreeContent.astro";
-import { Speaker } from "../../components/program-free/Speaker.jsx";
->>>>>>> d65788e26d20a7f20ff0d4b569e69bfa11be8525
+import i18next, { t, changeLanguage } from 'i18next'
+import LayoutFreeContent from '../../layouts/LayoutFreeContent.astro'
+import { Speaker } from '../../components/program-free/Speaker.jsx'
+import { installerInnovation } from '../../data/constans_installer_innovation'
 
-changeLanguage("es");
+changeLanguage('es')
 
-const language = i18next.language;
+const language = i18next.language
 ---
 
-<<<<<<< HEAD
 <LayoutFreeContent title={`RE+ MEXICO | Enligtenment Area`}>
   <main class='mx-5 md:mx-16 lg:mx-32 pb-5'>
     <h1
@@ -230,8 +222,8 @@ const language = i18next.language;
                       <div class='text-sm md:text-lg font-semibold mt-3 text-custom-orange'>
                         {speaker.subtitle
                           ? i18next.language === 'es'
-                            ? speaker.subtitle
-                            : speaker.subtitle_en
+                            ? speaker?.subtitle
+                            : speaker?.subtitle_en
                           : ''}
                       </div>
                     </div>
@@ -243,42 +235,6 @@ const language = i18next.language;
         }
       </div>
     </section>
-
-    <div
-      class='hidden p-4 rounded-lg mx-auto'
-      id='settings'
-      role='tabpanel'
-      aria-labelledby='settings-tab'
-    >
-      {
-        installerInnovation.day_3.map((conference) => (
-          <div class='flex flex-col md:flex-row gap-4 md:gap-6 text-white my-5 bg-black/60 shadow-lg p-6 rounded-lg'>
-            <div class='flex items-center gap-2 p-3 text-sm md:text-lg'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke-width='1.5'
-                stroke='currentColor'
-                class='size-6 md:size-8'
-              >
-                <path
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  d='M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
-                />
-              </svg>
-            </div>
-
-            <div class='flex flex-col md:flex-row md:items-center md:space-x-4 w-full'>
-              <div class='flex-1 gap-2 p-3' />
-
-              <div class='gap-10 p-3' />
-            </div>
-          </div>
-        ))
-      }
-    </div>
   </main>
 </LayoutFreeContent>
 
@@ -399,6 +355,3 @@ const language = i18next.language;
     animation-fill-mode: both;
   }
 </style>
-=======
-<LayoutFreeContent title={`RE+ MEXICO | Enligtenment Area`} />
->>>>>>> d65788e26d20a7f20ff0d4b569e69bfa11be8525

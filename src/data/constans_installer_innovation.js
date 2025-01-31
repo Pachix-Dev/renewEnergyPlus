@@ -180,6 +180,8 @@ export const installerInnovation = {
             speakers: [
                 {       
                     id: 1,  
+                    subtitle:'', 
+                    subtitle_en:'',
                     nameem: 'AP SYSTEMS',              
                     name: 'José Cataño',
                     bio: 'El Ing. Cataño ha tenido una carrera técnica desde pequeño durante su preparatoria, posteriormente se graduó como Ingeniero en Mantenimiento Industrial en la Universidad Tecnológica de Jalisco. En 2019 comenzó en el área de sistemas con la empresa Gen-t para Herbalife Nutrition, después apoyó como consultor externo para el ERP Oracle. Ha tenido experiencia en apps de negocio, administración de negocios, base de datos y administración de base de datos usando Power BI.',
