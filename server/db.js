@@ -81,6 +81,131 @@ export class RegisterModel {
     }
   }
   
+  static async create_user_sitio ({
+    uuid,             
+    name,
+    paternSurname,
+    maternSurname,
+    email,
+    phone,
+    typeRegister,
+    genre,
+    nacionality,
+    code_invitation,
+    company,
+    industry,
+    position,
+    area,
+    country,
+    municipality,
+    state,
+    city,
+    address,
+    colonia,
+    postalCode,
+    webPage,
+    phoneCompany,
+    eventKnowledge,
+    productInterest,
+    levelInfluence,
+    wannaBeExhibitor,
+    alreadyVisited,
+  }) {
+    const connection = await mysql.createConnection(config)
+    try {      
+      const [result] = await connection.query(
+        'INSERT INTO users (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited, registro_en_sitio ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+        [
+          uuid,             
+          name,
+          paternSurname,
+          maternSurname,
+          email,
+          phone,
+          typeRegister,
+          genre,
+          nacionality,
+          code_invitation,    
+          company,
+          industry,
+          position,
+          area,
+          country,
+          municipality,
+          state,
+          city,
+          address,
+          colonia,
+          postalCode,
+          webPage,
+          phoneCompany,
+          eventKnowledge,
+          productInterest,
+          levelInfluence,
+          wannaBeExhibitor,
+          alreadyVisited,
+          1   
+        ]
+      )
+                              
+      return {
+        status: true,
+        insertId: result.insertId,
+        ...result,
+      }
+    }catch (error) {
+      console.log(error)
+      return hableError(error)          
+    }
+    finally {
+      await connection.end()
+    }
+  }
+
+  static async update_print_user (uuid) {
+    const connection = await mysql.createConnection(config)
+    try {      
+      const [result] = await connection.query(
+        'UPDATE users SET imprimir_gafete	 = 1 WHERE uuid = ?',
+        [
+          uuid,          
+        ]
+      )
+      return {
+        status: true,
+        result
+      }                
+    } finally {
+      await connection.end() // Close the connection
+    }
+  }
+ 
+  static async search_user (uuid) {
+    const connection = await mysql.createConnection(config)
+    try {      
+      const [result] = await connection.query(
+        'SELECT * FROM users WHERE uuid = ?',
+        [
+          uuid,          
+        ]
+      )
+      if (result.length === 0) {
+        return {
+          status: false,          
+          message: 'No se encontró el usuario',
+        }
+      }else{
+        return {
+          status: true,
+          user: {...result[0]}
+        }                
+      }
+    } finally {
+      await connection.end() // Close the connection
+    }
+  }
+  
+
   static async create_user ({
       uuid,             
       name,

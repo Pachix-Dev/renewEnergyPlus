@@ -677,7 +677,7 @@ const sponsors = [
 	{
 		src: '/img/sponsors/nosmueveelsol.webp',
       	alt: 'enlight',
-		width: 250,
+		width: 180,
 	},
 	{
 		src: '/img/sponsors/EcoFlow.webp',
