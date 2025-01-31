@@ -243,40 +243,15 @@ export const program_premium = {
             ],    
 
         },
+        
         {
             hour: '13:00 - 13:30',
-            title: 'Economía circular en el sector solar: desafíos y oportunidades para el reciclaje de paneles',
-            title_en: 'Circular economy in the solar sector: challenges and opportunities for panel recycling',
-            tag: 'Panel',
-            tag_en: 'Panel',
-            color: '#016A02',
-            duración:'30 min',
-            resume: 'El crecimiento de la energía solar plantea el reto de gestionar los paneles al final de su vida útil, con un estimado de 36,500 toneladas de residuos solares en México, según la Agencia Internacional de Energías Renovables. Se explorarán los desafíos regulatorios, tecnológicos y económicos del reciclaje fotovoltaico, así como las oportunidades para recuperar materiales valiosos y fomentar modelos de negocio sostenibles. También se analizarán las estrategias necesarias para impulsar una economía circular que reduce el impacto ambiental y genera valor en la industria solar.',
-            resume_en: 'The growth of solar energy poses the challenge of managing panels at the end of their life, with an estimated 36,500 tons of solar waste in Mexico, according to the International Renewable Energy Agency. The regulatory, technological and economic challenges of PV recycling will be explored, as well as opportunities to recover valuable materials and promote sustainable business models. Strategies needed to drive a circular economy that reduces environmental impact and generates value in the solar industry will also be discussed.',    
-            speakers: [
-                {       
-                    id: 1,  
-                    imagenes:'/img/speakers-conferencia-premium/MarcoGuzmán.webp',              
-                    name: 'Marco Guzmán',
-                    bio: 'Ingeniero Eléctrico del Instituto Politécnico Nacional (IPN), estudio Posgrado en Administración de Empresas en el Instituto de Capacitación de Telecomunicaciones de Telmex (INTTELMEX). Rector del “Instituto de Certificación tecnológica” (ICETEC) que opera desde 2018, Director general del Organismo Certificador “Centro Nacional de Capacitación de Energías Renovables” (CENCER).Trabajo en la empresa Teléfonos de México (Telmex) como directivo, coordinando a grupos de trabajo técnicos para el despliegue de Infraestructura eléctrica energizando Centrales de Transmisión, Conmutación y Data Center. Operó para el Grupo CARSO Planes de Acción de Eficiencia Energética para empresas de Telecom en México y en América Latina, apoyando la adquisición de las empresas en América Latina y Europa para el grupo. Miembro de la Asociación Mexicana de la Industria Fotovoltaica (AMIF) y de la Asociación Nacional de Energía Solar (ANES). Coordinador Operativo de Energías Renovables de la Federación de Colegios Mecánicos y Eléctricos (FECIME).',
-                    bio_en: 'Electrical Engineer at the Instituto Politécnico Nacional (IPN), postgraduate study in business administration at the Telecommunications Training Institute of Telmex (INTTELMEX). Rector of the "Institute for Technological Certification" (ICETEC) operating since 2018, Director General of the Certifying Body "National Training Center for Renewable Energies" (CENCER). I work in the company Teléfonos de México (Telmex) as a manager, coordinating technical working groups for the deployment of electrical infrastructure energizing transmission, switching and data center. Operated for the CARSO Group Energy Efficiency Action Plans for Telecom companies in Mexico and Latin America, supporting the acquisition of companies in Latin America and Europe for the group. Member of the Mexican Association of the Photovoltaic Industry (AMIF) and the National Solar Energy Association (ANES). Operational Coordinator of Renewable Energies of the Federation of Mechanical and Electrical Colleges (FECIME).',
-                    position: 'Presidente ',
-                    position_en:'Chairman ',
-                    email:'',
-                    phone:'',
-                    nameem:'CONOCER'
-                   
-                },                
-            ],    
-        } ,
-        {
-            hour: '13:30 - 14:15',
             title: 'Hacia un futuro sostenible: el impacto del personal calificado en la energía solar',
             title_en: 'Towards a sustainable future: the impact of skilled personnel on solar energy',
             tag: 'Conferencia',
             tag_en: 'Conference',
             color: '#016A02',
-            duración:'45 min',
+            duración:'30 min',
             resume: 'Se discutirá la evolución de los estándares técnicos de CONOCER, las certificaciones y las mejores prácticas que los profesionales del sector deben seguir, así como la importancia de contar con personal capacitado y actualizado frente a los avances tecnológicos en la industria solar.',
             resume_en: 'The evolution of CONOCER technical standards, certifications and best practices that professionals in the sector must follow will be discussed, as well as the importance of having trained and updated personnel in the face of technological advances in the solar industry.',    
             speakers: [
@@ -321,6 +296,32 @@ export const program_premium = {
                 },               
             ],    
         },
+        {
+            hour: '13:30 - 14:15',
+            title: 'Economía circular en el sector solar: desafíos y oportunidades para el reciclaje de paneles',
+            title_en: 'Circular economy in the solar sector: challenges and opportunities for panel recycling',
+            tag: 'Panel',
+            tag_en: 'Panel',
+            color: '#016A02',
+            duración:'45 min',
+            resume: 'El crecimiento de la energía solar plantea el reto de gestionar los paneles al final de su vida útil, con un estimado de 36,500 toneladas de residuos solares en México, según la Agencia Internacional de Energías Renovables. Se explorarán los desafíos regulatorios, tecnológicos y económicos del reciclaje fotovoltaico, así como las oportunidades para recuperar materiales valiosos y fomentar modelos de negocio sostenibles. También se analizarán las estrategias necesarias para impulsar una economía circular que reduce el impacto ambiental y genera valor en la industria solar.',
+            resume_en: 'The growth of solar energy poses the challenge of managing panels at the end of their life, with an estimated 36,500 tons of solar waste in Mexico, according to the International Renewable Energy Agency. The regulatory, technological and economic challenges of PV recycling will be explored, as well as opportunities to recover valuable materials and promote sustainable business models. Strategies needed to drive a circular economy that reduces environmental impact and generates value in the solar industry will also be discussed.',    
+            speakers: [
+                {       
+                    id: 1,  
+                    imagenes:'/img/speakers-conferencia-premium/MarcoGuzmán.webp',              
+                    name: 'Marco Guzmán',
+                    bio: 'Ingeniero Eléctrico del Instituto Politécnico Nacional (IPN), estudio Posgrado en Administración de Empresas en el Instituto de Capacitación de Telecomunicaciones de Telmex (INTTELMEX). Rector del “Instituto de Certificación tecnológica” (ICETEC) que opera desde 2018, Director general del Organismo Certificador “Centro Nacional de Capacitación de Energías Renovables” (CENCER).Trabajo en la empresa Teléfonos de México (Telmex) como directivo, coordinando a grupos de trabajo técnicos para el despliegue de Infraestructura eléctrica energizando Centrales de Transmisión, Conmutación y Data Center. Operó para el Grupo CARSO Planes de Acción de Eficiencia Energética para empresas de Telecom en México y en América Latina, apoyando la adquisición de las empresas en América Latina y Europa para el grupo. Miembro de la Asociación Mexicana de la Industria Fotovoltaica (AMIF) y de la Asociación Nacional de Energía Solar (ANES). Coordinador Operativo de Energías Renovables de la Federación de Colegios Mecánicos y Eléctricos (FECIME).',
+                    bio_en: 'Electrical Engineer at the Instituto Politécnico Nacional (IPN), postgraduate study in business administration at the Telecommunications Training Institute of Telmex (INTTELMEX). Rector of the "Institute for Technological Certification" (ICETEC) operating since 2018, Director General of the Certifying Body "National Training Center for Renewable Energies" (CENCER). I work in the company Teléfonos de México (Telmex) as a manager, coordinating technical working groups for the deployment of electrical infrastructure energizing transmission, switching and data center. Operated for the CARSO Group Energy Efficiency Action Plans for Telecom companies in Mexico and Latin America, supporting the acquisition of companies in Latin America and Europe for the group. Member of the Mexican Association of the Photovoltaic Industry (AMIF) and the National Solar Energy Association (ANES). Operational Coordinator of Renewable Energies of the Federation of Mechanical and Electrical Colleges (FECIME).',
+                    position: 'Presidente ',
+                    position_en:'Chairman ',
+                    email:'',
+                    phone:'',
+                    nameem:'CONOCER'
+                   
+                },                
+            ],    
+        } ,
          
     ],
     day_3:[

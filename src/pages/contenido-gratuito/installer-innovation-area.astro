@@ -52,105 +52,59 @@ const language = i18next.language
               aria-selected='false'>{t('program.day_2')}</button
             >
           </li>
-          <li class='me-2' role='presentation'>
-            <button
-              class='inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300'
-              id='settings-tab'
-              data-tabs-target='#settings'
-              type='button'
-              role='tab'
-              aria-controls='settings'
-              aria-selected='false'>{t('program.day_3')}</button
-            >
-          </li>
+         
         </ul>
       </div>
 
+  
       <div id='default-tab-content'>
-        <div
-          class='hidden p-4 rounded-lg'
-          id='profile'
-          role='tabpanel'
-          aria-labelledby='profile-tab'
-        >
-          {
-            installerInnovation.day_1.map((conference) => (
-              <div class='bg-black/60 shadow-lg p-6 rounded-lg my-5 text-white flex flex-col gap-6'>
-                <div class='flex items-center gap-3 text-sm md:text-lg font-medium'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke-width='1.5'
-                    stroke='currentColor'
-                    class='size-6 md:size-8'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      d='M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
-                    />
-                  </svg>
-                  <span>{conference.hour}</span>
-                </div>
-
-                <div class='grid md:items-center gap-6'>
-                  <div class='flex-1'>
-                    <h2 class='text-lg md:text-2xl font-bold text-center md:text-left mb-3'>
-                      {i18next.language === 'es'
-                        ? conference.title
-                        : conference.title_en}
-                    </h2>
-                    <p class='text-sm md:text-lg text-justify'>
-                      {i18next.language === 'es'
-                        ? conference.resume
-                        : conference.resume_en}
-                    </p>
-                  </div>
-
-                  <div class='flex flex-wrap flex-1 gap-4'>
-                    {conference.speakers?.map((speaker) => (
-                      <div class='flex flex-col items-center text-center bg-gray-800 p-4 rounded-lg w-full md:w-72'>
-                        <Speaker
-                          speaker={speaker}
-                          language={language}
-                          client:load
-                        />
-
-                        <h1 class='text-white text-sm md:text-lg font-semibold mt-2 flex items-center justify-center bg-custom-orange p-2 rounded-lg w-full'>
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            fill='none'
-                            viewBox='0 0 24 24'
-                            stroke-width='1.5'
-                            stroke='currentColor'
-                            class='size-4 md:size-5 mr-2'
-                          >
-                            <path
-                              stroke-linecap='round'
-                              stroke-linejoin='round'
-                              d='M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z'
-                            />
-                          </svg>
-                          {speaker.name}
-                        </h1>
-
-                        <div class='text-sm md:text-lg font-semibold mt-3 text-custom-orange'>
-                          {speaker.subtitle
-                            ? i18next.language === 'es'
-                              ? speaker.subtitle
-                              : speaker.subtitle_en
-                            : ''}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+        <div class='hidden p-6 rounded-lg' id='profile' role='tabpanel' aria-labelledby='profile-tab'>
+          {installerInnovation.day_1.map((conference) => (
+            <div class="shadow-lg p-8 rounded-xl my-6 text-black flex flex-col gap-6 bg-white border border-gray-200">
+              
+              <div class="flex items-center gap-3 text-base md:text-lg font-semibold text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-8 text-custom-orange">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>{conference.hour}</span>
               </div>
-            ))
-          }
+              
+              <div class="flex-1">
+                <h2 class="text-xl md:text-3xl font-bold text-center md:text-left text-gray-900 mb-4">
+                  {i18next.language === 'es' ? conference.title : conference.title_en}
+                </h2>
+                <p class="text-base md:text-lg text-gray-700 text-justify leading-relaxed">
+                  {i18next.language === 'es' ? conference.resume : conference.resume_en}
+                </p>
+              </div>
+                              
+                              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {conference.speakers?.map((speaker) => (
+                    <div  class="flex flex-col items-center text-center bg-gray-900 p-6 rounded-xl shadow-md">
+                      <span class="text-gray-300 text-sm">{speaker.horain}</span>
+                      
+                      <Speaker speaker={speaker} language={language} client:load />
+                      
+                      {speaker.subtitle && (
+                        <div class="text-sm md:text-lg font-medium mt-3 text-custom-orange">
+                          {i18next.language === 'es' ? speaker.subtitle : speaker.subtitle_en}
+                        </div>
+                      )}
+                      
+                      <h1 class="flex items-center justify-center w-full text-white text-base md:text-lg font-semibold mt-3 bg-custom-orange p-3 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 mr-2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                        {speaker.name}
+                      </h1>
+                    </div>
+                  ))}
+                </div>
+            </div>
+          ))}
         </div>
       </div>
+      
 
       <div
         class='hidden p-4 rounded-lg'
@@ -158,83 +112,53 @@ const language = i18next.language
         role='tabpanel'
         aria-labelledby='dashboard-tab'
       >
-        {
-          installerInnovation.day_2.map((conference) => (
-            <div class='bg-black/60 shadow-lg p-6 rounded-lg my-5 text-white flex flex-col gap-6'>
-              <div class='flex items-center gap-3 text-sm md:text-lg font-medium'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke-width='1.5'
-                  stroke='currentColor'
-                  class='size-6 md:size-8'
-                >
-                  <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    d='M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
-                  />
-                </svg>
-                <span>{conference.hour}</span>
-              </div>
+      {installerInnovation.day_2.map((conference) => (
+        <div class="shadow-lg p-8 rounded-xl my-6 text-black flex flex-col gap-6 bg-white border border-gray-200">
+          
+          <div class="flex items-center gap-3 text-base md:text-lg font-semibold text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 md:size-8 text-custom-orange">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <span>{conference.hour}</span>
+          </div>
+          
+          <div class="flex-1">
+            <h2 class="text-xl md:text-3xl font-bold text-center md:text-left text-gray-900 mb-4">
+              {i18next.language === 'es' ? conference.title : conference.title_en}
+            </h2>
+            <p class="text-base md:text-lg text-gray-700 text-justify leading-relaxed">
+              {i18next.language === 'es' ? conference.resume : conference.resume_en}
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+{conference.speakers?.map((speaker) => (
+<div  class="flex flex-col items-center text-center bg-gray-900 p-6 rounded-xl shadow-md">
+  <span class="text-gray-300 text-sm">{speaker.horain}</span>
+  
+  <Speaker speaker={speaker} language={language} client:load />
+  
+  {speaker.subtitle && (
+    <div class="text-sm md:text-lg font-medium mt-3 text-custom-orange">
+      {i18next.language === 'es' ? speaker.subtitle : speaker.subtitle_en}
+    </div>
+  )}
+  
+  <h1 class="flex items-center justify-center w-full text-white text-base md:text-lg font-semibold mt-3 bg-custom-orange p-3 rounded-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 mr-2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+    </svg>
+    {speaker.name}
+  </h1>
+</div>
+))}
+</div>
+        </div>
+      ))}
+    </div>
+  </div>
+  
 
-              <div class='grid'>
-                <div class='flex-1'>
-                  <h2 class='text-lg md:text-2xl font-bold text-center md:text-left mb-3'>
-                    {i18next.language === 'es'
-                      ? conference.title
-                      : conference.title_en}
-                  </h2>
-                  <p class='text-sm md:text-lg text-justify'>
-                    {i18next.language === 'es'
-                      ? conference.resume
-                      : conference.resume_en}
-                  </p>
-                </div>
-
-                <div class='mt-5 flex flex-wrap flex-1 gap-4'>
-                  {conference.speakers?.map((speaker) => (
-                    <div class='flex flex-col items-center text-center bg-gray-800 p-4 rounded-lg w-full md:w-72'>
-                      <Speaker
-                        speaker={speaker}
-                        language={language}
-                        client:load
-                      />
-
-                      <h1 class='text-white text-sm md:text-lg font-semibold mt-2 flex items-center justify-center bg-custom-orange p-2 rounded-lg w-full'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          fill='none'
-                          viewBox='0 0 24 24'
-                          stroke-width='1.5'
-                          stroke='currentColor'
-                          class='size-4 md:size-5 mr-2'
-                        >
-                          <path
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
-                            d='M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z'
-                          />
-                        </svg>
-                        {speaker.name}
-                      </h1>
-                      <div class='text-sm md:text-lg font-semibold mt-3 text-custom-orange'>
-                        {speaker.subtitle
-                          ? i18next.language === 'es'
-                            ? speaker.subtitle
-                            : speaker.subtitle_en
-                          : ''}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </section>
 
     <div
       class='hidden p-4 rounded-lg mx-auto'
