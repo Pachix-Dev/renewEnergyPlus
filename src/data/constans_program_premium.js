@@ -257,6 +257,37 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
+                    imagenes:'/img/speakers-conferencia-premium/MarcoGuzmán-CONOCER-Fotografía.webp',              
+                    name: 'Marco Guzmán',
+                    bio: 'Ingeniero Eléctrico del Instituto Politécnico Nacional (IPN), estudio Posgrado en Administración de Empresas en el Instituto de Capacitación de Telecomunicaciones de Telmex (INTTELMEX). Rector del “Instituto de Certificación tecnológica” (ICETEC) que opera desde 2018, Director general del Organismo Certificador “Centro Nacional de Capacitación de Energías Renovables” (CENCER).Trabajo en la empresa Teléfonos de México (Telmex) como directivo, coordinando a grupos de trabajo técnicos para el despliegue de Infraestructura eléctrica energizando Centrales de Transmisión, Conmutación y Data Center. Operó para el Grupo CARSO Planes de Acción de Eficiencia Energética para empresas de Telecom en México y en América Latina, apoyando la adquisición de las empresas en América Latina y Europa para el grupo. Miembro de la Asociación Mexicana de la Industria Fotovoltaica (AMIF) y de la Asociación Nacional de Energía Solar (ANES). Coordinador Operativo de Energías Renovables de la Federación de Colegios Mecánicos y Eléctricos (FECIME).',
+                    bio_en: 'Electrical Engineer at the Instituto Politécnico Nacional (IPN), postgraduate study in business administration at the Telecommunications Training Institute of Telmex (INTTELMEX). Rector of the "Institute for Technological Certification" (ICETEC) operating since 2018, Director General of the Certifying Body "National Training Center for Renewable Energies" (CENCER). I work in the company Teléfonos de México (Telmex) as a manager, coordinating technical working groups for the deployment of electrical infrastructure energizing transmission, switching and data center. Operated for the CARSO Group Energy Efficiency Action Plans for Telecom companies in Mexico and Latin America, supporting the acquisition of companies in Latin America and Europe for the group. Member of the Mexican Association of the Photovoltaic Industry (AMIF) and the National Solar Energy Association (ANES). Operational Coordinator of Renewable Energies of the Federation of Mechanical and Electrical Colleges (FECIME).',
+                    position: 'Presidente del Comité de Gestión de Competencias de Energías Renovables y Eficiencia Energética ',
+                    position_en:'Chairman of the Committee for Competence in Renewable Energy and Energy Efficiency',
+                    email:'',
+                    phone:'',
+                    nameem:'CONOCER'
+                   
+                },
+                             
+            ],    
+        },
+        {
+            hour: '13:30 - 14:15',
+            title: 'Economía circular en el sector solar: desafíos y oportunidades para el reciclaje de paneles',
+            title_en: 'Circular economy in the solar sector: challenges and opportunities for panel recycling',
+            tag: 'Panel',
+            tag_en: 'Panel',
+            color: '#016A02',
+            duración:'45 min',
+            resume: 'El crecimiento de la energía solar plantea el reto de gestionar los paneles al final de su vida útil, con un estimado de 36,500 toneladas de residuos solares en México, según la Agencia Internacional de Energías Renovables. Se explorarán los desafíos regulatorios, tecnológicos y económicos del reciclaje fotovoltaico, así como las oportunidades para recuperar materiales valiosos y fomentar modelos de negocio sostenibles. También se analizarán las estrategias necesarias para impulsar una economía circular que reduce el impacto ambiental y genera valor en la industria solar.',
+            resume_en: 'The growth of solar energy poses the challenge of managing panels at the end of their life, with an estimated 36,500 tons of solar waste in Mexico, according to the International Renewable Energy Agency. The regulatory, technological and economic challenges of PV recycling will be explored, as well as opportunities to recover valuable materials and promote sustainable business models. Strategies needed to drive a circular economy that reduces environmental impact and generates value in the solar industry will also be discussed.',    
+            speakers: [
+                
+                
+                
+
+                {       
+                    id: 1,  
                     imagenes:'/img/speakers-conferencia-premium/XimenaCantú-Rafiqui-Fotografía.webp',              
                     name: 'Ximena Cantú',
                     bio: 'Es una arquitecta con maestría en arquitectura bioclimática y una especialidad en Liderazgo Sostenible de la Universidad de Cambridge. Es experta acreditada en sostenibilidad, en LEED, EDGE auditor y Sustainable Business Advisor. En el 2024 fue reconocida como 1 de las de 50 mujeres en la lista de “50 Rising Stars in ESG”. Desde el 2024, Ximena lidera Rafiqui, la primera AC de reciclaje de paneles solares en México, fomentando la economía circular y la sustentabilidad en el sector energético. En su rol como ESG Officer en Energía Real, Ximena está a cargo de la formulación y ejecución de la estrategia de sostenibilidad, además de supervisar el cumplimiento de los objetivos de sostenibilidad a largo plazo. Anteriormente, Ximena fue responsable de ESG & Net Zero en JLL, donde dirigía iniciativas para reducir las emisiones netas de carbono y promovía la adopción de tecnologías y prácticas sostenibles en grandes proyectos inmobiliarios. En Fibra Eco, como VP de Sostenibilidad, se encargó de desarrollar e implementar políticas que aseguraban la optimización de recursos y la minimización de impactos ambientales en proyectos de construcción y mantenimiento de edificaciones. También ha colaborado con empresas como GAIA, Bioconstrucción y Energía Alternativa, e Itaca Proyectos Sustentables, donde ha sido consultora de sostenibilidad en más de 700,000 m2, proporcionando asesoría para la integración de soluciones sostenibles en edificios y desarrollos inmobiliarios.',
@@ -293,33 +324,7 @@ export const program_premium = {
                     phone:'',
                     nameem:'Greenback Recycling'
                    
-                },               
-            ],    
-        },
-        {
-            hour: '13:30 - 14:15',
-            title: 'Economía circular en el sector solar: desafíos y oportunidades para el reciclaje de paneles',
-            title_en: 'Circular economy in the solar sector: challenges and opportunities for panel recycling',
-            tag: 'Panel',
-            tag_en: 'Panel',
-            color: '#016A02',
-            duración:'45 min',
-            resume: 'El crecimiento de la energía solar plantea el reto de gestionar los paneles al final de su vida útil, con un estimado de 36,500 toneladas de residuos solares en México, según la Agencia Internacional de Energías Renovables. Se explorarán los desafíos regulatorios, tecnológicos y económicos del reciclaje fotovoltaico, así como las oportunidades para recuperar materiales valiosos y fomentar modelos de negocio sostenibles. También se analizarán las estrategias necesarias para impulsar una economía circular que reduce el impacto ambiental y genera valor en la industria solar.',
-            resume_en: 'The growth of solar energy poses the challenge of managing panels at the end of their life, with an estimated 36,500 tons of solar waste in Mexico, according to the International Renewable Energy Agency. The regulatory, technological and economic challenges of PV recycling will be explored, as well as opportunities to recover valuable materials and promote sustainable business models. Strategies needed to drive a circular economy that reduces environmental impact and generates value in the solar industry will also be discussed.',    
-            speakers: [
-                {       
-                    id: 1,  
-                    imagenes:'/img/speakers-conferencia-premium/MarcoGuzmán-CONOCER-Fotografía.webp',              
-                    name: 'Marco Guzmán',
-                    bio: 'Ingeniero Eléctrico del Instituto Politécnico Nacional (IPN), estudio Posgrado en Administración de Empresas en el Instituto de Capacitación de Telecomunicaciones de Telmex (INTTELMEX). Rector del “Instituto de Certificación tecnológica” (ICETEC) que opera desde 2018, Director general del Organismo Certificador “Centro Nacional de Capacitación de Energías Renovables” (CENCER).Trabajo en la empresa Teléfonos de México (Telmex) como directivo, coordinando a grupos de trabajo técnicos para el despliegue de Infraestructura eléctrica energizando Centrales de Transmisión, Conmutación y Data Center. Operó para el Grupo CARSO Planes de Acción de Eficiencia Energética para empresas de Telecom en México y en América Latina, apoyando la adquisición de las empresas en América Latina y Europa para el grupo. Miembro de la Asociación Mexicana de la Industria Fotovoltaica (AMIF) y de la Asociación Nacional de Energía Solar (ANES). Coordinador Operativo de Energías Renovables de la Federación de Colegios Mecánicos y Eléctricos (FECIME).',
-                    bio_en: 'Electrical Engineer at the Instituto Politécnico Nacional (IPN), postgraduate study in business administration at the Telecommunications Training Institute of Telmex (INTTELMEX). Rector of the "Institute for Technological Certification" (ICETEC) operating since 2018, Director General of the Certifying Body "National Training Center for Renewable Energies" (CENCER). I work in the company Teléfonos de México (Telmex) as a manager, coordinating technical working groups for the deployment of electrical infrastructure energizing transmission, switching and data center. Operated for the CARSO Group Energy Efficiency Action Plans for Telecom companies in Mexico and Latin America, supporting the acquisition of companies in Latin America and Europe for the group. Member of the Mexican Association of the Photovoltaic Industry (AMIF) and the National Solar Energy Association (ANES). Operational Coordinator of Renewable Energies of the Federation of Mechanical and Electrical Colleges (FECIME).',
-                    position: 'Presidente del Comité de Gestión de Competencias de Energías Renovables y Eficiencia Energética ',
-                    position_en:'Chairman of the Committee for Competence in Renewable Energy and Energy Efficiency',
-                    email:'',
-                    phone:'',
-                    nameem:'CONOCER'
-                   
-                },                
+                }, 
             ],    
         } ,
          
