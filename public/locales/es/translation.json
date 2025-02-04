@@ -176,7 +176,10 @@
         "hours": "horas",
         "minutes": "minutos",
         "seconds": "segundos",
-        "free_register": "REGISTRO GRATUITO"
+        "free_register": "REGISTRO GRATUITO",
+        "media_platinum": "MEDIOS ALIADOS PLATINUM",
+        "media_gold": "MEDIOS ALIADOS GOLD"
+        
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",

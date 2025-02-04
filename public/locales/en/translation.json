@@ -176,7 +176,9 @@
         "hours": "hours",
         "minutes": "minutes",
         "seconds": "seconds",
-        "free_register": "FREE REGISTRATION"
+        "free_register": "FREE REGISTRATION",
+        "media_platinum": "PLATINUM MEDIA PARTNERS",
+        "media_gold": "GOLD MEDIA PARTNERS"
     },
     "AboutSSM": {
         "title": "ABOUT RE+ MEXICO",
