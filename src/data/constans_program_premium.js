@@ -17,11 +17,7 @@ export const program_premium = {
                     name: '',
                     bio: '',
                     bio_en: '',
-                    position: '',
-                    
-                   
-
-                   
+                    position: '',                   
                 }, 
                             
             ],     
@@ -59,12 +55,8 @@ export const program_premium = {
                     position: 'Asociada Senior',
                     position_en:'Senior associate',
                     email:'',
-                    phone:'',
-                    
-                   nameem:'Energía & ESG Santamarina y Steta'
-
-
-                   
+                    phone:'',                    
+                   nameem:'Energía & ESG Santamarina y Steta'                   
                 },   
                 {       
                     id: 3,  
@@ -107,10 +99,10 @@ export const program_premium = {
                 }, 
                 {       
                     id: 2,  
-                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/carlaortiz.webp',              
                     name: 'Carla Ortíz',
-                    bio: '',
-                    bio_en: '',
+                    bio: 'Carla Ortiz es Directora General de RER en México y LATAM. Cuenta con más de 10 años de experiencia en el mercado de energías renovables, es consejera de ASOLMEX y tiene una Maestría en Energía por la Universidad de Duke. Con su extensiva experiencia en el sector financiero y trayectoria en energía Carla ha logrado la expansión de RER en México en el sector de Generación Distribuida y LATAM así como la entrada de fondos de inversión para este mercado.',
+                    bio_en: 'Carla Ortiz is General Director of RER in Mexico and LATAM. She has more than 10 years of experience in the renewable energy market, is a counselor of ASOLMEX and has a Master in Energy from Duke University. With her extensive experience in the financial sector and career in energy Carla has achieved the expansion of RER in Mexico in the Distributed Generation sector and LATAM as well as the entry of investment funds for this market.',
                     position: 'Director General',
                     position_en:'CEO',
                     email:'',
@@ -120,10 +112,10 @@ export const program_premium = {
                 }, 
                 {       
                     id: 3,  
-                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/enagutierrez.webp',              
                     name: 'Ena Gutiérrez',
-                    bio: '',
-                    bio_en: '',
+                    bio: 'Ena Gutiérrez ha sido una figura clave en el sector de generación distribuida en México durante los últimos 10 años. Como Directora de Nuevos Negocios en Enlight, lidera la estrategia comercial para proyectos de energía fotovoltaica, sistemas de almacenamiento de energía y soluciones de abasto aislado, posicionando a Enlight México con una oferta de servicios diferenciados. Entre sus responsabilidades, Ena dirige al equipo comercial, explora nuevas oportunidades y modelos de negocio, y ha diseñado modelos financieros innovadores para ofrecer proyectos bajo esquemas de financiamiento como PPA Onsite y SaaS (Storage as a Service). Gracias a su liderazgo, Enlight fue la primera empresa en desarrollar su propio sistema de monitoreo: Apollo ®, que permite optimizar el rendimiento y la supervisión de los sistemas instalados. Con una amplia experiencia en el desarrollo de proyectos fotovoltaicos y de almacenamiento de energía, Ena ha impulsado la creación y expansión de estas soluciones en la industria nacional. Ingeniera en Desarrollo Sustentable por el Tecnológico de Monterrey, Ena tiene una sólida formación y especialización en el desarrollo de negocios orientados a la transición energética. Su trabajo refleja su pasión por los mercados eléctricos y su compromiso con el avance de la transición energética en México, abordando los retos del sector con una visión integral y de largo plazo.',
+                    bio_en: 'Ena Gutierrez has been a key figure in the distributed generation sector in Mexico for the past 10 years. As Director of New Business at Enlight, she leads the commercial strategy for photovoltaic energy projects, energy storage systems and isolated supply solutions, positioning Enlight Mexico with a differentiated service offering. Among her responsibilities, Ena leads the commercial team, explores new opportunities and business models, and has designed innovative financial models to offer projects under financing schemes such as PPA Onsite and SaaS (Storage as a Service). Thanks to his leadership, Enlight was the first company to develop its own monitoring system: Apollo ®, which allows optimizing the performance and supervision of installed systems. With extensive experience in the development of photovoltaic and energy storage projects, Ena has driven the creation and expansion of these solutions in the national industry. With a degree in Sustainable Development from Tecnológico de Monterrey, Ena has a solid background and specialization in business development oriented to the energy transition. Her work reflects her passion for electricity markets and her commitment to advancing the energy transition in Mexico, addressing the challenges of the sector with a comprehensive and long-term vision.',
                     position: 'Directora de nuevos negocios',
                     position_en:' Director of new busines',
                     email:'',
@@ -192,7 +184,7 @@ export const program_premium = {
             
         }, 
         {
-            hour: '11:15 - 11:45',
+            hour: '11:00 - 11:45',
             title: 'Plan de Energía del estado de Jalisco',
             title_en: 'Jalisco State Energy Plan',
             tag: 'Conferencia',
@@ -208,11 +200,11 @@ export const program_premium = {
                     name: 'Manuel Herrera',
                     bio: 'Fué Diputado Federal por el Distrito 6 de Zapopan, Jalisco. En la LXV Legislatura participó como Secretario en la Comisión de Energía y en la Comisión de Economía, Comercio y Competitividad, asimismo fue integrante de la Comisión de Hacienda y Crédito Público. En los organismos empresariales cuenta con una trayectoria de más de 20 años, tiempo en el que destaca haber presidido la Cámara de Joyería y Platería del Estado de Jalisco; Expo Guadalajara; el Consejo de Cámaras Industriales de Jalisco (CCIJ); y México Innovación y Diseño (MIND). A nivel nacional presidió la Confederación de Cámaras Industriales de los Estados Unidos Mexicanos (CONCAMIN) máximo organismo de representación industrial del país en donde encabezó el Cuarto de Junto en las negociaciones del TMEC por parte del sector industrial. Ha sido consejero nacional del Instituto Mexicano del Seguro Social (IMSS), INFONAVIT, NAFINSA, BANCOMEXT, entre otros organismos. También formó parte del Consejo Coordinador Empresarial (CCE). A nivel internacional fue presidente de la Asociación de Industriales Latinoamericanos (AILA), representando a los industriales de todo México y Latinoamérica. Es egresado de la Licenciatura en Administración de Empresas y de la Maestra en Política y Gestión Pública en el Instituto Tecnológico y de Estudios Superiores de Occidente (ITESO).',
                     bio_en: 'Federal Deputy for the 6th District of Zapopan, Jalisco. In the 15th Legislature he served as secretary of the Energy Commission and the Economic, Trade and Competitiveness Commission, and was a member of the Finance and Public Credit Commission. In business organizations, he has a career of more than 20 years, during which time he has chaired the Chamber of Jewellery and Silver of the State of Jalisco; Expo Guadalajara; the Council of Industrial Chambers of Jalisco (CCIJ); and Mexico Innovation and Design (MIND). At the national level he chaired the Confederation of Industrial Chambers of the United Mexican States (CONCAMIN), the country’s highest industrial representative body, where he led the Fourth Committee for the negotiations on the TMEC by the industrial sector. He has been a national advisor to the Mexican Social Security Institute (IMSS), INFONAVIT, NAFINSA, BANCOMEXT, among other organizations. Also served on the Business Coordination Council (CCE). At the international level he was president of the Association of Latin American Industrialists (AILA), representing industrialists from all over Mexico and Latin America. Graduate of the Bachelor’s degree in Business Administration and the Master’s degree in Politics and Public Management from the Western Institute of Technology and Higher Education (ITESO).',
-                    position: ' ',
-                    position_en:'',
+                    position: 'Secretario de Desarrollo Energético Sustentable ',
+                    position_en:' Secretary of Sustainable Energy Development',
                     email:'',
                     phone:'',
-                    nameem:''
+                    nameem:'Gobierno del Estado de Jalisco'
                    
                 },                
             ],    
@@ -230,14 +222,14 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'',              
-                    name: '',
-                    bio: '',
-                    bio_en: '',
-                    position: '',
+                    imagenes:'/img/phillipschukat.webp',              
+                    name: 'Philipp Schukat',
+                    bio: 'Philipp Schukat estudió Economía, Geografía y Español en la Universidad de Tubinga Eberhard-Karls y es Maestro en Economía. Hizo un año de intercambio en la Universidad de las Américas Puebla. Hizo un postgrado en el DIE, el Instituto alemán de políticas de desarrollo. Ha sido: Asesor sénior del Ministerio alemán de Cooperación económica y desarrollo (BMZ), Director del programa de Estándares sociales y medioambientales de la GIZ, Director del Clúster Clima de la GIZ en Indonesia, Actualmente es Director del Clúster Clima de la Cooperación Técnica Alemana  en México el cual integra programas diversos sobre mitigación y adaptación al cambio climático, recuperación verde, energía sustentable y transición justa',
+                    bio_en: 'Philipp Schukat studied Economics, Geography and Spanish at the University of Tubinga Eberhard-Karls and has a Master in Economics. He did a year of exchange at the University of the Americas Puebla. He did a postgraduate degree at DIE, the German Institute of Development Policy. He has been: Senior Advisor to the German Ministry of Economic Cooperation and Development (BMZ), Director of the Social and Environmental Standards program of the GIZ, Director of the GIZ Climate Cluster in Indonesia, He is currently Director of the Climate Cluster of the German Technical Cooperation in Mexico which integrates diverse programs on mitigation and adaptation to climate change, green recovery, sustainable energy and just transition.',
+                    position: 'Director del Clúster Clima',
                     email:'',
                     phone:'',
-                    nameem:''
+                    nameem:'GIZ'
                    
                 },                
             ],    
@@ -281,11 +273,7 @@ export const program_premium = {
             duración:'45 min',
             resume: 'El crecimiento de la energía solar plantea el reto de gestionar los paneles al final de su vida útil, con un estimado de 36,500 toneladas de residuos solares en México, según la Agencia Internacional de Energías Renovables. Se explorarán los desafíos regulatorios, tecnológicos y económicos del reciclaje fotovoltaico, así como las oportunidades para recuperar materiales valiosos y fomentar modelos de negocio sostenibles. También se analizarán las estrategias necesarias para impulsar una economía circular que reduce el impacto ambiental y genera valor en la industria solar.',
             resume_en: 'The growth of solar energy poses the challenge of managing panels at the end of their life, with an estimated 36,500 tons of solar waste in Mexico, according to the International Renewable Energy Agency. The regulatory, technological and economic challenges of PV recycling will be explored, as well as opportunities to recover valuable materials and promote sustainable business models. Strategies needed to drive a circular economy that reduces environmental impact and generates value in the solar industry will also be discussed.',    
-            speakers: [
-                
-                
-                
-
+            speakers: [                                                
                 {       
                     id: 1,  
                     imagenes:'/img/speakers-conferencia-premium/XimenaCantú-Rafiqui-Fotografía.webp',              
@@ -314,10 +302,10 @@ export const program_premium = {
                 },  
                 {       
                     id: 3,  
-                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/julianlasky.webp',              
                     name: 'Julián Lasky',
-                    bio: '',
-                    bio_en: '',
+                    bio: 'Julián Lasky Adler cuenta con más de 12 años de experiencia en desarrollo de negocios, consultoría, financiamiento y estrategia en los sectores de energía, infraestructura, agricultura, reciclaje y private equity. Actualmente, se desempeña como Director de Nuevos Negocios en Greenback para México y América Latina, liderando la expansión de la empresa en reciclaje químico avanzado y trazabilidad. Ha co-desarrollado la estrategia para el crecimiento sostenible de la compañía, además de impulsar la adopción de eco2Veritas, plataforma blockchain para la certificación y trazabilidad para el sector de reciclaje. Previo a Greenback, fue socio fundador de Cactus Ideas, donde estructuró fondos de inversión en la agroindustria y dirigió operaciones en cultivos tecnificados. Asimismo, en Ainda Consultores y Ainda Energía e Infraestructura, participó en la estructuración de inversiones en energía e infraestructura, además de proveer consultoría estratégica a estos sectores. Fue co-coordinador del Diplomado Ejecutivo de Inversiones en Energía e Infraestructura del ITAM, programa dirigido a directivos del sector energético e infraestructura en México. Es consejero independiente de Rafiqui, asociación enfocada en el reciclaje en la industria solar, y ha sido mentor en EPIC Lab ITAM, además de formar parte de consejos directivos en empresas del sector de construcción modular. Cuenta con estudios en administración de empresas por el ITAM y especializaciones en inversión en energía e infraestructura.',
+                    bio_en: 'Julián Lasky Adler has over 12 years of experience in business development, consulting, financing and strategy in the energy, infrastructure, agriculture, recycling and private equity sectors. He currently serves as Director of New Business at Greenback for Mexico and Latin America, leading the company’s expansion in advanced chemical recycling and traceability. He has co-developed the strategy for the company’s sustainable growth, as well as driving the adoption of eco2Veritas, a blockchain platform for certification and traceability for the recycling sector. Prior to Greenback, he was a founding partner of Cactus Ideas, where he structured investment funds in agribusiness and led operations in technified crops. Also, at Ainda Consultores and Ainda Energía e Infraestructura, he participated in the structuring of investments in energy and infrastructure, as well as providing strategic consulting to these sectors. He was co-coordinator of the Executive Diploma in Energy and Infrastructure Investments at ITAM, a program aimed at executives in the energy and infrastructure sector in Mexico. He is an independent advisor to Rafiqui, an association focused on recycling in the solar industry, and has been a mentor at EPIC Lab ITAM, as well as serving on boards of directors in companies in the modular construction sector. He has studies in business administration from ITAM and specializations in investment in energy and infrastructure.',
                     position: 'Director de Nuevos Negocios para México y América Latina',
                     position_en:'Director of New Business for Mexico and Latin America',
                     email:'',
@@ -383,7 +371,7 @@ export const program_premium = {
             ],    
         },
         {
-            hour: '11:15 - 11:45',
+            hour: '11:00 - 11:45',
             title: 'Política de Descarbonización 2025-2030',
             title_en: 'Decarbonisation policy 2025-2030',
             tag: 'Conferencia',
@@ -446,10 +434,10 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/fernandodelcueto.webp',              
                     name: 'Fernando del Cueto',
-                    bio: '',
-                    bio_en: '',
+                    bio: 'Actual Chief Operations Officer de Solfium, una empresa tecnológica Canadiense-Mexicana centrada en la generación distribuida de energía solar, con una plataforma y modelo de negocio disruptivo que facilita la adopción de energía solar y descarboniza cadenas de valor. Es Ingeniero Mecatrónico por el Tecnológico de Monterrey, y obtuvo una Maestría en Energía por la Universidad de Auckland Nueva Zelanda, enfocada en mercados eléctricos y baterías conectadas a redes de transmisión, graduándose con honores. Previo a Solfium, con más de 15 años en el sector de energías renovables, Fernando ha participado en el desarrollo de proyectos solares, eólicos, geotérmicos y de electromovilidad, en los sectores de generación distribuida y gran escala a nivel latinoamérica, en empresas como Northland Power y Grupo Dragón, incluyendo proyectos innovadores como el único proyecto geotérmico privado de México.',
+                    bio_en: 'Current Chief Operations Officer of Solfium, a Canadian-Mexican technology company focused on distributed solar energy, with a disruptive platform and business model that facilitates the adoption of solar energy and decarbonizes value chains. He is a Mechatronics Engineer from the Tecnológico de Monterrey, and obtained a Master’s degree in Energy from the University of Auckland New Zealand, focused on electric markets and batteries connected to transmission networks, graduating with honors. Prior to Solfium, with more than 15 years in the renewable energy sector, Fernando has participated in the development of solar, wind, geothermal and electromobility projects, in the distributed and large-scale generation sectors at the Latin American level, in companies such as Northland Power and Grupo Dragón, including innovative projects such as Mexico’s only private geothermal project.',
                     position: 'Director de operaciones',
                     position_en:'Chief operating officer',
                     email:'',
@@ -459,10 +447,10 @@ export const program_premium = {
                 }, 
                 {       
                     id: 2,  
-                    imagenes:'/img/speakers-conferencia-premium/usuarioblack.webp',              
+                    imagenes:'/img/paulinabeck.webp',              
                     name: 'Paulina Beck',
-                    bio: '',
-                    bio_en: '',
+                    bio: 'Paulina Beck Magaña es una abogada con más de 12 años de experiencia trabajando como abogada, estando en el sector energético, de financiamiento, infraestructura y regulación, destacándose por su enfoque en energías renovables, particularmente en energía solar, almacenamiento, suministro calificado y generación distribuida. Cuenta con una trayectoria consolidada en despachos jurídicos de primer nivel en México, como Von Wobeser y Sierra, Santamarina & Steta y Garrigues, donde participó en proyectos complejos relacionados con fusiones y adquisiciones, financiamiento de proyectos, litigio administrativo y constitucional, así como en la negociación y redacción de contratos especializados para el desarrollo de infraestructura energética. Actualmente es la directora legal del equipo de Energía Real y el suministrador calificado Vamos al MEM, donde desempeña un papel clave al evaluar los aspectos legales, regulatorios y transaccionales necesarios para implementar proyectos innovadores en el ámbito de las energías renovables. Su capacidad para garantizar la correcta redacción, negociación y ejecución de contratos ha sido instrumental en la estructuración de soluciones estratégicas en un sector en constante evolución. Paulina es licenciada en Derecho por la Universidad Anáhuac (México) y se encuentra cursando la maestría en Administración de la Energía y sus Fuentes Renovables impartida por el TEC de Monterrey. Su experiencia y visión jurídica integral la posicionan como una profesional destacada en el panel, capaz de aportar una perspectiva única y estratégica en el desarrollo del sector de energías renovables en México y la región.',
+                    bio_en: 'Paulina Beck Magaña is a lawyer with over 12 years of experience working as a lawyer, being in the energy, financing, infrastructure and regulation sector, standing out for her focus on renewable energies, particularly solar energy, storage, qualified supply and distributed generation. She has a consolidated career in top-level law firms in Mexico, such as Von Wobeser y Sierra, Santamarina & Steta and Garrigues, where she participated in complex projects related to mergers and acquisitions, project financing, administrative and constitutional litigation, as well as in the negotiation and drafting of specialized contracts for the development of energy infrastructure. She is currently the legal director of the Real Energy team and the qualified supplier Vamos al MEM, where she plays a key role in evaluating the legal, regulatory and transactional aspects necessary to implement innovative projects in the field of renewable energies. Her ability to ensure the correct drafting, negotiation and execution of contracts has been instrumental in structuring strategic solutions in a constantly evolving sector. Paulina holds a law degree from the Anáhuac University (Mexico) and is pursuing a master’s degree in Energy Management and its Renewable Sources offered by the TEC de Monterrey. Her experience and comprehensive legal vision position her as a standout professional on the panel, capable of providing a unique and strategic perspective on the development of the renewable energy sector in Mexico and the region.',
                     position: 'Director jurídico',
                     position_en:'Head of Legal',
                     email:'',
