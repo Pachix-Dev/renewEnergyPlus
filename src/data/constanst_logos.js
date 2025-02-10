@@ -660,9 +660,19 @@ const sponsors = [
 		width: 250,
 	},
 	{
-		src: '/img/sponsors/quartux.webp',
-      	alt: 'quartux',
-		width: 230,
+		src:'/img/sponsors/EcoFlow.webp',
+    	alt: 'ECOFLOW',
+		width: 250,
+	},
+	{
+		src: '/img/sponsors/S-5logo.webp',
+      	alt: 'enlight',
+		width: 80,
+	},
+	{
+		src: '/img/sponsors/yinglisolar.webp',
+      	alt: 'enlight',
+		width: 200,
 	},
 	{
 		src: '/img/sponsors/longi.webp',
@@ -670,29 +680,19 @@ const sponsors = [
 		width: 200,
 	},
 	{
-		src: '/img/sponsors/enlight.webp',
-      	alt: 'enlight',
-		width: 250,
+		src: '/img/sponsors/quartux.webp',
+      	alt: 'quartux',
+		width: 230,
 	},
 	{
-		src: '/img/sponsors/nosmueveelsol.webp',
+		src: '/img/sponsors/hitachi.webp',
       	alt: 'enlight',
-		width: 180,
-	},
-	{
-		src: '/img/sponsors/EcoFlow.webp',
-      	alt: 'enlight',
-		width: 250,
+		width: 130,
 	},
 	{
 		src: '/img/sponsors/APsystemss.webp',
       	alt: 'enlight',
 		width: 250,
-	},
-	{
-		src: '/img/sponsors/S-5logo.webp',
-      	alt: 'enlight',
-		width: 80,
 	},
 	{
 		src: '/img/sponsors/cometer.webp',
@@ -710,15 +710,11 @@ const sponsors = [
 		width: 90,
 	},
 	{
-		src: '/img/sponsors/yinglisolar.webp',
+		src: '/img/sponsors/nosmueveelsol.webp',
       	alt: 'enlight',
-		width: 200,
+		width: 180,
 	},
-	{
-		src: '/img/sponsors/hitachi.webp',
-      	alt: 'enlight',
-		width: 130,
-	}
+	
 ]
 export {
 	toolkit_es,
