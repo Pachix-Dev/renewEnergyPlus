@@ -33,7 +33,7 @@ const Broadcasting1 = [
 ];
 const Broadcasting2 = [
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting2/worldConstruccion.webp', alt: 'Logo World Construccion', width: 200, height: 34,},
-  {link: '',src: '/img/aliadosEstrategicos/Broadcasting2/VanguardiaIndustrial.webp', alt: 'Logo', width: 150, height: 79,},
+  {link: '',src: '/img/VanguardiaIndustrial.webp', alt: 'Logo', width: 150, height: 79,},
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting2/revistaConsultoria.webp', alt: 'Logo Revista Consultoria', width: 200, height: 50,},
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting2/petroleo_y_energia.webp', alt: 'Logo Petroleo y Energia', width: 150, height: 83,},
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting2/GreentologyV2.webp', alt: 'Logo Greentology', width: 200, height: 129,},
