@@ -43,7 +43,33 @@ export const conferences = {
             status: 'VENDIDO',
              duracion:'30 min.',
              logos:'/img/sponsors/batterydepot.webp'
-        },        
+        }, 
+        {
+            id: 4,
+            hour: '14:15 – 14:45',
+            name: 'QUARTUX',
+            status: 'VENDIDO',
+            duracion:'30 min.',
+            logos:'/img/sponsors/quartux.webp',
+            title: 'Claves del diseño eficiente e implementación de sistemas de almacenamiento de energía',
+            title_en: 'Keys to efficient design and implementation of energy storage systems',
+            resume: '¿Qué aprenderás? -Mejores prácticas en diseño e implementación de hashtag#SistemasDeAlmacenamiento, Tecnologías emergentes y su impacto en la hashtag#InfraestructuraEnergética, Casos de éxito que están redefiniendo el sector energético industrial.',
+            resume_en: 'What will you learn? -Best practices in design and implementation of hashtag#StorageSystems, Emerging technologies and their impact on hashtag#EnergyInfrastructure, Success stories that are redefining the industrial energy sector.',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'QUARTUX',              
+                    name: 'Fabián Ríos',
+                    bio: 'Fabián Ríos es ingeniero en Energía con una década de experiencia en el sector de las energías renovables. Ha dedicado su carrera al desarrollo y gestión de soluciones innovadoras que promueven la transición energética en México. Con certificaciones en sistemas fotovoltaicos y gestión de proyectos, su trayectoria abarca un amplio espectro de implementaciones: desde calentadores solares y sistemas fotovoltaicos residenciales hasta almacenamiento de energía inteligente para aplicaciones industriales. Como líder en su campo, Fabián ha participado en más de 300 proyectos fotovoltaicos, asesorado más de 200 sistemas industriales, y liderado 10 proyectos de almacenamiento de energía con una capacidad acumulada de 30 MWh. Estas iniciativas han generado ahorros económicos anuales de más de 150 millones de pesos y reducido la emisión de más de 70 mil toneladas de CO2, contribuyendo significativamente a un futuro sostenible. En su posición actual como Director de Negocios y Alianzas Estratégicas en Quartux, Fabián se enfoca en identificar oportunidades innovadoras y cerrar acuerdos estratégicos que impulsen la adopción de tecnologías de almacenamiento energético. Su pasión por las energías renovables lo ha llevado a ser un capacitador experto en sistemas fotovoltaicos, gestión de proyectos y almacenamiento energético. Además, ha destacado por su conocimiento en normativas, certificaciones y lineamientos energéticos del sector público, abordando los desafíos de la creciente demanda energética de México con soluciones disruptivas como el load shifting. Fabián trabaja bajo valores de respeto, responsabilidad y trabajo en equipo, motivado por el impacto positivo de las tecnologías renovables en la industria y el medio ambiente. Su participación como ponente busca inspirar y fortalecer el compromiso con la transición energética, compartiendo su visión de un futuro más limpio y sustentable.',
+                    bio_en: 'Fabián Ríos is an energy engineer with a decade of experience in the renewable energy sector. He has dedicated his career to the development and management of innovative solutions that promote the energy transition in Mexico. With certifications in photovoltaic systems and project management, his background spans a broad spectrum of implementations: from solar heaters and residential photovoltaic systems to smart energy storage for industrial applications. As a leader in his field, Fabian has participated in more than 300 PV projects, advised more than 200 industrial systems, and led 10 energy storage projects with a cumulative capacity of 30 MWh. These initiatives have generated annual economic savings of more than 150 million pesos and reduced the emission of more than 70 thousand tons of CO2, contributing significantly to a sustainable future. In his current position as Director of Business and Strategic Alliances at Quartux, Fabian focuses on identifying innovative opportunities and closing strategic agreements that drive the adoption of energy storage technologies. His passion for renewable energy has led him to become an expert trainer in photovoltaic systems, project management and energy storage. In addition, he has excelled in his knowledge of public sector energy regulations, certifications and guidelines, addressing the challenges of Mexico´s growing energy demand.',
+                    position_en: 'Partnerships Director',
+                    position:'Director de Alianzas',
+                    email: 'fabian.rios@quartux.com',
+                    phone: '4421499619',
+                    imagenes:'/img/fabianrios.webp',
+                },
+            ]
+        },       
         {
             id: 5,
             hour: '15:00 – 15:30',
