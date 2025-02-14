@@ -1,6 +1,6 @@
 ---
 import { changeLanguage, t } from "i18next";
-import LayourRegistroSitio from "../../layouts/LayourRegistroSitio.astro";
+import LayoutRegistroSitio from "../../layouts/LayoutRegistroSitio.astro";
 import { Preregistro } from "../../components/register/Preregistro";
 import MarqueeSponsors from "../../components/register/MarqueeSponsors.astro";
 import { sponsors } from "../../data/constanst_logos";
@@ -8,7 +8,7 @@ import { sponsors } from "../../data/constanst_logos";
 changeLanguage("en");
 ---
 
-<LayourRegistroSitio title='RE+ Mexico | Gracias por registrarte'>
+<LayoutRegistroSitio title='RE+ Mexico | Gracias por registrarte'>
   <section class='max-w-screen-lg mx-auto'>
     <MarqueeSponsors partners={sponsors} isLeftToRight />
   </section>
@@ -18,4 +18,4 @@ changeLanguage("en");
     </h1>
     <Preregistro client:only />
   </section>
-</LayourRegistroSitio>
+</LayoutRegistroSitio>
