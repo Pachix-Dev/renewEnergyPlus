@@ -1,22 +1,19 @@
 ---
-import i18next, { changeLanguage, t } from "i18next";
+import { changeLanguage, t } from "i18next";
 import LayourRegistroSitio from "../layouts/LayourRegistroSitio.astro";
 import { Preregistro } from "../components/register/Preregistro";
 import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
 import { sponsors } from "../data/constanst_logos";
 
 changeLanguage("es");
-
-const currentLanguage = i18next.language;
-const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
 <LayourRegistroSitio title='RE+ Mexico | Gracias por registrarte'>
-  <section class='my-10 max-w-screen-lg mx-auto'>
+  <section class='max-w-screen-lg mx-auto'>
     <MarqueeSponsors partners={sponsors} isLeftToRight />
   </section>
-  <section class='my-10 container mx-auto px-4'>
-    <h1 class='font-bold text-center m-10 text-3xl'>
+  <section class='my-5 container mx-auto px-4'>
+    <h1 class='font-bold text-center mb-2 text-3xl'>
       Scanea tu codigo Qr para imprimir tu gafete
     </h1>
     <Preregistro client:only />

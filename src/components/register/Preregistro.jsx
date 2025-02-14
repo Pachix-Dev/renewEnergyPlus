@@ -104,6 +104,7 @@ export function Preregistro() {
     `)
     printWindow.document.close()
     clear()
+    document.getElementById('Search').value = ''
   }
 
   return (
@@ -143,13 +144,20 @@ export function Preregistro() {
       </div>
       {message && <p className='mt-10 font-bold text-center'>{message}</p>}
       {uuid && (
-        <div className='mt-3 flex flex-col items-center space-y-10 p-4 border rounded-lg shadow-md'>
+        <div className='mt-3 flex flex-col items-center  p-4 border rounded-lg shadow-md'>
           <div id='qr-code'>
             <QRCode value={uuid} size={200} />
           </div>
+          <p className='mt-5 text-2xl font-bold'>
+            {name} {paternSurname}
+          </p>
+          <p className='text-xl font-bold text-center'>
+            {position} <br />
+            {company}
+          </p>
           <button
             onClick={handlePrint}
-            className='bg-blue-500 text-white p-4 rounded-lg shadow-md font-bold hover:bg-blue-700'
+            className='mt-5 bg-blue-500 text-white p-4 rounded-lg shadow-md font-bold hover:bg-blue-700'
           >
             Print QR Code
           </button>
