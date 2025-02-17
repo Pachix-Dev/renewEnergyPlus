@@ -635,6 +635,13 @@ const exhibitors6 = [
 		alt: '',
 		width: 200,
 		height: 80,
+	},
+	{
+		link: '',
+		src: '/img/solar_center.webp',
+		alt: 'SOLAR CENTER',
+		width: 200,
+		height: 80,
 	},	
 	
 ];
