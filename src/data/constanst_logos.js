@@ -1,6 +1,14 @@
 const exhibitors1 = [
 	{
 		link: '',
+		src: '/img/solar_center.webp',
+		alt: 'SOLAR CENTER',
+		width: 200,
+		height: 80,
+	},	
+	
+	{
+		link: '',
 		src: '/img/sponsors/S-5logo.webp',
 		alt: 'S-5!',
 		width: 100,
@@ -636,13 +644,6 @@ const exhibitors6 = [
 		width: 200,
 		height: 80,
 	},
-	{
-		link: '',
-		src: '/img/solar_center.webp',
-		alt: 'SOLAR CENTER',
-		width: 200,
-		height: 80,
-	},	
 	
 ];
 const toolkit_es = [
