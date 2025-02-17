@@ -49,8 +49,10 @@ const ListDirectory = ({ currentLanguage }) => {
             : setDirectorioDigital(data)
     }
 
+    directorioDigital.filter(it => it.imagen.src === "").map(it => console.log(it.nombreComercial))
+
     return (
-        <div className=" z-0">
+        <div className="z-0">
             <div className=" mx-auto">
                 <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
                 <div className="relative md:mx-20">

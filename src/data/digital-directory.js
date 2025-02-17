@@ -7,7 +7,7 @@ export default [
         "Puesto": "Coordinadora Marketing",
         "telefono": "81 84738743",
         "Correo": "flozano@aluminext.mx",
-        "paginaWeb": "www.aluminext.solar",
+        "paginaWeb": "https://www.aluminext.solar",
         "direccion": "Monte bajo #128, Parque 200",
         "cp": "66368",
         "Ciudad": "Santa Catarina",
@@ -37,7 +37,7 @@ export default [
         "Puesto": "Ventas",
         "telefono": "1 (800) 319-7307",
         "Correo": "latam@s-5.com",
-        "paginaWeb": "www.es.s-5.com",
+        "paginaWeb": "https://www.es.s-5.com",
         "direccion": "12730 Black Forest Rd.",
         "cp": "80908",
         "Ciudad": "Colorado Spring",
@@ -54,7 +54,7 @@ export default [
         "Hashtags": "#EnergíaSolar #Solar #Energía #EnergíaSolarMéxico #EnergíaSolarLatinoamérica #EnergíaSolarLatam #TechoMetálicos #S5 #MetalRoofing #TheRightWay #ExpertosTechosMetalicos",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/s-5!.webp",
+            "src": "/img/sponsors/S-5logo.webp",
             "alt": "S-5!",
             "width": 170
         }
@@ -84,7 +84,7 @@ export default [
         "Hashtags": "#microinversores #storage #APstorage #APsystems #APsystemsLATAM",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/apsystems,_altenergy_power_systems.webp",
+            "src": "/img/expo/carousel1/apSystems.webp",
             "alt": "APsystems, Altenergy Power Systems",
             "width": 170
         }
@@ -114,7 +114,7 @@ export default [
         "Hashtags": "#Solarinsurance #Nosotrosloaseguramos",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solar_insurance_.webp",
+            "src": "/img/expo/carousel1/solar_insurance.webp",
             "alt": "Solar Insurance ",
             "width": 170
         }
@@ -144,7 +144,7 @@ export default [
         "Hashtags": "Makethedifference",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/canadian_solar.webp",
+            "src": "/img/expo/carousel1/canadiansolar.webp",
             "alt": "Canadian Solar",
             "width": 170
         }
@@ -174,7 +174,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solida.webp",
+            "src": "/img/expo/carousel5/solida.webp",
             "alt": "SOLIDA",
             "width": 170
         }
@@ -214,10 +214,10 @@ export default [
         "nombreComercial": "SMA",
         "stand": "F20",
         "nombreContacto": "Arturo Blake Cuervo\nJenniffer Hoffmann Landaeta\nSofía Flores",
-        "Puesto": "\nSales Director\nMexico Sales Manager\nCoordinadora de Marketing\n\n",
-        "telefono": "\n52 (557) 966-3743\n52 (555) 991-1862\n+56 9 3956 5825\n\n",
-        "Correo": "\narturo.blake@sma-mexico.com\njenniffer.hoffmann@sma-mexico.com\nsoflores@sma.de\n\n\n",
-        "paginaWeb": "www.sma-mexico.com",
+        "Puesto": "Sales Director\nMexico Sales Manager\nCoordinadora de Marketing",
+        "telefono": "52 (557) 966-3743\n52 (555) 991-1862\n+56 9 3956 5825",
+        "Correo": "arturo.blake@sma-mexico.com\njenniffer.hoffmann@sma-mexico.com\nsoflores@sma.de",
+        "paginaWeb": "https://www.sma-mexico.com",
         "direccion": "Av Insurgentes 730 int 230 Col. Del Valle Centro",
         "cp": "03100",
         "Ciudad": "Ciudad de México",
@@ -234,7 +234,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/sma.webp",
+            "src": "/img/expo/carousel1/sma.webp",
             "alt": "SMA",
             "width": 170
         }
@@ -245,9 +245,9 @@ export default [
         "stand": "F43",
         "nombreContacto": "Antonio de Miguel",
         "Puesto": "Director Operaciones",
-        "telefono": "\"+52 (722) 134  9161\n\"+52 (554) 569 4139\n",
+        "telefono": "\"+52 (722) 134  9161\n\"+52 (554) 569 4139",
         "Correo": "jademiguel@metering.com.mx",
-        "paginaWeb": "www.metering.com.mx",
+        "paginaWeb": "https://www.metering.com.mx",
         "direccion": "Antonio Rosales #501 Oriente, Colonia Pilares",
         "cp": "52179",
         "Ciudad": "Metepec",
@@ -255,16 +255,16 @@ export default [
         "Pais": "MÉXICO",
         "descripcion_es": "Especialistas en evaluación de sistemas fotovoltaicos, Calidad de Energía y Código de Red, Renta y pruebas a sistemas fotovoltaicos con Solar Utility Pro y PV120 marca SEAWARD. Corrección de problemas de Calidad Energía, equipos de medición, analizadores de redes, medidores fijos para BT y AT.",
         "descripcion_en": "Specialists in the evaluation of photovoltaic systems, Power Quality and Grid Code, Rental and testing of photovoltaic systems with Solar Utility Pro and PV120 brand SEAWARD. Correction of Power Quality problems, measurement equipment, network analyzers, fixed meters for BT and AT.",
-        "categoria": "Equipos de Medición y Prueba. \nEspecialistas en Calidad de Energía\nPruebas a sistemas fotovoltaicos\nRenta de equipos de prueba\nEspecialistas en Código de Red\nEstudios de Enerfgía eléctrica\n\n\n",
-        "productos": "Equipos de prueba para sistemas fotovoltaicos Seaward\nAnalizadores de redes Dranetz. \nEquipos de medición en media tensión Sensor Link\nFiltros Activos \nFiltros Pasivos \nFiltros Seno \nFiltros dv/dt\nUPS\nReguladores de Tensión\nSupresores de picos. \nBancos de capacitores \nSistemas dinamicos de compensación reactiva. \nEstudios de Corto Circuito y Coordinación de Protecciones\nEstudios de Calidad de Energía\nEstudios de Cumplimiento de Código de Red\nServicio de Calibración de equipos de medición\n",
+        "categoria": "Equipos de Medición y Prueba. \nEspecialistas en Calidad de Energía\nPruebas a sistemas fotovoltaicos\nRenta de equipos de prueba\nEspecialistas en Código de Red\nEstudios de Enerfgía eléctrica",
+        "productos": "Equipos de prueba para sistemas fotovoltaicos Seaward\nAnalizadores de redes Dranetz. \nEquipos de medición en media tensión Sensor Link\nFiltros Activos \nFiltros Pasivos \nFiltros Seno \nFiltros dv/dt\nUPS\nReguladores de Tensión\nSupresores de picos. \nBancos de capacitores \nSistemas dinamicos de compensación reactiva. \nEstudios de Corto Circuito y Coordinación de Protecciones\nEstudios de Calidad de Energía\nEstudios de Cumplimiento de Código de Red\nServicio de Calibración de equipos de medición",
         "contacto": "",
         "Instagram": "https://www.instagram.com/metering_?igsh=Z2xxdmRxaHdjbzRq",
         "Facebook": "https://www.facebook.com/meteringengineering/",
         "LinkedIn": "https://www.linkedin.com/company/metering-engineering-sa-de-cv/mycompany/",
-        "Hashtags": "Pruebas sistemas fotovoltaicos\nCalidad de Energía\nCódigo de Red\nFactor de Potencia\n",
+        "Hashtags": "Pruebas sistemas fotovoltaicos\nCalidad de Energía\nCódigo de Red\nFactor de Potencia",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/metering_engineering.webp",
+            "src": "/img/expo/carousel4/metering.webp",
             "alt": "METERING ENGINEERING",
             "width": 170
         }
@@ -277,7 +277,7 @@ export default [
         "Puesto": "Encargada de Compras",
         "telefono": "(+)52 222-563-2879",
         "Correo": "compras@stripsteel.com.mx",
-        "paginaWeb": "www.stripsteel.com.mx",
+        "paginaWeb": "https://www.stripsteel.com.mx",
         "direccion": "Calzada Zavaleta 1108 piso 18 oficina 1801 Col. Santa Cruz Buenavista.",
         "cp": "72150",
         "Ciudad": "Puebla",
@@ -294,7 +294,7 @@ export default [
         "Hashtags": "#GroundMountSolarStripSteel\n #StripSteelSolarGroundMount\n #SolarGroundMountStripSteel",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/strip_steel.webp",
+            "src": "/img/expo/carousel1/stripsteel.webp",
             "alt": "Strip Steel",
             "width": 170
         }
@@ -305,7 +305,7 @@ export default [
         "stand": "D80",
         "nombreContacto": "Daniel Roig",
         "Puesto": "Director General",
-        "telefono": "(555) 046-5300‬",
+        "telefono": "(555) 046-5300",
         "Correo": "info@orka.ventures",
         "paginaWeb": "http://orka.ventures/",
         "direccion": "Bosque de Alisos 45B Piso 1, Bosques de las Lomas",
@@ -324,7 +324,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/orka_energía_limpia.webp",
+            "src": "/img/expo/carousel1/orka.webp",
             "alt": "ORKA Energía Limpia",
             "width": 170
         }
@@ -337,7 +337,7 @@ export default [
         "Puesto": "Gerente de Mercadotecnia y Comunicación",
         "telefono": "528182000000",
         "Correo": "toriz.oscar@fronius.com",
-        "paginaWeb": "www.fronius.mx",
+        "paginaWeb": "https://www.fronius.mx",
         "direccion": "Carretera Monterrey Saltillo 3279",
         "cp": "66367",
         "Ciudad": "Monterrey",
@@ -354,7 +354,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/fronius_méxico.webp",
+            "src": "/img/expo/carousel1/Fronius.webp",
             "alt": "Fronius México",
             "width": 170
         }
@@ -367,7 +367,7 @@ export default [
         "Puesto": "J50",
         "telefono": "86 0755-26458295",
         "Correo": "xiell@szshuori.com",
-        "paginaWeb": "www.srnesolar.com",
+        "paginaWeb": "https://www.srnesolar.com",
         "direccion": "4/F, 501, Daxue (13A) Building, Taihua Wutong Industrial Park, Sanwei Community, Hangcheng Street, Bao'an District, Shenzhen, China.",
         "cp": "518126",
         "Ciudad": "Shenzhen",
@@ -384,7 +384,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/srne_solar_co.,ltd.webp",
+            "src": "/img/expo/carousel1/srne.webp",
             "alt": "SRNE Solar Co.,Ltd",
             "width": 170
         }
@@ -397,7 +397,7 @@ export default [
         "Puesto": "Gerente de servicio",
         "telefono": "52 (331) 576-4572",
         "Correo": "alejandro.jimenez@solunabattery.com",
-        "paginaWeb": "www.soluna.co",
+        "paginaWeb": "https://www.soluna.co",
         "direccion": "Jinqian Road, No. 3492, Fenxian,",
         "cp": "201400",
         "Ciudad": "Shanghai",
@@ -414,7 +414,7 @@ export default [
         "Hashtags": "#Soluna #SolunaBattery #SolunaLatam",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/soluna.webp",
+            "src": "/img/expo/carousel4/soluna.webp",
             "alt": "Soluna",
             "width": 170
         }
@@ -444,7 +444,7 @@ export default [
         "Hashtags": "#SolareverHoldings #SolareverGroup",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solarever_group.webp",
+            "src": "/img/expo/carousel1/solarever.webp",
             "alt": "SOLAREVER GROUP",
             "width": 170
         }
@@ -474,7 +474,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/baywa_r.e._distribución_solar.webp",
+            "src": "/img/expo/carousel4/bayware.webp",
             "alt": "BayWa r.e. Distribución Solar",
             "width": 170
         }
@@ -504,7 +504,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/novotegra.webp",
+            "src": "/img/expo/carousel4/novotegra.webp",
             "alt": "novotegra",
             "width": 170
         }
@@ -517,7 +517,7 @@ export default [
         "Puesto": "Gerente Comercial",
         "telefono": "523331576102",
         "Correo": "sjdiaz@tresel.com.mx",
-        "paginaWeb": "www.tresel.com.mx",
+        "paginaWeb": "https://www.tresel.com.mx",
         "direccion": "Av 8 de julio #2685 Int. B, Zona Industrial",
         "cp": "44940",
         "Ciudad": "Guadalajara",
@@ -534,7 +534,7 @@ export default [
         "Hashtags": "#TransformandoEnergía",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/tresel.webp",
+            "src": "/img/expo/carousel4/tresel.webp",
             "alt": "TRESEL",
             "width": 170
         }
@@ -564,7 +564,7 @@ export default [
         "Hashtags": "#nosmueveelsol #mujeresenenergía #atiquetemueve #energíasolar #panelessolares",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/nos_mueve_el_sol.webp",
+            "src": "/img/sponsors/nosmueveelsol.webp",
             "alt": "Nos Mueve el Sol",
             "width": 170
         }
@@ -594,7 +594,7 @@ export default [
         "Hashtags": "#k2systems #k2sistemasdemontaje #weareK2",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/k2_systems.webp",
+            "src": "/img/expo/carousel1/k2system.webp",
             "alt": "K2 Systems",
             "width": 170
         }
@@ -603,10 +603,10 @@ export default [
         "clasificacion": "",
         "nombreComercial": "LA BODEGA SOLAR SA De CV",
         "stand": "A20",
-        "nombreContacto": "Jesus Eduardo Galvez Beltran\nAndrea Rosales Ramirez\n",
-        "Puesto": "Coordinador de mercadotecnia\nGerente de ventas \n",
-        "telefono": "´+52 (668)-219-4562\n´+52 (664) 486 9600\n",
-        "Correo": "marketing@labodegasolar.com\nandrea@labodegasolar.com\n",
+        "nombreContacto": "Jesus Eduardo Galvez Beltran\nAndrea Rosales Ramirez",
+        "Puesto": "Coordinador de mercadotecnia\nGerente de ventas ",
+        "telefono": "´+52 (668)-219-4562\n´+52 (664) 486 9600",
+        "Correo": "marketing@labodegasolar.com\nandrea@labodegasolar.com",
         "paginaWeb": "https://www.labodegasolar.com/",
         "direccion": "Cañon Primer Ayuntamiento, #1891, Col. Anexo Roma",
         "cp": "22614",
@@ -624,7 +624,7 @@ export default [
         "Hashtags": "#LABODEGASOLAR #LBS",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/la_bodega_solar_sa_de_cv.webp",
+            "src": "/img/expo/carousel1/bodega_solar.webp",
             "alt": "LA BODEGA SOLAR SA De CV",
             "width": 170
         }
@@ -654,7 +654,7 @@ export default [
         "Hashtags": "#wegmexico #weggroup",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/weg_méxico.webp",
+            "src": "/img/expo/carousel1/weg.webp",
             "alt": "WEG México",
             "width": 170
         }
@@ -684,7 +684,7 @@ export default [
         "Hashtags": "#SolarConnections",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solar_connections_international.webp",
+            "src": "/img/expo/carousel1/solarconnections.webp",
             "alt": "Solar Connections International",
             "width": 170
         }
@@ -693,9 +693,9 @@ export default [
         "clasificacion": "",
         "nombreComercial": "QUALUM",
         "stand": "D71",
-        "nombreContacto": "CARLOS EDUARDO ORTIZ DÍAZ\n\n\nBERENICE LÓPEZ AGUSTÍN \n",
-        "Puesto": " DIRECTOR / FUNDADOR\n\nCOORDINADORA MARKETING\n",
-        "telefono": "52 (1) 33 3814 0826\n\n+52 (1) 33 3814 0826\n",
+        "nombreContacto": "CARLOS EDUARDO ORTIZ DÍAZ\nBERENICE LÓPEZ AGUSTÍN ",
+        "Puesto": " DIRECTOR / FUNDADOR\nCOORDINADORA MARKETING",
+        "telefono": "52 (1) 33 3814 0826\n+52 (1) 33 3814 0826",
         "Correo": "direccion@grupoave.mx",
         "paginaWeb": "https://qualum.grupoave.mx/",
         "direccion": "Av el Colli 5459 \"A-1ra, Colli Urbano",
@@ -714,7 +714,7 @@ export default [
         "Hashtags": "#aluminium #qualum #aluminio #estructuras #estructurasligeras #carport #soluciones",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/qualum.webp",
+            "src": "/img/expo/carousel1/qualum.webp",
             "alt": "QUALUM",
             "width": 170
         }
@@ -744,7 +744,7 @@ export default [
         "Hashtags": "#BESS\n #Energía_para _tu _mundo\n #Almacenamiento_de_energía\n #Energía_Solar",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/battery_depot.webp",
+            "src": "/img/expo/carousel6/battery-depot.webp",
             "alt": "Battery Depot",
             "width": 170
         }
@@ -757,7 +757,7 @@ export default [
         "Puesto": "GERENTE DE COREY EXPERIENSES",
         "telefono": "477 572 6877",
         "Correo": "gcepeda@coreysolar.com",
-        "paginaWeb": "www.coreysolar.com",
+        "paginaWeb": "https://www.coreysolar.com",
         "direccion": "Av. Del Bajío 1700-edificio 4, Villa Bosque (Villa Panamericana),",
         "cp": "45014",
         "Ciudad": "ZAPOPAN",
@@ -774,7 +774,7 @@ export default [
         "Hashtags": "#coreysolar #coreysolardistribución",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/corey_solar.webp",
+            "src": "/img/expo/carousel4/corey_solar.webp",
             "alt": "COREY SOLAR",
             "width": 170
         }
@@ -804,7 +804,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/amara_nzero.webp",
+            "src": "/img/expo/carousel2/amara_nzero.webp",
             "alt": "Amara NZero",
             "width": 170
         }
@@ -817,7 +817,7 @@ export default [
         "Puesto": "Marketing Specialist Latam&Italy",
         "telefono": "0039 3494609962",
         "Correo": "giorgia.manzini@jinkosolar.com",
-        "paginaWeb": "www.jinkosolar.com",
+        "paginaWeb": "https://www.jinkosolar.com",
         "direccion": "No.58 Yuanxi Road,Yuanhua Industrial Park",
         "cp": "314416",
         "Ciudad": "Haining",
@@ -834,7 +834,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/jinkosolar_(zhejiang_jinko_solar_co._ltd).webp",
+            "src": "/img/expo/carousel1/jinkosolar.webp",
             "alt": "JinkoSolar (Zhejiang Jinko Solar Co. Ltd)",
             "width": 170
         }
@@ -864,7 +864,7 @@ export default [
         "Hashtags": "#SOLARMAX #SOLARMAX2025",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solarmax.webp",
+            "src": "/img/expo/carousel5/solar_max.webp",
             "alt": "SOLARMAX",
             "width": 170
         }
@@ -877,7 +877,7 @@ export default [
         "Puesto": "Ejecutivo Cuentas Estrategicas",
         "telefono": "52 (33) 2349-9592",
         "Correo": "ecampos@wts-corp.com",
-        "paginaWeb": "www.worldtechnolosupply.com",
+        "paginaWeb": "https://www.worldtechnolosupply.com",
         "direccion": "AVENIDA ACUEDUCTO No. 6050 UP 21, Col. LOMAS DEL BOSQUE",
         "cp": "45118",
         "Ciudad": "Zapopan",
@@ -894,7 +894,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/world_technology_supply.webp",
+            "src": "/img/expo/carousel4/wts.webp",
             "alt": "World Technology Supply",
             "width": 170
         }
@@ -907,7 +907,7 @@ export default [
         "Puesto": "Co-fundadora",
         "telefono": "1 (650) 393-3429",
         "Correo": "morgan@popularpower.io",
-        "paginaWeb": "www.popularpower.io",
+        "paginaWeb": "https://www.popularpower.io",
         "direccion": "",
         "cp": "",
         "Ciudad": "",
@@ -918,13 +918,13 @@ export default [
         "categoria": "Software",
         "productos": "Hardware-agnostic Solar Monitoring, Performance Guarantee Tracking, Alert Management & Prioritization, Customized Report Builder, Predictive Site Analytics",
         "contacto": "",
-        "Instagram": "N/A",
-        "Facebook": "N/A",
+        "Instagram": "",
+        "Facebook": "",
         "LinkedIn": "https://www.linkedin.com/company/popular-power/",
         "Hashtags": "#GetPopular #PopularPower",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/popular_power.webp",
+            "src": "/img/expo/carousel6/popular-power.webp",
             "alt": "Popular Power",
             "width": 170
         }
@@ -937,7 +937,7 @@ export default [
         "Puesto": "Director Comercial Nacional",
         "telefono": "52 (331) 065 1368",
         "Correo": "alfonso.rodriguez@exelsolar.com",
-        "paginaWeb": "www.exelsolar.com",
+        "paginaWeb": "https://www.exelsolar.com",
         "direccion": "Boulevard Adolfo Ruiz Cortines No. Ext 3642, Int 502, Colonia: Costa de Oro",
         "cp": "94299",
         "Ciudad": "Boca del Río",
@@ -954,7 +954,7 @@ export default [
         "Hashtags": "#EnergíaRenovables, #Innovación, #EnergíaQueTransforma, #ExelSolar, #Mayotistas",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/exel_solar.webp",
+            "src": "/img/expo/carousel5/exel_solar.webp",
             "alt": "Exel Solar",
             "width": 170
         }
@@ -984,8 +984,8 @@ export default [
         "Hashtags": "#longi\n #LONGi\n #HiMOX10",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/longi_solar_technology_co.,_ltd.webp",
-            "alt": "Longi Solar Technology Co., Ltd",
+            "src": "/img/sponsors/longi.webp",
+            "alt": "Longi Solar Technology Ltd",
             "width": 170
         }
     },
@@ -1014,7 +1014,7 @@ export default [
         "Hashtags": "#Atlas\n #AtlasSolar\n #AtlasSolarSupport\n #EstrucurasFotovoltaicas\n #SoporteFotovoltaico",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/atlas_solar_support.webp",
+            "src": "",
             "alt": "Atlas Solar Support",
             "width": 170
         }
@@ -1027,7 +1027,7 @@ export default [
         "Puesto": "Marketing Manager",
         "telefono": "52 55 30174980",
         "Correo": "n.vela@mx.krannich-solar.com",
-        "paginaWeb": "www.krannich-solar.com",
+        "paginaWeb": "https://www.krannich-solar.com",
         "direccion": "Avenida Insurgentes Sur 615",
         "cp": "3810",
         "Ciudad": "Ciudad de México",
@@ -1044,7 +1044,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/krannich_solar.webp",
+            "src": "/img/expo/carousel4/krannich.webp",
             "alt": "Krannich Solar",
             "width": 170
         }
@@ -1074,7 +1074,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/zhejiang_narada_power_source_co.,_ltd..webp",
+            "src": "/img/expo/carousel1/narada.webp",
             "alt": "Zhejiang Narada Power Source Co., Ltd.",
             "width": 170
         }
@@ -1087,7 +1087,7 @@ export default [
         "Puesto": "Sales manager",
         "telefono": "86 18115598819",
         "Correo": "flora@green-cable.com",
-        "paginaWeb": "www.whxcable.com",
+        "paginaWeb": "https://www.whxcable.com",
         "direccion": "Lingkou Industrial Park, Danyang City, Jiangsu Province,China",
         "cp": "212300",
         "Ciudad": "Danyang",
@@ -1104,7 +1104,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/danyang_winpower_wire&cable_mfg_co.,ltd.webp",
+            "src": "/img/expo/carousel1/winpower.webp",
             "alt": "DANYANG WINPOWER WIRE&CABLE MFG CO.,LTD",
             "width": 170
         }
@@ -1117,7 +1117,7 @@ export default [
         "Puesto": "Marketing Manager",
         "telefono": "86 519 68220233",
         "Correo": "tangli@znshinesolar.com",
-        "paginaWeb": "www.znshinesolar.com",
+        "paginaWeb": "https://www.znshinesolar.com",
         "direccion": "No.1589 Guangzhou road, Suqian Economic and Technological Development Zone",
         "cp": "223800",
         "Ciudad": "Suqian",
@@ -1134,7 +1134,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/zhengxin_photoelectric_technology(sugian)co.,_ltd.webp",
+            "src": "/img/expo/carousel3/znshine_solar.webp",
             "alt": "Zhengxin photoelectric technology(Sugian)Co., Ltd",
             "width": 170
         }
@@ -1147,7 +1147,7 @@ export default [
         "Puesto": "Brand Manager",
         "telefono": "86 198 8371 1170",
         "Correo": "Karina@chinasuntree.com",
-        "paginaWeb": "www.chinasuntree.com",
+        "paginaWeb": "https://www.chinasuntree.com",
         "direccion": "XINGUANG INDUSTRIAL ZONE,LIUSHI TOWN,YUEQING",
         "cp": "325603",
         "Ciudad": "Yueqing",
@@ -1164,7 +1164,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/suntree.webp",
+            "src": "/img/expo/carousel4/suntree+.webp",
             "alt": "Suntree",
             "width": 170
         }
@@ -1194,7 +1194,7 @@ export default [
         "Hashtags": "https://www.linkedin.com/company/tw-solar/",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/tongwei_co.,ltd..webp",
+            "src": "",
             "alt": "Tongwei Co.,Ltd.",
             "width": 170
         }
@@ -1203,9 +1203,9 @@ export default [
         "clasificacion": "",
         "nombreComercial": "WASION",
         "stand": "J20",
-        "nombreContacto": "Fernanda Montoya\nAlvaro Wei\n",
+        "nombreContacto": "Fernanda Montoya\nAlvaro Wei",
         "Puesto": "HR Maneger",
-        "telefono": "/ Celular\n+527271102999\n\n +524735978406",
+        "telefono": "/ Celular\n+527271102999\n +524735978406",
         "Correo": "fernanda.montoya@wasion.com",
         "paginaWeb": "https://wasion.mx/",
         "direccion": "Av. Mina de Guadalupe 930, 36275 Silao de la Victoria, Gto.",
@@ -1218,13 +1218,13 @@ export default [
         "categoria": "BESS, Meter",
         "productos": "Energy Storage Systems and Accessories",
         "contacto": "",
-        "Instagram": "N/A",
-        "Facebook": "N/A",
+        "Instagram": "",
+        "Facebook": "",
         "LinkedIn": "https://www.linkedin.com/company/wasion-mx/",
         "Hashtags": "#Technology #EnergyEfficiency#BESS#green energy#energy-saving",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/wasion.webp",
+            "src": "/img/expo/carousel5/wasion.webp",
             "alt": "WASION",
             "width": 170
         }
@@ -1237,7 +1237,7 @@ export default [
         "Puesto": "branding",
         "telefono": "86 312 8922 208",
         "Correo": "peng.xiao@yingli.com",
-        "paginaWeb": "www.yinglisolar.com",
+        "paginaWeb": "https://www.yinglisolar.com",
         "direccion": "No. 2599, Xiangyang North Street, High Tech Zone",
         "cp": "",
         "Ciudad": "Baoding City",
@@ -1254,38 +1254,8 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/yingli_energy_development_co.,_ltd..webp",
+            "src": "/img/sponsors/yinglisolar.webp",
             "alt": "Yingli Energy Development Co., Ltd.",
-            "width": 170
-        }
-    },
-    {
-        "clasificacion": "",
-        "nombreComercial": "Guangdong Sunbang Technology Co., Ltd.",
-        "stand": "K60",
-        "nombreContacto": "Jasmine",
-        "Puesto": "sales director",
-        "telefono": "86 13641422916",
-        "Correo": "jasmine@sunbanges.com",
-        "paginaWeb": "https://www.sunbanges.com/",
-        "direccion": "No. 68 Ruiqiao Road, Changbu Village, Xinyang District, Huizhou City",
-        "cp": "516200",
-        "Ciudad": "Guangdong",
-        "Estado": "Huizhou",
-        "Pais": "China",
-        "descripcion_es": "Nuestra empresa se ha adentrado profundamente en la industria de baterías de litio durante 12 años, centrándose en la investigación y el desarrollo y producción de baterías de alto rendimiento. Nos comprometemos a proporcionar a nuestros clientes soluciones de batería de alta calidad y confiables, ampliamente utilizadas en electrónica de consumo y vehículos de Nueva energía.",
-        "descripcion_en": "Our company has been deeply involved in the lithium battery industry for 12 years, focusing on the research and production of high-performance batteries. We are committed to providing customers with high-quality and reliable battery solutions, which are widely used in fields such as consumer electronics and new energy vehicles",
-        "categoria": "New energy lithium battery",
-        "productos": "Energy storage battery",
-        "contacto": "",
-        "Instagram": "",
-        "Facebook": "https://www.facebook.com/profile.php?id=61562045279241",
-        "LinkedIn": "https://www.linkedin.com/company/sunbang/posts/?feedView=all",
-        "Hashtags": "",
-        "imagen": {
-            "link": "",
-            "src": "/img/buyersProfessional/guangdong_sunbang_technology_co.,_ltd..webp",
-            "alt": "Guangdong Sunbang Technology Co., Ltd.",
             "width": 170
         }
     },
@@ -1297,7 +1267,7 @@ export default [
         "Puesto": "Sales director",
         "telefono": "0086-0576-80730906",
         "Correo": "info@sunpropower.com",
-        "paginaWeb": "www.sunpropower.com",
+        "paginaWeb": "https://www.sunpropower.com",
         "direccion": "Industrial Zone, Qinggang Town, Yuhuan, Taizhou, Zhejiang, China",
         "cp": "317600",
         "Ciudad": "Taizhou",
@@ -1314,7 +1284,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/zhejiang_sunpro_power_technology_co.,_ltd..webp",
+            "src": "/img/expo/carousel1/yhsunpro.webp",
             "alt": "Zhejiang Sunpro Power Technology Co., Ltd.",
             "width": 170
         }
@@ -1327,7 +1297,7 @@ export default [
         "Puesto": "Marketing Specialist",
         "telefono": "8651085318888",
         "Correo": "Zhenyu.Zhang@suntech-power.com",
-        "paginaWeb": "www.suntech-power.com",
+        "paginaWeb": "https://www.suntech-power.com",
         "direccion": "12 Xinhua Road, Xinwu District, Wuxi, Jiangsu, China",
         "cp": "214000",
         "Ciudad": "Wuxi",
@@ -1344,7 +1314,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/wuxi_suntech_power_co.,_ltd.webp",
+            "src": "/img/expo/carousel1/yhsunpro.webp",
             "alt": "Wuxi Suntech Power Co., Ltd",
             "width": 170
         }
@@ -1374,7 +1344,7 @@ export default [
         "Hashtags": "Seraphim",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/seraphim_energy.webp",
+            "src": "/img/expo/carousel1/seraphim.webp",
             "alt": "Seraphim Energy",
             "width": 170
         }
@@ -1387,7 +1357,7 @@ export default [
         "Puesto": "Marketing Manager",
         "telefono": "86-21-33500980",
         "Correo": "ktsales@shuangliang.com",
-        "paginaWeb": "www.shuangliangglobal.com",
+        "paginaWeb": "https://www.shuangliangglobal.com",
         "direccion": "No. 88 Xili Road, Ligang",
         "cp": "214444",
         "Ciudad": "Jiangyin",
@@ -1404,7 +1374,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/shuangliang_eco-energy_systems_co.,_ltd..webp",
+            "src": "/img/expo/carousel1/shuangliang.webp",
             "alt": "Shuangliang Eco-Energy Systems Co., Ltd.",
             "width": 170
         }
@@ -1417,7 +1387,7 @@ export default [
         "Puesto": "",
         "telefono": "86 571-56260008",
         "Correo": "info@solaxpower.com",
-        "paginaWeb": "www.solaxpower.com",
+        "paginaWeb": "https://www.solaxpower.com",
         "direccion": "Lv 9, Lotus Business Center North Building C, 333 Lianhua St, Xihu District, Hangzhou, Zhejiang Province, CN 310063",
         "cp": "CN 310063",
         "Ciudad": "Hangzhou",
@@ -1434,7 +1404,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solax_power_network_technology_(zhejiang)_co._,_ltd..webp",
+            "src": "/img/expo/carousel3/solax_power.webp",
             "alt": "SolaX Power Network Technology (Zhejiang) Co. , Ltd.",
             "width": 170
         }
@@ -1447,7 +1417,7 @@ export default [
         "Puesto": "Managing Partner",
         "telefono": "0086-134-5922-7657",
         "Correo": "megan@mgsolar.cn",
-        "paginaWeb": "www.mgsolarracking.com",
+        "paginaWeb": "https://www.mgsolarracking.com",
         "direccion": "No. 999, An Ling Road, Huli District",
         "cp": "361009",
         "Ciudad": "Xiamen",
@@ -1464,7 +1434,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/xiamen_megan_solar_co.,_ltd..webp",
+            "src": "/img/expo/carousel1/megan.webp",
             "alt": "XIAMEN MEGAN SOLAR CO., LTD.",
             "width": 170
         }
@@ -1477,7 +1447,7 @@ export default [
         "Puesto": "No. 45, Sushan Road, Jimei District, Xiamen, China",
         "telefono": "86-592-3754999",
         "Correo": "sales@mbt-energy.com",
-        "paginaWeb": "www.mbt-energy.com",
+        "paginaWeb": "https://www.mbt-energy.com",
         "direccion": "No. 45, Sushan Road, Jimei District",
         "cp": "361024",
         "Ciudad": "Xiamen",
@@ -1494,7 +1464,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/xiamen_mibet_new_energy_co.,_ltd.webp",
+            "src": "/img/expo/carousel1/mibet.webp",
             "alt": "Xiamen Mibet New Energy Co., Ltd",
             "width": 170
         }
@@ -1524,7 +1494,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/_must_energy_(guangdong)_technology_co.,ltd.webp",
+            "src": "/img/expo/carousel1/must.webp",
             "alt": " Must Energy (Guangdong) Technology Co.,LTD",
             "width": 170
         }
@@ -1554,7 +1524,7 @@ export default [
         "Hashtags": "#PytesBattery #EnergyStorage #OffGridPower #EcoFriendly #CostEffective #SustainableLiving #GreenTech #CleanEnergy",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/shanghai_pytes_energy_co.,_ltd.webp",
+            "src": "/img/expo/carousel1/pytes.webp",
             "alt": "Shanghai PYTES Energy Co., Ltd",
             "width": 170
         }
@@ -1567,7 +1537,7 @@ export default [
         "Puesto": "Chairman of the board",
         "telefono": "86 13806076104",
         "Correo": "zhuang777@rinengsolar.com",
-        "paginaWeb": "www.rinengsolar.com",
+        "paginaWeb": "https://www.rinengsolar.com",
         "direccion": "Room 1002#, No.290 Taiwan Street,Huli, Xiamen city，China",
         "cp": "361009",
         "Ciudad": "Xiamen",
@@ -1584,7 +1554,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/xiamen_rineng_solar_energy_technology_co.,ltd.webp",
+            "src": "/img/expo/carousel1/rineng.webp",
             "alt": "XIAMEN RINENG SOLAR ENERGY TECHNOLOGY CO.,LTD",
             "width": 170
         }
@@ -1597,7 +1567,7 @@ export default [
         "Puesto": "General Manager",
         "telefono": "86 13806076104",
         "Correo": "535407635@qq.com",
-        "paginaWeb": "www.npcsolar.com",
+        "paginaWeb": "https://www.npcsolar.com",
         "direccion": "Room 1003#, B-Building, Hua Yong Tian Di Commercial Plaza, No.290 Taiwan Street,Huli, Xiamen city, China",
         "cp": "361009",
         "Ciudad": "Xiamen",
@@ -1614,7 +1584,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/xiamen_pengcheng_import_&export_co.,ltd.webp",
+            "src": "/img/expo/carousel1/pecheng.webp",
             "alt": "XIAMEN PENGCHENG IMPORT &EXPORT CO.,LTD",
             "width": 170
         }
@@ -1644,7 +1614,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/guangzhou_sanjing_electric_co_ltd.webp",
+            "src": "/img/expo/carousel1/saj.webp",
             "alt": "Guangzhou Sanjing Electric Co Ltd",
             "width": 170
         }
@@ -1657,7 +1627,7 @@ export default [
         "Puesto": "marketing",
         "telefono": "86-596-8991888",
         "Correo": "hw@huawei-battery.com",
-        "paginaWeb": "www.huawei-battery.com",
+        "paginaWeb": "https://www.huawei-battery.com",
         "direccion": "Lieyu Industrial Zone, Yunxiao County, Zhangzhou City, Fujian Province",
         "cp": "363309",
         "Ciudad": "Zhangzhou",
@@ -1674,7 +1644,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/zhangzhou_huawei_power_supply_technology_co.,_ltd..webp",
+            "src": "/img/sponsors/Huawei.webp",
             "alt": "Zhangzhou Huawei Power Supply Technology Co., Ltd.",
             "width": 170
         }
@@ -1704,7 +1674,7 @@ export default [
         "Hashtags": "Alta Eficiencia，\n Seguro y Confiable",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/hyxipower.webp",
+            "src": "/img/expo/carousel1/hyxipower.webp",
             "alt": "HYXiPOWER",
             "width": 170
         }
@@ -1734,7 +1704,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/ja_solar_technology_co.,ltd..webp",
+            "src": "/img/expo/carousel2/ja_solar.webp",
             "alt": "JA SOLAR Technology Co.,Ltd.",
             "width": 170
         }
@@ -1747,7 +1717,7 @@ export default [
         "Puesto": "export manager",
         "telefono": "86 19357102997",
         "Correo": "celine@kingorbattery.com",
-        "paginaWeb": "www.kingorbattery.com",
+        "paginaWeb": "https://www.kingorbattery.com",
         "direccion": "No.555 XiaoZhangJiaFan, Tianfeng, Yiqiao Town, Xiaoshan District, Hangzhou, Zhejiang, China",
         "cp": "311256",
         "Ciudad": "Hangzhou",
@@ -1764,7 +1734,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/hangzhou_kaige_new_energy_technology_co.,_ltd.webp",
+            "src": "/img/expo/carousel1/kaige.webp",
             "alt": "HANGZHOU KAIGE NEW ENERGY TECHNOLOGY CO., LTD",
             "width": 170
         }
@@ -1777,7 +1747,7 @@ export default [
         "Puesto": "Sales",
         "telefono": "0086 0592-5795673",
         "Correo": "info@xmkseng.com",
-        "paginaWeb": "www.xmkseng.com",
+        "paginaWeb": "https://www.xmkseng.com",
         "direccion": "6&11F, Huixin Wealth Centre, No. 891, Fanghu North 2nd Rd.,Huli Dist.",
         "cp": "361000",
         "Ciudad": "Xiamen",
@@ -1794,7 +1764,7 @@ export default [
         "Hashtags": "#Solar #Solarenergy #SolarPower #Solarrack #Solarmount #Renewables",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/xiamen_kseng_metal_tech._co.,_ltd.webp",
+            "src": "/img/expo/carousel1/kseng.webp",
             "alt": "Xiamen Kseng Metal Tech. Co., Ltd",
             "width": 170
         }
@@ -1807,7 +1777,7 @@ export default [
         "Puesto": "manager",
         "telefono": "860755-85209056",
         "Correo": "helen.deng@luxpowertek.com",
-        "paginaWeb": "www.luxpowertek.com",
+        "paginaWeb": "https://www.luxpowertek.com",
         "direccion": "C501, Building A, Donghua Industrial Park, 5003 Bao'an Avenue, Sanwei Community, Hangcheng Street, Bao'an District",
         "cp": "518100",
         "Ciudad": "Shenzhen",
@@ -1824,7 +1794,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/shenzhen_lux_power_technology_co.,_ltd.webp",
+            "src": "/img/expo/carousel2/lux_power_tek.webp",
             "alt": "Shenzhen Lux Power Technology Co., Ltd",
             "width": 170
         }
@@ -1837,7 +1807,7 @@ export default [
         "Puesto": "MANAGER",
         "telefono": "86-18612321091",
         "Correo": "tomastao@icnbmmx.com",
-        "paginaWeb": "www.icnbm.com",
+        "paginaWeb": "https://www.icnbm.com",
         "direccion": "FLOOR 17TH,NO.4 BUILDING, ZHUYU INTERNATIONAL \n COMMERCIAL CENTERNO.9 SHOUTI SOUTH ROAD, HAIDIAN DISTRICT, \n BEIJING 100048, CHINA.",
         "cp": "100048",
         "Ciudad": "BEIJING",
@@ -1854,7 +1824,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/cnbm_international_corporation.webp",
+            "src": "/img/expo/carousel1/cnbm.webp",
             "alt": "CNBM INTERNATIONAL CORPORATION",
             "width": 170
         }
@@ -1884,7 +1854,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/dah_solar_co.,_ltd..webp",
+            "src": "/img/expo/carousel2/daa_solar.webp",
             "alt": "DAH Solar Co., Ltd.",
             "width": 170
         }
@@ -1897,7 +1867,7 @@ export default [
         "Puesto": "Project Manager",
         "telefono": "86 18675246726",
         "Correo": "judy@ecolithiumbattery.com",
-        "paginaWeb": "www.ecolithiumbattery.com",
+        "paginaWeb": "https://www.ecolithiumbattery.com",
         "direccion": "BUILDING 1, NO.1 XINZI ROAD, \n KENGZI STREET, PINGSHAN DISTRICT",
         "cp": "518118",
         "Ciudad": "SHENZHEN",
@@ -1914,7 +1884,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/elb_energy_group(shenzhen)_limited\n_\n_elb_energy_group\n_(if_above_complete_name_is_too_long,_use_this_one).webp",
+            "src": "/img/expo/carousel1/elb.webp",
             "alt": "ELB ENERGY GROUP(SHENZHEN) LIMITED\n \n ELB ENERGY GROUP\n (If above complete name is too long, use this one)",
             "width": 170
         }
@@ -1927,7 +1897,7 @@ export default [
         "Puesto": "Sales Specialist",
         "telefono": "86 185 5569 9508",
         "Correo": "dario.wang@envertec.com",
-        "paginaWeb": "www.envertec.com",
+        "paginaWeb": "https://www.envertec.com",
         "direccion": "No.138, Xinjunhuan Road, Minhang District, Shanghai, China",
         "cp": "201112",
         "Ciudad": "Shanghai",
@@ -1944,7 +1914,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/envertech_corporation_ltd..webp",
+            "src": "/img/expo/carousel2/envertech.webp",
             "alt": "Envertech Corporation Ltd.",
             "width": 170
         }
@@ -1957,7 +1927,7 @@ export default [
         "Puesto": "Event Planning and Execution",
         "telefono": "86-10-82894896",
         "Correo": "info@epever.com",
-        "paginaWeb": "www.epever.com",
+        "paginaWeb": "https://www.epever.com",
         "direccion": "BLDG#18,CO.PARK,NO.8HEYING ROAD",
         "cp": "102200",
         "Ciudad": "CHANGPING",
@@ -1974,7 +1944,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/beijing_epsolar_technology_co.,_ltd..webp",
+            "src": "/img/expo/carousel1/epever.webp",
             "alt": "BEIJING EPSOLAR TECHNOLOGY CO., LTD.",
             "width": 170
         }
@@ -2004,7 +1974,7 @@ export default [
         "Hashtags": "https://www.linkedin.com/company/gcl-system-integration-technology-co.-ltd/?viewAsMember=true",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/gcl_system_integration_technology_co.,_ltd..webp",
+            "src": "/img/expo/carousel2/gcl.webp",
             "alt": "GCL System Integration Technology Co., Ltd.",
             "width": 170
         }
@@ -2034,7 +2004,7 @@ export default [
         "Hashtags": "#SolisLATAM #EnergíaSolar #InversorSolis #EnergíaSolar #AlmacenamientoDeEnergía #Innovación",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/ginlong_(solis).webp",
+            "src": "/img/expo/carousel1/solis.webp",
             "alt": "Ginlong (Solis)",
             "width": 170
         }
@@ -2064,7 +2034,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/goodwe_technologies_co.,ltd..webp",
+            "src": "/img/expo/carousel2/goodwe.webp",
             "alt": "GOODWE TECHNOLOGIES CO.,LTD.",
             "width": 170
         }
@@ -2094,7 +2064,7 @@ export default [
         "Hashtags": "#Growatt #EnergíaSolar #inversor #EnergíaLimpia #Innovación",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/shenzhen_growatt_new_energy_co.,_ltd.webp",
+            "src": "/img/expo/carousel2/growatt.webp",
             "alt": "Shenzhen Growatt New Energy Co., Ltd",
             "width": 170
         }
@@ -2124,7 +2094,7 @@ export default [
         "Hashtags": "#Hoymiles",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/hoymiles_power_electronics_inc..webp",
+            "src": "/img/expo/carousel2/hoymiles.webp",
             "alt": "Hoymiles Power Electronics Inc.",
             "width": 170
         }
@@ -2137,7 +2107,7 @@ export default [
         "Puesto": "Senior market specialist",
         "telefono": "86-592-5902515",
         "Correo": "sales@antaisolar.com",
-        "paginaWeb": "www.antaisolar.com",
+        "paginaWeb": "https://www.antaisolar.com",
         "direccion": "30F, W Square, 1801 Huandao East Road, Siming District, Xiamen, China",
         "cp": "361002",
         "Ciudad": "Xiamen",
@@ -2154,7 +2124,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/antai_technology_co.,ltd.webp",
+            "src": "/img/sponsors/antai.webp",
             "alt": "ANTAI TECHNOLOGY CO.,LTD",
             "width": 170
         }
@@ -2167,7 +2137,7 @@ export default [
         "Puesto": "China",
         "telefono": "86 755 2998 8492",
         "Correo": "Info@atesspower.com",
-        "paginaWeb": "www.atesspower.com",
+        "paginaWeb": "https://www.atesspower.com",
         "direccion": "Growatt-ATESS Industrial Park, Shuitian 4th Industrial Zone, Baoan District, Shenzhen",
         "cp": "518108",
         "Ciudad": "Shenzhen",
@@ -2184,7 +2154,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/shenzhen_atess_power_technology_co.,_ltd.webp",
+            "src": "/img/expo/carousel2/atess.webp",
             "alt": "Shenzhen ATESS Power Technology Co., Ltd",
             "width": 170
         }
@@ -2197,7 +2167,7 @@ export default [
         "Puesto": "Operations Supervisor",
         "telefono": "86 15007526245",
         "Correo": "aydan@bsl-battery.com",
-        "paginaWeb": "www.bsl-battery.com",
+        "paginaWeb": "https://www.bsl-battery.com",
         "direccion": "1F & 8F of Building 2-3 and 8F of Building 2-2 in Area D, No.6 Xingyuan North Road, the Qibu Area of China-Korea Huizhou Industrial Park, Zhong Kai District, Huizhou City， Guangdong Province, China",
         "cp": "516000",
         "Ciudad": "Huizhou",
@@ -2214,8 +2184,8 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/bsl_new_energy_technology_co.,_ltd.webp",
-            "alt": "BSL NEW ENERGY TECHNOLOGY CO., LTD",
+            "src": "",
+            "alt": "",
             "width": 170
         }
     },
@@ -2227,7 +2197,7 @@ export default [
         "Puesto": "Gerente de Marketing",
         "telefono": "52 33 2310 5421",
         "Correo": "marketing@solar-center.mx",
-        "paginaWeb": "www.solar-center.mx",
+        "paginaWeb": "https://www.solar-center.mx",
         "direccion": "Industria Eléctrica 43A. Parque Industrial Bugambilias",
         "cp": "45645",
         "Ciudad": "Tlajomulco de Zúñiga",
@@ -2244,7 +2214,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solar_center.webp",
+            "src": "/img/expo/carousel5/solar_center2.webp",
             "alt": "Solar Center",
             "width": 170
         }
@@ -2257,7 +2227,7 @@ export default [
         "Puesto": "Marketing Coordinator",
         "telefono": "52 614 410 0827",
         "Correo": "marketing@csoles.mx",
-        "paginaWeb": "www.corporativosoles.com",
+        "paginaWeb": "https://www.corporativosoles.com",
         "direccion": "Periférico de la Juventud 6104-B, Col. Arcadas",
         "cp": "31215",
         "Ciudad": "Chihuahua",
@@ -2274,7 +2244,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/corporativo_soles.webp",
+            "src": "/img/expo/carousel1/Soles.webp",
             "alt": "Corporativo Soles",
             "width": 170
         }
@@ -2287,7 +2257,7 @@ export default [
         "Puesto": "",
         "telefono": "",
         "Correo": "marketing@tmctransformers.com",
-        "paginaWeb": "www.tmctransformers.com/es",
+        "paginaWeb": "https://www.tmctransformers.com/es",
         "direccion": "",
         "cp": "",
         "Ciudad": "",
@@ -2304,7 +2274,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/tmc_transformers_spa.webp",
+            "src": "/img/expo/carousel1/tmc.webp",
             "alt": "TMC Transformers SPA",
             "width": 170
         }
@@ -2317,7 +2287,7 @@ export default [
         "Puesto": "Business Development Manager",
         "telefono": "407-412-4793",
         "Correo": "jexposito@jstpower.com",
-        "paginaWeb": "www.jstpower.com",
+        "paginaWeb": "https://www.jstpower.com",
         "direccion": "30 Skyline Way",
         "cp": "",
         "Ciudad": "Lake Mary",
@@ -2334,7 +2304,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/jst_power_equipment,_inc..webp",
+            "src": "/img/expo/carousel1/jstpower.webp",
             "alt": "JST Power Equipment, Inc.",
             "width": 170
         }
@@ -2343,10 +2313,10 @@ export default [
         "clasificacion": "",
         "nombreComercial": "Suports by Solar Steel",
         "stand": "F41",
-        "nombreContacto": "Mariola Mislata\nMarcos Voces\n",
-        "Puesto": "Gerente\nMarketing Manager \n",
-        "telefono": "(+34) 691680876\n(+34) 606 66 92 43\n",
-        "Correo": "mariola.mislata@suports.es\nmarcos.voces@gonvarri.com\n",
+        "nombreContacto": "Mariola Mislata\nMarcos Voces",
+        "Puesto": "Gerente\nMarketing Manager ",
+        "telefono": "(+34) 691680876\n(+34) 606 66 92 43",
+        "Correo": "mariola.mislata@suports.es\nmarcos.voces@gonvarri.com",
         "paginaWeb": "https://suports.es/",
         "direccion": "Edificio de Oficinas Trade Center I - Oficina 312E, C/ Profesor Beltrán Báguena 4",
         "cp": "46009",
@@ -2364,7 +2334,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/suports_by_solar_steel.webp",
+            "src": "/img/expo/carousel1/gonvarri.webp",
             "alt": "Suports by Solar Steel",
             "width": 170
         }
@@ -2394,7 +2364,7 @@ export default [
         "Hashtags": "Livoltek México ",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/livoltek.webp",
+            "src": "/img/expo/carousel1/livoltek.webp",
             "alt": "LIVOLTEK",
             "width": 170
         }
@@ -2424,7 +2394,7 @@ export default [
         "Hashtags": "#Sistema automatizado de limpieza para paneles solares #our bussines is the sun",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/smg_global_sa_de_cv.webp",
+            "src": "",
             "alt": "SMG Global SA de CV",
             "width": 170
         }
@@ -2454,7 +2424,7 @@ export default [
         "Hashtags": "#Solarama #SoySolarama #SolaramaMX #TuSocioMayoristaDeConfianza",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solarama.webp",
+            "src": "/img/expo/carousel5/solarama.webp",
             "alt": "SOLARAMA",
             "width": 170
         }
@@ -2467,7 +2437,7 @@ export default [
         "Puesto": "Ventas",
         "telefono": "555 379 2966",
         "Correo": "contactogamo@gmail.com",
-        "paginaWeb": "www.aluminiogamo.mx",
+        "paginaWeb": "https://www.aluminiogamo.mx",
         "direccion": "AV. TEOTIHUACÁN 274-MZ 007, HAB LA ROMANA, TLALNEPANTLA, MÉX.",
         "cp": "54030",
         "Ciudad": "TLALNEPANTLA",
@@ -2481,10 +2451,10 @@ export default [
         "Instagram": "@aluminiogamo",
         "Facebook": "ALUMINIO EXTRUIDO GAMO",
         "LinkedIn": "",
-        "Hashtags": "#aluminiogamo\n\n#solargamo\n",
+        "Hashtags": "#aluminiogamo\n#solargamo",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solar_gamo.webp",
+            "src": "/img/sponsors/solargamo.webp",
             "alt": "SOLAR GAMO",
             "width": 170
         }
@@ -2497,7 +2467,7 @@ export default [
         "Puesto": "Director",
         "telefono": "34666905119",
         "Correo": "info@cemelevadores.mx",
-        "paginaWeb": "wwwcemelevadores.mx",
+        "paginaWeb": "https://wwwcemelevadores.mx",
         "direccion": "Camino Valdecabañas 8",
         "cp": "28500",
         "Ciudad": "Arganda del Rey",
@@ -2514,7 +2484,7 @@ export default [
         "Hashtags": "#CEMelevadores #CemSolarLift #SolarLift #ElevadorPanelesSolares",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/cem_elevadores.webp",
+            "src": "/img/expo/carousel5/cem.webp",
             "alt": "CEM Elevadores",
             "width": 170
         }
@@ -2544,7 +2514,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/enerpoint_.webp",
+            "src": "/img/expo/carousel5/enerpoint.webp",
             "alt": "ENERPOINT ",
             "width": 170
         }
@@ -2574,7 +2544,7 @@ export default [
         "Hashtags": "#BetterSolarStartsHere \n#uniraclatam \n#teamunirac \n#estructurassolarescertificadas",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/unirac.webp",
+            "src": "/img/expo/carousel5/unirac.webp",
             "alt": "UNIRAC",
             "width": 170
         }
@@ -2587,7 +2557,7 @@ export default [
         "Puesto": "Manager",
         "telefono": "-84168651",
         "Correo": "francy@era.com.cn",
-        "paginaWeb": "www.erasolar.com.cn",
+        "paginaWeb": "https://www.erasolar.com.cn",
         "direccion": "No.888 Huangjiao Road,Huangyan,Taizhou,318020,Zhejiang,China",
         "cp": "318020",
         "Ciudad": "Taizhou",
@@ -2604,7 +2574,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/zhejiang_era_solar_technology_co.,_ltd..webp",
+            "src": "/img/expo/carousel1/erasolar.webp",
             "alt": "Zhejiang ERA Solar Technology Co., Ltd.",
             "width": 170
         }
@@ -2615,7 +2585,7 @@ export default [
         "stand": "K60",
         "nombreContacto": "Jasmine",
         "Puesto": "sales director",
-        "telefono": "’+86 13641422916",
+        "telefono": "86 13641422916",
         "Correo": "jasmine@sunbanges.com",
         "paginaWeb": "https://www.sunbanges.com/",
         "direccion": "No. 68 Ruiqiao Road, Changbu Village, Xinyang District, Huizhou City",
@@ -2629,12 +2599,12 @@ export default [
         "productos": "Energy storage battery",
         "contacto": "",
         "Instagram": "",
-        "Facebook": "",
-        "LinkedIn": "",
+        "Facebook": "https://www.facebook.com/profile.php?id=61562045279241",
+        "LinkedIn": "https://www.linkedin.com/company/sunbang/posts/?feedView=all",
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/guangdong_sunbang_technology_co.,_ltd..webp",
+            "src": "/img/expo/carousel1/sunbond.webp",
             "alt": "Guangdong Sunbang Technology Co., Ltd.",
             "width": 170
         }
@@ -2664,7 +2634,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/rs_mounting_systems.webp",
+            "src": "/img/expo/carousel6/ralux.webp",
             "alt": "RS Mounting Systems",
             "width": 170
         }
@@ -2694,19 +2664,19 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/refacsol.webp",
+            "src": "/img/expo/carousel5/refasol.webp",
             "alt": "REFACSOL",
             "width": 170
         }
     },
     {
         "clasificacion": "",
-        "nombreComercial": "Grupo Mayorista Solar \n",
+        "nombreComercial": "Grupo Mayorista Solar",
         "stand": "D20",
-        "nombreContacto": "Jhade Olivas Borunda\nArely Torres\nMelina Morales\n",
-        "Puesto": "Coordinadora de Ventas \nCoordinadora de Soporte Técnico\nDiseñador \n",
-        "telefono": "52 55 3404 2359\n52 614 336 1507\n52 614 3649 770\n\n",
-        "Correo": "supervisor.ventas@mayoristapanelessolares.com\nsoporte@mayoristapanelessolares.com\nbranding@mayoristapanelessolares.com\n",
+        "nombreContacto": "Jhade Olivas Borunda\nArely Torres\nMelina Morales",
+        "Puesto": "Coordinadora de Ventas \nCoordinadora de Soporte Técnico\nDiseñador",
+        "telefono": "52 55 3404 2359\n52 614 336 1507\n52 614 3649 770",
+        "Correo": "supervisor.ventas@mayoristapanelessolares.com\nsoporte@mayoristapanelessolares.com\nbranding@mayoristapanelessolares.com",
         "paginaWeb": "https://www.mayoristapanelessolares.com/",
         "direccion": "Periferico de la juventud #10301 int 204, col. Ignacio Allende",
         "cp": "31124",
@@ -2724,8 +2694,8 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/grupo_mayorista_solar_\n.webp",
-            "alt": "Grupo Mayorista Solar \n",
+            "src": "/img/expo/carousel5/mayorista_solar.webp",
+            "alt": "Grupo Mayorista Solar ",
             "width": 170
         }
     },
@@ -2754,7 +2724,7 @@ export default [
         "Hashtags": "#HitachiEnergyMéxico #HitachiEnergyREMEX2025",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/hitachi_energy.webp",
+            "src": "/img/sponsors/hitachi.webp",
             "alt": "Hitachi Energy",
             "width": 170
         }
@@ -2784,7 +2754,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/comap.webp",
+            "src": "/img/expo/carousel5/comap.webp",
             "alt": "ComAp",
             "width": 170
         }
@@ -2794,10 +2764,10 @@ export default [
         "nombreComercial": "SYSCOM",
         "stand": "G30",
         "nombreContacto": "César Daniel Carreon",
-        "Puesto": "Gerente de Ingenieria\n",
+        "Puesto": "Gerente de Ingenieria",
         "telefono": "52(614)415252",
         "Correo": "daniel.carreon@syscom.mx",
-        "paginaWeb": "www.syscom.mx",
+        "paginaWeb": "https://www.syscom.mx",
         "direccion": "Av. 20 de Noviembre 805, Chihuahua Centro",
         "cp": "31000",
         "Ciudad": "Chihuahua",
@@ -2814,7 +2784,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/syscom.webp",
+            "src": "/img/expo/carousel6/syscom.webp",
             "alt": "SYSCOM",
             "width": 170
         }
@@ -2844,7 +2814,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/anker_solix.webp",
+            "src": "",
             "alt": "Anker SOLIX",
             "width": 170
         }
@@ -2874,7 +2844,7 @@ export default [
         "Hashtags": "#acerohabilitado #habilitamoselfuturodelaconstruccion #ingetek #acero",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/ingetek.webp",
+            "src": "",
             "alt": "INGETEK",
             "width": 170
         }
@@ -2883,11 +2853,11 @@ export default [
         "clasificacion": "",
         "nombreComercial": "HEYCO",
         "stand": "E75",
-        "nombreContacto": "Scott Alexander Fellows",
-        "Puesto": "Renewable Energies Sales Manager",
-        "telefono": "(+1) 619-992-6990",
-        "Correo": "SFellows@heyco.com",
-        "paginaWeb": "www.heyco.com",
+        "nombreContacto": "Scott Alexander Fellows\nJorge Lopez\nNazir Lopez",
+        "Puesto": "Renewable Energies Sales Manager\nSales Representative in Mexico\nSales Representative in Mexico",
+        "telefono": "(+1) 619-992-6990\n(+52) 331-052-9815\n(+52) 332-414-8668",
+        "Correo": "SFellows@heyco.com\nJLopez@heyco.com\nNLopez@heyco.com",
+        "paginaWeb": "https://www.heyco.com",
         "direccion": "1800 Industrial Way N",
         "cp": "8755",
         "Ciudad": "Toms River",
@@ -2904,67 +2874,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/heyco.webp",
-            "alt": "HEYCO",
-            "width": 170
-        }
-    },
-    {
-        "clasificacion": "",
-        "nombreComercial": "HEYCO",
-        "stand": "E75",
-        "nombreContacto": "Jorge Lopez",
-        "Puesto": "Sales Representative in Mexico",
-        "telefono": "(+52) 331-052-9815",
-        "Correo": "JLopez@heyco.com",
-        "paginaWeb": "www.heyco.com",
-        "direccion": "1800 Industrial Way N",
-        "cp": "8755",
-        "Ciudad": "Toms River",
-        "Estado": "New Jersey",
-        "Pais": "Estados Unidos",
-        "descripcion_es": "",
-        "descripcion_en": "Manufacturer with decades of experience in the design of molded wire protection products, cable routing and stamped electrical products. Solar Power Components (clips, clamps, wire ties, cable wraps)",
-        "categoria": "Fasteners y Accesorios para equipo solar",
-        "productos": "Solar Power Components (clips, clamps, wire ties, cable wraps), Liquid Tight Flexible Conduit, Tubing, Fittings, Liquid Tight Cordgrips, Strain Relief Bushings, Venting Solutions, Bushings, Grommets, Hole Plugs, Caps and Plugs, PCB Supports, LED Spacers, Power Components (connectors, terminal blocks, ring & spade terminals, cordset components, blades",
-        "contacto": "",
-        "Instagram": "",
-        "Facebook": "",
-        "LinkedIn": "https://www.linkedin.com/company/heyco-products-corp/",
-        "Hashtags": "",
-        "imagen": {
-            "link": "",
-            "src": "/img/buyersProfessional/heyco.webp",
-            "alt": "HEYCO",
-            "width": 170
-        }
-    },
-    {
-        "clasificacion": "",
-        "nombreComercial": "HEYCO",
-        "stand": "E75",
-        "nombreContacto": "Nazir Lopez",
-        "Puesto": "Sales Representative in Mexico",
-        "telefono": "(+52) 332-414-8668",
-        "Correo": "NLopez@heyco.com",
-        "paginaWeb": "www.heyco.com",
-        "direccion": "1800 Industrial Way N",
-        "cp": "8755",
-        "Ciudad": "Toms River",
-        "Estado": "New Jersey",
-        "Pais": "Estados Unidos",
-        "descripcion_es": "",
-        "descripcion_en": "Manufacturer with decades of experience in the design of molded wire protection products, cable routing and stamped electrical products. Solar Power Components (clips, clamps, wire ties, cable wraps)",
-        "categoria": "Fasteners y Accesorios para equipo solar",
-        "productos": "Solar Power Components (clips, clamps, wire ties, cable wraps), Liquid Tight Flexible Conduit, Tubing, Fittings, Liquid Tight Cordgrips, Strain Relief Bushings, Venting Solutions, Bushings, Grommets, Hole Plugs, Caps and Plugs, PCB Supports, LED Spacers, Power Components (connectors, terminal blocks, ring & spade terminals, cordset components, blades",
-        "contacto": "",
-        "Instagram": "",
-        "Facebook": "",
-        "LinkedIn": "https://www.linkedin.com/company/heyco-products-corp/",
-        "Hashtags": "",
-        "imagen": {
-            "link": "",
-            "src": "/img/buyersProfessional/heyco.webp",
+            "src": "",
             "alt": "HEYCO",
             "width": 170
         }
@@ -2977,7 +2887,7 @@ export default [
         "Puesto": "Gerente de Marketing",
         "telefono": "52 81 2938 0782",
         "Correo": "mkt@batterymaster.com",
-        "paginaWeb": "www.batterymaster.com",
+        "paginaWeb": "https://www.batterymaster.com",
         "direccion": "Av. Churubusco #1600. Col. Parque Industrial Regiomontano",
         "cp": "64540",
         "Ciudad": "Monterrey",
@@ -2994,7 +2904,7 @@ export default [
         "Hashtags": "#Batterymaster",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/soluciones_en_baterias.webp",
+            "src": "/img/expo/carousel6/battery-master.webp",
             "alt": "Soluciones en Baterias",
             "width": 170
         }
@@ -3003,11 +2913,11 @@ export default [
         "clasificacion": "",
         "nombreComercial": "LEADER TECHNOLOGY SHENZHEN CO.,LIMITED",
         "stand": "I43",
-        "nombreContacto": "Mia Zou\n\nMatt Mao\n\n\n",
+        "nombreContacto": "Mia Zou\nMatt Mao",
         "Puesto": "Ventas al exterior",
-        "telefono": "‘+86 180 0276 0114\n\n’+86 137 2353 7594\n",
-        "Correo": "mia@leadergroup-cn.com\n\n sales1@leadergroup-cn.com\n",
-        "paginaWeb": "www.leadergroup-cn.com",
+        "telefono": "‘+86 180 0276 0114\n’+86 137 2353 7594",
+        "Correo": "mia@leadergroup-cn.com\n sales1@leadergroup-cn.com",
+        "paginaWeb": "https://www.leadergroup-cn.com",
         "direccion": "Building 7, Iber Industrial Park, No. 39 Yuehai Avenue, Xiegang Town, Dongguan City, Provincia de Guangdong, China",
         "cp": "523863",
         "Ciudad": "Dongguan \n City",
@@ -3037,7 +2947,7 @@ export default [
         "Puesto": "Marketing Specialist",
         "telefono": "#ERROR!",
         "Correo": "yeliuping@felicitysolar.com",
-        "paginaWeb": "www.felicityess.com",
+        "paginaWeb": "https://www.felicityess.com",
         "direccion": "Rio Rhin 63, Cuauhtémoc,06500 Ciudad de México CDMX, México",
         "cp": "6500",
         "Ciudad": "Ciudad de México",
@@ -3054,7 +2964,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/ets_felicitysolar_mexico_s.a_de_cv.webp",
+            "src": "/img/expo/carousel6/felicity-ess.webp",
             "alt": "ETS FELICITYSOLAR MEXICO S.A DE CV",
             "width": 170
         }
@@ -3067,7 +2977,7 @@ export default [
         "Puesto": "E80",
         "telefono": "86 0512 36698841",
         "Correo": "tracy.qu@cfriend-electric.com",
-        "paginaWeb": "www.cfriend-electric.com",
+        "paginaWeb": "https://www.cfriend-electric.com",
         "direccion": "No.153 Youyibei Road, Kunshan, Jiangsu, China",
         "cp": "215300",
         "Ciudad": "Kunshan",
@@ -3114,7 +3024,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/ecoflow_innovation_technology.webp",
+            "src": "/img/expo/carousel1/ecoflow.webp",
             "alt": "EcoFlow Innovation Technology",
             "width": 170
         }
@@ -3144,7 +3054,7 @@ export default [
         "Hashtags": "#PowerThroughLight",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/ledvance.webp",
+            "src": "/img/sponsors/leadvance.webp",
             "alt": "LEDVANCE",
             "width": 170
         }
@@ -3157,7 +3067,7 @@ export default [
         "Puesto": "GTE. DE MERCADOTECNIA",
         "telefono": "5555401540",
         "Correo": "antonio.atilano@tutopower.com",
-        "paginaWeb": "www.tutopower.com",
+        "paginaWeb": "https://www.tutopower.com",
         "direccion": "Montes Urales 770, piso 5, col. Lomas de Chapultepec, 5a. Sección Miguel Hudalgo",
         "cp": "11000",
         "Ciudad": "CDMX",
@@ -3174,7 +3084,7 @@ export default [
         "Hashtags": "#TutoPower, #SuministroCalificado, #GeneraciónDistribuida",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/tuto_power.webp",
+            "src": "/img/tutosmart.webp",
             "alt": "TUTO POWER",
             "width": 170
         }
@@ -3187,7 +3097,7 @@ export default [
         "Puesto": "Country Manager",
         "telefono": "52 999 532 1124",
         "Correo": "alejandro@solaxpower.com",
-        "paginaWeb": "www.solaxpower.com",
+        "paginaWeb": "https://www.solaxpower.com",
         "direccion": "No. 288, Shizhu Road, Tonglu Economic Development Zone",
         "cp": "310000",
         "Ciudad": "Hangzhou",
@@ -3204,7 +3114,7 @@ export default [
         "Hashtags": "#SolaX #SolaXPower #Solaxproduct #SolaxExpo #SolaXEnergyStorageSystem #EnergyStorageCabinet #Poweringagreenfuture",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/solax_power.webp",
+            "src": "/img/expo/carousel3/solax_power.webp",
             "alt": "SolaX Power",
             "width": 170
         }
