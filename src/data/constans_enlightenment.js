@@ -145,7 +145,7 @@ export const conferences = {
                     position:'Cofundador PowerMe Energy',
                     email: 'jorge.elosua@powerme.mx',
                     phone: '8115442227',
-                    imagenes:'/img/Jorge Alberto Elosúa-ECOFLOW.webp',
+                    imagenes:'/img/JorgeAlbertoElosúa-ECOFLOW.webp',
                 },                
             ],
         },
