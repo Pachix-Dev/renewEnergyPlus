@@ -345,7 +345,7 @@ export const program_premium = {
                 {       
                     id: 2,  
                     imagenes:'/img/speakers-conferencia-premium/Catalina-Delgado-Fotografía.webp',              
-                    name: 'Catalina Delgado ',
+                    name: 'Catalina Delgadito',
                     bio: 'Gerente Senior de gobierno y asuntos regulatorios en Invenergy. Previo a esto, fue asesora del órgano de gobierno de la Comisión Reguladora de Energía y consultora del Instituto Mexicano para la Competitividad. Ha ocupado varios cargos en el gobierno federal mexicano en Pemex, la Secretaría de Hacienda y Crédito Público y la Secretaría de Desarrollo Social. También fue funcionaria del Banco Mundial en Washington y del Departamento Nacional de Planeación de Colombia. Es Maestra en Política Financiera Pública por la London School of Economics, y Maestra y Licenciada en Economía por la Universidad de los Andes de Bogotá.',
                     bio_en: 'Senior Manager of Government and Regulatory Affairs at Invenergy. Prior to this, she was an advisor to the governing body of the Energy Regulatory Commission and a consultant to the Mexican Institute for Competitiveness. He has held various positions in the Mexican federal government in Pemex, the Ministry of Finance and Public Credit and the Ministry of Social Development. She was also an official at the World Bank in Washington and at the National Planning Department of Colombia. She has a Master in Public Financial Policy from the London School of Economics, and a Master and Graduate in Economics from the Universidad de los Andes in Bogotá.',
                     position: 'Director Principal de Asuntos Gubernamentales y Reglamentarios ',
