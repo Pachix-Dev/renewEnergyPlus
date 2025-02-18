@@ -50,7 +50,7 @@ export const conferences = {
              speakers: [
                 {   nameem: 'BATTERY DEPOT',   
                     id: 1,  
-                    imagenes:'/img/David Gutierrez-Battery Depot.webp',              
+                    imagenes:'/img/David-Gutierrez-Battery-Depot.webp',              
                     name: 'David Gutiérrez',
                     bio: 'Ingeniero en Energía egresado de la Universidad de Guadalajara y especialista en sistemas de almacenamiento de energía, cuenta con más de una década de experiencia en el desarrollo, instalación y supervisión de proyectos fotovoltaicos en distintos estados de la República Mexicana. Su trayectoria incluye la capacitación de integradores y empresarios en almacenamiento energético, así como una participación activa en el diseño e implementación de sistemas aislados y soluciones de Energy Storage. Actualmente, lidera el mercado mexicano para Victron Energy, empresa holandesa reconocida a nivel global por sus innovadoras soluciones con baterías.',
                     bio_en: 'Energy Engineer graduated from the University of Guadalajara and specialist in energy storage systems, has more than a decade of experience in the development, installation and supervision of photovoltaic projects in different states of the Mexican Republic. His track record includes training integrators and entrepreneurs in energy storage, as well as active participation in the design and implementation of isolated systems and Energy Storage solutions. Currently, it leads the Mexican market for Victron Energy, a Dutch company recognized globally for its innovative battery solutions.',
