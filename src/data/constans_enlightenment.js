@@ -225,7 +225,7 @@ export const conferences = {
             speakers: [
                 {   nameem: 'S-5!',   
                     id: 1,  
-                    imagenes:'/img/Erick de la Rosa-S-5!.webp',              
+                    imagenes:'/img/ErickdelaRosa-S-5!.webp',              
                     name: 'Erick De La Rosa',
                     bio: ' Ingenieros especializados en soluciones de fijación para techos metálicos, con más de cinco años de experiencia en el sector fotovoltaico. Su profundo conocimiento en la industria les permite optimizar la instalación de sistemas solares con seguridad y eficiencia, asegurando soluciones duraderas y de alto desempeño.',
                     bio_en: 'Engineers specialized in metal roof fastening solutions, with more than five years of experience in the photovoltaic sector. Their deep knowledge in the industry allows them to optimize the installation of solar systems with safety and efficiency, ensuring durable and high performance solutions.',
