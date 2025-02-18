@@ -109,24 +109,25 @@ const language = i18next.language;
                   <p class="pb-3 text-sm md:text-lg text-justify">
                     {i18next.language === 'es' ? conference.resume : conference.resume_en}
                   </p>
-                  
+                 
+
                 </div>
                 
-                <div class="gap-10 p-3 items-center">
+                <div class="grid gap-10 p-3 place-items-center">
                   {conference.speakers?.map((speaker, index) => (
-                   
-                     
-                        <div class="mr-6 w-50 h-32 items-center">
+                                        
+                        <div class="flex flex-col items-center w-50 h-32 ">
                           <Speaker speaker={speaker} language={language} client:load />
+                          <h1 class="text-white text-sm md:text-lg font-semibold mt-2 flex justify-center items-center p-1 bg-custom-orange rounded-lg w-60 h-13">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 md:size-5 mr-2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                            {speaker.name}
+                          </h1>
                         </div>
         
-                        <h1 class="text-white text-sm md:text-lg font-semibold mt-2 flex items-center p-1 bg-custom-orange rounded-lg w-60 h-13">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 md:size-5 mr-2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                          </svg>
-                          {speaker.name}
-                        </h1>
-                     
+                       
+                         <img src={conference.logos} class="mt-2 w-32 h-auto object-contain" alt="Logo" />
                     
                   ))}
                 </div>
@@ -177,25 +178,24 @@ const language = i18next.language;
                   <p class="pb-3 text-sm md:text-lg text-justify">
                     {i18next.language === 'es' ? conference.resume : conference.resume_en}
                   </p>
-                  
+                 
                 </div>
                 
-                <div class="gap-10 p-3">
+                <div class="grid gap-10 p-3 place-items-center">
                   {conference.speakers?.map((speaker, index) => (
-                   
-                     
-                        <div class="mr-6 w-50 h-32 items-center">
+                                        
+                        <div class=" flex flex-col items-center w-50 h-32">
                           <Speaker speaker={speaker} language={language} client:load />
+                          <h1 class="text-white text-sm md:text-lg font-semibold mt-2 flex  justify-center items-center p-1 bg-custom-orange rounded-lg w-60 h-13">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 md:size-5 mr-2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                            {speaker.name}
+                          </h1>
                         </div>
         
-                        <h1 class="text-white text-sm md:text-lg font-semibold mt-2 flex items-center p-1 bg-custom-orange rounded-lg w-60 h-13">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 md:size-5 mr-2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                          </svg>
-                          {speaker.name}
-                        </h1>
-                     
-                    
+                        
+                        <img src={conference.logos} class="w-32 h-32 object-contain" alt="Logo" />                    
                   ))}
                 </div>
               </div>
@@ -245,26 +245,21 @@ const language = i18next.language;
                 </p>
                 <p class="pb-3 text-sm md:text-lg text-justify">
                   {i18next.language === 'es' ? conference.resume : conference.resume_en}
-                </p>
-                
+                </p>                
               </div>
               
-              <div class="gap-10 p-3">
-                {conference.speakers?.map((speaker, index) => (
-                 
-                   
-                      <div class="mr-6 w-50 h-32 items-center">
+              <div class="grid gap-10 p-3 place-items-center">
+                {conference.speakers?.map((speaker, index) => (                                    
+                      <div class="flex flex-col items-center  w-50 h-32 ">
                         <Speaker speaker={speaker} language={language} client:load />
-                      </div>
-      
-                      <h1 class="text-white text-sm md:text-lg font-semibold mt-2 flex items-center p-1 bg-custom-orange rounded-lg w-60 h-13">
+                        <h1 class="text-white text-sm md:text-lg font-semibold mt-2 flex justify-center items-center p-1 bg-custom-orange rounded-lg w-60 h-13">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 md:size-5 mr-2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                         </svg>
                         {speaker.name}
                       </h1>
-                   
-                  
+                      </div>      
+                      <img src={conference.logos} class="w-32 h-32 object-contain" alt="Logo" />                                     
                 ))}
               </div>
             </div>

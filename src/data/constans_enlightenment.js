@@ -14,8 +14,8 @@ export const conferences = {
             hour: '12:45 – 13:15',
             name: 'METERING',
             status: 'VENDIDO',
-             duracion:'30 min.',
-             logos:'/img/sponsors/metering.webp',
+            duracion:'30 min.',
+            logos:'/img/sponsors/metering.webp',
             title: 'Equipos y métodos de prueba para Sistemas Fotovoltaicos',
             title_en: 'Equipment and test methods for Photovoltaic Systems',
             resume: 'Diagnóstico y evaluación de eficiencia de Sistemas Fotovoltaicos por medio de Equipos Trazadores de Curvas IV, de acuerdo con las normativas y requerimientos para la instalación y mantenimiento preventivo de paneles solares.',
@@ -43,15 +43,33 @@ export const conferences = {
             status: 'VENDIDO',
              duracion:'30 min.',
              logos:'/img/sponsors/batterydepot.webp'
-        },
+        }, 
         {
             id: 4,
-            hour: '14:00 – 15:00',
-            name: 'BREAK',
-            status: '',
-             duracion:'60 min.',
-             logos:''
-        },
+            hour: '14:15 – 14:45',
+            name: 'QUARTUX',
+            status: 'VENDIDO',
+            duracion:'30 min.',
+            logos:'/img/sponsors/quartux.webp',
+            title: 'Claves del diseño eficiente e implementación de sistemas de almacenamiento de energía',
+            title_en: 'Keys to efficient design and implementation of energy storage systems',
+            resume: '¿Qué aprenderás? -Mejores prácticas en diseño e implementación de hashtag#SistemasDeAlmacenamiento, Tecnologías emergentes y su impacto en la hashtag#InfraestructuraEnergética, Casos de éxito que están redefiniendo el sector energético industrial.',
+            resume_en: 'What will you learn? -Best practices in design and implementation of hashtag#StorageSystems, Emerging technologies and their impact on hashtag#EnergyInfrastructure, Success stories that are redefining the industrial energy sector.',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'QUARTUX',              
+                    name: 'Fabián Ríos',
+                    bio: 'Fabián Ríos es ingeniero en Energía con una década de experiencia en el sector de las energías renovables. Ha dedicado su carrera al desarrollo y gestión de soluciones innovadoras que promueven la transición energética en México. Con certificaciones en sistemas fotovoltaicos y gestión de proyectos, su trayectoria abarca un amplio espectro de implementaciones: desde calentadores solares y sistemas fotovoltaicos residenciales hasta almacenamiento de energía inteligente para aplicaciones industriales. Como líder en su campo, Fabián ha participado en más de 300 proyectos fotovoltaicos, asesorado más de 200 sistemas industriales, y liderado 10 proyectos de almacenamiento de energía con una capacidad acumulada de 30 MWh. Estas iniciativas han generado ahorros económicos anuales de más de 150 millones de pesos y reducido la emisión de más de 70 mil toneladas de CO2, contribuyendo significativamente a un futuro sostenible. En su posición actual como Director de Negocios y Alianzas Estratégicas en Quartux, Fabián se enfoca en identificar oportunidades innovadoras y cerrar acuerdos estratégicos que impulsen la adopción de tecnologías de almacenamiento energético. Su pasión por las energías renovables lo ha llevado a ser un capacitador experto en sistemas fotovoltaicos, gestión de proyectos y almacenamiento energético. Además, ha destacado por su conocimiento en normativas, certificaciones y lineamientos energéticos del sector público, abordando los desafíos de la creciente demanda energética de México con soluciones disruptivas como el load shifting. Fabián trabaja bajo valores de respeto, responsabilidad y trabajo en equipo, motivado por el impacto positivo de las tecnologías renovables en la industria y el medio ambiente. Su participación como ponente busca inspirar y fortalecer el compromiso con la transición energética, compartiendo su visión de un futuro más limpio y sustentable.',
+                    bio_en: 'Fabián Ríos is an energy engineer with a decade of experience in the renewable energy sector. He has dedicated his career to the development and management of innovative solutions that promote the energy transition in Mexico. With certifications in photovoltaic systems and project management, his background spans a broad spectrum of implementations: from solar heaters and residential photovoltaic systems to smart energy storage for industrial applications. As a leader in his field, Fabian has participated in more than 300 PV projects, advised more than 200 industrial systems, and led 10 energy storage projects with a cumulative capacity of 30 MWh. These initiatives have generated annual economic savings of more than 150 million pesos and reduced the emission of more than 70 thousand tons of CO2, contributing significantly to a sustainable future. In his current position as Director of Business and Strategic Alliances at Quartux, Fabian focuses on identifying innovative opportunities and closing strategic agreements that drive the adoption of energy storage technologies. His passion for renewable energy has led him to become an expert trainer in photovoltaic systems, project management and energy storage. In addition, he has excelled in his knowledge of public sector energy regulations, certifications and guidelines, addressing the challenges of Mexico´s growing energy demand.',
+                    position_en: 'Partnerships Director',
+                    position:'Director de Alianzas',
+                    email: 'fabian.rios@quartux.com',
+                    phone: '4421499619',
+                    imagenes:'/img/fabianrios.webp',
+                },
+            ]
+        },       
         {
             id: 5,
             hour: '15:00 – 15:30',
@@ -99,8 +117,26 @@ export const conferences = {
             hour: '17:15 – 18:00',
             name: 'LEDVANCE MEXICO',
             status: 'VENDIDO',
-             duracion:'45 min.',
-             logos:'/img/sponsors/leadvance.webp',
+            duracion:'45 min.',
+            logos:'/img/sponsors/leadvance.webp',
+            title:'Revolución Solar: Transformando el Sector Energético con Soluciones Sostenibles',
+            title_en:'Solar Revolution: Transforming the Energy Sector with Sustainable Solutions',
+            resume:'',
+            resume_en:'',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'LEDVANCE MEXICO',              
+                    name: 'Pablo Sandoval',
+                    bio: 'Lic. Pablo Sandoval, Gerente de Producto para Latinoamérica en LEDVANCE cuenta con más de 6 años de experiencia en el mercado de iluminación. Comenzó su trayectoria en LEDVANCE México en el área de producto, enfocándose en desarrollar productos estratégicos para el negocio, un par de años más tarde su talento y dedicación lo llevaron a trasladarse a Estados Unidos, también como desarrollador de producto, pero ahora para LEDVANCE USA, en donde gestionó exitosamente su cargo por casi 3 años, aportando soluciones innovadoras y personalizadas para clientes estratégicos del negocio de Norteamérica. Cabe mencionar que también Pablo ha desempeñado funciones en el área de ventas. Pablo regresa a México en 2022 asumiendo el reto de Gerente de Producto a nivel LATAM, su experiencia internacional y su profundo conocimiento del mercado le han permitido liderar proyectos estratégicos y fomentar el crecimiento de la empresa en la región. Es licenciado en Administración de Empresas por la Universidad Nacional Autónoma de México (UNAM) y se ha especializado en marketing de producto. Además, cuenta con la certificación Black Belt en Lean Six Sigma, demostrando su compromiso con la mejora continua y la eficiencia operativa. Bilingüe en español e inglés, combina sus habilidades lingüísticas con una visión global y una capacidad excepcional para conectar con diversos públicos.',
+                    bio_en: 'Mr. Pablo Sandoval, Product Manager for Latin America at LEDVANCE has more than 6 years of experience in the lighting market. He began his career at LEDVANCE Mexico in the product area, focusing on developing strategic products for the business, a couple of years later his talent and dedication led him to move to the United States, also as a product developer, but now for LEDVANCE USA, where he successfully managed his position for almost 3 years, providing innovative and customized solutions for strategic customers of the North American business. It is worth mentioning that Pablo has also performed functions in the sales area. Pablo returns to Mexico in 2022 taking on the challenge of Product Manager at LATAM level, his international experience and deep knowledge of the market have allowed him to lead strategic projects and promote the growth of the company in the region. He has a degree in Business Administration from the National Autonomous University of Mexico (UNAM) and has specialized in product marketing. In addition, he has the Black Belt certification in Lean Six Sigma, demonstrating his commitment to continuous improvement and operational efficiency. Bilingual in Spanish and English, he combines his linguistic skills with a global vision and an exceptional ability to connect with diverse audiences.',
+                    position_en: 'Sr. Product Marketing Latam',
+                    position:'Sr. Product Marketing Latam',
+                    email: '',
+                    phone: '52 55 3933 1373',
+                    imagenes:'/img/pablosandoval.webp',
+                },                
+            ],
         }
     ],
     day_2: [
@@ -118,7 +154,25 @@ export const conferences = {
             name: 'SOLARMAX',
             status: 'VENDIDO',
             duracion:'30 min',
-            logos:'/img/sponsors/SolarMax.webp'
+            logos:'/img/sponsors/SolarMax.webp',           
+            title: 'ARQUITECTURA FOTOVOLTAICA Y NUEVAS TECNOLOGÍAS SOLARES: La Revolución en el mundo de la Construcción.',
+            title_en: 'PHOTOVOLTAIC ARCHITECTURE AND NEW SOLAR TECHNOLOGIES: The Revolution in the Construction World.',
+            resume: 'LA ENERGÍA SOLAR FOTOVOLTAICA INTEGRADA A LOS EDIFICIOS o BUILDING INTEGRATED PHOTOVOLTAICS - BIPV- son módulos fotovoltaicos usados para reemplazar materiales convencionales de construcción, en partes tales como el techo, claraboyas, fachadas, muros cortina, atrios, pérgolas y pisos en terrazas.Los más conocidos son las tejas solares, fachadas solares y ventanas solares. Estos elementos permiten construir Edificios Energía Cero, sin perjudicar la estética del edificio, ya que mediante tecnologías físicas se diseñan para que luzcan igual a material de construcción convencional. En esta conferencia se mostrarán ejemplos de proyectos y se explicará como los arquitectos, ingenieros y constructores pueden emprender su empresa o nueva línea de negocios en esta megatendencia.',
+            resume_en: 'SOLAR PHOTOVOLTAIC ENERGY INTEGRATED TO BUILDINGS or BUILDING INTEGRATED PHOTOVOLTAICS - BIPV - are photovoltaic modules used to replace conventional construction materials, in parts such as the roof, skylights, facades, curtain walls, atriums, pergolas and terraced floors The best known are solar tiles, solar facades and solar windows. These elements allow us to build Zero Energy Buildings. without damaging the aesthetics of the building, since through physical technologies they are designed to look the same as conventional construction materials. In this conference, examples of projects will be shown and it will be explained how architects, engineers and builders can start their company or new bussiness line in this megatrend.',    
+            speakers: [
+                {   nameem: 'SOLARMAX',   
+                    id: 1,  
+                    imagenes:'/img/luisfernandomulcue.webp',              
+                    name: 'Luis Fernando Mulcue Nieto, PhD',
+                    bio: 'Científico, Consultor y Empresario en Nuevas Tecnologías Solares. Consultor para fabricantes de energía renovable de Asia, Europa y Estados Unidos, con expansión de mercados en la industria solar de más de 20 MW de potencia (equivalente a unos 40.000 paneles solares). Doctor en Física, Doctor en Ingeniería, Máster en Física, Máster en Energía Solar Fotovoltaica, e Ingeniero Físico. Cuenta con más de 20 premios y distinciones otorgadas por entidades internacionales. Tiene experiencia y publicaciones científicas en los campos de Nanotecnología, Energía Renovable, Energía Solar Fotovoltaica e Integración Arquitectónica de la Fotovoltaica en los Edificios (Building Integrated Photovoltaics - BIPV). Es conocido en redes sociales como ""Científico Solar"". Es el Fundador y CEO de BIPV SOLAR CONSULTING LLC y de la Red Internacional de Arquitectura Solar y Smart Cities BIPV GLOBAL, de Miami-Florida, USA. BIPV GLOBAL tiene presencia en 19 países.',
+                    bio_en: 'Scientist, Consultant and Entrepreneur in New Solar Technologies. Consultant for renewable energy manufacturers in Asia, Europe and the United States, with market expansion in the solar industry of more than 20 MW of power (equivalent to about 40,000 solar panels). D. in Physics, Ph.D. in Engineering, M.Sc. in Physics, M.Sc. in Photovoltaic Solar Energy, and Engineering Physicist. He has more than 20 prizes and distinctions awarded by international entities. He has experience and scientific publications in the fields of Nanotechnology, Renewable Energy, Solar Photovoltaics and Building Integrated Photovoltaics (BIPV). He is known in social networks as “”Solar Scientist“”. He is the Founder and CEO of BIPV SOLAR CONSULTING LLC and the International Network of Solar Architecture and Smart Cities BIPV GLOBAL, Miami-Florida, USA. BIPV GLOBAL is present in 19 countries.',
+                    position_en: 'CEO y Fundador BIPV GLOBAL',
+                    position:'CEO y Fundador BIPV GLOBAL',
+                    email: 'contact@bipvsolarconsulting.com',
+                    phone: '1 786 406 61 06',
+                   
+                },                
+            ],   
         },
         {
             id: 3,
@@ -127,15 +181,7 @@ export const conferences = {
             status: 'RESERVADO',
             duracion:'30 min',
             logos:'/img/sponsors/S-5!.webp'
-        },
-        {
-            id: 4,
-            hour: '14:00 – 15:00',
-            name: 'BREAK',
-            status: '',
-            duracion:'60 minutos',
-            logos:''
-        },
+        },        
         {
             id: 5,
             hour: '15:00 – 15:30',
@@ -199,51 +245,74 @@ export const conferences = {
             title_en: '',
             resume: ' ',
             resume_en: '',    
-            speakers: [
-                {       
-                    id: 1,                
-                    name: '',
-                    bio: ' ',
-                    bio_en: '',
-                    position: '',
-                    position_en: '',
-                    email: '',
-                    phone: '',
-                    imagenes:'',
-                },                
-            ],            
+                    
         },
         {
             id: 2,
             hour: '12:45 – 13:15',
-            name: 'BATTERY DEPOT',
+            name: 'SOLAREVER',
             status: 'VENDIDO',
-             duracion:'30 min.',
-             logos:'/img/sponsors/batterydepot.webp'
+            duracion:'30 min.',
+            logos:'/img/solarever.webp'
         },
         {
             id: 3,
             hour: '13:30 – 14:00',
             name: 'WEIDMULLER',
             status: 'RESERVADO',
-             duracion:'30 min.',
-             logos:'/img/expo/carousel3/weidmuller.webp'
+            duracion:'30 min.',
+            logos:'/img/expo/carousel3/weidmuller.webp',
+            title: 'Los retos del mercado solar en conectividad, protección, comunicaciones y datos ambientales para grandes plantas solares',
+            title_en: 'The challenges of the solar market in connectivity, protection, communications and environmental data for large solar plants',
+            resume: 'En los últimos años, la industria solar ha crecido de manera exponencial debido a la creciente demanda de energías renovables, la reducción de los costos de tecnología y el impulso hacia la sostenibilidad. Las grandes plantas solares, también conocidas como instalaciones de utility scale, desempeñan un papel fundamental en esta transición energética. Estas instalaciones de gran tamaño están diseñadas para generar electricidad en cantidades masivas que pueden ser distribuidas a través de las redes eléctricas nacionales o regionales. Sin embargo, mientras que las instalaciones solares de gran escala ofrecen una oportunidad significativa para la generación de energía limpia, también enfrentan numerosos retos. En particular, la conectividad, la protección, las comunicaciones y la recopilación de datos ambientales son aspectos cruciales que deben ser gestionados de manera eficiente para asegurar el rendimiento óptimo de estas plantas. Los desafíos asociados a estos aspectos son complejos y varían en función del tamaño de la planta, la ubicación geográfica, las condiciones climáticas y las tecnologías utilizadas. La presente conferencia explora los principales retos que enfrentan las grandes plantas solares en estos ámbitos, y cómo se están implementando soluciones tecnológicas y estrategias operacionales para superarlos.',
+            resume_en: 'In recent years, the solar industry has experienced exponential growth driven by the rising demand for renewable energy, declining technology costs, and the push toward sustainability. Large-scale solar plants, also known as utility-scale installations, play a pivotal role in this energy transition. These massive facilities are designed to generate electricity on a large scale, capable of being distributed through national or regional power grids. However, while utility-scale solar installations present a significant opportunity for clean energy generation, they also face numerous challenges. Connectivity, protection, communications, and environmental data collection are critical aspects that must be efficiently managed to ensure the optimal performance of these plants. The challenges associated with these areas are complex and vary depending on plant size, geographical location, climatic conditions, and the technologies deployed. This conference delves into the primary challenges faced by large-scale solar plants in these areas and explores how technological solutions and operational strategies are being implemented to address them effectively.',    
+            speakers: [
+                {       
+                    id: 1,                
+                    name: 'Eloi Nava',
+                    bio: ' ',
+                    bio_en: '',
+                    position: 'Key Account Manager PV',
+                    position_en: 'Key Account Manager PV',
+                    email: 'eloi.nava@weidmuller.com',
+                    phone: '',
+                    imagenes:'/img/eloinava.webp',
+                },                
+            ],  
         },
         {
             id: 4,
             hour: '14:15 – 14:45',
             name: 'BIOESOL',
             status: 'VENDIDO',
-             duracion:'30 min.',
-             logos:''
+            duracion:'30 min.',
+            logos:'/img/bioesol.webp',
+            title: 'Actualidad y futuro del sector eléctrico, redes, almacenamiento y nuevo marco legal.',
+            title_en: 'Present and future of the electrical sector, networks, storage and new legal framework.',
+            resume: 'Bioesol es una empresa innovadora que ofrece soluciones energéticas a través del modelo Energy as a Service (EaaS). Integramos baterías de almacenamiento (BESS), paneles solares y sistemas híbridos para optimizar el consumo energético, reducir costos y garantizar un suministro confiable sin inversión inicial. Nuestra tecnología inteligente maximiza la eficiencia y sostenibilidad para empresas de diversos sectores.',
+            resume_en: 'Bioesol is an innovative company providing energy solutions through the Energy as a Service (EaaS) model. We integrate battery energy storage systems (BESS), solar panels, and hybrid systems to optimize energy consumption, reduce costs, and ensure reliable supply without upfront investment. Our smart technology maximizes efficiency and sustainability for businesses across various industries.',
+            speakers: [
+                {       
+                    id: 1,
+                    nameem: 'BIOESOL',            
+                    name: 'Víctor Ramírez Cabrera',
+                    bio: 'Víctor Florencio Ramírez Cabrera Doctor en Ciencias por la UNAM, con estudios en materia de Derecho Ambiental, Impacto ambiental y Cambio climático. Dedicado a la gestión en el sector energético, ambiental y cambio climático. Ha colaborado como asesor en el Senado de la República así como fue coordinador de la fundación Liberal para el Desarrollo Sustentable. Fue Director Ejecutivo de la Asociación Nacional de Energía Solar y ha colaborado con gobiernos municipales, estatales y el sector privado en planeación de proyectos y estratégica. Actualmente colabora semanalmente con la revista Nexos, el periódico La Lista y el portal Conexiones 365, responsables de la organización del México International Renewable Congress, donde aborda asuntos eléctricos y de energía renovable. Dentro del mismo MIREC, fue galardonado como campeón de la industria solar en el año 2019 por sus aportaciones al sector y es miembro fundador del colectivo #WeTweetEnergy. En 2020 fue considerado uno de los 100 líderes del sector por la revista Petróleo y Energía. Actualmente es vocero de Plataforma México Clima y Energía, además de socio de la firma de consultoría Perceptia21Energia.',
+                    bio_en: 'Victor Florencio Ramirez Cabrera PhD in Science from UNAM, with studies in Environmental Law, Environmental Impact and Climate Change. Dedicated to the management of the energy, environmental and climate change sectors. He has collaborated as an advisor in the Senate of the Republic and was coordinator of the Liberal Foundation for Sustainable Development. He was Executive Director of the National Solar Energy Association and has collaborated with municipal and state governments and the private sector in project and strategic planning. He currently collaborates weekly with Nexos magazine, La Lista newspaper and Conexiones 365 portal, responsible for the organization of the Mexico International Renewable Congress, where he addresses electricity and renewable energy issues. Within the same MIREC, he was awarded as a champion of the solar industry in 2019 for his contributions to the sector and is a founding member of the #WeTweetEnergy collective. In 2020 he was considered one of the 100 leaders in the sector by the magazine Petróleo y Energía. He is currently a spokesperson for Plataforma México Clima y Energía, as well as a partner of the consulting firm Perceptia21Energia.',
+                    position: 'Consultor Adjunto Bioesol',
+                    position_en: 'Consultor Adjunto Bioesol',
+                    email: 'rcb@bioesol.com',
+                    phone: '',
+                    imagenes:'/img/victorramirez.webp',
+                },                
+            ], 
         },
         {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'DISPONIBLE',
             status: '$1,500 USD',
-             duracion:'30 min.',
-             logos:''
+            duracion:'30 min.',
+            logos:''
         },
     ]
 }

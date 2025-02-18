@@ -6,7 +6,8 @@ import astroI18next from "astro-i18next";
 
 
 // https://astro.build/config
-export default defineConfig({  
+export default defineConfig({
+  site: "https://re-plus-mexico.com.mx", 
   integrations: [sitemap({
     i18n: {
       defaultLocale: "es",

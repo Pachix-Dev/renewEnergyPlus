@@ -91,33 +91,61 @@ const useRegisterForm = create(
             
             addToCart: (item) => set((state) => {
                 const itemWithId1Exists = state.items.some(i => i.id === 1);
-                const itemAlreadyExists = state.items.some(i => i.id === item.id);
+                const energyDrinkExists = state.items.some(i => i.id === 2);
+                const discountableProducts = [3, 4, 5];
             
+                // Si el producto con id 1 ya está en el carrito, no permitir agregar más productos
+                if (itemWithId1Exists) {
+                    return state;
+                }
+            
+                // Si se intenta agregar el producto 1, se debe reiniciar el carrito con solo ese producto
                 if (item.id === 1) {
                     return {
                         items: [{ ...item }],
-                        total: item.price // Asumiendo que el objeto item tiene una propiedad price
-                    };
-                } else if (itemWithId1Exists || itemAlreadyExists) {
-                    // No agregar más productos si ya existe un ítem con id 1 o si el producto ya está en el carrito
-                    return state;
-                } else {
-                    const newItems = [...state.items, { ...item }];
-                    const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
-                    return {
-                        items: newItems,
-                        total: newTotal
+                        total: item.price
                     };
                 }
+            
+                // Si el producto ya está en el carrito, no lo agregamos de nuevo
+                const itemAlreadyExists = state.items.some(i => i.id === item.id);
+                if (itemAlreadyExists) return state;
+            
+                let newItems = [...state.items, { ...item }];
+            
+                // Si se agrega el producto 2, aplicar el descuento a los productos 3, 4 y 5 ya existentes
+                if (item.id === 2) {
+                    newItems = newItems.map(i =>
+                        discountableProducts.includes(i.id) ? { ...i, price: Math.max(i.price - 500, 0) } : i
+                    );
+                }
+            
+                // Si el producto 2 ya estaba en el carrito y agregamos 3, 4 o 5, aplicar descuento al nuevo producto
+                if (energyDrinkExists && discountableProducts.includes(item.id)) {
+                    newItems = newItems.map(i => 
+                        i.id === item.id ? { ...i, price: Math.max(i.price - 500, 0) } : i
+                    );
+                }
+            
+                // Recalcular el total
+                const newTotal = newItems.reduce((sum, i) => sum + i.price, 0);
+            
+                return {
+                    items: newItems,
+                    total: newTotal
+                };
             }),
+            
+            
+            
             
             removeToCart: (id) => set((state) => {                
                 const newItems = state.items.filter((item) => item.id !== id);
                 const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
 
                 return {
-                    items: id === 1 ? [] : newItems,
-                    total: id === 1 ? 0 : newTotal
+                    items: id === 1 || id === 2 ? [] : newItems,
+                    total: id === 1 || id === 2 ? 0 : newTotal
                 };
             }),
 
@@ -140,6 +168,7 @@ const useRegisterForm = create(
                 uuid: "",
                 step: 0,            
                 name: "",
+                email: "",
                 paternSurname: "",
                 maternSurname: "",               
                 phone: "",

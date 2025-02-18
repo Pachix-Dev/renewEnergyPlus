@@ -176,7 +176,10 @@
         "hours": "horas",
         "minutes": "minutos",
         "seconds": "segundos",
-        "free_register": "REGISTRO GRATUITO"
+        "free_register": "REGISTRO GRATUITO",
+        "media_platinum": "MEDIOS ALIADOS PLATINUM",
+        "media_gold": "MEDIOS ALIADOS GOLD"
+        
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
@@ -425,7 +428,8 @@
         "thanks_purchasing": "Gracias por tu compra",
         "sucess_purchasing": "¡Fantástico! haz tu compra fue procesada correctamente.",
         "email_sent": "¡Pronto recibiras un correo de confirmación!",
-        "description_2": "Por favor pasa al modulo de caja con este numero para pagar y recoger tu gafete."
+        "description_2": "Por favor pasa al modulo de caja con este numero para pagar y recoger tu gafete.",
+        "back_home": "Regresar a la página de inicio"
     },
     "enlightenmentArea":{
         "description": "RE+ MEXICO le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación. Ilumine el espacio del conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector solar mediante unaplática de capacitación. Si está buscando nuevas oportunidades de negocios e incrementar sus contactos potenciales en América Latina, este es el espacio ideal para usted.",

@@ -1,0 +1,34 @@
+---
+import LayourRegistroSitio from "../layouts/LayourRegistroSitio.astro";
+import { RegisterFormSitio } from "../components/register/RegisterFormSitio.jsx";
+import i18next, { changeLanguage, t } from "i18next";
+
+changeLanguage("es");
+
+const registerTranslations = t("register", { returnObjects: true });
+const currentLanguage = i18next.language;
+---
+
+<LayourRegistroSitio title='Registro en sitio'>
+  <main class='py-5 grid w-full content-center container mx-auto px-4'>
+    <div class='bg-gray-700'>
+      <img
+        src='/img/replusR.webp'
+        alt='Logo REPLUS'
+        class='logoREPLUS p-5'
+        width='100'
+      />
+    </div>
+    <h1 class='text-center font-extrabold text-4xl'>
+      {t('register.title')}
+    </h1>
+    <p class='text-center text-2xl font-bold'>
+      {t('register.description')}
+    </p>
+    <RegisterFormSitio
+      translates={registerTranslations}
+      currentLanguage={currentLanguage}
+      client:only='react'
+    />
+  </main>
+</LayourRegistroSitio>
