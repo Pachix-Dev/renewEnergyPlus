@@ -185,8 +185,8 @@ export const program_premium = {
         }, 
         {
             hour: '11:00 - 11:45',
-            title: 'Plan de Energía del estado de Jalisco',
-            title_en: 'Jalisco State Energy Plan',
+            title: 'Programa de Eficiencia Energética para el Estado de Jalisco y sus Municipios',
+            title_en: 'Energy Efficiency Program for the State of Jalisco and its Municipalities',
             tag: 'Conferencia',
             tag_en: 'Conference',
             color:'#1F2937',
