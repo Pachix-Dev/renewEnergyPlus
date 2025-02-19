@@ -3118,5 +3118,66 @@ export default [
             "alt": "SolaX Power",
             "width": 170
         }
+    },
+
+    {
+        "clasificacion": "",
+        "nombreComercial": "SolarCleanO",
+        "stand": "J71",
+        "nombreContacto": "Alfredo Gonzalez Carreón",
+        "Puesto": "Respresentante De Ventas En México",
+        "telefono": "52 (662) 195 - 2419",
+        "Correo": "contacto@alfasolarclean.com",
+        "paginaWeb": "https://solarcleano.com/",
+        "direccion": "Mielera Final, Sn, Col El Llano",
+        "cp": "83210",
+        "Ciudad": "Hermosillo",
+        "Estado": "Sonora",
+        "Pais": "México",
+        "descripcion_es": "SolarCleano, empresa robótica de Luxemburgo, ofrece soluciones innovadoras para limpiar paneles solares. Opera en 53 países y en 2021 limpió 27 GW de instalaciones. Usa IA para mejorar mantenimiento y busca liderar la automatización y soluciones de energía limpia.",
+        "descripcion_en": "SolarCleano, a robotics company from Luxembourg, provides innovative solar panel cleaning solutions. Operating in 53 countries, it cleaned 27 GW in 2021. Using AI for predictive maintenance, it aims to lead automation and sustainability in the industry.",
+        "categoria": "Tecnología, mantenimiento de paneles solares, limpieza de paneles solares",
+        "productos": "SolarCleanO F1, SolarCleanO M1, SolarCleanO L1,SolarCleanO T1",
+        "contacto": "",
+        "Instagram": "https://www.instagram.com/solarcleano/?hl=en",
+        "Facebook": "https://www.facebook.com/solarcleano/",
+        "LinkedIn": "https://www.linkedin.com/company/solarcleano/",
+        "Hashtags": "#solarcleano #solarcleanol1 #solarpanelcleaning",
+        "imagen": {
+            "link": "",
+            "src": "/img/expo/carousel4/solarcleano.webp",
+            "alt": "SolarCleanO",
+            "width": 170
+        }
+    },
+    {
+        "clasificacion": "",
+        "nombreComercial": "Lily Zhong",
+        "stand": "A40",
+        "nombreContacto": "Shenzhen ATESS Power Technology Co., Ltd",
+        "Puesto": "China",
+        "telefono": "86 755 2998 8492",
+        "Correo": "Info@atesspower.com",
+        "paginaWeb": "https://www.atesspower.com",
+        "direccion": "Growatt-ATESS Industrial Park, Shuitian 4th Industrial Zone, Baoan District, Shenzhen",
+        "cp": "518108",
+        "Ciudad": "Shenzhen",
+        "Estado": "Guangdong",
+        "Pais": "China",
+        "descripcion_es": "Founded in 2017, Shenzhen ATESS Power Technology Co., Ltd provides solutions including inverters ranging from 5 kW up to 1MW, covering both residential, commercial, and utility application scenarios. Its EV charger portfolio is composed of 7 kW to 480 kW AC and DC electric vehicle chargers for home and public charging stations.",
+        "descripcion_en": "",
+        "categoria": "ESS, EV CHARGER",
+        "productos": "ESS, EV CHARGER",
+        "contacto": "",
+        "Instagram": "https://www.instagram.com/atess.power/",
+        "Facebook": "https://www.facebook.com/Atesspower",
+        "LinkedIn": "https://www.linkedin.com/company/28733253",
+        "Hashtags": "",
+        "imagen": {
+            "link": "",
+            "src": "/img/expo/carousel2/atess.webp",
+            "alt": "Lily Zhong",
+            "width": 170
+        }
     }
 ]
