@@ -178,7 +178,15 @@
         "seconds": "seconds",
         "free_register": "FREE REGISTRATION",
         "media_platinum": "PLATINUM MEDIA PARTNERS",
-        "media_gold": "GOLD MEDIA PARTNERS"
+        "media_gold": "GOLD MEDIA PARTNERS",
+        "testimonial": "TESTIMONIALS",
+        "text_1": "“We are very happy to participate for the second time in SSM, the truth is that it went very well. We are very happy to receive our clients, to talk with our colleagues, and we are looking forward to a more sustainable future.”.",
+        "text_2": "Product Engineer, Huawei Technologies de México",
+        "text_3": "“We are distributors of photovoltaic equipment. We are very satisfied with the results we have obtained with this exhibition. It is an amazing place and very suitable to have connection with our customers and suppliers. It is worthwhile. I recommend it and we hope this continues to happen and grow.”.",
+        "text_4": "General Manager of Tiga Power",
+        "text_5": "“The conferences were very good, with very valuable information, it was very interesting to learn about the experiences and knowledge of industry experts, there were quite a few international speakers.”.",
+        "text_6": "Visitor",
+        "text_7": "“I thought it was a great expo. There are too many people and innovative solutions. Batteries, PV modules, inverters, you can find everything. I highly recommend it.”."
     },
     "AboutSSM": {
         "title": "ABOUT RE+ MEXICO",
@@ -192,6 +200,30 @@
     "AboutSNEC": {
         "title": "About SNEC PV POWER EXPO",
         "description": "SNEC 16th (2023) International Photovoltaic Power Generation and Smart Energy Conference & Exhibition [SNEC PV POWER EXPO] will be held in Shanghai, China, on May 24-26, 2023. It was initiated and co-organized by Asian Photovoltaic Industry Association (APVIA), Chinese Renewable Energy Society (CRES), Chinese Renewable Energy Industries Association (CREIA), Shanghai Federation of Economic Organizations (SFEO), Shanghai Science & Technology Exchange Center (SSTEC), Shanghai New Energy Industry Association (SNEIA) and 25 international associations and organizations.<br /><br />The exhibition scale of SNEC has evolved from 15,000sqm in 2007 to over 200,000sqm in 2021 when it attracted over 1600 exhibiting companies from 95 countries and regions all over the world and the overseas exhibitor ratio is over 30%. SNEC has become the biggest international PV tradeshow with incomparable influence in China, in Asia and even in the world.<br /><br />As the most professional PV exhibition, SNEC showcases PV manufacturing facilities, materials, PV cells, PV application products & modules,  PV project and system, energy storage and mobile energy, covering every section of the whole PV industry chain.<br /><br />The SNEC Conference consist of various programs incorporating different topics, covering the market trends of PV industry, collaboration and development strategies, policy directions of different countries, advanced industry technologies, PV finance and investment, etc. It is an opportunity that you cannot miss to stay up to date on the technology and market, present your results to the community, and network with industrial experts, scholars and entrepreneurs and colleagues.<br /><br />We are looking forward to the worldwide PV industry friends gathering at Shanghai, China. From the industry’s viewpoint, let us take pulse of the PV power market of China, Asia, and the world, so as to guide the innovative development of the PV industry! Hope all of us meet at Shanghai, on May 24-26, 2023!"
+    },
+    "whyexhibit":{
+        "why": "Why Exhibit?",
+        "title": "WHAT ARE THE BENEFITS OF BEING AN EXHIBITOR?",
+        "description": "Showcase your brand at the forefront of a rapidly growing marketplace",
+        "description2": "Gain access to new buyers through the worldwide network of Deutsche Messe SNEC and Solar Power International.",
+        "description3": "Reach decision makers from all segments of the solar and storage industry.",
+        "description4": "Build and nurture your business relationships with current and prospective customers",
+        "description5": "Meet with your current customers and seek new business alliances",
+        "description6": "Promote your brands and products to a professional, focused and selective audience.",
+        "description7": "Generate new leads at Mexico's first event of its kind",
+        "description8": "Train your customers in the application of new products and technologies."
+
+    },
+    "whyasist":{
+        "title": "Why Attend?",
+        "description": "See the latest innovations and solutions from exhibitors on the show floor.",
+        "description2": "Hear from industry experts who will share their insights on Mexico's solar and storage market segments",
+        "description3": "Build networks and extensive partnerships with leaders in the renewable energy industry and make new contacts",
+        "description4": "Visit the first exhibition focused on the solar energy industry in Mexico.",
+        "description5": "Get an overview of the market in an exhibition area of 5,000 m².",
+        "description6": "Boost your productivity through individual solutions",
+        "description7": "Select and compare suppliers from three different continents: America, Europe and Asia",
+        "description8": "Visit an international program of high quality conferences and workshops."
     },
     "contactForm": {
         "title": "Leave us a message",
