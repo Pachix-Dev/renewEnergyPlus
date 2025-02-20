@@ -1,7 +1,7 @@
 export const program_premium = {
     day_1: [
         {
-            hour: '12:00 - 12:45',
+            hour: '12:30 - 13:15',
             title: 'Estrategia Nacional del Sector Eléctrico',
             title_en: 'National Electricity Sector Strategy',
             tag: 'Conferencia',
@@ -23,9 +23,9 @@ export const program_premium = {
             ],     
         },
         {
-            hour: '12:45 - 13:45',
-            title: 'Nueva legislación en materia de electricidad',
-            title_en: 'New electricity legislation',
+            hour: '13:15 - 14:05',
+            title: 'Nueva Ley del Sector Eléctrico',
+            title_en: 'New Electricity Sector Law',
             tag: 'Panel',
             tag_en: 'Panel',
             color: '#0183FD',
@@ -74,7 +74,7 @@ export const program_premium = {
             ],    
         },
         {
-            hour: '14:00 - 14:45',
+            hour: '14:15 - 15:00',
             title: 'Oportunidades de autoconsumo renovable ',
             title_en: 'Oportunidades del Autoconsumo Renovable ',
             tag: 'Panel', 
@@ -409,16 +409,40 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'',              
-                    name: '',
-                    bio: '',
-                    bio_en: '',
-                    position: '',
+                    imagenes:'/img/daniel_hernandez.webp',              
+                    name: 'Daniel Hernández',
+                    bio: 'Daniel Hernández, se ha desempeñado tanto en el sector privado con el público. En la iniciativa privada ha colaborado en empresas del sector metalmecánica y automotriz en las áreas de abastecimientos y desarrollo de proveedores. En el sector Gubernamental su área de experiencia ha sido en Materia de Desarrollo Económico en la Secretaría de Desarrollo Sustentable de Querétaro, a cargo de impulsar programas de localización y desarrollo de proveedores, así como esquemas de Clusterización. En 2010 comenzó el diseño y estructuración del Clúster Automotriz de Querétaro del cual actualmente es Director, donde está a cargo de la gestión y operación de proyectos con 130 miembros de toda la cadena de proveeduría del sector automotriz, buscando fortalecer los esquemas asociativos entre empresas, gobierno y academia, promoviendo la competitividad, innovación, fortalecimiento de la cadena de proveeduría, el desarrollo humano y los modelos de manufactura de clase mundial. Fungió como Tesorero de la REDCAM del periodo 2021 - 2023',
+                    bio_en: 'Daniel Hernández has worked in both the private and public sectors. In the private sector he has collaborated with companies in the metal-mechanic and automotive sectors in the areas of supply and supplier development. In the governmental sector his area of expertise has been in Economic Development at the Secretariat of Sustainable Development of Queretaro, in charge of promoting supplier localization and development programs, as well as Clustering schemes. In 2010 he began the design and structuring of the Queretaro Automotive Cluster of which he is currently Director, where he is in charge of the management and operation of projects with 130 members of the entire automotive supply chain, seeking to strengthen associative schemes between companies, government and academia, promoting competitiveness, innovation, strengthening of the supply chain, human development and world-class manufacturing models. Served as Treasurer of REDCAM for the period 2021 - 2023.',
+                    position: 'Presidente',
                     email: '',
                     phone: '',
-                    nameem:''
+                    nameem:'Red Nacional del Clusters Automotrices (REDCAM)'
                    
-                },                
+                },
+                {       
+                    id: 2,  
+                    imagenes:'/img/gabriel_padilla.webp',              
+                    name: 'Gabriel Padilla',
+                    bio: 'Gabriel Padilla Maya, Director General de la Industria Nacional de Autopartes (INA), tiene más de 25 años de experiencia en los sectores público y privado, promoviendo el desarrollo de negocios, comercio e inversión internacional para México. Es licenciado en Relaciones Internacionales por la Universidad Iberoamericana y posee tres maestrías: Economía y Gobierno (Universidad Anáhuac), Marketing Digital y Comercio Electrónico (Universidad OBS y Universidad de Barcelona), y Comercio Internacional (Instituto de Estudios Superiores de Comercio Internacional). Su trayectoria incluye roles estratégicos en empresas exportadoras, dirección de organismos empresariales y consultoría para la internacionalización de empresas. En el sector público, se ha desempeñado en cargos clave, como Jefe de Promoción de Inversión en ProMéxico y Coordinador General de Asesores en la Secretaría de Economía y SAGARPA, entre otros. También es fundador de Trade Front Advisors LLC, empresa especializada en estrategias de internacionalización de empresas. Su experiencia en comercio exterior es fundamental para consolidar a México como líder global en la industria de autopartes.',
+                    bio_en: 'Gabriel Padilla Maya, General Director of the National Auto Parts Industry (INA), has more than 25 years of experience in the public and private sectors. (INA), has more than 25 years of experience in the public and private sectors, promoting business development, trade and international investment for Mexico. He holds a bachelor´s degree in International Relations from the Universidad Iberoamericana and holds three master´s degrees: Economics and Government (Universidad Anáhuac), Digital Marketing and E-Commerce (Universidad OBS and Universidad de Barcelona), and Barcelona), and International Trade (Instituto de Estudios Superiores de Comercio Internacional). International Trade). His career includes strategic roles in exporting companies, management of business organizations and and consulting for the internationalization of companies. internationalization. In the public sector, he has held key positions such as Head of Investment Promotion at ProMéxico. of Investment Promotion at ProMéxico and General Coordinator of Advisors in the at the Ministry of Economy and SAGARPA, among others. He is also founder of Trade Front Advisors LLC, a company specialized in internationalization strategies for internationalization strategies. His experience in foreign trade is fundamental to consolidate Mexico as a global leader in the automotive industry. as a global leader in the auto parts industry.',
+                    position: 'Director General',
+                    email: '',
+                    phone: '',
+                    nameem:'Industria Nacional de Autopartes (INA)'
+                   
+                },
+                {       
+                    id: 3,  
+                    imagenes:'/img/miguel_ogazon.webp',              
+                    name: 'Miguel Ogazón',
+                    bio: 'Ingeniero industrial y maestro en administración de empresas por el ITESM, cuenta con 16 años de experiencia laborando en áreas operativas del sector asegurador, logístico, relaciones institucionales y normatividad transporte. En Cemex fue responsable de la normatividad de transporte nacional y vinculación, representando a la industria ante las cámaras del sector, desarrollando estrategias en materia de movilidad, seguridad vial y prevención del delito. En la actualidad, funge como Director Técnico y de Ingeniería en la ANPACT y sus principales responsabilidades son el representar los intereses técnicos, operativos, en seguridad vial y medio ambientales de los asociados así como ser responsable del programa Jóvenes Automotriz.',
+                    bio_en: 'Industrial engineer and master in business administration from ITESM, has 16 years of experience working in operational areas of the insurance, logistics, institutional relations and transport regulations sectors. At Cemex he was responsible for national transport regulations and liaison, representing the industry before sector chambers, developing strategies in mobility, road safety and crime prevention. Currently, he serves as Technical and Engineering Director at ANPACT and his main responsibilities are to represent the technical, operational, road safety and environmental interests of the associates as well as being responsible for the Young Automotive program.',
+                    position: 'Director Técnico',
+                    email: '',
+                    phone: '',
+                    nameem:'Asociación Nacional de Productores de Autobuses, Camiones y Tractocamiones (ANPACT)'
+                   
+                },             
             ],    
         },
         {
