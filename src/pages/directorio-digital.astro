@@ -10,10 +10,10 @@ const currentLanguage = i18next.language;
 
 <Layout title={t("home.digital_directory")}>
     <!-- título -->
-    <p class="text-3xl text-center font-bold uppercase mb-2"></p>
+    <p class="text-3xl text-center font-bold uppercase mt-10 mb-4">{t("home.digital_directory")}</p>
 
     <!-- lista de expositores -->
-    <div class="relative flex flex-row">
+    <div class="relative flex flex-col md:flex-row">
         <ListDirectory currentLanguage={currentLanguage} client:only="react" />
 
         <div class="mt-10 flex flex-row justify-center gap-5">

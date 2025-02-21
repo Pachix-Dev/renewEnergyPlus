@@ -4,6 +4,10 @@ import data from "../../data/digital-directory.js";
 const ListDirectory = ({ currentLanguage }) => {
     const [directorioDigital, setDirectorioDigital] = useState(data)
     const [filter, setFilter] = useState("")
+    const [currentPage, setCurrentPage] = useState(1)
+    const maxSize = 20
+
+    const [pagesSize, setPagesSize] = useState(Math.ceil(directorioDigital.length / maxSize))
 
     const phoneFormat = (itemPhone) => {
         let phones = itemPhone.split("\n");
@@ -51,9 +55,31 @@ const ListDirectory = ({ currentLanguage }) => {
 
     directorioDigital.filter(it => it.imagen.src === "").map(it => console.log(it.nombreComercial))
 
+    const handleChangePage = (newPage) => {
+        setCurrentPage(newPage);
+    };
+
+    const createpageButtons = () => {
+        let pages = []
+        for (let i = 1; i <= pagesSize; i++) {
+            pages.push(i)
+        }
+        return pages.map((page, index) => {
+            return (
+                <button
+                    key={index}
+                    onClick={() => handleChangePage(page)}
+                    className={`inline-flex items-center px-4 py-2 text-sm font-semibold hover:bg-gray-400 focus:z-20 focus:outline-offset-0 ${currentPage === page ? "bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white " : "bg-gray-200 text-gray-700"}`}
+                >
+                    {page}
+                </button>
+            )
+        })
+    }
+
     return (
-        <div className="z-0">
-            <div className=" mx-auto">
+        <div className="z-0 px-2">
+            <div className="w-full my-2">
                 <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
                 <div className="relative md:mx-20">
                     <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -83,19 +109,53 @@ const ListDirectory = ({ currentLanguage }) => {
                 </div>
             </div>
 
+            {/* Pagination handlers */}
+            <div className="flex flex-col align-middle items-center gap-2">
+                <h4 className="text-center text-sm font-medium text-gray-700">
+                    {
+                        currentLanguage === "en" ?
+                            `Showing until ${currentPage * maxSize} of ${directorioDigital.length}` :
+                            `Mostrando hasta ${currentPage * maxSize} de ${directorioDigital.length}`
+                    }
+                </h4>
+                <div className="isolate inline-flex -space-x-px rounded-md shadow-xs">
+                    <button
+                        type="button"
+                        className="bg-gradient-to-l from-[#bc0100] to-[#d86a03] text-white relative inline-flex items-center rounded-l-md px-2 py-2 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                    >
+                        <span class="sr-only">Previous</span>
+                        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    {
+                        createpageButtons()
+                    }
+                    <button
+                        type="button"
+                        className="bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white relative inline-flex items-center rounded-l-md px-2 py-2  hover:bg-gray-50 focus:z-20 focus:outline-offset-0 rotate-180"
+                    >
+                        <span class="sr-only">Previous</span>
+                        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
             {
                 directorioDigital.length > 0 ?
-                    directorioDigital.map((item, index) => {
+                    directorioDigital.slice((currentPage - 1) * maxSize, currentPage * maxSize).map((item, index) => {
                         return (
-                            <div className="bg-black/60 text-white flex flex-col md:flex-row align-middle items-center gap-4 my-4 mx-auto rounded-lg p-2 w-screen md:w-11/12" key={index}>
-                                <div className="rounded-xl z-10 bg-[#f7f7f7] w-3/5 md:w-1/4 border-2 border-slate-400">
+                            <div className="bg-gray-500 text-white flex flex-col md:flex-row align-middle items-center gap-4 my-4 mx-auto rounded-lg p-2 w-full md:w-11/12" key={index}>
+                                <div className="rounded-xl z-10 bg-gray-100 w-3/5 md:w-1/4 border-2 border-slate-400 p-2">
                                     <img
                                         src={item.imagen.src}
                                         alt={item.nombreComercial}
                                         className="w-40 h-32 md:w-64 md:h-64 object-contain m-auto"
                                     />
                                 </div>
-                                <div className="md:w-1/2 z-10">
+                                <div className="mx-4 md:ml-0 md:w-1/2 z-10">
                                     <span className="ms-[-10px] font-bold">Stand: {item.stand}</span>
                                     <h2 className="text-2xl font-bold">{item.nombreComercial}</h2>
                                     <p className="text-lg mt-2 text-justify">{currentLanguage === "en" ? item.descripcion_en : item.descripcion_es}</p>
@@ -129,9 +189,7 @@ const ListDirectory = ({ currentLanguage }) => {
                                         {item.País}
                                     </div>
                                 </div>
-                                <div className="
-                                
-                                bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white z-10 relative w-11/12 md:w-1/3 p-2 rounded-md *:break-words">
+                                <div className="bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white z-10 relative w-11/12 md:w-1/3 p-2 rounded-md *:break-words">
                                     <h3>{currentLanguage === "en" ? "Contact" : "Contacto"}</h3>
                                     <p className="font-bold text-lg" >
                                         {
@@ -257,7 +315,6 @@ const ListDirectory = ({ currentLanguage }) => {
                     <h1 className="p-4 rounded-lg card-program-light my-8 text-black text-2xl font-bold ">
                         No hay resultados
                     </h1>
-
             }
         </div>
     );
