@@ -435,7 +435,7 @@ export const installerInnovation = {
                     position:'Gerente Técnico de Ventas',
                     email: 'luis.ayala@growatt.com',
                     phone: '',
-                    imagenes:'/img/speakers_inovation/Luis_Eduardo_Colín_Ayala-Growatt-transformed.webp',
+                    imagenes:'/img/luis_eduardo.webp',
                 },  
                 {       
                     id: 10,
