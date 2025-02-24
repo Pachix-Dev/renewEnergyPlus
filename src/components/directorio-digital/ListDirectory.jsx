@@ -77,6 +77,18 @@ const ListDirectory = ({ currentLanguage }) => {
         })
     }
 
+    const previousPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1)
+        }
+    }
+
+    const nextPage = () => {
+        if (currentPage < pagesSize) {
+            setCurrentPage(currentPage + 1)
+        }
+    }
+
     return (
         <div className="z-0 px-2">
             <div className="w-full my-2">
@@ -111,17 +123,11 @@ const ListDirectory = ({ currentLanguage }) => {
 
             {/* Pagination handlers */}
             <div className="flex flex-col align-middle items-center gap-2">
-                <h4 className="text-center text-sm font-medium text-gray-700">
-                    {
-                        currentLanguage === "en" ?
-                            `Showing until ${currentPage * maxSize} of ${directorioDigital.length}` :
-                            `Mostrando hasta ${currentPage * maxSize} de ${directorioDigital.length}`
-                    }
-                </h4>
                 <div className="isolate inline-flex -space-x-px rounded-md shadow-xs">
                     <button
                         type="button"
                         className="bg-gradient-to-l from-[#bc0100] to-[#d86a03] text-white relative inline-flex items-center rounded-l-md px-2 py-2 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                        onClick={() => previousPage()}
                     >
                         <span class="sr-only">Previous</span>
                         <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -134,6 +140,7 @@ const ListDirectory = ({ currentLanguage }) => {
                     <button
                         type="button"
                         className="bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white relative inline-flex items-center rounded-l-md px-2 py-2  hover:bg-gray-50 focus:z-20 focus:outline-offset-0 rotate-180"
+                        onClick={nextPage}
                     >
                         <span class="sr-only">Previous</span>
                         <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
