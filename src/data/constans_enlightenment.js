@@ -287,7 +287,7 @@ export const conferences = {
             name: 'SOLAREVER',
             status: 'VENDIDO',
             duracion:'30 min',
-            logos:'/img/sponsors/Longi-Solar.webp',
+            logos:'/img/solarever.webp',
             title:'El Futuro del Almacenamiento de Energía a Gran Escala en México: Retos, Legislación y Liderazgo Tecnológico',
             title_en:'The Future of Large-Scale Energy Storage in Mexico: Challenges, Legislation and Technological Leadership',
             resume:'En esta ponencia, exploraremos las oportunidades y desafíos del almacenamiento de energía a gran escala en México, con un enfoque en el impacto de las nuevas legislaciones. Analizaremos cómo estas regulaciones están transformando el mercado y qué retos enfrentamos para su implementación. Además, destacaremos cómo Solarever lidera el sector al ofrecer una gama única de tecnologías de BESS (Sistemas de Almacenamiento de Energía en Baterías), respaldadas por un servicio integral de acompañamiento. Una mirada hacia un futuro energético más eficiente y competitivo.',
