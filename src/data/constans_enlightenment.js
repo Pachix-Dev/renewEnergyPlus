@@ -1,3 +1,4 @@
+import { title } from "process";
 
 export const conferences = {
     day_1: [
@@ -7,7 +8,24 @@ export const conferences = {
             name: 'HUAWEI',
             status: 'VENDIDO', 
             duracion:'30 min.' ,
-            logos:'/img/sponsors/Huawei.webp'      
+            logos:'/img/sponsors/Huawei.webp',
+            title: 'Seguridad en los sistemas de almacenamiento',
+            title_en: 'Security in storage systems',
+            resume: '',
+            resume_en: '',
+            speakers: [
+                {   nameem: 'HUAWEI',
+                    id: 1,
+                    imagenes:'',
+                    name: 'Ulises Francisco Alcazár Hernández',
+                    bio: '',
+                    bio_en: '',
+                    position: 'Solution Manager',
+                    position_en: '',
+                    email: '',
+                    phone: ''
+                },
+            ],
         },
         {
             id: 2,
@@ -120,8 +138,26 @@ export const conferences = {
             hour: '15:45 – 16:15',
             name: 'EXEL SOLAR',
             status: 'VENDIDO',
-             duracion:'30 min.',
-             logos:'/img/sponsors/EXELSOLAR.webp'
+            duracion:'30 min.',
+            logos:'/img/sponsors/EXELSOLAR.webp',
+            title:'Pylotech C&I Solutions',
+            title_en:'Pylotech C&I Solutions',
+            resume:'',
+            resume_en:'',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'EXEL SOLAR',              
+                    name: 'Víctor San Roman',
+                    bio: ' ',
+                    bio_en: '',
+                    position_en: 'Field Application Engineer',
+                    position:'Field Application Engineer',
+                    email: '',
+                    phone: '',
+                    imagenes:'/img/victor_roman.webp',
+                },                
+            ],
         },
         {
             id: 7,
@@ -183,7 +219,25 @@ export const conferences = {
             name: 'LONGI',
             status: 'VENDIDO',
             duracion:'30 min',
-            logos:'/img/sponsors/longi.webp'      
+            logos:'/img/sponsors/longi.webp',
+            title: 'Nuevo producto HiMo X10, HPBC 2.0',
+            title_en: 'New product HiMo X10, HPBC 2.0',
+            resume: 'El módulo HiMO X10 de Longi, como nueva generación de módulos N tipo BC con la aplicación HPBC 2.0 de Longi Green Energy, establece un nuevo estándar para los módulos fotovoltaicos con su eficiencia superior, rendimiento excepcional de generación de energía y alta confiabilidad, liderando a la industria hacia un futuro más eficiente. Las ventajas revolucionarias de HiMO X10 incluyen: 1. Mayor eficiencia, superando en 30W a los módulos convencionales. 2. Mayor generación de energía, duplicando los beneficios: la generación de energía por vatio es un 3% superior a la de los módulos convencionales, lo que resulta en un aumento significativo de la generación de energía con la misma capacidad de instalación, creando más beneficios para los usuarios. 3. Mayor confiabilidad, garantía de estabilidad: las células solares TaiRay de alta resistencia reducen el riesgo de grietas ocultas en un 80% para Hi-MO X10. Una tasa de degradación más baja, un coeficiente de temperatura óptimo y una mayor tasa de generación en ambos lados aseguran que los módulos funcionen de manera estable y eficiente en diversas condiciones ambientales. 4. Mayor estética, integración armoniosa: el aspecto negro sólido de HPBC 2.0 y la tecnología de líneas frontales sin rejilla dan como resultado una apariencia limpia y elegante que se integra perfectamente con la arquitectura, mejorando la estética general.',
+            resume_en: 'The Longi HiMO X10 module, as a new generation N-type BC module with Longi Green Energy´s HPBC 2.0 application, sets a new standard for photovoltaic modules with its breakthrough efficiency improvement, outstanding power generation performance, and ultra-high reliability, leading the industry towards a more efficient future. The groundbreaking advantages of HiMO X10 include: 1. Higher efficiency, surpassing mainstream modules by 30W in power. 2. Higher power generation, doubling profits: The energy generation per watt is 3% higher than mainstream modules, resulting in a significant increase in power generation with the same installation capacity, creating more profits for users. 3. Higher reliability, stable assurance: TaiRay high-strength silicon cells reduce hidden crack risks by 80% for Hi-MO X10. Lower degradation rate, optimal temperature coefficient, and higher double-sided rate ensure that the modules operate stably and efficiently in various environmental conditions. 4. Better aesthetics, harmonious integration: HPBC 2.0´s solid black appearance and front without gridline technology result in a clean and stylish appearance that seamlessly integrates with the architecture, enhancing overall aesthetics',
+            seakers: [
+                {   
+                    nameem: 'LONGI',
+                    id: 1,
+                    imagenes:'',
+                    name: 'Andres Alcantar',
+                    bio: 'Andrés Alcántar es un profesional con más de seis años de experiencia internacional en el sector de energía solar, habiendo trabajado en México, Centroamérica, el Caribe, y Estados Unidos. Ingeniero Mecánico con especialidad en Ingeniería Eléctrica por el Tecnológico de Monterrey y formación en el Politecnico di Milano, se especializa en diseño y simulación de sistemas fotovoltaicos, gestión de subcontratistas y desarrollo técnico-comercial. Ha liderado propuestas para proyectos de gran escala en Estados Unidos y generación distribuida en América Latina, destacándose por su enfoque en soluciones sostenibles y colaboración con equipos multiculturales. Actualmente, como Gerente de Soluciones de Producto en LONGi Solar, lidera estrategias de soluciones fotovoltaicas adaptadas a los mercados de México, Centroamérica y el Caribe, impulsando proyectos sostenibles e innovadores en la región.',
+                    bio_en: 'Andrés Alcántar is a professional with over six years of international experience in the solar energy sector, having worked in Mexico, Central America, the Caribbean, and the United States. Mechanical Engineer with a specialization in Electrical Engineering from the Tecnológico de Monterrey and training at the Politecnico di Milano, he specializes in the design and simulation of photovoltaic systems, subcontractor management, and technical-commercial development. He has led proposals for large-scale projects in the United States and distributed generation in Latin America, standing out for his focus on sustainable solutions and collaboration with multicultural teams. Currently, as Product Solutions Manager at LONGi Solar, he leads photovoltaic solution strategies tailored to the markets of Mexico, Central America, and the Caribbean, driving sustainable and innovative projects in the region.',
+                    position: 'C&I Sales Manager DG MEXICO Y CARIBE',
+                    position_en: 'C&I Sales Manager DG MEXICO Y CARIBE',
+                    email: 'andres.alcantar@longi.com',
+                    phone: '(747) 265-7925'
+                }
+            ],  
         },
         {
             id: 2,
@@ -279,7 +333,26 @@ export const conferences = {
             name: 'EXEL SOLAR',
             status: 'VENDIDO',
             duracion:'30 min',
-            logos:'/img/sponsors/EXELSOLAR.webp'
+            logos:'/img/sponsors/EXELSOLAR.webp',
+            title:'IQ8P-3P, IQ Battery 5P, y Compatibilidad de gateway para Microinversores IQ7 e IQ8',
+            title_en:'IQ8P-3P, IQ Battery 5P, and Gateway Compatibility for IQ7 and IQ8 Microinverters',
+            resume:'En esta sesión exploraremos las últimas innovaciones de Enphase, incluyendo el IQ8P-3P, IQ Battery 5P y la compatibilidad del gateway con los microinversores IQ7 e IQ8. Analizaremos cómo estas soluciones optimizan la generación, almacenamiento y gestión de energía solar, ofreciendo mayor eficiencia y flexibilidad para los sistemas fotovoltaicos.',
+            resume_en:'In this session we will explore the latest innovations from Enphase, including the IQ8P-3P, IQ Battery 5P and gateway compatibility with IQ7 and IQ8 microinverters. We will analyze how these solutions optimize solar energy generation, storage and management, offering greater efficiency and flexibility for photovoltaic systems.',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'EXEL SOLAR',  
+                    imagenes:'/img/heribertoflores.webp',            
+                    name: 'Heriberto Flores',
+                    bio: 'Egresado del Tecnológico de Monterrey campus Monterrey de Ingeniería en Mecatrónica, con mas de 15 años de experiencia en la industria solar y 10 en Enphase.',
+                    bio_en: 'Graduated from Tecnológico de Monterrey campus Monterrey in Mechatronics Engineering, with more than 15 years of experience in the solar industry and 10 in Enphase.',
+                    position_en: 'Field Applications Engineer',
+                    position: 'Ingeniero de Aplicaciones de Campo',
+                    email: '',
+                    phone: '',
+                }
+            ],
+                    
         },
         {
             id: 6,
@@ -293,7 +366,8 @@ export const conferences = {
             resume:'En esta ponencia, exploraremos las oportunidades y desafíos del almacenamiento de energía a gran escala en México, con un enfoque en el impacto de las nuevas legislaciones. Analizaremos cómo estas regulaciones están transformando el mercado y qué retos enfrentamos para su implementación. Además, destacaremos cómo Solarever lidera el sector al ofrecer una gama única de tecnologías de BESS (Sistemas de Almacenamiento de Energía en Baterías), respaldadas por un servicio integral de acompañamiento. Una mirada hacia un futuro energético más eficiente y competitivo.',
             resume_en:'We will explore the opportunities and challenges of large scale energy storage in Mexico, with a focus on the impact of new legislation. We will analyze how these regulations are transforming the market and the challenges we face in their implementation. Additionally, we will highlight how Solarever is leading the sector by offering a unique range of BESS (Battery Energy Storage Systems) technologies, backed by comprehensive support services. A look toward a more efficient and competitive energy future.',
             speakers: [
-                {   nameem: 'SOLAREVER',   
+                {   
+                    nameem: 'SOLAREVER',   
                     id: 1,  
                     imagenes:'/img/MayelaGuadalupeCifuentesRangel-Solarever.webp',              
                     name: 'Mayela Guadalupe Cifuentes Rangel',
@@ -304,7 +378,8 @@ export const conferences = {
                     email: '',
                     phone: '',
                    
-                }, ]
+                }, 
+            ]
         },
         {
             id: 7,
@@ -338,21 +413,48 @@ export const conferences = {
             name: 'HUAWEI',
             status: 'VENDIDO',
             duracion:'45 min',
-            logos:'/img/sponsors/Huawei.webp'
+            logos:'/img/sponsors/Huawei.webp',
+            speakers: [
+                {       
+                    id: 1, 
+                    nameem: 'HUAWEI',               
+                    name: 'Carlos Hong Liang',
+                    bio: '',
+                    bio_en: '',
+                    position_en: 'Product Manager',
+                    position:'Product Manager',
+                    email: '',
+                    phone: '',
+                    imagenes:'',
+                },                
+            ], 
         }
     ],
     day_3: [
         {
             id: 1,            
             hour: '12:00 – 12:30',
-            name: 'BATTERY DEPOT',
+            name: 'KEYMEX SOLAR',
             status: 'RESERVADO', 
             duracion:'30 min.', 
             logos:'/img/sponsors/batterydepot.webp',
-            title: '',
-            title_en: '',
-            resume: ' ',
-            resume_en: '',    
+            title: 'Convocatoria nacional para integradores solares: Proyecto masivo de 100mw con Keymex',
+            title_en: 'National call for solar integrators: 100mw massive project with Keymex',
+            resume: 'En esta conferencia, Iván Aranda, Presidente de Keymex Energy, presentará la visión y estrategia de expansión de la empresa, destacando las oportunidades para integradores en nuevos proyectos de energía solar. Se abordarán temas clave como el crecimiento del mercado fotovoltaico en México, beneficios económicos y operativos para integradores, y las ventajas de formar parte de una red líder en el sector. Una oportunidad única para profesionales que buscan colaborar, innovar y crecer en el mundo de las energías renovables.',
+            resume_en: 'In this conference, Ivan Aranda, President of Keymex Energy, will present the company´s vision and expansion strategy, highlighting the opportunities for integrators in new solar energy projects. Key topics such as the growth of the photovoltaic market in Mexico, economic and operational benefits for integrators, and the advantages of being part of a leading network in the sector will be addressed. A unique opportunity for professionals looking to collaborate, innovate and grow in the world of renewable energy.',
+            speakers: [
+                {       
+                    id: 1,                
+                    name: 'Iván Aranda',
+                    bio: 'Ingeniero Industrial egresado de la FCQeI de la Universidad Autónoma del Estado de Morelos. Experto de la industria fotovoltáica en baja y media tensión con mas de 7 años de experiencia en el sector. Se desarrolló como analsita de interconexiones en Bright Solar, en donde desempeñaba funciones como project manager en proyectos residenciales al rededor de la república méxicana, además de desarrollar procesos que aseguraban la viabilidad de proyectos en ambitos operativos y normativos Actualmente colabora en Solarever como gerente del área de PPA, donde desarrolló un modelo de negocio que brinda la posibilidad de promover herramientas financieras para proyectos en baja y media tensión de todo el país. Especializado en gestión de proyectos, análisis financieros, almacenamiento de energía, mejora de procesos y análisis de datos.',
+                    bio_en: 'Industrial Engineer, graduate of the FCQeI of the Universidad Autónoma del Estado de Morelos. Expert in the low and medium voltage photovoltaic industry with more than 7 years of experience in the sector. Developed as an interconnect analyst at Bright Solar, where he worked as a project manager in residential projects around the Mexican republic, in addition to developing processes that ensured the viability of projects in operational and regulatory ambits Currently collaborates with Solarever as manager of the PPA area, where he developed a business model that provides the possibility of promoting financial tools for low and medium voltage projects throughout the country. Specialized in project management, financial analysis, energy storage, process improvement and data analysis.',
+                    position: 'Presidente ',
+                    position_en: 'President',
+                    email: 'raul.romay@solarever.com.mx',
+                    phone: '477 241 2558',
+                    imagenes:'/img/ivan_aranda.webp',
+                },                
+            ],  
                     
         },
         {
@@ -434,10 +536,40 @@ export const conferences = {
         {
             id: 5,
             hour: '15:00 – 15:30',
-            name: 'DISPONIBLE',
-            status: '$1,500 USD',
+            name: 'HONEYWELL',
+            status: 'VENDIDO',
             duracion:'30 min.',
-            logos:''
+            logos:'/img/honeywell.webp',
+            title: 'Li-Ion Tamer: prevención de incendios en sistemas de almacenamiento de energía de baterías de Litio.',
+            title_en: 'Li-Ion Tamer: fire prevention in Lithium battery energy storage systems.',
+            resume: 'Li-ion Tamer Generación 3 proporciona la detección más temprana de fugas de gas que pueden causar incendios en baterías de iones de litio dañadas. Esto se logra a través de la detección de vapores del electrolito de la batería, mucho antes de que los detectores de humo y gas convencionales puedan reaccionar. Al anticiparse a los primeros signos de fallos en las baterías de iones de litio, se pueden implementar medidas preventivas adecuadas, lo que ayuda a evitar la ocurrencia de una fuga térmica catastrófica. Acomp+añennos y conozca el demo de esta tecnología!',
+            resume_en: 'Li-ion Tamer Generation 3 provides the earliest detection of gas leaks that can cause fires in damaged Li-ion batteries. can cause fires in damaged lithium-ion batteries. This is achieved through the detection of vapors from the battery electrolyte, long before conventional smoke and gas before conventional smoke and gas detectors can react. By anticipating the early signs of failure in lithium-ion batteries, measures can be implemented to prevent the lithium-ion batteries, appropriate preventive measures can be implemented, helping to avoid the  prevent the occurrence of a catastrophic thermal runaway. Join us for a demo of this technology!"',
+            speakers: [
+                {       
+                    id: 1,
+                    nameem: 'HONEYWELL',            
+                    name: 'Oscar Salazar Horner',
+                    bio: 'Oscar es gerente de territorio en Honeywell Fire. Cuenta con +10 años de experiencia en el sector de incendio y seguridad, con enfoque en sistemas de detección de incendio y notificación de alarmas. Su experiencia le ha permitido implementar proyectos exitosos en ambientes retadores con soluciones como la detección por aspiración, haz de luz, detección de gas y dispositivos para baterías de iones de litio; además de integrar proyectos de gran escala mediante plataformas de incendio especializadas. Cuenta con certificación de NFPA72. Oscar es ing. Mecánico y Eléctrico, con una maestría en Administración Organizacional por la Universidad Iberoamericana.',
+                    bio_en: 'Oscar is a territory manager at Honeywell Fire. He has +10 years of experience in the fire and security sector, focusing on fire detection and alarm notification systems. His experience has allowed him to implement successful projects in challenging environments with solutions such as aspiration detection, light beam, gas detection and devices for lithium-ion batteries; in addition to integrating large-scale projects through specialized fire platforms. He is NFPA72 certified. Oscar is a Mechanical and Electrical Engineer, with a master´s degree in Organizational Administration from the Universidad Iberoamericana.',
+                    position: 'Territory Manager. Center & Pacific Region. Commercial Fire Honeywell | Building Automation',
+                    position_en: 'Territory Manager. Center & Pacific Region. Commercial Fire Honeywell | Building Automation',
+                    email: ' oscar.salazar@honeywell.com',
+                    phone: '52 (55) 6122 2337',
+                    imagenes:'/img/oscar_salazar.webp',
+                }, 
+                {       
+                    id: 2,
+                    nameem: 'HONEYWELL',            
+                    name: 'Jorge Alberto Sobral Prado',
+                    bio: 'Jorge es Líder de Negocios de BESS para las Americas. Su experiencia en el campo de la automatización y protecciones de subestaciones eléctricas en particular y procesos Industriales en general por 22 años más el desarrollo e implementación de proyectos de Almacenamiento eléctrico en estos mercados durante los últimos 6 años le han proporcionado una extensa experiencia en la implementación de soluciones de optimización eléctrica en las más diversas industrias, cubriendo desde la propuesta hasta la finalización del ciclo de vida. Su foco en la performance operativa de las soluciones de almacenamiento energético le han permitido liderar soluciones de monitoreo remoto que coordinen los equipos de mantenimiento y en consecuencia extiendan los ciclos de vida de los sistemas, aseguren su performance y minimicen los riesgos operativos',
+                    bio_en: 'Jorge is BESS Business Leader for the Americas. His experience in the field of automation and protections of electrical substations in particular and Industrial processes in general for 22 years plus the development and implementation of electrical storage projects in these markets during the last 6 years have provided him with extensive experience in the implementation of electrical optimization solutions in the most diverse industries, covering from the proposal to the completion of the life cycle. His focus on the operational performance of energy storage solutions has allowed him to lead remote monitoring solutions that coordinate maintenance teams and consequently extend system life cycles, ensure performance and minimize operational risks.',
+                    position: 'Program Director - Americas Business Leader for Battery Energy Storage Systems',
+                    position_en: 'Program Director - Americas Business Leader for Battery Energy Storage Systems',
+                    email: 'jorge.sobral@honeywell.com',
+                    phone: '(713) 816 0931',
+                    imagenes:'/img/jorgesobral.webp',
+                },               
+            ],
         },
     ]
 }
