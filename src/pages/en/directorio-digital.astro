@@ -10,7 +10,9 @@ const currentLanguage = i18next.language;
 
 <Layout title={t("home.digital_directory")}>
     <!-- título -->
-    <p class="text-3xl text-center font-bold uppercase mt-10 mb-4">{t("home.digital_directory")}</p>
+    <p class="text-3xl text-center font-bold uppercase mt-10 mb-4">
+        {t("home.digital_directory")}
+    </p>
 
     <!-- lista de expositores -->
     <div class="relative flex flex-col md:flex-row">
@@ -20,31 +22,18 @@ const currentLanguage = i18next.language;
             <section
                 class="container mx-auto px-4 py-10 relative md:grid md:grid-flow-col gap-10"
             >
-                <div class="relative w-96" data-astro-cid-r2nhgi25="">
-                    <div class="sticky top-0" data-astro-cid-r2nhgi25="">
-                        {
-
-                                //Publicidad
-                                /* 
-                        <a
-                        href="https://www.se.com/mx/es/"
-                        target="_blank"
-                        data-astro-cid-r2nhgi25=""
-                    >
-                        <img
-                            src="/img/banner-directorio-digital-2.webp"
-                            alt="Schneider"
-                            class="w-96"
-                            data-astro-cid-r2nhgi25=""
-                        />
-                    </a>
-                     */
-                        }
+                <div class="relative w-96">
+                    <div class="sticky top-0">
+                        <a href="https://www.se.com/mx/es/">
+                            <img
+                                src="/img/banners/banner_directorio_digital.webp"
+                                alt="Banner"
+                                class="w-11/12 mx-auto"
+                            />
+                        </a>
                     </div>
                 </div>
             </section>
         </div>
-
-        <!-- Espacio publicitario -->
     </div>
 </Layout>

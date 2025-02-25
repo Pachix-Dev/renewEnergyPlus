@@ -181,36 +181,6 @@ export default [
     },
     {
         "clasificacion": "",
-        "nombreComercial": "",
-        "stand": "",
-        "nombreContacto": "César Dominguez",
-        "Puesto": "Project Manager",
-        "telefono": "55-35-22-47-60",
-        "Correo": "ingenieria@solida.com.mx",
-        "paginaWeb": "",
-        "direccion": "",
-        "cp": "",
-        "Ciudad": "",
-        "Estado": "",
-        "Pais": "",
-        "descripcion_es": "",
-        "descripcion_en": "",
-        "categoria": "CARPORT",
-        "productos": "",
-        "contacto": "",
-        "Instagram": "",
-        "Facebook": "",
-        "LinkedIn": "",
-        "Hashtags": "",
-        "imagen": {
-            "link": "",
-            "src": "/img/buyersProfessional/qwe.webp",
-            "alt": "",
-            "width": 170
-        }
-    },
-    {
-        "clasificacion": "",
         "nombreComercial": "SMA",
         "stand": "F20",
         "nombreContacto": "Arturo Blake Cuervo\nJenniffer Hoffmann Landaeta\nSofía Flores",
@@ -1014,7 +984,7 @@ export default [
         "Hashtags": "#Atlas\n #AtlasSolar\n #AtlasSolarSupport\n #EstrucurasFotovoltaicas\n #SoporteFotovoltaico",
         "imagen": {
             "link": "",
-            "src": "",
+            "src": "/img/expo/carousel1/ATLAS SS.webp",
             "alt": "Atlas Solar Support",
             "width": 170
         }
@@ -1314,8 +1284,38 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/expo/carousel1/yhsunpro.webp",
+            "src": "/img/expo/carousel3/suntech.webp",
             "alt": "Wuxi Suntech Power Co., Ltd",
+            "width": 170
+        }
+    },
+    {
+        "clasificacion": "",
+        "nombreComercial": "",
+        "stand": "",
+        "nombreContacto": "César Dominguez",
+        "Puesto": "Project Manager",
+        "telefono": "55-35-22-47-60",
+        "Correo": "ingenieria@solida.com.mx",
+        "paginaWeb": "",
+        "direccion": "",
+        "cp": "",
+        "Ciudad": "",
+        "Estado": "",
+        "Pais": "",
+        "descripcion_es": "",
+        "descripcion_en": "",
+        "categoria": "CARPORT",
+        "productos": "",
+        "contacto": "",
+        "Instagram": "",
+        "Facebook": "",
+        "LinkedIn": "",
+        "Hashtags": "",
+        "imagen": {
+            "link": "",
+            "src": "/img/buyersProfessional/qwe.webp",
+            "alt": "",
             "width": 170
         }
     },
@@ -2184,8 +2184,8 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "",
-            "alt": "",
+            "src": "/img/expo/carousel1/slbatt.webp",
+            "alt": "BSL NEW ENERGY TECHNOLOGY",
             "width": 170
         }
     },
@@ -2394,7 +2394,7 @@ export default [
         "Hashtags": "#Sistema automatizado de limpieza para paneles solares #our bussines is the sun",
         "imagen": {
             "link": "",
-            "src": "",
+            "src": "/img/expo/carousel1/smg.webp",
             "alt": "SMG Global SA de CV",
             "width": 170
         }
@@ -2814,7 +2814,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "",
+            "src": "/img/expo/carousel1/anker_solix.webp",
             "alt": "Anker SOLIX",
             "width": 170
         }
@@ -2844,7 +2844,7 @@ export default [
         "Hashtags": "#acerohabilitado #habilitamoselfuturodelaconstruccion #ingetek #acero",
         "imagen": {
             "link": "",
-            "src": "",
+            "src": "/img/expo/carousel1/ingetek_deacero.webp",
             "alt": "INGETEK",
             "width": 170
         }
@@ -2874,7 +2874,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "",
+            "src": "/img/expo/carousel1/heyco.webp",
             "alt": "HEYCO",
             "width": 170
         }
@@ -2934,7 +2934,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/leader_technology_shenzhen_co.,limited.webp",
+            "src": "/img/expo/carousel1/leader.webp",
             "alt": "LEADER TECHNOLOGY SHENZHEN CO.,LIMITED",
             "width": 170
         }
@@ -2994,7 +2994,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/buyersProfessional/cfriend_electric_(kunshan)_co.,ltd..webp",
+            "src": "/img/expo/carousel1/cfriend.webp",
             "alt": "CFRIEND ELECTRIC (KUNSHAN) CO.,LTD.",
             "width": 170
         }
@@ -3205,7 +3205,7 @@ export default [
         "Hashtags": "#Descarbonización\n#EficienciaEléctrica\n#EnergíaLimpia\n#EficienciaEnergética\n#Cogeneración\n#AhorroEnergético\n",
         "imagen": {
             "link": "",
-            "src": "/img/expositores2025/dtc_machinery.webp",
+            "src": "/img/expo/carousel1/dtc.webp",
             "alt": "DTC Machinery",
             "width": 170
         }
@@ -3235,7 +3235,7 @@ export default [
         "Hashtags": "#SunferEnergy #Sunfer",
         "imagen": {
             "link": "",
-            "src": "/img/expositores2025/sunfer_energy.webp",
+            "src": "/img/expo/carousel1/sunfer.webp",
             "alt": "Sunfer Energy",
             "width": 170
         }
@@ -3445,7 +3445,7 @@ export default [
         "Hashtags": "",
         "imagen": {
             "link": "",
-            "src": "/img/expositores2025/alumdesa.webp",
+            "src": "/img/expo/carousel1/alumndesa.webp",
             "alt": "ALUMDESA",
             "width": 170
         }
