@@ -260,7 +260,7 @@ const ListDirectory = ({ currentLanguage }) => {
                                         )}
 
                                     {/* Redes sociales */}
-                                    <a href={`${item.paginaWeb}`} className="text-lg flex items-center gap-2 hover:text-[#f7f7f7]" target="_blank" >
+                                    <a href={`${item.paginaWeb.includes("http") ? item.paginaWeb : `https://${item.paginaWeb}`}`} className="text-lg flex items-center gap-2 hover:text-[#f7f7f7]" target="_blank" >
                                         <span>
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
