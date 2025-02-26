@@ -655,7 +655,7 @@ const toolkit_es = [
 ]
 
 const toolkit_en = [
-    { id: 0, src: '/img/toolkit/banner_eng_20255.webp', alt:'Banner web',  title:'Banner web', width: 360},
+    { id: 0, src: '/img/toolkit/banner_eng_2025.webp', alt:'Banner web',  title:'Banner web', width: 360},
     { id: 1, src: '/img/toolkit/keyvisual_eng_2025.webp', alt:'KeyVisual', title:'KeyVisual', width: 360, height: 158 },
     { id: 2, src: '/img/toolkit/facebook_eng_2025.webp', alt:'Facebook', title:'Facebook', width: 360, height: 158 },
     { id: 3, src: '/img/toolkit/twitter_eng_2025.webp', alt:'Twitter', title:'Twitter', width: 360, height: 120 },

@@ -55,7 +55,6 @@ export function Suscribe({ t }) {
             name='name'
             id='name'
             className='bg-[#F4F4F4] border-[#DEE2E6] rounded-md'
-            placeholder='Ingresa tu nombre'
             autoComplete='name'
             defaultValue={name}
           />
@@ -78,7 +77,6 @@ export function Suscribe({ t }) {
             name='email'
             id='email'
             className='bg-[#F4F4F4] border-[#DEE2E6] rounded-md'
-            placeholder='Ingresa tu email'
             autoComplete='email'
             defaultValue={email}
           />
