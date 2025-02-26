@@ -1,5 +1,5 @@
 ---
-import i18next, { changeLanguage } from "i18next";
+import i18next, { t, changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 
 changeLanguage("es");
@@ -42,20 +42,15 @@ const base = i18next.language === "es" ? "" : "/en";
     >
     </div>
     <div class='mx-auto px-4'>
-      <div class='bg-white rounded-2xl p-5 m-5 text-3xl'>
-        Con tu entrada al programa de conferencias Premium, accede al <strong
-          >exclusivo</strong
-        >
-        lounge VIP, diseñado para brindarte <strong
-          >comodidad, networking y beneficios únicos</strong
-        > durante tu participación en RE+ México.
-      </div>
+      <div
+        class='bg-white rounded-2xl p-5 m-5 text-3xl'
+        set:html={t('vip_area.text_1')}
+      />
       <div class='ps-32'>
         <p class='font-bold text-4xl'>Coffee Break:</p>
         <div class='bg-white rounded-2xl p-5 m-5 text-3xl'>
           <img src='/img/cloockcup.webp' alt='REPLUS' />
-          Establece conexiones estratégicas en un ambiente vibrante, diseñado para
-          impulsar tus proyectos y oportunidades de negocio.
+          {t('vip_area.text_2')}
         </div>
       </div>
     </div>
@@ -69,13 +64,12 @@ const base = i18next.language === "es" ? "" : "/en";
         <p
           class='bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white text-4xl text-center py-5 font-bold rounded-xl'
         >
-          <i>SUNSET COCKTAIL</i> - 6 de marzo, 5:30 pm - 8:00pm
+          <i>SUNSET COCKTAIL</i> - {t('vip_area.text_3')}, 5:30 pm - 8:00pm
         </p>
         <p class='my-10 text-4xl font-bold text-center ms-auto w-fit'>
-          EVENTO EXCLUSIVO <br />
-          <span class='font-normal text-2xl'
-            >al adquirir tu pase de conferencias.</span
-          >
+          {t('vip_area.text_4')}
+          <br />
+          <span class='font-normal text-2xl'>{t('vip_area.text_5')}</span>
         </p>
       </div>
     </div>
@@ -94,26 +88,23 @@ const base = i18next.language === "es" ? "" : "/en";
       >
       </div>
       <p class='font-bold text-4xl text-center my-5'>
-        CONECTA CON LOS LÍDERES DE LA INDUSTRIA
+        {t('vip_area.text_5_1')}
       </p>
       <p class='my-5 text-xl'>
-        Interactúa con directores, expositores internacionales y representantes
-        clave de asociaciones del sector de energías renovables.
+        {t('vip_area.text_6')}
       </p>
       <p class='font-bold text-4xl text-center my-5'>
-        NETWORKING EN SU MÁXIMA EXPRESIÓN
+        {t('vip_area.text_7')}
       </p>
       <p class='my-5 text-xl'>
-        Establece conexiones estratégicas en un ambiente vibrante, diseñado para
-        impulsar tus proyectos y oportunidades de negocio.
+        {t('vip_area.text_8')}
       </p>
-      <p class='font-bold text-4xl text-center my-5'>EXCLUSIVIDAD ASEGURADA</p>
+      <p class='font-bold text-4xl text-center my-5'>{t('vip_area.text_9')}</p>
       <p class='my-5 text-xl'>
-        Tu acceso Premium te garantiza entrada a un evento reservado para las
-        figuras más influyentes del sector.
+        {t('vip_area.text_10')}
       </p>
       <p class='mt-20 font-bold text-6xl text-center my-5'>
-        No te quedes fuera
+        {t('vip_area.text_11')}
       </p>
       <a
         href={`${base}/programa-premium-productos/`}
@@ -122,7 +113,7 @@ const base = i18next.language === "es" ? "" : "/en";
       >
         <span
           class='bg-[#655C8B] text-white text-4xl font-bold py-5 px-10 rounded-full mx-auto mt-10'
-          >COMPRA TU PASE PREMIUM</span
+          >{t('vip_area.text_12')}</span
         >
       </a>
     </div>
