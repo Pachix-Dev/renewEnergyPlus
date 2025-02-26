@@ -8,27 +8,29 @@ changeLanguage("en");
 const currentLanguage = i18next.language;
 ---
 
-<Layout title={t('home.digital_directory')}>
+<Layout title={t("home.digital_directory")}>
   <!-- título -->
-  <p class='text-3xl text-center font-bold uppercase mt-10 mb-4'>
-    {t('home.digital_directory')}
+  <p class="text-3xl text-center font-bold uppercase mb-4 mt-10">
+    {t("home.digital_directory")}
   </p>
 
   <!-- lista de expositores -->
-  <div class='relative flex flex-col md:flex-row'>
-    <ListDirectory currentLanguage={currentLanguage} client:only='react' />
+  <div class="z-0 relative flex flex-col md:flex-row gap-0 px-8">
+    <div class="md:w-3/4">
+      <ListDirectory currentLanguage={currentLanguage} client:only="react" />
+    </div>
 
-    <div class='mt-10 flex flex-row justify-center gap-5'>
+    <div class="flex m-8 md:w-1/4 md:px-0">
       <section
-        class='container mx-auto px-4 py-10 relative md:grid md:grid-flow-col gap-10'
+        class="relative container mx-auto pt-18 md:grid md:grid-flow-col w-full"
       >
-        <div class='relative w-96'>
-          <div class='sticky top-0'>
-            <a href='https://www.made-in-china.com/' target='_blank'>
+        <div class="relative">
+          <div class="sticky top-24">
+            <a href="https://www.made-in-china.com/" target="_blank">
               <img
-                src='/img/banners/banner_directorio_digital.webp'
-                alt='Banner'
-                class='w-11/12 mx-auto'
+                src="/img/banners/banner_directorio_digital.webp"
+                alt="Banner"
+                class="w-11/12 mx-auto"
               />
             </a>
           </div>
