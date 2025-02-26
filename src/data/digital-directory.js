@@ -3453,7 +3453,7 @@ export default [
     {
         "clasificacion": "",
         "nombreComercial": "VANGUARDIA INDUSTRIAL",
-        "stand": "N/A",
+        "stand": "Media partner",
         "nombreContacto": "Silvia Ortiz",
         "Puesto": "Directora",
         "telefono": "442 925 3731",
@@ -3483,7 +3483,7 @@ export default [
     {
         "clasificacion": "",
         "nombreComercial": "Energy & Commerce",
-        "stand": "N/A",
+        "stand": "Media partner",
         "nombreContacto": "Aldo Sántillan Alonso",
         "Puesto": "Director Administrativo y Editorial",
         "telefono": ".+52 (552) 922-5333",
@@ -3513,7 +3513,7 @@ export default [
     {
         "clasificacion": "",
         "nombreComercial": "Global Energy México",
-        "stand": "N/A",
+        "stand": "Media partner",
         "nombreContacto": "Edgar Chávez Ibarra",
         "Puesto": "CEO",
         "telefono": ".+53 (55) 5677-4868",
@@ -3573,7 +3573,7 @@ export default [
     {
         "clasificacion": "",
         "nombreComercial": "Made-in-China.com",
-        "stand": "N/A",
+        "stand": "Media partner",
         "nombreContacto": "Rainy Lan",
         "Puesto": "Marketing Project Manager",
         "telefono": ".+86 (25) 5793 0538",
@@ -3603,7 +3603,7 @@ export default [
     {
         "clasificacion": "",
         "nombreComercial": "Gerencia Ambiental ",
-        "stand": "N/A",
+        "stand": "Media partner",
         "nombreContacto": "Daniel Marinelli ",
         "Puesto": "Gerente Comercial ",
         "telefono": "54 9 11 5757 6354",
@@ -3633,7 +3633,7 @@ export default [
     {
         "clasificacion": "",
         "nombreComercial": "Revista Consultoría",
-        "stand": "N/A",
+        "stand": "Media partner",
         "nombreContacto": "Irene Herrerías Gómez",
         "Puesto": "Gerente Comercial ",
         "telefono": "5554725383",
@@ -3663,7 +3663,7 @@ export default [
     {
         "clasificacion": "",
         "nombreComercial": "Las Empresas Verdes",
-        "stand": "S/N",
+        "stand": "Media partner",
         "nombreContacto": "Ismael jiménez Márquez",
         "Puesto": "Ismael jiménez Márquez",
         "telefono": "Director General",
