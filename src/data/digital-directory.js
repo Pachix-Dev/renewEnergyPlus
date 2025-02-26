@@ -3689,5 +3689,35 @@ export default [
             "alt": "Las Empresas Verdes",
             "width": 170
         }
+    },
+    {
+        "clasificacion": "",
+        "nombreComercial": "Honeywell",
+        "stand": "J72",
+        "nombreContacto": "Francisco Adrián Méndez",
+        "Puesto": "Gerente de Desarrollo de Negocio",
+        "telefono": "52 553 05 8085",
+        "Correo": "francisco.mendez@honeywell.com",
+        "paginaWeb": "https://process.honeywell.com/us/en/industries/renewable-and-energy-storage-solutions/bess",
+        "direccion": "Av. Santa Fe 94 Torre A Piso 1",
+        "cp": "1210",
+        "Ciudad": "Alvaro Obregon",
+        "Estado": "CDMX",
+        "Pais": "México",
+        "descripcion_es": "Empresa líder de automización industrial con su propio sistema Honeywell Experion PKS el cual esta integrado en las soluciones de Battery Energy Storage System y en soluciones de Fire&Gas.",
+        "descripcion_en": "Leading industrial automation company with its own Honeywell Experion PKS system which is integrated into Battery Energy Storage System solutions and Fire&Gas solutions.",
+        "categoria": "BESS, Energy Management System, Fire&Gas Systems",
+        "productos": "Honeywell BESS, Honeywell BESS Ionic, Honeywell F&G Notifier",
+        "contacto": "",
+        "Instagram": "",
+        "Facebook": "",
+        "LinkedIn": "",
+        "Hashtags": "#honeywell #thefutureiswhatwemakeit",
+        "imagen": {
+            "link": "",
+            "src": "/img/honeywell.webp",
+            "alt": "Honeywell",
+            "width": 170
+        }
     }
 ]
