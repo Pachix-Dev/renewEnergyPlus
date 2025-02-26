@@ -160,7 +160,7 @@ const ListDirectory = ({ currentLanguage }) => {
                                 <h2 className="text-2xl font-bold">{item.nombreComercial}</h2>
                                 <p className="text-lg mt-2 text-justify">{currentLanguage === "en" ? item.descripcion_en : item.descripcion_es}</p>
                                 <div className="mt-2 text-lg flex flex-row items-center gap-2">
-                                    <span>
+                                    {item.direccion ? <span>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
@@ -182,11 +182,12 @@ const ListDirectory = ({ currentLanguage }) => {
                                                 />
                                             </>
                                         </svg>
-                                    </span>
-                                    {item.direccion} {item.cp}.
-                                    {item.Ciudad},
-                                    {item.Estado}.
-                                    {item.País}
+                                    </span> : ''}
+                                    {item.direccion !== "" ? item.direccion + ", " : ''}
+                                    {item.cp !== "" ? item.cp + '. ' : ' '}
+                                    {item.Ciudad !== "" ? item.Ciudad + ', ' : ' '}
+                                    {item.Estado !== "" ? item.Estado + '. ' : ' '}
+                                    {item.País !== "" ? item.País : ' '}
                                 </div>
                             </div>
                             <div className="bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white z-10 relative w-11/12 md:w-1/3 p-2 rounded-md *:break-words">
