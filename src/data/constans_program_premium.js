@@ -13,11 +13,15 @@ export const program_premium = {
             speakers: [
                 {       
                     id: 1,  
-                    imagenes:'',              
-                    name: '',
-                    bio: '',
-                    bio_en: '',
-                    position: '',                   
+                    imagenes:'/img/jorge_islas.webp',              
+                    name: 'Jorge Islas Samperio',
+                    bio: 'Subsecretario de Planeación y Transición Energética. Es Físico, Maestro en Ingeniería Energética y Doctor en Economía de la Energía. Su investigación se centra en Energías Renovables, Cambio Climático, Transición Energética y Bioenergía. Fue Jefe del Departamento de Sistemas Energéticos en la UNAM y ha dirigido 28 proyectos de investigación. Miembro de la Academia de Ingeniería, ha publicado 50 artículos, 5 libros y 18 capítulos, influyendo en la descarbonización de la economía mexicana.',
+                    bio_en: 'Undersecretary of Planning and Energy Transition. He is a Physicist, Master in Energy Engineering and Doctor in Energy Economics. His research focuses on Renewable Energies, Climate Change, Energy Transition and Bioenergy. He was Head of the Department of Energy Systems at UNAM and has directed 28 research projects. Member of the Academy of Engineering, he has published 50 articles, 5 books and 18 chapters, influencing the decarbonization of the Mexican economy.',
+                    position: 'Subsecretario de planeación y transición energética',
+                    position_en:'Undersecretary of Planning and Energy Transition',
+                    email:'',
+                    phone:'',
+                    nameem:'Secretaría de Energía (SENER)'              
                 }, 
                             
             ],     
@@ -43,7 +47,7 @@ export const program_premium = {
                     position: 'Socio',
                     email:'',
                     phone:'',
-                     nameem:'Energía Cacheux Cavazos & Newton'
+                    nameem:'Energía Cacheux Cavazos & Newton'
                    
                 },   
                 {       
