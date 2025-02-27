@@ -116,9 +116,9 @@ const ListDirectory = ({ currentLanguage }) => {
                 </div>
             </div>
 
-            <div className="w-full h-32">
+            <div className="w-full md:h-32">
                 <a href="https://mx.ecoflow.com/" target="_blank" className="bg-slate-950">
-                    <img className="h-full mx-auto" src="/img/banners/ecoflow_banner_directorio.webp" alt="EcoFlow Banner" srcset="" />
+                    <img className="h-full mx-auto" src="/img/banners/ecoflow_banner_directorio.webp" alt="EcoFlow Banner" />
                 </a>
             </div>
 
@@ -323,7 +323,7 @@ const ListDirectory = ({ currentLanguage }) => {
                 </h1>
             }
 
-            
+
 
             {/* Pagination handlers */}
             <div className="flex flex-col align-middle items-center gap-2 mb-8">
