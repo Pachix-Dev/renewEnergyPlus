@@ -98,6 +98,8 @@ const exhibitors1 = [
 	
 ];
 const exhibitors2 = [
+	
+	
 	{
 		link: '',
 		src: '/img/expo/carousel2/daa_solar.webp',
@@ -117,6 +119,13 @@ const exhibitors2 = [
 		src: '/img/expo/carousel2/envertech.webp',
 		alt: '',
 		width: 200,
+		height: 80,
+	},
+	{
+		link: '',
+		src: '/img/atlasSolar.webp',
+		alt: '',
+		width: 120,
 		height: 80,
 	},
 	{
