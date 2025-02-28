@@ -11,7 +11,7 @@ import Profile from '../components/Profile.astro'
     class='text-center m-5 text-xl italic'
     set:html={t('home.rates.sub-title')}
   />
-  <div class='grid lg:grid-cols-3 gap-5 mx-5 lg:mx-28 text-center'>
+  <div class='grid lg:grid-cols-2 gap-5 mx-5 lg:mx-28 text-center'>
     <div class='bg-white p-4 rounded-md justify-center'>
       <p
         class='text-black font-bold text-3xl'
@@ -124,37 +124,6 @@ import Profile from '../components/Profile.astro'
           set:html={t(`home.rates.item2.topic8`)}
         />
       </ul>
-    </div>
-    <div class='bg-white p-4 rounded-md justify-center'>
-      <p
-        class='text-black font-bold p-4 text-3xl'
-        set:html={t(`home.rates.item3.title1`)}
-      />
-      <p
-        class='text-black p-4 text-xl'
-        set:html={t(`home.rates.item3.desc1`)}
-      />
-      <p
-        class='text-black p-4 text-xl'
-        set:html={t(`home.rates.item3.desc2`)}
-      />
-      <div class='mx-auto flex'>
-        <a
-          href={i18next.language === 'es'
-            ? '/doc/RE-MEXICO-SPONSORSHIPS-2025-ESP-06122024_compressed.pdf'
-            : '/doc/RE-MEXICO-SPONSORSHIPS-2025-ENG-06122024_compressed.pdf'}
-          target='_blank'
-          class='button mx-auto text-3xl md:text-6xl font-bold'
-        >
-          <p>Saber más</p>
-          <svg fill='currentColor' viewBox='0 0 24 24' class='icon mr-5 my-2'>
-            <path
-              clip-rule='evenodd'
-              d='M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z'
-              fill-rule='evenodd'></path>
-          </svg>
-        </a>
-      </div>
     </div>
   </div>
   <p
