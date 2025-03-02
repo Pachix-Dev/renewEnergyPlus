@@ -14,7 +14,7 @@ const language = i18next.language;
     <h1
       class='text-left text-[#ed6b06] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold py-5'
     >
-      Installer Innovation Area
+      Installer & Innovation Area
     </h1>
 
     <p class='text-xl justify-center'>
@@ -248,11 +248,11 @@ const language = i18next.language;
 
     <div id='default-tab-content'>
       <div
-          class='hidden p-4 rounded-lg mx-auto'
-          id='settings'
-          role='tabpanel'
-          aria-labelledby='settings-tab'
-        >
+        class='hidden p-4 rounded-lg mx-auto'
+        id='settings'
+        role='tabpanel'
+        aria-labelledby='settings-tab'
+      >
         {
           installerInnovation.day_3.map((conference) => (
             <div class='shadow-lg p-8 rounded-xl my-6 text-black flex flex-col gap-6 bg-white border border-gray-200'>
@@ -286,17 +286,13 @@ const language = i18next.language;
                     : conference.resume_en}
                 </p>
 
-                <p class='mt-5 text-base md:text-lg text-gray-700 text-justify leading-relaxed font-bold'>
-               
-                </p>
+                <p class='mt-5 text-base md:text-lg text-gray-700 text-justify leading-relaxed font-bold'></p>
               </div>
 
               <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {conference.speakers?.map((speaker) => (
                   <div class='flex flex-col items-center text-center bg-gray-900 p-6 rounded-xl shadow-md'>
-                    <span class='text-gray-300 text-sm'>
-                      {speaker.horain}
-                    </span>
+                    <span class='text-gray-300 text-sm'>{speaker.horain}</span>
 
                     <Speaker
                       speaker={speaker}
