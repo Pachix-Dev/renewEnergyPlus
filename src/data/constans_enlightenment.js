@@ -224,7 +224,7 @@ export const conferences = {
             title_en: 'New product HiMo X10, HPBC 2.0',
             resume: 'El módulo HiMO X10 de Longi, como nueva generación de módulos N tipo BC con la aplicación HPBC 2.0 de Longi Green Energy, establece un nuevo estándar para los módulos fotovoltaicos con su eficiencia superior, rendimiento excepcional de generación de energía y alta confiabilidad, liderando a la industria hacia un futuro más eficiente. Las ventajas revolucionarias de HiMO X10 incluyen: 1. Mayor eficiencia, superando en 30W a los módulos convencionales. 2. Mayor generación de energía, duplicando los beneficios: la generación de energía por vatio es un 3% superior a la de los módulos convencionales, lo que resulta en un aumento significativo de la generación de energía con la misma capacidad de instalación, creando más beneficios para los usuarios. 3. Mayor confiabilidad, garantía de estabilidad: las células solares TaiRay de alta resistencia reducen el riesgo de grietas ocultas en un 80% para Hi-MO X10. Una tasa de degradación más baja, un coeficiente de temperatura óptimo y una mayor tasa de generación en ambos lados aseguran que los módulos funcionen de manera estable y eficiente en diversas condiciones ambientales. 4. Mayor estética, integración armoniosa: el aspecto negro sólido de HPBC 2.0 y la tecnología de líneas frontales sin rejilla dan como resultado una apariencia limpia y elegante que se integra perfectamente con la arquitectura, mejorando la estética general.',
             resume_en: 'The Longi HiMO X10 module, as a new generation N-type BC module with Longi Green Energy´s HPBC 2.0 application, sets a new standard for photovoltaic modules with its breakthrough efficiency improvement, outstanding power generation performance, and ultra-high reliability, leading the industry towards a more efficient future. The groundbreaking advantages of HiMO X10 include: 1. Higher efficiency, surpassing mainstream modules by 30W in power. 2. Higher power generation, doubling profits: The energy generation per watt is 3% higher than mainstream modules, resulting in a significant increase in power generation with the same installation capacity, creating more profits for users. 3. Higher reliability, stable assurance: TaiRay high-strength silicon cells reduce hidden crack risks by 80% for Hi-MO X10. Lower degradation rate, optimal temperature coefficient, and higher double-sided rate ensure that the modules operate stably and efficiently in various environmental conditions. 4. Better aesthetics, harmonious integration: HPBC 2.0´s solid black appearance and front without gridline technology result in a clean and stylish appearance that seamlessly integrates with the architecture, enhancing overall aesthetics',
-            seakers: [
+            speakers: [
                 {   
                     nameem: 'LONGI',
                     id: 1,
@@ -413,12 +413,14 @@ export const conferences = {
             name: 'HUAWEI',
             status: 'VENDIDO',
             duracion:'45 min',
+            title: "Reformulación de la seguridad en los Sistemas FV",
+            title_en: "Reformulation of the security in the Photovoltaic Systems",
             logos:'/img/sponsors/Huawei.webp',
             speakers: [
                 {       
                     id: 1, 
                     nameem: 'HUAWEI',               
-                    name: 'Carlos Hong Liang',
+                    name: 'Ulises Francisco Alcazar',
                     bio: '',
                     bio_en: '',
                     position_en: 'Product Manager',
@@ -464,21 +466,21 @@ export const conferences = {
             status: 'VENDIDO',
             duracion:'30 min.',
             logos:'/img/solarever_color.webp',
-            title:'Soluciones financieras para proyectos Fotovoltaicos y de Almacenamiento',
-            title_en:'Financial solutions for photovoltaic and storage projects',
-            resume:'Abordaremos información general del funicionamiento de las herramientas financieras que existen hoy en día en el mercado fotovoltáico, además de sus implicaciones y como podemos utilizarlas para incrementar nuestros porcentajes de cierre. Revisaremos los requisitos para poder desarrollar este tipo de proyectos y el alcance que ésto conlleva',
-            resume_en:'We will review general information on the function of the financial tools that exist today in the photovoltaic market, in addition to their implications and how we can use them to increase our closing percentages. We will review the requirements to be able to develop this type of projects and the scope that this entails.',
+            title:'Cargadores para vehículos eléctricos: tipos, tecnologías y aplicaciones en México',
+            title_en: 'Chargers for Electric Vehicles: Types, Technologies and Applications in Mexico',
+            resume:'La movilidad eléctrica está revolucionando el panorama automotriz en México, y la infraestructura de carga es un pilar fundamental para su adopción masiva. En esta ponencia, exploraremos a fondo los diferentes tipos de cargadores para vehículos eléctricos disponibles en el mercado mexicano, desde los modelos residenciales básicos hasta las estaciones de carga rápida de vanguardia. Analizaremos las tecnologías subyacentes que impulsan estos cargadores, incluyendo los estándares de carga, los protocolos de comunicación y las innovaciones en eficiencia energética. Además, examinaremos las diversas aplicaciones de los cargadores en México, desde el uso doméstico y comercial hasta su despliegue en estaciones de servicio y corredores de carga a lo largo del país. Acompáñenos para descubrir cómo los cargadores para vehículos eléctricos están dando forma al futuro de la movilidad sostenible en México.',
+            resume_en:'Electric mobility is revolutionising the automotive landscape in Mexico, and charging infrastructure is a fundamental pillar for its widespread adoption. In this presentation, we will take an in-depth look at the various types of electric vehicle chargers available in the Mexican market, ranging from basic residential models to cutting-edge fast-charging stations. We will analyse the underlying technologies driving these chargers, including charging standards, communication protocols, and innovations in energy efficiency. Furthermore, we will explore the diverse applications of EV chargers in Mexico, from domestic and commercial use to their deployment in service stations and charging corridors across the country. Join us to discover how electric vehicle chargers are shaping the future of sustainable mobility in Mexico.',
             speakers: [
                 {       
                     id: 1,                
-                    name: 'Jorge Raúl Romay Cortés',
+                    name: 'Luis Daniel De La Cruz Lara',
                     bio: 'Ingeniero Industrial egresado de la FCQeI de la Universidad Autónoma del Estado de Morelos. Experto de la industria fotovoltáica en baja y media tensión con mas de 7 años de experiencia en el sector. Se desarrolló como analsita de interconexiones en Bright Solar, en donde desempeñaba funciones como project manager en proyectos residenciales al rededor de la república méxicana, además de desarrollar procesos que aseguraban la viabilidad de proyectos en ambitos operativos y normativos Actualmente colabora en Solarever como gerente del área de PPA, donde desarrolló un modelo de negocio que brinda la posibilidad de promover herramientas financieras para proyectos en baja y media tensión de todo el país. Especializado en gestión de proyectos, análisis financieros, almacenamiento de energía, mejora de procesos y análisis de datos.',
                     bio_en: 'Industrial Engineer, graduate of the FCQeI of the Universidad Autónoma del Estado de Morelos. Expert in the low and medium voltage photovoltaic industry with more than 7 years of experience in the sector. Developed as an interconnect analyst at Bright Solar, where he worked as a project manager in residential projects around the Mexican republic, in addition to developing processes that ensured the viability of projects in operational and regulatory ambits Currently collaborates with Solarever as manager of the PPA area, where he developed a business model that provides the possibility of promoting financial tools for low and medium voltage projects throughout the country. Specialized in project management, financial analysis, energy storage, process improvement and data analysis.',
-                    position: 'Gerente Nacional de Proyectos Residenciales, Comerciales e Industriales',
-                    position_en: 'National Manager of Residential, Commercial and Industrial Projects',
+                    position: 'Gerente de soporte técnico',
+                    position_en: 'Technical Support Specialist',
                     email: 'raul.romay@solarever.com.mx',
                     phone: '5641610736',
-                    imagenes:'/img/JorgeRaulRomayCortes-Solarever.webp',
+                    imagenes:'/img/luis_daniel_solarever.webp',
                 },                
             ], 
         },
@@ -496,14 +498,14 @@ export const conferences = {
             speakers: [
                 {       
                     id: 1,                
-                    name: 'Eloi Nava',
-                    bio: ' Con más de 30 años de experiencia en la industria de energía de respaldo, este conferenciante ha acumulado un extenso conocimiento en diversas áreas tecnológicas, destacándose en el sector de las energías renovables con un enfoque particular en energía solar fotovoltaica (PV) y baterías. Su experiencia en este mercado se extiende por más de 20 años, inicialmente en España y Europa, liderado varios proyectos innovadores, contribuyendo significativamente al avance y la sostenibilidad de la industria del transporte aeronáutico y los sistemas autónomos de generación eléctrica híbridos.A lo largo de su carrera, ha trabajado en empresas de renombre internacional como SAFT Batteries, AEG Power Systems, DF Electric, Adler, y Weidmüller, desarrollando nuevos mercados, siempre con un marcado perfil de innovación, comercial y de desarrollo de negocios.',
-                    bio_en: 'With over 30 years of experience in the backup energy industry, this speaker has accumulated extensive knowledge in various technological areas, standing out in the renewable energy sector with a particular focus on solar photovoltaic (PV) power and batteries. Its experience in this market extends for more than 20 years, initially in Spain and Europe, led several innovative projects, contributing significantly to the advancement and sustainability of the aeronautical transport industry and hybrid autonomous power generation systems.Throughout his career, he has worked in internationally renowned companies such as SAFT Batteries, AEG Power Systems, DF Electric, Adler, and Weidmüller, developing new markets, always with a marked profile of innovation, commercial and business development.',
-                    position: 'Key Account Manager PV',
-                    position_en: 'Key Account Manager PV',
-                    email: 'eloi.nava@weidmuller.com',
+                    name: 'Guillermo Dorantes',
+                    bio: '',
+                    bio_en: '',
+                    position: '',
+                    position_en: '',
+                    email: '',
                     phone: '',
-                    imagenes:'/img/eloinava.webp',
+                    imagenes:'/img/guillermo_dorantes_weidmuller.webp',
                 },                
             ],  
         },
@@ -533,7 +535,7 @@ export const conferences = {
                 },                
             ], 
         },
-        {
+        /* {
             id: 5,
             hour: '15:00 – 15:30',
             name: 'HONEYWELL',
@@ -570,6 +572,6 @@ export const conferences = {
                     imagenes:'/img/jorgesobral.webp',
                 },               
             ],
-        },
+        }, */
     ]
 }
