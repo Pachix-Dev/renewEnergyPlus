@@ -145,7 +145,7 @@ export function Preregistro() {
       {uuid && (
         <div className='mt-3 flex flex-col items-center space-y-10 p-4 border rounded-lg shadow-md'>
           <div id='qr-code'>
-            <QRCode value={uuid} size={90} />
+            <QRCode value={uuid} size={110} />
           </div>
           <button
             onClick={handlePrint}
