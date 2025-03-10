@@ -1,3 +1,4 @@
+import { title } from "process";
 
 export const conferences = {
     day_1: [
@@ -7,7 +8,24 @@ export const conferences = {
             name: 'HUAWEI',
             status: 'VENDIDO', 
             duracion:'30 min.' ,
-            logos:'/img/sponsors/Huawei.webp'      
+            logos:'/img/sponsors/Huawei.webp',
+            title: 'Seguridad en los sistemas de almacenamiento',
+            title_en: 'Security in storage systems',
+            resume: '',
+            resume_en: '',
+            speakers: [
+                {   nameem: 'HUAWEI',
+                    id: 1,
+                    imagenes:'',
+                    name: 'Ulises Francisco Alcazár Hernández',
+                    bio: '',
+                    bio_en: '',
+                    position: 'Solution Manager',
+                    position_en: '',
+                    email: '',
+                    phone: ''
+                },
+            ],
         },
         {
             id: 2,
@@ -42,8 +60,53 @@ export const conferences = {
             name: 'BATTERY DEPOT',
             status: 'VENDIDO',
              duracion:'30 min.',
-             logos:'/img/sponsors/batterydepot.webp'
-        },        
+             title:'El mercado del almacenamiento de energía-Victron Energy',
+             title_en:'The energy storage market-Victron Energy',
+             resume_en:'',
+             resume:'',
+             logos:'/img/sponsors/batterydepot.webp',
+             speakers: [
+                {   nameem: 'BATTERY DEPOT',   
+                    id: 1,  
+                    imagenes:'/img/David-Gutierrez-Battery-Depot.webp',              
+                    name: 'David Gutiérrez',
+                    bio: 'Ingeniero en Energía egresado de la Universidad de Guadalajara y especialista en sistemas de almacenamiento de energía, cuenta con más de una década de experiencia en el desarrollo, instalación y supervisión de proyectos fotovoltaicos en distintos estados de la República Mexicana. Su trayectoria incluye la capacitación de integradores y empresarios en almacenamiento energético, así como una participación activa en el diseño e implementación de sistemas aislados y soluciones de Energy Storage. Actualmente, lidera el mercado mexicano para Victron Energy, empresa holandesa reconocida a nivel global por sus innovadoras soluciones con baterías.',
+                    bio_en: 'Energy Engineer graduated from the University of Guadalajara and specialist in energy storage systems, has more than a decade of experience in the development, installation and supervision of photovoltaic projects in different states of the Mexican Republic. His track record includes training integrators and entrepreneurs in energy storage, as well as active participation in the design and implementation of isolated systems and Energy Storage solutions. Currently, it leads the Mexican market for Victron Energy, a Dutch company recognized globally for its innovative battery solutions.',
+                    position_en: 'Country Manager Victron Energy / México',
+                    position:'Gerente de país Victron Energy / México',
+                    email: 'dgutierrez@victronenergy.com',
+                    phone: '3318367449 ',
+                   
+                },                
+            ],            
+              
+        }, 
+        {
+            id: 4,
+            hour: '14:15 – 14:45',
+            name: 'QUARTUX',
+            status: 'VENDIDO',
+            duracion:'30 min.',
+            logos:'/img/sponsors/quartux.webp',
+            title: 'Claves del diseño eficiente e implementación de sistemas de almacenamiento de energía',
+            title_en: 'Keys to efficient design and implementation of energy storage systems',
+            resume: '¿Qué aprenderás? -Mejores prácticas en diseño e implementación de hashtag#SistemasDeAlmacenamiento, Tecnologías emergentes y su impacto en la hashtag#InfraestructuraEnergética, Casos de éxito que están redefiniendo el sector energético industrial.',
+            resume_en: 'What will you learn? -Best practices in design and implementation of hashtag#StorageSystems, Emerging technologies and their impact on hashtag#EnergyInfrastructure, Success stories that are redefining the industrial energy sector.',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'QUARTUX',              
+                    name: 'Fabián Ríos',
+                    bio: 'Fabián Ríos es ingeniero en Energía con una década de experiencia en el sector de las energías renovables. Ha dedicado su carrera al desarrollo y gestión de soluciones innovadoras que promueven la transición energética en México. Con certificaciones en sistemas fotovoltaicos y gestión de proyectos, su trayectoria abarca un amplio espectro de implementaciones: desde calentadores solares y sistemas fotovoltaicos residenciales hasta almacenamiento de energía inteligente para aplicaciones industriales. Como líder en su campo, Fabián ha participado en más de 300 proyectos fotovoltaicos, asesorado más de 200 sistemas industriales, y liderado 10 proyectos de almacenamiento de energía con una capacidad acumulada de 30 MWh. Estas iniciativas han generado ahorros económicos anuales de más de 150 millones de pesos y reducido la emisión de más de 70 mil toneladas de CO2, contribuyendo significativamente a un futuro sostenible. En su posición actual como Director de Negocios y Alianzas Estratégicas en Quartux, Fabián se enfoca en identificar oportunidades innovadoras y cerrar acuerdos estratégicos que impulsen la adopción de tecnologías de almacenamiento energético. Su pasión por las energías renovables lo ha llevado a ser un capacitador experto en sistemas fotovoltaicos, gestión de proyectos y almacenamiento energético. Además, ha destacado por su conocimiento en normativas, certificaciones y lineamientos energéticos del sector público, abordando los desafíos de la creciente demanda energética de México con soluciones disruptivas como el load shifting. Fabián trabaja bajo valores de respeto, responsabilidad y trabajo en equipo, motivado por el impacto positivo de las tecnologías renovables en la industria y el medio ambiente. Su participación como ponente busca inspirar y fortalecer el compromiso con la transición energética, compartiendo su visión de un futuro más limpio y sustentable.',
+                    bio_en: 'Fabián Ríos is an energy engineer with a decade of experience in the renewable energy sector. He has dedicated his career to the development and management of innovative solutions that promote the energy transition in Mexico. With certifications in photovoltaic systems and project management, his background spans a broad spectrum of implementations: from solar heaters and residential photovoltaic systems to smart energy storage for industrial applications. As a leader in his field, Fabian has participated in more than 300 PV projects, advised more than 200 industrial systems, and led 10 energy storage projects with a cumulative capacity of 30 MWh. These initiatives have generated annual economic savings of more than 150 million pesos and reduced the emission of more than 70 thousand tons of CO2, contributing significantly to a sustainable future. In his current position as Director of Business and Strategic Alliances at Quartux, Fabian focuses on identifying innovative opportunities and closing strategic agreements that drive the adoption of energy storage technologies. His passion for renewable energy has led him to become an expert trainer in photovoltaic systems, project management and energy storage. In addition, he has excelled in his knowledge of public sector energy regulations, certifications and guidelines, addressing the challenges of Mexico´s growing energy demand.',
+                    position_en: 'Partnerships Director',
+                    position:'Director de Alianzas',
+                    email: 'fabian.rios@quartux.com',
+                    phone: '4421499619',
+                    imagenes:'/img/fabianrios.webp',
+                },
+            ]
+        },       
         {
             id: 5,
             hour: '15:00 – 15:30',
@@ -75,8 +138,26 @@ export const conferences = {
             hour: '15:45 – 16:15',
             name: 'EXEL SOLAR',
             status: 'VENDIDO',
-             duracion:'30 min.',
-             logos:'/img/sponsors/EXELSOLAR.webp'
+            duracion:'30 min.',
+            logos:'/img/sponsors/EXELSOLAR.webp',
+            title:'Pylotech C&I Solutions',
+            title_en:'Pylotech C&I Solutions',
+            resume:'',
+            resume_en:'',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'EXEL SOLAR',              
+                    name: 'Víctor San Roman',
+                    bio: ' ',
+                    bio_en: '',
+                    position_en: 'Field Application Engineer',
+                    position:'Field Application Engineer',
+                    email: '',
+                    phone: '',
+                    imagenes:'/img/victor_roman.webp',
+                },                
+            ],
         },
         {
             id: 7,
@@ -84,7 +165,25 @@ export const conferences = {
             name: 'ECOFLOW',
             status: 'VENDIDO',
              duracion:'30 min.',
-             logos:'/img/sponsors/EcoFlow.webp'
+             logos:'/img/sponsors/EcoFlow.webp',
+             title:'De la Autogeneración al Almacenamiento: El Futuro Energético Residencial en México',
+             resume:'De la Autogeneración al Almacenamiento: El Futuro Energético Residencial en México" explorará cómo la integración de sistemas fotovoltaicos y avanzadas soluciones de almacenamiento está transformando el sector residencial. La charla destacará datos actualizados, tendencias tecnológicas y casos de éxito que demuestran ahorros económicos significativos, reducción de emisiones y el surgimiento de los hogares prosumidores. Un enfoque claro y práctico para entender cómo estas innovaciones, alineadas con las nuevas políticas energéticas, están creando un futuro más sostenible y resiliente para México. ¡No te pierdas esta oportunidad de conocer de primera mano cómo EcoFlow está liderando esta revolución energética!',
+             resume_en:'From Self-Generation to Storage: The Future of Residential Energy in Mexico" will explore how the integration of photovoltaic systems with advanced storage solutions is transforming the residential sector. The talk will highlight up-to-date data, technological trends, and success stories demonstrating significant cost savings, emission reductions, and the emergence of prosumer households. This clear and practical approach will help you understand how these innovations, aligned with new energy policies, are creating a more sustainable and resilient future for Mexico. Don’t miss the opportunity to learn firsthand how EcoFlow is leading this energy revolution!',
+             title_en:'From Auto Generation to Storage: The Residential Energy Future in Mexico',
+             speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'ECOFLOW',              
+                    name: 'Jorge Alberto Elosúa',
+                    bio: ' Es cofundador de PowerMe Energy y cuenta con una sólida formación multidisciplinaria. Obtuvo su MBA en el IPADE , su título en Economía en Southern Methodist University y su título en Derecho en el Tecnológico de Monterrey. Previo a fundar PowerMe Energy, tiene experiencia en roles de desarrollo corporativo y análisis financiero en empresas internacionales, dónde ha liderado proyectos estratégicos y de inversión. Actualmente se centra en la planeación estratégica y desarrollo de negocio para PowerMe Energy, empresa enfocada en implementar soluciones energéticas innovadoras que transforman el panorama residencial, impulsando la transición hacia energías renovables en México.',
+                    bio_en: 'He is a co-founder of PowerMe Energy and has a strong multidisciplinary background. Earned his MBA from IPADE, his degree in Economics from Southern Methodist University and his degree in Law from Tecnológico de Monterrey. Prior to founding PowerMe Energy, he has experience in corporate development and financial analysis roles at international companies, where he has led strategic and investment projects. Currently focuses on strategic planning and business development for PowerMe Energy, a company focused on implementing innovative energy solutions that transform the residential landscape, driving the transition to renewable energies in Mexico.',
+                    position_en: 'Co-founder PowerMe Energy',
+                    position:'Cofundador PowerMe Energy',
+                    email: 'jorge.elosua@powerme.mx',
+                    phone: '8115442227',
+                    imagenes:'/img/JorgeAlbertoElosua-ECOFLOW.webp',
+                },                
+            ],
         },
         {
             id: 8,
@@ -120,7 +219,25 @@ export const conferences = {
             name: 'LONGI',
             status: 'VENDIDO',
             duracion:'30 min',
-            logos:'/img/sponsors/longi.webp'      
+            logos:'/img/sponsors/longi.webp',
+            title: 'Nuevo producto HiMo X10, HPBC 2.0',
+            title_en: 'New product HiMo X10, HPBC 2.0',
+            resume: 'El módulo HiMO X10 de Longi, como nueva generación de módulos N tipo BC con la aplicación HPBC 2.0 de Longi Green Energy, establece un nuevo estándar para los módulos fotovoltaicos con su eficiencia superior, rendimiento excepcional de generación de energía y alta confiabilidad, liderando a la industria hacia un futuro más eficiente. Las ventajas revolucionarias de HiMO X10 incluyen: 1. Mayor eficiencia, superando en 30W a los módulos convencionales. 2. Mayor generación de energía, duplicando los beneficios: la generación de energía por vatio es un 3% superior a la de los módulos convencionales, lo que resulta en un aumento significativo de la generación de energía con la misma capacidad de instalación, creando más beneficios para los usuarios. 3. Mayor confiabilidad, garantía de estabilidad: las células solares TaiRay de alta resistencia reducen el riesgo de grietas ocultas en un 80% para Hi-MO X10. Una tasa de degradación más baja, un coeficiente de temperatura óptimo y una mayor tasa de generación en ambos lados aseguran que los módulos funcionen de manera estable y eficiente en diversas condiciones ambientales. 4. Mayor estética, integración armoniosa: el aspecto negro sólido de HPBC 2.0 y la tecnología de líneas frontales sin rejilla dan como resultado una apariencia limpia y elegante que se integra perfectamente con la arquitectura, mejorando la estética general.',
+            resume_en: 'The Longi HiMO X10 module, as a new generation N-type BC module with Longi Green Energy´s HPBC 2.0 application, sets a new standard for photovoltaic modules with its breakthrough efficiency improvement, outstanding power generation performance, and ultra-high reliability, leading the industry towards a more efficient future. The groundbreaking advantages of HiMO X10 include: 1. Higher efficiency, surpassing mainstream modules by 30W in power. 2. Higher power generation, doubling profits: The energy generation per watt is 3% higher than mainstream modules, resulting in a significant increase in power generation with the same installation capacity, creating more profits for users. 3. Higher reliability, stable assurance: TaiRay high-strength silicon cells reduce hidden crack risks by 80% for Hi-MO X10. Lower degradation rate, optimal temperature coefficient, and higher double-sided rate ensure that the modules operate stably and efficiently in various environmental conditions. 4. Better aesthetics, harmonious integration: HPBC 2.0´s solid black appearance and front without gridline technology result in a clean and stylish appearance that seamlessly integrates with the architecture, enhancing overall aesthetics',
+            speakers: [
+                {   
+                    nameem: 'LONGI',
+                    id: 1,
+                    imagenes:'',
+                    name: 'Andres Alcantar',
+                    bio: 'Andrés Alcántar es un profesional con más de seis años de experiencia internacional en el sector de energía solar, habiendo trabajado en México, Centroamérica, el Caribe, y Estados Unidos. Ingeniero Mecánico con especialidad en Ingeniería Eléctrica por el Tecnológico de Monterrey y formación en el Politecnico di Milano, se especializa en diseño y simulación de sistemas fotovoltaicos, gestión de subcontratistas y desarrollo técnico-comercial. Ha liderado propuestas para proyectos de gran escala en Estados Unidos y generación distribuida en América Latina, destacándose por su enfoque en soluciones sostenibles y colaboración con equipos multiculturales. Actualmente, como Gerente de Soluciones de Producto en LONGi Solar, lidera estrategias de soluciones fotovoltaicas adaptadas a los mercados de México, Centroamérica y el Caribe, impulsando proyectos sostenibles e innovadores en la región.',
+                    bio_en: 'Andrés Alcántar is a professional with over six years of international experience in the solar energy sector, having worked in Mexico, Central America, the Caribbean, and the United States. Mechanical Engineer with a specialization in Electrical Engineering from the Tecnológico de Monterrey and training at the Politecnico di Milano, he specializes in the design and simulation of photovoltaic systems, subcontractor management, and technical-commercial development. He has led proposals for large-scale projects in the United States and distributed generation in Latin America, standing out for his focus on sustainable solutions and collaboration with multicultural teams. Currently, as Product Solutions Manager at LONGi Solar, he leads photovoltaic solution strategies tailored to the markets of Mexico, Central America, and the Caribbean, driving sustainable and innovative projects in the region.',
+                    position: 'C&I Sales Manager DG MEXICO Y CARIBE',
+                    position_en: 'C&I Sales Manager DG MEXICO Y CARIBE',
+                    email: 'andres.alcantar@longi.com',
+                    phone: '(747) 265-7925'
+                }
+            ],  
         },
         {
             id: 2,
@@ -154,7 +271,61 @@ export const conferences = {
             name: 'S-5!',
             status: 'RESERVADO',
             duracion:'30 min',
-            logos:'/img/sponsors/S-5!.webp'
+            logos:'/img/sponsors/S-5!.webp',
+            resume:'Expertos de S-5! y FM Global abordarán los principales desafíos que enfrentan los sistemas fotovoltaicos en estructuras complejas, como techos curvos y carports, y compartirán soluciones avanzadas para optimizar su instalación y desempeño. Además, se profundizará en los requisitos y estándares de FM Global, asegurando que los proyectos FV cumplan con las mejores prácticas de seguridad, mitigación de riesgos y durabilidad a largo plazo. Acompáñanos en esta conversación técnica donde exploraremos estrategias innovadoras para garantizar sistemas fotovoltaicos seguros, eficientes y en cumplimiento con normativas clave.',
+            resume_en:'Experts from S-5! and FM Global will discuss the key challenges faced by photovoltaic (PV) systems on complex structures such as curved roofs and carports and share advanced solutions to optimize their installation and performance. Additionally, the panel will delve into FM Global requirements and standards, ensuring PV projects meet best practices for safety, risk mitigation, and long-term durability. Join us for this technical discussion where we will explore innovative strategies to ensure PV systems are safe, efficient, and compliant with key regulations.',
+            title:'Desafíos y soluciones avanzadas para sistemas FV: Techos curvos, Carpots y cumplimiento con FM Global',
+            title_en:'Advanced PV system challenges and solutions: Curved roofs, carpots and compliance with FM Global',
+            speakers: [
+                {   nameem: 'S-5!',   
+                    id: 1,  
+                    imagenes:'/img/ErickdelaRosa-S-5!.webp',              
+                    name: 'Erick De La Rosa',
+                    bio: ' Ingenieros especializados en soluciones de fijación para techos metálicos, con más de cinco años de experiencia en el sector fotovoltaico. Su profundo conocimiento en la industria les permite optimizar la instalación de sistemas solares con seguridad y eficiencia, asegurando soluciones duraderas y de alto desempeño.',
+                    bio_en: 'Engineers specialized in metal roof fastening solutions, with more than five years of experience in the photovoltaic sector. Their deep knowledge in the industry allows them to optimize the installation of solar systems with safety and efficiency, ensuring durable and high performance solutions.',
+                    position_en: 'Sales Manager ',
+                    position:'Gerente de ventas',
+                    email: 'edelarosa@s-5.com',
+                    phone: '52 999 152 9928   ',
+                   
+                }, 
+                {   nameem: 'S-5!',   
+                    id: 2,  
+                    imagenes:'/img/CristhianArredondo-S-5!.webp',              
+                    name: 'Cristhian Arredondo',
+                    bio: ' Ingenieros especializados en soluciones de fijación para techos metálicos, con más de cinco años de experiencia en el sector fotovoltaico. Su profundo conocimiento en la industria les permite optimizar la instalación de sistemas solares con seguridad y eficiencia, asegurando soluciones duraderas y de alto desempeño.',
+                    bio_en: 'Engineers specialized in metal roof fastening solutions, with more than five years of experience in the photovoltaic sector. Their deep knowledge in the industry allows them to optimize the installation of solar systems with safety and efficiency, ensuring durable and high performance solutions.',
+                    position_en: 'Sales Engineer',
+                    position:'Ingeniero de ventas',
+                    email: 'carredondo@s-5.com',
+                    phone: '55 333 445 6481                                ',
+                   
+                }, 
+                {   nameem: 'S-5!',   
+                    id: 3,  
+                    imagenes:'/img/JazminMartinezOrtega-S-5!.webp',              
+                    name: 'Jazmín del R. Martínez Ortega',
+                    bio: ' Expertos en gestión de riesgos y estándares de seguridad para la industria aseguradora. Como parte de FM Global, trabajan en la evaluación y mitigación de riesgos en instalaciones industriales y comerciales, ayudando a garantizar la resiliencia y protección de infraestructuras críticas.',
+                    bio_en: 'Experts in risk management and safety standards for the insurance industry. As part of FM Global, they work on risk assessment and mitigation at industrial and commercial facilities, helping to ensure the resilience and protection of critical infrastructure.',
+                    position_en: 'Technical Solutions Engineer',
+                    position:'Ingeniero de soluciones técnicas',
+                    email: 'jazmin.martinez@fmglobal.com',
+                    phone: '52 818 262 4735           ',
+                   
+                }, 
+                {   nameem: 'S-5!',   
+                    id: 4,  
+                    imagenes:'/img/DavidMoralesReinosa-S-5!.webp',              
+                    name: 'David Morales Reinosa',
+                    bio: ' Expertos en gestión de riesgos y estándares de seguridad para la industria aseguradora. Como parte de FM Global, trabajan en la evaluación y mitigación de riesgos en instalaciones industriales y comerciales, ayudando a garantizar la resiliencia y protección de infraestructuras críticas.',
+                    bio_en: 'Experts in risk management and safety standards for the insurance industry. As part of FM Global, they work on risk assessment and mitigation at industrial and commercial facilities, helping to ensure the resilience and protection of critical infrastructure.',
+                    position_en: 'Vide Presidente-Principal Code Consultant-Latin America-FM Global',
+                    position:'Vide President-Principal Code Consultant-Latin America-FM Global',
+                    email: 'david.morales@fmglobal.com',
+                    phone: '52 818 262 4741 ',
+                   
+                },              
+            ],
         },        
         {
             id: 5,
@@ -162,7 +333,26 @@ export const conferences = {
             name: 'EXEL SOLAR',
             status: 'VENDIDO',
             duracion:'30 min',
-            logos:'/img/sponsors/EXELSOLAR.webp'
+            logos:'/img/sponsors/EXELSOLAR.webp',
+            title:'IQ8P-3P, IQ Battery 5P, y Compatibilidad de gateway para Microinversores IQ7 e IQ8',
+            title_en:'IQ8P-3P, IQ Battery 5P, and Gateway Compatibility for IQ7 and IQ8 Microinverters',
+            resume:'En esta sesión exploraremos las últimas innovaciones de Enphase, incluyendo el IQ8P-3P, IQ Battery 5P y la compatibilidad del gateway con los microinversores IQ7 e IQ8. Analizaremos cómo estas soluciones optimizan la generación, almacenamiento y gestión de energía solar, ofreciendo mayor eficiencia y flexibilidad para los sistemas fotovoltaicos.',
+            resume_en:'In this session we will explore the latest innovations from Enphase, including the IQ8P-3P, IQ Battery 5P and gateway compatibility with IQ7 and IQ8 microinverters. We will analyze how these solutions optimize solar energy generation, storage and management, offering greater efficiency and flexibility for photovoltaic systems.',
+            speakers: [
+                {       
+                    id: 1,  
+                    nameem: 'EXEL SOLAR',  
+                    imagenes:'/img/heribertoflores.webp',            
+                    name: 'Heriberto Flores',
+                    bio: 'Egresado del Tecnológico de Monterrey campus Monterrey de Ingeniería en Mecatrónica, con mas de 15 años de experiencia en la industria solar y 10 en Enphase.',
+                    bio_en: 'Graduated from Tecnológico de Monterrey campus Monterrey in Mechatronics Engineering, with more than 15 years of experience in the solar industry and 10 in Enphase.',
+                    position_en: 'Field Applications Engineer',
+                    position: 'Ingeniero de Aplicaciones de Campo',
+                    email: '',
+                    phone: '',
+                }
+            ],
+                    
         },
         {
             id: 6,
@@ -170,7 +360,26 @@ export const conferences = {
             name: 'SOLAREVER',
             status: 'VENDIDO',
             duracion:'30 min',
-            logos:'/img/sponsors/Longi-Solar.webp'
+            logos:'/img/solarever_color.webp',
+            title:'El Futuro del Almacenamiento de Energía a Gran Escala en México: Retos, Legislación y Liderazgo Tecnológico',
+            title_en:'The Future of Large-Scale Energy Storage in Mexico: Challenges, Legislation and Technological Leadership',
+            resume:'En esta ponencia, exploraremos las oportunidades y desafíos del almacenamiento de energía a gran escala en México, con un enfoque en el impacto de las nuevas legislaciones. Analizaremos cómo estas regulaciones están transformando el mercado y qué retos enfrentamos para su implementación. Además, destacaremos cómo Solarever lidera el sector al ofrecer una gama única de tecnologías de BESS (Sistemas de Almacenamiento de Energía en Baterías), respaldadas por un servicio integral de acompañamiento. Una mirada hacia un futuro energético más eficiente y competitivo.',
+            resume_en:'We will explore the opportunities and challenges of large scale energy storage in Mexico, with a focus on the impact of new legislation. We will analyze how these regulations are transforming the market and the challenges we face in their implementation. Additionally, we will highlight how Solarever is leading the sector by offering a unique range of BESS (Battery Energy Storage Systems) technologies, backed by comprehensive support services. A look toward a more efficient and competitive energy future.',
+            speakers: [
+                {   
+                    nameem: 'SOLAREVER',   
+                    id: 1,  
+                    imagenes:'/img/MayelaGuadalupeCifuentesRangel-Solarever.webp',              
+                    name: 'Mayela Guadalupe Cifuentes Rangel',
+                    bio: ' Ingeniera en Energías Renovables y especialista en sistemas de almacenamiento de energía, con más de seis años de experiencia impulsando soluciones técnicas innovadoras en el sector de las energías limpias, especialmente en almacenamiento de energía. Apasionada por transformar el panorama energético y generar un impacto positivo en la industria. Destacada por su capacidad para construir relaciones estratégicas y cerrar acuerdos que promueven el crecimiento sostenible. Su enfoque estratégico y orientación a resultados le han permitido desarrollar y ejecutar planes efectivos para la adopción de nuevas tecnologías, contribuyendo activamente a la transición hacia un futuro más verde y eficiente.',
+                    bio_en: 'Renewable Energy Engineer and specialist in energy storage systems, with more than six years of experience driving innovative technical solutions in the clean energy sector, especially in energy storage. Passionate about transforming the energy landscape and making a positive impact on industry. Distinguished for its ability to build strategic relationships and close agreements that promote sustainable growth. Its strategic approach and results orientation have enabled it to develop and implement effective plans for the adoption of new technologies, actively contributing to the transition towards a greener and more efficient future.',
+                    position_en: 'Gerente de sistemas de almacenamiento de energía',
+                    position:'Gerente de sistemas de almacenamiento de energía',
+                    email: '',
+                    phone: '',
+                   
+                }, 
+            ]
         },
         {
             id: 7,
@@ -204,21 +413,50 @@ export const conferences = {
             name: 'HUAWEI',
             status: 'VENDIDO',
             duracion:'45 min',
-            logos:'/img/sponsors/Huawei.webp'
+            title: "Reformulación de la seguridad en los Sistemas FV",
+            title_en: "Reformulation of the security in the Photovoltaic Systems",
+            logos:'/img/sponsors/Huawei.webp',
+            speakers: [
+                {       
+                    id: 1, 
+                    nameem: 'HUAWEI',               
+                    name: 'Ulises Francisco Alcazar',
+                    bio: '',
+                    bio_en: '',
+                    position_en: 'Product Manager',
+                    position:'Product Manager',
+                    email: '',
+                    phone: '',
+                    imagenes:'',
+                },                
+            ], 
         }
     ],
     day_3: [
         {
             id: 1,            
             hour: '12:00 – 12:30',
-            name: 'BATTERY DEPOT',
+            name: 'KEYMEX SOLAR',
             status: 'RESERVADO', 
             duracion:'30 min.', 
             logos:'/img/sponsors/batterydepot.webp',
-            title: '',
-            title_en: '',
-            resume: ' ',
-            resume_en: '',    
+            title: 'Convocatoria nacional para integradores solares: Proyecto masivo de 100mw con Keymex',
+            title_en: 'National call for solar integrators: 100mw massive project with Keymex',
+            resume: 'En esta conferencia, Iván Aranda, Presidente de Keymex Energy, presentará la visión y estrategia de expansión de la empresa, destacando las oportunidades para integradores en nuevos proyectos de energía solar. Se abordarán temas clave como el crecimiento del mercado fotovoltaico en México, beneficios económicos y operativos para integradores, y las ventajas de formar parte de una red líder en el sector. Una oportunidad única para profesionales que buscan colaborar, innovar y crecer en el mundo de las energías renovables.',
+            resume_en: 'In this conference, Ivan Aranda, President of Keymex Energy, will present the company´s vision and expansion strategy, highlighting the opportunities for integrators in new solar energy projects. Key topics such as the growth of the photovoltaic market in Mexico, economic and operational benefits for integrators, and the advantages of being part of a leading network in the sector will be addressed. A unique opportunity for professionals looking to collaborate, innovate and grow in the world of renewable energy.',
+            speakers: [
+                {       
+                    id: 1,                
+                    name: 'Iván Aranda',
+                    bio: 'Ingeniero Industrial egresado de la FCQeI de la Universidad Autónoma del Estado de Morelos. Experto de la industria fotovoltáica en baja y media tensión con mas de 7 años de experiencia en el sector. Se desarrolló como analsita de interconexiones en Bright Solar, en donde desempeñaba funciones como project manager en proyectos residenciales al rededor de la república méxicana, además de desarrollar procesos que aseguraban la viabilidad de proyectos en ambitos operativos y normativos Actualmente colabora en Solarever como gerente del área de PPA, donde desarrolló un modelo de negocio que brinda la posibilidad de promover herramientas financieras para proyectos en baja y media tensión de todo el país. Especializado en gestión de proyectos, análisis financieros, almacenamiento de energía, mejora de procesos y análisis de datos.',
+                    bio_en: 'Industrial Engineer, graduate of the FCQeI of the Universidad Autónoma del Estado de Morelos. Expert in the low and medium voltage photovoltaic industry with more than 7 years of experience in the sector. Developed as an interconnect analyst at Bright Solar, where he worked as a project manager in residential projects around the Mexican republic, in addition to developing processes that ensured the viability of projects in operational and regulatory ambits Currently collaborates with Solarever as manager of the PPA area, where he developed a business model that provides the possibility of promoting financial tools for low and medium voltage projects throughout the country. Specialized in project management, financial analysis, energy storage, process improvement and data analysis.',
+                    position: 'Presidente ',
+                    position_en: 'President',
+                    email: 'raul.romay@solarever.com.mx',
+                    phone: '477 241 2558',
+                    imagenes:'/img/ivan_aranda.webp',
+                },                
+            ],  
                     
         },
         {
@@ -227,7 +465,24 @@ export const conferences = {
             name: 'SOLAREVER',
             status: 'VENDIDO',
             duracion:'30 min.',
-            logos:'/img/solarever.webp'
+            logos:'/img/solarever_color.webp',
+            title:'Cargadores para vehículos eléctricos: tipos, tecnologías y aplicaciones en México',
+            title_en: 'Chargers for Electric Vehicles: Types, Technologies and Applications in Mexico',
+            resume:'La movilidad eléctrica está revolucionando el panorama automotriz en México, y la infraestructura de carga es un pilar fundamental para su adopción masiva. En esta ponencia, exploraremos a fondo los diferentes tipos de cargadores para vehículos eléctricos disponibles en el mercado mexicano, desde los modelos residenciales básicos hasta las estaciones de carga rápida de vanguardia. Analizaremos las tecnologías subyacentes que impulsan estos cargadores, incluyendo los estándares de carga, los protocolos de comunicación y las innovaciones en eficiencia energética. Además, examinaremos las diversas aplicaciones de los cargadores en México, desde el uso doméstico y comercial hasta su despliegue en estaciones de servicio y corredores de carga a lo largo del país. Acompáñenos para descubrir cómo los cargadores para vehículos eléctricos están dando forma al futuro de la movilidad sostenible en México.',
+            resume_en:'Electric mobility is revolutionising the automotive landscape in Mexico, and charging infrastructure is a fundamental pillar for its widespread adoption. In this presentation, we will take an in-depth look at the various types of electric vehicle chargers available in the Mexican market, ranging from basic residential models to cutting-edge fast-charging stations. We will analyse the underlying technologies driving these chargers, including charging standards, communication protocols, and innovations in energy efficiency. Furthermore, we will explore the diverse applications of EV chargers in Mexico, from domestic and commercial use to their deployment in service stations and charging corridors across the country. Join us to discover how electric vehicle chargers are shaping the future of sustainable mobility in Mexico.',
+            speakers: [
+                {       
+                    id: 1,                
+                    name: 'Luis Daniel De La Cruz Lara',
+                    bio: 'Ingeniero Industrial egresado de la FCQeI de la Universidad Autónoma del Estado de Morelos. Experto de la industria fotovoltáica en baja y media tensión con mas de 7 años de experiencia en el sector. Se desarrolló como analsita de interconexiones en Bright Solar, en donde desempeñaba funciones como project manager en proyectos residenciales al rededor de la república méxicana, además de desarrollar procesos que aseguraban la viabilidad de proyectos en ambitos operativos y normativos Actualmente colabora en Solarever como gerente del área de PPA, donde desarrolló un modelo de negocio que brinda la posibilidad de promover herramientas financieras para proyectos en baja y media tensión de todo el país. Especializado en gestión de proyectos, análisis financieros, almacenamiento de energía, mejora de procesos y análisis de datos.',
+                    bio_en: 'Industrial Engineer, graduate of the FCQeI of the Universidad Autónoma del Estado de Morelos. Expert in the low and medium voltage photovoltaic industry with more than 7 years of experience in the sector. Developed as an interconnect analyst at Bright Solar, where he worked as a project manager in residential projects around the Mexican republic, in addition to developing processes that ensured the viability of projects in operational and regulatory ambits Currently collaborates with Solarever as manager of the PPA area, where he developed a business model that provides the possibility of promoting financial tools for low and medium voltage projects throughout the country. Specialized in project management, financial analysis, energy storage, process improvement and data analysis.',
+                    position: 'Gerente de soporte técnico',
+                    position_en: 'Technical Support Specialist',
+                    email: 'raul.romay@solarever.com.mx',
+                    phone: '5641610736',
+                    imagenes:'/img/luis_daniel_solarever.webp',
+                },                
+            ], 
         },
         {
             id: 3,
@@ -243,14 +498,14 @@ export const conferences = {
             speakers: [
                 {       
                     id: 1,                
-                    name: 'Eloi Nava',
-                    bio: ' ',
+                    name: 'Guillermo Dorantes',
+                    bio: '',
                     bio_en: '',
-                    position: 'Key Account Manager PV',
-                    position_en: 'Key Account Manager PV',
-                    email: 'eloi.nava@weidmuller.com',
+                    position: '',
+                    position_en: '',
+                    email: '',
                     phone: '',
-                    imagenes:'/img/eloinava.webp',
+                    imagenes:'/img/guillermo_dorantes_weidmuller.webp',
                 },                
             ],  
         },
@@ -280,13 +535,43 @@ export const conferences = {
                 },                
             ], 
         },
-        {
+        /* {
             id: 5,
             hour: '15:00 – 15:30',
-            name: 'DISPONIBLE',
-            status: '$1,500 USD',
+            name: 'HONEYWELL',
+            status: 'VENDIDO',
             duracion:'30 min.',
-            logos:''
-        },
+            logos:'/img/honeywell.webp',
+            title: 'Li-Ion Tamer: prevención de incendios en sistemas de almacenamiento de energía de baterías de Litio.',
+            title_en: 'Li-Ion Tamer: fire prevention in Lithium battery energy storage systems.',
+            resume: 'Li-ion Tamer Generación 3 proporciona la detección más temprana de fugas de gas que pueden causar incendios en baterías de iones de litio dañadas. Esto se logra a través de la detección de vapores del electrolito de la batería, mucho antes de que los detectores de humo y gas convencionales puedan reaccionar. Al anticiparse a los primeros signos de fallos en las baterías de iones de litio, se pueden implementar medidas preventivas adecuadas, lo que ayuda a evitar la ocurrencia de una fuga térmica catastrófica. Acomp+añennos y conozca el demo de esta tecnología!',
+            resume_en: 'Li-ion Tamer Generation 3 provides the earliest detection of gas leaks that can cause fires in damaged Li-ion batteries. can cause fires in damaged lithium-ion batteries. This is achieved through the detection of vapors from the battery electrolyte, long before conventional smoke and gas before conventional smoke and gas detectors can react. By anticipating the early signs of failure in lithium-ion batteries, measures can be implemented to prevent the lithium-ion batteries, appropriate preventive measures can be implemented, helping to avoid the  prevent the occurrence of a catastrophic thermal runaway. Join us for a demo of this technology!"',
+            speakers: [
+                {       
+                    id: 1,
+                    nameem: 'HONEYWELL',            
+                    name: 'Oscar Salazar Horner',
+                    bio: 'Oscar es gerente de territorio en Honeywell Fire. Cuenta con +10 años de experiencia en el sector de incendio y seguridad, con enfoque en sistemas de detección de incendio y notificación de alarmas. Su experiencia le ha permitido implementar proyectos exitosos en ambientes retadores con soluciones como la detección por aspiración, haz de luz, detección de gas y dispositivos para baterías de iones de litio; además de integrar proyectos de gran escala mediante plataformas de incendio especializadas. Cuenta con certificación de NFPA72. Oscar es ing. Mecánico y Eléctrico, con una maestría en Administración Organizacional por la Universidad Iberoamericana.',
+                    bio_en: 'Oscar is a territory manager at Honeywell Fire. He has +10 years of experience in the fire and security sector, focusing on fire detection and alarm notification systems. His experience has allowed him to implement successful projects in challenging environments with solutions such as aspiration detection, light beam, gas detection and devices for lithium-ion batteries; in addition to integrating large-scale projects through specialized fire platforms. He is NFPA72 certified. Oscar is a Mechanical and Electrical Engineer, with a master´s degree in Organizational Administration from the Universidad Iberoamericana.',
+                    position: 'Territory Manager. Center & Pacific Region. Commercial Fire Honeywell | Building Automation',
+                    position_en: 'Territory Manager. Center & Pacific Region. Commercial Fire Honeywell | Building Automation',
+                    email: ' oscar.salazar@honeywell.com',
+                    phone: '52 (55) 6122 2337',
+                    imagenes:'/img/oscar_salazar.webp',
+                }, 
+                {       
+                    id: 2,
+                    nameem: 'HONEYWELL',            
+                    name: 'Jorge Alberto Sobral Prado',
+                    bio: 'Jorge es Líder de Negocios de BESS para las Americas. Su experiencia en el campo de la automatización y protecciones de subestaciones eléctricas en particular y procesos Industriales en general por 22 años más el desarrollo e implementación de proyectos de Almacenamiento eléctrico en estos mercados durante los últimos 6 años le han proporcionado una extensa experiencia en la implementación de soluciones de optimización eléctrica en las más diversas industrias, cubriendo desde la propuesta hasta la finalización del ciclo de vida. Su foco en la performance operativa de las soluciones de almacenamiento energético le han permitido liderar soluciones de monitoreo remoto que coordinen los equipos de mantenimiento y en consecuencia extiendan los ciclos de vida de los sistemas, aseguren su performance y minimicen los riesgos operativos',
+                    bio_en: 'Jorge is BESS Business Leader for the Americas. His experience in the field of automation and protections of electrical substations in particular and Industrial processes in general for 22 years plus the development and implementation of electrical storage projects in these markets during the last 6 years have provided him with extensive experience in the implementation of electrical optimization solutions in the most diverse industries, covering from the proposal to the completion of the life cycle. His focus on the operational performance of energy storage solutions has allowed him to lead remote monitoring solutions that coordinate maintenance teams and consequently extend system life cycles, ensure performance and minimize operational risks.',
+                    position: 'Program Director - Americas Business Leader for Battery Energy Storage Systems',
+                    position_en: 'Program Director - Americas Business Leader for Battery Energy Storage Systems',
+                    email: 'jorge.sobral@honeywell.com',
+                    phone: '(713) 816 0931',
+                    imagenes:'/img/jorgesobral.webp',
+                },               
+            ],
+        }, */
     ]
 }

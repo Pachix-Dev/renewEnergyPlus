@@ -60,43 +60,38 @@ const translate = t("ecommerce", { returnObjects: true });
     <div class='mt-20 container mx-auto px-4 grid md:grid-cols-2'>
       <div>
         <h1 class='text-2xl font-sans'>
-          El punto de <strong>encuentro</strong> esencial para profesionales y líderes
-          de la <span class='bg-black px-1'>industria fotovoltaica.</span>
+          {t('energynight.text_1')}
+          <strong>{t('energynight.text_2')}</strong>
+          {t('energynight.text_3')}
+          <span class='bg-black px-1'>{t('energynight.text_4')}.</span>
         </h1>
-        <p class='mt-5 text-lg md:w-5/6'>
-          Disfruta de una velada llena de oportunidades de <strong
-            >networking</strong
-          >, negocios, música y cócteles en un ambiente vibrante y dinámico.
-        </p>
+        <p class='mt-5 text-lg md:w-5/6' set:html={t('energynight.text_5')} />
 
-        <p class='mt-5 text-3xl font-semibold'>¿Por qué asistir?</p>
+        <p class='mt-5 text-3xl font-semibold'>{t('energynight.text_6')}</p>
         <div class='mt-5 flex gap-5 items-center'>
           <img src='/img/icono_asistir_1.webp' alt='icono' class='w-10 h-10' />
           <div>
-            <p><strong>CONEXIONES DE ALTO VALOR</strong></p>
+            <p><strong>{t('energynight.text_7')} </strong></p>
             <p>
-              Interactúa con expertos y pioneros del sector, ampliando tu red
-              profesional y descubriendo nuevas oportunidades de colaboración.
+              {t('energynight.text_8')}
             </p>
           </div>
         </div>
         <div class='mt-5 flex gap-5 items-center'>
           <img src='/img/icono_asistir_2.webp' alt='icono' class='w-10 h-10' />
           <div>
-            <p><strong>AMBIENTE EXCLUSIVO</strong></p>
+            <p><strong>{t('energynight.text_9')} </strong></p>
             <p>
-              Sumérgete en una atmósfera diseñada para fomentar el intercambio
-              de ideas y la creación de alianzas estratégicas.
+              {t('energynight.text_10')}
             </p>
           </div>
         </div>
         <div class='mt-5 flex gap-5 items-center'>
           <img src='/img/icono_asistir_3.webp' alt='icono' class='w-10 h-10' />
           <div>
-            <p><strong>ENTRETENIMIENTO</strong></p>
+            <p><strong>{t('energynight.text_11')} </strong></p>
             <p>
-              Disfruta de espectáculos y una selección de cócteles premium que
-              harán de esta noche una experiencia memorable.
+              {t('energynight.text_12')}
             </p>
           </div>
         </div>
@@ -106,7 +101,7 @@ const translate = t("ecommerce", { returnObjects: true });
         <div
           class='bg-white text-black pt-20 -mt-20 w-64 lg:w-[350px] mx-auto rounded-lg'
         >
-          <p class='text-center py-2'>TU PASE INCLUYE:</p>
+          <p class='text-center py-2'>{t('energynight.text_13')}</p>
           <div class='bg-[#e5e5e5] flex items-center gap-2 py-2 lg:ps-10'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -120,8 +115,9 @@ const translate = t("ecommerce", { returnObjects: true });
                 clip-rule='evenodd'></path>
             </svg>
             <p class='text-sm'>
-              Entrada para la <strong>Energy Night</strong><br />
-              <span class='italic'>Acceso a bebidas ilimitadas y snack*</span>
+              {t('energynight.text_14')}
+              <strong>Energy Night</strong><br />
+              <span class='italic'>{t('energynight.text_15')} *</span>
             </p>
           </div>
           <div class='flex items-center gap-2 py-2 lg:ps-10'>
@@ -137,8 +133,9 @@ const translate = t("ecommerce", { returnObjects: true });
                 clip-rule='evenodd'></path>
             </svg>
             <p class='text-sm'>
-              Acceso <strong>miércoles 5 de marzo</strong><br />
-              <span class='italic'>En Desfilia, Expo Guadalajara</span>
+              {t('energynight.text_16')}
+              <strong>{t('energynight.text_17')} </strong><br />
+              <span class='italic'>Desfilia, Expo Guadalajara</span>
             </p>
           </div>
           <div class='bg-[#e5e5e5] flex items-center gap-2 py-2 lg:ps-10'>
@@ -154,7 +151,7 @@ const translate = t("ecommerce", { returnObjects: true });
                 clip-rule='evenodd'></path>
             </svg>
             <p class='text-sm'>
-              <strong>Recepción</strong> 6:15 p.m.
+              <strong>{t('energynight.text_18')} </strong> 6:15 p.m.
             </p>
           </div>
 
@@ -170,40 +167,33 @@ const translate = t("ecommerce", { returnObjects: true });
                 d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
                 clip-rule='evenodd'></path>
             </svg>
-            <p class='text-sm'>
-              <strong>Coctel</strong> de bienvenida
-            </p>
+            <p class='text-sm' set:html={t('energynight.text_19')} />
           </div>
           <div class='bg-[#e5e5e5] py-2'>
-            <p class='text-sm text-center'>
-              Estilo:<strong> Country</strong>
-            </p>
+            <p
+              class='text-sm text-center'
+              set:html={t('energynight.text_20')}
+            />
           </div>
         </div>
         <AddEnergyNight item={item} translate={translate} client:only />
       </div>
     </div>
     <div class='mt-10 text-center py-10'>
-      <p class='lg:text-5xl font-semibold'>NO PIERDAS</p>
-      <p class='mi-titulo lg:text-7xl'>LA OPORTUNIDAD</p>
-      <p class='text-2xl'>de ser parte del evento más importante de</p>
+      <p class='lg:text-5xl font-semibold'>{t('energynight.text_21')}</p>
+      <p class='mi-titulo lg:text-7xl'>{t('energynight.text_22')}</p>
+      <p class='text-2xl'>{t('energynight.text_23')}</p>
       <p class='font-bold text-2xl'>
-        networking en la <span class='text-[#ffb900]'
-          >industria fotovoltaica</span
-        >.
-      </p>
-      <p class='mt-5 text-xl'>
-        <strong>¡Adquiere tu boleto ahora</strong> y <strong
-          ><u>asegura tu lugar</u></strong
-        > en esta experiencia única!
+        {t('energynight.text_23')}
+        <span class='text-[#ffb900]'>{t('energynight.text_4')} </span>.
       </p>
     </div>
   </section>
   <section>
-    <div class='bg-[#ffb900] text-center py-5 text-xl'>
-      <strong>¡Adquiere tu boleto ahora</strong> y <u>asegura tu lugar </u>en
-      esta experiencia única!
-    </div>
+    <div
+      class='bg-[#ffb900] text-center py-5 text-xl'
+      set:html={t('energynight.text_25')}
+    />
     <div
       class='bg-[url(/img/bg_energynight_new_2.webp)] bg-cover bg-no-repeat py-20'
     >
@@ -212,7 +202,7 @@ const translate = t("ecommerce", { returnObjects: true });
         target='_blank'
         class='bg-slate-700 hover:bg-slate-500 text-white rounded-lg py-3 px-5 mx-auto block w-64 text-center font-semibold'
       >
-        QUIERO SER PATROCINADOR
+        {t('energynight.text_26')}
       </a>
     </div>
   </section>

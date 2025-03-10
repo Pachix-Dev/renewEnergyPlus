@@ -75,14 +75,25 @@ app.post('/create-order-replus', async (req, res) => {
         
         body.items.forEach(item => {
             const product = products.find(product => product.id == item.id);
-            total += product.price;
-
-            if(!product){
+            if (!product) {
                 return res.status(500).send({
                     status: false,
                     message: 'Error producto no encontrado...'
                 });
-            }            
+            }
+        
+            let productPrice = product.price; // Precio base del producto
+        
+            // Verificar si el producto con id 2 está en la compra
+            const energyDrinkExists = body.items.some(i => i.id == 2);
+            const discountableProducts = [3, 4, 5];
+        
+            // Aplicar descuento si el producto es 3, 4 o 5 y el producto 2 está en la lista
+            if (energyDrinkExists && discountableProducts.includes(item.id)) {
+                productPrice = Math.max(productPrice - 500, 0); // Evita precios negativos
+            }
+        
+            total += productPrice; // Sumar el precio al total
         });
         
         if (total !== body.total) {

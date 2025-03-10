@@ -62,7 +62,7 @@ export default function QRCodePrinter({ base, translate }) {
   return (
     <div className='mt-3 flex flex-col items-center space-y-10 p-4 border rounded-lg shadow-md'>
       <div id='qr-code'>
-        <QRCode value={uuid} size={200} />
+        <QRCode value={uuid} size={110} />
       </div>
       <button
         onClick={handlePrint}

@@ -1,5 +1,9 @@
+---
+import { t } from 'i18next'
+---
+
 <section class='bg-red-100 mt-28 text-center'>
-  <p class='p-5 text-3xl font-bold text-[#FF5800]'>TESTIMONIALES</p>
+  <p class='p-5 text-3xl font-bold text-[#FF5800]'>{t('home.testimonial')}</p>
   <div class='grid lg:grid-cols-2'>
     <div
       class='div my-5 bg-white m-auto rounded-tl-[80px] rounded-br-[80px] overflow-hidden relative group p-2 z-0'
@@ -18,12 +22,8 @@
           <p
             class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
           >
-            “Estamos muy contentos de participar por segunda vez en SSM, la
-            verdad es que nos fue muy bien. Estamos súper contentos de recibir a
-            nuestros clientes, de platicar con nuestros colegas, y hacia un
-            futuro con más un futuro sostenible”<br /><br />
-            <strong class='my-3'>Ulises Alcázar</strong><br />Ingeniero de
-            Producto de Huawei Technologies de México
+            {t('home.text_1')}<br /><br />
+            <strong class='my-3'>Ulises Alcázar</strong><br />{t('home.text_2')}
           </p>
         </div>
       </div>
@@ -45,13 +45,10 @@
           <p
             class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
           >
-            “Somos distribuidores de equipo fotovoltaico. Estamos muy
-            satisfechos con los resultados que hemos obtenido con esta
-            exposición. Es un lugar increíble y muy adecuado para tener conexión
-            con nuestros clientes y proveedores. Vale la pena. Lo recomiendo y
-            esperamos que esto se siga dando y creciendo”.<br /><br />
-            <strong class='my-3'>Alberto Morales</strong><br />Director General
-            de Tiga Power
+            {t('home.text_3')}<br /><br />
+            <strong class='my-3'>Alberto Morales</strong><br />{
+              t('home.text_4')
+            }
           </p>
         </div>
       </div>
@@ -73,11 +70,8 @@
           <p
             class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
           >
-            “Estuvieron muy buenas las conferencias, con información muy
-            valiosa, fue muy interesante conocer las experiencias y
-            conocimientos de expertos de la industria, hubo bastantes
-            conferencistas internacionales”.<br /><br />
-            <strong class='my-3'>Joel Corral </strong><br />Visitante
+            {t('home.text_5')}<br /><br />
+            <strong class='my-3'>Joel Corral </strong><br />{t('home.text_6')}
           </p>
         </div>
       </div>
@@ -99,10 +93,10 @@
           <p
             class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
           >
-            “Me pareció una gran expo. Hay demasiadas personas y soluciones
-            innovadoras. Baterías, módulos fotovoltaicos, inversores, puedes
-            encontrar de todo tipo. Lo recomiendo bastante”.<br /><br />
-            <strong class='my-3'>Giselle Cazares</strong><br />Visitante
+            {t('home.text_7')}<br /><br />
+            <strong class='my-3'>Giselle Cazares</strong><br />{
+              t('home.text_6')
+            }
           </p>
         </div>
       </div>

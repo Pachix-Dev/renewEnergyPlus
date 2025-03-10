@@ -128,8 +128,8 @@ const base = lang === 'es' ? '' : `/${lang}`
               <li class='hover:bg-blue-100 font-semibold'>
                 <a
                   href={i18next.language === 'es'
-                    ? '/doc/RE-MEX-2025-FS-V2_compressed.pdf'
-                    : '/doc/RE-MEX-2025-FS-V2_eng_compressed.pdf'}
+                    ? '/doc/RE-FS-2026-ESP.pdf'
+                    : '/doc/RE-FS-2026-ENG.pdf'}
                   target='_blank'
                   class='block px-4 py-2'
                 >
@@ -148,7 +148,7 @@ const base = lang === 'es' ? '' : `/${lang}`
 
               <li class='hover:bg-blue-100 font-semibold'>
                 <a
-                  href='/doc/EM-RE-MEX-2025-240125-Model.pdf'
+                  href='/doc/EM-RE-MEX-2025-022725-ltas-Model.pdf'
                   target='_blank'
                   class='block px-4 py-2'
                 >
@@ -158,8 +158,8 @@ const base = lang === 'es' ? '' : `/${lang}`
               <li class='hover:bg-blue-100 font-semibold'>
                 <a
                   href={i18next.language === 'es'
-                    ? '/doc/RE-MEXICO-SPONSORSHIPS-2025-ENG-06122024_compressed.pdf'
-                    : '/doc/RE-MEXICO-SPONSORSHIPS-2025-ESP-06122024_compressed.pdf'}
+                    ? '/doc/RE-MEXICO-SPONSORSHIPS-2025-ENG-13022025_compressed.pdf'
+                    : '/doc/RE-MEXICO-SPONSORSHIPS-2025-ESP-13022025_compressed.pdf'}
                   target='_blank'
                   class='block px-4 py-2'
                 >
@@ -198,11 +198,6 @@ const base = lang === 'es' ? '' : `/${lang}`
                   class='block px-4 py-2'
                 >
                   {t('menu.submenu_2.option_12')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/enlightenment-area`} class='block px-4 py-2'>
-                  Enlightenment Area
                 </a>
               </li>
               <li class='hover:bg-blue-100 font-semibold'>
@@ -254,11 +249,16 @@ const base = lang === 'es' ? '' : `/${lang}`
                   >{t('menu.submenu_3.option_4')}</a
                 >
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/programa-premium`} class='block px-4 py-2'>
-                  {t('menu.submenu_2.option_9')}
-                </a>
-              </li>
+              {
+                /* 
+                <li class='hover:bg-blue-100 font-semibold'>
+                  <a href={`${base}/programa-premium`} class='block px-4 py-2'>
+                    {t('menu.submenu_2.option_9')}
+                  </a>
+                </li>
+              */
+              }
+
               <li class='hover:bg-blue-100 font-semibold'>
                 <a
                   href={`${base}/contenido-gratuito/enlightenment-area`}

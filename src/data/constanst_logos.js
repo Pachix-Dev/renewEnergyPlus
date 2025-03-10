@@ -1,6 +1,14 @@
 const exhibitors1 = [
 	{
 		link: '',
+		src: '/img/solar_center.webp',
+		alt: 'SOLAR CENTER',
+		width: 200,
+		height: 80,
+	},	
+	
+	{
+		link: '',
 		src: '/img/sponsors/S-5logo.webp',
 		alt: 'S-5!',
 		width: 100,
@@ -90,6 +98,8 @@ const exhibitors1 = [
 	
 ];
 const exhibitors2 = [
+	
+	
 	{
 		link: '',
 		src: '/img/expo/carousel2/daa_solar.webp',
@@ -109,6 +119,13 @@ const exhibitors2 = [
 		src: '/img/expo/carousel2/envertech.webp',
 		alt: '',
 		width: 200,
+		height: 80,
+	},
+	{
+		link: '',
+		src: '/img/atlasSolar.webp',
+		alt: '',
+		width: 120,
 		height: 80,
 	},
 	{
@@ -635,7 +652,7 @@ const exhibitors6 = [
 		alt: '',
 		width: 200,
 		height: 80,
-	},	
+	},
 	
 ];
 const toolkit_es = [
@@ -647,7 +664,7 @@ const toolkit_es = [
 ]
 
 const toolkit_en = [
-    { id: 0, src: '/img/toolkit/banner_eng_20255.webp', alt:'Banner web',  title:'Banner web', width: 360},
+    { id: 0, src: '/img/toolkit/banner_eng_2025.webp', alt:'Banner web',  title:'Banner web', width: 360},
     { id: 1, src: '/img/toolkit/keyvisual_eng_2025.webp', alt:'KeyVisual', title:'KeyVisual', width: 360, height: 158 },
     { id: 2, src: '/img/toolkit/facebook_eng_2025.webp', alt:'Facebook', title:'Facebook', width: 360, height: 158 },
     { id: 3, src: '/img/toolkit/twitter_eng_2025.webp', alt:'Twitter', title:'Twitter', width: 360, height: 120 },

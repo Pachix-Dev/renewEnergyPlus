@@ -14,7 +14,7 @@
             "option_3": "Perfil del expositor",
             "option_4": "Servicios a Expositor",
             "option_5": "Patrocinios RE+ 2024",
-            "option_6": "Factsheet RE+ 2025",
+            "option_6": "Factsheet RE+ 2026",
             "option_7": "Contrato RE+ 2025",
             "option_8": "Plano RE+ 2025",
             "option_9": "PROGRAMA DE CONFERENCIAS PREMIUM",
@@ -44,12 +44,13 @@
         "directory":"Directorio de Expositores 2024"
     },
     "home": {
-        "event-date":"5 – 7 de Marzo",
+        "event-date":"14 – 16 de Abril",
         "program": "Programa de conferencias premium",
         "sponsorship": "Patrocinios y experiencias",
         "results": "Resultados 2023",
         "floorplan": "Plano SSM 2024",
         "exhibitor_directory": "Directorio del expositor",
+        "digital_directory": "Directorio digital",
         "hotels": "Hoteles",
         "sponsor_diamond": "Patrocinador Diamante",
         "sponsor_platinum": "Patrocinador Platinum",
@@ -178,8 +179,15 @@
         "seconds": "segundos",
         "free_register": "REGISTRO GRATUITO",
         "media_platinum": "MEDIOS ALIADOS PLATINUM",
-        "media_gold": "MEDIOS ALIADOS GOLD"
-        
+        "media_gold": "MEDIOS ALIADOS GOLD",
+        "testimonial": "TESTIMONIALES",
+        "text_1": "“Estamos muy contentos de participar por segunda vez en SSM, la verdad es que nos fue muy bien. Estamos súper contentos de recibir a nuestros clientes, de platicar con nuestros colegas, y hacia un futuro con más un futuro sostenible”.",
+        "text_2": "Ingeniero de Producto de Huawei Technologies de México",
+        "text_3": "“Somos distribuidores de equipo fotovoltaico. Estamos muy satisfechos con los resultados que hemos obtenido con esta exposición. Es un lugar increíble y muy adecuado para tener conexión con nuestros clientes y proveedores. Vale la pena. Lo recomiendo y esperamos que esto se siga dando y creciendo”.",
+        "text_4": "Director General de Tiga Power",
+        "text_5": "“Estuvieron muy buenas las conferencias, con información muy valiosa, fue muy interesante conocer las experiencias y conocimientos de expertos de la industria, hubo bastantes conferencistas internacionales”.",
+        "text_6": "Visitante",
+        "text_7": "“Me pareció una gran expo. Hay demasiadas personas y soluciones innovadoras. Baterías, módulos fotovoltaicos, inversores, puedes encontrar de todo tipo. Lo recomiendo bastante”."
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
@@ -193,6 +201,30 @@
     "AboutSNEC": {
         "title": "Acerca SNEC PV POWER EXPO",
         "description": "SNEC 16ª (2023) Conferencia y Exposición Internacional de Generación de Energía Fotovoltaica y Energía Inteligente [SNEC PV POWER EXPO] se celebrará en Shanghai, China, del 24 al 26 de mayo de 2023. Fue iniciada y coorganizada por la Asociación Asiática de la Industria Fotovoltaica (APVIA), la Sociedad China de Energías Renovables (CRES), la Asociación China de Industrias de Energías Renovables (CREIA), la Federación de Organizaciones Económicas de Shanghái (SFEO), el Centro de Intercambio de Ciencia y Tecnología de Shanghái (SSTEC), la Asociación de la Industria de Nuevas Energías de Shanghái (SNEIA) y 25 asociaciones y organizaciones internacionales.<br /><br />El tamaño de la exposición de SNEC ha pasado de 15.000 m2 en 2007 a más de 200.000 m2 en 2021, cuando atrajo a más de 1.600 empresas expositoras de 95 países y regiones de todo el mundo, y el porcentaje de expositores extranjeros superó el 30%. SNEC se ha convertido en la mayor feria internacional fotovoltaica con una influencia incomparable en China, Asia e incluso en el mundo.<br /><br />SNEC, la exposición fotovoltaica más profesional, presenta instalaciones de fabricación, materiales, células fotovoltaicas, productos y módulos de aplicación fotovoltaica, proyectos y sistemas fotovoltaicos, almacenamiento de energía y energía móvil, cubriendo todas las secciones de la cadena de la industria fotovoltaica.<br /><br />La Conferencia SNEC consta de varios programas que incorporan diferentes temas, que cubren las tendencias del mercado de la industria fotovoltaica, las estrategias de colaboración y desarrollo, las direcciones políticas de diferentes países, las tecnologías avanzadas de la industria, la financiación y la inversión fotovoltaica, etc. Es una oportunidad que no puede perderse para mantenerse al día sobre la tecnología y el mercado, presentar sus resultados a la comunidad, y establecer contactos con expertos industriales, académicos y empresarios y colegas.<br /><br />Estamos deseando que los amigos de la industria fotovoltaica de todo el mundo se reúnan en Shanghai, China. Desde el punto de vista de la industria, tomemos el pulso al mercado de la energía fotovoltaica de China, Asia y el mundo, para guiar el desarrollo innovador de la industria fotovoltaica. Esperamos encontrarnos todos en Shanghai, del 24 al 26 de mayo de 2023."
+    },
+    "whyexhibit":{
+        "why": "Por qué exponer",
+        "title": "¿CUÁLES SON LOS BENEFICIOS DE SER EXPOSITOR?",
+        "description": "Exhiba su marca a la vanguardia de un mercado que crece rápidamente",
+        "description2": "Obtenga acceso a nuevos compradores a través de la red mundial de Deutsche Messe SNEC y Solar Power International",
+        "description3": "Llegue a tomadores de decisiones de todos segmentos de las industria solar y de almacenamiento",
+        "description4": "Construya y alimente sus relaciones de negocios con clientes actuales y futuros",
+        "description5": "Reúnase con sus clientes actuales y buscar nuevas alianzas comerciales",
+        "description6": "Promueva sus marcas y productos ante una audiencia profesional, concentrada y selecta",
+        "description7": "Genere nuevos prospectos en el primer evento de su tipo de México",
+        "description8": "Capacite a sus clientes en la aplicación de nuevos productos y tecnologías"
+
+    },
+    "whyasist":{
+        "title": "¿Por qué asistir?",
+        "description": "Vea las más recientes innovaciones y soluciones de los expositores en el piso de exhibición",
+        "description2": "Escuche a expertos de la industria que compartirán su percepción sobre los segmentos del mercado solar y de almacenamiento de México",
+        "description3": "Cree redes y extensas alianzas con líderes de la industria de la energía renovable y haga nuevos contactos",
+        "description4": "Visite la primera exposición enfocada en la industria de la energía solar en México",
+        "description5": "Obtenga una visión general del mercado en un área de exposición de 5.000 m²",
+        "description6": "Aumente su productividad a través de soluciones individuales",
+        "description7": "Seleccione y compare entre proveedores de tres continentes diferentes: América, Europa y Asia",
+        "description8": "Visite un programa internacional de conferencias y talleres de alta calidad"
     },
     "contactForm": {
         "title": "Déjenos un comentario",
@@ -262,7 +294,7 @@
         "subscription": "Suscribirse al boletín",
         "project_manager" : "Directora de proyecto",
         "sales_manager" : "Patrocinios y Experiencias",
-        "event-date":"5 – 7 de Marzo, 2025",
+        "event-date":"14 – 16 de Abril, 2026",
         "message_button":"Enviar mensaje"
     },
     "hotels": {
@@ -432,7 +464,7 @@
         "back_home": "Regresar a la página de inicio"
     },
     "enlightenmentArea":{
-        "description": "RE+ MEXICO le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación. Ilumine el espacio del conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector solar mediante unaplática de capacitación. Si está buscando nuevas oportunidades de negocios e incrementar sus contactos potenciales en América Latina, este es el espacio ideal para usted.",
+        "description": "le ofrece múltiples espacios de promoción y presencia, antes y durante la exposición para atraer compradores profesionales y obtener un mayor retorno de inversión por su participación. Ilumine el espacio del conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector solar mediante unaplática de capacitación. Si está buscando nuevas oportunidades de negocios e incrementar sus contactos potenciales en América Latina, este es el espacio ideal para usted.",
         "hour": "Horarios",
         "title": "Tema",
         "speaker": "Ponente"
@@ -486,5 +518,48 @@
         "text_5": "quiero ser patrocinador",
         "text_6": "REGÍSTRATE A LA CONVOCATORIA",
         "text_7": "No te pierdas la ceremonia de premiación el <strong>5 de marzo de 2025 a las 5:15pm en RE+ México</strong> (Installers & Innovation Area, Guadalajara.)"
+    },
+    "energynight":{
+        "text_1": "El punto de",
+        "text_2": "encuentro",
+        "text_3": "esencial para profesionales y líderes de la",
+        "text_4": "industria fotovoltaica",
+        "text_5": "Disfruta de una velada llena de oportunidades de <strong>networking</strong>, negocios, música y cócteles en un ambiente vibrante y dinámico.",
+        "text_6": "¿Por qué asistir?",
+        "text_7": "CONEXIONES DE ALTO VALOR",
+        "text_8": "Interactúa con expertos y pioneros del sector, ampliando tu red profesional y descubriendo nuevas oportunidades de colaboración.",
+        "text_9": "AMBIENTE EXCLUSIVO",
+        "text_10": "Sumérgete en una atmósfera diseñada para fomentar el intercambio de ideas y la creación de alianzas estratégicas.",
+        "text_11": "ENTRETENIMIENTO",
+        "text_12": "Disfruta de espectáculos y una selección de cócteles premium que harán de esta noche una experiencia memorable.",
+        "text_13": "TU PASE INCLUYE:",
+        "text_14": "Entrada para la ",
+        "text_15": "Acceso a bebidas ilimitadas y snack",
+        "text_16": "Acceso",
+        "text_17": "miércoles 5 de marzo",
+        "text_18": "Recepción",
+        "text_19": "<strong>Coctel</strong> de bienvenida",
+        "text_20": "Estilo:<strong> Country</strong>",
+        "text_21": "NO PIERDAS",
+        "text_22": "LA OPORTUNIDAD",
+        "text_23": "de ser parte del evento más importante de",
+        "text_24": "networking en la",
+        "text_25": "<strong>¡Adquiere tu boleto ahora</strong> y <u>asegura tu lugar </u>en esta experiencia única!",
+        "text_26": "QUIERO SER PATROCINADOR"
+    },
+    "vip_area":{
+        "text_1": "Con tu entrada al programa de conferencias Premium, accede al <strong>exclusivo</strong> lounge VIP, diseñado para brindarte <strong>comodidad, networking y beneficios únicos</strong> durante tu participación en RE+ México.",
+        "text_2": "Establece conexiones estratégicas en un ambiente vibrante, diseñado para impulsar tus proyectos y oportunidades de negocio.",
+        "text_3": "6 de marzo",
+        "text_4": "EVENTO EXCLUSIVO",
+        "text_5": "al adquirir tu pase de conferencias.",
+        "text_5_1": "CONECTA CON LOS LÍDERES DE LA INDUSTRIA",
+        "text_6": "Interactúa con directores, expositores internacionales y representantes clave de asociaciones del sector de energías renovables.",
+        "text_7": "NETWORKING EN SU MÁXIMA EXPRESIÓN",
+        "text_8": "Establece conexiones estratégicas en un ambiente vibrante, diseñado para impulsar tus proyectos y oportunidades de negocio.",
+        "text_9": "EXCLUSIVIDAD ASEGURADA",
+        "text_10": "Tu acceso Premium te garantiza entrada a un evento reservado para las figuras más influyentes del sector.",
+        "text_11": "No te quedes fuera",
+        "text_12": "COMPRA TU PASE PREMIUM"
     }
 }
