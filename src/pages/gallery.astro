@@ -2,13 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
 import Galeria from "../components/Galeria.astro";
-import { gallery2024, gallery2023, gallery2022, gallery2021, gallery2019, } from "../data/constans_gallery.js";
+import { gallery2024, gallery2023, gallery2022, gallery2021, gallery2019, gallery2025, } from "../data/constans_gallery.js";
 
 changeLanguage("es");
 ---
 
 <Layout title='RE+ Mexico | Galeria '>
   <section class='my-10 container mx-auto px-4'>
+    <p class='text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
+      {t('menu.submenu_5.option_1')} SMM 2025
+    </p>
+    <Galeria images={gallery2025} />
     <p class='text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} SMM 2024
     </p>
