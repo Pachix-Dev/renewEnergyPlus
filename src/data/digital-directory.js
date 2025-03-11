@@ -3808,5 +3808,35 @@ export default [
             "alt": "Greentology / Smart Media Group ",
             "width": 170
         }
+    },
+    {
+        "clasificacion": "",
+        "nombreComercial": "LITHIUM VOLTS ",
+        "stand": "J60",
+        "nombreContacto": "FABIOLA KUN GONZALEZ",
+        "Puesto": "DIRECTORA",
+        "telefono": "",
+        "Correo": "info@lithiumvolts.com",
+        "paginaWeb": "www.lithiumvolts.com",
+        "direccion": "Plaza Chacah local 1, Carr. Federal Cancun-Tulum, Col. Ejido",
+        "cp": "77710 ",
+        "Ciudad": "Playa del C armen",
+        "Estado": "Quintana Roo",
+        "Pais": "CDMX",
+        "descripcion_es": "Tenemos 15 años de experiencia en Sistemas Fotovoltaicos, y estamos innovando con Sistemas Aislados plug and play.",
+        "descripcion_en": "We have 15 years of experience in Photovoltaic Systems, and we are innovating with plug and play Standalone Systems.",
+        "categoria": "Baterias de Litio e Inversores",
+        "productos": "Baterías de Litio / Inversores marca Victron / Soluciones Plug & Play",
+        "contacto": "",
+        "Instagram": "",
+        "Facebook": "https://www.facebook.com/lithiumvolts",
+        "LinkedIn": "https://www.linkedin.com/company/solarngreen/",
+        "Hashtags": "",
+        "imagen": {
+            "link": "",
+            "src": "/img/expo/carousel1/lithiumvolts.webp",
+            "alt": "Lithium Volts",
+            "width": 170
+        }
     }
 ]

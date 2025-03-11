@@ -11,7 +11,7 @@ import Galeria from "../../components/Galeria.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import BuyersProfessional from "../../components/BuyersProfessional.astro";
 import Exhibitors from "../../components/Exhibitors.astro";
-import { gallery2024 } from "../../data/constans_gallery";
+import { gallery2024, gallery2025 } from "../../data/constans_gallery";
 import FreeRegiter from "../../components/home/FreeRegiter.astro";
 
 changeLanguage("en");
@@ -22,8 +22,7 @@ changeLanguage("en");
   <FreeRegiter />
   <section class='container mx-auto px-4 grid md:grid-cols-2 gap-10 py-10'>
     <div class='bg-white py-12 sm:text-xl text-justify'>
-      <p class='text-[#ed6b06] sm:text-2xl font-bold my-4'>RE+ MEXICO</p>
-      <span class='font-bold'>Solar+ Storage MEXICO 2024 </span>
+      <span class='text-[#565078] sm:text-2xl font-bold my-4'>RE+ MEXICO</span>
       <span set:html={t('home.solar_description')} />
     </div>
     <lite-youtube
@@ -38,7 +37,7 @@ changeLanguage("en");
   <BuyersProfessional />
   <Exhibitors />
   <section class='container mx-auto px-4 my-10'>
-    <p class='text-[#6C757D] text-3xl text-center font-bold p-10'>
+    <p class='text-[#565078] text-3xl text-center font-bold p-10'>
       {t('home.title-testimonials')}
     </p>
     <div
@@ -76,9 +75,7 @@ changeLanguage("en");
         class='rounded-lg h-96 w-60'></lite-youtube>
     </div>
   </section>
-  <div
-    class='bg-[linear-gradient(90deg,_rgba(188,1,0,1)_0%,_rgba(215,105,1,1)_100%)] pb-10'
-  >
+  <div class='bg-gradient-to-r from-[#766EA6] to-[#565078] pb-10'>
     <Contacts />
     <div
       class='transition duration-300 bg-white hover:bg-[#0CCB67] hover:text-white px-5 mx-auto text-center font-bold text-xl p-3 rounded-lg my-5 w-72'
@@ -87,10 +84,10 @@ changeLanguage("en");
     </div>
   </div>
   <section class='container mx-auto px-4'>
-    <p class='text-center text-3xl text-[#ED6B04] m-7 font-bold uppercase'>
-      {t('menu.submenu_5.option_1')} SMM 2024
+    <p class='text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
+      {t('menu.submenu_5.option_1')} SMM 2025
     </p>
-    <Galeria images={gallery2024} />
+    <Galeria images={gallery2025} />
   </section>
   <Logos />
 </Layout>
