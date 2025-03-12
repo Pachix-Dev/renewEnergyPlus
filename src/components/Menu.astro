@@ -169,8 +169,20 @@ const base = lang === 'es' ? '' : `/${lang}`
                     ? '/doc/ENLIGHTENMENT-AREA-2026-ESP-V1_compressed.pdf'
                     : '/doc/ENLIGHTENMENT-AREA-2026-ENG-V1_compressed.pdf'}
                   class='block px-4 py-2'
+                  target='_blank'
                 >
                   Elightenment Area
+                </a>
+              </li>
+              <li class='hover:bg-blue-100 font-semibold'>
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/PAVILIONS-RE-MEX-ESP_compressed.pdf'
+                    : '/doc/PAVILIONS-RE-MEX-ENG_compressed.pdf'}
+                  class='block px-4 py-2'
+                  target='_blank'
+                >
+                  {t('menu.submenu_2.option_15')}
                 </a>
               </li>
               {
@@ -264,6 +276,7 @@ const base = lang === 'es' ? '' : `/${lang}`
                   >{t('menu.submenu_3.option_4')}</a
                 >
               </li>
+
               {
                 /* 
                   <li class='hover:bg-blue-100 font-semibold'>
