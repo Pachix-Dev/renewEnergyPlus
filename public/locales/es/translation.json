@@ -12,7 +12,7 @@
             "option_1": "Contacto",
             "option_2": "Por qué exponer",
             "option_3": "Perfil del expositor",
-            "option_4": "Servicios a Expositor",
+            "option_4": "Servicios a expositor",
             "option_5": "Patrocinios RE+ 2024",
             "option_6": "Factsheet RE+ 2026",
             "option_7": "Contrato RE+ 2025",
@@ -41,7 +41,7 @@
             "option_1": "Galería"
         },
         "banner": "¡Regístrate ahora!",
-        "directory":"Directorio de Expositores 2024"
+        "directory":"Directorio de expositores 2024"
     },
     "home": {
         "event-date":"14 – 16 de Abril",
@@ -52,11 +52,11 @@
         "exhibitor_directory": "Directorio del expositor",
         "digital_directory": "Directorio digital",
         "hotels": "Hoteles",
-        "sponsor_diamond": "Patrocinador Diamante",
-        "sponsor_platinum": "Patrocinador Platinum",
-        "sponsor_gold": "Patrocinador Gold",
-        "sponsor_silver": "Patrocinador Silver",
-        "sponsor_bronze": "Patrocinador Bronce",
+        "sponsor_diamond": "Patrocinador diamante",
+        "sponsor_platinum": "Patrocinador platinum",
+        "sponsor_gold": "Patrocinador gold",
+        "sponsor_silver": "Patrocinador silver",
+        "sponsor_bronze": "Patrocinador bronce",
         "energy_night": "EL <strong>EVENTO MÁS IMPORTANTE</strong> DE LA INDUSTRIA",
         "energy_night_tags": "<li>Networking</li><li>Negocios</li><li>Música</li><li>Cóctel</li>",
         "energy_night_description": "Un evento exclusivo de networking para <strong>empresarios y líderes</strong> de la industria.<br /> <span>¡No pierdas esta oportunidad!",
@@ -68,7 +68,7 @@
         "more_videos": "VIDEOS",
         "more_gallery": "GALERÍA",
         "why_exhibit": "¿Por qué participar en Solar + Storage Mexico 2024?",
-        "why_exhibit_description1": "Aproveche el gran potencial energético renovable de México y Norteamérica. Únase a Solar + Storage Mexico 2024, la Feria del Futuro Energético de México.<br /><br />No deje pasar la oportunidad de adquirir un stand o ser patrocinador. Tenga acceso a compradores potenciales y conecte con los tomadores de decisiones líderes nacionales e internacionales del sector solar y de almacenamiento.",
+        "why_exhibit_description1": "Aproveche el gran potencial energético renovable de México y Norteamérica. Únase a Solar + Storage México 2024, la Feria del Futuro Energético de México.<br /><br />No deje pasar la oportunidad de adquirir un stand o ser patrocinador. Tenga acceso a compradores potenciales y conecte con los tomadores de decisiones líderes nacionales e internacionales del sector solar y de almacenamiento.",
         "why_exhibit_option_1": "Reúna la experiencia global en energía solar en un solo lugar.",
         "why_exhibit_option_2": "Genere alianzas estratégicas con proveedores y empresas clave dentro de un mercado en crecimiento.",
         "why_exhibit_option_3": "Capacite a sus clientes en la aplicación de innovadoras tecnologías y conocimientos.",
@@ -114,7 +114,7 @@
             "item_10": "Inversionistas.",
             "item_11": "Generadores de energía. Independientes."
         },
-        "button_hotels": "Hoteles Sede",
+        "button_hotels": "Hoteles sede",
         "title-testimonials": "EXPERIENCIA DE EXPOSITORES Y VISITANTES",
         "title-visitor-profile": "PERFIL DEL VISITANTE",
         "social_networks": {
@@ -166,7 +166,7 @@
         "button_contact": "enviar mensaje",
         "sponsors": {
             "title": "¿Quieres ser patrocinador?",
-            "description": "Descarga nuestro brochure para patrocinadores "
+            "description": "Descarga nuestro brochure para patrocinadores"
         },
         "energy_date": "miércoles 17 de Abril de 2024",
         "energy_description2": "EL EVENTO MÁS IMPORTANTE DE NETWORKING DE LA INDUSTRIA FOTOVOLTAICA",
@@ -184,14 +184,14 @@
         "text_1": "“Estamos muy contentos de participar por segunda vez en SSM, la verdad es que nos fue muy bien. Estamos súper contentos de recibir a nuestros clientes, de platicar con nuestros colegas, y hacia un futuro con más un futuro sostenible”.",
         "text_2": "Ingeniero de Producto de Huawei Technologies de México",
         "text_3": "“Somos distribuidores de equipo fotovoltaico. Estamos muy satisfechos con los resultados que hemos obtenido con esta exposición. Es un lugar increíble y muy adecuado para tener conexión con nuestros clientes y proveedores. Vale la pena. Lo recomiendo y esperamos que esto se siga dando y creciendo”.",
-        "text_4": "Director General de Tiga Power",
+        "text_4": "Director general de Tiga Power",
         "text_5": "“Estuvieron muy buenas las conferencias, con información muy valiosa, fue muy interesante conocer las experiencias y conocimientos de expertos de la industria, hubo bastantes conferencistas internacionales”.",
         "text_6": "Visitante",
         "text_7": "“Me pareció una gran expo. Hay demasiadas personas y soluciones innovadoras. Baterías, módulos fotovoltaicos, inversores, puedes encontrar de todo tipo. Lo recomiendo bastante”."
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
-        "description": "SOLAR + STORAGE MEXICO, la feria líder en energía solar y de almacenamiento para México y América Latina, evoluciona hacia <strong> RE+ MEXICO </strong>. <br/><br/>Este significativo crecimiento es un paso trascendental para marcar el rumbo del futuro energético renovable de nuestro país, abarcando a partir de ahora todo el mercado en energías limpias a medida que las tecnologías e innovaciones avanzan para alcanzar las metas y el acceso a energías sostenibles y asequibles. <br/><br/> La privilegiada ubicación geográfica de México ha trazado un camino virtuoso para la generación de energías limpias; no obstante, nuestro país se encuentra ante una encrucijada energética, marcada por una dependencia considerable de los combustibles fósiles.<br/><br/> Con tan solo 0.63 por ciento de la generación eléctrica proveniente de bioenergéticos en 2023, según datos del Programa de Desarrollo del Sistema Eléctrico Nacional (Prodesen), es evidente que nuestro país aún tiene un largo camino por recorrer hacia fuentes de generación eléctrica más sostenibles. <br/><br/> Es imperativo que nuestro país dé pasos agigantados para alcanzar los objetivos de Net Zero para 2030, y atender los retos en materia energética que nos permitan transitar hacia un futuro sostenible. <br/><br/> <strong> Deutsche Messe e Italian Exhibition Group </strong>, dos de los organizadores de eventos más importantes a nivel global; RE+ Events, la organización mundial de gestión de eventos y asociaciones especializada en la industria de la energía limpia, en conjunto con <strong> SNEC PV Power Expo </strong>, el evento de tecnología solar más importante del mundo con sede en Shanghai, China; se complacen en presentar <strong> RE+ MEXICO 2025 </strong>.<br/><br/><strong> RE+ MEXICO </strong> se establece como la plataforma estratégica para catalizar a nuestro país y a la región de Norte América a liderar gran parte de la acelerada lucha para reducir la emisión de gases de efecto invernadero y aprovechar la capacidad energética renovable, profundizando en los principales sectores como: Térmica y Solar, Sistemas de Tecnología Fotovoltaica, Almacenamiento, Eólico, Hidrógeno Verde e Infraestructura de red, haciendo uso y fortaleciendo las tecnologías ya existentes, así como la búsqueda constante de innovaciones que posibiliten garantizar el acceso a una energía limpia y asequible.",
+        "description": "SOLAR + STORAGE MEXICO, la feria líder en energía solar y de almacenamiento para México y América Latina, evoluciona hacia <strong> RE+ MEXICO </strong>. <br/><br/>Este significativo crecimiento es un paso trascendental para marcar el rumbo del futuro energético renovable de nuestro país, abarcando a partir de ahora todo el mercado en energías limpias a medida que las tecnologías e innovaciones avanzan para alcanzar las metas y el acceso a energías sostenibles y asequibles. <br/><br/> La privilegiada ubicación geográfica de México ha trazado un camino virtuoso para la generación de energías limpias; no obstante, nuestro país se encuentra ante una encrucijada energética, marcada por una dependencia considerable de los combustibles fósiles.<br/><br/> Con tan solo 0.63 por ciento de la generación eléctrica proveniente de bioenergéticos en 2023, según datos del programa de desarrollo del sistema Eléctrico Nacional (Prodesen), es evidente que nuestro país aún tiene un largo camino por recorrer hacia fuentes de generación eléctrica más sostenibles. <br/><br/> Es imperativo que nuestro país dé pasos agigantados para alcanzar los objetivos de Net Zero para 2030, y atender los retos en materia energética que nos permitan transitar hacia un futuro sostenible. <br/><br/> <strong> Deutsche Messe e Italian Exhibition Group </strong>, dos de los organizadores de eventos más importantes a nivel global; RE+ Events, la organización mundial de gestión de eventos y asociaciones especializada en la industria de la energía limpia, en conjunto con <strong> SNEC PV Power Expo </strong>, el evento de tecnología solar más importante del mundo con sede en Shanghai, China; se complacen en presentar <strong> RE+ MEXICO 2025 </strong>.<br/><br/><strong> RE+ MEXICO </strong> se establece como la plataforma estratégica para catalizar a nuestro país y a la región de Norte América a liderar gran parte de la acelerada lucha para reducir la emisión de gases de efecto invernadero y aprovechar la capacidad energética renovable, profundizando en los principales sectores como: Térmica y Solar, Sistemas de Tecnología Fotovoltaica, Almacenamiento, Eólico, Hidrógeno Verde e Infraestructura de red, haciendo uso y fortaleciendo las tecnologías ya existentes, así como la búsqueda constante de innovaciones que posibiliten garantizar el acceso a una energía limpia y asequible.",
         "description2": "¡Esperamos seguir colaborando juntos en la construcción de un futuro más limpio y sostenible para todos! <br /><br />Nos vemos en RE+ MEXICO 2025, <br /> del 5 al 7 de marzo del 2025, en Expo Guadalajara, Jalisco."
     },
     "AboutReEvents": {
@@ -200,7 +200,7 @@
     },
     "AboutSNEC": {
         "title": "Acerca SNEC PV POWER EXPO",
-        "description": "SNEC 16ª (2023) Conferencia y Exposición Internacional de Generación de Energía Fotovoltaica y Energía Inteligente [SNEC PV POWER EXPO] se celebrará en Shanghai, China, del 24 al 26 de mayo de 2023. Fue iniciada y coorganizada por la Asociación Asiática de la Industria Fotovoltaica (APVIA), la Sociedad China de Energías Renovables (CRES), la Asociación China de Industrias de Energías Renovables (CREIA), la Federación de Organizaciones Económicas de Shanghái (SFEO), el Centro de Intercambio de Ciencia y Tecnología de Shanghái (SSTEC), la Asociación de la Industria de Nuevas Energías de Shanghái (SNEIA) y 25 asociaciones y organizaciones internacionales.<br /><br />El tamaño de la exposición de SNEC ha pasado de 15.000 m2 en 2007 a más de 200.000 m2 en 2021, cuando atrajo a más de 1.600 empresas expositoras de 95 países y regiones de todo el mundo, y el porcentaje de expositores extranjeros superó el 30%. SNEC se ha convertido en la mayor feria internacional fotovoltaica con una influencia incomparable en China, Asia e incluso en el mundo.<br /><br />SNEC, la exposición fotovoltaica más profesional, presenta instalaciones de fabricación, materiales, células fotovoltaicas, productos y módulos de aplicación fotovoltaica, proyectos y sistemas fotovoltaicos, almacenamiento de energía y energía móvil, cubriendo todas las secciones de la cadena de la industria fotovoltaica.<br /><br />La Conferencia SNEC consta de varios programas que incorporan diferentes temas, que cubren las tendencias del mercado de la industria fotovoltaica, las estrategias de colaboración y desarrollo, las direcciones políticas de diferentes países, las tecnologías avanzadas de la industria, la financiación y la inversión fotovoltaica, etc. Es una oportunidad que no puede perderse para mantenerse al día sobre la tecnología y el mercado, presentar sus resultados a la comunidad, y establecer contactos con expertos industriales, académicos y empresarios y colegas.<br /><br />Estamos deseando que los amigos de la industria fotovoltaica de todo el mundo se reúnan en Shanghai, China. Desde el punto de vista de la industria, tomemos el pulso al mercado de la energía fotovoltaica de China, Asia y el mundo, para guiar el desarrollo innovador de la industria fotovoltaica. Esperamos encontrarnos todos en Shanghai, del 24 al 26 de mayo de 2023."
+        "description": "SNEC 16ª (2023) conferencia y exposición Internacional de Generación de Energía Fotovoltaica y Energía Inteligente [SNEC PV POWER EXPO] se celebrará en Shanghai, China, del 24 al 26 de mayo de 2023. Fue iniciada y coorganizada por la asociación asiática de la industria Fotovoltaica (APVIA), la Sociedad China de Energías Renovables (CRES), la Asociación China de Industrias de Energías Renovables (CREIA), la Federación de Organizaciones Económicas de Shanghái (SFEO), el Centro de Intercambio de Ciencia y Tecnología de Shanghái (SSTEC), la Asociación de la Industria de Nuevas Energías de Shanghái (SNEIA) y 25 asociaciones y organizaciones internacionales.<br /><br />El tamaño de la exposición de SNEC ha pasado de 15.000 m2 en 2007 a más de 200.000 m2 en 2021, cuando atrajo a más de 1.600 empresas expositoras de 95 países y regiones de todo el mundo, y el porcentaje de expositores extranjeros superó el 30%. SNEC se ha convertido en la mayor feria internacional fotovoltaica con una influencia incomparable en China, Asia e incluso en el mundo.<br /><br />SNEC, la exposición fotovoltaica más profesional, presenta instalaciones de fabricación, materiales, células fotovoltaicas, productos y módulos de aplicación fotovoltaica, proyectos y sistemas fotovoltaicos, almacenamiento de energía y energía móvil, cubriendo todas las secciones de la cadena de la industria fotovoltaica.<br /><br />La Conferencia SNEC consta de varios programas que incorporan diferentes temas, que cubren las tendencias del mercado de la industria fotovoltaica, las estrategias de colaboración y desarrollo, las direcciones políticas de diferentes países, las tecnologías avanzadas de la industria, la financiación y la inversión fotovoltaica, etc. Es una oportunidad que no puede perderse para mantenerse al día sobre la tecnología y el mercado, presentar sus resultados a la comunidad, y establecer contactos con expertos industriales, académicos y empresarios y colegas.<br /><br />Estamos deseando que los amigos de la industria fotovoltaica de todo el mundo se reúnan en Shanghai, China. Desde el punto de vista de la industria, tomemos el pulso al mercado de la energía fotovoltaica de China, Asia y el mundo, para guiar el desarrollo innovador de la industria fotovoltaica. Esperamos encontrarnos todos en Shanghai, del 24 al 26 de mayo de 2023."
     },
     "whyexhibit":{
         "why": "Por qué exponer",
@@ -234,8 +234,8 @@
     },
     "ExhibitorProfile": {
         "description": "<strong>SOLAR + STORAGE MEXICO</strong> provee a toda la industria solar con una plataforma. Si su empresa se dedica a los campos de energía solar, energía solar térmica, almacenamiento de energía, generación de energía, suministro de redes, administración de redes y/o redes inteligentes, entonces no pierda la oportunidad de exponer en <strong>SOLAR + STORAGE MEXICO</strong>. Sus productos y servicios pueden ir desde celdas y módulos solares, piezas y componentes, nuevas tecnologías y sistemas de seguimiento, plantas tradicionales hasta planificadores, desarrolladores y proveedores de sistemas y servicios. A continuación se muestra una lista detallada de productos y servicios.",
-        "description2": "<strong>FOTOVOLTAICO</strong><br /><br />Sistemas de Tecnología Fotovoltaica<br />Sistemas Independientes<br />Sistemas Fotovoltaicos en Red<br />Cargadores Solares<br />Suministros de Energía Solar para el Tránsito<br />Sistemas de Rastreo<br />Otros Sistemas de Tecnología Fotovoltaica<br /><br /><strong>Componentes y Equipo de Energía Solar Fotovoltaica</strong><br /><br />Celdas Solares<br />Paneles Fotovoltaicos Cristalinos<br />Paneles Solares de Película Delgada<br />Inversores<br />Transformadores<br />Sistemas de monitoreo, medición y control<br />Frenos de circuito de CC<br />Cables<br />Conectores<br />Otros componentes y equipos<br /><br /><strong>TÉRMICA SOLAR</strong><br /><br />Tecnologías Térmicas Solares<br />Plantas de Energía Térmicas ST<br />Plantas de Energía Térmica Solar<br />Procesos de Calentamiento<br />Aire Acondicionado y Enfriamiento<br />Ingeniería y Diseño<br />Monitoreo y Medidas de Sistema de Control<br />Otros Componentes",
-        "description3": "<strong>INFRAESTRUCTURA DE RED</strong><br /><br />Servicios de Medición <br />Sistemas de Infraestructura de Red <br />Manejo de Red <br />Comercialización de Electricidad y Energía <br />Sistemas de Control de Comercio <br />Plantas Virtuales de Energía y Agregación de RED <br />(Recursos Energéticos Distribuidos) <br />Productos, Soluciones y Servicios para Redes Inteligentes <br />Productos, Soluciones y Servicios para Microrredes<br /><br /><strong>ALMACENAMIENTO</strong><br /><br />Almacenamiento de Productos Químicos <br />Almacenamiento de Productos no Químicos <br />Almacenamiento Térmico <br />Soluciones de Almacenamiento Comercial <br />Soluciones de almacenamiento Residencial <br />Almacenamiento Conectado a la Red <br />Almacenamiento Fuera de la Red <br />Fabricantes de Baterías <br />Software<br /><br /><strong>INFORMACIÓN, COMUNICACIONES Y SERVICIOS</strong><br /><br />Investigación y Desarrollo <br />Capacitación y Formación <br />Servicios de Consultoría <br />Contratos EPC y Desarrollo de Proyectos <br />Mantenimiento, Reparaciones y Operaciones <br />Servicios Financieros <br />Asociaciones y Sociedades <br />Editoriales"
+        "description2": "<strong>FOTOVOLTAICO</strong><br /><br />Sistemas de Tecnología Fotovoltaica<br />Sistemas Independientes<br />Sistemas Fotovoltaicos en Red<br />Cargadores Solares<br />Suministros de Energía Solar para el Tránsito<br />Sistemas de rastreo<br />Otros Sistemas de Tecnología Fotovoltaica<br /><br /><strong>Componentes y Equipo de Energía Solar Fotovoltaica</strong><br /><br />Celdas Solares<br />Paneles Fotovoltaicos Cristalinos<br />Paneles Solares de Película Delgada<br />Inversores<br />Transformadores<br />Sistemas de monitoreo, medición y control<br />Frenos de circuito de CC<br />Cables<br />Conectores<br />Otros componentes y equipos<br /><br /><strong>TÉRMICA SOLAR</strong><br /><br />Tecnologías Térmicas Solares<br />Plantas de Energía Térmicas ST<br />Plantas de Energía Térmica Solar<br />Procesos de Calentamiento<br />Aire Acondicionado y Enfriamiento<br />Ingeniería y Diseño<br />Monitoreo y Medidas de Sistema de Control<br />Otros Componentes",
+        "description3": "<strong>INFRAESTRUCTURA DE RED</strong><br /><br />Servicios de medición <br />Sistemas de infraestructura de red <br />Manejo de red <br />Comercialización de electricidad y energía <br />Sistemas de control de comercio <br />Plantas virtuales de energía y agregación de RED <br />(Recursos Energéticos Distribuidos) <br />Productos, Soluciones y Servicios para Redes Inteligentes <br />Productos, soluciones y servicios para microrredes<br /><br /><strong>ALMACENAMIENTO</strong><br /><br />Almacenamiento de poductos químicos <br />Almacenamiento de productos no químicos <br />Almacenamiento térmico <br />Soluciones de almacenamiento comercial <br />Soluciones de almacenamiento residencial <br />Almacenamiento conectado a la red <br />Almacenamiento fuera de la red <br />Fabricantes de baterías <br />Software<br /><br /><strong>INFORMACIÓN, COMUNICACIONES Y SERVICIOS</strong><br /><br />Investigación y desarrollo <br />Capacitación y Formación <br />Servicios de consultoría <br />Contratos EPC y desarrollo de proyectos <br />Mantenimiento, reparaciones y operaciones <br />Servicios financieros <br />Asociaciones y sociedades <br />Editoriales"
     },
     "ExhibitorServicies": {
         "kit": "KIT BANQUETES 2023",
@@ -301,7 +301,7 @@
         "title": "Tarifas especiales en hoteles",
         "description": "Nos complace anunciar que hemos asegurado tarifas preferenciales en hoteles de calidad para que tu experiencia sea aún más cómoda y accesible.<br /><br />Ubicados estratégicamente alrededor del lugar del evento, estos hoteles ofrecen no solo comodidad, sino también la oportunidad de sumergirte completamente en la atmósfera del evento. Hemos negociado tarifas especiales para nuestros asistentes, asegurándonos de que tu estancia sea tan inolvidable como el propio evento.",
         "rate": "Tarifa desde: ",
-        "code": "codigo de reserva: ",
+        "code": "Código de reserva: ",
         "book": "Reservar",
         "taxes": "Impuestos",
         "time" : "min",
@@ -460,7 +460,7 @@
         "thanks_purchasing": "Gracias por tu compra",
         "sucess_purchasing": "¡Fantástico! haz tu compra fue procesada correctamente.",
         "email_sent": "¡Pronto recibiras un correo de confirmación!",
-        "description_2": "Por favor pasa al modulo de caja con este numero para pagar y recoger tu gafete.",
+        "description_2": "Por favor pasa al módulo de caja con este numero para pagar y recoger tu gafete.",
         "back_home": "Regresar a la página de inicio"
     },
     "enlightenmentArea":{
@@ -478,7 +478,7 @@
         "text_2": "Ingresa el correo con el que te registraste",
         "text_3": "Verificar",
         "text_4": "Registrate gratis",
-        "text_5": "Si aun no te haz registrado ingresa aqui",
+        "text_5": "Si aun no te haz registrado ingresa aquí",
         "description": "Adquiere tu acceso al programa de conferencias y a la Energy Night",
         "addtocart": "Agregar al carrito",
         "resume": "Resumen del pedido",
@@ -499,7 +499,7 @@
         "disclamer_1": "No se aceptan cambios, cancelaciones o devoluciones.",
         "disclamer_2": "Recuerda que deberás presentar una identificación oficial.",
         "disclamer_3": "Los menores de edad deben ingresar en compañía de 1 adulto",
-        "disclamer_4": "Si deseas factura envie un correo a emmanuel.heredia@igeco.mx <br /> FAVOR DE ADJUNTAR LOS SIGUIENTES DOCUMENTOS: <br /> - CONSTANCIA SITUACIÓN FISCAL <br /> - FOTO DEL RECIBO DE COMPRA <br /> - INDICAR EL MÉTODO DE PAGO (TARJETA DE CREDITO O DEBITO) <br />- USO DE CFDI",
+        "disclamer_4": "Si deseas factura envíe un correo a emmanuel.heredia@igeco.mx <br /> FAVOR DE ADJUNTAR LOS SIGUIENTES DOCUMENTOS: <br /> - CONSTANCIA SITUACIÓN FISCAL <br /> - FOTO DEL RECIBO DE COMPRA <br /> - INDICAR EL MÉTODO DE PAGO (TARJETA DE CREDITO O DEBITO) <br />- USO DE CFDI",
         "disclamer_5": "Fecha máxima de facturación 25 de octubre de 2024",
         "disclamer_6": "Propina NO incluida",
         "method_payment": "Método de pago",
