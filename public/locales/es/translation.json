@@ -182,13 +182,13 @@
         "media_platinum": "MEDIOS ALIADOS PLATINUM",
         "media_gold": "MEDIOS ALIADOS GOLD",
         "testimonial": "TESTIMONIALES",
-        "text_1": "“Estamos muy contentos de participar por segunda vez en SSM, la verdad es que nos fue muy bien. Estamos súper contentos de recibir a nuestros clientes, de platicar con nuestros colegas, y hacia un futuro con más un futuro sostenible”.",
+        "text_1": "“Lo que más nos ha gustado es la proyección que tenemos con la marca, poder tener esa exposición con los clientes y que puedan conocernos y toda nuestra cartera de productos es bastante bueno”.",
         "text_2": "Ingeniero de Producto de Huawei Technologies de México",
-        "text_3": "“Somos distribuidores de equipo fotovoltaico. Estamos muy satisfechos con los resultados que hemos obtenido con esta exposición. Es un lugar increíble y muy adecuado para tener conexión con nuestros clientes y proveedores. Vale la pena. Lo recomiendo y esperamos que esto se siga dando y creciendo”.",
+        "text_3": "“Este es el futuro de la energía solar y esta feria es un impulso para esta industria”.",
         "text_4": "Director General de Tiga Power",
-        "text_5": "“Estuvieron muy buenas las conferencias, con información muy valiosa, fue muy interesante conocer las experiencias y conocimientos de expertos de la industria, hubo bastantes conferencistas internacionales”.",
+        "text_5": "“Disfruto mucho asistir a estas conferencias en diferentes países. Esta es la tercera vez que vengo a RE+ México y me agrada ver cuánto ha crecido. Encuentro expositores y conferencias de gran valor”.",
         "text_6": "Visitante",
-        "text_7": "“Me pareció una gran expo. Hay demasiadas personas y soluciones innovadoras. Baterías, módulos fotovoltaicos, inversores, puedes encontrar de todo tipo. Lo recomiendo bastante”."
+        "text_7": "“RE+ Mexico es la expo más importante de Latinoamérica. Nos permite tener más acercamiento con expertos en materia de enrgías renovables y almacenamiento de energía, y alianzas con proveedores clave”."
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
@@ -246,12 +246,12 @@
     },
     "WhyVisit": {
         "title": "¿Por qué visitarnos?",
-        "description": "<strong>SOLAR + STORAGE MEXICO</strong> reúne la experiencia global en energía solar en un solo lugar durante tres días de investigación, descubrimiento y negocios reales. En este evento tendrá la oportunidad de encontrarse cara a cara con expertos en el sector de la energía solar, el almacenamiento de energía y las redes inteligentes, como:<br /><br /><ul><li>Fabricantes</li><li>Proveedores de sistemas</li><li>Distribuidores</li><li>Proveedores</li></ul><br /><br />Nuestra quinta edición contará con un área de exhibición, así como <strong>un programa educativo completo de primer nivel</strong>. Si desea conocer nuevas tendencias, encontrar los últimos productos locales e internacionales y / o ponerse en contacto con empresas relevantes sobre cómo podrían ayudarlo en su próximo proyecto, entonces no se pierda esta única oportunidad y visite nuestra exposición del 17 al 19 de abril, en Expo Guadalajara, en Jalisco, México. "
+        "description": "<strong>RE+ MEXICO</strong> reúne la experiencia global en energía solar en un solo lugar durante tres días de investigación, descubrimiento y negocios reales. En este evento tendrá la oportunidad de encontrarse cara a cara con expertos en el sector de la energía solar, el almacenamiento de energía, hidrogeno verde y eólico como:<br /><br /><ul><li>Fabricantes</li><li>Distribuidores</li><li>Proveedores</li><li>Entre otros</li></ul><br /><br /><strong>RE+ MEXICO</strong> contará con un área de exhibición, así como un programa educativo completo de primer nivel. Si desea conocer nuevas tendencias, encontrar los últimos productos locales e internacionales y / o ponerse en contacto con empresas relevantes sobre cómo podrían ayudarlo en su próximo proyecto, entonces no se pierda esta única oportunidad y visite RE+ MEXICO."
     },
     "VisitorProfile": {
-        "title": "Perfil del Comprador",
-        "description": "<ul><li>Instaladores</li><li>Integradores Solares</li><li>Proveedores de Tecnología Solar</li><li>Distribuidores de Paneles Solares</li><li>Empresas de la industria Eléctrica</li><li>Ingeniería de Proyectos</li><li>Contratistas EPC</li><li>Fabricantes</li><li>Servicios de Consultoría</li><li>Inversionistas</li><li>Generadores de Energía Independientes</li></ul>",
-        "description2": "<ul><li>Servicios Legales/Jurídicos</li><li>Prensa</li><li>Gobierno Federal, Estatal y Municipal y sus Dependencias</li><li>Propietarios de Parques Solares</li><li>Desarrolladores Inmobiliarios</li><li>Desarrolladores Corporativos</li><li>EDesarrolladores de Parques Industriales</li><li>Instituciones Sectoriales</li><li>Centros de Investigación, Innovación y Universidades</li></ul>"
+        "title": "Perfil del comprador",
+        "description": "<ul><li>Instaladores</li><li>Integradores solares</li><li>Proveedores de tecnología Solar</li><li>Distribuidores de paneles solares</li><li>Empresas de la industria eléctrica</li><li>Ingeniería de proyectos</li><li>Contratistas EPC</li><li>Fabricantes</li><li>Servicios de consultoría</li><li>Inversionistas</li><li>Generadores de energía independientes</li></ul>",
+        "description2": "<ul><li>Servicios legales/jurídicos</li><li>Prensa</li><li>Gobierno federal, estatal y municipal y sus dependencias</li><li>Propietarios de parques solares</li><li>Desarrolladores inmobiliarios</li><li>Desarrolladores corporativos</li><li>EDesarrolladores de parques industriales</li><li>Instituciones sectoriales</li><li>Centros de investigación, innovación y universidades</li></ul>"
     },
     "program": {
         "comming_soon": "PROXIMAMENTE MÁS INFORMACIÓN...",
