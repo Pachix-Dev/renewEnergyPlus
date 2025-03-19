@@ -316,6 +316,24 @@ const base = lang === 'es' ? '' : `/${lang}`
               aria-labelledby='dropdownLargeButton'
             >
               <li class='font-semibold'>
+                <span class='ps-2 text-gray-500 font-bold'>RE+ MEXICO 2025</span
+                >
+                <a
+                  href={i18next.language === 'es'
+                    ? '/doc/aftershow_report_ecomondo_RE_Mexico_2025_esp_compressed.pdf'
+                    : '/doc/aftershow_report_ecomondo_RE_Mexico_2025_eng_compressed.pdf'}
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.results')}
+                </a>
+                <a
+                  href='/directorio-digital'
+                  target='_blank'
+                  class='block px-4 py-2 hover:bg-blue-100'
+                  >{t('menu.submenu_4.directory')}
+                </a>
+              </li>
+              <li class='font-semibold'>
                 <span class='ps-2 text-gray-500 font-bold'>SSM 2024</span>
                 <a
                   href={i18next.language === 'es'
