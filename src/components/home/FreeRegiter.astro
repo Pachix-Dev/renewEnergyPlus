@@ -9,7 +9,7 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
 
 <section class='relative lab-bg py-10 bg-slate-800'>
   <div class='container mx-auto px-4 grid md:grid-cols-2 gap-6'>
-    <div class='grid place-content-between gap-5'>
+    <div>
       <p
         data-aos='fade-right'
         data-aos-duration='1000'
@@ -17,8 +17,8 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
       >
         {t('home.title_register')}
       </p>
-      <div data-aos='fade-down' data-aos-duration='1000'>
-        <div class='font-extrabold text-white text-2xl flex items-center gap-6'>
+      <div data-aos='fade-down' data-aos-duration='1000' class='mt-10'>
+        <div class='font-extrabold text-white text-4xl flex items-center gap-6'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -45,8 +45,6 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
       data-aos-duration='1000'
       class='grid gap-6 place-content-center place-items-center'
     >
-      {
-        /*
       <CounterDown
         client:only='react'
         dias={t('home.days')}
@@ -54,29 +52,26 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
         minutos={t('home.minutes')}
         segundos={t('home.seconds')}
       />
-      
-      <div
-        class='container mx-auto py-5 px-4 grid place-items-center gap-5 rounded-xl'
-      >
+
+      <div class='flex gap-5'>
         <a
-          href={`${base}/registro`}
+          href={`${base}/#`}
           class='card p-5 hover:scale-105 ease-in-out duration-300'
         >
-          <span class='text-white z-10 font-extrabold text-xl'
-            >{t('home.free_register')}</span
-          >
+          <span class='text-white z-10 font-extrabold text-xl'>
+            ENERGY NIGHT
+          </span>
         </a>
         <a
-          href={`${base}/programa-premium`}
+          href={`${base}/#`}
           class='card p-5 hover:scale-105 ease-in-out duration-300'
         >
           <span class='text-white z-10 font-extrabold text-xl'
-            >{t('program.button1')}</span
+            >{t('program.title_1')}</span
           >
         </a>
       </div>
-      */
-      }
+      <p class='text-white text-3xl font-bold'>{t('program.comming_soon')}</p>
     </div>
   </div>
   <div

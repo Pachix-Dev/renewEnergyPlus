@@ -6,11 +6,20 @@ changeLanguage("en");
 ---
 
 <Layout title='RE+ Mexico | acerca de snec'>
-  <section class='bg-[#EFEFEF] my-12 py-10 px-12 items-center'>
-    <div class='flex justify-between items-center mx-40 my-10'>
-      <p class='text-2xl font-bold'>{t('AboutSNEC.title')}</p>
-      <img src='/img/snec-logo-new.webp' alt='logo SNEC' class='w-[250px]' />
+  <section class='bg-[#EFEFEF] my-12 py-10'>
+    <div class='container mx-auto px-4'>
+      <div class='flex justify-between items-center'>
+        <p class='text-2xl font-bold'>{t('AboutSNEC.title')}</p>
+        <img src='/img/snec-logo-new.webp' alt='logo SNEC' class='w-[250px]' />
+      </div>
+      <p set:html={t('AboutSNEC.description')} class='mb-5' />
+      <a
+        href='https://pv.snec.org.cn/'
+        target='_blank'
+        class='text-blue-800 font-bold'
+      >
+        https://pv.snec.org.cn/
+      </a>
     </div>
-    <p class='mx-12' set:html={t('AboutSNEC.description')} />
   </section>
 </Layout>
