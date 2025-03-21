@@ -3838,5 +3838,35 @@ export default [
             "alt": "Lithium Volts",
             "width": 170
         }
+    },
+    {
+        "clasificacion": "",
+        "nombreComercial": "Shenzhen EverExceed Industrial Co., Ltd.",
+        "stand": "K70",
+        "nombreContacto": "Huanhuan  Chen",
+        "Puesto": "Marketing manager ",
+        "telefono": "15013506828",
+        "Correo": "kayla@everexceed.com",
+        "paginaWeb": "https://www.everexceed.com/",
+        "direccion": "Section A,Floor 19,Senhainuo Kechuang Building DeZheng Road No.5,Shilong Community,Shiyan,Bao' an District,Shenzhen",
+        "cp": "518100 ",
+        "Ciudad": "Shenzhen",
+        "Estado": "",
+        "Pais": "China",
+        "descripcion_es": "EverExceed es una empresa nacional de alta tecnología dedicada a la investigación y desarrollo, producción y venta de baterías industriales, sistemas de almacenamiento de energía renovable y fuentes de alimentación industriales, entre otros. La marca EverExceed fue registrada con éxito en 2004 y ahora está registrada en más de 100 países. Somos un fabricante certificado con ISO9001 & 14001, con un avanzado sistema MES, un estricto sistema de control de calidad y modernas instalaciones de producción.",
+        "descripcion_en": "EverExceed is a National High-tech Enterprise engaged in R&D, production, sales of industrial batteries, renewable energy storage system, and industrial power supply etc. EverExceed brand was successfully registered since 2004, and has been successfully registered in over 100 countries now. We are ISO9001&14001 certified manufacturer with advanced MES system, strict QC system and production facilities.",
+        "categoria": "Industrial battery charger, industrial UPS",
+        "productos": "Modular DC charger, rectifier system, energy storage system, lithium battery, VRLA battery, NiCd batteries, etc.",
+        "contacto": "",
+        "Instagram": "",
+        "Facebook": "",
+        "LinkedIn": "",
+        "Hashtags": "",
+        "imagen": {
+            "link": "",
+            "src": "/img/everExceed.webp",
+            "alt": "EverExceed ",
+            "width": 170
+        }
     }
 ]
