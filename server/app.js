@@ -6,12 +6,10 @@ import { v4 as uuidv4 } from 'uuid';
 import {RegisterModel} from './db.js';
 import {email_template} from './TemplateEmail.js';
 import {email_template_eng} from './TemplateEmailEng.js';
-
 import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 import { MercadoPagoConfig, Payment } from 'mercadopago';
-
 
 const { json } = pkg
 const app = express()
@@ -30,7 +28,6 @@ app.use(cors({
     return callback(new Error('Not allowed by CORS'))
   }
 }))
-
 
 const PORT = process.env.PORT || 3010
 
@@ -181,7 +178,6 @@ app.post('/webhook-mp', async (req, res) => {
         return res.status(500).send({status: false});
     }
 });
-
 
 app.post('/susbribe-email', async (req, res) => {
     const { body } = req;
@@ -510,11 +506,9 @@ app.get('/template-email', async (req, res) => {
 
 /* EMAIL RE+ MEXICO */
 async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){    
-    try{
-       
-        
-        const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });
-       
+    try{     
+                  
+        const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });       
         await resend.emails.send({
             from: 'RE+ MEXICO 2025 <noreply@re-plus-mexico.com.mx>',
             to: data.email,
@@ -527,8 +521,7 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
                     content_type: 'application/pdf'
                 },
               ],           
-        })
-        
+        })        
 
         return {
             status: true,
