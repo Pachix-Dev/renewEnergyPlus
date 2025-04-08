@@ -1,31 +1,31 @@
 ---
-import { t, changeLanguage } from "i18next";
-import Layout from "../layouts/Layout.astro";
-import { AddEnergyNight } from "../components/ecommerce/AddEnergyNight.jsx";
+import { t, changeLanguage } from 'i18next'
+import Layout from '../layouts/Layout.astro'
+import { AddEnergyNight } from '../components/ecommerce/AddEnergyNight.jsx'
 
-changeLanguage("es");
+changeLanguage('es')
 
 const item = {
-    id: 2,
-    name: "ENERGY NIGHT Mi\u00E9rcoles 5 de Marzo",
-    name_en: "ENERGY NIGHT Wednesday, March 5th",
-    price: 1000,
-    included: [
-        "1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack.",
-        "Acceso mi\u00E9rcoles 5 de marzo en Desfilia, Expo Guadalajara.",
-        "Recepci\u00F3n 6:15 p.m.",
-        "Inicio del evento 6:30 p.m.",
-        "Fin del evento 10:00 p.m.",
-    ],
-    included_en: [
-        "1 Ticket for the Energy Night with unlimited drinks and snacks.",
-        "Access Wednesday, March 5 at Desfilia, Expo Guadalajara.",
-        "Reception 6:15 p.m.",
-        "Event start 6:30 p.m.",
-        "Event end 10:00 p.m.",
-    ],
-};
-const translate = t("ecommerce", { returnObjects: true });
+  id: 2,
+  name: 'ENERGY NIGHT Mi\u00E9rcoles 5 de Marzo',
+  name_en: 'ENERGY NIGHT Wednesday, March 5th',
+  price: 1000,
+  included: [
+    '1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack.',
+    'Acceso mi\u00E9rcoles 5 de marzo en Desfilia, Expo Guadalajara.',
+    'Recepci\u00F3n 6:15 p.m.',
+    'Inicio del evento 6:30 p.m.',
+    'Fin del evento 10:00 p.m.',
+  ],
+  included_en: [
+    '1 Ticket for the Energy Night with unlimited drinks and snacks.',
+    'Access Wednesday, March 5 at Desfilia, Expo Guadalajara.',
+    'Reception 6:15 p.m.',
+    'Event start 6:30 p.m.',
+    'Event end 10:00 p.m.',
+  ],
+}
+const translate = t('ecommerce', { returnObjects: true })
 ---
 
 <Layout title='Energy Night - Evento Exclusivo'>
@@ -213,6 +213,7 @@ const translate = t("ecommerce", { returnObjects: true });
     src: url('/fonts/gomarice_yatsurano_western.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 
   .mi-titulo {
