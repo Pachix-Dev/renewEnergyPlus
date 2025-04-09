@@ -8,12 +8,16 @@ changeLanguage("es");
 <Layout title='RE+ Mexico | por que visitar'>
   <section class=''>
     <div class='pt-10 bg-[#EFEFEF]'>
-      <p class='bg-[#EFEFEF] text-5xl font-bold p-20'>{t('whyasist.title')}</p>
-      <div class='grid md:grid-cols-2 gap-5'>
-        <div class='pl-12 pb-10 bg-[#EFEFEF]'>
-          <p class='text-sm' set:html={t('WhyVisit.description')} />
+      <div class='container mx-auto px-4 py-5'>
+        <p class='bg-[#EFEFEF] text-5xl font-bold p-20'>
+          {t('whyasist.title')}
+        </p>
+        <div class='grid md:grid-cols-2 gap-5'>
+          <div class='pl-12 pb-10 bg-[#EFEFEF]'>
+            <p class='text-sm' set:html={t('WhyVisit.description')} />
+          </div>
+          <img class='object-cover h-full' src='/img/bgWhyvisitnew.webp' />
         </div>
-        <img class='m-5 object-cover h-full' src='/img/bgWhyvisit.webp' />
       </div>
     </div>
     <div class='bg-[#2EABE2] text-white py-10 container mx-auto px-4'>

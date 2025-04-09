@@ -11,7 +11,7 @@ import Galeria from "../../components/Galeria.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import BuyersProfessional from "../../components/BuyersProfessional.astro";
 import Exhibitors from "../../components/Exhibitors.astro";
-import { gallery2024, gallery2025 } from "../../data/constans_gallery";
+import { gallery2025 } from "../../data/constans_gallery";
 import FreeRegiter from "../../components/home/FreeRegiter.astro";
 
 changeLanguage("en");
@@ -25,10 +25,8 @@ changeLanguage("en");
       <span class='text-[#565078] sm:text-2xl font-bold my-4'>RE+ MEXICO</span>
       <span set:html={t('home.solar_description')} />
     </div>
-    <lite-youtube
-      videoid='A4IS71JxSDc'
-      posterquality='maxresdefault'
-      params='controls=0&enablejsapi=1'></lite-youtube>
+    <lite-youtube videoid='zFTOIpLv6AQ' params='controls=0&enablejsapi=1'>
+    </lite-youtube>
   </section>
   <Sponsors />
   <Card />
