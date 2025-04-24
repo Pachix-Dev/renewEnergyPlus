@@ -80,6 +80,10 @@ const { title } = Astro.props
       )
       fbq('init', '1047851480332189')
       fbq('track', 'PageView')
+      fbq('track', 'Purchase', {
+        value: 0.0,
+        currency: 'MXN',
+      })
     </script>
     <noscript
       ><img

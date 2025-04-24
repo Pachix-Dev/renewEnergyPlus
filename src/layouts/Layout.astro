@@ -81,6 +81,10 @@ import Footer from '../components/Footer.astro'
       )
       fbq('init', '1047851480332189')
       fbq('track', 'PageView')
+      fbq('track', 'Purchase', {
+        value: 0.0,
+        currency: 'MXN',
+      })
     </script>
     <noscript
       ><img
@@ -104,7 +108,7 @@ import Footer from '../components/Footer.astro'
     >
     <!-- End Google Tag Manager (noscript) -->
     <div class='icon-wrapper fixed bottom-28 right-5 z-50'>
-      <a href='https://ecomondomexico.com.mx/' target='_blank'>
+      <a href='https://re-plus-yucatan.igeco.mx/' target='_blank'>
         <img
           src='/img/re_plus_mex.webp'
           alt='Icon 1'
