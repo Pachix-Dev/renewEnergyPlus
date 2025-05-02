@@ -141,7 +141,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
         .text("- FOTO DEL RECIBO DE COMPRA", 55)
         .text("- INDICAR EL MÉTODO DE PAGO (TARJETA DE CREDITO O DEBITO)", 55)
         .text("- USO DE CFDI", 55)
-        .text("* FECHA MÁXIMA DE FACTURACIÓN 25 DE MARZO DE 2025")
+        .text("* FECHA MÁXIMA DE FACTURACIÓN 25 DE ABRIL DE 2026")
 
     const qrMainUser = await generateQRDataURL(body.uuid);
     doc.addPage();
