@@ -15,7 +15,7 @@ const aliados2 = [
   {link: '',src: '/img/aliadosEstrategicos/aliados2/KAS.webp', alt: 'Logo Kas', width: 200, height: 46,},
   {link: '',src: '/img/aliadosEstrategicos/aliados2/h2mexico-asoc.webp', alt: 'Logo H2 Mexico', width: 200, height: 68,},
   {link: '',src: '/img/aliadosEstrategicos/aliados2/giz.webp', alt: 'Logo Giz', width: 250, height: 108,},
-  {link: '',src: '/img/aliadosEstrategicos/aliados2/GaloEnergy.webp', alt: 'Logo Galo Energy', width: 150, height: 76,},
+  //{link: '',src: '/img/aliadosEstrategicos/aliados2/GaloEnergy.webp', alt: 'Logo Galo Energy', width: 150, height: 76,},
   {link: '',src: '/img/aliadosEstrategicos/aliados2/EUPD-Research.webp', alt: 'logo EUPD Research', width: 200, height: 38,},
   {link: '',src: '/img/logogdl.webp', alt: 'logo Energias Renovables', width: 200, height: 50,},
 ];
