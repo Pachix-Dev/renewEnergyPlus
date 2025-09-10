@@ -10,7 +10,7 @@
         "submenu_2": {
             "title": "EXPOSITORES",
             "option_1": "Contacto",
-            "option_2": "Por qué exponer",
+            "option_2": "Quiero ser expositor",
             "option_3": "Perfil del expositor",
             "option_4": "Servicios a Expositor",
             "option_5": "Patrocinios RE+ 2024",
@@ -45,6 +45,13 @@
         "directory":"Directorio de Expositores 2024"
     },
     "home": {
+        "cifra_1": "RE+ MEXICO, la feria líder en energías renovables para México y Norteamérica",
+        "cifra_2": "Únete a la séptima edición del evento que está marcando el futuro energético sostenible de nuestro país, donde encontrarás:",
+        "cifra_3": "m2 de piso expositor en conjunto con Ecomondo Mexico y AMERICAS’ Mobility Of The Future.",
+        "cifra_4": "compradores profesionales.",
+        "cifra_5": "empresas expositoras con las marcas líderes a nivel global.",
+        "cifra_6": "conferencias, talleres prácticos y conferencias magistrales.",
+        "register_text": "Descubre las últimas tecnologías y asiste sin costo a talleres especializados.",
         "event-date":"14 – 16 de Abril",
         "program": "Programa de conferencias premium",
         "sponsorship": "Patrocinios y experiencias",
@@ -178,7 +185,7 @@
         "hours": "horas",
         "minutes": "minutos",
         "seconds": "segundos",
-        "free_register": "REGISTRO GRATUITO",
+        "free_register": "REGISTRO GRATUITO PROXIMAMENTE...",
         "media_platinum": "MEDIOS ALIADOS PLATINUM",
         "media_gold": "MEDIOS ALIADOS GOLD",
         "testimonial": "TESTIMONIALES",

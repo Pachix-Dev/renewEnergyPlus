@@ -1,0 +1,35 @@
+---
+import { t } from 'i18next'
+---
+
+<section
+  class='bg-gradient-to-r from-[#766EA6] to-[#565078] text-white text-center py-20'
+>
+  <div class='container mx-auto px-4'>
+    <div data-aos='fade-down' data-aos-duration='1000' class='mt-10'>
+      <p class='font-extrabold text-white text-6xl gap-6 uppercase'>
+        {t('home.event-date')}, 2025<br />
+        EXPO GUADALAJARA, JALISCO
+      </p>
+      {
+        /*<p class='text-white text-xl' set:html={t('home.solar_date_hours')} />*/
+      }
+    </div>
+    <p
+      class='my-10 text-4xl font-bold'
+      data-aos='fade-up'
+      data-aos-duration='3000'
+    >
+      No te quedes fuera del evento más grande en energías renovables y
+      almacenamiento.
+    </p>
+    <div class='mt-20' data-aos='zoom-in-up' data-aos-duration='2000'>
+      <a
+        class='text-white text-2xl font-bold py-2 px-4 rounded-md border-2 border-white hover:bg-white hover:text-[#565078] transition duration-300'
+        href='/por-que-exponer'
+      >
+        {t('menu.submenu_2.option_2')}
+      </a>
+    </div>
+  </div>
+</section>

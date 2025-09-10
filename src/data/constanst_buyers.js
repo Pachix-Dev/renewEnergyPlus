@@ -1,4 +1,4 @@
-const buyers1 = [
+const buyers = [
   {link: '',src: '/img/buyersProfessional/1.webp', alt: 'logo ABB ', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/2.webp', alt: 'logo AEEC', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/3.webp', alt: 'logo AEEJ', width: 200, height: 103,},
@@ -16,9 +16,7 @@ const buyers1 = [
   {link: '',src: '/img/buyersProfessional/15.webp', alt: 'logo Bayer', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/16.webp', alt: 'logo Ban Verde', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/17.webp', alt: 'logo Bimbo', width: 200, height: 103,},
-  
-];
-const buyers2 = [
+
   {link: '',src: '/img/buyersProfessional/18.webp', alt: 'logo BYD', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/19.webp', alt: 'logo Bacardí', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/20.webp', alt: 'logo Brimex Energy', width: 200, height: 103,},
@@ -36,9 +34,7 @@ const buyers2 = [
   {link: '',src: '/img/buyersProfessional/32.webp', alt: 'logo DELL', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/33.webp', alt: 'logo DHL', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/34.webp', alt: 'logo grupo Dragon', width: 200, height: 103,},
-  
-];
-const buyers3 = [
+
   {link: '',src: '/img/buyersProfessional/35.webp', alt: 'logo EATON', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/36.webp', alt: 'logo Enelx', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/37.webp', alt: 'logo Farmacias GIO', width: 200, height: 103,},
@@ -57,8 +53,7 @@ const buyers3 = [
   {link: '',src: '/img/buyersProfessional/50.webp', alt: 'logo IKEA', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/51.webp', alt: 'logo INTEL', width: 200, height: 103,},
   
-];
-const buyers4 = [
+
   {link: '',src: '/img/buyersProfessional/52.webp', alt: 'logo KARCHER', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/53.webp', alt: 'logo KIA', width: 200, height: 103,},
   {link: '',src: '/img/buyersProfessional/54.webp', alt: 'logo KIMBERLY-CLARK', width: 200, height: 103,},
@@ -78,4 +73,4 @@ const buyers4 = [
   {link: '',src: '/img/buyersProfessional/69.webp', alt: 'logo WHIRLPOOL', width: 200, height: 103,},
  
 ];
-export {buyers1,buyers2,buyers3, buyers4};
+export {buyers};

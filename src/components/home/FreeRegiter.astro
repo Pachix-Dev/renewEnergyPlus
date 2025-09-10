@@ -7,85 +7,58 @@ const lang = i18next.language
 const base = i18next.language === 'es' ? '' : `/${lang}`
 ---
 
-<section class='relative lab-bg py-10 bg-slate-800'>
+<section class='relative lab-bg py-20 bg-slate-800'>
   <div class='container mx-auto px-4 grid md:grid-cols-2 gap-6'>
     <div>
       <p
         data-aos='fade-right'
         data-aos-duration='1000'
-        class='text-white text-3xl xl:text-5xl font-extrabold'
+        class='text-white text-3xl xl:text-4xl font-extrabold'
       >
-        {t('home.title_register')}
+        {t('home.register_text')}
       </p>
-      <div data-aos='fade-down' data-aos-duration='1000' class='mt-10'>
-        <div class='font-extrabold text-white text-4xl flex items-center gap-6'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='currentColor'
-            class='size-6'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5'
-            ></path>
-          </svg>
-          {t('home.event-date')}
-        </div>
-        {
-          /*<p class='text-white text-xl' set:html={t('home.solar_date_hours')} />*/
-        }
-      </div>
     </div>
     <div
       data-aos='fade-up'
       data-aos-duration='1000'
-      class='grid gap-6 place-content-center place-items-center'
+      class='grid gap-6 place-items-center'
     >
-      <CounterDown
+      {
+        /* <CounterDown
         client:only='react'
         dias={t('home.days')}
         horas={t('home.hours')}
         minutos={t('home.minutes')}
         segundos={t('home.seconds')}
       />
-      {
-        /* 
+      
+      
+      <p class='text-white text-3xl font-bold'>{t('program.comming_soon')}</p>
+      */
+      }
       <div class='flex gap-5'>
         <a
           href={`${base}/#`}
           class='card p-5 hover:scale-105 ease-in-out duration-300'
         >
-          <span class='text-white z-10 font-extrabold text-xl'>
-            ENERGY NIGHT
+          <span class='text-white text-center z-10 font-extrabold text-2xl'>
+            {t('home.free_register')}
           </span>
         </a>
-        <a
-          href={`${base}/#`}
-          class='card p-5 hover:scale-105 ease-in-out duration-300'
-        >
-          <span class='text-white z-10 font-extrabold text-xl'
-            >{t('program.title_1')}</span
-          >
-        </a>
       </div>
-      <p class='text-white text-3xl font-bold'>{t('program.comming_soon')}</p>
-      */
-      }
     </div>
   </div>
-  <div
+  {
+    /* <div
     class='mt-20 container mx-auto py-5 px-4 backdrop-blur-sm bg-white/30 rounded-xl'
   >
     <Content />
   </div>
+  */
+  }
 </section>
 <style>
   .card {
-    width: fit-content;
     background: #f6f6f6;
     position: relative;
     display: flex;
@@ -98,13 +71,13 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
   .card::before {
     content: '';
     position: absolute;
-    width: 250px;
+
     background-image: linear-gradient(
       90deg,
       rgba(118, 110, 166) 0%,
       rgba(86, 80, 120) 100%
     );
-    height: 30px;
+
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
   }

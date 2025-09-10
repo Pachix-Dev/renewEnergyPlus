@@ -1,6 +1,6 @@
 ---
 import { MarqueeReact } from '../components/MarqueeReact'
-import { buyers1, buyers2, buyers3, buyers4 } from '../data/constanst_buyers'
+import { buyers } from '../data/constanst_buyers'
 ---
 
 <section class='container mx-auto px-4'>
@@ -26,8 +26,17 @@ import { buyers1, buyers2, buyers3, buyers4 } from '../data/constanst_buyers'
       </div>
     </div>
   </div>
-  <MarqueeReact images={buyers1} client:only='react' />
-  <MarqueeReact images={buyers2} , direction='left' client:only='react' />
-  <MarqueeReact images={buyers3} client:only='react' />
-  <MarqueeReact images={buyers4} , direction='left' client:only='react' />
+  <div
+    class='mt-5 grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:bg-white *:rounded-lg *:shadow-lg *:p-1'
+    data-aos='fade-up'
+    data-aos-duration='1500'
+  >
+    {
+      buyers.map((buyer) => (
+        <a href={buyer.link} target='_blank' rel='noreferrer'>
+          <img src={buyer.src} alt={buyer.alt} width={buyer.width} />
+        </a>
+      ))
+    }
+  </div>
 </section>

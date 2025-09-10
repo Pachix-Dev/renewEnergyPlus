@@ -13,21 +13,26 @@ import BuyersProfessional from "../../components/BuyersProfessional.astro";
 import Exhibitors from "../../components/Exhibitors.astro";
 import { gallery2025 } from "../../data/constans_gallery";
 import FreeRegiter from "../../components/home/FreeRegiter.astro";
+import BecomeExhibitor from "../../components/home/BecomeExhibitor.astro";
 
 changeLanguage("en");
 ---
 
 <Layout title='RE+ Mexico'>
   <Hero />
+  <BecomeExhibitor />
   <FreeRegiter />
-  <section class='container mx-auto px-4 grid md:grid-cols-2 gap-10 py-10'>
+
+  {
+    /* <section class='container mx-auto px-4 grid md:grid-cols-2 gap-10 py-10'>
     <div class='bg-white py-12 sm:text-xl text-justify'>
       <span class='text-[#565078] sm:text-2xl font-bold my-4'>RE+ MEXICO</span>
       <span set:html={t('home.solar_description')} />
     </div>
-    <lite-youtube videoid='K2BE22chpWo' params='controls=0&enablejsapi=1'>
+    <lite-youtube videoid='zFTOIpLv6AQ' params='controls=0&enablejsapi=1'>
     </lite-youtube>
-  </section>
+  </section>*/
+  }
   <Sponsors />
   <Card />
   <Tariffs />
