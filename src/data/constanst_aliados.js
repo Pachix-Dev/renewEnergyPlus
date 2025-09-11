@@ -1,4 +1,4 @@
-const aliados1 = [
+const aliados = [
   {link: '',src: '/img/aliadosEstrategicos/aliados1/merm.webp', alt: 'logo Merm', width: 200, height: 103,},
   {link: '',src: '/img/aliadosEstrategicos/aliados1/gobiernoJalisco.webp', alt: 'logo Gobierno de Jalisco', width: 150, height: 150,},
   {link: '',src: '/img/aliadosEstrategicos/aliados1/emmerge.webp', alt: 'Logo emmerge', width: 110, height: 120,},
@@ -8,8 +8,6 @@ const aliados1 = [
   {link: '',src: '/img/aliadosEstrategicos/aliados1/80-amsoc.webp', alt: 'Logo 80-Amsoc', width: 150, height: 98,},
   {link: '',src: '/img/aliadosEstrategicos/aliados1/anes.webp', alt: 'Logo 80-Amsoc', width: 110, height: 98,},
 
-];
-const aliados2 = [
   {link: '',src: '/img/aliadosEstrategicos/aliados2/SEI.webp', alt: 'Logo Sei', width: 150, height: 107,},
   {link: '',src: '/img/aliadosEstrategicos/aliados2/redMujeres.webp', alt: 'Logo Red Mujeres', width: 200, height: 65,},
   {link: '',src: '/img/aliadosEstrategicos/aliados2/KAS.webp', alt: 'Logo Kas', width: 200, height: 46,},
@@ -44,4 +42,4 @@ const Broadcasting2 = [
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting2/discoverCleanTech.webp', alt: 'Logo Discover Clean Tech', width: 200, height: 48,},
 
 ];
-export { aliados1,aliados2,Broadcasting1,Broadcasting2};
+export { aliados,Broadcasting1,Broadcasting2};
