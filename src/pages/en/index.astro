@@ -14,6 +14,8 @@ import Exhibitors from "../../components/Exhibitors.astro";
 import { gallery2025 } from "../../data/constans_gallery";
 import FreeRegiter from "../../components/home/FreeRegiter.astro";
 import BecomeExhibitor from "../../components/home/BecomeExhibitor.astro";
+import Cifras from "../../components/home/Cifras.astro";
+import Segmentos from "../../components/home/Segmentos.astro";
 
 changeLanguage("en");
 ---
@@ -33,8 +35,11 @@ changeLanguage("en");
     </lite-youtube>
   </section>*/
   }
+
+  <Cifras />
   <Sponsors />
-  <Card />
+  <Segmentos />
+
   <Tariffs />
   <Testimonials />
   <BuyersProfessional />
