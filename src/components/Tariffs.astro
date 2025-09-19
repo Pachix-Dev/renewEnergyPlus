@@ -9,52 +9,113 @@ import Profile from '../components/Profile.astro'
     class='text-center m-5 text-xl italic'
     set:html={t('home.rates.sub-title')}
   />
-  <div class='grid lg:grid-cols-2 gap-5 mx-5 lg:mx-28 text-center'>
-    <div class='bg-white p-4 rounded-md justify-center'>
-      <p
-        class='text-black font-bold text-3xl'
+  <div class='flex justify-center my-5 gap-5'>
+    <div
+      class='w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8'
+    >
+      <h5
+        class='mb-4 text-xl font-medium text-gray-500'
         set:html={t(`home.rates.item1.title1`)}
       />
-      <div class='flex justify-center py-5'>
-        {
-          /* <div class='px-3 w-full container'>
-          <p
-            class='text-red-700 mb-4 text-lg font-bold'
-            set:html={t(`home.rates.item1.price1-title`)}
-          />
-          <p
-            class='text-black mb-4 font-extrabold'
-            set:html={t(`home.rates.item1.price1`)}
-          />
-        </div>
-        */
-        }
-        <div class='px-3 w-full container'>
-          <p
-            class='text-red-700 mt-5 mb-4 text-lg font-bold'
-            set:html={t(`home.rates.item1.price2-title`)}
-          />
-          <p
-            class='text-black mb-4 font-extrabold'
-            set:html={t(`home.rates.item1.priece2`)}
-          />
-        </div>
+
+      <div class='flex items-baseline text-gray-900'>
+        <span class='text-3xl font-semibold'>$</span>
+        <span class='text-5xl font-extrabold tracking-tight'>460.00</span>
+        <span class='ms-1 text-xl font-normal text-gray-500 dark:text-gray-400'
+          >+ IVA / m2</span
+        >
       </div>
-      <p
-        class='text-black text-2xl py-2 font-bold'
-        set:html={t(`home.rates.item1.title2`)}
-      />
-      <ul class='list-group text-black text-xl py-2 list-group-flush fs-5'>
-        <li
-          class='list-group-item py-2 border-b border-gray-300'
-          set:html={t(`home.rates.item1.topic2`)}
-        />
+      <ul role='list' class='space-y-5 my-7'>
+        <li class='flex items-center'>
+          <svg
+            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='currentColor'
+            viewBox='0 0 20 20'
+          >
+            <path
+              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
+            ></path>
+          </svg>
+          <span
+            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
+            >Mención en el directorio
+          </span>
+        </li>
+
+        <li class='flex line-through decoration-gray-500'>
+          <svg
+            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='currentColor'
+            viewBox='0 0 20 20'
+          >
+            <path
+              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
+            ></path>
+          </svg>
+          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
+            >Alfombra</span
+          >
+        </li>
+        <li class='flex line-through decoration-gray-500'>
+          <svg
+            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='currentColor'
+            viewBox='0 0 20 20'
+          >
+            <path
+              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
+            ></path>
+          </svg>
+          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
+            >Construcción</span
+          >
+        </li>
+        <li class='flex line-through decoration-gray-500'>
+          <svg
+            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='currentColor'
+            viewBox='0 0 20 20'
+          >
+            <path
+              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
+            ></path>
+          </svg>
+          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
+            >Mobiliario</span
+          >
+        </li>
+        <li class='flex line-through decoration-gray-500'>
+          <svg
+            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='currentColor'
+            viewBox='0 0 20 20'
+          >
+            <path
+              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
+            ></path>
+          </svg>
+          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
+            >Servicios</span
+          >
+        </li>
       </ul>
-      <p
-        class='text-black text-xl my-4 font-bold'
-        set:html={t(`home.rates.item1.topic3`)}
-      />
+      <button
+        type='button'
+        class='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center'
+        >Choose plan</button
+      >
     </div>
+
     <div class='bg-white p-4 rounded-md justify-center'>
       <p
         class='text-black font-bold text-3xl'

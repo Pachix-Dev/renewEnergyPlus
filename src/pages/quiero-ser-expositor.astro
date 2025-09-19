@@ -1,21 +1,35 @@
 ---
+import Content from "../components/Content.astro";
 import Layout from "../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
 ---
 
-<Layout title='RE+ Mexico | por que exponer'>
+<Layout title='RE+ Mexico | quiero ser expositor'>
   <section class='container mx-auto p-5'>
-    <div class='bg-[#EFEFEF] py-5'>
-      <p class='px-10'>
-        <i>RE+ MEXICO</i>
-        <br />
-        <strong class='text-3xl'>{t('whyexhibit.why')}</strong>
-      </p>
-      <p class='my-5 px-10' set:html={t('whyexhibit.description_main')} />
+    <div class='bg-[#EFEFEF] flex gap-5 items-center rounded-t-lg'>
+      <div class='w-3/5' data-aos='fade-down' data-aos-duration='1000'>
+        <p class='px-10'>
+          <i>RE+ MEXICO</i>
+          <br />
+          <strong class='text-3xl'>{t('whyexhibit.why')}</strong>
+        </p>
+        <p class='my-5 px-10' set:html={t('whyexhibit.description_main')} />
+      </div>
+      <div class='w-2/5' data-aos='fade-in' data-aos-duration='1000'>
+        <img
+          src='/img/bgExhibitorProfile2.webp'
+          alt='Re+ México perfil expositor'
+          class='object-cover h-96 rounded-lg shadow-lg'
+        />
+      </div>
     </div>
-    <div class='bg-[#2EABE2] text-white p-5 py-10'>
+    <div
+      class='bg-gradient-to-r from-[#766EA6] to-[#565078] text-white p-5 py-10'
+      data-aos='fade-up'
+      data-aos-duration='1000'
+    >
       <p class='font-bold text-4xl text-center'>{t('whyexhibit.title')}</p>
       <div class='grid md:grid-cols-2 gap-5 mt-10'>
         <div class='grid grid-flow-col items-center gap-2'>
@@ -162,6 +176,26 @@ changeLanguage("es");
           <p class='text-lg'>{t('whyexhibit.description8')}</p>
         </div>
       </div>
+    </div>
+    <div class='my-10'>
+      <Content />
+    </div>
+    <p class='mt-20'>
+      <strong class='text-3xl'>{t('menu.submenu_2.option_3')}</strong>
+    </p>
+    <p
+      class='bg-white text-justify form-label mt-5'
+      set:html={t('ExhibitorProfile.description')}
+    />
+    <div class='bg-[#EFEFEF] grid md:grid-cols-2 text-sm rounded-lg mt-5'>
+      <p
+        class='text-justify form-label py-10 px-10'
+        set:html={t('ExhibitorProfile.description2')}
+      />
+      <p
+        class='text-justify form-label py-10 px-10'
+        set:html={t('ExhibitorProfile.description3')}
+      />
     </div>
   </section>
 </Layout>
