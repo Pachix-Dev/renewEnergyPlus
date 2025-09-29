@@ -1,199 +1,206 @@
 ---
-import { t, changeLanguage } from "i18next";
-import Layout from "../layouts/Layout.astro";
-import { AddEnergyNight } from "../components/ecommerce/AddEnergyNight.jsx";
+import { t, changeLanguage } from 'i18next'
+import Layout from '../layouts/Layout.astro'
+import { AddEnergyNight } from '../components/ecommerce/AddEnergyNight.jsx'
 
-changeLanguage("es");
+changeLanguage('es')
 
 const item = {
-    id: 2,
-    name: "ENERGY NIGHT Mi\u00E9rcoles 5 de Marzo",
-    name_en: "ENERGY NIGHT Wednesday, March 5th",
-    price: 1000,
-    included: [
-        "1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack.",
-        "Acceso mi\u00E9rcoles 5 de marzo en Desfilia, Expo Guadalajara.",
-        "Recepci\u00F3n 6:15 p.m.",
-        "Inicio del evento 6:30 p.m.",
-        "Fin del evento 10:00 p.m.",
-    ],
-    included_en: [
-        "1 Ticket for the Energy Night with unlimited drinks and snacks.",
-        "Access Wednesday, March 5 at Desfilia, Expo Guadalajara.",
-        "Reception 6:15 p.m.",
-        "Event start 6:30 p.m.",
-        "Event end 10:00 p.m.",
-    ],
-};
-const translate = t("ecommerce", { returnObjects: true });
+  id: 2,
+  name: 'ENERGY NIGHT Mi\u00E9rcoles 5 de Marzo',
+  name_en: 'ENERGY NIGHT Wednesday, March 5th',
+  price: 1000,
+  included: [
+    '1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack.',
+    'Acceso mi\u00E9rcoles 5 de marzo en Desfilia, Expo Guadalajara.',
+    'Recepci\u00F3n 6:15 p.m.',
+    'Inicio del evento 6:30 p.m.',
+    'Fin del evento 10:00 p.m.',
+  ],
+  included_en: [
+    '1 Ticket for the Energy Night with unlimited drinks and snacks.',
+    'Access Wednesday, March 5 at Desfilia, Expo Guadalajara.',
+    'Reception 6:15 p.m.',
+    'Event start 6:30 p.m.',
+    'Event end 10:00 p.m.',
+  ],
+}
+const translate = t('ecommerce', { returnObjects: true })
 ---
 
 <Layout title='Energy Night - Evento Exclusivo'>
   <section
-    class='relative w-full text-white p-5 bg-[url(/img/bg_energynight_v2.webp)] bg-cover bg-no-repeat bg-center lg:bg-top'
+    class='relative w-full text-white bg-[#5D5782] bg-cover bg-no-repeat bg-center lg:bg-top'
   >
-    <!-- Imagen en la esquina LOGO-->
-    <img src='/img/LOGOENERGYNIGHT.png' alt='Estrella' class='ms-auto' />
-
-    <!-- Contenido -->
-    <div
-      class='relative max-w-4xl text-white text-center container mx-auto px-4'
+    <video
+      autoplay
+      muted
+      loop
+      class='w-full h-full object-cover top-0 left-0 z-0'
     >
-      <h1
-        class='text-4xl sm:text-5xl md:text-6xl lg:text-9xl uppercase mi-titulo'
-      >
-        Energy Night
-      </h1>
-      <p class='text-xl lg:text-3xl font-semibold mt-2'>
-        "POWERING CONNECTIONS THROUGH THE WILD WEST"
-      </p>
-      <div class='mt-5 flex gap-2 items-center justify-center'>
-        <p class='mt-4 text-2xl font-semibold'>Powered by:</p>
-        <img src='/img/keymexlogo.webp' alt='keymex' width='250' />
-      </div>
+      <source src='/video/bg_energy.mp4' type='video/mp4' />
+      Your browser does not support the video tag.
+    </video>
 
-      <p class='mt-5 font-semibold text-4xl'>
-        5 DE MARZO | <span class='contorno'>2025</span>
-      </p>
-      <p class='font-semibold'>EXPO GUADALAJARA JALISTO, MÉXICO</p>
-    </div>
-    <div class='mt-20 container mx-auto px-4 grid md:grid-cols-2'>
-      <div>
-        <h1 class='text-2xl font-sans'>
-          {t('energynight.text_1')}
-          <strong>{t('energynight.text_2')}</strong>
-          {t('energynight.text_3')}
-          <span class='bg-black px-1'>{t('energynight.text_4')}.</span>
-        </h1>
-        <p class='mt-5 text-lg md:w-5/6' set:html={t('energynight.text_5')} />
+    <div
+      class="bg-[url('/img/bg_energy_1.webp')] bg-cover bg-no-repeat bg-fixed bg-center py-10"
+    >
+      <div class='container mx-auto px-4 grid md:grid-cols-2'>
+        <div>
+          <p class='text-4xl font-sans text-justify'>
+            {t('energynight.text_1')}
+            <span class='bg-black rounded-md'>{t('energynight.text_4')}.</span>
+          </p>
 
-        <p class='mt-5 text-3xl font-semibold'>{t('energynight.text_6')}</p>
-        <div class='mt-5 flex gap-5 items-center'>
-          <img src='/img/icono_asistir_1.webp' alt='icono' class='w-10 h-10' />
-          <div>
-            <p><strong>{t('energynight.text_7')} </strong></p>
-            <p>
-              {t('energynight.text_8')}
-            </p>
-          </div>
-        </div>
-        <div class='mt-5 flex gap-5 items-center'>
-          <img src='/img/icono_asistir_2.webp' alt='icono' class='w-10 h-10' />
-          <div>
-            <p><strong>{t('energynight.text_9')} </strong></p>
-            <p>
-              {t('energynight.text_10')}
-            </p>
-          </div>
-        </div>
-        <div class='mt-5 flex gap-5 items-center'>
-          <img src='/img/icono_asistir_3.webp' alt='icono' class='w-10 h-10' />
-          <div>
-            <p><strong>{t('energynight.text_11')} </strong></p>
-            <p>
-              {t('energynight.text_12')}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class='mx-auto'>
-        <img src='/img/topprice.webp' alt='Top Price' class='w-80 lg:w-96' />
-        <div
-          class='bg-white text-black pt-20 -mt-20 w-64 lg:w-[350px] mx-auto rounded-lg'
-        >
-          <p class='text-center py-2'>{t('energynight.text_13')}</p>
-          <div class='bg-[#e5e5e5] flex items-center gap-2 py-2 lg:ps-10'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='currentColor'
-              class='w-8'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
-                clip-rule='evenodd'></path>
-            </svg>
-            <p class='text-sm'>
-              {t('energynight.text_14')}
-              <strong>Energy Night</strong><br />
-              <span class='italic'>{t('energynight.text_15')} *</span>
-            </p>
-          </div>
-          <div class='flex items-center gap-2 py-2 lg:ps-10'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='currentColor'
-              class='w-8'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
-                clip-rule='evenodd'></path>
-            </svg>
-            <p class='text-sm'>
-              {t('energynight.text_16')}
-              <strong>{t('energynight.text_17')} </strong><br />
-              <span class='italic'>Desfilia, Expo Guadalajara</span>
-            </p>
-          </div>
-          <div class='bg-[#e5e5e5] flex items-center gap-2 py-2 lg:ps-10'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='currentColor'
-              class='w-8'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
-                clip-rule='evenodd'></path>
-            </svg>
-            <p class='text-sm'>
-              <strong>{t('energynight.text_18')} </strong> 6:15 p.m.
-            </p>
-          </div>
+          <p
+            class='mt-5 text-2xl md:w-5/6'
+            set:html={t('energynight.text_5')}
+          />
 
-          <div class='flex items-center gap-2 py-2 lg:ps-10'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='currentColor'
-              class='w-8'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
-                clip-rule='evenodd'></path>
-            </svg>
-            <p class='text-sm' set:html={t('energynight.text_19')} />
-          </div>
-          <div class='bg-[#e5e5e5] py-2'>
-            <p
-              class='text-sm text-center'
-              set:html={t('energynight.text_20')}
+          <p class='mt-5 text-3xl font-semibold'>{t('energynight.text_6')}</p>
+          <div class='mt-5 flex gap-5 items-center'>
+            <img
+              src='/img/icono_asistir_1.webp'
+              alt='icono'
+              class='w-10 h-10'
             />
+            <div>
+              <p><strong>{t('energynight.text_7')} </strong></p>
+              <p>
+                {t('energynight.text_8')}
+              </p>
+            </div>
+          </div>
+          <div class='mt-5 flex gap-5 items-center'>
+            <img
+              src='/img/icono_asistir_2.webp'
+              alt='icono'
+              class='w-10 h-10'
+            />
+            <div>
+              <p><strong>{t('energynight.text_9')} </strong></p>
+              <p>
+                {t('energynight.text_10')}
+              </p>
+            </div>
+          </div>
+          <div class='mt-5 flex gap-5 items-center'>
+            <img
+              src='/img/icono_asistir_3.webp'
+              alt='icono'
+              class='w-10 h-10'
+            />
+            <div>
+              <p><strong>{t('energynight.text_11')} </strong></p>
+              <p>
+                {t('energynight.text_12')}
+              </p>
+            </div>
           </div>
         </div>
-        <AddEnergyNight item={item} translate={translate} client:only />
+        <div class='mx-auto'>
+          <img src='/img/topprice.webp' alt='Top Price' class='w-80 lg:w-96' />
+          <div
+            class='bg-white text-black pt-20 -mt-20 w-64 lg:w-[350px] mx-auto rounded-lg'
+          >
+            <p class='text-center py-2'>{t('energynight.text_13')}</p>
+            <div class='bg-[#e5e5e5] flex items-center gap-2 py-2 lg:ps-10'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                class='w-8'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
+                  clip-rule='evenodd'></path>
+              </svg>
+              <p class='text-sm'>
+                {t('energynight.text_14')}
+                <strong>Energy Night</strong><br />
+                <span class='italic'>{t('energynight.text_15')} *</span>
+              </p>
+            </div>
+            <div class='flex items-center gap-2 py-2 lg:ps-10'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                class='w-8'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
+                  clip-rule='evenodd'></path>
+              </svg>
+              <p class='text-sm'>
+                {t('energynight.text_16')}
+                <strong>{t('energynight.text_17')} </strong><br />
+                <span class='italic'>Desfilia, Expo Guadalajara</span>
+              </p>
+            </div>
+            <div class='bg-[#e5e5e5] flex items-center gap-2 py-2 lg:ps-10'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                class='w-8'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
+                  clip-rule='evenodd'></path>
+              </svg>
+              <p class='text-sm'>
+                <strong>{t('energynight.text_18')} </strong> 6:15 p.m.
+              </p>
+            </div>
+
+            <div class='flex items-center gap-2 py-2 lg:ps-10'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                class='w-8'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z'
+                  clip-rule='evenodd'></path>
+              </svg>
+              <p class='text-sm' set:html={t('energynight.text_19')} />
+            </div>
+            <div class='bg-[#e5e5e5] py-2'>
+              <p
+                class='text-sm text-center'
+                set:html={t('energynight.text_20')}
+              />
+            </div>
+          </div>
+          <AddEnergyNight item={item} translate={translate} client:only />
+        </div>
       </div>
     </div>
-    <div class='mt-10 text-center py-10'>
+  </section>
+  <section
+    class="bg-[url('/img/bg_energy_2.webp')] bg-cover bg-no-repeat bg-fixed bg-center py-20"
+  >
+    <div class='text-center py-10 text-white'>
       <p class='lg:text-5xl font-semibold'>{t('energynight.text_21')}</p>
-      <p class='mi-titulo lg:text-7xl'>{t('energynight.text_22')}</p>
+      <p class='lg:text-7xl font-extrabold'>{t('energynight.text_22')}</p>
       <p class='text-2xl'>{t('energynight.text_23')}</p>
       <p class='font-bold text-2xl'>
         {t('energynight.text_23')}
-        <span class='text-[#ffb900]'>{t('energynight.text_4')} </span>.
+        <span class='text-[#A1A4F3]'>{t('energynight.text_4')} </span>.
       </p>
     </div>
-  </section>
-  <section>
     <div
-      class='bg-[#ffb900] text-center py-5 text-xl'
+      class='bg-[#4E549E] text-center py-5 text-xl text-white w-fit mx-auto px-10 rounded-full my-10'
       set:html={t('energynight.text_25')}
     />
+  </section>
+  <section>
     <div
       class='bg-[url(/img/bg_energynight_new_2.webp)] bg-cover bg-no-repeat py-20'
     >
@@ -206,35 +213,36 @@ const translate = t("ecommerce", { returnObjects: true });
       </a>
     </div>
   </section>
+
+  <style>
+    @font-face {
+      font-family: 'MiFuente';
+      src: url('/fonts/gomarice_yatsurano_western.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .mi-titulo {
+      font-family: 'MiFuente', sans-serif;
+    }
+    .mi-titulo-container {
+      padding-top: 200px; /* Ajusta este valor como desees */
+    }
+    img.absolute {
+      position: absolute;
+      top: 2rem; /* Ajusta según el espacio que desees desde la parte superior */
+      right: 2rem; /* Ajusta según el espacio que desees desde la parte derecha */
+      width: 7rem; /* Ajusta el tamaño de la imagen */
+      height: 6rem; /* Ajusta el tamaño de la imagen */
+      z-index: 20; /* Asegúrate de que esté encima de otros elementos */
+    }
+    .contorno {
+      -webkit-text-stroke: 1px #ffffff;
+      -webkit-text-fill-color: transparent;
+
+      /* fallback */
+      color: #333;
+    }
+  </style>
 </Layout>
-<style>
-  @font-face {
-    font-family: 'MiFuente';
-    src: url('/fonts/gomarice_yatsurano_western.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  .mi-titulo {
-    font-family: 'MiFuente', sans-serif;
-  }
-  .mi-titulo-container {
-    padding-top: 200px; /* Ajusta este valor como desees */
-  }
-  img.absolute {
-    position: absolute;
-    top: 2rem; /* Ajusta según el espacio que desees desde la parte superior */
-    right: 2rem; /* Ajusta según el espacio que desees desde la parte derecha */
-    width: 7rem; /* Ajusta el tamaño de la imagen */
-    height: 6rem; /* Ajusta el tamaño de la imagen */
-    z-index: 20; /* Asegúrate de que esté encima de otros elementos */
-  }
-  .contorno {
-    -webkit-text-stroke: 1px #ffffff;
-    -webkit-text-fill-color: transparent;
-
-    /* fallback */
-    color: #333;
-  }
-</style>
