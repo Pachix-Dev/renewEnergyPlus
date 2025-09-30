@@ -647,6 +647,7 @@ const toolkit_en = [
     { id: 3, src: '/img/toolkit/twitter_eng_2025.webp', alt:'Twitter', title:'Twitter', width: 360, height: 120 },
     { id: 4, src: '/img/toolkit/linkedin_eng_2025.webp', alt:'Linkedin', title:'Linkedin', width: 360, height: 90 }    
 ]
+
 const sponsors = [
 	{
 		src:'/img/sponsors/Huawei.webp',
@@ -710,9 +711,74 @@ const sponsors = [
 	},
 	
 ]
+
+const energy_night = [
+    {
+        src: '/img/energy_night_1.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_2.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_3.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_4.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_5.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_6.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_7.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_8.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_9.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+    {
+        src: '/img/energy_night_10.webp',
+        alt: 'Energy Night 2025',
+        width: 300,
+        height: 200
+    },
+]
+
 export {
 	toolkit_es,
 	toolkit_en,
 	exhibitors,
-	sponsors
+	sponsors,
+    energy_night
 };

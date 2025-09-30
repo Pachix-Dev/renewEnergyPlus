@@ -10,7 +10,7 @@ export function AddEnergyNight({ item, translate }) {
     <div className='flex flex-col items-center'>
       <button
         onClick={() => handleAddToCart()}
-        className='mt-5 text-black hover:text-white font-bold p-2 bg-[#ffb900] rounded-lg uppercase'
+        className='mt-5 text-black hover:text-white font-bold p-2 bg-[#A399C7] rounded-lg uppercase'
       >
         {translate.addtocart}
       </button>
