@@ -1,9 +1,10 @@
 ---
-import { t } from 'i18next'
+import i18next, { t } from 'i18next'
+const base = i18next.language === 'es' ? '' : `/${i18next.language}`
 ---
 
 <section
-  class='bg-no-repeat bg-cover h-screen grid place-content-center text-center relative overflow-hidden'
+  class='bg-no-repeat bg-cover h-screen grid pt-20 text-center relative overflow-hidden'
 >
   <video
     src='/video/replusmexicobg.mp4'
@@ -15,14 +16,21 @@ import { t } from 'i18next'
   </video>
   <div class='absolute inset-0 bg-black/50 -z-5'></div>
 
-  <div class='container mx-auto px-4'>
-    <div class='relative flex md:grid md:grid-cols-2 gap-10'>
+  <div class='container mx-auto px-4 h-fit'>
+    <div class='relative'>
       <div data-aos='fade-right' data-aos-duration='2000'>
-        <img
-          src='/img/replusR.webp'
-          class='w-48 lg:my-0 my-4'
-          alt='Renew Energy Plus 2025'
-        />
+        <p
+          class='font-[Tungsten-Medium] text-white text-5xl lg:text-7xl text-left uppercase font-bold'
+        >
+          La feria líder en energías renovables
+        </p>
+
+        <p class='mt-5 text-white text-xl text-justify'>
+          <span class='text-[#565078] sm:text-2xl font-bold my-4'
+            >RE+ MEXICO
+          </span>
+          <span set:html={t('home.solar_description')} />
+        </p>
         <p
           class='mt-5 font-[Tungsten-Medium] text-white text-4xl lg:text-7xl text-left'
         >
@@ -32,32 +40,134 @@ import { t } from 'i18next'
         <p class='font-[Tungsten-Medium] text-white text-3xl text-left'>
           EXPO GUADALAJARA, JALISCO
         </p>
-        <p class='mt-5 text-white text-2xl text-justify'>
-          <span class='text-[#565078] sm:text-2xl font-bold my-4'
-            >RE+ MEXICO
-          </span>
-          <span set:html={t('home.solar_description')} />
-        </p>
         <img
           src='/img/logosOrganizado.webp'
-          class='mt-20 w-[200px] lg:w-[400px]'
+          class='mt-5 w-[200px] lg:w-[400px]'
         />
       </div>
     </div>
+
+    <div class='grid sm:flex sm:justify-between gap-5 pt-10 2xl:pt-32'>
+      <div class='w-full group relative'>
+        <a
+          href={`${base}/energy-night`}
+          class='button text-white text-lg lg:text-2xl uppercase relative z-10 font-extrabold'
+        >
+          <span>ENERGY NIGHT</span>
+        </a>
+        <div
+          class='relative -top-8 transform bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg hidden group-hover:block transition pb-2'
+        >
+          Disfruta de una velada fuera de este mundo, llena de oportunidades
+          únicas de networking, coctelería y música en un mismo espacio.
+        </div>
+      </div>
+      <div class='w-full group relative'>
+        <a
+          href={`${base}/registro`}
+          target='_blank'
+          class='button text-white text-lg lg:text-2xl uppercase relative z-10 font-extrabold'
+        >
+          <span>{t('home.free_register')}</span>
+        </a>
+        <div
+          class='relative -top-8 transform mt-2 bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg hidden group-hover:block transition pb-2'
+        >
+          Descubre las últimas tecnologías y asiste sin costo a talleres
+          especializados.
+        </div>
+      </div>
+      <div class='w-full group relative'>
+        <a
+          href={`${base}/programa-premium`}
+          target='_blank'
+          class='button text-white text-lg lg:text-2xl uppercase relative z-10 font-extrabold'
+        >
+          <span>{t('program.title_1')}</span>
+        </a>
+        <div
+          class='relative -top-8 transform mt-2 bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg hidden group-hover:block transition pb-2'
+        >
+          Adquiere hoy mismo y conecta con los líderes más influyentes de la
+          industria.
+        </div>
+      </div>
+    </div>
   </div>
-
-  <style>
-    p {
-      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
-    }
-
-    span {
-      color: white;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: white;
-    }
-    .logoREPLUS {
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
-    }
-  </style>
 </section>
+
+<style>
+  .button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 1rem;
+    padding-inline: 1.25rem;
+    background: #4e549f;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .button:hover {
+    transform: scale(0.85);
+    border-color: #fff9;
+  }
+
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+
+  .button::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  p {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  span {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+  .logoREPLUS {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+
+    60% {
+      left: 100%;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+</style>

@@ -13,14 +13,14 @@ const item = {
     price: 1000,
     included: [
         "1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack.",
-        "Acceso mi\u00E9rcoles 5 de marzo en Desfilia, Expo Guadalajara.",
+        "Acceso mi\u00E9rcoles 14 de abril en Desfilia, Expo Guadalajara.",
         "Recepci\u00F3n 6:15 p.m.",
         "Inicio del evento 6:30 p.m.",
         "Fin del evento 10:00 p.m.",
     ],
     included_en: [
         "1 Ticket for the Energy Night with unlimited drinks and snacks.",
-        "Access Wednesday, March 5 at Desfilia, Expo Guadalajara.",
+        "Access Wednesday, April 14 at Desfilia, Expo Guadalajara.",
         "Reception 6:15 p.m.",
         "Event start 6:30 p.m.",
         "Event end 10:00 p.m.",
@@ -46,23 +46,24 @@ const translate = t("ecommerce", { returnObjects: true });
     <div
       class="bg-[url('/img/bg_energy_1.webp')] bg-cover bg-no-repeat bg-fixed bg-center py-20"
     >
-      <div class='container mx-auto px-4 grid md:grid-cols-2 gap-5'>
-        <div>
-          <p class='text-4xl font-sans text-justify leading-[3rem]'>
-            {t('energynight.text_1')}
-            <span class='bg-black rounded-md'>{t('energynight.text_4')}.</span>
-          </p>
+      <div
+        data-aos='fade-up'
+        data-aos-duration='1300'
+        class='container mx-auto px-4 text-center'
+      >
+        <p class='text-5xl uppercase font-extrabold'>{t('home.energy_date')}</p>
+        <p class='font-bold text-2xl'>Salón Desfilia, Expo Guadalajara</p>
+        <p class='mt-5 text-5xl font-sans leading-[4rem]'>
+          {t('energynight.text_1')}
+          <span class='bg-black rounded-md'>{t('energynight.text_4')}.</span>
+        </p>
 
-          <p
-            class='mt-5 text-2xl md:w-5/6'
-            set:html={t('energynight.text_5')}
-          />
-        </div>
+        <p class='mt-5 text-2xl' set:html={t('energynight.text_5')} />
       </div>
       <div
         class='container mx-auto px-4 grid md:grid-cols-2 gap-10 mt-10 place-items-center'
       >
-        <div>
+        <div data-aos='fade-up' data-aos-duration='1300'>
           <p class='mt-5 text-4xl font-semibold'>{t('energynight.text_6')}</p>
           <div class='mt-5 flex gap-5 items-center'>
             <div>
@@ -90,6 +91,8 @@ const translate = t("ecommerce", { returnObjects: true });
           </div>
         </div>
         <div
+          data-aos='fade-up'
+          data-aos-duration='1300'
           class='w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8'
         >
           <h5 class='mb-4 text-xl font-extrabold text-gray-800'>
@@ -119,7 +122,10 @@ const translate = t("ecommerce", { returnObjects: true });
                 <span class='italic'>{t('energynight.text_15')} *</span>
               </p>
             </li>
-            <AddEnergyNight item={item} translate={translate} client:only />
+            {
+              /* <AddEnergyNight item={item} translate={translate} client:only />*/
+            }
+            <p class='text-black'>{t('program.comming_soon')}</p>
           </ul>
         </div>
       </div>

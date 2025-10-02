@@ -1,39 +1,16 @@
 ---
 import { t } from 'i18next'
 import { Suscribe } from './Suscribe.jsx'
+import Contacts from './Contacts.astro'
 
 const translations = t('footer', { returnObjects: true })
 ---
 
-<section class='bg-white'>
-  <div
-    class='bg-gradient-to-r from-[#766EA6] to-[#565078] p-4 flex justify-around'
-  >
-    <img
-      src='/img/igeco_bn.webp'
-      alt='Logo Igeco Blanco'
-      class='w-[50px] md:w-[200px] h-[20px] md:h-[72px] m-auto'
-    />
-    <img
-      src='/img/deutsche_messe_bn.webp'
-      alt='Logo deutsche '
-      class='w-[50px] md:w-[200px] h-[20px] md:h-[72px] m-auto'
-    />
-    <img
-      src='/img/RE+logo_wht.webp'
-      alt='Logo RE+'
-      class='w-[40px] md:w-[150px] h-[15px] md:h-[55px] m-auto'
-    />
-    <img
-      src='/img/snec_logo_v2.webp'
-      alt='Logo Snec'
-      class='w-[50px] md:w-[190px] h-[18px] md:h-[62px] m-auto'
-    />
-  </div>
-  <div class='flex mt-12 p-5 justify-center'>
+<section class='bg-gradient-to-r from-[#766EA6] to-[#565078]'>
+  <div class='flex p-5 justify-center'>
     <a href='https://www.facebook.com/REPlusMexico'>
       <svg
-        class='w-14 h-14 p-3 fill-[#565078] hover:fill-[#51BD36]'
+        class='w-14 h-14 p-3 fill-white hover:fill-black'
         role='img'
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -44,7 +21,7 @@ const translations = t('footer', { returnObjects: true })
     >
     <a href='https://www.linkedin.com/company/solarstoragemexico/'>
       <svg
-        class='w-14 h-14 p-3 fill-[#565078] hover:fill-[#51BD36]'
+        class='w-14 h-14 p-3 fill-white hover:fill-black'
         role='img'
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -55,7 +32,7 @@ const translations = t('footer', { returnObjects: true })
     >
     <a href='https://www.instagram.com/replusmexico/'>
       <svg
-        class='w-14 h-14 p-3 fill-[#565078] hover:fill-[#51BD36]'
+        class='w-14 h-14 p-3 fill-white hover:fill-black'
         role='img'
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
@@ -65,50 +42,41 @@ const translations = t('footer', { returnObjects: true })
       ></a
     >
   </div>
+  <Contacts />
 
-  <div class='grid gap-6 md:flex justify-center'>
-    <div class='mx-auto'>
-      <strong>RE+ MEXICO 2026</strong>
-      <p class='mt-4'>
-        Expo Guadalajara,<br />
-        Guadalajara, Jalisco, México
-      </p>
-    </div>
-    <div class='flex mx-auto'>
-      <img
-        src='/img/samuel-ramirez.webp'
-        alt='Samuel Ramírez'
-        class='w-20 h-20 rounded-full m-2'
-      />
-      <div>
-        <strong>Samuel Ramírez</strong>
-        <p>Project Manager</p>
+  <div class='mt-10 p-4 flex flex-wrap justify-center gap-10 items-center'>
+    <img
+      src='/img/igeco_bn.webp'
+      alt='Logo Igeco Blanco'
+      class='w-48 mx-auto'
+    />
+    <img
+      src='/img/deutsche_messe_bn.webp'
+      alt='Logo deutsche '
+      class='w-48 mx-auto'
+    />
+    <img src='/img/RE+logo_wht.webp' alt='Logo RE+' class='w-28 mx-auto' />
+    <img src='/img/snec_logo_v2.webp' alt='Logo Snec' class='w-28 mx-auto' />
+  </div>
+
+  <div class='container mx-auto px-4 text-white'>
+    <hr />
+    <div class='mt-5 flex justify-between'>
+      <strong>Italian German Exhibition Company Mexico</strong>
+
+      <div class='pb-10 pt-5'>
         <a
-          class='font-bold hover:text-[#565078]'
-          href='mailto:samuel.ramirez@igeco.mx'
-          >samuel.ramirez@igeco.mx <br />
+          href='https://igeco.mx/aviso-de-privacidad'
+          target='_blank'
+          class='ml-10 font-bold hover:text-black'
+        >
+          {t('footer.privacy_policy')}
         </a>
-        <button class='text-white bg-[#565078] p-1 rounded-md'
-          >{t('footer.message_button')}
-        </button>
+        |
+        <a href='/contacto' class='font-bold hover:text-black'
+          >{t('footer.contact')}
+        </a>
       </div>
     </div>
-    <Suscribe client:only t={translations} />
-  </div>
-  <hr class='m-5 border-black' />
-  <strong class='ml-10'>Italian German Exhibition Company Mexico</strong>
-  <hr class='m-5 border-black' />
-  <div class='pb-10 pt-5'>
-    <a
-      href='https://igeco.mx/aviso-de-privacidad'
-      target='_blank'
-      class='ml-10 font-bold hover:text-red-700'
-    >
-      {t('footer.privacy_policy')}
-    </a>
-    |
-    <a href='/contacto' class='font-bold hover:text-red-700'
-      >{t('footer.contact')}
-    </a>
   </div>
 </section>

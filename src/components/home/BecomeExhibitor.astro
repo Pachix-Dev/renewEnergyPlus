@@ -3,9 +3,14 @@ import { t } from 'i18next'
 ---
 
 <section
-  class='bg-gradient-to-r from-[#766EA6] to-[#565078] text-white text-center py-20'
+  class='bg-gradient-to-r from-[#766EA6] to-[#565078] text-white text-center py-20 relative overflow-hidden'
 >
-  <div class='container mx-auto px-4'>
+  <img
+    src='/img/topleftballs.webp'
+    alt='REPLUS'
+    class='pe-5 absolute -top-60 -right-36 fade-in-scale'
+  />
+  <div class='container mx-auto px-4 relative z-10'>
     <div data-aos='fade-down' data-aos-duration='1000' class='mt-10'>
       <p class='font-extrabold text-white text-5xl gap-6 uppercase'>
         {t('home.event-date')}, 2026<br />
@@ -31,4 +36,9 @@ import { t } from 'i18next'
       </a>
     </div>
   </div>
+  <img
+    src='/img/topleftballs.webp'
+    alt='REPLUS'
+    class='pe-5 absolute -bottom-48 -left-36 fade-in-scale -z-0'
+  />
 </section>

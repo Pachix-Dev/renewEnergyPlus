@@ -1,0 +1,22 @@
+---
+import { t } from 'i18next'
+---
+
+<section>
+  <div class='container mx-auto my-10 px-4 grid md:grid-cols-2 gap-10'>
+    <div class='text-gray-700'>
+      <p class='text-3xl font-thin'>{t('hotels.cede')}:</p>
+      <p class='text-4xl font-extrabold text-[#565078]'>Expo Guadalajara</p>
+      <p
+        class='mt-5 text-justify text-xl'
+        set:html={t('hotels.text_description')}
+      />
+    </div>
+
+    <img
+      src='/img/expoguadalajara.webp'
+      alt='expo guadalajara'
+      class='mt-5 rounded-tl-3xl rounded-br-3xl shadow-xl w-full h-full object-cover'
+    />
+  </div>
+</section>

@@ -1,294 +1,120 @@
 ---
-import { t } from 'i18next'
-import Profile from '../components/Profile.astro'
+import i18next, { t } from 'i18next'
 ---
 
-<section class='bg-gradient-to-r from-[#766EA6] to-[#565078] text-white py-10'>
-  <p class='text-center p-5 text-3xl font-bold'>RE+ MEXICO STANDS</p>
+<section class='bg-[url(/img/bg_stands.webp)] bg-cover text-white py-10'>
   <p
+    data-aos='fade-up'
+    data-aos-duration='1300'
+    class='text-center p-5 text-4xl font-bold'
+  >
+    RE+ MEXICO STANDS
+  </p>
+  <p
+    data-aos='fade-up'
+    data-aos-duration='1300'
     class='text-center m-5 text-xl italic'
     set:html={t('home.rates.sub-title')}
   />
-  <div class='grid md:flex justify-center my-5 gap-5'>
+  <div
+    class='mt-10 max-w-screen-xl grid md:grid-cols-2 justify-center my-5 gap-32 mx-auto'
+  >
     <div
-      class='w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8'
+      data-aos='fade-up'
+      data-aos-duration='1300'
+      class='bg-[#9F96BF] rounded-3xl shadow-lg text-white relative'
     >
-      <h5
-        class='mb-4 text-xl font-extrabold text-gray-500'
-        set:html={t(`home.rates.item1.title1`)}
-      />
-
-      <div class='flex items-baseline text-gray-900'>
-        <span class='text-3xl font-semibold'>USD</span>
-        <span class='text-5xl font-extrabold tracking-tight'>460.00</span>
-        <span class='ms-1 text-xl font-normal text-gray-500 dark:text-gray-400'
-          >+ IVA / m2</span
+      <div class='grid xl:grid-cols-2 xl:h-96 justify-center'>
+        <div
+          class='py-10 2xl:py-20 px-4 flex flex-col items-center justify-between'
         >
-      </div>
-      <ul role='list' class='space-y-5 my-7'>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >Mención en el directorio
-          </span>
-        </li>
-
-        <li class='flex line-through decoration-gray-500'>
-          <svg
-            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
-            >Alfombra</span
-          >
-        </li>
-        <li class='flex line-through decoration-gray-500'>
-          <svg
-            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
-            >Construcción</span
-          >
-        </li>
-        <li class='flex line-through decoration-gray-500'>
-          <svg
-            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
-            >Mobiliario</span
-          >
-        </li>
-        <li class='flex line-through decoration-gray-500'>
-          <svg
-            class='shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span class='text-base font-normal leading-tight text-gray-500 ms-3'
-            >Servicios</span
-          >
-        </li>
-      </ul>
-    </div>
-    <div
-      class='w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8'
-    >
-      <h5
-        class='mb-4 text-xl font-extrabold text-gray-500'
-        set:html={t(`home.rates.item2.title1`)}
-      />
-
-      <div class='flex items-baseline text-gray-900'>
-        <span class='text-3xl font-semibold'>USD</span>
-        <span class='text-5xl font-extrabold tracking-tight'>515.00</span>
-        <span class='ms-1 text-xl font-normal text-gray-500 dark:text-gray-400'
-          >+ IVA / m2</span
-        >
-      </div>
-      <ul role='list' class='space-y-5 my-7'>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic1`)}
-          </span>
-        </li>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic2`)}
-          </span>
-        </li>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic3`)}
-          </span>
-        </li>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic4`)}
-          </span>
-        </li>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic5`)}
-          </span>
-        </li>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic6`)}
-          </span>
-        </li>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic7`)}
-          </span>
-        </li>
-        <li class='flex items-center'>
-          <svg
-            class='shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'
-          >
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-            ></path>
-          </svg>
-          <span
-            class='text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3'
-            >{t(`home.rates.item2.topic8`)}
-          </span>
-        </li>
-        <li>
-          <img
-            src='/img/stand_equipado.webp'
-            alt='stand equipado'
-            class='w-1/2'
+          <h5
+            class='text-3xl font-extrabold text-center'
+            set:html={t(`home.rates.item1.title1`)}
           />
-        </li>
-      </ul>
+          <div class='text-center'>
+            <p class='text-2xl'>{t(`home.rates.item1.price2-title`)}</p>
+            <hr />
+            <p class='text-3xl font-semibold'>USD 460.00 +</p>
+            <span class='ms-1 text-xl font-normal'
+              >{t(`home.rates.item1.price1`)}</span
+            >
+          </div>
+        </div>
+
+        <img
+          src='/img/stand_1.webp'
+          alt='stand espacio libre'
+          class='w-80 xl:absolute -top-6 -right-6 drop-shadow-2xl'
+        />
+      </div>
+      <div class='p-4 text-center'>
+        <p class='text-xl font-bold mb-2'>
+          {t('home.rates.item1.title2')}
+        </p>
+        <p class='text-xl font-bold'>
+          {t('home.rates.item1.topic3')}
+        </p>
+      </div>
+    </div>
+
+    <div
+      data-aos='fade-up'
+      data-aos-duration='1300'
+      class='bg-[#9F96BF] rounded-3xl shadow-lg text-white relative'
+    >
+      <div class='grid xl:grid-cols-2 xl:h-96 justify-center'>
+        <div
+          class='py-10 2xl:py-20 px-4 flex flex-col items-center justify-between'
+        >
+          <h5
+            class='text-3xl font-extrabold text-center'
+            set:html={t(`home.rates.item2.title1`)}
+          />
+          <div class='text-center'>
+            <p class='text-2xl'>{t(`home.rates.item2.price2-title`)}</p>
+            <hr />
+            <p class='text-3xl font-semibold'>USD 515.00 +</p>
+            <span class='ms-1 text-xl font-normal'
+              >{t(`home.rates.item2.price1`)}</span
+            >
+          </div>
+        </div>
+        <img
+          src='/img/stand_2.webp'
+          alt='stand espacio libre'
+          class='w-80 xl:absolute -top-6 -right-6 drop-shadow-2xl'
+        />
+      </div>
+      <div class='p-4 text-center'>
+        <p class='text-xl font-bold'>
+          {t('home.rates.item2.title2')}
+        </p>
+      </div>
     </div>
   </div>
-  <p
-    class='text-white mt-4 p-4 font-bold text-center text-3xl'
-    set:html={t('home.title-visitor-profile')}
-  />
 
-  <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mx-20'>
-    <Profile text='home.visitor-profile.item_1' />
-    <Profile text='home.visitor-profile.item_5' />
-    <Profile text='home.visitor-profile.item_9' />
-    <Profile text='home.visitor-profile.item_2' />
-    <Profile text='home.visitor-profile.item_6' />
-    <Profile text='home.visitor-profile.item_10' />
-    <Profile text='home.visitor-profile.item_3' />
-    <Profile text='home.visitor-profile.item_7' />
-    <Profile text='home.visitor-profile.item_11' />
-    <Profile text='home.visitor-profile.item_4' />
-    <Profile text='home.visitor-profile.item_8' />
+  <div
+    class='mt-10 container mx-auto px-4 flex justify-center gap-5 text-[5px] xl:text-lg'
+    data-aos='fade-up'
+    data-aos-duration='1300'
+  >
+    <a
+      href={i18next.language === 'es'
+        ? '/doc/RE-FS-2026-ESP-V2_compressed.pdf'
+        : '/doc/RE-FS-2026-ENG-V2_compressed.pdf'}
+      target='_blank'
+      class='button w-fit py-4 text-white uppercase'
+    >
+      <span>{t('menu.submenu_2.option_6')}</span>
+    </a>
+    <a
+      href='/doc/RE-MEX-2026-092925-Model.pdf'
+      target='_blank'
+      class='button w-fit py-4 text-white uppercase'
+    >
+      {t('menu.submenu_2.option_8')}
+    </a>
   </div>
 </section>
 
@@ -297,20 +123,19 @@ import Profile from '../components/Profile.astro'
     position: relative;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    padding-block: 0.5rem;
+    padding-block: 1rem;
     padding-inline: 1.25rem;
-    background: rgb(188, 1, 0);
+    background: rgb(118, 110, 166);
     background: linear-gradient(
       90deg,
-      rgba(188, 1, 0, 1) 0%,
-      rgba(215, 105, 1, 1) 100%
+      rgba(118, 110, 166) 0%,
+      rgba(86, 80, 120) 100%
     );
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #ffff;
     gap: 10px;
     font-weight: bold;
     border: 3px solid #ffffff4d;
@@ -366,26 +191,5 @@ import Profile from '../components/Profile.astro'
     to {
       left: 100%;
     }
-  }
-
-  @keyframes show {
-    from {
-      opacity: 0;
-      scale: 10%;
-    }
-    to {
-      opacity: 1;
-      scale: 100%;
-    }
-  }
-  .die {
-    view-timeline-name: --card;
-    view-timeline-axis: block;
-
-    animation-timeline: --card;
-    animation-name: show;
-
-    animation-range: entry 60% cover 60%;
-    animation-fill-mode: both;
   }
 </style>

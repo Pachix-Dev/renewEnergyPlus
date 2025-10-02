@@ -1,128 +1,21 @@
 ---
-import { hotels } from "../../data/constans_hotels";
 import { t, changeLanguage } from "i18next";
 import Layout from "../../layouts/Layout.astro";
+import Recinto from "../../components/hotel/Recinto.astro";
+import TarifasHoteles from "../../components/hotel/TarifasHoteles.astro";
 
 changeLanguage("en");
 ---
 
 <Layout title='RE+ MEXICO | Hoteles'>
   <div class='my-20 container mx-auto'>
-    <h1 class='font-bold text-4xl mx-12 uppercase text-[#565078]'>
-      {t('hotels.title')}
-    </h1>
+    <Recinto />
+    <TarifasHoteles />
+
     <p class='mt-3 mx-12 text-justify'>{t('program.comming_soon')}</p>
     {
-      /*<p class='mt-3 mx-12 text-justify' set:html={t('hotels.description')} />
-     
-    <section class='mt-14 lg:mx-36 mx-8 hotels'>
-      <div class='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6'>
-        {
-          hotels.map((hotel) => (
-            <div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow '>
-              <img
-                class='rounded-t-lg h-64 object-cover w-full'
-                src={`/img/${hotel.src}`}
-                alt={hotel.name}
-              />
-              <div class='p-5'>
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 '>
-                  {hotel.name}
-                </h5>
-
-                <p class='mb-3 font-normal text-gray-700 '>
-                  {hotel.address}
-                  <br />
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke-width={1.5}
-                    stroke='currentColor'
-                    width='20'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      d='M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'
-                    />
-                  </svg>
-                  {hotel.phone}
-                </p>
-                {hotel?.link && (
-                  <a
-                    href={hotel.link}
-                    target='_blank'
-                    class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 '
-                  >
-                    {t('hotels.book')}
-                    <svg
-                      class='rtl:rotate-180 w-3.5 h-3.5 ms-2'
-                      aria-hidden='true'
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 14 10'
-                    >
-                      <path
-                        stroke='currentColor'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='2'
-                        d='M1 5h12m0 0L9 1m4 4L9 9'
-                      />
-                    </svg>
-                  </a>
-                )}
-              </div>
-              <ul class='w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg border-b-0'>
-                <li class='w-full px-4 py-2 border-b border-gray-200 rounded-t-lg'>
-                  {t('hotels.rate')} {hotel.rate} + {t('hotels.taxes')}
-                </li>
-                <li class='w-full px-4 py-2 border-b border-gray-200 break-words'>
-                  {hotel.email}
-                </li>
-                <li class='w-full px-4 py-2 border-b border-gray-200'>
-                  {t('hotels.code')}
-                  <strong>{hotel.code}</strong>
-                </li>
-                <li class='w-full px-4 py-2 rounded-b-lg flex '>
-                  <img src='/img/walk_icon.webp' width={20} />
-                  <span class='ps-1'>{hotel.time_walk} min</span>
-                </li>
-                <li class='w-full px-4 py-2 flex'>
-                  <img src='/img/car_icon.webp' width={20} />
-                  <span class='ps-1'>{hotel.time_drive} min</span>
-                </li>
-              </ul>
-            </div>
-          ))
-        }
-      </div>
-    </section>
-    <section class='mt-5 mx-12'>
-      <h2 class='font-bold text-2xl text-[#565078]'>{t('hotels.about_gdl')}</h2>
-      <p class='mt-3 text-justify' set:html={t('hotels.description_gdl')} />
-      <h2 class='mt-5 font-bold text-2xl text-[#565078]'>
-        {t('hotels.restaurants')}
-      </h2>
-      <p class='mt-3 text-justify' set:html={t('hotels.restaurants_desc')} />
-      <h2 class='mt-5 font-bold text-2xl text-[#565078]'>
-        {t('hotels.entertainment')}
-      </h2>
-      <p class='mt-3 text-justify' set:html={t('hotels.entertainment_desc')} />
-      <h2 class='mt-5 font-bold text-2xl text-[#565078]'>
-        {t('hotels.money')}
-      </h2>
-      <p class='mt-3 text-justify' set:html={t('hotels.money_desc')} />
-      <a
-        href='https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=MXN'
-        target='_blank'
-        class='inline-flex items-center px-3 py-2 mt-5 text-sm font-medium text-center text-white bg-[#565078] rounded-lg hover:bg-[#fc913f] focus:ring-0'
-      >
-        {t('hotels.link_currency')}
-      </a>
-    </section>
-    */
+      /*
+       */
     }
   </div>
 </Layout>

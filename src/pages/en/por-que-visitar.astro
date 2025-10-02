@@ -1,4 +1,5 @@
 ---
+import Profile from "../../components/Profile.astro";
 import Layout from "../../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
 
@@ -173,5 +174,110 @@ changeLanguage("en");
         </div>
       </div>
     </div>
+    <p
+      class='text-black mt-10 p-4 font-bold text-center text-3xl'
+      set:html={t('home.title-visitor-profile')}
+    />
+
+    <div class='container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <Profile text='home.visitor-profile.item_1' />
+      <Profile text='home.visitor-profile.item_5' />
+      <Profile text='home.visitor-profile.item_9' />
+      <Profile text='home.visitor-profile.item_2' />
+      <Profile text='home.visitor-profile.item_6' />
+      <Profile text='home.visitor-profile.item_10' />
+      <Profile text='home.visitor-profile.item_3' />
+      <Profile text='home.visitor-profile.item_7' />
+      <Profile text='home.visitor-profile.item_11' />
+      <Profile text='home.visitor-profile.item_4' />
+      <Profile text='home.visitor-profile.item_8' />
+    </div>
   </section>
+  <style>
+    .button {
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      padding-block: 0.5rem;
+      padding-inline: 1.25rem;
+      background: rgb(188, 1, 0);
+      background: linear-gradient(
+        90deg,
+        rgba(188, 1, 0, 1) 0%,
+        rgba(215, 105, 1, 1) 100%
+      );
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #ffff;
+      gap: 10px;
+      font-weight: bold;
+      border: 3px solid #ffffff4d;
+      outline: none;
+      overflow: hidden;
+      font-size: 15px;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      border-color: #fff9;
+    }
+
+    .button:hover .icon {
+      transform: translate(4px);
+    }
+
+    .button:hover::before {
+      animation: shine 1.5s ease-out infinite;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+      );
+      top: 0;
+      left: -100px;
+      opacity: 0.6;
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100px;
+      }
+
+      60% {
+        left: 100%;
+      }
+
+      to {
+        left: 100%;
+      }
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        scale: 10%;
+      }
+      to {
+        opacity: 1;
+        scale: 100%;
+      }
+    }
+  </style>
 </Layout>

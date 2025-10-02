@@ -3,27 +3,35 @@ import { t } from 'i18next'
 ---
 
 <section>
-  <p class='text-white text-3xl text-center font-bold p-10'>
+  <p class='text-white text-4xl text-center font-bold p-10'>
     {t('footer.contact')}
   </p>
-  <div class='sm:flex mx-24 gap-20 justify-around text-xl'>
-    <div class='text-center text-white'>
+  <div
+    class='grid md:grid-cols-2 xl:grid-cols-3 mx-24 gap-20 justify-around text-xl'
+  >
+    <div
+      class='text-center text-white bg-[#978FD0] rounded-lg pt-10 px-4 pb-5 m-5 relative'
+    >
       <img
         src='/img/samuel-ramirez.webp'
         alt='Samuel Ramírez'
-        class='rounded-full w-28 mx-auto my-6'
+        class='absolute right-[40%] -top-10 rounded-full w-28'
       />
-      <span class='font-bold'>México, Centro & Sudamérica </span>
-      <p class='mt-5'>Samuel Ramírez</p>
-      <a href='mailto:samuel.ramirez@igeco.mx' class='justify-center'>
-        <div class='flex'>
+      <p class='mt-10 text-xl font-bold'>Samuel Ramírez</p>
+      <span class='text-sm font-bold'>México, Centro & Sudamérica </span>
+
+      <a
+        href='mailto:samuel.ramirez@igeco.mx'
+        class='flex justify-center gap-4'
+      >
+        <p class='underline'>samuel.ramirez@igeco.mx</p>
+        <div class='p-1 rounded-full bg-white'>
           <svg
-            class='mx-2'
             xmlns='http://www.w3.org/2000/svg'
-            fill='#1d7e7a'
+            fill='white'
             viewBox='0 0 24 24'
             stroke-width='1.5'
-            stroke='currentColor'
+            stroke='black'
             width='20'
             ><path
               stroke-linecap='round'
@@ -31,32 +39,30 @@ import { t } from 'i18next'
               d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
             ></path></svg
           >
-          <p>samuel.ramirez@igeco.mx</p>
         </div>
-        <button
-          class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
-        >
-          {t('home.button_contact')}
-        </button>
       </a>
     </div>
-    <div class='text-center text-white'>
+
+    <div
+      class='text-center text-white bg-[#978FD0] rounded-lg pt-10 px-4 pb-5 m-5 relative'
+    >
       <img
         src='/img/raymanWu.webp'
         alt='Rayman Wu'
-        class='rounded-full w-28 mx-auto my-6'
+        class='absolute right-[40%] -top-10 rounded-full w-28'
       />
+
+      <p class='mt-10 text-xl font-bold'>Rayman Wu</p>
       <span class='font-bold'>China </span>
-      <p class='mt-5'>Rayman Wu</p>
-      <a href='mailto:info@snec.org.cn' class='justify-center'>
-        <div class='flex'>
+      <a href='mailto:info@snec.org.cn' class='flex justify-center gap-4'>
+        <p class='underline'>info@snec.org.cn</p>
+        <div class='p-1 rounded-full bg-white'>
           <svg
-            class='mx-2'
             xmlns='http://www.w3.org/2000/svg'
-            fill='#1d7e7a'
+            fill='white'
             viewBox='0 0 24 24'
             stroke-width='1.5'
-            stroke='currentColor'
+            stroke='black'
             width='20'
             ><path
               stroke-linecap='round'
@@ -64,32 +70,29 @@ import { t } from 'i18next'
               d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
             ></path></svg
           >
-          <p>info@snec.org.cn</p>
         </div>
-        <button
-          class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
-        >
-          {t('home.button_contact')}
-        </button>
       </a>
     </div>
-    <div class='text-center text-white'>
+
+    <div
+      class='text-center text-white bg-[#978FD0] rounded-lg pt-10 px-4 pb-5 m-5 relative'
+    >
       <img
         src='/img/Pamela-velazquez.webp'
         alt='Pamela Velazco'
-        class='rounded-full w-28 mx-auto my-6'
+        class='absolute right-[40%] -top-10 rounded-full w-28'
       />
+      <p class='mt-10 text-xl font-bold'>Pamela Velazco</p>
       <span class='font-bold'>USA </span>
-      <p class='mt-5'>Pamela Velazco</p>
-      <a href='mailto: pvelazco@re-plus.com' class='justify-center'>
-        <div class='flex'>
+      <a href='mailto: pvelazco@re-plus.com' class='flex justify-center'>
+        <p class='underline'>pvelazco@re-plus.com</p>
+        <div class='p-1 rounded-full bg-white'>
           <svg
-            class='mx-2'
             xmlns='http://www.w3.org/2000/svg'
-            fill='#1d7e7a'
+            fill='white'
             viewBox='0 0 24 24'
             stroke-width='1.5'
-            stroke='currentColor'
+            stroke='black'
             width='20'
             ><path
               stroke-linecap='round'
@@ -97,13 +100,7 @@ import { t } from 'i18next'
               d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
             ></path></svg
           >
-          <p>pvelazco@re-plus.com</p>
         </div>
-        <button
-          class='text-black bg-white hover:bg-slate-200 px-3 py-2 rounded-lg m-4'
-        >
-          {t('home.button_contact')}
-        </button>
       </a>
     </div>
   </div>

@@ -4,18 +4,16 @@ import Hero from "../components/Hero.astro";
 import { t, changeLanguage } from "i18next";
 import Sponsors from "../components/Sponsors.astro";
 import Tariffs from "../components/Tariffs.astro";
-import Card from "../components/Card.astro";
-import Contacts from "../components/Contacts.astro";
 import Logos from "../components/Logos.astro";
 import Galeria from "../components/Galeria.astro";
 import Testimonials from "../components/Testimonials.astro";
 import BuyersProfessional from "../components/BuyersProfessional.astro";
 import Exhibitors from "../components/Exhibitors.astro";
 import { gallery2025 } from "../data/constans_gallery";
-import FreeRegiter from "../components/home/FreeRegiter.astro";
 import BecomeExhibitor from "../components/home/BecomeExhibitor.astro";
 import Cifras from "../components/home/Cifras.astro";
 import Segmentos from "../components/home/Segmentos.astro";
+import Recinto from "../components/hotel/Recinto.astro";
 
 changeLanguage("es");
 ---
@@ -23,27 +21,11 @@ changeLanguage("es");
 <Layout title='RE+ Mexico'>
   <Hero />
   <BecomeExhibitor />
-  <FreeRegiter />
-
-  {
-    /* <section class='container mx-auto px-4 grid md:grid-cols-2 gap-10 py-10'>
-    <div class='bg-white py-12 sm:text-xl text-justify'>
-      <span class='text-[#565078] sm:text-2xl font-bold my-4'>RE+ MEXICO</span>
-      <span set:html={t('home.solar_description')} />
-    </div>
-    <lite-youtube videoid='zFTOIpLv6AQ' params='controls=0&enablejsapi=1'>
-    </lite-youtube>
-  </section>*/
-  }
-
   <Cifras />
-  <Sponsors />
   <Segmentos />
-
+  <Sponsors />
   <Tariffs />
   <Testimonials />
-  <BuyersProfessional />
-  <Exhibitors />
   <section class='container mx-auto px-4 my-10'>
     <p class='text-[#565078] text-3xl text-center font-bold p-10'>
       {t('home.title-testimonials')}
@@ -83,21 +65,121 @@ changeLanguage("es");
         class='rounded-lg h-96 w-60'></lite-youtube>
     </div>
   </section>
-  <div class='bg-gradient-to-r from-[#766EA6] to-[#565078] pb-10'>
-    <Contacts />
-    <div
-      class='transition duration-300 bg-white hover:bg-[#0CCB67] hover:text-white px-5 mx-auto text-center font-bold text-xl p-3 rounded-lg my-5 w-72'
-    >
-      <p>{t('contactForm.title')}</p>
-    </div>
-  </div>
+
   <section class='container mx-auto px-4'>
     <p class='text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} RE+ MEXICO 2025
     </p>
-    <Galeria images={gallery2025} />
+
+    <div
+      id='indicators-carousel'
+      class='relative w-full'
+      data-carousel='static'
+    >
+      <!-- Carousel wrapper -->
+      <div
+        class='relative overflow-hidden rounded-2xl h-96 md:h-[500px] 2xl:h-[650px]'
+      >
+        <!-- Item 1 -->
+        {
+          gallery2025.map((image, index) => (
+            <div
+              class='hidden duration-700 ease-in-out'
+              data-carousel-item={index === 0 ? 'active' : ''}
+            >
+              <img
+                src={image.src}
+                class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+                alt='...'
+              />
+            </div>
+          ))
+        }
+      </div>
+      <!-- Slider indicators -->
+      <div
+        class='absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2'
+      >
+        {
+          gallery2025.map((image, index) => (
+            <button
+              type='button'
+              class='w-3 h-3 rounded-full'
+              aria-current={index === 0 ? 'true' : 'false'}
+              aria-label={`Slide ${index + 1}`}
+              data-carousel-slide-to={index}
+            />
+          ))
+        }
+      </div>
+      <!-- Slider controls -->
+      <button
+        type='button'
+        class='absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
+        data-carousel-prev
+      >
+        <span
+          class='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'
+        >
+          <svg
+            class='w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 6 10'
+          >
+            <path
+              stroke='currentColor'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M5 1 1 5l4 4'></path>
+          </svg>
+          <span class='sr-only'>Previous</span>
+        </span>
+      </button>
+      <button
+        type='button'
+        class='absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
+        data-carousel-next
+      >
+        <span
+          class='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'
+        >
+          <svg
+            class='w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 6 10'
+          >
+            <path
+              stroke='currentColor'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='m1 9 4-4-4-4'></path>
+          </svg>
+          <span class='sr-only'>Next</span>
+        </span>
+      </button>
+    </div>
   </section>
+  <BuyersProfessional />
+  <Exhibitors />
+
   <Logos />
+  <Recinto />
+  <section class='container mx-auto px-4 mt-20'>
+    <iframe
+      src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1109.9423765640831!2d-103.39088095688885!3d20.65385865406387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428addaf761b92d%3A0x2f0e04ac2a4f3e36!2sExpo%20Guadalajara!5e0!3m2!1ses!2smx!4v1759442798429!5m2!1ses!2smx'
+      class='w-full'
+      height='450'
+      style='border:0;'
+      allowfullscreen=''
+      loading='lazy'
+      referrerpolicy='no-referrer-when-downgrade'></iframe>
+  </section>
 </Layout>
 
 <script>

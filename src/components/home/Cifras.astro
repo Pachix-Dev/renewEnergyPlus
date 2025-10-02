@@ -7,62 +7,71 @@ import { t } from 'i18next'
   <div class='container mx-auto px-4 my-10'>
     <p
       data-aos='fade-up'
-      data-aos-duration='1000'
-      class='text-[#565078] text-3xl text-center font-extrabold p-10'
-    >
-      {t('home.cifra_1')}
-    </p>
-    <p
-      data-aos='fade-up'
       data-aos-duration='1500'
-      class='text-[#565078] text-xl text-center p-10'
+      class='text-[#565078] text-4xl font-extrabold text-center p-10'
     >
       {t('home.cifra_2')}
     </p>
-    <div class='grid md:grid-cols-4 gap-10 mt-10'>
+    <div class='flex flex-row flex-wrap gap-2 mt-10 justify-center mx-auto'>
       <div
         data-aos='fade-up'
         data-aos-duration='1600'
-        class='text-center rounded-lg p-5 shadow-lg border-l-4 border-[#565078]'
+        class='text-center rounded-tr-3xl rounded-bl-3xl p-5 shadow-lg border-l-4 border-[#565078] bg-[#8F7FB7] text-white font-bold'
       >
-        <p class='font-extrabold text-[#5A547E] text-4xl'>
+        <img src='/img/iconsegmentos1.png' class='mx-auto mb-3 h-16' />
+        <p class='font-extrabold text-4xl'>
           <Numbers client:only='react' number='15000' duration='5' />
         </p>
         <p>
           {t('home.cifra_3')}
         </p>
       </div>
+
       <div
         data-aos='fade-up'
         data-aos-duration='1700'
-        class='text-center rounded-lg p-5 shadow-lg border-l-4 border-[#565078]'
+        class='text-center rounded-tr-3xl rounded-bl-3xl p-5 shadow-lg border-l-4 border-[#565078] bg-[#8F7FB7] text-white font-bold'
       >
-        <p class='font-extrabold text-[#5A547E] text-4xl'>
+        <img src='/img/iconsegmentos2.png' class='mx-auto mb-3 h-16' />
+        <p class='font-extrabold text-4xl'>
           + <Numbers client:only='react' number='10000' duration='5' />
         </p>
         <p>{t('home.cifra_4')}</p>
       </div>
+
       <div
         data-aos='fade-up'
         data-aos-duration='1800'
-        class='text-center rounded-lg p-5 shadow-lg border-l-4 border-[#565078]'
+        class='text-center rounded-tr-3xl rounded-bl-3xl p-5 shadow-lg border-l-4 border-[#565078] bg-[#8F7FB7] text-white font-bold'
       >
-        <p class='font-extrabold text-[#5A547E] text-4xl'>
+        <img src='/img/iconsegmentos3.png' class='mx-auto mb-3 h-16' />
+        <p class='font-extrabold text-4xl'>
           + <Numbers client:only='react' number='250' duration='5' />
         </p>
         <p>
           {t('home.cifra_5')}
         </p>
       </div>
+
       <div
         data-aos='fade-up'
         data-aos-duration='2000'
-        class='text-center rounded-lg p-5 shadow-lg border-l-4 border-[#565078]'
+        class='text-center rounded-tr-3xl rounded-bl-3xl p-5 shadow-lg border-l-4 border-[#565078] bg-[#8F7FB7] text-white font-bold'
       >
-        <p class='font-extrabold text-[#5A547E] text-4xl'>
+        <img src='/img/iconsegmentos5.png' class='mx-auto mb-3 h-16' />
+        <p class='font-extrabold text-4xl'>
           + <Numbers client:only='react' number='50' duration='5' />
         </p>
         <p>{t('home.cifra_6')}</p>
+      </div>
+      <div
+        data-aos='fade-up'
+        data-aos-duration='2000'
+        class='text-center rounded-tr-3xl rounded-bl-3xl p-5 shadow-lg border-l-4 border-[#565078] bg-[#8F7FB7] text-white font-bold'
+      >
+        <img src='/img/iconsegmentos4.png' class='mx-auto mb-3 h-16' />
+        <p class='font-extrabold text-4xl opacity-0'>+</p>
+        <p>{t('home.cifra_7')}</p>
       </div>
     </div>
   </div>
