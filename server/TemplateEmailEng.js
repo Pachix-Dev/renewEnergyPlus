@@ -38,26 +38,26 @@ const email_template_eng = async ({ name, paternSurname, maternSurname=''}) => {
             </div>               
             <p style="font-weight:bold;font-size:20px;text-align: center;">ADD TO CALENDAR</p>
             <div style="text-align:center;padding:20px;margin: 20px;">
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260305T170000Z%2F20260308T000000Z&details=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&location=Expo%2C%20Guadalajara%2C%20Jalisco&text=Re%2B%20MEXICO"
+              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260414T214500Z%2F20260416T214500Z&details=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&location=Expo%2C%20Guadalajara%2C%20Jalisco&text=RE%2B%20MEXICO"
               target="_blank">                        
                 Google
               </a>                           
             </div>
             <div style="text-align:center;padding:20px;margin: 20px;">
-                 <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&enddt=2026-03-07T18%3A00%3A00&location=Expo%2C%20Guadalajara%2C%20Jalisco&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2026-03-05T11%3A00%3A00&subject=Re%2B%20MEXICO"
+                 <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Discover%20the%20latest%20trends%2C%20innovations%2C%20knowledge%20and%20technologies%20in%20Solar%20Components%20and%20Equipment%2C%20Energy%20Storage%2C%20Thermal%20Technology%2C%20Inverters%20and%20Grid%20Infrastructure%2C%20which%20will%20be%20needed%20to%20accelerate%20the%20global%20renewable%20energy%20transition.&enddt=2026-04-16T15%3A45%3A00&location=Expo%2C%20Guadalajara%2C%20Jalisco&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2026-04-14T15%3A45%3A00&subject=RE%2B%20MEXICO"
               target="_blank">                       
                 Outlook
               </a>
             </div>                   
             <div style="text-align:center;padding:20px;margin: 20px;">
-              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Discover%2520the%2520latest%2520trends%252C%2520innovations%252C%2520knowledge%2520and%2520technologies%2520in%2520Solar%2520Components%2520and%2520Equipment%252C%2520Energy%2520Storage%252C%2520Thermal%2520Technology%252C%2520Inverters%2520and%2520Grid%2520Infrastructure%252C%2520which%2520will%2520be%2520needed%2520to%2520accelerate%2520the%2520global%2520renewable%2520energy%2520transition.&dur=false&et=20260308T000000Z&in_loc=Expo%2C+Guadalajara%2C+Jalisco&st=20260305T170000Z&title=Re%252B%2520MEXICO&v=60"
+              <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;margin:20px;text-decoration:none;" href="https://calendar.yahoo.com/?desc=Discover%2520the%2520latest%2520trends%252C%2520innovations%252C%2520knowledge%2520and%2520technologies%2520in%2520Solar%2520Components%2520and%2520Equipment%252C%2520Energy%2520Storage%252C%2520Thermal%2520Technology%252C%2520Inverters%2520and%2520Grid%2520Infrastructure%252C%2520which%2520will%2520be%2520needed%2520to%2520accelerate%2520the%2520global%2520renewable%2520energy%2520transition.&dur=false&et=20260416T214500Z&in_loc=Expo%2C+Guadalajara%2C+Jalisco&st=20260414T214500Z&title=RE%252B%2520MEXICO&v=60"
               target="_blank">
                 
               <i>Y!</i> Yahoo!
               </a>                            
             </div>
             <div style="text-align:center;padding:20px;margin: 20px;">
-                <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://re-plus-mexico.com.mx/calendar-replusmexico-eng.ics" donwload target="_blank">  
+                <a style="background: rgb(18,172,255);background: linear-gradient(90deg, rgba(18,172,255,1) 0%, rgba(10,61,255,1) 100%);color:white;padding:20px;border-radius:20px;text-decoration:none;" href="https://re-plus-mexico.com.mx/calendar-replusmexico-2026.ics" donwload target="_blank">  
                 iCalendar
               </a>
             </div>
