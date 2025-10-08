@@ -331,7 +331,7 @@ async function generatePDF_freePass( body, uuid) {
     doc.restore();
 
     
-    doc.image('img/header_gafete.jpg', 0, 0, { width: 305 })       
+    doc.image('img/header_replus_2026.png', 0, 0, { width: 305 })       
     // aqui iria el QR con info del usuario    
     doc.image(qrMainUser, 90, 120, { width: 120 });
     
@@ -346,7 +346,7 @@ async function generatePDF_freePass( body, uuid) {
     .moveDown(0.5)
     .text(body.company);
 
-    body.typeRegister === 'VISITANTE' ? doc.image('img/footer_gafete.jpg', 0, 328, { width: 305 }) : doc.image('img/footer_prensa_gafete.jpg', 0, 328, { width: 305 });
+    body.typeRegister === 'VISITANTE' ? doc.image('img/footer_visitante_replus_2026.png', 0, 328, { width: 305 }) : doc.image('img/footer_prensa_replus_2026.png', 0, 328, { width: 305 });
     doc
     .font('Helvetica-Bold')
     .fontSize(17)
@@ -421,21 +421,21 @@ async function generatePDF_freePass( body, uuid) {
         align: 'center'
     })
     .moveDown(1)    
-    .text('Miércoles/Wednesday   11:00 am – 6:00 pm', 330, 250, {
+    .text('Martes/Tuesday 11:00 am – 6:00 pm', 330, 250, {
         width: 250,    
         align: 'center'
     })
-    .text('Jueves/Thursday  11:00 am – 6:00 pm', 330, 260, {
+    .text('Miércoles/Wednesday 11:00 am – 6:00 pm', 330, 260, {
         width: 250,    
         align: 'center'
     })
-    .text('Viernes/Friday  11:00 am – 5:00 pm', 330, 270, {
+    .text('Jueves/Thursday 11:00 am – 5:00 pm', 330, 270, {
         width: 250,    
         align: 'center'
     });
     
 
-    body.typeRegister === 'VISITANTE' ? doc.image('img/footer2_gafete.jpg', 307, 328, { width: 306 }) : doc.image('img/footer2_prensa_gafete.jpg', 307, 328, { width: 306 });
+    body.typeRegister === 'VISITANTE' ? doc.image('img/footer_visitante_replus_2026_2.png', 307, 328, { width: 306 }) : doc.image('img/footer_prensa_replus_2026_2.png', 307, 328, { width: 306 });
 
     doc.save();
     // Rotate and draw some text

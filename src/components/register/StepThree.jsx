@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useRegisterForm } from '../../store/register-form'
 import { useState } from 'react'
-import { MultiSelect } from 'react-multi-select-component'
+import CustomMultiSelect from './CustomMultiSelect.jsx'
 
 export function StepThree({ translates, currentLanguage }) {
   const {
@@ -254,12 +254,12 @@ export function StepThree({ translates, currentLanguage }) {
           <p className='font-semibold text-black'>
             {translates.already_visited}
           </p>
-          <MultiSelect
+          <CustomMultiSelect
             options={options}
             value={alreadyVisited}
             onChange={setAlreadyVisited}
-            labelledBy='Select'
-            className='mt-2 w-full text-sm text-black *:text-black uppercase'
+            label=''
+            className='mt-2 w-full text-sm text-white *:text-black uppercase'
             hasSelectAll={false}
           />
         </div>

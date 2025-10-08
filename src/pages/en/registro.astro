@@ -1,9 +1,9 @@
 ---
 import i18next, { changeLanguage, t } from "i18next";
-import { RegisterForm } from "../../components/register/RegisterForm.jsx";
 import LayoutRegister from "../../layouts/LayoutRegister.astro";
 import { sponsors } from "../../data/constanst_logos.js";
 import MarqueeSponsors from "../../components/register/MarqueeSponsors.astro";
+import { PreValidation } from "../../components/register/PreValidation";
 
 changeLanguage("en");
 
@@ -12,25 +12,94 @@ const currentLanguage = i18next.language;
 ---
 
 <LayoutRegister title='RE+ Mexico | Registro'>
-  <main class='py-5 grid w-full content-center container mx-auto px-4'>
-    <section class='mb-10 max-w-screen-lg mx-auto'>
-      <MarqueeSponsors partners={sponsors} isLeftToRight />
-    </section>
-    <h1 class='text-center font-extrabold text-4xl'>
-      {t('register.title')}
-    </h1>
-    <p class='text-center text-2xl font-bold'>
-      {t('program.comming_soon')}
-    </p>
-    {
-      /* <RegisterForm
-      translates={registerTranslations}
-      currentLanguage={currentLanguage}
-      client:only='react'
-    />*/
-    }
+  <main class='min-h-screen flex items-center justify-center p-5'>
+    <div class='w-1/2 bg-white overflow-hidden'>
+      {/* Panel Izquierdo - Formulario */}
+      <div class='p-12 bg-white'>
+        {/* Título */}
+        <div class='mb-8'>
+          <h1 class='text-left font-extrabold text-4xl'>
+            {t('register.title')}
+          </h1>
+          <p class='text-gray-600 font-bold text-sm'>
+            {t('register.welcome')}
+          </p>
+        </div>
+        <div class='flex items-center gap-4 font-bold'>
+          {t('register.first_time')}
+          <a
+            href='/registro-nuevo'
+            class='bg-[#6C6598] hover:bg-[#5a5484] hover:scale-110 ease-in-out duration-200 text-white px-4 py-2 rounded-xl flex items-center gap-2'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z'
+              ></path>
+            </svg>
+            {t('register.button')}</a
+          >
+        </div>
+        <PreValidation
+          client:only='react'
+          translates={registerTranslations}
+          currentLanguage={currentLanguage}
+        />
+      </div>
+    </div>
+
+    {/* Panel Derecho - Diseño Visual */}
+    <div
+      class='w-1/2 bg-gradient-to-r from-[#766EA6] to-[#565078] p-12 text-white relative rounded-2xl'
+    >
+      {/* Círculos decorativos de fondo */}
+      <div class='absolute inset-0 overflow-hidden'>
+        <div
+          class='absolute top-10 right-10 w-32 h-32 bg-white bg-opacity-10 rounded-full'
+        >
+        </div>
+        <div
+          class='absolute bottom-20 left-10 w-24 h-24 bg-white bg-opacity-5 rounded-full'
+        >
+        </div>
+        <div
+          class='absolute top-1/2 right-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full'
+        >
+        </div>
+      </div>
+      {/* Logo */}
+      <img src='/img/replusR.webp' alt='RE+ Mexico Logo' class='w-32 mb-8' />
+      {/* Contenido Principal */}
+      <div class='relative z-10 text-left mb-8'>
+        <p
+          class='font-[Tungsten-Medium] text-white text-5xl lg:text-6xl text-left uppercase font-bold'
+        >
+          {t('home.slogan')}
+        </p>
+        <p
+          class='mt-5 font-[Tungsten-Medium] text-white text-4xl lg:text-7xl text-left'
+        >
+          {t('home.event-date')}
+          <span class=''>| 2026</span>
+        </p>
+      </div>
+
+      {/* Tarjeta Simulada */}
+      <div class='bg-[#FFFFFF] rounded-2xl p-5 shadow-2xl relative z-10'>
+        <MarqueeSponsors partners={sponsors} isLeftToRight />
+      </div>
+    </div>
   </main>
 </LayoutRegister>
+
 <style>
   body {
     background-color: white;

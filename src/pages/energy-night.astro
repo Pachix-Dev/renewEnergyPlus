@@ -1,5 +1,5 @@
 ---
-import { t, changeLanguage } from "i18next";
+import i18next, { t, changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import { AddEnergyNight } from "../components/ecommerce/AddEnergyNight.jsx";
 import Carousel from "../components/energy-night/Carousel.astro";
@@ -151,7 +151,9 @@ const translate = t("ecommerce", { returnObjects: true });
       class='bg-[url(/img/bg_energy_3.webp)] bg-cover bg-no-repeat bg-fixed py-20'
     >
       <a
-        href='/doc/RE-MEXICO-SPONSORSHIPS-2025-ENG-06122024_compressed.pdf'
+        href={i18next.language === 'es'
+          ? '/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V4_compressed.pdf'
+          : '/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V4_compressed.pdf'}
         target='_blank'
         class='bg-[#4E549F] hover:bg-[#4E549F] text-white rounded-full py-6 px-10 flex mx-auto w-fit text-center font-bold text-2xl md:text-4xl'
       >

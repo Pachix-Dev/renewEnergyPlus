@@ -212,6 +212,7 @@ export function StepTwo({ translates }) {
           )}
         </div>
       </div>
+
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
           <p className='font-semibold text-black'>
@@ -267,6 +268,7 @@ export function StepTwo({ translates }) {
           )}
         </div>
       </div>
+
       <div className='mt-3'>
         <p className='text-black'>
           {translates.adrdress} <span className='text-red-600'>*</span>
@@ -311,6 +313,7 @@ export function StepTwo({ translates }) {
           <p className='text-red-600 font-light'>{errors.address.message}</p>
         )}
       </div>
+
       <div className='grid md:grid-cols-2 gap-6 mt-5'>
         <div>
           <p className='font-semibold text-black'>

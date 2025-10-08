@@ -1,0 +1,36 @@
+---
+import i18next, { changeLanguage, t } from "i18next";
+import LayoutRegister from "../layouts/LayoutRegister.astro";
+import { sponsors } from "../data/constanst_logos.js";
+import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
+import { RegisterForm } from "../components/register/RegisterForm";
+
+changeLanguage("es");
+
+const registerTranslations = t("register", { returnObjects: true });
+const currentLanguage = i18next.language;
+---
+
+<LayoutRegister title='RE+ Mexico | Registro'>
+  <main class='py-5 grid w-full content-center container mx-auto px-4'>
+    <section class='mb-10 max-w-screen-lg mx-auto'>
+      <MarqueeSponsors partners={sponsors} isLeftToRight />
+    </section>
+    <section class='py-5'>
+      <form class='mx-auto'>
+        <RegisterForm
+          translates={registerTranslations}
+          currentLanguage={currentLanguage}
+          client:only='react'
+        />
+      </form>
+    </section>
+  </main>
+</LayoutRegister>
+
+<style>
+  body {
+    background-color: white;
+    color: black;
+  }
+</style>

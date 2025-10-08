@@ -239,7 +239,7 @@ export class RegisterModel {
       const connection = await mysql.createConnection(config)
       try {      
         const [result] = await connection.query(
-          'INSERT INTO users (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+          'INSERT INTO users_2026 (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
           [
             uuid,             
             name,
@@ -324,7 +324,7 @@ export class RegisterModel {
 		try {
       
 			const [users] = await connection.query(
-				'SELECT * FROM users WHERE email = ?',
+				'SELECT * FROM users_2026 WHERE email = ?',
 				[email]
 			)
 
@@ -491,5 +491,32 @@ export class RegisterModel {
   }
 
 
+  // checar si el usuario ya visito antes la feria
+	static async get_user_visit_last_fair(email) {
+		const connection = await mysql.createConnection(config)
+		try {
+      
+			const [users] = await connection.query(
+				'SELECT * FROM users WHERE email = ?',
+				[email]
+			)
 
+			if (users.length === 0) {
+				return {
+          status: false,
+				  error: 'No se encontró el usuario',
+				}
+			}
+      
+      else{
+        return {
+          status: true,
+          ...users[0],
+        }
+      }
+      
+		} finally {
+			await connection.end()
+		}
+	}
 }

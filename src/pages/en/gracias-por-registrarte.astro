@@ -49,7 +49,7 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
     >
       <a
         href={`${base}/programa-premium`}
-        class='card p-5 hover:scale-105 ease-in-out duration-300'
+        class='button p-5 hover:scale-105 ease-in-out duration-300'
       >
         <span class='text-white z-10 font-extrabold text-xl'
           >{t('program.button1')}</span
@@ -58,67 +58,3 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
     </div>
   </div>
 </Layout>
-<style>
-  .box {
-    color: black;
-    font-weight: 800;
-  }
-
-  #box1::after {
-    display: flex;
-    transform: rotateX(180deg);
-    background-image: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 10%,
-      rgba(255, 255, 255, 0.5)
-    );
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  .card {
-    width: fit-content;
-    background: #f6f6f6;
-    position: relative;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-
-  .card::before {
-    content: '';
-    position: absolute;
-    width: 250px;
-    background-image: linear-gradient(
-      90deg,
-      rgba(188, 1, 0, 1) 0%,
-      rgba(215, 105, 1, 1) 100%
-    );
-    height: 30px;
-    animation: rotBGimg 3s linear infinite;
-    transition: all 0.2s linear;
-  }
-
-  @keyframes rotBGimg {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .card::after {
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(
-      90deg,
-      rgba(188, 1, 0, 1) 0%,
-      rgba(215, 105, 1, 1) 100%
-    );
-    inset: 5px;
-    border-radius: 15px;
-  }
-</style>

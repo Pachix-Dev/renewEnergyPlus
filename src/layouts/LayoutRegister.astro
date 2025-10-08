@@ -108,6 +108,13 @@ const { title } = Astro.props
 
     <slot />
     <style is:global>
+      @font-face {
+        font-family: 'Tungsten-Medium';
+        src: url('/fonts/Tungsten-Medium.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
       ::-webkit-scrollbar {
         height: 5px;
         width: 5px;

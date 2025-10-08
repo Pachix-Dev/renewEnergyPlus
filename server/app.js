@@ -41,6 +41,16 @@ const payment = new Payment(mercadopago);
 
 const resend = new Resend(process.env.RESEND_APIKEY)
 
+app.get('/check-user-visit', async (req, res) => {
+    const { email } = req.query;
+    const user = await RegisterModel.get_user_visit_last_fair(email);
+    if (user) {
+        return res.status(200).send(user);
+    } else {
+        return res.status(404).send({ message: 'No se encontró el usuario' });
+    }
+});
+
 app.post('/create-order-replus', async (req, res) => {
     try {
         const { body } = req;
@@ -510,9 +520,9 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
                   
         const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });       
         await resend.emails.send({
-            from: 'RE+ MEXICO 2025 <noreply@re-plus-mexico.com.mx>',
+            from: 'RE+ MEXICO 2026 <noreply@re-plus-mexico.com.mx>',
             to: data.email,
-            subject: 'Confirmación de pre registro RE+ MEXICO 2025',
+            subject: 'Confirmación de pre registro RE+ MEXICO 2026',
             html: emailContent,
             attachments: [
                 {

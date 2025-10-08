@@ -4,7 +4,7 @@ import { persist } from "zustand/middleware";
 const useRegisterForm = create( 
     persist(
         (set) => ({     
-            step: 0,
+            step: 0,            
             idUser: 0,
             uuid: "",            
             name: "",
@@ -36,13 +36,14 @@ const useRegisterForm = create(
             productInterest: "",
             levelInfluence: "",
             wannaBeExhibitor: "",
-            alreadyVisited: [],
+            alreadyVisited: "",
             
             complete_register: false,
             invoiceDownToLoad: "",
             items: [],
             total: 0,
             code_cortesia: "",
+            
             
             setIdUser: (idUser) => set({ idUser }),
             setUuid: (uuid) => set({ uuid }),
@@ -135,10 +136,7 @@ const useRegisterForm = create(
                     total: newTotal
                 };
             }),
-            
-            
-            
-            
+                   
             removeToCart: (id) => set((state) => {                
                 const newItems = state.items.filter((item) => item.id !== id);
                 const newTotal = newItems.reduce((sum, i) => sum + i.price, 0); // Calcula el nuevo total
@@ -196,7 +194,7 @@ const useRegisterForm = create(
                 productInterest: "",
                 levelInfluence: "",
                 wannaBeExhibitor: "",
-                alreadyVisited: [],
+                alreadyVisited: "",
                 items:[],
                 total: 0,
                 code_cortesia: ""        
@@ -215,7 +213,7 @@ const useRegisterForm = create(
             })
 
         }), 
-        { name: "register-form" }
+        { name: "register-replus" }
     )
 )
 
