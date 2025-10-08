@@ -59,8 +59,9 @@ export function PreValidation({ translates, currentLanguage }) {
       )
 
       const data = await response.json()
+      console.log(data)
 
-      if (response.ok) {
+      if (data.status) {
         setName(data.name)
         setPaternSurname(data.paternSurname)
         setMaternSurname(data.maternSurname)
@@ -93,7 +94,11 @@ export function PreValidation({ translates, currentLanguage }) {
           ? (window.location.href = '/confirma-tus-datos')
           : (window.location.href = '/en/confirma-tus-datos')
       } else {
-        setError(data.message || 'Error al verificar el email')
+        setError(
+          currentLanguage === 'es'
+            ? 'No se encontró el usuario.'
+            : 'User not found.'
+        )
       }
     } catch (err) {
       setError('Error de conexión. Intenta nuevamente.')
