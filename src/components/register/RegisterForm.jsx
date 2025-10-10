@@ -5,7 +5,6 @@ import { countries } from '../../data/list_countries'
 import 'react-phone-number-input/style.css'
 import './Form.css'
 import { useEffect, useState } from 'react'
-import CustomMultiSelect from './CustomMultiSelect'
 
 export function RegisterForm({ translates, currentLanguage }) {
   const {
