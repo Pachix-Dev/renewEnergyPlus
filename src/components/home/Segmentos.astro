@@ -1,249 +1,390 @@
-<section class='text-white py-12 px-6'>
-  <div class='max-w-6xl mx-auto flex flex-wrap gap-6 justify-center'>
-    <!-- Card 1 -->
+---
+import i18next, { t } from 'i18next'
+---
+
+<section
+  class='relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden'
+>
+  <!-- Elementos decorativos de fondo -->
+  <div class='absolute inset-0'>
     <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='1000'
+      class='absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#565078]/10 to-[#BC0100]/10 rounded-full blur-3xl'
     >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos1.mp4' type='video/mp4' />
-      </video>
+    </div>
+    <div
+      class='absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-[#D76901]/10 to-[#565078]/10 rounded-full blur-3xl'
+    >
+    </div>
+  </div>
 
-      <!-- Overlay degradado -->
+  <div class='container mx-auto px-4 relative z-10'>
+    <!-- Header mejorado -->
+    <div class='text-center mb-16' data-aos='fade-up' data-aos-duration='1000'>
+      <h2 class='text-4xl lg:text-5xl font-bold text-white mb-6'>
+        {t('home.segments.title')}
+      </h2>
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='w-32 h-1 bg-gradient-to-r from-[#BC0100] to-[#D76901] mx-auto rounded-full'
       >
       </div>
-
-      <!-- Contenido -->
-      <div
-        class='relative bottom-0 p-6 flex flex-col justify-between h-full text-white'
-      >
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>
-            Sistemas de tecnología fotovoltaica
-          </h3>
-        </div>
-      </div>
+      <p class='text-xl text-gray-300 mt-6 max-w-3xl mx-auto leading-relaxed'>
+        {t('home.segments.subtitle')}
+      </p>
     </div>
 
-    <!-- Card 2 -->
+    <!-- Grid de segmentos optimizado -->
     <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='1200'
+      class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto'
     >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos7.mp4' type='video/mp4' />
-      </video>
-
-      <!-- Overlay degradado -->
+      <!-- Segmento 1 -->
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='group relative h-80 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='100'
       >
-      </div>
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos1.mp4' type='video/mp4' />
+        </video>
 
-      <!-- Contenido -->
-      <div class='relative p-6 flex flex-col justify-between h-full text-white'>
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>Almacenamiento</h3>
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#BC0100] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category1')}</span
+              >
+            </div>
+            <h3 class='text-xl font-bold text-white leading-tight'>
+              {t('home.segments.item1')}
+            </h3>
+            <p
+              class='text-sm text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+            >
+              {t('home.segments.desc1')}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='1400'
-    >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos6.mp4' type='video/mp4' />
-      </video>
-
-      <!-- Overlay degradado -->
+      <!-- Segmento 2 -->
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='group relative h-80 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='200'
       >
-      </div>
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos7.mp4' type='video/mp4' />
+        </video>
 
-      <!-- Contenido -->
-      <div class='relative p-6 flex flex-col justify-between h-full text-white'>
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>Componentes y equipo</h3>
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#D76901] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category2')}</span
+              >
+            </div>
+            <h3 class='text-xl font-bold text-white leading-tight'>
+              {t('home.segments.item2')}
+            </h3>
+            <p
+              class='text-sm text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+            >
+              {t('home.segments.desc2')}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 4 -->
-    <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='1600'
-    >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos3.mp4' type='video/mp4' />
-      </video>
-
-      <!-- Overlay degradado -->
+      <!-- Segmento 3 -->
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='group relative h-80 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='300'
       >
-      </div>
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos6.mp4' type='video/mp4' />
+        </video>
 
-      <!-- Contenido -->
-      <div class='relative p-6 flex flex-col justify-between h-full text-white'>
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>
-            Tecnologías térmicas y solares
-          </h3>
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#565078] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category3')}</span
+              >
+            </div>
+            <h3 class='text-xl font-bold text-white leading-tight'>
+              {t('home.segments.item3')}
+            </h3>
+            <p
+              class='text-sm text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+            >
+              {t('home.segments.desc3')}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 5 -->
-    <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='1800'
-    >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos4.mp4' type='video/mp4' />
-      </video>
-
-      <!-- Overlay degradado -->
+      <!-- Segmento 4 -->
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='group relative h-80 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='400'
       >
-      </div>
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos3.mp4' type='video/mp4' />
+        </video>
 
-      <!-- Contenido -->
-      <div class='relative p-6 flex flex-col justify-between h-full text-white'>
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>Infraestructura de red</h3>
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#BC0100] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category4')}</span
+              >
+            </div>
+            <h3 class='text-xl font-bold text-white leading-tight'>
+              {t('home.segments.item4')}
+            </h3>
+            <p
+              class='text-sm text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+            >
+              {t('home.segments.desc4')}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 6 -->
-    <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='2000'
-    >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos5.mp4' type='video/mp4' />
-      </video>
-
-      <!-- Overlay degradado -->
+      <!-- Segmento 5 - Span 2 columnas en desktop -->
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='group relative h-80 md:col-span-2 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='500'
       >
-      </div>
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos4.mp4' type='video/mp4' />
+        </video>
 
-      <!-- Contenido -->
-      <div class='relative p-6 flex flex-col justify-between h-full text-white'>
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>
-            Información, comunicación y servicios
-          </h3>
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#D76901] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category5')}</span
+              >
+            </div>
+            <h3 class='text-2xl font-bold text-white leading-tight'>
+              {t('home.segments.item5')}
+            </h3>
+            <p
+              class='text-base text-gray-300 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 max-w-lg'
+            >
+              {t('home.segments.desc5')}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 7 -->
-    <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='2200'
-    >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos2.mp4' type='video/mp4' />
-      </video>
-
-      <!-- Overlay degradado -->
+      <!-- Segmento 6 -->
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='group relative h-80 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='600'
       >
-      </div>
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos5.mp4' type='video/mp4' />
+        </video>
 
-      <!-- Contenido -->
-      <div class='relative p-6 flex flex-col justify-between h-full text-white'>
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>Eólico</h3>
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#565078] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category6')}</span
+              >
+            </div>
+            <h3 class='text-xl font-bold text-white leading-tight'>
+              {t('home.segments.item6')}
+            </h3>
+            <p
+              class='text-sm text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+            >
+              {t('home.segments.desc6')}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 7 -->
-    <div
-      class='relative rounded-2xl overflow-hidden shadow-lg'
-      data-aos='fade-up'
-      data-aos-duration='2200'
-    >
-      <!-- Imagen de fondo -->
-      <video
-        class='absolute inset-0 object-cover w-full h-full'
-        autoplay
-        loop
-        muted
-      >
-        <source src='/video/segmentos8.mp4' type='video/mp4' />
-      </video>
-
-      <!-- Overlay degradado -->
+      <!-- Segmento 7 -->
       <div
-        class='absolute inset-0 bg-gradient-to-b from-[#2a2440]/70 to-[#1a1630]/10'
+        class='group relative h-80 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='700'
       >
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos2.mp4' type='video/mp4' />
+        </video>
+
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#BC0100] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category7')}</span
+              >
+            </div>
+            <h3 class='text-xl font-bold text-white leading-tight'>
+              {t('home.segments.item7')}
+            </h3>
+            <p
+              class='text-sm text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+            >
+              {t('home.segments.desc7')}
+            </p>
+          </div>
+        </div>
       </div>
 
-      <!-- Contenido -->
-      <div class='relative p-6 flex flex-col justify-between h-full text-white'>
-        <div>
-          <h3 class='py-10 text-2xl font-extrabold'>Hidrógeno verde</h3>
+      <!-- Segmento 8 -->
+      <div
+        class='group relative h-80 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='800'
+      >
+        <video
+          class='absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform duration-700'
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src='/video/segmentos8.mp4' type='video/mp4' />
+        </video>
+
+        <div
+          class='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 transition-all duration-500'
+        >
+        </div>
+
+        <div class='absolute bottom-0 left-0 right-0 p-6'>
+          <div
+            class='transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500'
+          >
+            <div class='flex items-center gap-2 mb-3'>
+              <div class='w-2 h-2 bg-[#D76901] rounded-full'></div>
+              <span class='text-xs text-gray-300 uppercase tracking-wider'
+                >{t('home.segments.category8')}</span
+              >
+            </div>
+            <h3 class='text-xl font-bold text-white leading-tight'>
+              {t('home.segments.item8')}
+            </h3>
+            <p
+              class='text-sm text-gray-300 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+            >
+              {t('home.segments.desc8')}
+            </p>
+          </div>
         </div>
       </div>
     </div>
