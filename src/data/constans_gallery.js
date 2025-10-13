@@ -1,16 +1,36 @@
 const gallery2025 = [
+
     {
-        src: '/img/gallery/2025/galeria1.webp',
+        src: '/img/gallery/2025/inauguracion.jpg',
         width: 1920,
         height: 1536,
         alt: 'Solar Storage 2025'
     },
     {
-        src: '/img/gallery/2025/galeria2.webp',
+        src: '/img/gallery/2025/alfasolar.jpg',
         width: 1920,
         height: 1536,
         alt: 'Solar Storage 2025'
     },
+    {
+        src: '/img/gallery/2025/networking.jpg',
+        width: 1920,
+        height: 1536,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/expositorx2.jpg',
+        width: 1920,
+        height: 1536,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/expositorx.jpg',
+        width: 1920,
+        height: 1536,
+        alt: 'Solar Storage 2025'
+    },
+    
     {
         src: '/img/gallery/2025/galeria3.webp',
         width: 1920,
@@ -47,12 +67,7 @@ const gallery2025 = [
         height: 853,
         alt: 'Solar Storage 2025'
     },
-    {
-        src: '/img/gallery/2025/galeria10.webp',
-        width: 1920,
-        height: 853,
-        alt: 'Solar Storage 2025'
-    },
+    
     {
         src: '/img/gallery/2025/galeria11.webp',
         width: 1920,
@@ -81,6 +96,19 @@ const gallery2025 = [
         src: '/img/gallery/2025/galeria15.webp',
         width: 1600,
         height: 1066,
+        alt: 'Solar Storage 2025'
+    },
+     
+    {
+        src: '/img/gallery/2025/galeria1.webp',
+        width: 1920,
+        height: 1536,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2.webp',
+        width: 1920,
+        height: 1536,
         alt: 'Solar Storage 2025'
     },
     {

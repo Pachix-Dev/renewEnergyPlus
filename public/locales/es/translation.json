@@ -144,7 +144,7 @@
             "title": "STANDS",
             "sub-title": "TARIFAS DE PARTICIPACIÓN",
             "item1": {
-                "title1": "Superficie Libre <br/> +18 m2",
+                "title1": "superficie libre <br/> +18 m2",
                 "price1-title":"Early bird <br/> Válido hasta 31.05.25",
                 "price2-title":"Tarifa",
                 "price1": "IVA / m2",
@@ -155,9 +155,9 @@
                 "topic3": "NO incluye: alfombra, construcción, mobiliario, ni servicios."
             },
             "item2": {
-                "title1": "Equipado <br/> 9 m2 mínimo",
+                "title1": "equipado <br/> 9 m2 mínimo",
                 "price1-title":"Early bird <br/> Válido hasta 31.05.25",
-                "price2-title":"Tarifa regular",
+                "price2-title":"Tarifa",
                 "price1": "IVA / m2",
                 "price2": "IVA / m2",
                 "title2": "Incluye alfombra estándar,  mamparas divisorias, antepecho con rótulo en vinil, iluminación, mobiliario estándar, contacto eléctrico de 110v, gafetes de expositor, mención en el directorio.",
@@ -201,7 +201,14 @@
         "text_4": "Director General de Tiga Power",
         "text_5": "“Disfruto mucho asistir a estas conferencias en diferentes países. Esta es la tercera vez que vengo a RE+ México y me agrada ver cuánto ha crecido. Encuentro expositores y conferencias de gran valor”.",
         "text_6": "Visitante",
-        "text_7": "“RE+ Mexico es la expo más importante de Latinoamérica. Nos permite tener más acercamiento con expertos en materia de enrgías renovables y almacenamiento de energía, y alianzas con proveedores clave”."
+        "text_7": "“RE+ Mexico es la expo más importante de Latinoamérica. Nos permite tener más acercamiento con expertos en materia de enrgías renovables y almacenamiento de energía, y alianzas con proveedores clave”.",
+        "entreotros": "entre otros...",
+        "Segmentos": "Segmentos",
+        "segtext": "Explora soluciones y tecnologías en energía renovable e infraestructura.",
+        "global_numbers": "Números <br />globales",
+        "knowtest": "Conoce las experiencias de quienes ya han formado parte de RE+ México",
+        "readyfor": "¿Listo para crear tu propia experiencia en RE+ MEXICO?",
+        "discover_experience": "Descubre las experiencias reales de expositores, visitantes y speakers que han sido parte de RE+ MEXICO"
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
@@ -218,7 +225,7 @@
     },
     "whyexhibit":{
         "why": "Por qué exponer",
-        "description_main": "Exponer en RE+ México le permite posicionar su marca en un mercado en rápido crecimiento, acceder a nuevos compradores a través de redes internacionales, y llegar a 10,000 tomadores de decisiones clave en sectores como energía solar, almacenamiento, hidrógeno verde y eólico. Además, podrá fortalecer relaciones comerciales, promover sus productos ante una audiencia selecta, generar prospectos en un evento único en México y capacitar a sus clientes en nuevas tecnologías.",
+        "description_main": "Exponer en RE+ MEXICO le permite posicionar su marca en un mercado en rápido crecimiento, acceder a nuevos compradores a través de redes internacionales, y llegar a 10,000 tomadores de decisiones clave en sectores como energía solar, almacenamiento, hidrógeno verde y eólico. Además, podrá fortalecer relaciones comerciales, promover sus productos ante una audiencia selecta, generar prospectos en un evento único en México y capacitar a sus clientes en nuevas tecnologías.",
         "title": "¿CUÁLES SON LOS BENEFICIOS DE SER EXPOSITOR?",
         "description": "Exhiba su marca a la vanguardia de un mercado que crece rápidamente",
         "description2": "Obtenga acceso a nuevos compradores a través de la red mundial de Deutsche Messe, Italian Exhibition Group, SNEC y RE+ Events",
@@ -239,7 +246,8 @@
         "description5": "Obtenga una visión general del mercado en un área de exposición de 5.000 m²",
         "description6": "Aumente su productividad a través de soluciones individuales",
         "description7": "Seleccione y compare entre proveedores de tres continentes diferentes: América, Europa y Asia",
-        "description8": "Visite un programa internacional de conferencias y talleres de alta calidad"
+        "description8": "Visite un programa internacional de conferencias y talleres de alta calidad",
+        "discover": "Descubre todas las oportunidades que RE+ MEXICO tiene para ofrecerte"
     },
     "contactForm": {
         "title": "Déjenos un comentario",
@@ -248,7 +256,7 @@
         "send": "Enviar"
     },
     "ExhibitorProfile": {
-        "description": "<strong>RE+ MEXICO</strong> provee a toda la industria solar con una plataforma. Si su empresa se dedica a los campos de energía solar, energía solar térmica, almacenamiento de energía, generación de energía, suministro de redes, hidrogeno verde, eólica, administración de redes y/o redes inteligentes, entonces no pierda la oportunidad de exponer en RE+ MEXICO. Sus productos y servicios pueden ir desde celdas y módulos solares, piezas y componentes, nuevas tecnologías y sistemas de seguimiento, plantas tradicionales hasta planificadores, desarrolladores y proveedores de sistemas y servicios. A continuación, se muestra una lista detallada de productos y servicios.",
+        "description": "<strong>RE+ MEXICO</strong> provee a toda la industria solar con una plataforma. Si su empresa se dedica a los campos de energía solar, energía solar térmica, almacenamiento de energía, generación de energía, suministro de redes, hidrogeno verde, eólica, administración de redes y/o redes inteligentes, entonces no pierda la oportunidad de exponer en RE+ MEXICO. Sus productos y servicios pueden ir desde celdas y módulos solares, piezas y componentes, nuevas tecnologías y sistemas de seguimiento, plantas tradicionales hasta planificadores, desarrolladores y proveedores de sistemas y servicios.",
         "description2": "<strong>FOTOVOLTAICO</strong><br /><br />Sistemas de tecnología fotovoltaica<br />Sistemas independientes<br />Sistemas fotovoltaicos en red<br />Cargadores solares<br />Suministros de energía solar para el tránsito<br />Sistemas de rastreo<br />Otros sistemas de tecnología fotovoltaica<br /><br /><strong>COMPONENTES Y EQUIPO DE ENERGÍA SOLAR FOTOVOLTAICA</strong><br /><br />Celdas solares<br />Paneles fotovoltaicos cristalinos<br />Paneles solares de película delgada<br />Inversores<br />Transformadores<br />Sistemas de monitoreo, medición y control<br />Frenos de circuito de CC<br />Cables<br />Conectores<br />Otros componentes y equipos<br /><br /><strong>TÉRMICA SOLAR</strong><br /><br />Tecnologías térmicas solares<br />Plantas de energía térmicas ST<br />Plantas de energía térmica solar<br />Procesos de calentamiento<br />Aire acondicionado y enfriamiento<br />Ingeniería y diseño<br />Monitoreo y medidas de sistema de control<br />Otros componentes",
         "description3": "<strong>INFRAESTRUCTURA DE RED</strong><br /><br />Servicios de medición <br />Sistemas de infraestructura de red <br />Manejo de red <br />Comercialización de electricidad y energía <br />Sistemas de control de comercio <br />Plantas virtuales de energía y agregación de red <br />(recursos energéticos distribuidos) <br />Productos, soluciones y servicios para redes inteligentes <br />Productos, soluciones y servicios para microrredes<br /><br /><strong>ALMACENAMIENTO</strong><br /><br />Almacenamiento de productos químicos <br />Almacenamiento de productos no químicos <br />Almacenamiento térmico <br />Soluciones de almacenamiento comercial <br />Soluciones de almacenamiento residencial <br />Almacenamiento conectado a la red <br />Almacenamiento fuera de la red <br />Fabricantes de baterías <br />Software<br /><br /><strong>INFORMACIÓN, COMUNICACIONES Y SERVICIOS</strong><br /><br />Investigación y desarrollo <br />Capacitación y formación <br />Servicios de consultoría <br />Contratos EPC y desarrollo de proyectos <br />Mantenimiento, reparaciones y operaciones <br />Servicios financieros <br />Asociaciones y sociedades <br />Editoriales"
     },

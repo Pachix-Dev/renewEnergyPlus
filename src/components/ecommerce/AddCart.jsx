@@ -7,7 +7,7 @@ export function AddCart({ item, translate }) {
     <>
       <button
         onClick={() => addToCart(item)}
-        className='text-white font-bold p-2 bg-gray-700 rounded-lg'
+        className='text-white font-bold p-2 bg-[#4E549F] hover:bg-[#3a3f79] rounded-lg'
       >
         {translate.addtocart}
       </button>

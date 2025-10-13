@@ -1,5 +1,7 @@
 ---
 import Content from "../components/Content.astro";
+import Segmentos from "../components/home/Segmentos.astro";
+import Tariffs from "../components/Tariffs.astro";
 import Layout from "../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
 
@@ -7,195 +9,405 @@ changeLanguage("es");
 ---
 
 <Layout title='RE+ Mexico | quiero ser expositor'>
-  <section class='container mx-auto p-5'>
-    <div class='bg-[#EFEFEF] flex gap-5 items-center rounded-t-lg'>
-      <div class='w-3/5' data-aos='fade-down' data-aos-duration='1000'>
-        <p class='px-10'>
-          <i>RE+ MEXICO</i>
-          <br />
-          <strong class='text-3xl'>{t('whyexhibit.why')}</strong>
-        </p>
-        <p class='my-5 px-10' set:html={t('whyexhibit.description_main')} />
-      </div>
-      <div class='w-2/5' data-aos='fade-in' data-aos-duration='1000'>
-        <img
-          src='/img/bgExhibitorProfile2.webp'
-          alt='Re+ México perfil expositor'
-          class='object-cover h-96 rounded-lg shadow-lg'
-        />
-      </div>
-    </div>
-    <div
-      class='bg-gradient-to-r from-[#766EA6] to-[#565078] text-white p-5 py-10'
-      data-aos='fade-up'
-      data-aos-duration='1000'
-    >
-      <p class='font-bold text-4xl text-center'>{t('whyexhibit.title')}</p>
-      <div class='grid md:grid-cols-2 gap-5 mt-10'>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
+  <!-- Hero Section Mejorado -->
+  <section
+    class='relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-20'
+  >
+    <div class='container mx-auto px-4'>
+      <div class='bg-white rounded-3xl shadow-2xl overflow-hidden'>
+        <!-- Header con gradiente -->
+        <div
+          class='bg-gradient-to-r from-[#766EA6] to-[#565078] p-8 text-white text-center'
+        >
+          <h1 class='text-5xl font-bold mb-4'>
+            <span class='italic'>RE+ MEXICO</span>
+          </h1>
+          <div
+            class='w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full'
           >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18'
-            ></path>
-          </svg>
-          <p class='text-xl'>{t('whyexhibit.description')}</p>
+          </div>
         </div>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418'
-            ></path>
-          </svg>
-          <p class='text-lg'>{t('whyexhibit.description2')}</p>
-        </div>
-      </div>
-      <div class='grid md:grid-cols-2 gap-5 mt-10'>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z'
-            ></path>
-          </svg>
-          <p class='text-xl'>{t('whyexhibit.description3')}</p>
-        </div>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z'
-            ></path>
-          </svg>
-          <p class='text-lg'>{t('whyexhibit.description4')}</p>
-        </div>
-      </div>
-      <div class='grid md:grid-cols-2 gap-5 mt-10'>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z'
-            ></path>
-          </svg>
-          <p class='text-xl'>{t('whyexhibit.description5')}</p>
-        </div>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z'
-            ></path>
-          </svg>
 
-          <p class='text-lg'>{t('whyexhibit.description6')}</p>
+        <!-- Contenido principal -->
+        <div class='flex flex-col lg:flex-row gap-8 p-8 lg:p-12'>
+          <div
+            class='lg:w-3/5 space-y-6'
+            data-aos='fade-right'
+            data-aos-duration='1000'
+          >
+            <h2 class='text-4xl font-bold text-gray-800 leading-tight'>
+              {t('whyexhibit.why')}
+            </h2>
+            <div class='prose prose-lg text-gray-600 leading-relaxed'>
+              <p set:html={t('whyexhibit.description_main')} />
+            </div>
+            <Content />
+          </div>
+
+          <div class='lg:w-2/5' data-aos='fade-left' data-aos-duration='1000'>
+            <div class='relative'>
+              <div
+                class='absolute -inset-4 bg-gradient-to-r from-orange-400 to-red-600 rounded-2xl blur opacity-20'
+              >
+              </div>
+              <img
+                src='/img/gallery/2025/expositorx.jpg'
+                alt='Re+ México perfil expositor'
+                class='relative w-full h-80 lg:h-96 object-cover rounded-2xl shadow-2xl'
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div class='grid md:grid-cols-2 gap-5 mt-10'>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z'
-            ></path>
-          </svg>
-          <p class='text-xl'>{t('whyexhibit.description7')}</p>
-        </div>
-        <div class='grid grid-flow-col items-center gap-2'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='white'
-            class='size-12 bg-[#ED6E07] rounded-full p-1'
-          >
-            <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605'
-            ></path>
-          </svg>
-          <p class='text-lg'>{t('whyexhibit.description8')}</p>
-        </div>
-      </div>
-    </div>
-    <div class='my-10'>
-      <Content />
-    </div>
-    <p class='mt-20'>
-      <strong class='text-3xl'>{t('menu.submenu_2.option_3')}</strong>
-    </p>
-    <p
-      class='bg-white text-justify form-label mt-5'
-      set:html={t('ExhibitorProfile.description')}
-    />
-    <div class='bg-[#EFEFEF] grid md:grid-cols-2 text-sm rounded-lg mt-5'>
-      <p
-        class='text-justify form-label py-10 px-10'
-        set:html={t('ExhibitorProfile.description2')}
-      />
-      <p
-        class='text-justify form-label py-10 px-10'
-        set:html={t('ExhibitorProfile.description3')}
-      />
     </div>
   </section>
+
+  <!-- Beneficios Section Rediseñado -->
+  <section class='py-20 bg-gradient-to-br from-[#766EA6] to-[#565078]'>
+    <div class='container mx-auto px-4'>
+      <div
+        class='text-center mb-16'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+      >
+        <h2 class='text-5xl font-bold text-white mb-6'>
+          {t('whyexhibit.title')}
+        </h2>
+        <div
+          class='w-32 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full'
+        >
+        </div>
+      </div>
+
+      <!-- Grid de beneficios mejorado -->
+      <div class='grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto'>
+        <!-- Beneficio 1 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='100'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='200'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description2')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='300'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description3')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='400'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description4')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beneficio 5 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='500'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description5')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beneficio 6 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='600'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description6')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beneficio 7 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='700'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description7')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beneficio 8 -->
+        <div
+          class='group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='800'
+        >
+          <div class='flex items-start gap-6'>
+            <div class='flex-shrink-0'>
+              <div
+                class='w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='white'
+                  class='w-8 h-8'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605'
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class='flex-1'>
+              <p class='text-lg font-semibold text-white leading-relaxed'>
+                {t('whyexhibit.description8')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exhibitor Profile Section Rediseñado -->
+  <section class='py-20 bg-gradient-to-br from-gray-50 to-gray-100'>
+    <div class='container mx-auto px-4'>
+      <div
+        class='text-center mb-16'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+      >
+        <h2 class='text-4xl font-bold text-gray-800 mb-6 uppercase'>
+          {t('menu.submenu_2.option_3')}
+        </h2>
+        <div
+          class='w-24 h-1 bg-gradient-to-r from-[#BC0100] to-[#D76901] mx-auto rounded-full'
+        >
+        </div>
+      </div>
+
+      <div
+        class='max-w-4xl mx-auto mb-12'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        data-aos-delay='200'
+      >
+        <div class='bg-white rounded-2xl shadow-xl p-8'>
+          <div class='prose prose-lg text-gray-600 leading-relaxed mx-auto'>
+            <p set:html={t('ExhibitorProfile.description')} />
+          </div>
+        </div>
+      </div>
+
+      <div data-aos='fade-up' data-aos-duration='1000' data-aos-delay='400'>
+        <Segmentos />
+      </div>
+    </div>
+  </section>
+
+  <!-- Tariffs Section -->
+  <Tariffs />
 </Layout>

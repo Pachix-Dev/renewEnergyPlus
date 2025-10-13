@@ -145,7 +145,7 @@
             "title": "BOOTHS",
             "sub-title": "PARTICIPATION FEES",
             "item1": {
-                "title1": "Raw Space +18 sqm",
+                "title1": "raw Space +18 sqm",
                 "price1-title":"Early Bird <br/> Valid until 31.05.25",
                 "price2-title":"Rate ",
                 "price1": "VAT / sqm",
@@ -156,7 +156,7 @@
                 "topic3": "Does NOT include: carpet, construction, furniture, or services"
             },
             "item2": {
-                "title1": "Equipped 9 sqm min",
+                "title1": "equipped 9 sqm min",
                 "price1-title":"Early Bird <br/> Valid until 31.05.25",
                 "price2-title":"Regular Rate ",
                 "price1": "VAT / sqm",
@@ -201,7 +201,14 @@
         "text_4": "General Manager of Tiga Power",
         "text_5": "“I greatly enjoy attending these conferences in different countries. This is my third time at RE+ Mexico, and I am pleased to see how much it has grown. I find both the exhibitors and the conferences to be highly valuable.”",
         "text_6": "Visitor",
-        "text_7": "“RE+ Mexico is the most important expo in Latin America. It allows us to connect more closely with experts in renewable energy and energy storage, as well as to establish key partnerships with suppliers.”"
+        "text_7": "“RE+ Mexico is the most important expo in Latin America. It allows us to connect more closely with experts in renewable energy and energy storage, as well as to establish key partnerships with suppliers.”",
+        "entreotros": "among others...",
+        "Segmentos": "Segments",
+        "segtext": "Explore solutions and technologies in renewable energy and infrastructure.",
+        "global_numbers": "Global <br />Numbers",
+        "knowtest": "Learn about the experiences of those who have already been part of RE+ Mexico",
+        "readyfor": "Ready to create your own experience at RE+ MEXICO?",
+        "discover_experience": "Discover real experiences from exhibitors, visitors, and speakers who have been part of RE+ MEXICO"
     },
     "AboutSSM": {
         "title": "ABOUT RE+ MEXICO",
@@ -239,7 +246,8 @@
         "description5": "Get an overview of the market in an exhibition area of 5,000 m².",
         "description6": "Boost your productivity through individual solutions",
         "description7": "Select and compare suppliers from three different continents: America, Europe and Asia",
-        "description8": "Visit an international program of high quality conferences and workshops."
+        "description8": "Visit an international program of high quality conferences and workshops.",
+        "discover": "Discover all the opportunities that RE+ MEXICO has to offer you"
     },
     "contactForm": {
         "title": "Leave us a message",
@@ -248,7 +256,7 @@
         "send": "Send"
     },
     "ExhibitorProfile": {
-        "description": "<strong>RE+ MEXICO</strong> provides the entire solar industry with a platform. If your company is engaged in the fields of solar energy, solar thermal, energy storage, power generation, network supply, grid management and/or smart grids, then don’t miss out on exhibiting at <strong>RE+ MEXICO</strong>. Your product and services can range from solar cells and modules, parts and components, new technology and tracking systems, traditional plants to planners & developers and systems & service providers. A detailed list of products and services is shown below.",
+        "description": "<strong>RE+ MEXICO</strong> provides the entire solar industry with a platform. If your company is engaged in the fields of solar energy, solar thermal, energy storage, power generation, network supply, grid management and/or smart grids, then don’t miss out on exhibiting at <strong>RE+ MEXICO</strong>. Your product and services can range from solar cells and modules, parts and components, new technology and tracking systems, traditional plants to planners & developers and systems & service providers.",
         "description2": "<strong>PHOTOVOLTAIC</strong><br /><br /><strong>PV TECHNOLOGY SYSTEMS</strong><br /><br />Stand-alone systems <br />Networked pv systems <br />Solar chargers <br />Solar power supplies for traffic control systems <br />Tracking System <br />Other pv technology systems<br /><br /><strong>PV COMPONENTS AND EQUIPMENTS</strong><br /><br />Solar cells <br />Crystalline pv modules <br />Thin-film solar modules <br />Inverters <br />Transformers <br />Monitoring, measuring and control systems <br />DC circuit breaks <br />Cables <br />Connectors <br />Other components and equipments<br /><br /><strong>SOLAR THERMAL</strong><br /><br />Solar thermal technologies <br />Solar thermal power plants <br />Process heat <br />Air conditioning and cooling <br />Engineering and design <br />Monitoring, measuring and control systems <br />Other components <br />",
         "description3": "<strong>GRID INFRASTRUCTURE</strong><br /><br />Metering services <br />Grid control systems <br />Gridmanagement <br />Electricity trading and power marketing <br />Trade control systems <br />Virtual power plants and der aggregation <br />Products, solutions and dervices for smart grids <br />Products, solutions and services for micro drids<br /><strong>STORAGE</strong><br /><br />Chemical storage <br />Non-chemical storage <br />Thermal storage <br />Commercial storage solutions <br />Residential storage solutions<br /> Grid-connected storage<br /> Off-grid storage <br />Battery manufacturers <br />Software<br /><br /><strong>INFORMATION, COMMUNICATION AND SERVICES</strong><br /><br />Research and development <br />Training and education <br />Consulting services <br />EPC contracting, project development <br />Maintenance, repair and operations <br />Financial services <br />Associations, societies <br />Publishers"
     },
@@ -314,6 +322,7 @@
     },
     "hotels":{
         "cedera": "Venue cede",
+        "text_description": "Expo Guadalajara is the largest convention center in Mexico and Latin America, with more than 1,230,000 square feet of modern space for international trade shows, conferences, and exhibitions.<br /><br /> Located in the heart of Guadalajara, it offers first-class connectivity and is surrounded by hotels, restaurants, and services that make it the ideal venue for world-class events.",
         "title": "Special Hotel Rates",
         "description": "Expo Guadalajara is the largest convention center in Mexico and Latin America, with more than 119,000 m² of modern spaces for international fairs, congresses and exhibitions. <br /><br /> Located in the heart of Guadalajara, it offers first-class connectivity and is surrounded by hotels, restaurants and services that make it the ideal venue for world-class events.",
         "rate": "Rates from: ",

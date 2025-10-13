@@ -3,20 +3,22 @@ import { t } from 'i18next'
 ---
 
 <div class='container mx-auto'>
-  <p class='text-white text-4xl text-center font-bold p-10'>
+  <p class='text-white text-4xl text-center font-bold p-10 uppercase'>
     {t('footer.contact')}
   </p>
-  <div class='grid md:grid-cols-2 xl:grid-cols-3 gap-20 justify-around text-xl'>
+  <div
+    class='mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-20 justify-around text-xl'
+  >
     <div
-      class='text-center text-white bg-[#978FD0] rounded-lg pt-10 px-4 pb-5 m-5 relative'
+      class='text-center text-white bg-[#978FD0] rounded-lg px-4 pb-5 relative'
     >
       <img
         src='/img/samuel-ramirez.webp'
         alt='Samuel Ramírez'
-        class='absolute right-[40%] -top-10 rounded-full w-28'
+        class='relative -top-10 rounded-full w-28 mx-auto'
       />
-      <p class='mt-10 text-xl font-bold'>Samuel Ramírez</p>
-      <span class='text-sm font-bold'>México, Centro & Sudamérica </span>
+      <p class='text-xl font-bold'>Samuel Ramírez</p>
+      <span class='font-bold'>México, Centro & Sudamérica </span>
 
       <a
         href='mailto:samuel.ramirez@igeco.mx'
@@ -42,15 +44,15 @@ import { t } from 'i18next'
     </div>
 
     <div
-      class='text-center text-white bg-[#978FD0] rounded-lg pt-10 px-4 pb-5 m-5 relative'
+      class='text-center text-white bg-[#978FD0] rounded-lg px-4 pb-5 relative'
     >
       <img
         src='/img/raymanWu.webp'
         alt='Rayman Wu'
-        class='absolute right-[40%] -top-10 rounded-full w-28'
+        class='relative -top-10 rounded-full w-28 mx-auto'
       />
 
-      <p class='mt-10 text-xl font-bold'>Rayman Wu</p>
+      <p class='text-xl font-bold'>Rayman Wu</p>
       <span class='font-bold'>China </span>
       <a href='mailto:info@snec.org.cn' class='flex justify-center gap-4'>
         <p class='underline'>info@snec.org.cn</p>
@@ -73,16 +75,16 @@ import { t } from 'i18next'
     </div>
 
     <div
-      class='text-center text-white bg-[#978FD0] rounded-lg pt-10 px-4 pb-5 m-5 relative'
+      class='text-center text-white bg-[#978FD0] rounded-lg px-4 pb-5 relative'
     >
       <img
         src='/img/Pamela-velazquez.webp'
         alt='Pamela Velazco'
-        class='absolute right-[40%] -top-10 rounded-full w-28'
+        class='relative -top-10 rounded-full w-28 mx-auto'
       />
-      <p class='mt-10 text-xl font-bold'>Pamela Velazco</p>
+      <p class='text-xl font-bold'>Pamela Velazco</p>
       <span class='font-bold'>USA </span>
-      <a href='mailto: pvelazco@re-plus.com' class='flex justify-center'>
+      <a href='mailto: pvelazco@re-plus.com' class='flex justify-center gap-4'>
         <p class='underline'>pvelazco@re-plus.com</p>
         <div class='p-1 rounded-full bg-white'>
           <svg

@@ -19,30 +19,29 @@ const base = i18next.language === 'es' ? '' : `/${i18next.language}`
   <div class='container mx-auto px-4 h-fit'>
     <div class='relative'>
       <div data-aos='fade-right' data-aos-duration='2000'>
+        <img
+          src='/img/logoREPLUS.webp'
+          alt='REPLUS MEXICO'
+          class='logoREPLUS w-48 lg:w-60 mx-auto'
+        />
         <p
-          class='font-[Tungsten-Medium] text-white text-5xl lg:text-7xl text-left uppercase font-bold'
+          class='mt-5 font-[Tungsten-Medium] text-white text-5xl lg:text-6xl uppercase font-bold'
         >
           {t('home.slogan')}
         </p>
 
-        <p class='mt-5 text-white text-xl text-justify'>
-          <span class='text-[#565078] sm:text-2xl font-bold my-4'
-            >RE+ MEXICO
-          </span>
-          <span set:html={t('home.solar_description')} />
-        </p>
         <p
-          class='mt-5 font-[Tungsten-Medium] text-white text-4xl lg:text-7xl text-left'
+          class='mt-5 font-[Tungsten-Medium] text-white text-4xl lg:text-7xl tetext-centert'
         >
           {t('home.event-date')}
           <span class=''>| 2026</span>
         </p>
-        <p class='font-[Tungsten-Medium] text-white text-3xl text-left'>
+        <p class='font-[Tungsten-Medium] text-white text-3xl text-center'>
           EXPO GUADALAJARA, JALISCO
         </p>
         <img
           src='/img/logosOrganizado.webp'
-          class='mt-5 w-[200px] lg:w-[400px]'
+          class='mt-5 w-[200px] lg:w-[400px] mx-auto'
         />
       </div>
     </div>

@@ -2,98 +2,210 @@
 import { t } from 'i18next'
 ---
 
-<section class='bg-red-100 text-center py-20'>
-  <p class='text-4xl font-extrabold text-[#565078]'>{t('home.testimonial')}</p>
-  <div class='grid lg:grid-cols-2'>
+<section
+  class='relative py-20 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 overflow-hidden'
+>
+  <!-- Elementos decorativos de fondo -->
+  <div class='absolute inset-0 overflow-hidden'>
     <div
-      class='div my-5 bg-white m-auto rounded-tl-[80px] rounded-br-[80px] overflow-hidden relative group p-2 z-0'
+      class='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#565078]/10 to-[#BC0100]/10 rounded-full blur-3xl'
     >
-      <div
-        class='circle absolute h-[7em] w-[7em] -top-[2.5em] -right-[2.5em] rounded-full bg-[#565078] group-hover:scale-[1150%] duration-500 z-[-1]'
-      >
-      </div>
-      <div class='grid lg:flex justify-center gap-4 my-4'>
-        <img
-          src='/img/oscarnieto.webp'
-          alt='Ulises Alcázar'
-          class='w-[150px] h-[150px] my-10 mx-3'
-        />
-        <div>
-          <p
-            class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
-          >
-            {t('home.text_1')}<br /><br />
-            <strong class='my-3'>ÓSCAR NIETO</strong><br />LONGI
-          </p>
-        </div>
-      </div>
     </div>
     <div
-      class='div my-5 bg-white m-auto rounded-tl-[80px] rounded-br-[80px] overflow-hidden relative group p-2 z-0'
+      class='absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-[#D76901]/10 to-[#565078]/10 rounded-full blur-3xl'
     >
+    </div>
+  </div>
+
+  <div class='container mx-auto px-4 relative z-10'>
+    <!-- Header mejorado -->
+    <div class='text-center mb-16' data-aos='fade-up' data-aos-duration='1000'>
+      <h2 class='text-5xl lg:text-6xl font-bold text-[#565078] mb-6'>
+        {t('home.testimonial')}
+      </h2>
       <div
-        class='circle absolute h-[7em] w-[7em] -top-[2.5em] -right-[2.5em] rounded-full bg-[#565078] group-hover:scale-[1150%] duration-500 z-[-1]'
+        class='w-32 h-1 bg-gradient-to-r from-[#BC0100] to-[#D76901] mx-auto rounded-full'
       >
       </div>
-      <div class='grid lg:flex justify-center gap-4'>
-        <img
-          src='/img/alejandrojimenez.webp'
-          alt='Alberto Morales'
-          class='w-[150px] h-[150px] my-10 mx-3'
-        />
-        <div>
-          <p
-            class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
-          >
-            {t('home.text_3')}<br /><br />
-            <strong class='my-3'>ALEJANDRO JIMÉNEZ</strong><br />SOLUNA
-          </p>
+      <p class='text-xl text-gray-600 mt-6 max-w-2xl mx-auto'>
+        {t('home.knowtest')}
+      </p>
+    </div>
+
+    <!-- Grid de testimonios mejorado -->
+    <div class='grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto'>
+      <!-- Testimonio 1 -->
+      <div
+        class='group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden relative border border-gray-100'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='100'
+      >
+        <!-- Elemento decorativo -->
+        <div
+          class='absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#565078] to-[#766EA6] rounded-bl-3xl opacity-10 group-hover:opacity-20 transition-opacity duration-500'
+        >
+        </div>
+
+        <div class='p-8'>
+          <div class='flex flex-col lg:flex-row items-center gap-6'>
+            <div class='relative flex-shrink-0'>
+              <div
+                class='absolute inset-0 bg-gradient-to-r from-[#565078] to-[#766EA6] rounded-2xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500'
+              >
+              </div>
+              <img
+                src='/img/oscarnieto.webp'
+                alt='Óscar Nieto'
+                class='relative w-28 h-28 object-cover rounded-2xl shadow-lg'
+              />
+            </div>
+
+            <div class='flex-1 text-center lg:text-left'>
+              <blockquote
+                class='text-gray-700 text-lg leading-relaxed mb-4 italic'
+              >
+                "{t('home.text_1')}"
+              </blockquote>
+              <div class='border-l-4 border-[#565078] pl-4'>
+                <p class='font-bold text-[#565078] text-lg'>ÓSCAR NIETO</p>
+                <p class='text-gray-500 text-sm uppercase tracking-wider'>
+                  LONGI
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class='div bg-white m-auto rounded-tl-[80px] rounded-br-[80px] overflow-hidden relative group p-2 z-0'
-    >
+
+      <!-- Testimonio 2 -->
       <div
-        class='circle absolute h-[7em] w-[7em] -top-[2.5em] -right-[2.5em] rounded-full bg-[#565078] group-hover:scale-[1150%] duration-500 z-[-1]'
+        class='group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden relative border border-gray-100'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='200'
       >
-      </div>
-      <div class='grid lg:flex justify-center gap-4 my-6'>
-        <img
-          src='/img/kyanfoulds.webp'
-          alt='KYAN FOULDS '
-          class='w-[150px] h-[150px] my-10 mx-3'
-        />
-        <div>
-          <p
-            class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
-          >
-            {t('home.text_5')}<br /><br />
-            <strong class='my-3'>KYAN FOULDS </strong><br />{t('home.text_6')}
-          </p>
+        <div
+          class='absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#BC0100] to-[#D76901] rounded-bl-3xl opacity-10 group-hover:opacity-20 transition-opacity duration-500'
+        >
+        </div>
+
+        <div class='p-8'>
+          <div class='flex flex-col lg:flex-row items-center gap-6'>
+            <div class='relative flex-shrink-0'>
+              <div
+                class='absolute inset-0 bg-gradient-to-r from-[#BC0100] to-[#D76901] rounded-2xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500'
+              >
+              </div>
+              <img
+                src='/img/alejandrojimenez.webp'
+                alt='Alejandro Jiménez'
+                class='relative w-28 h-28 object-cover rounded-2xl shadow-lg'
+              />
+            </div>
+
+            <div class='flex-1 text-center lg:text-left'>
+              <blockquote
+                class='text-gray-700 text-lg leading-relaxed mb-4 italic'
+              >
+                "{t('home.text_3')}"
+              </blockquote>
+              <div class='border-l-4 border-[#BC0100] pl-4'>
+                <p class='font-bold text-[#BC0100] text-lg'>
+                  ALEJANDRO JIMÉNEZ
+                </p>
+                <p class='text-gray-500 text-sm uppercase tracking-wider'>
+                  SOLUNA
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class='my-5 mx-auto bg-white rounded-tl-[80px] rounded-br-[80px] overflow-hidden relative group p-2 z-0'
-    >
+
+      <!-- Testimonio 3 -->
       <div
-        class='circle absolute h-[7em] w-[7em] -top-[2.5em] -right-[2.5em] rounded-full bg-[#565078] group-hover:scale-[1150%] duration-500 z-[-1]'
+        class='group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden relative border border-gray-100'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='300'
       >
+        <div
+          class='absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#565078] to-[#766EA6] rounded-bl-3xl opacity-10 group-hover:opacity-20 transition-opacity duration-500'
+        >
+        </div>
+
+        <div class='p-8'>
+          <div class='flex flex-col lg:flex-row items-center gap-6'>
+            <div class='relative flex-shrink-0'>
+              <div
+                class='absolute inset-0 bg-gradient-to-r from-[#565078] to-[#766EA6] rounded-2xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500'
+              >
+              </div>
+              <img
+                src='/img/kyanfoulds.webp'
+                alt='Kyan Foulds'
+                class='relative w-28 h-28 object-cover rounded-2xl shadow-lg'
+              />
+            </div>
+
+            <div class='flex-1 text-center lg:text-left'>
+              <blockquote
+                class='text-gray-700 text-lg leading-relaxed mb-4 italic'
+              >
+                "{t('home.text_5')}"
+              </blockquote>
+              <div class='border-l-4 border-[#565078] pl-4'>
+                <p class='font-bold text-[#565078] text-lg'>KYAN FOULDS</p>
+                <p class='text-gray-500 text-sm uppercase tracking-wider'>
+                  {t('home.text_6')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class='grid lg:flex justify-center gap-4 my-6'>
-        <img
-          src='/img/fabianriosvisitantes.webp'
-          alt='FABIAN RIOS'
-          class='w-[150px] h-[150px] my-10 mx-3'
-        />
-        <div>
-          <p
-            class='text-base my-10 w-[300px] z-20 font-Poppin group-hover:text-white duration-500'
-          >
-            {t('home.text_7')}<br /><br />
-            <strong class='my-3'>FABIAN RÍOS</strong><br />{t('home.text_6')}
-          </p>
+
+      <!-- Testimonio 4 -->
+      <div
+        class='group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden relative border border-gray-100'
+        data-aos='fade-up'
+        data-aos-duration='800'
+        data-aos-delay='400'
+      >
+        <div
+          class='absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#D76901] to-[#BC0100] rounded-bl-3xl opacity-10 group-hover:opacity-20 transition-opacity duration-500'
+        >
+        </div>
+
+        <div class='p-8'>
+          <div class='flex flex-col lg:flex-row items-center gap-6'>
+            <div class='relative flex-shrink-0'>
+              <div
+                class='absolute inset-0 bg-gradient-to-r from-[#D76901] to-[#BC0100] rounded-2xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500'
+              >
+              </div>
+              <img
+                src='/img/fabianriosvisitantes.webp'
+                alt='Fabián Ríos'
+                class='relative w-28 h-28 object-cover rounded-2xl shadow-lg'
+              />
+            </div>
+
+            <div class='flex-1 text-center lg:text-left'>
+              <blockquote
+                class='text-gray-700 text-lg leading-relaxed mb-4 italic'
+              >
+                "{t('home.text_7')}"
+              </blockquote>
+              <div class='border-l-4 border-[#D76901] pl-4'>
+                <p class='font-bold text-[#D76901] text-lg'>FABIÁN RÍOS</p>
+                <p class='text-gray-500 text-sm uppercase tracking-wider'>
+                  {t('home.text_6')}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

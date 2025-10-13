@@ -20,16 +20,13 @@ import { t } from 'i18next'
         /*<p class='text-white text-xl' set:html={t('home.solar_date_hours')} />*/
       }
     </div>
-    <p
-      class='my-10 text-4xl font-bold'
-      data-aos='fade-up'
-      data-aos-duration='3000'
-    >
-      {t('home.text_exhibitor')}
+    <p class='mt-5 text-white text-xl text-center'>
+      <span class='sm:text-2xl font-bold my-4'>RE+ MEXICO </span>
+      <span set:html={t('home.solar_description')} />
     </p>
     <div class='mt-20' data-aos='zoom-in-up' data-aos-duration='2000'>
       <a
-        class='text-white text-2xl font-bold py-2 px-4 rounded-md border-2 border-white hover:bg-white hover:text-[#565078] transition duration-300'
+        class='text-white text-5xl py-2 px-4 rounded-md border-2 border-white hover:bg-white hover:text-[#565078] transition duration-300 font-extrabold'
         href='/quiero-ser-expositor'
       >
         {t('menu.submenu_2.option_2')}
