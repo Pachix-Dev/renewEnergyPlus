@@ -1,17 +1,14 @@
 import { useRegisterForm } from '../../store/register-form'
 import { useState } from 'react'
-
-import { initMercadoPago, CardPayment } from '@mercadopago/sdk-react'
+import {
+  PayPalScriptProvider,
+  PayPalButtons,
+  usePayPalScriptReducer,
+} from '@paypal/react-paypal-js'
 import { Upgrade } from './Upgrade'
-initMercadoPago(
-  import.meta.env.DEV
-    ? 'TEST-095f1368-d3e7-4f78-988b-f86fe5867695'
-    : 'APP_USR-7dd15365-5549-4628-bec2-24702340fc1f'
-)
+import { Infouser } from './Infouser'
 
-export function CheckoutForm({ currentLanguage, translate }) {
-  const lang = currentLanguage === 'es' ? '' : '/en'
-
+export function CheckoutForm({ currentLanguage, translates }) {
   const {
     items,
     idUser,
@@ -28,18 +25,19 @@ export function CheckoutForm({ currentLanguage, translate }) {
     clear,
   } = useRegisterForm()
 
-  const [processing, setProcessing] = useState(false)
   const [message, setMessage] = useState('')
+  const [processing, setProcessing] = useState(false)
+  const [selectedPayment, setSelectedPayment] = useState('')
 
   if (items.length === 0) {
     return (
       <div className='flex-1 flex flex-col justify-center items-center h-screen'>
-        <p className='text-2xl font-bold'>{translate.empty_cart}</p>
+        <p className='text-2xl font-bold'>{translates.empty_cart}</p>
         <a
-          href={`${lang}/programa-premium-productos`}
-          className='bg-[#002C5B] hover:bg-[#ED6E0B] text-white rounded-lg p-4 mt-5'
+          href={`${currentLanguage}/programa-premium-productos`}
+          className='bg-[#4e549f] hover:bg-[#1f2937] text-white rounded-lg p-4 mt-5'
         >
-          {translate.back_to_shop}
+          {translates.back_to_shop}
         </a>
       </div>
     )
@@ -49,20 +47,83 @@ export function CheckoutForm({ currentLanguage, translate }) {
     ? 'http://localhost:3010/'
     : 'https://re-plus-mexico.com.mx/server/'
 
-  const initialization = {
-    amount: total,
+  const clien_id = import.meta.env.DEV
+    ? 'ATiUATgSHsCqGLn3AboCziXwPiGRjdJKYCam-fHR5pumV11OEBsffTTMLGD4AD9Auy2aG3nsKhj28YOF'
+    : 'Aa0JkMqk88tZqD7QkKtNEt2pArR0ExXwTP-nwSB6_S_RBBsFOe6EXPntvAvjP2hhXNBpBF9IYwiLOBgB'
+
+  const style = { layout: 'vertical' }
+  const initialOptions = {
+    clientId: clien_id,
+    currency: 'MXN',
+    intent: 'capture',
+    locale: currentLanguage === 'es' ? 'es_ES' : 'en_US',
   }
 
-  const handlePaymentSubmit = async (paymentData) => {
-    console.log(paymentData)
-    setProcessing(true)
+  const [copied, setCopied] = useState(false)
+  const textToCopy = '030225900038110671'
+
+  const handleCopy = async (event) => {
+    event.preventDefault()
+    try {
+      await navigator.clipboard.writeText(textToCopy)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000) // Oculta mensaje después de 2 segundos
+    } catch (err) {
+      console.error('Error copying to clipboard:', err)
+    }
+  }
+
+  const ButtonWrapper = ({ showSpinner }) => {
+    const [{ isPending }] = usePayPalScriptReducer()
+
+    return (
+      <>
+        {showSpinner && isPending && <div className='spinner' />}
+        <PayPalButtons
+          className='py-5 text-white'
+          style={style}
+          disabled={false}
+          forceReRender={[style]}
+          fundingSource={undefined}
+          createOrder={createOrder}
+          onApprove={onApprove}
+        />
+      </>
+    )
+  }
+
+  async function createOrder() {
     const response = await fetch(urlbase + 'create-order-replus', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        paymentData,
+        items,
+        total: total,
+      }),
+    })
+    const order = await response.json()
+    if (order.id) {
+      return order.id
+    } else {
+      setProcessing(false)
+      setMessage(order?.message)
+      setTimeout(() => {
+        setMessage('')
+      }, 5000)
+    }
+  }
+
+  async function onApprove(data) {
+    setProcessing(true)
+    const response = await fetch(urlbase + 'complete-order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        orderID: data.orderID,
         idUser,
         uuid,
         items,
@@ -76,139 +137,176 @@ export function CheckoutForm({ currentLanguage, translate }) {
         total: total,
       }),
     })
-
-    const order = await response.json()
-    if (order?.status) {
-      //clear()
+    const orderData = await response.json()
+    if (orderData.status) {
+      clear()
       setCompleteRegister(true)
-      setInvoiceDownToLoad(order?.invoice)
+      setInvoiceDownToLoad(orderData?.invoice)
       currentLanguage === 'es'
         ? (window.location.href = '/gracias-por-tu-compra')
         : (window.location.href = '/en/gracias-por-tu-compra')
     } else {
       setProcessing(false)
-      setMessage(order?.message)
+      setMessage(orderData?.message)
       setTimeout(() => {
         setMessage('')
       }, 5000)
     }
-
-    return order.id
   }
 
-  const onError = async (error) => {
-    // callback llamado para todos los casos de error de Brick
-    console.log(error)
-  }
-
-  const onReady = async () => {
-    /*
-      Callback llamado cuando Brick está listo.
-      Aquí puedes ocultar cargamentos de su sitio, por ejemplo.
-    */
-  }
   return (
     <>
-      <div className='px-4 py-7 sm:px-6 lg:px-8 border rounded-2xl shadow-lg'>
-        <div className='flex justify-between'>
-          <p className='font-bold text-2xl'>{translate.register_data}</p>
-        </div>
+      {uuid ? (
+        <Infouser translates={translates} client:only='react' />
+      ) : (
+        <Upgrade translates={translates} client:only='react' />
+      )}
 
-        {uuid ? (
-          <>
-            <div className='mt-10 grid sm:grid-cols-2 gap-5'>
-              <div className='flex gap-2'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='size-6'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'
+      <div className='mt-5 px-7 py-7 mx-auto border rounded-2xl shadow-lg'>
+        <p className='font-bold text-2xl'>{translates.method_payment}</p>
+        {uuid && (
+          <div className='w-full'>
+            <div className='mt-5 rounded-xl border-2 p-4 bg-white text-black'>
+              <div className='flex justify-between items-center'>
+                <div className='flex gap-2'>
+                  <input
+                    type='radio'
+                    name='payment'
+                    id='credit_card'
+                    value='credit_card'
+                    checked={selectedPayment === 'credit_card'}
+                    onChange={() => setSelectedPayment('credit_card')}
                   />
-                </svg>
-                <div className='font-bold'>
-                  {name} {paternSurname}
+                  <label htmlFor='credit_card'>Credit or Debit Card</label>
+                </div>
+                <div className='grid grid-flow-col place-items-center gap-2'>
+                  <img src='/visa.webp' alt='Visa' width={50} />
+                  <img src='/mastercard.webp' alt='Mastercard' />
                 </div>
               </div>
-
-              <div className='flex gap-2'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='size-6'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'
-                  />
-                </svg>
-                <div className='font-bold'>{email}</div>
-              </div>
-
-              <div className='flex gap-2'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='size-6'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'
-                  />
-                </svg>
-
-                <div className='font-bold'>{phone}</div>
-              </div>
-
-              <div className='flex gap-2'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='size-6'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21'
-                  />
-                </svg>
-                <div className='font-bold'>{company}</div>
-              </div>
+              {selectedPayment === 'credit_card' && (
+                <>
+                  <div className='mt-3 text-sm text-gray-600'>
+                    <PayPalScriptProvider options={initialOptions}>
+                      <ButtonWrapper showSpinner={false} />
+                    </PayPalScriptProvider>
+                  </div>
+                </>
+              )}
             </div>
-          </>
-        ) : (
-          <Upgrade translates={translate} client:only='react' />
-        )}
-      </div>
-      <div className='mt-5 px-7 py-7 mx-auto border rounded-2xl shadow-lg'>
-        <p className='font-bold text-2xl'>{translate.method_payment}</p>
-        {uuid && (
-          <CardPayment
-            initialization={initialization}
-            onSubmit={handlePaymentSubmit}
-            onReady={onReady}
-            onError={onError}
-          />
+            {/* Bank Transfer Option */}
+            <div className='rounded-xl border-2 p-4 mt-5 bg-white text-black'>
+              <div className='flex justify-between items-center'>
+                <div className='flex gap-2'>
+                  <input
+                    type='radio'
+                    name='payment'
+                    id='bank_transfer'
+                    value='bank_transfer'
+                    checked={selectedPayment === 'bank_transfer'}
+                    onChange={() => setSelectedPayment('bank_transfer')}
+                  />
+                  <label htmlFor='bank_transfer'>
+                    {translates.spei_transfer}
+                  </label>
+                </div>
+                <img src='/spei.webp' alt='SPEI' width={90} />
+              </div>
+              {selectedPayment === 'bank_transfer' && (
+                <div className='mt-5 text-sm text-black'>
+                  <div className='p-4 w-full'>
+                    <div className='flex justify-between items-center gap-3'>
+                      <div className='flex gap-2 items-center'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          strokeWidth='1.5'
+                          stroke='currentColor'
+                          className='size-6'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            d='M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v7.5m2.25-6.466a9.016 9.016 0 0 0-3.461-.203c-.536.072-.974.478-1.021 1.017a4.559 4.559 0 0 0-.018.402c0 .464.336.844.775.994l2.95 1.012c.44.15.775.53.775.994 0 .136-.006.27-.018.402-.047.539-.485.945-1.021 1.017a9.077 9.077 0 0 1-3.461-.203M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z'
+                          />
+                        </svg>
+                        <p className='font-bold'>
+                          {translates.account} CLABE <br />
+                          <span className='font-mono text-lg'>
+                            {textToCopy}
+                          </span>
+                        </p>
+                      </div>
+                      <button
+                        onClick={handleCopy}
+                        className='text-black px-3 py-1 rounded  transition'
+                      >
+                        {copied ? (
+                          translates.copy_success + ' ✅'
+                        ) : (
+                          <div className='flex gap-2 text-'>
+                            {translates.copy}
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 24 24'
+                              strokeWidth='1.5'
+                              stroke='currentColor'
+                              className='size-6'
+                            >
+                              <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5A3.375 3.375 0 0 0 6.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0 0 15 2.25h-1.5a2.251 2.251 0 0 0-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 0 0-9-9Z'
+                              />
+                            </svg>
+                          </div>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                  <p className='font-bold'>{translates.instructions}</p>
+                  <p className='mt-2'>{translates.instructions_text}</p>
+                  <p
+                    className='mt-2'
+                    dangerouslySetInnerHTML={{
+                      __html: translates.instructions_text_2,
+                    }}
+                  />
+                  <p
+                    className='mt-2'
+                    dangerouslySetInnerHTML={{
+                      __html: translates.instructions_text_3,
+                    }}
+                  />
+                  <p
+                    className='mt-2'
+                    dangerouslySetInnerHTML={{
+                      __html: translates.instructions_text_4,
+                    }}
+                  />
+                  <p
+                    className='mt-2'
+                    dangerouslySetInnerHTML={{
+                      __html: translates.instructions_text_5,
+                    }}
+                  />
+
+                  <div
+                    className='border-2 border-green-700 text-green-700 rounded-lg p-3 mt-5'
+                    dangerouslySetInnerHTML={{
+                      __html: translates.instructions_text_6,
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
         )}
         <p className='text-red-600 font-bold text-center'>{message}</p>
       </div>
+
       {processing && (
         <div className='absolute top-0 left-0 bg-gray-400 bg-opacity-85 z-[999] w-full h-screen'>
           <div role='status' className='grid place-items-center w-full h-full'>

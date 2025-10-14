@@ -182,7 +182,7 @@
             "title": "¿Quieres ser patrocinador?",
             "description": "Descarga nuestro brochure para patrocinadores "
         },
-        "energy_date": "jueves 16 de Abril de 2026",
+        "energy_date": "martes 14 de Abril de 2026",
         "energy_description2": "EL EVENTO MÁS IMPORTANTE DE NETWORKING DE LA INDUSTRIA FOTOVOLTAICA",
         "energy_button": "ADQUIRIR ACCESO",
         "more_info": "Saber más",
@@ -515,7 +515,8 @@
         "position_1": "CEO / PRESIDENTE",
         "position_2": "DIRECTOR / COORDINADOR DE AREA",
         "position_3": "JEFE / GERENTE DE AREA",
-        "position_4": "PERSONAL OPERATIVO"
+        "position_4": "PERSONAL OPERATIVO"        
+        
     },
     "thanks_page":{
         "title": "Gracias por registrarte",
@@ -574,7 +575,18 @@
         "text_select": "Seleccióne el día y horario elegido para asistir al evento, esta reserva incluye el espacio de una mesa para hasta 10 personas",         
         "comments": "Comentarios adicionales",
         "cupon_text": "El CUPON SOLO APLICA PARA PASE COMPLETO, ENERGY NIGHT Y VIP AREA",
-        "cupon": "Cupon valido, limitado a 1 solo uso!"
+        "cupon": "Cupon valido, limitado a 1 solo uso!",
+        "spei_transfer": "Transferencia Bancaria",
+        "account": "Cuenta",
+        "instructions": "Instrucciones",
+        "instructions_text": "1. Accede a tu banca en línea.",
+        "instructions_text_2": "2. Da de alta la CLABE en esta ficha. <strong>El banco deberá de ser BanBajío.</strong>",
+        "instructions_text_3": "3. Realiza la transferencia a nombre de <strong>IGECO </strong> por la cantidad exacta de esta ficha de lo contrario se rechazará el cargo.",
+        "instructions_text_4": "4. Poner en concepto de la transferencia <strong>REPLUS 2026</strong>.",
+        "instructions_text_5": "5. Al confirmar tu pago, el portal de tu banco generará un comprobante digital, <strong>en el podrás verificar que se haya realizado correctamente, </strong> conserva este comprobante de pago.",
+        "instructions_text_6": "Al completar estos pasos envia un correo a <strong><a href='mailto:emmanuel.heredia@igeco.mx' target='_blank'>emmanuel.heredia@igeco.mx</a></strong> con el comprobante de pago, tu nombre completo, nombre del evento al que asistiras y  el correo electronico que usaste para el registro para que podamos validar tu pago y enviarte tu acceso.",
+        "copy": "Copiar",
+        "copy_success": "Copiado"
     },
     "installer_award":{
         "text_1": "¡Demuestra tu excelencia en la Industria Solar!",

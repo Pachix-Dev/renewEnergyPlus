@@ -9,7 +9,6 @@ import {email_template_eng} from './TemplateEmailEng.js';
 import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
-import { MercadoPagoConfig, Payment } from 'mercadopago';
 
 const { json } = pkg
 const app = express()
@@ -30,14 +29,14 @@ app.use(cors({
 }))
 
 const PORT = process.env.PORT || 3010
+const environment = process.env.ENVIRONMENT || "sandbox";
+const client_id = process.env.CLIENT_ID;
+const client_secret = process.env.CLIENT_SECRET;
+const endpoint_url =
+  environment === "sandbox"
+    ? "https://api-m.sandbox.paypal.com"
+    : "https://api-m.paypal.com";
 
-const mercadopago =  new MercadoPagoConfig({
-    accessToken: process.env.MP_ACCESS_TOKEN,
-    options: {
-        timeout: 5000,
-    }
-});
-const payment = new Payment(mercadopago);
 
 const resend = new Resend(process.env.RESEND_APIKEY)
 
@@ -52,141 +51,184 @@ app.get('/check-user-visit', async (req, res) => {
 });
 
 app.post('/create-order-replus', async (req, res) => {
-    try {
-        const { body } = req;
-        let total = 0;
+    const { body } = req;
+    let total = 0;
 
-        // Check if the items are unique
-        const ids = [];        
-        body.items.forEach((item) => {
-            if (ids.includes(item.id)) {                
-                return res.status(500).send({
-                    status: false,
-                    message: 'Tu compra no pudo ser procesada, la información no es válida...'
-                });
-            } else {
-                ids.push(item.id); // Add unique id to the list
-            }
-        });
-
-        const get_products = await RegisterModel.get_products();
-
-        if (!get_products.status) {
+    // Check if the items are unique
+    const ids = [];        
+    body.items.forEach((item) => {
+        if (ids.includes(item.id)) {                
             return res.status(500).send({
-                status: false,
-                message: 'No se encontraron productos...'
-            });
-        }
-
-        const products = get_products.result;
-        
-        body.items.forEach(item => {
-            const product = products.find(product => product.id == item.id);
-            if (!product) {
-                return res.status(500).send({
-                    status: false,
-                    message: 'Error producto no encontrado...'
-                });
-            }
-        
-            let productPrice = product.price; // Precio base del producto
-        
-            // Verificar si el producto con id 2 está en la compra
-            const energyDrinkExists = body.items.some(i => i.id == 2);
-            const discountableProducts = [3, 4, 5];
-        
-            // Aplicar descuento si el producto es 3, 4 o 5 y el producto 2 está en la lista
-            if (energyDrinkExists && discountableProducts.includes(item.id)) {
-                productPrice = Math.max(productPrice - 500, 0); // Evita precios negativos
-            }
-        
-            total += productPrice; // Sumar el precio al total
-        });
-        
-        if (total !== body.total) {
-            return res.status(400).send({
                 status: false,
                 message: 'Tu compra no pudo ser procesada, la información no es válida...'
             });
-        }
-        
-        const id_items = body.items.map(item => item.id)
-        //validar si es usuario ya compro alguno de estos items        
-        const userResponse = await RegisterModel.check_buy_products(body.idUser, id_items);
-
-        if (!userResponse.status) {
-            return res.status(400).send({
-                status: false,
-                message: userResponse.message
-            });
-        }
-        
-        const paymentData = {
-            token: body?.paymentData.token,
-            transaction_amount: total,
-            description: 'Replus Ecommerce 2025 - '+ id_items.toString(),
-            payment_method_id: body?.paymentData.payment_method_id,
-            payer: { 
-                    first_name: body?.name,
-                    last_name: body?.paternSurname,
-                    email: body?.paymentData.payer.email },
-            statement_descriptor: "REPLUSMEXICO2025",
-            notification_url: "https://re-plus-mexico.com.mx/server/webhook-mp",
-            external_reference: body.uuid,
-            installments: 1,
-        };
-        
-        const resp = await payment.create({ body: paymentData });
-        
-        if (resp.status === "approved") {                        
-            await RegisterModel.save_order(body.idUser, id_items, resp.id, '', body.total);
-                        
-            const pdfAtch = await generatePDFInvoice(resp.id, body);
-            const mailResponse = await sendEmail(body, pdfAtch, resp.id);
-
-            return res.send({
-                ...mailResponse,
-                invoice: `${resp.id}.pdf`
-            });
-           
         } else {
-            return res.status(400).send({
-                status: false,
-                message: 'El pago no fue aprobado...'
-            });
+            ids.push(item.id); // Add unique id to the list
         }
+    });
 
-    } catch (error) {
-        console.error('Error en /create-order-replus:', error.message);
+    const get_products = await RegisterModel.get_products();
+
+    if (!get_products.status) {
         return res.status(500).send({
             status: false,
-            message: 'Ocurrió un error al procesar la solicitud.',
-            error: error.message
+            message: 'No se encontraron productos...'
         });
     }
+
+    const products = get_products.result;
+    
+    body.items.forEach(item => {
+        const product = products.find(product => product.id == item.id);
+        if (!product) {
+            return res.status(500).send({
+                status: false,
+                message: 'Error producto no encontrado...'
+            });
+        }
+    
+        let productPrice = product.price; // Precio base del producto
+    
+        // Verificar si el producto con id 2 está en la compra
+        const energyDrinkExists = body.items.some(i => i.id == 2);
+        const discountableProducts = [3, 4, 5];
+    
+        // Aplicar descuento si el producto es 3, 4 o 5 y el producto 2 está en la lista
+        if (energyDrinkExists && discountableProducts.includes(item.id)) {
+            productPrice = Math.max(productPrice - 500, 0); // Evita precios negativos
+        }
+    
+        total += productPrice; // Sumar el precio al total
+    });
+    
+    if (total !== body.total) {
+        return res.status(400).send({
+            status: false,
+            message: 'Tu compra no pudo ser procesada, la información no es válida...'
+        });
+    }
+    
+    const id_items = body.items.map(item => item.id)
+    //validar si es usuario ya compro alguno de estos items        
+    const userResponse = await RegisterModel.check_buy_products(body.idUser, id_items);
+
+    if (!userResponse.status) {
+        return res.status(400).send({
+            status: false,
+            message: userResponse.message
+        });
+    }
+
+    get_access_token()
+        .then((access_token) => {
+            let order_data_json = {
+                intent: "CAPTURE",
+                purchase_units: [
+                {
+                    amount: {
+                    currency_code: "MXN",
+                    value: total,
+                    },
+                    description: "Replus Ecommerce 2026",
+                },
+                ],
+            };
+            const data = JSON.stringify(order_data_json);
+
+            fetch(endpoint_url + "/v2/checkout/orders", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${access_token}`,
+                },
+                body: data,
+            })
+                .then((res) => res.json())
+                .then((json) => {
+                console.log(json);
+                res.send(json);
+                }); //Send minimal data to client
+            })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).send(err);
+    });            
 });
 
-app.post('/webhook-mp', async (req, res) => {
-    const body = req.body;
-    console.log('webhook-mp', body);
-    try{
-        const response = await fetch('https://api.mercadopago.com/v1/payments/'+body.data.id, {
-            method: 'GET',
-            headers: {
-                'Authorization': 'Bearer '+process.env.MP_ACCESS_TOKEN
-            }
-        });
-
-        console.log(response);
-        if(response.ok){
-            const payment = await response.json();
-            console.log('webhook-mp', payment);
-            return res.status(200).send({status: true});
-        }
-    }catch(err){
-        console.log(err);
-        return res.status(500).send({status: false});
+app.post("/complete-order", async (req, res) => {
+  const { body } = req;
+  try {
+    const userResponse = await RegisterModel.get_user_by_id(body.user_id);
+    console.log(userResponse);
+    if (!userResponse.status) {
+      return res.status(404).send({
+        message: userResponse.error,
+      });
     }
+
+    const access_token = await get_access_token();
+    const response = await fetch(
+      endpoint_url + "/v2/checkout/orders/" + req.body.orderID + "/capture",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${access_token}`,
+        },
+      }
+    );
+
+    // buscar el id del cupon de descuento si existe
+    const discountItem = body.items?.find((item) => item?.isDiscount);
+    const id_code = discountItem ? discountItem.id : null;
+
+    const json = await response.json();
+    console.log(JSON.stringify(json));
+    if (json.id) {
+      if (
+        json.purchase_units[0].payments.captures[0].status === "COMPLETED" ||
+        json.purchase_units[0].payments.captures[0].status === "PENDING"
+      ) {
+        const paypal_id_order = json.id;
+        const paypal_id_transaction =
+          json.purchase_units[0].payments.captures[0].id;
+        await RegisterModel.save_order(
+          body.user_id,
+          paypal_id_order,
+          paypal_id_transaction,
+          id_code
+        );
+        const pdfAtch = await generatePDFInvoice(
+          paypal_id_transaction,
+          body,
+          userResponse.user.uuid
+        );
+        const mailResponse = await sendEmail(
+          body,
+          pdfAtch,
+          paypal_id_transaction
+        );
+
+        return res.send({
+          ...mailResponse,
+          invoice: `${paypal_id_transaction}.pdf`,
+        });
+      }
+    } else {
+      return res.status(500).send({
+        status: false,
+        message:
+          "Tu compra no pudo ser procesada, hay un problema con tu metodo de pago por favor intenta mas tarde...",
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({
+      status: false,
+      message:
+        "hubo un error al procesar tu compra, por favor intenta mas tarde...",
+    });
+  }
 });
 
 app.post('/susbribe-email', async (req, res) => {
