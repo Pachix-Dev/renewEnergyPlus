@@ -228,7 +228,7 @@ export function Upgrade({ translates }) {
       {/* Registration CTA */}
       <div className='bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 lg:p-8 text-center border border-gray-200 max-w-2xl mx-auto'>
         <div className='flex items-center justify-center gap-4 mb-4'>
-          <div className='w-12 h-12 bg-gradient-to-r from-[#BC0100] to-[#D76901] rounded-full flex items-center justify-center'>
+          <div className='w-12 h-12 bg-gradient-to-r from-[#565078] to-[#8075c0] rounded-full flex items-center justify-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
@@ -258,7 +258,7 @@ export function Upgrade({ translates }) {
 
         <a
           href='/registro'
-          className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#BC0100] to-[#D76901] hover:from-[#a00100] hover:to-[#c55801] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105'
+          className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#565078] to-[#363250] hover:from-[#5d5394] hover:to-[#352d63] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
