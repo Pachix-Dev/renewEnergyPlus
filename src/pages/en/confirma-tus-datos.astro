@@ -13,18 +13,62 @@ const currentLanguage = i18next.language;
 
 <LayoutRegister title='RE+ Mexico | Registro'>
   <main class='py-5 grid w-full content-center container mx-auto px-4'>
-    <section class='mb-10 max-w-screen-lg mx-auto'>
-      <MarqueeSponsors partners={sponsors} isLeftToRight />
+    <section class='mx-auto'>
+      <div
+        class='bg-gradient-to-r from-[#766EA6] to-[#565078] p-7 text-white relative rounded-2xl'
+      >
+        {/* Círculos decorativos de fondo */}
+        <div class='absolute inset-0 overflow-hidden'>
+          <div
+            class='absolute top-10 right-10 w-32 h-32 bg-white bg-opacity-10 rounded-full'
+          >
+          </div>
+          <div
+            class='absolute bottom-20 left-10 w-24 h-24 bg-white bg-opacity-5 rounded-full'
+          >
+          </div>
+          <div
+            class='absolute top-1/2 right-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full'
+          >
+          </div>
+        </div>
+
+        {/* Contenido Principal */}
+        <div
+          class='relative z-10 text-left flex justify-between items-center gap-5'
+        >
+          <img
+            src='/img/replusR.webp'
+            alt='RE+ Mexico Logo'
+            class='w-32 mb-8'
+          />
+          <div class='text-right'>
+            <p
+              class='font-[Tungsten-Medium] text-white text-3xl lg:text-5xl uppercase font-bold'
+            >
+              {t('home.slogan')}
+            </p>
+            <p
+              class='mt-5 font-[Tungsten-Medium] text-white text-3xl lg:text-5xl'
+            >
+              {t('home.event-date')}
+              <span class=''>| 2026</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class='bg-[#FFFFFF]'>
+        <MarqueeSponsors partners={sponsors} isLeftToRight />
+      </div>
     </section>
-    <section class='py-5'>
-      <form class='mx-auto'>
-        <RegisterForm
-          translates={registerTranslations}
-          currentLanguage={currentLanguage}
-          client:only='react'
-        />
-      </form>
-    </section>
+    <h1 class='font-extrabold text-5xl'>
+      {t('register.title')}
+    </h1>
+    <RegisterForm
+      translates={registerTranslations}
+      currentLanguage={currentLanguage}
+      client:only='react'
+    />
   </main>
 </LayoutRegister>
 
