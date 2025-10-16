@@ -142,8 +142,6 @@ export function RegisterForm({ translates, currentLanguage }) {
   const [message, setMessage] = useState('')
   const [processing, setProcessing] = useState(false)
 
-  const options = []
-
   const urlbase = import.meta.env.DEV
     ? 'http://localhost:3010/'
     : 'https://re-plus-mexico.com.mx/server/'
