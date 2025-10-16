@@ -9,6 +9,7 @@ changeLanguage("en");
 
 const registerTranslations = t("register", { returnObjects: true });
 const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
 <LayoutRegister title='RE+ Mexico | Registro'>
@@ -30,7 +31,7 @@ const currentLanguage = i18next.language;
         <div class='flex items-center gap-4 font-bold'>
           {t('register.first_time')}
           <a
-            href='/registro-nuevo'
+            href={`${base}/registro-nuevo`}
             class='bg-[#6C6598] hover:bg-[#5a5484] hover:scale-110 ease-in-out duration-200 text-white px-4 py-2 rounded-xl flex items-center gap-2'
           >
             <svg

@@ -25,7 +25,7 @@ const base = lang === "es" ? "" : `/${lang}`;
           alt='REPLUS MEXICO'
           class='w-24 drop-shadow-xl'
         />
-        <p class='font-extrabold text-3xl'>
+        <p class='font-extrabold text-lg md:text-3xl'>
           {t('ecommerce.description')}
           <br />
         </p>
@@ -40,11 +40,14 @@ const base = lang === "es" ? "" : `/${lang}`;
       </p>
       <Items client:only currentLanguage={currentLanguage} />
       <Total client:only />
-      <Coupon
+      {
+        /* <Coupon
         client:only
         text1={t('ecommerce.cupon_text')}
         text2={t('ecommerce.cupon')}
       />
+      */
+      }
       <Continue client:only translate={t('ecommerce.continue')} base={base} />
     </aside>
   </main>

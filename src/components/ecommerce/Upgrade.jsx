@@ -66,7 +66,7 @@ export function Upgrade({ translates }) {
   }
 
   return (
-    <div className='space-y-8'>
+    <div className='space-y-10'>
       {/* Header */}
       <div className='text-center'>
         <h2 className='text-2xl lg:text-3xl font-bold text-gray-800 mb-3'>
@@ -78,7 +78,7 @@ export function Upgrade({ translates }) {
       </div>
 
       {/* Email Verification Card */}
-      <div className='bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden max-w-2xl mx-auto'>
+      <div className='bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden  mx-auto'>
         <div className='p-6 lg:p-8'>
           {/* Email Input Section */}
           <div className='relative'>
@@ -117,7 +117,7 @@ export function Upgrade({ translates }) {
                 } ${message ? 'border-red-500 bg-red-50' : ''}`}
                 type='email'
                 name='email'
-                placeholder='tucorreo@ejemplo.com'
+                placeholder='email@example.com'
                 value={email}
                 onChange={(e) => handleEmail(e.target.value)}
                 disabled={isLoading}
@@ -204,7 +204,7 @@ export function Upgrade({ translates }) {
       </div>
 
       {/* Registration CTA */}
-      <div className='bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 lg:p-8 text-center border border-gray-200 max-w-2xl mx-auto'>
+      <div className='bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 lg:p-8 text-center border border-gray-200 mx-auto'>
         <div className='flex items-center justify-center gap-4 mb-4'>
           <div className='w-12 h-12 bg-gradient-to-r from-[#565078] to-[#8075c0] rounded-full flex items-center justify-center'>
             <svg
@@ -234,6 +234,7 @@ export function Upgrade({ translates }) {
 
         <a
           href='/registro'
+          target='_blank'
           className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#565078] to-[#363250] hover:from-[#5d5394] hover:to-[#352d63] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105'
         >
           <svg

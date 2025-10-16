@@ -286,7 +286,7 @@ export class RegisterModel {
       }
   }
   
-  static async save_order (user_id,items,paypal_id_order,paypal_id_transaction,total) {
+  static async save_order (user_id,items,total, paypal_id_order,paypal_id_transaction,id_code) {
     const connection = await mysql.createConnection(config)
     try {      
       // Crear placeholders dinámicos para cada item
@@ -298,7 +298,8 @@ export class RegisterModel {
         id_item,
         total,
         paypal_id_order,
-        paypal_id_transaction,       
+        paypal_id_transaction,  
+        id_code || null,  
       ]);
       
       const query = `
@@ -324,7 +325,7 @@ export class RegisterModel {
 		try {
       
 			const [users] = await connection.query(
-				'SELECT * FROM users_2026 WHERE email = ?',
+				'SELECT * FROM users_2026 WHERE email = ? ORDER BY id DESC LIMIT 1',
 				[email]
 			)
 

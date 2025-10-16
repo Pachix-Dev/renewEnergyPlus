@@ -18,7 +18,7 @@ export function Resume({ currentLanguage }) {
       {items.map((item) => (
         <div
           key={item.id}
-          className='grid md:flex justify-between items-end gap-5 rounded-xl shadow-md p-4 bg-white relative'
+          className='grid md:flex justify-between items-end gap-5 p-4 bg-white relative'
         >
           <div>
             <h3 className='text-md'>

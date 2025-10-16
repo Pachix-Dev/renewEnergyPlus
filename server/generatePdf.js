@@ -192,7 +192,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
         .text("Total:", 50, 200 + 30)
         .text(formatAmountMXN(body.total),150,200 + 30)
         .font("Helvetica-Bold")
-        .text(body.name, 300, 200)
+        .text(body.name + ' ' + body.paternSurname , 300, 200)
         .font("Helvetica")
         .text(body.email, 300, 200 + 15)
         .text(body.phone, 300, 200 + 30 )

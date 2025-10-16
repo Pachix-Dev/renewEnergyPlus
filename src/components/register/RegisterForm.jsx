@@ -1,6 +1,7 @@
 import { useRegisterForm } from '../../store/register-form'
 import { useForm } from 'react-hook-form'
 import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
+import { MultiSelect } from 'react-multi-select-component'
 import { countries } from '../../data/list_countries'
 import 'react-phone-number-input/style.css'
 import './Form.css'
@@ -141,25 +142,7 @@ export function RegisterForm({ translates, currentLanguage }) {
   const [message, setMessage] = useState('')
   const [processing, setProcessing] = useState(false)
 
-  const options = [
-    { label: 'Intersolar Mexico', value: 'Intersolar Mexico' },
-    { label: 'Expo Eléctrica', value: 'Expo Eléctrica' },
-    {
-      label: 'Congreso de Energía Jalisco',
-      value: 'Congreso de Energía Jalisco',
-    },
-    { label: 'Energyear', value: 'Energyear' },
-    { label: 'Expo Solar Colombia', value: 'Expo Solar Colombia' },
-    { label: 'Intersolar Brasil', value: 'Intersolar Brasil' },
-    {
-      label: 'RE+ Las Vegas',
-      value: 'RE+ Las Vegas',
-    },
-    {
-      label: 'Electricity Transformation Canada',
-      value: 'Electricity Transformation Canada',
-    },
-  ]
+  const options = []
 
   const urlbase = import.meta.env.DEV
     ? 'http://localhost:3010/'
@@ -196,7 +179,7 @@ export function RegisterForm({ translates, currentLanguage }) {
         webPage,
         phoneCompany,
         eventKnowledge,
-        productInterest,
+        productInterest: productInterest.map((item) => item.value).join(),
         levelInfluence,
         wannaBeExhibitor,
         alreadyVisited,
@@ -736,44 +719,11 @@ export function RegisterForm({ translates, currentLanguage }) {
                 className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm *:text-black'
               >
                 <option value=''>{translates.select_option}</option>
-                <option value='INSTALADORES'>
-                  {translates.industry_option_1}
-                </option>
-                <option value='INTEGRADORES SOLARES'>
-                  {translates.industry_option_2}
-                </option>
-                <option value='PROVEEDORES DE TECNOLOGÍA SOLAR'>
-                  {translates.industry_option_3}
-                </option>
-                <option value='DISTRIBUIDORES DE PANELES SOLARES'>
-                  {translates.industry_option_4}
-                </option>
-                <option value='EMPRESAS DE LA INDUSTRIA ELÉCTRICA'>
-                  {translates.industry_option_5}
-                </option>
-                <option value='INGENIERÍA DE PROYECTOS'>
-                  {translates.industry_option_6}
+                <option value='CENTROS DE INVESTIGACIÓN'>
+                  {translates.industry_option_17}
                 </option>
                 <option value='CONTRATISTAS EPC'>
                   {translates.industry_option_7}
-                </option>
-                <option value='FABRICANTES'>
-                  {translates.industry_option_8}
-                </option>
-                <option value='SERVICIOS DE CONSULTORÍA'>
-                  {translates.industry_option_9}
-                </option>
-                <option value='INVERSIONISTAS'>
-                  {translates.industry_option_10}
-                </option>
-                <option value='GENERADORES DE ENERGÍA INDEPENDIENTES'>
-                  {translates.industry_option_11}
-                </option>
-                <option value='PROPIETARIOS DE PARQUES SOLARES'>
-                  {translates.industry_option_12}
-                </option>
-                <option value='DESARROLLADORES INMOBILIARIOS'>
-                  {translates.industry_option_13}
                 </option>
                 <option value='DESARROLLADORES COPORATIVOS'>
                   {translates.industry_option_14}
@@ -781,14 +731,47 @@ export function RegisterForm({ translates, currentLanguage }) {
                 <option value='DESARROLLADORES DE PARQUES INDUSTRIALES'>
                   {translates.industry_option_15}
                 </option>
-                <option value='INSTITUCIONES SECTORIALES'>
-                  {translates.industry_option_16}
+                <option value='DESARROLLADORES INMOBILIARIOS'>
+                  {translates.industry_option_13}
                 </option>
-                <option value='CENTROS DE INVESTIGACIÓN'>
-                  {translates.industry_option_17}
+                <option value='DISTRIBUIDORES DE PANELES SOLARES'>
+                  {translates.industry_option_4}
+                </option>
+                <option value='EMPRESAS DE LA INDUSTRIA ELÉCTRICA'>
+                  {translates.industry_option_5}
+                </option>
+                <option value='FABRICANTES'>
+                  {translates.industry_option_8}
+                </option>
+                <option value='GENERADORES DE ENERGÍA INDEPENDIENTES'>
+                  {translates.industry_option_11}
+                </option>
+                <option value='INGENIERÍA DE PROYECTOS'>
+                  {translates.industry_option_6}
                 </option>
                 <option value='INNOVACIÓN Y UNIVERSIDADES'>
                   {translates.industry_option_18}
+                </option>
+                <option value='INSTALADORES'>
+                  {translates.industry_option_1}
+                </option>
+                <option value='INSTITUCIONES SECTORIALES'>
+                  {translates.industry_option_16}
+                </option>
+                <option value='INTEGRADORES SOLARES'>
+                  {translates.industry_option_2}
+                </option>
+                <option value='INVERSIONISTAS'>
+                  {translates.industry_option_10}
+                </option>
+                <option value='PROPIETARIOS DE PARQUES SOLARES'>
+                  {translates.industry_option_12}
+                </option>
+                <option value='PROVEEDORES DE TECNOLOGÍA SOLAR'>
+                  {translates.industry_option_3}
+                </option>
+                <option value='SERVICIOS DE CONSULTORÍA'>
+                  {translates.industry_option_9}
                 </option>
               </select>
               {errors.industry && (
@@ -1278,23 +1261,23 @@ export function RegisterForm({ translates, currentLanguage }) {
                 className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
               >
                 <option value=''>{translates.select_option}</option>
-                <option value='FACEBOOK'>FACEBOOK</option>
-                <option value='ESPECTACULAR'>{translates.spectacular}</option>
-                <option value='PAGINA WEB'>{translates.website}</option>
-                <option value='TWITTER'>TWITTER</option>
-                <option value='LINKEDIN'>LINKEDIN</option>
-                <option value='INSTAGRAM'>INSTAGRAM</option>
-                <option value='CORREO ELECTRÓNICO'>{translates.email}</option>
-                <option value='INVITADO POR EXPOSITOR'>
-                  {translates.guest_by_exhibitor}
-                </option>
-                <option value='RADIO'>RADIO</option>
-                <option value='TELEVISIÓN'>{translates.television}</option>
-                <option value='PRENSA'>{translates.press}</option>
                 <option value='ANUNCIO EN REVISTA'>
                   {translates.magazine_ad}
                 </option>
+                <option value='CORREO ELECTRÓNICO'>{translates.email}</option>
+                <option value='ESPECTACULAR'>{translates.spectacular}</option>
+                <option value='FACEBOOK'>FACEBOOK</option>
+                <option value='INSTAGRAM'>INSTAGRAM</option>
+                <option value='INVITADO POR EXPOSITOR'>
+                  {translates.guest_by_exhibitor}
+                </option>
+                <option value='LINKEDIN'>LINKEDIN</option>
+                <option value='PAGINA WEB'>{translates.website}</option>
+                <option value='PRENSA'>{translates.press}</option>
+                <option value='RADIO'>RADIO</option>
                 <option value='TELEMARKETING'>TELEMARKETING</option>
+                <option value='TELEVISIÓN'>{translates.television}</option>
+                <option value='TWITTER'>TWITTER</option>
               </select>
               {errors.eventKnowledge && (
                 <p className='text-red-600 font-light'>
@@ -1307,21 +1290,50 @@ export function RegisterForm({ translates, currentLanguage }) {
                 {translates.product_interest}{' '}
                 <span className='text-red-600'>*</span>
               </p>
-              <select
+              <MultiSelect
+                options={translates.list_interest_product.map(
+                  (item, index) => ({
+                    label: item,
+                    value: item,
+                  })
+                )}
+                value={Array.isArray(productInterest) ? productInterest : []}
+                onChange={(selected) => {
+                  const selectedArray = Array.isArray(selected) ? selected : []
+                  setProductInterest(selectedArray)
+                  // Actualizar el valor en react-hook-form
+                  setValue(
+                    'productInterest',
+                    selectedArray.length > 0 ? selectedArray : null
+                  )
+                }}
+                labelledBy='Select'
+                className='mt-2 w-full text-sm text-white *:text-black uppercase'
+                hasSelectAll={false}
+                overrideStrings={{
+                  selectSomeItems:
+                    translates.select_option || 'Seleccionar opciones...',
+                  allItemsAreSelected:
+                    'Todos los elementos están seleccionados',
+                  selectAll: 'Seleccionar todo',
+                  search: 'Buscar',
+                  clearSearch: 'Limpiar búsqueda',
+                }}
+              />
+
+              {/* Campo oculto para validación con react-hook-form */}
+              <input
+                type='hidden'
                 {...register('productInterest', {
                   required: `${translates.requiered}`,
-                  onChange: (e) => setProductInterest(e.target.value),
+                  validate: (value) => {
+                    if (!productInterest || productInterest.length === 0) {
+                      return `${translates.requiered}`
+                    }
+                    return true
+                  },
                 })}
-                defaultValue={productInterest}
-                className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black uppercase'
-              >
-                <option value=''>{translates.select_option}</option>
-                {translates.list_interest_product.map((item, index) => (
-                  <option key={index} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
+              />
               {errors.productInterest && (
                 <p className='text-red-600 font-light'>
                   {errors.productInterest.message}

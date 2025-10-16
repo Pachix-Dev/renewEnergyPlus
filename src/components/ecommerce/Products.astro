@@ -50,15 +50,13 @@ const products = [
       '1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack',
       'Acceso martes 14 de abril en Desfilia, Expo Guadalajara',
       'Recepción 6:15 p.m.',
-      'Inicio del evento 6:30 p.m.',
-      'Fin del evento 10:00 p.m.',
+      'Duración 6:30 p.m. - 10:00 p.m.',
     ],
     included_en: [
       '1 Ticket for the Energy Night with unlimited drinks and snacks',
       'Access Tuesday, April 14 at Desfilia, Expo Guadalajara',
       'Reception 6:15 p.m.',
-      'Event start 6:30 p.m.',
-      'Event end 10:00 p.m.',
+      'Duration 6:30 p.m. - 10:00 p.m.',      
     ],
   },
 ]
@@ -66,7 +64,7 @@ const products = [
 
 <div class='mt-16'>
   <!-- Grid de productos -->
-  <div class='grid lg:grid-cols-2 gap-8 justify-center max-w-7xl mx-auto'>
+  <div class='grid xl:grid-cols-2 gap-8 justify-center max-w-7xl mx-auto'>
     {
       products.map((product, index) => (
         <div 
@@ -79,7 +77,7 @@ const products = [
           {product.id === 1 && (
             <div class='absolute -top-4 left-1/2 transform -translate-x-1/2 z-10'>
               <div class='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-2 rounded-full shadow-lg'>
-                <span class='text-sm font-bold uppercase tracking-wider'>🔥 {i18next.language === 'es' ? 'MÁS POPULAR' : 'MOST POPULAR'}</span>
+                <span class='text-xs md>text-sm font-bold uppercase tracking-wider'>🔥 {i18next.language === 'es' ? 'MÁS POPULAR' : 'MOST POPULAR'}</span>
               </div>
             </div>
           )}
@@ -97,7 +95,7 @@ const products = [
           <div class={`relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl border overflow-hidden h-full ${product.id === 1 ? 'border-yellow-200 ring-2 ring-yellow-300/50' : 'border-gray-100'}`}>
             
             <!-- Header del card -->
-            <div class={`px-8 py-6 text-center relative overflow-hidden ${product.id === 1 ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : 'bg-gradient-to-r from-[#5E5884] to-[#7B6FA8]'}`}>
+            <div class={`h-32 px-8 py-6 text-center relative overflow-hidden ${product.id === 1 ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : 'bg-gradient-to-r from-[#5E5884] to-[#7B6FA8]'}`}>
               {/* Elementos decorativos */}
               <div class='absolute top-0 left-0 w-full h-full opacity-10'>
                 <div class='absolute top-2 right-2 w-16 h-16 border-2 border-white rounded-full animate-spin'></div>
@@ -137,7 +135,7 @@ const products = [
                   
                   <div class='flex items-baseline justify-center text-gray-900 mb-3'>
                     <span class='text-2xl font-semibold'>$</span>
-                    <span class={`font-black tracking-tight text-green-600 ${product.id === 1 ? 'text-5xl' : 'text-4xl'}`}>
+                    <span class={`font-black tracking-tight text-green-600 text-4xl`}>
                       {product.pricingPhases.presale.price.toLocaleString('es-MX')}
                     </span>
                     <span class='text-lg font-normal text-gray-500 ml-1'>MXN</span>

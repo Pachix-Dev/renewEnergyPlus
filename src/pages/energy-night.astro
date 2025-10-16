@@ -291,7 +291,7 @@ const translate = t("ecommerce", { returnObjects: true });
               <div class='mx-auto'>
                 <AddEnergyNight
                   item={{
-                    product,
+                    ...product,
                   }}
                   translate={translate}
                   client:only='react'

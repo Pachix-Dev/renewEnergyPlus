@@ -14,7 +14,7 @@ export function Total() {
   }
 
   return (
-    <div className='mt-5 grid gap-6 items-center bg-white shadow-md p-4 rounded-xl'>
+    <div className='mt-5 grid gap-6 items-center bg-white  p-4 rounded-xl shadow-md'>
       <div className='flex justify-between'>
         <p className='text-xl'>Subtotal</p>
         <p className='text-xl'>{formatAmountMXN(total)}</p>
