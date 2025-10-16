@@ -279,7 +279,7 @@ export function CheckoutForm({ currentLanguage, translates }) {
                       'Tarjeta de Crédito o Débito'}
                   </label>
                 </div>
-                <div className='flex items-center gap-2'>
+                <div className='flex flex-wrap justify-center items-center gap-2'>
                   <img
                     src='/visa.webp'
                     alt='Visa'

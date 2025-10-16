@@ -79,12 +79,12 @@ export function Upgrade({ translates }) {
 
       {/* Email Verification Card */}
       <div className='bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden  mx-auto'>
-        <div className='p-6 lg:p-8'>
+        <div className='p-4 lg:p-8'>
           {/* Email Input Section */}
           <div className='relative'>
             <label
               htmlFor='email'
-              className='absolute -top-3 left-4 bg-gradient-to-r from-[#565078] to-[#766EA6] text-white px-3 py-1 rounded-lg text-sm font-medium z-10'
+              className='absolute -top-3 left-4 bg-gradient-to-r from-[#565078] to-[#766EA6] text-white px-3 py-1 rounded-lg text-xs md:text-sm font-medium z-10'
             >
               {translates.text_2}
             </label>
@@ -110,7 +110,7 @@ export function Upgrade({ translates }) {
               </div>
 
               <input
-                className={`w-full pl-12 pr-32 py-4 text-lg border-2 rounded-xl transition-all duration-300 focus:outline-none ${
+                className={`w-full pl-12 pr-20 md:pr-32 py-4 text-lg border-2 rounded-xl transition-all duration-300 focus:outline-none ${
                   user
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-800'
                     : 'border-gray-300 bg-gray-50 focus:border-[#565078] focus:bg-white'

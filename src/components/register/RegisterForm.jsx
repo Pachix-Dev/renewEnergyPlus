@@ -341,7 +341,7 @@ export function RegisterForm({ translates, currentLanguage }) {
             </div>
           </div>
 
-          <div className='grid grid-cols-2 gap-6'>
+          <div className='grid md:grid-cols-2 gap-6'>
             <div>
               <p className='mt-5 text-black'>
                 {translates.name} <span className='text-red-600'>*</span>
@@ -450,7 +450,7 @@ export function RegisterForm({ translates, currentLanguage }) {
             </div>
           </div>
 
-          <div className='grid grid-cols-2 gap-6'>
+          <div className='grid md:grid-cols-2 gap-6'>
             <div>
               <p className='mt-5 text-black'>
                 {translates.email} <span className='text-red-600'>*</span>
@@ -549,47 +549,9 @@ export function RegisterForm({ translates, currentLanguage }) {
                 </p>
               )}
             </div>
-            {/* 
-              <div>
-                <p className='mt-5 text-black font-bold'>
-                  {translates.placeholder_code_invitation}
-                </p>
-                <div className='relative mt-2 '>
-                  <input
-                    type='text'
-                    {...register('code_invitation', {
-                      onChange: (e) => setCodeInvitation(e.target.value),
-                    })}
-                    name='code_invitation'
-                    id='code_invitation'
-                    className='w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm shadow-sm'
-                    placeholder={translates.placeholder_code_invitation}
-                    autoComplete='code_invitation'
-                    defaultValue={code_invitation}
-                  />
-
-                  <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      strokeWidth={1.5}
-                      stroke='currentColor'
-                      className='h-4 w-4 text-gray-400'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5'
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            */}
           </div>
 
-          <div className='grid grid-cols-2 gap-6'>
+          <div className='grid md:grid-cols-2 gap-6'>
             <div>
               <p className='mt-5 text-black'>
                 {translates.phone} <span className='text-red-600'>*</span>
@@ -611,6 +573,7 @@ export function RegisterForm({ translates, currentLanguage }) {
                 </p>
               )}
             </div>
+
             <div>
               <p className='mt-5 text-black'>
                 {translates.nacionality} <span className='text-red-600'>*</span>
@@ -635,6 +598,43 @@ export function RegisterForm({ translates, currentLanguage }) {
                   {errors.nacionality.message}
                 </p>
               )}
+            </div>
+
+            <div>
+              <p className=' text-black'>
+                {translates.placeholder_code_invitation}
+              </p>
+              <div className='relative mt-2 '>
+                <input
+                  type='text'
+                  {...register('code_invitation', {
+                    onChange: (e) => setCodeInvitation(e.target.value),
+                  })}
+                  name='code_invitation'
+                  id='code_invitation'
+                  className='w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm shadow-sm'
+                  placeholder={translates.placeholder_code_invitation}
+                  autoComplete='code_invitation'
+                  defaultValue={code_invitation}
+                />
+
+                <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='h-4 w-4 text-gray-400'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5'
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -1306,7 +1306,7 @@ export function RegisterForm({ translates, currentLanguage }) {
                   )
                 }}
                 labelledBy='Select'
-                className='mt-2 w-full text-sm text-white *:text-black uppercase'
+                className='mt-2 w-full max-w-full text-sm text-white *:text-black uppercase '
                 hasSelectAll={false}
                 overrideStrings={{
                   selectSomeItems:

@@ -339,15 +339,15 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
          align: 'center'
      })
      .moveDown(1)     
-     .text('Martes/Wednesday   11:00 am – 6:00 pm', 330, 250, {
+     .text('Martes / Tuesday  11:00 am – 6:00 pm', 330, 250, {
          width: 250,    
          align: 'center'
      })
-     .text('Miércoles/Thursday  11:00 am – 6:00 pm', 330, 260, {
+     .text('Miércoles / Wednesday  11:00 am – 6:00 pm', 330, 260, {
          width: 250,    
          align: 'center'
      })
-     .text('Jueves/Friday  11:00 am – 5:00 pm', 330, 270, {
+     .text('Jueves / Thursday  11:00 am – 5:00 pm', 330, 270, {
          width: 250,    
          align: 'center'
      })
@@ -530,15 +530,15 @@ async function generatePDF_freePass( body, uuid) {
         align: 'center'
     })
     .moveDown(1)    
-    .text('Martes/Tuesday 11:00 am – 6:00 pm', 330, 250, {
+    .text('Martes / Tuesday 11:00 am – 6:00 pm', 330, 250, {
         width: 250,    
         align: 'center'
     })
-    .text('Miércoles/Wednesday 11:00 am – 6:00 pm', 330, 260, {
+    .text('Miércoles / Wednesday 11:00 am – 6:00 pm', 330, 260, {
         width: 250,    
         align: 'center'
     })
-    .text('Jueves/Thursday 11:00 am – 5:00 pm', 330, 270, {
+    .text('Jueves / Thursday 11:00 am – 5:00 pm', 330, 270, {
         width: 250,    
         align: 'center'
     });

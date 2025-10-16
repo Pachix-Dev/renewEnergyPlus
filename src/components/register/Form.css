@@ -65,7 +65,14 @@
     left: -100px;
     opacity: 0.6;
   }
-
+  .dropdown-heading{
+    overflow-x: hidden;
+  }
+  .rmsc .dropdown-heading .dropdown-heading-value{
+    text-overflow: ellipsis;
+    white-space: inherit;
+    overflow: hidden;
+  }
   @keyframes shine {
     0% {
       left: -100px;

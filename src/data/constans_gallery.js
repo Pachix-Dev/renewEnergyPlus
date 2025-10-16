@@ -1,17 +1,17 @@
 const gallery2025 = [
-
+    {
+        src: '/img/gallery/2025/inauguracion.jpg',
+        width: 1920,
+        height: 1280,
+        alt: 'Solar Storage 2025'
+    },
     {
         src: '/img/gallery/2025/galeria2025_1.jpg',
         width: 1920,
         height: 1536,
         alt: 'Solar Storage 2025'
     },
-    {
-        src: '/img/gallery/2025/galeria2025_2.jpg',
-        width: 1920,
-        height: 1536,
-        alt: 'Solar Storage 2025'
-    },
+    
     {
         src: '/img/gallery/2025/galeria2025_3.jpg',
         width: 1920,
@@ -66,15 +66,61 @@ const gallery2025 = [
         width: 1920,
         height: 853,
         alt: 'Solar Storage 2025'
-    },
-    
+    },    
     {
         src: '/img/gallery/2025/galeria2025_12.jpg',
         width: 1920,
         height: 853,
         alt: 'Solar Storage 2025'
     },
-    
+    {
+        src: '/img/gallery/2025/galeria2025_13.jpg',
+        width: 1920,
+        height: 853,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2025_14.jpg',
+        width: 1920,
+        height: 853,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2025_15.jpg',
+        width: 1920,
+        height: 853,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2025_16.jpg',
+        width: 1920,
+        height: 853,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2025_17.jpg',
+        width: 1920,
+        height: 853,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2025_18.jpg',
+        width: 1920,
+        height: 853,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2025_19.jpg',
+        width: 1920,
+        height: 853,
+        alt: 'Solar Storage 2025'
+    },
+    {
+        src: '/img/gallery/2025/galeria2025_2.jpg',
+        width: 1920,
+        height: 1536,
+        alt: 'Solar Storage 2025'
+    },
 ]
 
 const gallery2024 = [
