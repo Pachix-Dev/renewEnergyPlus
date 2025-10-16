@@ -81,7 +81,8 @@ export function CheckoutForm({ currentLanguage, translates }) {
   // Client ID corregido
   const client_id = import.meta.env.DEV
     ? 'ATiUATgSHsCqGLn3AboCziXwPiGRjdJKYCam-fHR5pumV11OEBsffTTMLGD4AD9Auy2aG3nsKhj28YOF'
-    : 'Aa0JkMqk88tZqD7QkKtNEt2pArR0ExXwTP-nwSB6_S_RBBsFOe6EXPntvAvjP2hhXNBpBF9IYwiLOBgB'
+    : //: 'Aa0JkMqk88tZqD7QkKtNEt2pArR0ExXwTP-nwSB6_S_RBBsFOe6EXPntvAvjP2hhXNBpBF9IYwiLOBgB'
+      'ATiUATgSHsCqGLn3AboCziXwPiGRjdJKYCam-fHR5pumV11OEBsffTTMLGD4AD9Auy2aG3nsKhj28YOF'
 
   // Configuración simplificada como en el ejemplo
   const style = { layout: 'vertical' }
