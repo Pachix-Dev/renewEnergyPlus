@@ -1,6 +1,6 @@
 import { useRegisterForm } from '../../store/register-form'
 
-export function Infouser() {
+export function Infouser({ translates }) {
   const { email, name, paternSurname, phone, company, clear_info_verify } =
     useRegisterForm()
 
@@ -31,11 +31,9 @@ export function Infouser() {
           </div>
           <div>
             <h3 className='text-xl font-bold text-white'>
-              Información Personal
+              {translates.personalinfo}
             </h3>
-            <p className='text-white/80 text-sm'>
-              Verifica que los datos sean correctos
-            </p>
+            <p className='text-white/80 text-sm'>{translates.verifydata}</p>
           </div>
         </div>
       </div>
@@ -63,9 +61,6 @@ export function Infouser() {
                 </svg>
               </div>
               <div className='flex-1'>
-                <p className='text-xs text-gray-500 uppercase tracking-wider font-medium mb-1'>
-                  Nombre Completo
-                </p>
                 <p className='font-bold text-gray-800 text-lg'>
                   {name} {paternSurname}
                 </p>
@@ -93,9 +88,6 @@ export function Infouser() {
                 </svg>
               </div>
               <div className='flex-1'>
-                <p className='text-xs text-gray-500 uppercase tracking-wider font-medium mb-1'>
-                  Correo Electrónico
-                </p>
                 <p className='font-bold text-gray-800 text-sm break-all'>
                   {email}
                 </p>
@@ -123,9 +115,6 @@ export function Infouser() {
                 </svg>
               </div>
               <div className='flex-1'>
-                <p className='text-xs text-gray-500 uppercase tracking-wider font-medium mb-1'>
-                  Teléfono
-                </p>
                 <p className='font-bold text-gray-800 text-lg'>{phone}</p>
               </div>
             </div>
@@ -151,9 +140,6 @@ export function Infouser() {
                 </svg>
               </div>
               <div className='flex-1'>
-                <p className='text-xs text-gray-500 uppercase tracking-wider font-medium mb-1'>
-                  Empresa
-                </p>
                 <p className='font-bold text-gray-800 text-lg'>{company}</p>
               </div>
             </div>
@@ -165,7 +151,7 @@ export function Infouser() {
           <div className='flex flex-col sm:flex-row items-center justify-between gap-4'>
             <div className='flex items-center gap-3 text-sm text-gray-600'>
               <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse'></div>
-              <span>Información verificada automáticamente</span>
+              <span>{translates.infoautomatic}</span>
             </div>
 
             <button
@@ -186,7 +172,7 @@ export function Infouser() {
                   d='M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99'
                 />
               </svg>
-              <span>¿No eres esta persona?</span>
+              <span>{translates.notyou}</span>
             </button>
           </div>
         </div>

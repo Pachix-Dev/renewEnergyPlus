@@ -52,11 +52,11 @@
         "text_button_program": "Acquire today and connect with the most influential leaders in the industry.",
         "text_exhibitor": "",
         "cifra_1": "RE+ MEXICO, the leading renewable energy fair for Mexico and North America",
-        "cifra_2": "Join the seventh edition of the event that is shaping the sustainable energy future of our country, where you will find:",
-        "cifra_3": "sqm of exhibition floor in conjunction with Ecomondo Mexico and AMERICAS’ Mobility Of The Future.",
+        "cifra_2": "Join the seventh edition of the event that is shaping the sustainable energy future of our country.",
+        "cifra_3": "of exhibition floor in conjunction with Ecomondo Mexico.",
         "cifra_4": "professional buyers.",
         "cifra_5": "exhibiting companies with leading brands at a global level.",
-        "cifra_6": "conferences, practical workshops and keynote speeches.",
+        "cifra_6": "panels, specialized workshops and keynote speeches.",
         "cifra_7": "High-profile networking.",
         "register_text": "Discover the latest technologies and attend specialized workshops for free.",
         "event-date": "April 14th - 16th",
@@ -192,6 +192,7 @@
         "minutes": "minutes",
         "seconds": "seconds",
         "free_register": "FREE REGISTRATION",
+        "media_allies": "MEDIA PARTNERS",
         "media_platinum": "PLATINUM MEDIA PARTNERS",
         "media_gold": "GOLD MEDIA PARTNERS",
         "testimonial": "TESTIMONIALS",
@@ -210,8 +211,8 @@
         "readyfor": "Ready to create your own experience at RE+ MEXICO?",
         "discover_experience": "Discover real experiences from exhibitors, visitors, and speakers who have been part of RE+ MEXICO",
         "segments": {
-            "title": "Industry Segments",
-            "subtitle": "Discover all the technologies and sectors that will be present at RE+ Mexico",
+            "title": "Segments of",
+            "subtitle": "Discover all the technologies and sectors that will be present",
             "category1": "Solar",
             "item1": "Photovoltaic technology systems",
             "desc1": "Solar panels, inverters and complete systems",
@@ -242,8 +243,8 @@
     },
     "AboutSSM": {
         "title": "ABOUT RE+ MEXICO",
-        "description": "<strong>RE+ MEXICO</strong> is the largest renewable energy event in Mexico. RE+ MEXICO presents technology solutions, educational content and networking opportunities for the entire renewable energy industry. RE+ MEXICO showcases leading clean energy sectors, including solar, energy storage, green hydrogen, wind energy, microgrids and more.</br></br>Mexico's privileged geographical location has forged a virtuous path for clean energy generation; however, our country finds itself at an energy crossroads, marked by considerable dependence on fossil fuels.</br></br>With just 0.63 percent of electricity generation coming from bioenergy in 2023, according to data from the National Electric System Development Program (Prodesen), it is evident that our country still has a long way to go towards more sustainable electricity generation sources.</br></br>It is imperative that our country takes gigantic steps to achieve the Net Zero goals for 2030, and address the energy challenges that will allow us to transition towards a sustainable future.</br></br><strong>Deutsche Messe and Italian Exhibition Group</strong>, two of the most important event organizers globally; RE+ Events, the world's event management and association organization specialized in the clean energy industry, together with SNEC PV Power Expo, the world's most important solar technology event based in Shanghai, China; are pleased to present RE+ MEXICO 2026.</br></br>RE+ MEXICO establishes itself as the strategic platform to catalyze our country and the North American region to lead a large part of the accelerated fight to reduce greenhouse gas emissions and harness renewable energy capacity, delving into key sectors such as: Thermal and Solar, Photovoltaic Technology Systems, Storage, Wind, Green Hydrogen and Grid Infrastructure, leveraging and strengthening existing technologies, as well as the constant pursuit of innovations that enable guaranteeing access to clean and affordable energy.</br></br>",
-        "description2": " We look forward to continuing to collaborate together in building a cleaner and more sustainable future for all! <br /><br /> See you at RE+ MEXICO 2026."
+        "description": "Mexico has set itself the goal of achieving 45% renewable energy generation by 2030. Our country has extraordinary potential in solar and wind energy, so meeting this goal will require the commitment and collaboration of the entire industry. <br /><br />RE+ MEXICO is established as the strategic platform to propel our country in this accelerated transition towards a sustainable energy future, connecting the main players in the sector to reduce greenhouse gas emissions and make the most of Mexico's renewable energy capacity. In our seventh edition, from April 14 to 16, at Expo Guadalajara, Jalisco, we will bring together more than 220 leading exhibitors in the sectors of Solar Energy and Storage, Green Hydrogen, Wind Energy, Microgrids, as well as more than 50 specialists in an academic program and exclusive networking spaces to strengthen the entire renewable energy value chain.",
+        "description2": "See you at RE+ MEXICO 2026! <br />April 14–16, Expo Guadalajara, Jalisco."
     },
     "AboutReEvents": {
         "title": "About RE+ Events",
@@ -351,7 +352,7 @@
         "message_button": "Send message"
     },
     "hotels":{
-        "cedera": "Venue cede",
+        "cedera": "Headquarters",
         "text_description": "Expo Guadalajara is the largest convention center in Mexico and Latin America, with more than 1,230,000 square feet of modern space for international trade shows, conferences, and exhibitions.<br /><br /> Located in the heart of Guadalajara, it offers first-class connectivity and is surrounded by hotels, restaurants, and services that make it the ideal venue for world-class events.",
         "title": "Special Hotel Rates",
         "description": "Expo Guadalajara is the largest convention center in Mexico and Latin America, with more than 119,000 m² of modern spaces for international fairs, congresses and exhibitions. <br /><br /> Located in the heart of Guadalajara, it offers first-class connectivity and is surrounded by hotels, restaurants and services that make it the ideal venue for world-class events.",
@@ -585,7 +586,15 @@
         "instructions_text_5": "5. When you confirm your payment, your bank's portal will generate a digital receipt, <strong>you will be able to verify that the payment has been made correctly, keep this proof of payment.</strong>",
         "instructions_text_6": "Once you have completed these steps, send an email to <strong><a href='mailto:emmanuel.heredia@igeco.mx' target='_blank'>emmanuel.heredia@igeco.mx</a></strong> with invoice of payment,  your full name, name of the event you will attend and the email address you used for registration so we can validate your payment and send you your access.",
         "copy": "Copy",
-        "copy_success": "Copied"
+        "copy_success": "Copied",
+        "verify_user": "Verify user",
+        "verify_text": "Enter the email address you registered with",
+        "first_time": "First time here?",
+        "dontworries": "Don't worry, creating an account is very easy",
+        "personalinfo": "Personal information",
+        "verifydata": "Verify that the data is correct",
+        "infoautomatic": "The information is filled in automatically",
+        "notyou": "Not you?"
     },
     "installer_award":{
         "text_1": "Show your excellence in the Solar Industry!",

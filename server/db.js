@@ -490,6 +490,28 @@ export class RegisterModel {
     }
   }
 
+  static async get_user_by_id(id) {
+    const connection = await mysql.createConnection(config);
+    try {
+      const [users] = await connection.query(
+        "SELECT * FROM users_2026 WHERE id = ?",
+        [id]
+      );
+      if (users.length === 0) {
+        return {
+          status: false,
+          error: "No se encontró el usuario",
+        };
+      }
+
+      return {
+        status: true,
+        user: users[0],
+      };
+    } finally {
+      await connection.end();
+    }
+  }
 
   // checar si el usuario ya visito antes la feria
 	static async get_user_visit_last_fair(email) {

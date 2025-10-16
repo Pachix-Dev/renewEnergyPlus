@@ -2,207 +2,243 @@
 import i18next, { t } from 'i18next'
 ---
 
-<section>
-  <p
-    data-aos='fade-up'
-    data-aos-duration='1000'
-    class='text-4xl font-extrabold text-center mt-20 text-[#565078] uppercase'
-  >
-    {t('home.sponsor_diamond')}
-  </p>
-  <div
-    data-aos='fade-up'
-    data-aos-duration='1000'
-    class='p-5 w-fit mx-auto mt-5'
-  >
-    <img
-      src='/img/sponsors/Huawei.webp'
-      alt='Logotipo Huawei'
-      width='350'
-      class='mt-5 mx-auto'
-    />
-  </div>
-  <p
-    data-aos='fade-up'
-    data-aos-duration='1200'
-    class='text-4xl font-extrabold text-center mt-20 text-[#565078] uppercase'
-  >
-    {t('home.sponsor_platinum')}
-  </p>
-  <div
-    data-aos='fade-up'
-    data-aos-duration='1200'
-    class='grid md:flex justify-center gap-3 md:gap-14 mt-5'
-  >
-    <div class='p-5 flex justify-center items-center'>
-      <img
-        src='/img/sponsors/EcoFlow.webp'
-        alt='ECOFLOW'
-        width='300'
-        class='my-auto'
-      />
-    </div>
-    <div class='p-5 flex justify-center items-center'>
-      <img src='/img/sponsors/S-5logo.webp' alt='S-5' width='100' />
-    </div>
-    <div class='p-5 flex justify-center items-center'>
-      <img
-        src='/img/sponsors/yinglisolar.webp'
-        alt='Yingli Solar'
-        width='250'
-      />
-    </div>
-  </div>
-  <p
-    data-aos='fade-up'
-    data-aos-duration='1300'
-    class='mt-20 text-4xl font-extrabold text-center text-[#565078] uppercase'
-  >
-    {t('home.sponsor_gold')}
-  </p>
-  <div
-    data-aos='fade-up'
-    data-aos-duration='1300'
-    class='flex justify-center flex-wrap gap-3 md:gap-14 mt-10'
-  >
-    <div class='p-5 flex items-center'>
-      <img src='/img/sponsors/longi.webp' alt='LONGI' width='200' />
-    </div>
-    <div class='p-5 flex items-center'>
-      <img src='/img/sponsors/quartux.webp' alt='QUARTUX' width='220' />
-    </div>
-    <div class='p-5 flex items-center'>
-      <img src='/img/sponsors/hitachi.webp' alt='hitachi' width='120' />
-    </div>
-    <div class='p-5 flex items-center'>
-      <img src='/img/keymexenergy.webp' alt='Keymex' width='220' />
-    </div>
-  </div>
-  <p
-    data-aos='fade-up'
-    data-aos-duration='1300'
-    class='mt-20 text-4xl font-extrabold text-center text-[#565078] uppercase'
-  >
-    {t('home.sponsor_silver')}
-  </p>
-  <div
-    data-aos='fade-up'
-    data-aos-duration='1300'
-    class='grid md:flex md:flex-wrap justify-center gap-3 md:gap-14 mt-10'
-  >
-    <div class='p-5 flex justify-center items-center'>
-      <img src='/img/sponsors/apSystems.webp' alt='' width='200' />
+<section class='py-16 bg-white'>
+  <div class='container mx-auto px-4'>
+    <!-- Diamond Sponsor -->
+    <div class='mb-4' data-aos='fade-up' data-aos-duration='1000'>
+      <h2
+        class='text-3xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide'
+      >
+        {t('home.sponsor_diamond')}
+      </h2>
+      <div class='flex justify-center'>
+        <img
+          src='/img/sponsors/Huawei.webp'
+          alt='Logotipo Huawei'
+          width='350'
+          class='max-w-full h-auto'
+        />
+      </div>
     </div>
 
-    <div class='p-5 flex justify-center items-center'>
-      <img
-        src='/img/sponsors/cometer.webp'
-        alt='COMETER'
-        class=''
-        width='220'
-      />
+    <!-- Platinum Sponsors -->
+    <div class='mb-4' data-aos='fade-up' data-aos-duration='1200'>
+      <h2
+        class='text-3xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide'
+      >
+        {t('home.sponsor_platinum')}
+      </h2>
+      <div class='flex flex-wrap justify-center items-center gap-8 md:gap-12'>
+        <div class='flex justify-center items-center min-h-[120px]'>
+          <img
+            src='/img/sponsors/EcoFlow.webp'
+            alt='ECOFLOW'
+            width='300'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[120px]'>
+          <img
+            src='/img/sponsors/S-5logo.webp'
+            alt='S-5'
+            width='100'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[120px]'>
+          <img
+            src='/img/sponsors/yinglisolar.webp'
+            alt='Yingli Solar'
+            width='250'
+            class='max-w-full h-auto'
+          />
+        </div>
+      </div>
     </div>
-    <div class='p-5 flex justify-center items-center'>
-      <img src='/img/sponsors/lirvan.webp' alt='Lirvan' width='200' class='' />
-    </div>
-    <div class='p-5 flex justify-center items-center'>
-      <img
-        src='/img/sponsors/leadvance.webp'
-        alt='leadvance'
-        width='90'
-        class=''
-      />
-    </div>
-    <div class='p-5 flex justify-center items-center'>
-      <img src='/img/skyfund.webp' alt='SKY FUND' width='200' class='' />
-    </div>
-    <div class='p-5 flex justify-center items-center'>
-      <img src='/img/tclSolar.webp' alt='TCL SOLAR' width='300' class='' />
-    </div>
-  </div>
 
-  <p
-    data-aos='fade-up'
-    data-aos-duration='1300'
-    class='mt-20 text-4xl font-extrabold text-center text-[#565078] uppercase'
-  >
-    {t('home.sponsor_bronze')}
-  </p>
-  <div
-    data-aos='fade-up'
-    data-aos-duration='1300'
-    class='flex justify-center flex-wrap gap-1 md:gap-14 mt-10'
-  >
-    <div class='p-5 flex items-center'>
-      <img
-        src='/img/sponsors/nosmueveelsol.webp'
-        alt='NOSMUEVEELSOL'
-        width='180'
-        class=''
-      />
+    <!-- Gold Sponsors -->
+    <div class='mb-4' data-aos='fade-up' data-aos-duration='1300'>
+      <h2
+        class='text-3xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide'
+      >
+        {t('home.sponsor_gold')}
+      </h2>
+      <div class='flex flex-wrap justify-center items-center gap-6 md:gap-10'>
+        <div class='flex justify-center items-center min-h-[100px]'>
+          <img
+            src='/img/sponsors/longi.webp'
+            alt='LONGI'
+            width='200'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[100px]'>
+          <img
+            src='/img/sponsors/quartux.webp'
+            alt='QUARTUX'
+            width='220'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[100px]'>
+          <img
+            src='/img/sponsors/hitachi.webp'
+            alt='hitachi'
+            width='120'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[100px]'>
+          <img
+            src='/img/keymexenergy.webp'
+            alt='Keymex'
+            width='220'
+            class='max-w-full h-auto'
+          />
+        </div>
+      </div>
     </div>
-    <div class='p-5 flex items-center'>
-      <img
-        src='/img/tutosmart.webp'
-        alt='TUTO SMART ENERGY'
-        width='180'
-        class=''
-      />
+
+    <!-- Silver Sponsors -->
+    <div class='mb-4' data-aos='fade-up' data-aos-duration='1400'>
+      <h2
+        class='text-3xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide'
+      >
+        {t('home.sponsor_silver')}
+      </h2>
+      <div class='flex flex-wrap justify-center items-center gap-2'>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/sponsors/apSystems.webp'
+            alt='AP Systems'
+            width='200'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/sponsors/cometer.png'
+            alt='COMETER'
+            width='220'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/sponsors/lirvan.webp'
+            alt='Lirvan'
+            width='200'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/sponsors/leadvance.webp'
+            alt='leadvance'
+            width='90'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/skyfund.webp'
+            alt='SKY FUND'
+            width='200'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/tclSolar.webp'
+            alt='TCL SOLAR'
+            width='300'
+            class='max-w-full h-auto'
+          />
+        </div>
+      </div>
     </div>
-    <div class='p-5 flex items-center'>
-      <img src='/img/solaxpower.webp' alt='SOLAX POWER' width='220' class='' />
+
+    <!-- Bronze Sponsors -->
+    <div class='mb-4' data-aos='fade-up' data-aos-duration='1500'>
+      <h2
+        class='text-3xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide'
+      >
+        {t('home.sponsor_bronze')}
+      </h2>
+      <div class='flex flex-wrap justify-center items-center gap-6 md:gap-10'>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/sponsors/nosmueveelsol.webp'
+            alt='NOSMUEVEELSOL'
+            width='180'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/tutosmart.webp'
+            alt='TUTO SMART ENERGY'
+            width='180'
+            class='max-w-full h-auto'
+          />
+        </div>
+        <div class='flex justify-center items-center min-h-[80px]'>
+          <img
+            src='/img/solaxpower.webp'
+            alt='SOLAX POWER'
+            width='220'
+            class='max-w-full h-auto'
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class='flex justify-center pt-10'>
+      <a
+        href={i18next.language === 'es'
+          ? '/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V4_compressed.pdf'
+          : '/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V4_compressed.pdf'}
+        target='_blank'
+        class='button flex items-center gap-4 text-xl md:text-3xl font-extrabold'
+      >
+        <span>{t('menu.submenu_2.option_14')}</span>
+        <svg fill='currentColor' viewBox='0 0 24 24' class='icon'>
+          <path
+            clip-rule='evenodd'
+            d='M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z'
+            fill-rule='evenodd'></path>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
-
-<div class='pt-20 mx-auto flex'>
-  <a
-    href={i18next.language === 'es'
-      ? '/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V4_compressed.pdf'
-      : '/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V4_compressed.pdf'}
-    target='_blank'
-    class='button mx-auto text-3xl md:text-6xl font-extrabold mb-20'
-  >
-    <p>{t('menu.submenu_2.option_14')}</p>
-    <svg fill='currentColor' viewBox='0 0 24 24' class='icon mr-5 my-5'>
-      <path
-        clip-rule='evenodd'
-        d='M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z'
-        fill-rule='evenodd'></path>
-    </svg>
-  </a>
-</div>
 
 <style>
   .button {
     position: relative;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    padding-block: 0.5rem;
-    padding-inline: 1.25rem;
-    background: rgb(188, 1, 0);
+    padding: 1rem 2rem;
     background: linear-gradient(
       90deg,
       rgba(118, 110, 166) 0%,
       rgba(86, 80, 120) 100%
     );
-    border-radius: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #ffff;
-    gap: 10px;
+    color: #ffffff;
     font-weight: bold;
     border: 3px solid #ffffff4d;
     outline: none;
     overflow: hidden;
-    font-size: 15px;
+    text-decoration: none;
   }
 
   .icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     transition: all 0.3s ease-in-out;
   }
 
@@ -212,7 +248,7 @@ import i18next, { t } from 'i18next'
   }
 
   .button:hover .icon {
-    transform: translate(4px);
+    transform: translateX(4px);
   }
 
   .button:hover::before {
@@ -239,11 +275,9 @@ import i18next, { t } from 'i18next'
     0% {
       left: -100px;
     }
-
     60% {
       left: 100%;
     }
-
     to {
       left: 100%;
     }

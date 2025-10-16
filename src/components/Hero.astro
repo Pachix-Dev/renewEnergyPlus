@@ -4,7 +4,7 @@ const base = i18next.language === 'es' ? '' : `/${i18next.language}`
 ---
 
 <section
-  class='bg-no-repeat bg-cover md:h-screen grid py-20 text-center relative overflow-hidden'
+  class='bg-no-repeat bg-cover h-full md:h-screen grid py-20 text-center relative overflow-hidden'
 >
   <video
     src='/video/replusmexicobg.mp4'
@@ -49,10 +49,11 @@ const base = i18next.language === 'es' ? '' : `/${i18next.language}`
       </div>
     </div>
 
-    <div class='grid sm:flex sm:justify-between gap-5 pt-10 2xl:pt-32'>
+    <div class='grid sm:flex sm:justify-between gap-5 py-10'>
       <div class='w-full group relative'>
         <a
-          href={`${base}/energy-night`}
+          href={`${base}/programa-premium`}
+          target='_blank'
           class='button text-white text-lg lg:text-2xl uppercase relative z-10 font-extrabold'
         >
           <div class='flex items-center gap-3'>
@@ -67,18 +68,19 @@ const base = i18next.language === 'es' ? '' : `/${i18next.language}`
                 stroke-linecap='round'
                 stroke-linejoin='round'
                 stroke-width='2'
-                d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
+                d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
               ></path>
             </svg>
-            <span class='font-bold text-lg'>ENERGY NIGHT</span>
+            <span class='font-bold text-lg'>{t('program.title_1')}</span>
           </div>
         </a>
         <div
-          class='relative -top-8 transform bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg hidden group-hover:block transition pb-2'
+          class='relative -top-8 transform mt-2 bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg hidden group-hover:block transition pb-2'
         >
-          {t('home.text_button_energy')}
+          {t('home.text_button_program')}
         </div>
       </div>
+
       <div class='w-full group relative'>
         <a
           href={`${base}/registro`}
@@ -109,10 +111,10 @@ const base = i18next.language === 'es' ? '' : `/${i18next.language}`
           {t('home.text_button_registro')}
         </div>
       </div>
+
       <div class='w-full group relative'>
         <a
-          href={`${base}/programa-premium`}
-          target='_blank'
+          href={`${base}/energy-night`}
           class='button text-white text-lg lg:text-2xl uppercase relative z-10 font-extrabold'
         >
           <div class='flex items-center gap-3'>
@@ -127,16 +129,16 @@ const base = i18next.language === 'es' ? '' : `/${i18next.language}`
                 stroke-linecap='round'
                 stroke-linejoin='round'
                 stroke-width='2'
-                d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
+                d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
               ></path>
             </svg>
-            <span class='font-bold text-lg'>{t('program.title_1')}</span>
+            <span class='font-bold text-lg'>ENERGY NIGHT</span>
           </div>
         </a>
         <div
-          class='relative -top-8 transform mt-2 bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg hidden group-hover:block transition pb-2'
+          class='relative -top-8 transform bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg hidden group-hover:block transition pb-2'
         >
-          {t('home.text_button_program')}
+          {t('home.text_button_energy')}
         </div>
       </div>
     </div>

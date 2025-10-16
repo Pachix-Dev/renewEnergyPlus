@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {RegisterModel} from './db.js';
 import {email_template} from './TemplateEmail.js';
 import {email_template_eng} from './TemplateEmailEng.js';
-import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice } from './generatePdf.js';
+import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice, generatePDFInvoice_energynight } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 
@@ -108,17 +108,6 @@ app.post('/create-order-replus', async (req, res) => {
         });
     }
     
-    const id_items = body.items.map(item => item.id)
-    //validar si es usuario ya compro alguno de estos items        
-    const userResponse = await RegisterModel.check_buy_products(body.idUser, id_items);
-
-    if (!userResponse.status) {
-        return res.status(400).send({
-            status: false,
-            message: userResponse.message
-        });
-    }
-
     get_access_token()
         .then((access_token) => {
             let order_data_json = {
@@ -158,7 +147,7 @@ app.post('/create-order-replus', async (req, res) => {
 app.post("/complete-order", async (req, res) => {
   const { body } = req;
   try {
-    const userResponse = await RegisterModel.get_user_by_id(body.user_id);
+    const userResponse = await RegisterModel.get_user_by_id(body.idUser);
     console.log(userResponse);
     if (!userResponse.status) {
       return res.status(404).send({
@@ -178,6 +167,8 @@ app.post("/complete-order", async (req, res) => {
       }
     );
 
+    const id_items = body.items.map(item => item.id)
+
     // buscar el id del cupon de descuento si existe
     const discountItem = body.items?.find((item) => item?.isDiscount);
     const id_code = discountItem ? discountItem.id : null;
@@ -193,16 +184,33 @@ app.post("/complete-order", async (req, res) => {
         const paypal_id_transaction =
           json.purchase_units[0].payments.captures[0].id;
         await RegisterModel.save_order(
-          body.user_id,
+          body.idUser,
+          id_items,
+          body.total,
           paypal_id_order,
           paypal_id_transaction,
           id_code
         );
-        const pdfAtch = await generatePDFInvoice(
-          paypal_id_transaction,
-          body,
-          userResponse.user.uuid
-        );
+
+        // Validar si solo hay el id 2 en la compra (Energy Night)
+        const isOnlyEnergyNight = id_items.length === 1 && id_items[0] === 2;
+        
+        let pdfAtch;
+        if (isOnlyEnergyNight) {
+          // Si solo hay el producto con id 2 (Energy Night), usar función específica
+          pdfAtch = await generatePDFInvoice_energynight(
+            paypal_id_transaction,
+            body,            
+          );
+        } else {
+          // Para cualquier otra combinación de productos, usar función general
+          pdfAtch = await generatePDFInvoice(
+            paypal_id_transaction,
+            body,
+            userResponse.user.uuid
+          );
+        }
+
         const mailResponse = await sendEmail(
           body,
           pdfAtch,
@@ -589,6 +597,22 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
     }    
 }
 
+function get_access_token() {
+  const auth = `${client_id}:${client_secret}`;
+  const data = "grant_type=client_credentials";
+  return fetch(endpoint_url + "/v1/oauth2/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: `Basic ${Buffer.from(auth).toString("base64")}`,
+    },
+    body: data,
+  })
+    .then((res) => res.json())
+    .then((json) => {
+      return json.access_token;
+    });
+}
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)

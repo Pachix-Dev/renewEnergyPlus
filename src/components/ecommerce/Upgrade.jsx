@@ -29,6 +29,7 @@ export function Upgrade({ translates }) {
     try {
       const response = await fetch(urlbase + 'get-user-by-email?email=' + email)
       const data = await response.json()
+
       if (data.status) {
         setUser(true)
         setEmail(data.email)
@@ -69,11 +70,10 @@ export function Upgrade({ translates }) {
       {/* Header */}
       <div className='text-center'>
         <h2 className='text-2xl lg:text-3xl font-bold text-gray-800 mb-3'>
-          Verificación de Usuario
+          {translates.verify_user}
         </h2>
         <p className='text-gray-600 max-w-md mx-auto'>
-          Ingresa tu correo electrónico para verificar si ya tienes una cuenta
-          registrada
+          {translates.verify_text}
         </p>
       </div>
 
@@ -199,28 +199,6 @@ export function Upgrade({ translates }) {
                 <p className='text-red-700 font-medium'>{message}</p>
               </div>
             )}
-
-            {user && (
-              <div className='mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={2}
-                  stroke='currentColor'
-                  className='w-5 h-5 text-emerald-600 flex-shrink-0'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-                  />
-                </svg>
-                <p className='text-emerald-700 font-medium'>
-                  ¡Usuario encontrado! Los datos se han cargado automáticamente.
-                </p>
-              </div>
-            )}
           </div>
         </div>
       </div>
@@ -246,11 +224,9 @@ export function Upgrade({ translates }) {
           </div>
           <div>
             <h3 className='text-xl font-bold text-gray-800'>
-              ¿Primera vez aquí?
+              {translates.first_time}
             </h3>
-            <p className='text-gray-600'>
-              No te preocupes, crear una cuenta es muy fácil
-            </p>
+            <p className='text-gray-600'>{translates.dontworries}</p>
           </div>
         </div>
 

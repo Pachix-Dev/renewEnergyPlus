@@ -51,11 +51,11 @@
         "text_button_program": "Adquiere hoy mismo y conecta con los líderes más influyentes de la industria.",        
         "text_exhibitor": "No te quedes fuera del evento más grande en energías renovables y almacenamiento.",
         "cifra_1": "RE+ MEXICO, la feria líder en energías renovables para México y Norteamérica",
-        "cifra_2": "Únete a la séptima edición del evento que está marcando el futuro energético sostenible de nuestro país, donde encontrarás:",
-        "cifra_3": "m2 de piso expositor en conjunto con Ecomondo Mexico y AMERICAS’ Mobility Of The Future.",
+        "cifra_2": "Únete a la séptima edición del evento que está marcando el futuro energético sostenible de nuestro país",
+        "cifra_3": "de piso expositor en conjunto con Ecomondo Mexico.",
         "cifra_4": "compradores profesionales.",
         "cifra_5": "empresas expositoras con las marcas líderes a nivel global.",
-        "cifra_6": "conferencias, talleres prácticos y conferencias magistrales.",
+        "cifra_6": "paneles, talleres especializados y conferencias magistrales.",
         "cifra_7": "Networking de alto perfil",
         "register_text": "Descubre las últimas tecnologías y asiste sin costo a talleres especializados.",
         "event-date":"14 – 16 de Abril",
@@ -144,7 +144,7 @@
             "title": "STANDS",
             "sub-title": "TARIFAS DE PARTICIPACIÓN",
             "item1": {
-                "title1": "superficie libre <br/> +18 m2",
+                "title1": "Superficie libre <br/> +18 m2",
                 "price1-title":"Early bird <br/> Válido hasta 31.05.25",
                 "price2-title":"Tarifa",
                 "price1": "IVA / m2",
@@ -155,7 +155,7 @@
                 "topic3": "NO incluye: alfombra, construcción, mobiliario, ni servicios."
             },
             "item2": {
-                "title1": "equipado <br/> 9 m2 mínimo",
+                "title1": "Equipado <br/> 9 m2 mínimo",
                 "price1-title":"Early bird <br/> Válido hasta 31.05.25",
                 "price2-title":"Tarifa",
                 "price1": "IVA / m2",
@@ -192,6 +192,7 @@
         "minutes": "minutos",
         "seconds": "segundos",
         "free_register": "REGISTRO GRATUITO",
+        "media_allies": "MEDIOS ALIADOS",
         "media_platinum": "MEDIOS ALIADOS PLATINUM",
         "media_gold": "MEDIOS ALIADOS GOLD",
         "testimonial": "TESTIMONIALES",
@@ -210,8 +211,8 @@
         "readyfor": "¿Listo para crear tu propia experiencia en RE+ MEXICO?",
         "discover_experience": "Descubre las experiencias reales de expositores, visitantes y speakers que han sido parte de RE+ MEXICO",
         "segments": {
-            "title": "Segmentos de la Industria",
-            "subtitle": "Descubre todas las tecnologías y sectores que estarán presentes en RE+ México",
+            "title": "Segmentos de",
+            "subtitle": "Descubre todas las tecnologías y sectores que estarán presentes",
             "category1": "Solar",
             "item1": "Sistemas de tecnología fotovoltaica",
             "desc1": "Paneles solares, inversores y sistemas completos",
@@ -242,8 +243,8 @@
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
-        "description": "<strong>RE+ MEXICO</strong> es el evento de energía renovable más grande de México. RE+ MEXICO presenta soluciones tecnológicas, contenido educativo y oportunidades de networking para toda la industria de la energía renovable. RE+ MEXICO muestra los principales sectores de la energía limpia, incluidos la solar, almacenamiento de energía, hidrógeno verde, energía eólica, microrredes y más.</br></br>La privilegiada ubicación geográfica de México ha trazado un camino virtuoso para la generación de energías limpias; no obstante, nuestro país se encuentra ante una encrucijada energética, marcada por una dependencia considerable de los combustibles fósiles.</br></br>Con tan solo 0.63 por ciento de la generación eléctrica proveniente de bioenergéticos en 2023, según datos del Programa de Desarrollo del Sistema Eléctrico Nacional (Prodesen), es evidente que nuestro país aún tiene un largo camino por recorrer hacia fuentes de generación eléctrica más sostenibles.</br></br>Es imperativo que nuestro país dé pasos agigantados para alcanzar los objetivos de Net Zero para 2030, y atender los retos en materia energética que nos permitan transitar hacia un futuro sostenible.</br></br><strong>Deutsche Messe e Italian Exhibition Group</strong>, dos de los organizadores de eventos más importantes a nivel global; <strong>RE+ Events</strong>, la organización mundial de gestión de eventos y asociaciones especializada en la industria de la energía limpia, en conjunto con <strong>SNEC PV Power Expo</strong>, el evento de tecnología solar más importante del mundo con sede en Shanghai, China; se complacen en presentar RE+ MEXICO 2026.</br></br><strong>RE+ MEXICO</strong> se establece como la plataforma estratégica para catalizar a nuestro país y a la región de Norte América a liderar gran parte de la acelerada lucha para reducir la emisión de gases de efecto invernadero y aprovechar la capacidad energética renovable, profundizando en los principales sectores como: Térmica y Solar, Sistemas de Tecnología Fotovoltaica, Almacenamiento, Eólico, Hidrógeno Verde e Infraestructura de red, haciendo uso y fortaleciendo las tecnologías ya existentes, así como la búsqueda constante de innovaciones que posibiliten garantizar el acceso a una energía limpia y asequible.",
-        "description2": "¡Esperamos seguir colaborando juntos en la construcción de un futuro más limpio y sostenible para todos! <br /><br />Nos vemos en RE+ MEXICO 2026."
+        "description": "México se ha propuesto alcanzar un 45% de generación de energía renovable para 2030.<br /><br />Nuestro país cuenta con un extraordinario potencial en energía solar y eólica, por lo que para cumplir este objetivo se requiere el compromiso y la colaboración de toda la industria. <br /><br />RE+ MEXICO se establece como la plataforma estratégica para impulsar a nuestro país en esta acelerada transición hacia un futuro energético sostenible, conectando a los principales actores del sector para reducir las emisiones de gases de efecto invernadero y aprovechar al máximo la capacidad energética renovable de México.<br /><br />En nuestra séptima edición, del 14 al 16 de abril, en Expo Guadalajara, Jalisco, reuniremos a más de 220 expositores líderes en los sectores de Energía Solar y Almacenamiento, Hidrógeno Verde, Energía Eólica, Microrredes, así como a más de 50 especialistas en un programa académico y exclusivos espacios de networking para fortalecer toda la cadena de valor en energías renovables.",
+        "description2": "¡Nos vemos en RE+ MEXICO 2026! <br />14 al 16 de abril, Expo Guadalajara, Jalisco."
     },
     "AboutReEvents": {
         "title": "Acerca de RE+ Events",
@@ -351,7 +352,7 @@
         "message_button":"Enviar mensaje"
     },
     "hotels": {
-        "cede": "Recinto cede",
+        "cede": "Recinto sede",
         "text_description": "Expo Guadalajara es el centro de convenciones más grande de México y Latinoamérica, con más de 119,000 m² de espacios modernos para ferias, congresos y exposiciones internacionales.<br /><br /> Ubicado en el corazón de Guadalajara, ofrece conectividad de primer nivel y está rodeado de hoteles, restaurantes y servicios que lo convierten en la sede ideal para eventos de clase mundial.",
         "title": "Tarifas especiales en hoteles",
         "description": "Nos complace anunciar que hemos asegurado tarifas preferenciales en hoteles de calidad para que tu experiencia sea aún más cómoda y accesible.<br /><br />Ubicados estratégicamente alrededor del lugar del evento, estos hoteles ofrecen no solo comodidad, sino también la oportunidad de sumergirte completamente en la atmósfera del evento. Hemos negociado tarifas especiales para nuestros asistentes, asegurándonos de que tu estancia sea tan inolvidable como el propio evento.",
@@ -586,7 +587,15 @@
         "instructions_text_5": "5. Al confirmar tu pago, el portal de tu banco generará un comprobante digital, <strong>en el podrás verificar que se haya realizado correctamente, </strong> conserva este comprobante de pago.",
         "instructions_text_6": "Al completar estos pasos envia un correo a <strong><a href='mailto:emmanuel.heredia@igeco.mx' target='_blank'>emmanuel.heredia@igeco.mx</a></strong> con el comprobante de pago, tu nombre completo, nombre del evento al que asistiras y  el correo electronico que usaste para el registro para que podamos validar tu pago y enviarte tu acceso.",
         "copy": "Copiar",
-        "copy_success": "Copiado"
+        "copy_success": "Copiado",
+        "verify_user": "Verificar usuario",
+        "verify_text": "Ingresa tu correo electrónico para verificar si ya tienes una cuenta registrada",
+        "first_time": "¿Primera vez aquí?",
+        "dontworries": "No te preocupes, crear una cuenta es muy fácil",
+        "personalinfo": "Información personal",
+        "verifydata": "Verifica que los datos sean correctos",
+        "infoautomatic": "Información verificada automáticamente",
+        "notyou": "¿No eres esta persona?"
     },
     "installer_award":{
         "text_1": "¡Demuestra tu excelencia en la Industria Solar!",

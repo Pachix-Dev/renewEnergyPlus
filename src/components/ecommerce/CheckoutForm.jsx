@@ -9,6 +9,7 @@ import { Upgrade } from './Upgrade'
 import { Infouser } from './Infouser'
 
 export function CheckoutForm({ currentLanguage, translates }) {
+  const lang = currentLanguage === 'es' ? '' : '/en'
   const {
     items,
     idUser,
@@ -34,7 +35,7 @@ export function CheckoutForm({ currentLanguage, translates }) {
       <div className='flex-1 flex flex-col justify-center items-center h-screen'>
         <p className='text-2xl font-bold'>{translates.empty_cart}</p>
         <a
-          href={`${currentLanguage}/programa-premium-productos`}
+          href={`${lang}/programa-premium-productos`}
           className='bg-[#4e549f] hover:bg-[#1f2937] text-white rounded-lg p-4 mt-5'
         >
           {translates.back_to_shop}
@@ -162,9 +163,9 @@ export function CheckoutForm({ currentLanguage, translates }) {
         <Upgrade translates={translates} client:only='react' />
       )}
 
-      <div className='mt-5 px-7 py-7 mx-auto border rounded-2xl shadow-lg'>
-        <p className='font-bold text-2xl'>{translates.method_payment}</p>
-        {uuid && (
+      {uuid && (
+        <div className='mt-5 px-7 py-7 mx-auto border rounded-2xl shadow-lg'>
+          <p className='font-bold text-2xl'>{translates.method_payment}</p>
           <div className='w-full'>
             <div className='mt-5 rounded-xl border-2 p-4 bg-white text-black'>
               <div className='flex justify-between items-center'>
@@ -303,9 +304,9 @@ export function CheckoutForm({ currentLanguage, translates }) {
               )}
             </div>
           </div>
-        )}
-        <p className='text-red-600 font-bold text-center'>{message}</p>
-      </div>
+          <p className='text-red-600 font-bold text-center'>{message}</p>
+        </div>
+      )}
 
       {processing && (
         <div className='absolute top-0 left-0 bg-gray-400 bg-opacity-85 z-[999] w-full h-screen'>

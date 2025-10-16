@@ -6,21 +6,25 @@ import Carousel from "../components/energy-night/Carousel.astro";
 
 changeLanguage("es");
 
-const item = {
+const currentLang = i18next.language || "es";
+const product = {
     id: 2,
-    name: "ENERGY NIGHT Mi\u00E9rcoles 5 de Marzo",
-    name_en: "ENERGY NIGHT Wednesday, March 5th",
+    name: "ENERGY NIGHT",
+    name_en: "ENERGY NIGHT",
     price: 1000,
+    originalPrice: 1200,
+    isPresale: true,
+    savings: 200,
     included: [
-        "1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack.",
-        "Acceso mi\u00E9rcoles 14 de abril en Desfilia, Expo Guadalajara.",
+        "1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack",
+        "Acceso martes 14 de abril en Desfilia, Expo Guadalajara",
         "Recepci\u00F3n 6:15 p.m.",
         "Inicio del evento 6:30 p.m.",
         "Fin del evento 10:00 p.m.",
     ],
     included_en: [
-        "1 Ticket for the Energy Night with unlimited drinks and snacks.",
-        "Access Wednesday, April 14 at Desfilia, Expo Guadalajara.",
+        "1 Ticket for the Energy Night with unlimited drinks and snacks",
+        "Access Tuesday, April 14 at Desfilia, Expo Guadalajara",
         "Reception 6:15 p.m.",
         "Event start 6:30 p.m.",
         "Event end 10:00 p.m.",
@@ -46,174 +50,359 @@ const translate = t("ecommerce", { returnObjects: true });
     <div
       class="bg-[url('/img/bg_energy_1.webp')] bg-cover bg-no-repeat bg-fixed bg-center py-20"
     >
-      <div
-        data-aos='fade-up'
-        data-aos-duration='1300'
-        class='container mx-auto px-4 text-center'
-      >
-        <p class='text-5xl uppercase font-extrabold'>{t('home.energy_date')}</p>
-        <p class='font-bold text-2xl'>Salón Desfilia, Expo Guadalajara</p>
-        <p class='mt-5 text-5xl font-sans leading-[4rem]'>
-          {t('energynight.text_1')}
-          <span class='bg-black rounded-md'>{t('energynight.text_4')}.</span>
-        </p>
-
-        <p class='mt-5 text-2xl' set:html={t('energynight.text_5')} />
-      </div>
-      <div
-        class='container mx-auto px-4 grid md:grid-cols-2 gap-10 mt-10 place-items-center'
-      >
-        <div data-aos='fade-up' data-aos-duration='1300'>
-          <p class='mt-5 text-4xl font-semibold'>{t('energynight.text_6')}</p>
-          <div class='mt-5 flex gap-5 items-center'>
-            <div>
-              <p><strong>{t('energynight.text_7')} </strong></p>
-              <p>
-                {t('energynight.text_8')}
-              </p>
-            </div>
-          </div>
-          <div class='mt-5 flex gap-5 items-center'>
-            <div>
-              <p><strong>{t('energynight.text_9')} </strong></p>
-              <p>
-                {t('energynight.text_10')}
-              </p>
-            </div>
-          </div>
-          <div class='mt-5 flex gap-5 items-center'>
-            <div>
-              <p><strong>{t('energynight.text_11')} </strong></p>
-              <p>
-                {t('energynight.text_12')}
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class='grid md:grid-cols-2 gap-10 items-center container mx-auto'>
         <div
           data-aos='fade-up'
           data-aos-duration='1300'
-          class='w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8'
+          class='container mx-auto px-4 text-center'
         >
-          <h5 class='mb-4 text-xl font-extrabold text-gray-800'>
-            ENERGY NIGHT
-          </h5>
-          <div class='flex items-baseline text-gray-900'>
-            <span class='text-3xl font-semibold'>$</span>
-            <span class='text-5xl font-extrabold tracking-tight'>1350</span>
-            <span class='ms-1 text-xl font-normal text-gray-500'>/persona</span>
+          <p class='text-5xl uppercase font-extrabold'>
+            {t('home.energy_date')}
+          </p>
+          <p class='font-bold text-2xl'>Salón Desfilia, Expo Guadalajara</p>
+          <p class='mt-5 text-5xl font-sans leading-[4rem]'>
+            {t('energynight.text_1')}
+            <span class='bg-black rounded-md'>{t('energynight.text_4')}.</span>
+          </p>
+
+          <p class='mt-5 text-2xl' set:html={t('energynight.text_5')} />
+        </div>
+
+        <div
+          data-aos='fade-up'
+          data-aos-duration='1300'
+          class='w-full max-w-md mx-auto mt-10'
+        >
+          <!-- Badge de preventa -->
+          <div class='absolute -top-3 -right-3 z-10'>
+            <div
+              class='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-2xl shadow-lg transform rotate-12'
+            >
+              <div class='text-xs font-bold uppercase tracking-wider'>
+                {i18next.language === 'es' ? 'PREVENTA' : 'PRE-SALE'}
+              </div>
+            </div>
           </div>
-          <ul role='list' class='space-y-5 my-7'>
-            <li class='flex items-center'>
-              <svg
-                class='shrink-0 w-4 h-4 text-[#A399C7]'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-              >
-                <path
-                  d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z'
-                ></path>
-              </svg>
-              <p class='text-base font-normal leading-tight text-gray-800 ms-3'>
-                {t('energynight.text_14')}
-                <strong>Energy Night</strong><br />
-                <span class='italic'>{t('energynight.text_15')} *</span>
-              </p>
-            </li>
-            {
-              /* <AddEnergyNight item={item} translate={translate} client:only />*/
-            }
-            <p class='text-black'>{t('program.comming_soon')}</p>
-          </ul>
+
+          <!-- Card principal -->
+          <div
+            class={`relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl border overflow-hidden h-full ${product.id === 1 ? 'border-yellow-200 ring-2 ring-yellow-300/50' : 'border-gray-100'}`}
+          >
+            <!-- Header del card -->
+            <div
+              class={`px-8 py-6 text-center relative overflow-hidden ${product.id === 1 ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : 'bg-gradient-to-r from-[#5E5884] to-[#7B6FA8]'}`}
+            >
+              {/* Elementos decorativos */}
+              <div class='absolute top-0 left-0 w-full h-full opacity-10'>
+                <div
+                  class='absolute top-2 right-2 w-16 h-16 border-2 border-white rounded-full'
+                >
+                </div>
+                <div
+                  class='absolute bottom-2 left-2 w-12 h-12 border border-white rounded-full'
+                >
+                </div>
+              </div>
+
+              <div class='relative z-10'>
+                <h5
+                  class='text-xl lg:text-2xl font-black text-white mb-2 leading-tight'
+                >
+                  {i18next.language === 'es' ? product.name : product.name_en}
+                </h5>
+                {
+                  product.id === 1 && (
+                    <p class='text-sm text-white/90'>
+                      {i18next.language === 'es'
+                        ? 'La experiencia completa de RE+ México'
+                        : 'The complete experience of RE+ Mexico'}
+                    </p>
+                  )
+                }
+              </div>
+            </div>
+
+            <div class='px-8 py-6 flex flex-col'>
+              <!-- Pricing section -->
+              <div class='mb-6'>
+                {/* Precio de preventa */}
+                <div class='mb-3'>
+                  <div class='flex items-center justify-center gap-2 mb-2'>
+                    <span
+                      class='bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full'
+                    >
+                      {
+                        i18next.language === 'es'
+                          ? 'PRECIO PREVENTA'
+                          : 'PRE-SALE PRICE'
+                      }
+                    </span>
+                  </div>
+                  <div class='flex items-baseline justify-center text-gray-900'>
+                    <span class='text-2xl font-semibold'>$</span>
+                    <span
+                      class={`font-black tracking-tight text-green-600 ${product.id === 1 ? 'text-5xl' : 'text-4xl'}`}
+                    >
+                      {product.price.toLocaleString('es-MX')}
+                    </span>
+                    <span class='text-lg font-normal text-gray-500 ml-1'
+                      >MXN</span
+                    >
+                  </div>
+                </div>
+
+                {/* Precio original tachado */}
+                <div class='flex items-center justify-center gap-4 mb-3'>
+                  <span class='text-lg text-gray-500 line-through'>
+                    ${product.originalPrice.toLocaleString('es-MX')} MXN
+                  </span>
+                  <span
+                    class='bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-bold px-3 py-1 rounded-full'
+                  >
+                    {i18next.language === 'es' ? '¡Ahorra' : 'Save'} ${
+                      product.savings.toLocaleString('es-MX')
+                    }!
+                  </span>
+                </div>
+
+                <!-- Estructura de precios por fases -->
+                <div class='mb-6 space-y-3'>
+                  <!-- Precio Preventa -->
+                  <div
+                    class='bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200'
+                  >
+                    <div class='flex items-center justify-between'>
+                      <div class='flex items-center gap-3'>
+                        <div class='w-3 h-3 bg-green-500 rounded-full'></div>
+                        <div>
+                          <p class='font-bold text-green-800 text-sm'>
+                            {currentLang === 'es' ? 'PREVENTA' : 'PRESALE'}
+                          </p>
+                          <p class='text-green-600 text-xs'>
+                            {
+                              currentLang === 'es'
+                                ? 'Hasta 15 enero 2026'
+                                : 'Until Jan 15, 2026'
+                            }
+                          </p>
+                        </div>
+                      </div>
+                      <div class='text-right'>
+                        <span class='text-xl font-black text-green-600'
+                          >$1,000 MXN</span
+                        >
+                        <div
+                          class='bg-green-500 text-white text-xs px-2 py-1 rounded-full font-bold inline-block ml-2'
+                        >
+                          {currentLang === 'es' ? 'ACTIVO' : 'ACTIVE'}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Precio Fase 1 -->
+                  <div
+                    class='bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-4 border border-yellow-200'
+                  >
+                    <div class='flex items-center justify-between'>
+                      <div class='flex items-center gap-3'>
+                        <div class='w-3 h-3 bg-yellow-500 rounded-full'></div>
+                        <div>
+                          <p class='font-bold text-yellow-800 text-sm'>
+                            {currentLang === 'es' ? 'FASE 1' : 'PHASE 1'}
+                          </p>
+                          <p class='text-yellow-600 text-xs'>
+                            {
+                              currentLang === 'es'
+                                ? '16 enero a 15 marzo'
+                                : 'January 16 to March 15'
+                            }
+                          </p>
+                        </div>
+                      </div>
+                      <div class='text-right'>
+                        <span class='text-xl font-black text-yellow-600'
+                          >$1,100 MXN</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Precio Fase 2 -->
+                  <div
+                    class='bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-4 border border-red-200'
+                  >
+                    <div class='flex items-center justify-between'>
+                      <div class='flex items-center gap-3'>
+                        <div class='w-3 h-3 bg-red-500 rounded-full'></div>
+                        <div>
+                          <p class='font-bold text-red-800 text-sm'>
+                            {currentLang === 'es' ? 'FASE 2' : 'PHASE 2'}
+                          </p>
+                          <p class='text-red-600 text-xs'>
+                            {
+                              currentLang === 'es'
+                                ? 'Precio final'
+                                : 'Final price'
+                            }
+                          </p>
+                        </div>
+                      </div>
+                      <div class='text-right'>
+                        <span class='text-xl font-black text-red-600'
+                          >$1,200 MXN</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lista de beneficios */}
+              <ul role='list' class='space-y-4 mb-8 flex-grow'>
+                {
+                  (i18next.language === 'es'
+                    ? product.included
+                    : product.included_en
+                  ).map((list) => (
+                    <li class='flex items-start gap-3'>
+                      <div
+                        class={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 ${product.id === 1 ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : 'bg-gradient-to-r from-[#5E5884] to-[#7B6FA8]'}`}
+                      >
+                        <svg
+                          class='w-3 h-3 text-white'
+                          aria-hidden='true'
+                          xmlns='http://www.w3.org/2000/svg'
+                          fill='currentColor'
+                          viewBox='0 0 20 20'
+                        >
+                          <path d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z' />
+                        </svg>
+                      </div>
+                      <span class='text-gray-700 font-medium leading-tight flex-1'>
+                        {list}
+                      </span>
+                    </li>
+                  ))
+                }
+              </ul>
+
+              {/* Botón de compra */}
+              <div class='mx-auto'>
+                <AddEnergyNight
+                  item={{
+                    product,
+                  }}
+                  translate={translate}
+                  client:only='react'
+                />
+              </div>
+            </div>
+
+            {/* Footer con información adicional */}
+            <div
+              class='bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-t border-gray-100'
+            >
+              <div class='text-center'>
+                <p class='text-sm font-bold text-gray-700 mb-1'>
+                  ⏰ {
+                    i18next.language === 'es'
+                      ? '¡Precio especial por tiempo limitado!'
+                      : 'Limited time special price!'
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <section
-      class="bg-[url('/img/bg_energy_2.webp')] bg-cover bg-no-repeat bg-fixed bg-center py-20"
+  </section>
+
+  <section
+    class="bg-[url('/img/bg_energy_2.webp')] bg-cover bg-no-repeat bg-fixed bg-center py-20"
+  >
+    <div class='text-center py-10 text-white'>
+      <p class='lg:text-5xl font-semibold'>{t('energynight.text_21')}</p>
+      <p class='lg:text-7xl font-extrabold'>{t('energynight.text_22')}</p>
+      <p class='text-2xl'>{t('energynight.text_23')}</p>
+      <p class='font-bold text-2xl'>
+        {t('energynight.text_23')}
+        <span class='text-[#A1A4F3]'>{t('energynight.text_4')} </span>.
+      </p>
+    </div>
+    <div
+      class='bg-[#4E549E] text-center py-5 text-xl text-white w-fit mx-auto px-10 rounded-full my-10'
+      set:html={t('energynight.text_25')}
+    />
+  </section>
+
+  <section
+    class='bg-[url(/img/bg_energy_3.webp)] bg-cover bg-no-repeat bg-fixed py-20'
+  >
+    <a
+      href={i18next.language === 'es'
+        ? '/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V4_compressed.pdf'
+        : '/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V4_compressed.pdf'}
+      target='_blank'
+      class='bg-[#4E549F] hover:bg-[#4E549F] text-white rounded-full py-6 px-10 flex mx-auto w-fit text-center font-bold text-2xl md:text-4xl'
     >
-      <div class='text-center py-10 text-white'>
-        <p class='lg:text-5xl font-semibold'>{t('energynight.text_21')}</p>
-        <p class='lg:text-7xl font-extrabold'>{t('energynight.text_22')}</p>
-        <p class='text-2xl'>{t('energynight.text_23')}</p>
-        <p class='font-bold text-2xl'>
-          {t('energynight.text_23')}
-          <span class='text-[#A1A4F3]'>{t('energynight.text_4')} </span>.
+      {t('energynight.text_26')}
+    </a>
+  </section>
+  <section class='container mx-auto px-4 my-10'>
+    <lite-youtube
+      videoid='NO4XkhzFRnU'
+      posterquality='maxresdefault'
+      params='controls=0&enablejsapi=1'
+      class='rounded-lg w-full'></lite-youtube>
+  </section>
+  <section class='container mx-auto px-4 py-10'>
+    <div class='grid md:grid-cols-2 gap-10 items-center'>
+      <div class='text-xl space-y-5 text-justify'>
+        <p class='uppercase font-bold'>
+          energy night, {t('energynight.text_28')}
+        </p>
+        <p>
+          {t('energynight.text_27')}
         </p>
       </div>
-      <div
-        class='bg-[#4E549E] text-center py-5 text-xl text-white w-fit mx-auto px-10 rounded-full my-10'
-        set:html={t('energynight.text_25')}
-      />
-    </section>
-    <section
-      class='bg-[url(/img/bg_energy_3.webp)] bg-cover bg-no-repeat bg-fixed py-20'
-    >
-      <a
-        href={i18next.language === 'es'
-          ? '/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V4_compressed.pdf'
-          : '/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V4_compressed.pdf'}
-        target='_blank'
-        class='bg-[#4E549F] hover:bg-[#4E549F] text-white rounded-full py-6 px-10 flex mx-auto w-fit text-center font-bold text-2xl md:text-4xl'
-      >
-        {t('energynight.text_26')}
-      </a>
-    </section>
-    <section class='container mx-auto px-4 my-10'>
-      <lite-youtube
-        videoid='NO4XkhzFRnU'
-        posterquality='maxresdefault'
-        params='controls=0&enablejsapi=1'
-        class='rounded-lg w-full'></lite-youtube>
-    </section>
-    <section class='container mx-auto px-4 py-10'>
-      <div class='grid md:grid-cols-2 gap-10 items-center'>
-        <div class='text-xl space-y-5 text-justify'>
-          <p class='uppercase font-bold'>
-            energy night, {t('energynight.text_28')}
-          </p>
-          <p>
-            {t('energynight.text_27')}
-          </p>
-        </div>
-        <Carousel />
-      </div>
-    </section>
-    <style>
-      @font-face {
-        font-family: 'MiFuente';
-        src: url('/fonts/gomarice_yatsurano_western.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      .mi-titulo {
-        font-family: 'MiFuente', sans-serif;
-      }
-      .mi-titulo-container {
-        padding-top: 200px; /* Ajusta este valor como desees */
-      }
-      img.absolute {
-        position: absolute;
-        top: 2rem; /* Ajusta según el espacio que desees desde la parte superior */
-        right: 2rem; /* Ajusta según el espacio que desees desde la parte derecha */
-        width: 7rem; /* Ajusta el tamaño de la imagen */
-        height: 6rem; /* Ajusta el tamaño de la imagen */
-        z-index: 20; /* Asegúrate de que esté encima de otros elementos */
-      }
-      .contorno {
-        -webkit-text-stroke: 1px #ffffff;
-        -webkit-text-fill-color: transparent;
-
-        /* fallback */
-        color: #333;
-      }
-    </style>
-
-    <script>
-      import '@justinribeiro/lite-youtube'
-    </script>
+      <Carousel />
+    </div>
   </section>
+  <style>
+    @font-face {
+      font-family: 'MiFuente';
+      src: url('/fonts/gomarice_yatsurano_western.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .mi-titulo {
+      font-family: 'MiFuente', sans-serif;
+    }
+    .mi-titulo-container {
+      padding-top: 200px; /* Ajusta este valor como desees */
+    }
+    img.absolute {
+      position: absolute;
+      top: 2rem; /* Ajusta según el espacio que desees desde la parte superior */
+      right: 2rem; /* Ajusta según el espacio que desees desde la parte derecha */
+      width: 7rem; /* Ajusta el tamaño de la imagen */
+      height: 6rem; /* Ajusta el tamaño de la imagen */
+      z-index: 20; /* Asegúrate de que esté encima de otros elementos */
+    }
+    .contorno {
+      -webkit-text-stroke: 1px #ffffff;
+      -webkit-text-fill-color: transparent;
+
+      /* fallback */
+      color: #333;
+    }
+  </style>
+
+  <script>
+    import '@justinribeiro/lite-youtube'
+  </script>
 </Layout>

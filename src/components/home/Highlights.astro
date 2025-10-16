@@ -1,0 +1,432 @@
+---
+import i18next, { t } from 'i18next'
+const currentLang = i18next.language || 'es'
+---
+
+<section class='py-20 bg-gradient-to-b from-white to-gray-50'>
+  <div class='container mx-auto px-4'>
+    <!-- Header Section -->
+    <div class='text-center mb-16' data-aos='fade-up' data-aos-duration='1000'>
+      <div
+        class='text-[#5E5884] text-4xl font-extrabold uppercase tracking-wider'
+      >
+        HIGHLIGHTS
+      </div>
+
+      <p class='text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed'>
+        {
+          currentLang === 'es'
+            ? 'Descubre las experiencias exclusivas que harán de este evento el más importante del sector energético'
+            : 'Discover the exclusive experiences that will make this the most important event in the energy sector'
+        }
+      </p>
+      <div
+        class='w-32 h-1 bg-gradient-to-r from-[#5E5884] to-orange-500 mx-auto mt-8 rounded-full'
+      >
+      </div>
+    </div>
+
+    <!-- Highlights Grid -->
+    <div class='grid lg:grid-cols-2 xl:grid-cols-4 gap-3 max-w-7xl mx-auto'>
+      <!-- Programa Premium -->
+      <div
+        class='group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        data-aos-delay='100'
+      >
+        <!-- Badge Premium -->
+        <div class='absolute top-4 right-4 z-10'>
+          <div
+            class='bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider'
+          >
+            PREMIUM
+          </div>
+        </div>
+
+        <!-- Header con gradiente -->
+        <div
+          class='bg-gradient-to-br from-[#5E5884] to-[#7B6FA8] p-6 text-white relative overflow-hidden'
+        >
+          <!-- Elementos decorativos -->
+          <div
+            class='absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10'
+          >
+          </div>
+          <div
+            class='absolute bottom-0 left-0 w-16 h-16 bg-white/5 rounded-full translate-y-8 -translate-x-8'
+          >
+          </div>
+
+          <div class='relative z-10'>
+            <div
+              class='w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-6 w-6 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-lg font-bold mb-2'>
+              {
+                currentLang === 'es'
+                  ? 'Conferencias Premium'
+                  : 'Premium Conference'
+              }
+            </h3>
+            <p class='text-white/90 text-sm'>
+              {
+                currentLang === 'es'
+                  ? 'Contenido premium de alta calidad'
+                  : 'High-quality premium content'
+              }
+            </p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class='p-6'>
+          <p class='text-gray-700 leading-relaxed mb-6 text-sm'>
+            {
+              currentLang === 'es'
+                ? 'Conferencias magistrales con los líderes más influyentes de la industria de energías renovables.'
+                : 'Keynote conferences with the most influential leaders in the renewable energy industry.'
+            }
+          </p>
+
+          <a
+            href='/programa-premium'
+            class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] hover:from-[#4a4a6a] hover:to-[#6a5f98] text-white font-bold rounded-lg transition-all duration-300 text-sm'
+          >
+            <span
+              >{currentLang === 'es' ? 'Reservar Lugar' : 'Reserve Spot'}</span
+            >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-3 w-3 group-hover:translate-x-1 transition-transform duration-300'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Energy Night -->
+      <div
+        class='group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        data-aos-delay='200'
+      >
+        <!-- Badge Especial -->
+        <div class='absolute top-4 right-4 z-10'>
+          <div
+            class='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider'
+          >
+            {currentLang === 'es' ? 'EXCLUSIVO' : 'EXCLUSIVE'}
+          </div>
+        </div>
+
+        <!-- Header con gradiente -->
+        <div
+          class='bg-gradient-to-br from-purple-600 to-pink-600 p-6 text-white relative overflow-hidden'
+        >
+          <!-- Elementos decorativos -->
+          <div
+            class='absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10'
+          >
+          </div>
+          <div
+            class='absolute bottom-0 left-0 w-16 h-16 bg-white/5 rounded-full translate-y-8 -translate-x-8'
+          >
+          </div>
+
+          <div class='relative z-10'>
+            <div
+              class='w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-6 w-6 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-lg font-bold mb-2'>Energy Night</h3>
+            <p class='text-white/90 text-sm'>
+              {
+                currentLang === 'es'
+                  ? 'La noche más esperada del sector'
+                  : "The sector's most anticipated night"
+              }
+            </p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class='p-6'>
+          <p class='text-gray-700 leading-relaxed mb-6 text-sm'>
+            {
+              currentLang === 'es'
+                ? 'Una experiencia premium de networking y coctel en un ambiente exclusivo para profesionales de la industria.'
+                : 'A premium networking and cocktail experience in an exclusive environment for industry professionals.'
+            }
+          </p>
+
+          <a
+            href='/energy-night'
+            class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-lg transition-all duration-300 text-sm'
+          >
+            <span
+              >{currentLang === 'es' ? 'Reservar Lugar' : 'Reserve Spot'}</span
+            >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-3 w-3 group-hover:translate-x-1 transition-transform duration-300'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Conferencias Gratuitas -->
+      <div
+        class='group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        data-aos-delay='300'
+      >
+        <!-- Badge Gratuito -->
+        <div class='absolute top-4 right-4 z-10'>
+          <div
+            class='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider'
+          >
+            {currentLang === 'es' ? 'GRATIS' : 'FREE'}
+          </div>
+        </div>
+
+        <!-- Header con gradiente -->
+        <div
+          class='bg-gradient-to-br from-green-600 to-emerald-600 p-6 text-white relative overflow-hidden'
+        >
+          <!-- Elementos decorativos -->
+          <div
+            class='absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10'
+          >
+          </div>
+          <div
+            class='absolute bottom-0 left-0 w-16 h-16 bg-white/5 rounded-full translate-y-8 -translate-x-8'
+          >
+          </div>
+
+          <div class='relative z-10'>
+            <div
+              class='w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-6 w-6 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-lg font-bold mb-2'>
+              {
+                currentLang === 'es'
+                  ? 'Conferencias Gratuitas'
+                  : 'Free Conferences'
+              }
+            </h3>
+            <p class='text-white/90 text-sm'>
+              {
+                currentLang === 'es'
+                  ? 'Acceso libre en piso expositor'
+                  : 'Free access on expo floor'
+              }
+            </p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class='p-6'>
+          <p class='text-gray-700 leading-relaxed mb-6 text-sm'>
+            {
+              currentLang === 'es'
+                ? 'Sesiones técnicas especializadas durante los 3 días del evento. Aprende directamente de los expertos.'
+                : 'Specialized technical sessions during the 3 days of the event. Learn directly from experts.'
+            }
+          </p>
+
+          <a
+            href='/registro'
+            class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-lg transition-all duration-300 text-sm'
+          >
+            <span
+              >{
+                currentLang === 'es' ? 'Registro Gratuito' : 'Free Registration'
+              }</span
+            >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-3 w-3 group-hover:translate-x-1 transition-transform duration-300'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Installer Awards -->
+      <div
+        class='group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:scale-105'
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        data-aos-delay='400'
+      >
+        <!-- Badge Awards -->
+        <div class='absolute top-4 right-4 z-10'>
+          <div
+            class='bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider'
+          >
+            {currentLang === 'es' ? 'PREMIACIÓN' : 'AWARDS'}
+          </div>
+        </div>
+
+        <!-- Header con gradiente -->
+        <div
+          class='bg-gradient-to-br from-amber-600 to-yellow-600 p-6 text-white relative overflow-hidden'
+        >
+          <!-- Elementos decorativos -->
+          <div
+            class='absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10'
+          >
+          </div>
+          <div
+            class='absolute bottom-0 left-0 w-16 h-16 bg-white/5 rounded-full translate-y-8 -translate-x-8'
+          >
+          </div>
+
+          <div class='relative z-10'>
+            <div
+              class='w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-6 w-6 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-lg font-bold mb-2'>Installer Awards</h3>
+            <p class='text-white/90 text-sm'>
+              {
+                currentLang === 'es'
+                  ? 'Reconocimiento internacional'
+                  : 'International recognition'
+              }
+            </p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class='p-6'>
+          <p class='text-gray-700 leading-relaxed mb-6 text-sm'>
+            {
+              currentLang === 'es'
+                ? 'Destácate con beneficios exclusivos de marketing y un reconocimiento a nivel internacional.'
+                : 'Stand out with exclusive marketing benefits and international recognition.'
+            }
+          </p>
+
+          <div
+            class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-bold rounded-lg transition-all duration-300 text-sm cursor-not-allowed opacity-75'
+          >
+            <span
+              >{
+                currentLang === 'es' ? 'Próximamente...' : 'Coming Soon...'
+              }</span
+            >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-3 w-3'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(135deg, #5e5884 0%, #514b77 50%, #2f2a4b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style>

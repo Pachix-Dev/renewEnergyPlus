@@ -38,7 +38,116 @@ function getSpanishDateString(date) {
     return `${day} de ${months[monthIndex]} de ${year}`;
 }
 
-// Function to generate PDF invoice
+// gafete acceso solo energynight
+async function generatePDFInvoice_energynight(paypal_id_transaction, body) {
+
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+
+    const outputPath = path.resolve(__dirname, '../invoices');
+    const pdfSave = path.join(outputPath, `${paypal_id_transaction}.pdf`);
+
+    const doc = new PDFDocument();
+    const pdfStream = fs.createWriteStream(pdfSave);            
+    const logoVev = path.resolve(__dirname, 'img/repluslogocolor.png');     
+      
+    doc.pipe(pdfStream);             
+    doc.image(logoVev, 50, 45, { width: 100 });    
+    doc
+        .fillColor("#444444")
+        .fontSize(20)
+        .fontSize(10)
+        .text("ITALIAN GERMAN EXHIBITION COMPANY ME.", 200, 50, { align: "right" })
+        .text("Blvrd Francisco Villa 102-piso 14, Oriental, 37510 ", 200, 65, { align: "right" })
+        .text("León de los Aldama, Gto.", 200, 80, { align: "right" })
+        .moveDown();
+    doc
+        .fillColor("#444444")
+        .fontSize(20)
+        .text("Recibo de Compra", 50, 160);
+    doc
+        .strokeColor("#aaaaaa")
+        .lineWidth(1)
+        .moveTo(50, 185)
+        .lineTo(550, 185)
+        .stroke();
+
+    doc
+        .fontSize(10)
+        .text("N° transacción:", 50, 200)
+        .font("Helvetica-Bold")
+        .text(paypal_id_transaction, 150, 200)
+        .font("Helvetica")
+        .text("Fecha:", 50, 200 + 15)
+        .text(getSpanishDateString(new Date()), 150, 200 + 15)
+        .text("Total:", 50, 200 + 30)
+        .text(formatAmountMXN(body.total),150,200 + 30)
+        .font("Helvetica-Bold")
+        .text(body.name, 300, 200)
+        .font("Helvetica")
+        .text(body.email, 300, 200 + 15)
+        .text(body.phone, 300, 200 + 30 )
+        .moveDown();
+    doc
+        .strokeColor("#aaaaaa")
+        .lineWidth(1)
+        .moveTo(50, 252)
+        .lineTo(550, 252)
+        .stroke();
+        
+    doc
+        .fontSize(10)
+        .text('Descripcion', 50, 280)
+        .text('Costo unitario', 290, 280, { width: 90, align: "right" })
+        .text('cantidad', 370, 280, { width: 90, align: "right" })
+        .text('Total', 0, 280, { align: "right" });
+    doc
+        .strokeColor("#aaaaaa")
+        .lineWidth(1)
+        .moveTo(50, 300)
+        .lineTo(550, 300)
+        .stroke();
+    
+    body.items.map((item, index) => {
+        doc
+        .fontSize(10)
+        .text(item.name, 50, 280 + (index + 1)*30)
+        .text(formatAmountMXN(item.price), 320, 280 + (index + 1)*30)
+        .text(1, 430, 280 + (index + 1)*30)
+        .text(formatAmountMXN(item.price * 1), 0, 280 + (index + 1)*30, { align: "right" });
+        doc
+        .strokeColor("#aaaaaa")
+        .lineWidth(1)
+        .moveTo(50, 280 + (index + 1)*30 + 20)
+        .lineTo(550, 280 + (index + 1)*30 + 20)
+        .stroke();
+    });
+          
+    doc.moveDown(2);    
+    doc
+        .fontSize(10)
+        .text('Subtotal:       '+formatAmountMXN(body.total), { width: 540, align: "right" });   
+    doc
+        .fontSize(10)
+        .font("Helvetica-Bold")
+        .text('TOTAL:          '+formatAmountMXN(body.total) , { width: 540, align: "right" });    
+    
+    doc.moveDown(5)
+        .font("Helvetica-Bold")        
+        .text("SI DESEAS FACTURA FAVOR DE ENVIAR CORREO A emmanuel.heredia@igeco.mx", 50)
+        .font("Helvetica")
+        .text("FAVOR DE ADJUNTAR LOS SIGUIENTES DOCUMENTOS:")
+        .text("- CONSTANCIA SITUACIÓN FISCAL", 55)
+        .text("- FOTO DEL RECIBO DE COMPRA", 55)
+        .text("- INDICAR EL MÉTODO DE PAGO (TARJETA DE CREDITO O DEBITO)", 55)
+        .text("- USO DE CFDI", 55)
+        
+   
+    doc.end();
+    return pdfSave;    
+}
+
+// gafete programa premium
 async function generatePDFInvoice(paypal_id_transaction, body) {
 
     const __filename = fileURLToPath(import.meta.url);
@@ -141,7 +250,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
         .text("- FOTO DEL RECIBO DE COMPRA", 55)
         .text("- INDICAR EL MÉTODO DE PAGO (TARJETA DE CREDITO O DEBITO)", 55)
         .text("- USO DE CFDI", 55)
-        .text("* FECHA MÁXIMA DE FACTURACIÓN 25 DE ABRIL DE 2026")
+        
 
     const qrMainUser = await generateQRDataURL(body.uuid);
     doc.addPage();
@@ -164,7 +273,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
      doc.restore();
  
      
-     doc.image('img/header_replus_2026.jpg', 0, 0, { width: 305 })       
+     doc.image('img/header_replus_2026.png', 0, 0, { width: 305 })       
      // aqui iria el QR con info del usuario    
      doc.image(qrMainUser, 90, 120, { width: 120 });
      
@@ -179,7 +288,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
      .moveDown(0.5)
      .text(body.company);
  
-     doc.image('img/footer_programa_replus_2026.jpg', 0, 328, { width: 305 });
+     doc.image('img/footer_programa_replus_2026.png', 0, 328, { width: 305 });
      doc
      .font('Helvetica-Bold')
      .fontSize(17)
@@ -248,7 +357,7 @@ async function generatePDFInvoice(paypal_id_transaction, body) {
          align: 'center'
      });
  
-     doc.image('img/footer_programa_replus_2026_2.jpg', 307, 328, { width: 306 });
+     doc.image('img/footer_programa_replus_2026_2.png', 307, 328, { width: 306 });
  
      doc.save();
      // Rotate and draw some text
@@ -486,4 +595,4 @@ async function generatePDF_freePass( body, uuid) {
 
 
 
-export { generatePDFInvoice, generatePDF_freePass, generateQRDataURL };
+export { generatePDFInvoice, generatePDF_freePass, generateQRDataURL, generatePDFInvoice_energynight };
