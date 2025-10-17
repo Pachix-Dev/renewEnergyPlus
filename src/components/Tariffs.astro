@@ -1,5 +1,6 @@
 ---
 import i18next, { t } from 'i18next'
+const base = i18next.language === 'es' ? '' : `/${i18next.language}`
 ---
 
 <section
@@ -155,8 +156,7 @@ import i18next, { t } from 'i18next'
       <span>{t('menu.submenu_2.option_6')}</span>
     </a>
     <a
-      href='/doc/RE-MEX-2026-101425-Model.pdf'
-      target='_blank'
+      href={`${base}/plano-re-plus-mexico-2026`}
       class='button w-fit py-4 text-white uppercase'
     >
       {t('menu.submenu_2.option_8')}
