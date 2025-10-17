@@ -1,0 +1,711 @@
+---
+import Layout from "../layouts/Layout.astro";
+import i18next, { t, changeLanguage } from "i18next";
+
+changeLanguage("es");
+
+const translate = t("workshops", { returnObjects: true });
+const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+---
+
+<Layout title='RE+ Mexico | Talleres y Capacitaciones'>
+  <!-- Hero Section con video de fondo -->
+  <div class='relative min-h-screen overflow-hidden'>
+    <video
+      src='/video/bg_program_vip_720p.mp4'
+      autoplay
+      loop
+      muted
+      playsinline
+      class='absolute inset-0 w-full h-full object-cover'></video>
+
+    <!-- Overlay con gradiente -->
+    <div
+      class='absolute inset-0 bg-gradient-to-b from-[#1E293B]/90 via-[#1E293B]/70 to-[#5E5884]/80'
+    >
+    </div>
+
+    <!-- Elementos decorativos flotantes -->
+    <div class='absolute inset-0 overflow-hidden'>
+      <div
+        class='absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse'
+      >
+      </div>
+      <div
+        class='absolute bottom-32 right-32 w-24 h-24 border-2 border-[#5E5884]/30 rounded-full animate-bounce'
+      >
+      </div>
+      <div
+        class='absolute top-1/3 right-20 w-16 h-16 bg-[#5E5884]/20 rounded-full blur-xl animate-pulse'
+      >
+      </div>
+    </div>
+
+    <!-- Contenido principal del hero -->
+    <div class='relative z-10 min-h-screen flex flex-col justify-center'>
+      <div class='container mx-auto px-4 py-32'>
+        <!-- Main Title -->
+        <div
+          class='text-center mb-16'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+        >
+          <h1
+            class='text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight'
+          >
+            <span
+              class='block text-3xl sm:text-4xl font-bold text-[#5E5884] mb-4 filter drop-shadow-lg'
+            >
+              RE+ MÉXICO
+            </span>
+            <span class='text-white bg-clip-text'>
+              {
+                i18next.language === 'es'
+                  ? 'Talleres y Capacitaciones'
+                  : 'Workshops & Training'
+              }
+            </span>
+          </h1>
+          <div
+            class='w-32 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full'
+          >
+          </div>
+        </div>
+
+        <!-- Subtitle -->
+        <p
+          class='text-white/90 text-center text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed'
+        >
+          {
+            i18next.language === 'es'
+              ? 'Desarrolla tus habilidades técnicas y amplía tu conocimiento en energías renovables con expertos de la industria'
+              : 'Develop your technical skills and expand your renewable energy knowledge with industry experts'
+          }
+        </p>
+
+        <!-- Stats Section -->
+        <div
+          class='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16'
+          data-aos='fade-up'
+          data-aos-delay='200'
+        >
+          <div class='text-center'>
+            <div class='text-4xl font-bold text-[#5E5884] mb-2'>20+</div>
+            <div class='text-white/80'>
+              {
+                i18next.language === 'es'
+                  ? 'Talleres Especializados'
+                  : 'Specialized Workshops'
+              }
+            </div>
+          </div>
+          <div class='text-center'>
+            <div class='text-4xl font-bold text-[#5E5884] mb-2'>50+</div>
+            <div class='text-white/80'>
+              {
+                i18next.language === 'es'
+                  ? 'Instructores Certificados'
+                  : 'Certified Instructors'
+              }
+            </div>
+          </div>
+          <div class='text-center'>
+            <div class='text-4xl font-bold text-[#5E5884] mb-2'>3</div>
+            <div class='text-white/80'>
+              {
+                i18next.language === 'es'
+                  ? 'Días de Aprendizaje'
+                  : 'Days of Learning'
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Installer & Innovation Area Section -->
+  <section class='py-20 bg-gradient-to-b from-gray-50 to-white'>
+    <div class='container mx-auto px-4'>
+      <div class='max-w-7xl mx-auto'>
+        <!-- Section Header -->
+        <div class='text-center mb-16' data-aos='fade-up'>
+          <div
+            class='inline-flex items-center gap-4 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white px-8 py-3 rounded-full mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
+              ></path>
+            </svg>
+            <span class='font-bold uppercase tracking-wider'
+              >Installer & Innovation Area</span
+            >
+          </div>
+
+          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+            {
+              i18next.language === 'es'
+                ? 'Capacitación Técnica Integral'
+                : 'Comprehensive Technical Training'
+            }
+          </h2>
+        </div>
+
+        <!-- Content Grid -->
+        <div class='grid lg:grid-cols-2 gap-12 items-center mb-16'>
+          <!-- Text Content -->
+          <div data-aos='fade-right'>
+            <div
+              class='bg-white rounded-3xl p-8 shadow-2xl border border-gray-100'
+            >
+              <div class='flex items-start gap-4 mb-6'>
+                <div
+                  class='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='h-6 w-6 text-white'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M13 10V3L4 14h7v7l9-11h-7z'></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class='text-2xl font-bold text-gray-900 mb-4'>
+                    {
+                      i18next.language === 'es'
+                        ? 'Innovación y Tendencias Actuales'
+                        : 'Innovation and Current Trends'
+                    }
+                  </h3>
+                  <p class='text-gray-600 leading-relaxed mb-6'>
+                    En el piso de exhibición de RE+ MEXICO proporciona una
+                    actualización sobre eventos actuales, tendencias,
+                    innovaciones, investigación y análisis en la industria de
+                    energías renovables.
+                  </p>
+                </div>
+              </div>
+
+              <div class='flex items-start gap-4'>
+                <div
+                  class='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='h-6 w-6 text-white'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16'
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class='text-2xl font-bold text-gray-900 mb-4'>
+                    {
+                      i18next.language === 'es'
+                        ? 'Sistemas de Almacenamiento'
+                        : 'Energy Storage Systems'
+                    }
+                  </h3>
+                  <p class='text-gray-600 leading-relaxed'>
+                    Recibe capacitación técnica integral y de calidad por parte
+                    de instructores certificados, incluyendo estrategias y
+                    consejos para sistemas de almacenamiento de energía.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instituciones Participantes -->
+          <div data-aos='fade-left'>
+            <div
+              class='bg-gradient-to-br from-[#5E5884] to-[#7B6FA8] rounded-3xl p-8 text-white'
+            >
+              <h3 class='text-2xl font-bold mb-6 text-center'>
+                {
+                  i18next.language === 'es'
+                    ? 'Instituciones Participantes'
+                    : 'Participating Institutions'
+                }
+              </h3>
+
+              <div
+                class='grid grid-cols-2 gap-8 items-center justify-items-center'
+              >
+                <!-- AMIF Logo -->
+                <div
+                  class='bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 w-full flex items-center justify-center min-h-[100px]'
+                >
+                  <div class='text-center'>
+                    <div class='text-4xl font-bold mb-2'>AMIF</div>
+                    <div class='text-sm opacity-80'>
+                      Asociación Mexicana de la Industria Fotovoltaica
+                    </div>
+                  </div>
+                </div>
+
+                <!-- EUPD Research Logo -->
+                <div
+                  class='bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 w-full flex items-center justify-center min-h-[100px]'
+                >
+                  <div class='text-center'>
+                    <div class='text-2xl font-bold mb-2'>EUPD</div>
+                    <div class='text-xl font-semibold mb-1'>RESEARCH</div>
+                    <div class='text-xs opacity-80'>Market Intelligence</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enlightenment Area Section -->
+  <section class='py-20 bg-gradient-to-b from-white to-gray-50'>
+    <div class='container mx-auto px-4'>
+      <div class='max-w-7xl mx-auto'>
+        <!-- Section Header -->
+        <div class='text-center mb-16' data-aos='fade-up'>
+          <div
+            class='inline-flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-3 rounded-full mb-6'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+              ></path>
+            </svg>
+            <span class='font-bold uppercase tracking-wider'
+              >Enlightenment Area</span
+            >
+          </div>
+
+          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+            {
+              i18next.language === 'es'
+                ? 'Ilumina tu Experiencia con Conocimiento'
+                : 'Illuminate Your Experience with Knowledge'
+            }
+          </h2>
+        </div>
+
+        <!-- Content -->
+        <div class='mb-16' data-aos='fade-up'>
+          <div
+            class='bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 max-w-4xl mx-auto'
+          >
+            <div class='text-center'>
+              <div
+                class='w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-10 w-10 text-white'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                  ></path>
+                </svg>
+              </div>
+
+              <p class='text-lg text-gray-600 leading-relaxed mb-8'>
+                En RE+ MEXICO encontrarás múltiples espacios para aprender,
+                descubrir y conectar, antes y durante la exposición. Ilumina tu
+                experiencia con conocimiento, innovación, casos de éxito,
+                tendencias, tecnologías y soluciones del sector energético a
+                través de charlas y capacitaciones especializadas.
+              </p>
+
+              <div
+                class='bg-gradient-to-r from-[#5E5884]/10 to-[#7B6FA8]/10 rounded-2xl p-6'
+              >
+                <p class='text-lg font-semibold text-gray-800'>
+                  Si buscas nuevas oportunidades de negocio y ampliar tu red de
+                  contactos en América Latina, este es el espacio ideal para ti.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marcas Participantes -->
+        <div data-aos='fade-up' data-aos-delay='200'>
+          <h3 class='text-3xl font-bold text-center text-gray-900 mb-12'>
+            {
+              i18next.language === 'es'
+                ? 'Marcas Participantes Confirmadas'
+                : 'Confirmed Participating Brands'
+            }
+          </h3>
+
+          <div
+            class='bg-white rounded-3xl p-8 shadow-2xl border border-gray-100'
+          >
+            <div
+              class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6'
+            >
+              <!-- Brand Cards -->
+              {
+                [
+                  'HUAWEI',
+                  'BATTERY DEPOT',
+                  'AP SYSTEMS',
+                  'METERING',
+                  'ECOFLOW',
+                  'EXEL SOLAR',
+                  'COM AP',
+                  'S-5!',
+                  'SOLAR MAX',
+                  'SANTAMARINA+STETA',
+                  'SOLAREVER',
+                  'WEIDMÜLLE',
+                ].map((brand) => (
+                  <div class='group bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 hover:from-[#5E5884]/10 hover:to-[#7B6FA8]/10 transition-all duration-300 border border-gray-200 hover:border-[#5E5884]/30'>
+                    <div class='text-center'>
+                      <div class='w-12 h-12 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          class='h-6 w-6 text-white'
+                          fill='none'
+                          viewBox='0 0 24 24'
+                          stroke='currentColor'
+                        >
+                          <path
+                            stroke-linecap='round'
+                            stroke-linejoin='round'
+                            stroke-width='2'
+                            d='M13 10V3L4 14h7v7l9-11h-7z'
+                          />
+                        </svg>
+                      </div>
+                      <div class='font-bold text-sm text-gray-800 group-hover:text-[#5E5884] transition-colors duration-300'>
+                        {brand}
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class='py-20 bg-gradient-to-b from-gray-900 to-[#1E293B] text-white'>
+    <div class='container mx-auto px-4'>
+      <div class='max-w-6xl mx-auto'>
+        <div class='text-center mb-16' data-aos='fade-up'>
+          <h2 class='text-4xl md:text-5xl font-bold mb-6'>
+            {
+              i18next.language === 'es'
+                ? 'Beneficios de Participar'
+                : 'Benefits of Participating'
+            }
+          </h2>
+          <div
+            class='w-24 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full'
+          >
+          </div>
+        </div>
+
+        <div class='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          <div
+            class='text-center group'
+            data-aos='fade-up'
+            data-aos-delay='100'
+          >
+            <div
+              class='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-8 w-8 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-xl font-bold mb-4'>
+              {i18next.language === 'es' ? 'Certificaciones' : 'Certifications'}
+            </h3>
+            <p class='text-white/70'>
+              {
+                i18next.language === 'es'
+                  ? 'Obtén certificaciones reconocidas por la industria'
+                  : 'Get industry-recognized certifications'
+              }
+            </p>
+          </div>
+
+          <div
+            class='text-center group'
+            data-aos='fade-up'
+            data-aos-delay='200'
+          >
+            <div
+              class='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-8 w-8 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-xl font-bold mb-4'>Networking</h3>
+            <p class='text-white/70'>
+              {
+                i18next.language === 'es'
+                  ? 'Conecta con expertos y profesionales'
+                  : 'Connect with experts and professionals'
+              }
+            </p>
+          </div>
+
+          <div
+            class='text-center group'
+            data-aos='fade-up'
+            data-aos-delay='300'
+          >
+            <div
+              class='w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-8 w-8 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-xl font-bold mb-4'>
+              {i18next.language === 'es' ? 'Innovación' : 'Innovation'}
+            </h3>
+            <p class='text-white/70'>
+              {
+                i18next.language === 'es'
+                  ? 'Conoce las últimas tecnologías'
+                  : 'Learn about the latest technologies'
+              }
+            </p>
+          </div>
+
+          <div
+            class='text-center group'
+            data-aos='fade-up'
+            data-aos-delay='400'
+          >
+            <div
+              class='w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+            >
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='h-8 w-8 text-white'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m8 6V9a2 2 0 00-2-2H10a2 2 0 00-2 2v3.159M16 19h2a2 2 0 002-2v-1.159A2 2 0 0018.841 15H16v4zM8 19H6a2 2 0 01-2-2v-1.159A2 2 0 015.159 15H8v4z'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-xl font-bold mb-4'>
+              {i18next.language === 'es' ? 'Oportunidades' : 'Opportunities'}
+            </h3>
+            <p class='text-white/70'>
+              {
+                i18next.language === 'es'
+                  ? 'Descubre nuevas oportunidades de negocio'
+                  : 'Discover new business opportunities'
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section
+    class='py-20 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white'
+  >
+    <div class='container mx-auto px-4 text-center'>
+      <div class='max-w-4xl mx-auto'>
+        <h2 class='text-4xl md:text-5xl font-bold mb-6' data-aos='fade-up'>
+          {
+            i18next.language === 'es'
+              ? '¿Listo para Transformar tu Carrera?'
+              : 'Ready to Transform Your Career?'
+          }
+        </h2>
+        <p
+          class='text-xl mb-12 text-white/90'
+          data-aos='fade-up'
+          data-aos-delay='200'
+        >
+          {
+            i18next.language === 'es'
+              ? 'Únete a los talleres y capacitaciones más importantes de energías renovables en México'
+              : 'Join the most important renewable energy workshops and training in Mexico'
+          }
+        </p>
+
+        <div
+          class='flex flex-col sm:flex-row gap-6 justify-center items-center'
+          data-aos='fade-up'
+          data-aos-delay='400'
+        >
+          <a
+            href={`${base}/registro`}
+            class='group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-[#5E5884] rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden'
+          >
+            <div
+              class='absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000'
+            >
+            </div>
+            <span class='relative z-10 uppercase tracking-wider'>
+              {i18next.language === 'es' ? 'Regístrate Ahora' : 'Register Now'}
+            </span>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-6 w-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
+            </svg>
+          </a>
+
+          <a
+            href={`${base}/programa`}
+            class='group inline-flex items-center gap-4 px-8 py-4 border-2 border-white/30 text-white rounded-2xl font-semibold transition-all duration-300 hover:bg-white/10 hover:border-white'
+          >
+            <span class='uppercase tracking-wider'>
+              {i18next.language === 'es' ? 'Ver Programa' : 'View Program'}
+            </span>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              class='h-5 w-5 group-hover:translate-x-1 transition-transform duration-300'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M9 5l7 7-7 7'></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Mejoras en las sombras de texto */
+  h1 {
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Efectos de glassmorphism */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  /* Responsive improvements */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>

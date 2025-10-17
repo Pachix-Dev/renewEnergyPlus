@@ -30,7 +30,8 @@
             "option_1": "Por qué visitar",
             "option_2": "Perfil del visitante",
             "option_3": "Visados",
-            "option_4": "Tarifas especiales en hoteles"
+            "option_4": "Tarifas especiales en hoteles",
+            "option_5": "TALLERES Y CAPACITACIONES EN SITIO"
         },
         "submenu_4": {
             "title": "EDICIONES",
@@ -52,7 +53,7 @@
         "text_exhibitor": "No te quedes fuera del evento más grande en energías renovables y almacenamiento.",
         "cifra_1": "RE+ MEXICO, la feria líder en energías renovables para México y Norteamérica",
         "cifra_2": "Únete a la séptima edición del evento que está marcando el futuro energético sostenible de nuestro país",
-        "cifra_3": "de piso expositor en conjunto con Ecomondo Mexico.",
+        "cifra_3": "de piso expositor en conjunto con ECOMONDO MEXICO.",
         "cifra_4": "compradores profesionales.",
         "cifra_5": "empresas expositoras con las marcas líderes a nivel global.",
         "cifra_6": "paneles, talleres especializados y conferencias magistrales.",
@@ -331,7 +332,8 @@
             "includes": "INCLUYE <br /> Programa de Conferencias + Energy Night"
         },
         "text_1": "¡Vive la experiencia VIP con nuestro Programa de Conferencias Premium!",
-        "text_2": "¿Estás listo para llevar tus conocimientos y conexiones al siguiente nivel? Nuestro Programa de Conferencias Premium te ofrece acceso exclusivo a las charlas más innovadoras y a los expertos más influyentes de la industria."
+        "text_2": "¿Estás listo para llevar tus conocimientos y conexiones al siguiente nivel? Nuestro Programa de Conferencias Premium te ofrece acceso exclusivo a las charlas más innovadoras y a los expertos más influyentes de la industria.",
+        "text_3": "¡Las Conferencias Premium de RE+ MEXICO son tu oportunidad para explorar tendencias, innovación y conectar con los líderes de la industria!"
     },
     "counterDown": {
         "description": "<strong>Un evento exclusivo de networking para empresarios y líderes de la industria donde podrás</strong> crear redes estratégicas Y conocer nuevos negocios.",

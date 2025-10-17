@@ -38,7 +38,9 @@ changeLanguage("en");
             <h2 class='text-4xl font-bold text-gray-800 leading-tight'>
               {t('whyexhibit.why')}
             </h2>
-            <div class='prose prose-lg text-gray-600 leading-relaxed'>
+            <div
+              class='prose prose-lg text-gray-600 leading-relaxed text-justify'
+            >
               <p set:html={t('whyexhibit.description_main')} />
             </div>
             <Content />

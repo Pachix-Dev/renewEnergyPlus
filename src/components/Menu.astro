@@ -154,11 +154,6 @@ const base = lang === 'es' ? '' : `/${lang}`
               </li>
 
               <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/perfil-expositor`} class='block px-4 py-2'>
-                  {t('menu.submenu_2.option_3')}
-                </a>
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
                 <a
                   href={i18next.language === 'es'
                     ? '/doc/ENLIGHTENMENT-ESP-2026_16.pdf'
@@ -183,7 +178,7 @@ const base = lang === 'es' ? '' : `/${lang}`
 
               <li class='hover:bg-blue-100 font-semibold'>
                 <a
-                  href='/doc/RE-MEX-2026-101425-Model.pdf'
+                  href={`${base}/plano-re-plus-mexico-2026`}
                   target='_blank'
                   class='block px-4 py-2'
                 >
@@ -266,6 +261,14 @@ const base = lang === 'es' ? '' : `/${lang}`
               <li class='hover:bg-blue-100 font-semibold'>
                 <a href={`${base}/programa-premium`} class='block px-4 py-2'>
                   {t('menu.submenu_2.option_9')}
+                </a>
+              </li>
+              <li class='hover:bg-blue-100 font-semibold'>
+                <a
+                  href={`${base}/talleres-capacitaciones`}
+                  class='block px-4 py-2'
+                >
+                  {t('menu.submenu_3.option_5')}
                 </a>
               </li>
               {

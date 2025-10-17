@@ -30,7 +30,8 @@
             "option_1": "Why Visit",
             "option_2": "Visitor Profile",
             "option_3": "Visa support",
-            "option_4": "Special Hotel Rates"
+            "option_4": "Special Hotel Rates",
+            "option_5": "ON-SITE WORKSHOPS AND TRAINING"
         },
         "submenu_4": {
             "title": "PAST EDITIONS",
@@ -53,7 +54,7 @@
         "text_exhibitor": "",
         "cifra_1": "RE+ MEXICO, the leading renewable energy fair for Mexico and North America",
         "cifra_2": "Join the seventh edition of the event that is shaping the sustainable energy future of our country.",
-        "cifra_3": "of exhibition floor in conjunction with Ecomondo Mexico.",
+        "cifra_3": "of exhibition floor in conjunction with ECOMONDO MEXICO.",
         "cifra_4": "professional buyers.",
         "cifra_5": "exhibiting companies with leading brands at a global level.",
         "cifra_6": "panels, specialized workshops and keynote speeches.",
@@ -331,7 +332,8 @@
             "includes": "INCLUDES </br> Conference program + Energy Night"
         },
         "text_1": "Live the VIP experience with our Premium Conference Program!",
-        "text_2": "Are you ready to take your knowledge and connections to the next level? Our Premium Conference Program gives you exclusive access to the most innovative talks and influential industry experts."
+        "text_2": "Are you ready to take your knowledge and connections to the next level? Our Premium Conference Program gives you exclusive access to the most innovative talks and influential industry experts.",
+        "text_3": "The RE+ MEXICO Premium Conferences are your opportunity to explore trends, innovation, and connect with industry leaders!"
     },
     "counterDown": {
         "description": "<strong>An exclusive networking event for executives and industry leaders where you will be able to</strong> create strategic networks AND meet new business.",

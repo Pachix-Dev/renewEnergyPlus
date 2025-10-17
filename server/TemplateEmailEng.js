@@ -87,7 +87,7 @@ const email_template_eng = async ({ name, paternSurname, maternSurname=''}) => {
           </td>
           <td style="padding:20px;" align="center">
             <p style="background: #4E549F;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/doc/RE-MEX2026-100225-Model.pdf" target="_blank">
+              <a style="text-decoration:none;color:white;" href="https://re-plus-mexico.com.mx/plano-re-plus-mexico-2026/" target="_blank">
                 2026 FLOOR PLAN 
               </a>
             </p>         

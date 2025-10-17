@@ -68,7 +68,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
             <span
               class='block text-3xl sm:text-4xl font-bold text-[#5E5884] mb-4 filter drop-shadow-lg'
             >
-              RE+ MÉXICO
+              RE+ MEXICO
             </span>
             <span class=''>
               {t('program.title_1')}
@@ -77,6 +77,294 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           <div
             class='w-32 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full'
           >
+          </div>
+        </div>
+
+        <!-- Ejes Temáticos Section -->
+        <div
+          class='py-16 bg-black/20 backdrop-blur-sm rounded-3xl border border-white/10 mb-16'
+        >
+          <div class='container mx-auto px-4'>
+            <div class='text-center mb-12'>
+              <h2 class='text-4xl font-bold text-white mb-4'>
+                {
+                  i18next.language === 'es'
+                    ? 'Ejes Temáticos'
+                    : 'Thematic Areas'
+                }
+              </h2>
+              <div
+                class='w-24 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full'
+              >
+              </div>
+            </div>
+
+            <div
+              class='grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto'
+            >
+              <!-- Energía Solar -->
+              <div
+                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
+              >
+                <div
+                  class='w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='h-10 w-10 text-white'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class='text-xl font-bold text-white mb-4'>
+                  {i18next.language === 'es' ? 'Energía Solar' : 'Solar Energy'}
+                </h3>
+                <ul class='text-white/70 text-sm space-y-2 text-left'>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Política energética y regulación del sector solar'
+                        : 'Energy policy and solar sector regulation'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Desarrollo de proyectos solares a escala industrial'
+                        : 'Industrial scale solar project development'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Autoconsumo y nuevos modelos de generación limpia'
+                        : 'Self-consumption and new clean generation models'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Perspectivas y retos de la generación distribuida'
+                        : 'Distributed generation perspectives and challenges'
+                    }
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Almacenamiento de Energía -->
+              <div
+                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
+              >
+                <div
+                  class='w-20 h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    class='h-10 w-10 text-white'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z'
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class='text-xl font-bold text-white mb-4'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Almacenamiento de Energía'
+                      : 'Energy Storage'
+                  }
+                </h3>
+                <ul class='text-white/70 text-sm space-y-2 text-left'>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Evolución del mercado y oportunidades de inversión'
+                        : 'Market evolution and investment opportunities'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Modelos de negocio y estrategias de monetización'
+                        : 'Business models and monetization strategies'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Regulación, financiamiento y perspectivas de integración'
+                        : 'Regulation, financing and integration perspectives'
+                    }
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Hidrógeno Verde -->
+              <div
+                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
+              >
+                <div
+                  class='w-20 h-20 bg-gradient-to-r from-cyan-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='h-10 w-10 text-white'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M13 10V3L4 14h7v7l9-11h-7z'></path>
+                  </svg>
+                </div>
+                <h3 class='text-xl font-bold text-white mb-4'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Hidrógeno Verde'
+                      : 'Green Hydrogen'
+                  }
+                </h3>
+                <ul class='text-white/70 text-sm space-y-2 text-left'>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Desarrollo industrial y escalamiento de proyectos'
+                        : 'Industrial development and project scaling'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Descarbonización a través del hidrógeno verde'
+                        : 'Decarbonization through green hydrogen'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Inversión y desarrollo tecnológico del nuevo vector energético'
+                        : 'Investment and technological development of the new energy vector'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Conexión estratégica entre las energías renovables'
+                        : 'Strategic connection between renewable energies'
+                    }
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Energía Eólica -->
+              <div
+                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
+              >
+                <div
+                  class='w-20 h-20 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='h-10 w-10 text-white'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10'
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class='text-xl font-bold text-white mb-4'>
+                  {i18next.language === 'es' ? 'Energía Eólica' : 'Wind Energy'}
+                </h3>
+                <ul class='text-white/70 text-sm space-y-2 text-left'>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Tendencias globales y perspectivas del mercado eólico'
+                        : 'Global trends and wind market perspectives'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Innovaciones tecnológicas para una generación más eficiente'
+                        : 'Technological innovations for more efficient generation'
+                    }
+                  </li>
+                  <li>
+                    • {
+                      i18next.language === 'es'
+                        ? 'Convergencia entre energía eólica y otras fuentes renovables'
+                        : 'Convergence between wind energy and other renewable sources'
+                    }
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Y mucho más section -->
+            <div class='text-center mt-12'>
+              <div
+                class='inline-flex items-center gap-4 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white px-8 py-4 rounded-full border-2 border-white/20'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M12 6v6m0 0v6m0-6h6m-6 0H6'></path>
+                </svg>
+                <span class='text-xl font-bold uppercase tracking-wider'>
+                  {
+                    i18next.language === 'es'
+                      ? '¡Y mucho más!'
+                      : 'And much more!'
+                  }
+                </span>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
+                  ></path>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -189,9 +477,13 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           </div>
         </div>
 
+        <p class='text-white text-center text-xl mb-16'>
+          {t('program.text_3')}
+        </p>
+
         <!-- CTA Button -->
         <div
-          class='text-center'
+          class='text-center mt-10'
           data-aos='zoom-in'
           data-aos-duration='1000'
           data-aos-delay='600'
@@ -241,6 +533,13 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           </a>
         </div>
 
+        <p class='text-white text-xl text-center py-10'>
+          {
+            i18next.language === 'es'
+              ? 'Mantente pendiente de la agenda de conferencias y descubre las tendencias que están transformando el panorama energético.'
+              : 'Stay tuned for the conference schedule and discover the trends that are transforming the energy landscape.'
+          }
+        </p>
         <!-- Coming Soon Badge -->
         <div
           class='text-center my-12'
@@ -310,6 +609,21 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
     .container {
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+
+    /* Ajustes para móviles en ejes temáticos */
+    .grid.lg\\:grid-cols-4 {
+      grid-template-columns: 1fr;
+    }
+
+    .grid.md\\:grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .grid.lg\\:grid-cols-4 {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>
