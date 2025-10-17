@@ -96,7 +96,7 @@ export function CheckoutForm({ currentLanguage, translates }) {
   }
 
   const [copied, setCopied] = useState(false)
-  const textToCopy = '030225900038110671'
+  const textToCopy = '030225900038362623'
 
   const handleCopy = async (event) => {
     event.preventDefault()
