@@ -1273,9 +1273,10 @@ export function RegisterForm({ translates, currentLanguage }) {
                 <option value='PAGINA WEB'>{translates.website}</option>
                 <option value='PRENSA'>{translates.press}</option>
                 <option value='RADIO'>RADIO</option>
-                <option value='TELEMARKETING'>TELEMARKETING</option>
                 <option value='TELEVISIÓN'>{translates.television}</option>
-                <option value='TWITTER'>TWITTER</option>
+                <option value='TIKTOK'>TIKTOK</option>
+                <option value='WHATSAPP'>WHATSAPP</option>
+                <option value='X'>X</option>
               </select>
               {errors.eventKnowledge && (
                 <p className='text-red-600 font-light'>
