@@ -6,71 +6,541 @@ changeLanguage("en");
 ---
 
 <Layout title='RE+ Mexico | Installer Award Mexico'>
-  <section class="bg-[url('/img/bgaward.webp')] bg-cover bg-center py-10">
-    <div class='container mx-auto px-4 text-center grid gap-20 mt-20'>
-      <img src='/img/eupd.webp' alt='Installer Award Mexico' width='200' />
-      <div class='bg-[#BF1309] text-white text-lg md:text-6xl font-bold p-5'>
-        {t('installer_award.text_1')}
+  <!-- Hero Section -->
+  <section class='relative min-h-screen overflow-hidden'>
+    <!-- Background Video/Image -->
+    <div class='absolute inset-0'>
+      <img
+        src='/img/bgaward.webp'
+        alt='Background'
+        class='w-full h-full object-cover'
+      />
+      <div
+        class='absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70'
+      >
       </div>
     </div>
-  </section>
-  <section class="bg-[url('/img/bgaward2.webp')] bg-cover bg-center py-20">
-    <div class='container mx-auto px-4 text-center'>
+
+    <!-- Elementos decorativos -->
+    <div class='absolute inset-0 overflow-hidden'>
       <div
-        class='bg-white text-black text-xl md:text-3xl p-5'
-        set:html={t('installer_award.text_2')}
-      />
-      <div class='grid md:grid-cols-2 gap-5'>
-        <div class='grid justify-between'>
+        class='absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse'
+      >
+      </div>
+      <div
+        class='absolute bottom-32 right-32 w-24 h-24 border-2 border-red-500/30 rounded-full animate-bounce'
+      >
+      </div>
+      <div
+        class='absolute top-1/3 right-20 w-16 h-16 bg-red-500/20 rounded-full blur-xl animate-pulse'
+      >
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class='relative z-10 min-h-screen flex flex-col justify-center'>
+      <div class='container mx-auto px-4 py-20'>
+        <!-- Logo EUPD -->
+        <div class='text-center mb-12' data-aos='fade-down'>
           <img
-            src='/img/awardimg1.webp'
-            alt='Installer Award Mexico'
-            class='w-full object-cover rounded-md'
+            src='/img/eupd.webp'
+            alt='EUPD Research'
+            width='250'
+            class='mx-auto filter drop-shadow-2xl'
           />
-          <div
-            class='bg-white text-black text-xl md:text-3xl flex justify-center items-center p-5'
-          >
-            {t('installer_award.text_3')}
+        </div>
+
+        <!-- Título principal -->
+        <div class='text-center mb-16' data-aos='fade-up' data-aos-delay='200'>
+          <div class='inline-block relative'>
+            <div
+              class='bg-gradient-to-r from-[#605986] to-[#4E549F] text-white px-8 py-6 rounded-3xl border-4 border-white/20 shadow-2xl backdrop-blur-sm'
+            >
+              <h1
+                class='text-2xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider leading-tight'
+              >
+                Top Installer<br />
+                <span class='text-yellow-300'>Awards 2026</span>
+              </h1>
+              <div class='w-32 h-1 bg-white mx-auto mt-4 rounded-full'></div>
+            </div>
+            <!-- Efecto de brillo -->
+            <div
+              class='absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-shimmer'
+            >
+            </div>
           </div>
         </div>
-        <img
-          src='/img/awardimg2.webp'
-          alt='Installer Award Mexico'
-          class='w-full object-cover rounded-md'
-        />
+
+        <!-- Subtítulo -->
+        <div
+          class='text-center max-w-4xl mx-auto'
+          data-aos='fade-up'
+          data-aos-delay='400'
+        >
+          <p
+            class='text-white text-xl md:text-2xl font-semibold mb-8 leading-relaxed'
+          >
+            {
+              i18next.language === 'es'
+                ? 'Participa en la tercera entrega de los Installer Awards 2026 – México'
+                : 'Participate in the third edition of the Installer Awards 2026 – Mexico'
+            }
+          </p>
+
+          <!-- Stats -->
+          <div class='grid md:grid-cols-3 gap-8 mb-12'>
+            <div class='text-center'>
+              <div class='text-4xl font-bold text-white mb-2'>3ª</div>
+              <div class='text-white/80 text-lg'>
+                {i18next.language === 'es' ? 'Edición' : 'Edition'}
+              </div>
+            </div>
+            <div class='text-center'>
+              <div class='text-4xl font-bold text-white mb-2'>2026</div>
+              <div class='text-white/80 text-lg'>México</div>
+            </div>
+            <div class='text-center'>
+              <div class='text-4xl font-bold text-white mb-2'>TOP</div>
+              <div class='text-white/80 text-lg'>
+                {i18next.language === 'es' ? 'Instaladores' : 'Installers'}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Power by badge -->
+        <div class='text-center' data-aos='fade-up' data-aos-delay='600'>
+          <div
+            class='inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-3xl border border-white/20'
+          >
+            <span class='text-sm font-medium opacity-80'>POWERED BY</span>
+            <img src='/img/sponsors/quartux.webp' width='150' />
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section class='container mx-auto px-4 text-center py-20'>
-    <p class='text-xl md:text-4xl'>{t('installer_award.text_4')}</p>
-    <a
-      href={i18next.language === 'es'
-        ? '/doc/2025-Installer-Awards-Reception-Sponsorships-ESP-compressed.pdf'
-        : '/doc/2025-Installer-Awards-Reception-Sponsorships-ENG-compressed.pdf'}
-      target='_blank'
-      class='mt-10 button w-full py-4 text-white'
-    >
-      <span class='uppercase text-2xl md:text-6xl'
-        >{t('installer_award.text_5')}</span
-      >
-    </a>
-  </section>
-  <section class="bg-[url('/img/bgaward3.webp')]">
-    <div class='container mx-auto px-4 py-20 text-center grid gap-20'>
-      <a
-        href='https://survey.eupd-research.com/index.php?r=survey/index&sid=499871&lang=es'
-        target='_blank'
-        class='mt-10 button w-full py-4 text-white'
-      >
-        <span class='uppercase text-2xl md:text-6xl'
-          >{t('installer_award.text_6')}</span
+
+  <!-- Descripción principal -->
+  <section class='py-20 bg-gradient-to-b from-gray-50 to-white'>
+    <div class='container mx-auto px-4'>
+      <div class='max-w-5xl mx-auto'>
+        <div class='text-center mb-16' data-aos='fade-up'>
+          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+            {
+              i18next.language === 'es'
+                ? 'Excelencia, Dedicación e Innovación'
+                : 'Excellence, Dedication and Innovation'
+            }
+          </h2>
+          <div class='w-24 h-1 bg-[#605986] mx-auto rounded-full'></div>
+        </div>
+
+        <div
+          class='bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100'
+          data-aos='fade-up'
+          data-aos-delay='200'
         >
-      </a>
-      <p class='text-xl md:text-4xl' set:html={t('installer_award.text_7')} />
+          <div class='prose prose-lg max-w-none text-gray-700 leading-relaxed'>
+            <p class='text-xl mb-6'>
+              {
+                i18next.language === 'es'
+                  ? 'Los Top Installer Awards 2026 celebran la excelencia, dedicación e innovación de las empresas de instalación solar más vanguardistas de México. Tras el gran impulso de los últimos años, esta nueva edición promete ser aún más destacada, reuniendo a los principales profesionales solares del país para una noche de reconocimiento, inspiración y conexión.'
+                  : "The Top Installer Awards 2026 celebrate the excellence, dedication and innovation of Mexico's most cutting-edge solar installation companies. Following the great momentum of recent years, this new edition promises to be even more outstanding, bringing together the country's leading solar professionals for a night of recognition, inspiration and connection."
+              }
+            </p>
+
+            <div
+              class='bg-gradient-to-r from-[#605986]/10 to-[#D76901]/10 rounded-2xl p-6 mb-6'
+            >
+              <p class='text-lg font-semibold text-gray-800 mb-4'>
+                {
+                  i18next.language === 'es'
+                    ? 'Organizados por EUPD Research, los premios reconocen a los instaladores que demuestran un desempeño excepcional en:'
+                    : 'Organized by EUPD Research, the awards recognize installers who demonstrate exceptional performance in:'
+                }
+              </p>
+              <div class='grid md:grid-cols-3 gap-4 text-center'>
+                <div class='bg-white rounded-xl p-4 shadow-sm'>
+                  <div
+                    class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      class='h-6 w-6 text-white'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class='text-sm font-medium text-gray-800'>
+                    {
+                      i18next.language === 'es'
+                        ? 'Experiencia Técnica'
+                        : 'Technical Experience'
+                    }
+                  </div>
+                </div>
+                <div class='bg-white rounded-xl p-4 shadow-sm'>
+                  <div
+                    class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      class='h-6 w-6 text-white'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class='text-sm font-medium text-gray-800'>
+                    {
+                      i18next.language === 'es'
+                        ? 'Satisfacción del Cliente'
+                        : 'Customer Satisfaction'
+                    }
+                  </div>
+                </div>
+                <div class='bg-white rounded-xl p-4 shadow-sm'>
+                  <div
+                    class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      class='h-6 w-6 text-white'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9'
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class='text-sm font-medium text-gray-800'>
+                    {
+                      i18next.language === 'es'
+                        ? 'Prácticas Sostenibles'
+                        : 'Sustainable Practices'
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class='text-lg'>
+              {
+                i18next.language === 'es'
+                  ? 'Ser reconocido como un Top Installer es más que un título: es una distinción confiable en la industria que refleja calidad, confiabilidad y liderazgo en uno de los mercados solares de más rápido crecimiento a nivel mundial.'
+                  : 'Being recognized as a Top Installer is more than a title: it is a reliable industry distinction that reflects quality, reliability and leadership in one of the fastest-growing solar markets worldwide.'
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios Section -->
+  <section
+    class='relative py-20'
+    style="background-image: url('/img/bgaward2.webp'); background-size: cover; background-position: center;"
+  >
+    <div class='absolute inset-0 bg-gradient-to-b from-black/70 to-black/50'>
+    </div>
+
+    <div class='relative z-10 container mx-auto px-4'>
+      <div class='text-center mb-16' data-aos='fade-up'>
+        <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+          {
+            i18next.language === 'es'
+              ? 'Los Galardonados Obtienen'
+              : 'Award Winners Get'
+          }
+        </h2>
+        <div class='w-24 h-1 bg-[#605986] mx-auto rounded-full'></div>
+      </div>
+
+      <div class='grid md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto'>
+        <!-- Contenido lado derecho -->
+        <div class='space-y-6' data-aos='fade-right'>
+          <img
+            src='/img/awardimg2.webp'
+            alt='Award Image 2'
+            class='w-full rounded-2xl shadow-2xl border-4 border-white/20 mb-8'
+          />
+        </div>
+        <!-- Lista de beneficios -->
+        <div class='space-y-4'>
+          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
+            <div class='flex items-start gap-4'>
+              <div
+                class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center flex-shrink-0'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-white'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Credibilidad y Confianza'
+                      : 'Credibility and Trust'
+                  }
+                </h4>
+                <p class='text-gray-600'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Reconocimiento oficial de una organización internacional de investigación independiente.'
+                      : 'Official recognition from an independent international research organization.'
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
+            <div class='flex items-start gap-4'>
+              <div
+                class='w-12 h-12 bg-[#D76901] rounded-xl flex items-center justify-center flex-shrink-0'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-white'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'></path>
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Visibilidad y Exposición'
+                      : 'Visibility and Exposure'
+                  }
+                </h4>
+                <p class='text-gray-600'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Presencia en medios, reconocimiento en la industria y oportunidades promocionales.'
+                      : 'Media presence, industry recognition and promotional opportunities that strengthen brand positioning.'
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
+            <div class='flex items-start gap-4'>
+              <div
+                class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center flex-shrink-0'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-white'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Networking y Alianzas'
+                      : 'Networking and Partnerships'
+                  }
+                </h4>
+                <p class='text-gray-600'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Acceso exclusivo a una comunidad de colegas de alto desempeño y líderes tecnológicos.'
+                      : 'Exclusive access to a community of high-performing colleagues, technology leaders and project developers.'
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
+            <div class='flex items-start gap-4'>
+              <div
+                class='w-12 h-12 bg-[#D76901] rounded-xl flex items-center justify-center flex-shrink-0'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-white'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Crecimiento de Negocio'
+                      : 'Business Growth'
+                  }
+                </h4>
+                <p class='text-gray-600'>
+                  {
+                    i18next.language === 'es'
+                      ? 'Reputación fortalecida que atrae nuevos clientes, inversionistas y colaboraciones estratégicas.'
+                      : 'Strengthened reputation that attracts new customers, investors and strategic collaborations.'
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen lado izquierdo -->
+      <div class='space-y-8 max-w-xl mx-auto' data-aos='fade-right'>
+        <img
+          src='/img/awardimg1.webp'
+          alt='Award Image'
+          class='w-full rounded-2xl shadow-2xl border-4 border-white/20'
+        />
+        <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
+          <h3 class='text-2xl font-bold text-gray-900 text-center'>
+            {
+              i18next.language === 'es'
+                ? 'Reconocimiento Oficial'
+                : 'Official Recognition'
+            }
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fechas Clave Section -->
+  <section class='py-20 bg-gradient-to-b from-white to-gray-50'>
+    <div class='container mx-auto px-4 text-center'>
+      <div class='max-w-4xl mx-auto'>
+        <div class='mb-16' data-aos='fade-up'>
+          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+            {i18next.language === 'es' ? 'Fechas Clave' : 'Key Dates'}
+          </h2>
+          <div class='w-24 h-1 bg-[#605986] mx-auto rounded-full'></div>
+        </div>
+
+        <div
+          class='bg-gradient-to-r from-[#605986] to-[#D76901] rounded-3xl p-12 text-white shadow-2xl'
+          data-aos='zoom-in'
+        >
+          <div class='text-6xl mb-6'>🗓️</div>
+          <h3 class='text-3xl md:text-4xl font-bold mb-6'>
+            {i18next.language === 'es' ? 'Próximamente' : 'Coming Soon'}
+          </h3>
+          <p class='text-xl md:text-2xl mb-8'>
+            {
+              i18next.language === 'es'
+                ? 'Mantente atento a la convocatoria'
+                : 'Stay tuned for the call for applications'
+            }
+          </p>
+
+          <div
+            class='bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30'
+          >
+            <p class='text-lg'>
+              {
+                i18next.language === 'es'
+                  ? 'Las fechas importantes para los Top Installer Awards 2026 serán anunciadas muy pronto. ¡No te pierdas la oportunidad de formar parte de este prestigioso reconocimiento!'
+                  : "Important dates for the Top Installer Awards 2026 will be announced very soon. Don't miss the opportunity to be part of this prestigious recognition!"
+              }
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
+
 <style>
+  .button-award {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+      90deg,
+      rgba(188, 1, 0, 1) 0%,
+      rgba(215, 105, 1, 1) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .button-award:hover {
+    transform: scale(1.02);
+    border-color: #fff9;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
   .button {
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -143,5 +613,37 @@ changeLanguage("en");
     to {
       left: 100%;
     }
+  }
+
+  /* Animación de shimmer para el hero */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-12deg);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+
+  /* Mejoras responsivas */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Efectos de glassmorphism */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  /* Animaciones de scroll */
+  [data-aos] {
+    transition-duration: 800ms;
   }
 </style>

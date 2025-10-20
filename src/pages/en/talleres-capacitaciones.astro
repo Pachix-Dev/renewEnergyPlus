@@ -195,10 +195,11 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                     }
                   </h3>
                   <p class='text-gray-600 leading-relaxed mb-6'>
-                    En el piso de exhibición de RE+ MEXICO proporciona una
-                    actualización sobre eventos actuales, tendencias,
-                    innovaciones, investigación y análisis en la industria de
-                    energías renovables.
+                    {
+                      i18next.language === 'es'
+                        ? 'En el piso de exhibición de RE+ MEXICO proporciona unaactualización sobre eventos actuales, tendencias, innovaciones, investigación y análisis en la industria de energías renovables.'
+                        : 'The RE+ MEXICO exhibition floor provides an update on current events, trends, innovations, research, and analysis in the renewable energy industry.'
+                    }
                   </p>
                 </div>
               </div>
@@ -231,9 +232,11 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                     }
                   </h3>
                   <p class='text-gray-600 leading-relaxed'>
-                    Recibe capacitación técnica integral y de calidad por parte
-                    de instructores certificados, incluyendo estrategias y
-                    consejos para sistemas de almacenamiento de energía.
+                    {
+                      i18next.language === 'es'
+                        ? 'Recibe capacitación técnica integral y de calidad por parte de instructores certificados, incluyendo estrategias y consejos para sistemas de almacenamiento de energía.'
+                        : 'Receive comprehensive and high-quality technical training from certified instructors, including strategies and tips for energy storage systems.'
+                    }
                   </p>
                 </div>
               </div>
@@ -257,27 +260,30 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                 class='grid grid-cols-2 gap-8 items-center justify-items-center'
               >
                 <!-- AMIF Logo -->
-                <div
-                  class='bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 w-full flex items-center justify-center min-h-[100px]'
+                <a
+                  href='https://www.amif.org.mx/'
+                  target='_blank'
+                  class='bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2'
                 >
-                  <div class='text-center'>
-                    <div class='text-4xl font-bold mb-2'>AMIF</div>
-                    <div class='text-sm opacity-80'>
-                      Asociación Mexicana de la Industria Fotovoltaica
-                    </div>
-                  </div>
-                </div>
+                  <img
+                    src='/img/amif.webp'
+                    alt='AMIF Logo'
+                    class='max-h-16 object-contain'
+                  />
+                </a>
 
-                <!-- EUPD Research Logo -->
-                <div
-                  class='bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 w-full flex items-center justify-center min-h-[100px]'
+                <!-- EUPD Logo -->
+                <a
+                  href='https://eupd-group.com/'
+                  target='_blank'
+                  class='bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2'
                 >
-                  <div class='text-center'>
-                    <div class='text-2xl font-bold mb-2'>EUPD</div>
-                    <div class='text-xl font-semibold mb-1'>RESEARCH</div>
-                    <div class='text-xs opacity-80'>Market Intelligence</div>
-                  </div>
-                </div>
+                  <img
+                    src='/img/aliadosEstrategicos/aliados2/EUPD-Research.webp'
+                    alt='AMIF Logo'
+                    class='max-h-16 object-contain'
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -349,19 +355,22 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
               </div>
 
               <p class='text-lg text-gray-600 leading-relaxed mb-8'>
-                En RE+ MEXICO encontrarás múltiples espacios para aprender,
-                descubrir y conectar, antes y durante la exposición. Ilumina tu
-                experiencia con conocimiento, innovación, casos de éxito,
-                tendencias, tecnologías y soluciones del sector energético a
-                través de charlas y capacitaciones especializadas.
+                {
+                  i18next.language === 'es'
+                    ? 'En RE+ MEXICO encontrarás múltiples espacios para aprender, descubrir y conectar, antes y durante la exposición. Ilumina tu experiencia con conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector energético a través de charlas y capacitaciones especializadas'
+                    : 'At RE+ MEXICO you will find multiple spaces to learn, discover and connect, before and during the exhibition. Illuminate your experience with knowledge, innovation, success stories, trends, technologies and solutions from the energy sector through specialized talks and training sessions.'
+                }
               </p>
 
               <div
                 class='bg-gradient-to-r from-[#5E5884]/10 to-[#7B6FA8]/10 rounded-2xl p-6'
               >
                 <p class='text-lg font-semibold text-gray-800'>
-                  Si buscas nuevas oportunidades de negocio y ampliar tu red de
-                  contactos en América Latina, este es el espacio ideal para ti.
+                  {
+                    i18next.language === 'es'
+                      ? 'Si buscas nuevas oportunidades de negocio y ampliar tu red de contactos en América Latina, este es el espacio ideal para ti.'
+                      : 'If you are looking for new business opportunities and expanding your network in Latin America, this is the ideal space for you.'
+                  }
                 </p>
               </div>
             </div>
@@ -387,42 +396,68 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
               <!-- Brand Cards -->
               {
                 [
-                  'HUAWEI',
-                  'BATTERY DEPOT',
-                  'AP SYSTEMS',
-                  'METERING',
-                  'ECOFLOW',
-                  'EXEL SOLAR',
-                  'COM AP',
-                  'S-5!',
-                  'SOLAR MAX',
-                  'SANTAMARINA+STETA',
-                  'SOLAREVER',
-                  'WEIDMÜLLE',
+                  {
+                    src: '/img/sponsors/Huawei.webp',
+                    width: 200,
+                    alt: 'Huawei',
+                    link: 'https://www.huawei.com/',
+                  },
+                  {
+                    src: '/img/expo/carousel6/battery-depot.webp',
+                    width: 200,
+                    alt: 'Battery Depot',
+                    link: 'https://batterydepot.com.mx/',
+                  },
+                  {
+                    src: '/img/expo/carousel1/apSystems.webp',
+                    width: 200,
+                    alt: 'AP Systems',
+                    link: 'https://www.apsystems.com/',
+                  },
+                  {
+                    src: '/img/expo/carousel4/metering.webp',
+                    width: 190,
+                    alt: 'Metering',
+                    link: 'https://metering.com.mx/',
+                  },
+                  {
+                    src: '/img/expo/carousel1/ecoflow.webp',
+                    width: 200,
+                    alt: 'EcoFlow',
+                    link: 'https://www.ecoflow.com/',
+                  },
+                  {
+                    src: '/img/expo/carousel5/exel_solar.webp',
+                    width: 200,
+                    alt: 'Exel Solar',
+                    link: 'https://www.exelsolar.com/',
+                  },
+                  {
+                    src: '/img/expo/carousel5/solar_max.webp',
+                    width: 190,
+                    alt: 'Solar Max',
+                    link: 'https://www.solarmax.com/',
+                  },
+                  {
+                    src: '/img/expo/carousel1/solarever.webp',
+                    width: 200,
+                    alt: 'SolarEver',
+                    link: 'https://www.solarever.com/',
+                  },
+                  {
+                    src: '/img/sponsors/S-5logo.webp',
+                    width: 80,
+                    alt: 'S-5!',
+                    link: 'https://www.s-5.com/',
+                  },
                 ].map((brand) => (
-                  <div class='group bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 hover:from-[#5E5884]/10 hover:to-[#7B6FA8]/10 transition-all duration-300 border border-gray-200 hover:border-[#5E5884]/30'>
-                    <div class='text-center'>
-                      <div class='w-12 h-12 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          class='h-6 w-6 text-white'
-                          fill='none'
-                          viewBox='0 0 24 24'
-                          stroke='currentColor'
-                        >
-                          <path
-                            stroke-linecap='round'
-                            stroke-linejoin='round'
-                            stroke-width='2'
-                            d='M13 10V3L4 14h7v7l9-11h-7z'
-                          />
-                        </svg>
-                      </div>
-                      <div class='font-bold text-sm text-gray-800 group-hover:text-[#5E5884] transition-colors duration-300'>
-                        {brand}
-                      </div>
-                    </div>
-                  </div>
+                  <a
+                    href={brand.link || '#'}
+                    target='_blank'
+                    class='w-full flex items-center justify-center min-h-[100px] p-2'
+                  >
+                    <img src={brand.src} alt='' width={brand.width} />
+                  </a>
                 ))
               }
             </div>
