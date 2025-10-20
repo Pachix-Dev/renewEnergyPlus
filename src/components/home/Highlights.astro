@@ -1,6 +1,7 @@
 ---
 import i18next, { t } from 'i18next'
 const currentLang = i18next.language || 'es'
+const base = currentLang === 'es' ? '' : `/${currentLang}`
 ---
 
 <section class='py-20 bg-gradient-to-b from-white to-gray-50'>
@@ -105,7 +106,7 @@ const currentLang = i18next.language || 'es'
           </p>
 
           <a
-            href='/programa-premium'
+            href={`${base}/programa-premium`}
             class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] hover:from-[#4a4a6a] hover:to-[#6a5f98] text-white font-bold rounded-lg transition-all duration-300 text-sm'
           >
             <span
@@ -199,7 +200,7 @@ const currentLang = i18next.language || 'es'
           </p>
 
           <a
-            href='/energy-night'
+            href={`${base}/energy-night`}
             class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-lg transition-all duration-300 text-sm'
           >
             <span
@@ -299,7 +300,7 @@ const currentLang = i18next.language || 'es'
           </p>
 
           <a
-            href='/registro'
+            href={`${base}/registro`}
             class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-lg transition-all duration-300 text-sm'
           >
             <span
@@ -393,18 +394,14 @@ const currentLang = i18next.language || 'es'
                 : 'Stand out with exclusive marketing benefits and international recognition.'
             }
           </p>
-
-          <div
-            class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-bold rounded-lg transition-all duration-300 text-sm cursor-not-allowed opacity-75'
+          <a
+            href={`${base}/installer-award-mexico`}
+            class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-bold rounded-lg transition-all duration-300 text-sm'
           >
-            <span
-              >{
-                currentLang === 'es' ? 'Próximamente...' : 'Coming Soon...'
-              }</span
-            >
+            <span>Installer Awards</span>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              class='h-3 w-3'
+              class='h-3 w-3 group-hover:translate-x-1 transition-transform duration-300'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'
@@ -413,9 +410,9 @@ const currentLang = i18next.language || 'es'
                 stroke-linecap='round'
                 stroke-linejoin='round'
                 stroke-width='2'
-                d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
             </svg>
-          </div>
+          </a>
         </div>
       </div>
     </div>
