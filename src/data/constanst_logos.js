@@ -650,64 +650,64 @@ const toolkit_en = [
 
 const sponsors = [
 	{
-		src:'/img/sponsors/Huawei.webp',
-    	alt: 'Logotipo Huawei',
+		src:'/img/quartux_nuevo.png',
+    	alt: 'quartux',
 		width: 250,
 	},
 	{
-		src:'/img/sponsors/EcoFlow.webp',
-    	alt: 'ECOFLOW',
-		width: 250,
-	},
-	{
-		src: '/img/sponsors/S-5logo.webp',
-      	alt: 'enlight',
+		src:'/img/sponsors/S-5logo.webp',
+    	alt: 'S5',
 		width: 80,
 	},
 	{
-		src: '/img/sponsors/yinglisolar.webp',
-      	alt: 'enlight',
-		width: 200,
+		src: '/img/axen_energy.png',
+      	alt: 'Axen Energy',
+		width: 80,
 	},
 	{
-		src: '/img/sponsors/longi.webp',
-      	alt: 'longi',
-		width: 200,
-	},
-	{
-		src: '/img/sponsors/quartux.webp',
-      	alt: 'quartux',
-		width: 230,
-	},
-	{
-		src: '/img/sponsors/hitachi.webp',
-      	alt: 'enlight',
-		width: 130,
-	},
-	{
-		src: '/img/sponsors/APsystemss.webp',
-      	alt: 'enlight',
-		width: 250,
-	},
-	{
-		src: '/img/sponsors/cometer.webp',
-      	alt: 'enlight',
-		width: 250,
-	},
-	{
-		src: '/img/sponsors/lirvan.webp',
-      	alt: 'enlight',
-		width: 250,
-	},
-	{
-		src: '/img/sponsors/leadvance.webp',
-      	alt: 'enlight',
-		width: 90,
-	},
-	{
-		src: '/img/sponsors/nosmueveelsol.webp',
-      	alt: 'enlight',
+		src: '/img/nosmueveelsolnuevo.png',
+      	alt: 'Nos Mueve el Sol',
 		width: 150,
+	},
+	{
+		src: '/img/expo/carousel5/exel_solar.webp',
+      	alt: 'Exel Solar',
+		width: 200,
+	},
+	{
+		src: '/img/sponsors/apSystems.webp',
+      	alt: 'quartux',
+		width: 210,
+	},
+	{
+		src:'/img/quartux_nuevo.png',
+    	alt: 'quartux',
+		width: 250,
+	},
+	{
+		src:'/img/sponsors/S-5logo.webp',
+    	alt: 'S5',
+		width: 80,
+	},
+	{
+		src: '/img/axen_energy.png',
+      	alt: 'Axen Energy',
+		width: 80,
+	},
+	{
+		src: '/img/nosmueveelsolnuevo.png',
+      	alt: 'Nos Mueve el Sol',
+		width: 150,
+	},
+	{
+		src: '/img/expo/carousel5/exel_solar.webp',
+      	alt: 'Exel Solar',
+		width: 200,
+	},
+	{
+		src: '/img/sponsors/apSystems.webp',
+      	alt: 'quartux',
+		width: 210,
 	},
 	
 ]
