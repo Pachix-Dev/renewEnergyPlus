@@ -300,12 +300,14 @@ const base = currentLang === 'es' ? '' : `/${currentLang}`
           </p>
 
           <a
-            href={`${base}/registro`}
+            href={`${base}/talleres-capacitaciones/`}
             class='inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-lg transition-all duration-300 text-sm'
           >
             <span
               >{
-                currentLang === 'es' ? 'Registro Gratuito' : 'Free Registration'
+                currentLang === 'es'
+                  ? 'Talleres y Capacitación'
+                  : 'Workshops and Training'
               }</span
             >
             <svg
