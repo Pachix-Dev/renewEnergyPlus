@@ -633,19 +633,19 @@ const exhibitors = [
 ];
 
 const toolkit_es = [
-    { id: 0, src: '/img/toolkit/banner_esp_2025.webp', alt:'Banner web', title:'Banner web', width: 360},
-    { id: 1, src: '/img/toolkit/keyvisual_esp_2025.webp', alt:'KeyVisual', title:'KeyVisual', width: 360, height: 158 },
-    { id: 2, src: '/img/toolkit/facebook_esp_2025.webp', alt:'Facebook', title:'Facebook', width: 360, height: 158 },
-    { id: 3, src: '/img/toolkit/twitter_esp_2025.webp', alt:'Twitter', title:'Twitter', width: 360, height: 120 },
-    { id: 4, src: '/img/toolkit/linkedin_esp_2025.webp', alt:'Linkedin', title:'Linkedin', width: 360, height: 90 }    
+    { id: 0, src: '/img/toolkit/banner_esp_2026.png', alt:'Banner web', title:'Banner web', width: 360},
+    { id: 1, src: '/img/toolkit/keyvisual_esp_2026.png', alt:'KeyVisual', title:'KeyVisual', width: 360, height: 158 },
+    { id: 2, src: '/img/toolkit/facebook_esp_2026.png', alt:'Facebook', title:'Facebook', width: 360, height: 158 },
+    { id: 3, src: '/img/toolkit/twitter_esp_2026.png', alt:'Twitter', title:'Twitter', width: 360, height: 120 },
+    { id: 4, src: '/img/toolkit/linkedin_esp_2026.png', alt:'Linkedin', title:'Linkedin', width: 360, height: 90 }    
 ]
 
 const toolkit_en = [
-    { id: 0, src: '/img/toolkit/banner_eng_2025.webp', alt:'Banner web',  title:'Banner web', width: 360},
-    { id: 1, src: '/img/toolkit/keyvisual_eng_2025.webp', alt:'KeyVisual', title:'KeyVisual', width: 360, height: 158 },
-    { id: 2, src: '/img/toolkit/facebook_eng_2025.webp', alt:'Facebook', title:'Facebook', width: 360, height: 158 },
-    { id: 3, src: '/img/toolkit/twitter_eng_2025.webp', alt:'Twitter', title:'Twitter', width: 360, height: 120 },
-    { id: 4, src: '/img/toolkit/linkedin_eng_2025.webp', alt:'Linkedin', title:'Linkedin', width: 360, height: 90 }    
+    { id: 0, src: '/img/toolkit/banner_eng_2026.png', alt:'Banner web',  title:'Banner web', width: 360},
+    { id: 1, src: '/img/toolkit/keyvisual_eng_2026.png', alt:'KeyVisual', title:'KeyVisual', width: 360, height: 158 },
+    { id: 2, src: '/img/toolkit/facebook_eng_2026.png', alt:'Facebook', title:'Facebook', width: 360, height: 158 },
+    { id: 3, src: '/img/toolkit/twitter_eng_2026.png', alt:'Twitter', title:'Twitter', width: 360, height: 120 },
+    { id: 4, src: '/img/toolkit/linkedin_eng_2026.png', alt:'Linkedin', title:'Linkedin', width: 360, height: 90 }    
 ]
 
 const sponsors = [
