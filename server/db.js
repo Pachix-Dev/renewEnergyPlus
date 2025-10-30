@@ -286,6 +286,91 @@ export class RegisterModel {
       }
   }
   
+  static async create_user_replus_student ({
+    uuid,
+    name,
+    paternSurname,
+    maternSurname,
+    email,
+    phone,
+    typeRegister,
+    genre,
+    nacionality,
+    code_invitation,
+
+    company,
+    industry,
+    position,
+    area,
+    country,
+    municipality,
+    state,
+    city,
+    address,
+    colonia,
+    postalCode,
+    webPage,
+    phoneCompany,
+
+    eventKnowledge,
+    productInterest,
+    levelInfluence,
+    wannaBeExhibitor,
+    alreadyVisited,
+  }) {
+    const connection = await mysql.createConnection(config)
+    try {      
+      const [result] = await connection.query(
+        'INSERT INTO users_students_2026 (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited, user_ecomondo ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, ?)',
+        [
+          uuid,
+          name,
+          paternSurname,
+          maternSurname,
+          email,
+          phone,
+          typeRegister,
+          genre,
+          nacionality,
+          code_invitation,
+  
+          company,
+          industry,
+          position,
+          area,
+          country,
+          municipality,
+          state,
+          city,
+          address,
+          colonia,
+          postalCode,
+          webPage,
+          phoneCompany,
+  
+          eventKnowledge,
+          productInterest,
+          levelInfluence,
+          wannaBeExhibitor,
+          alreadyVisited,
+          "si"   
+        ]
+      )
+                              
+      return {
+        status: true,
+        insertId: result.insertId,
+        ...result,
+      }
+    }catch (error) {
+      console.log(error)
+      return hableError(error)          
+    }
+    finally {
+      await connection.end()
+    }
+  }
+
   static async save_order (user_id,items,total, paypal_id_order,paypal_id_transaction,id_code) {
     const connection = await mysql.createConnection(config)
     try {      

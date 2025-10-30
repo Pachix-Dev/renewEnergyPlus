@@ -6,6 +6,9 @@ import { v4 as uuidv4 } from 'uuid';
 import {RegisterModel} from './db.js';
 import {email_template} from './TemplateEmail.js';
 import {email_template_eng} from './TemplateEmailEng.js';
+import {email_template_student} from './TemplateEmail_student.js';
+import {email_template_eng_student} from './TemplateEmailEng_student.js';
+
 import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice, generatePDFInvoice_energynight } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
@@ -273,6 +276,40 @@ app.post('/free-register', async (req, res) => {
         const pdfAtch = await generatePDF_freePass(body, data.uuid );
 
         const mailResponse = await sendEmail(data, pdfAtch, data.uuid);   
+
+        return res.send({
+            invoice:  `${data.uuid}.pdf`,
+            ...mailResponse,
+        });                
+               
+    } catch (err) {
+        console.log(err);
+        res.status(500).send({
+            status: false,
+            message: 'hubo un error al procesar tu registro, por favor intenta mas tarde...'
+        });
+    }
+});
+
+app.post('/free-register-student-re-plus-mexico', async (req, res) => {
+    const { body } = req;
+
+    try {        
+        const data = { 
+            uuid: uuidv4(),            
+            ...body
+        };          
+        const userResponse = await RegisterModel.create_user({ ...data }); 
+        
+        if(!userResponse.status){
+            return  res.status(500).send({
+                ...userResponse
+            });
+        }                 
+
+        const pdfAtch = await generatePDF_freePass(body, data.uuid );
+
+        const mailResponse = await sendEmailStudent(data, pdfAtch, data.uuid);   
 
         return res.send({
             invoice:  `${data.uuid}.pdf`,
@@ -569,6 +606,38 @@ async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){
     try{     
                   
         const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });       
+        await resend.emails.send({
+            from: 'RE+ MEXICO 2026 <noreply@re-plus-mexico.com.mx>',
+            to: data.email,
+            subject: 'Confirmación de pre registro RE+ MEXICO 2026',
+            html: emailContent,
+            attachments: [
+                {
+                    filename: `${paypal_id_transaction}.pdf`,
+                    path: `https://re-plus-mexico.com.mx/invoices/${paypal_id_transaction}.pdf`,
+                    content_type: 'application/pdf'
+                },
+              ],           
+        })        
+
+        return {
+            status: true,
+            message: 'Gracias por registrarte, te hemos enviado un correo de confirmación a tu bandeja de entrada...'
+        };
+
+    } catch (err) {
+        console.log(err);
+        return {
+            status: false,
+            message: 'No pudimos enviarte el correo de confirmación de tu registro, por favor descarga tu registro en este pagina y presentalo hasta el dia del evento...'
+        };              
+    }    
+}
+
+async function sendEmailStudent(data, pdfAtch = null, paypal_id_transaction = null){    
+    try{     
+
+        const emailContent = data.currentLanguage === 'es' ?  await email_template_student({ ...data }) : await email_template_eng_student({ ...data });       
         await resend.emails.send({
             from: 'RE+ MEXICO 2026 <noreply@re-plus-mexico.com.mx>',
             to: data.email,

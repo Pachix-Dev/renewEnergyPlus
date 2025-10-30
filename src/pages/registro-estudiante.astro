@@ -1,0 +1,83 @@
+---
+import i18next, { changeLanguage, t } from 'i18next'
+import LayoutRegister from '../layouts/LayoutRegister.astro'
+import { RegisterFormStudent } from '../components/register/RegisterFormStudent'
+import MarqueeSponsors from '../components/register/MarqueeSponsors.astro'
+import { sponsors } from '../data/constanst_logos'
+
+changeLanguage('es')
+
+const registerTranslations = t('register', { returnObjects: true })
+const currentLanguage = i18next.language
+---
+
+<LayoutRegister title='RE+ MEXICO | Registro estudiante'>
+  <main class='py-5 w-full max-w-screen-xl container mx-auto px-4'>
+    <section class='mx-auto'>
+      <div
+        class='bg-gradient-to-r from-[#766EA6] to-[#565078] p-7 text-white relative rounded-2xl'
+      >
+        {/* Círculos decorativos de fondo */}
+        <div class='absolute inset-0 overflow-hidden'>
+          <div
+            class='absolute top-10 right-10 w-32 h-32 bg-white bg-opacity-10 rounded-full'
+          >
+          </div>
+          <div
+            class='absolute bottom-20 left-10 w-24 h-24 bg-white bg-opacity-5 rounded-full'
+          >
+          </div>
+          <div
+            class='absolute top-1/2 right-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full'
+          >
+          </div>
+        </div>
+
+        {/* Contenido Principal */}
+        <div
+          class='relative z-10 text-left flex justify-between items-center gap-5'
+        >
+          <img
+            src='/img/replusR.webp'
+            alt='RE+ Mexico Logo'
+            class='w-32 mb-8'
+          />
+          <div class='text-right'>
+            <p
+              class='font-[Tungsten-Medium] text-white text-3xl lg:text-5xl uppercase font-bold'
+            >
+              {t('home.slogan')}
+            </p>
+            <p
+              class='mt-5 font-[Tungsten-Medium] text-white text-3xl lg:text-5xl'
+            >
+              {t('home.event-date')}
+              <span class=''>| 2026</span>
+            </p>
+            <p class='mt-5 font-bold text-amber-400'>
+              {t('register.student_register')}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class='bg-[#FFFFFF]'>
+        <MarqueeSponsors partners={sponsors} isLeftToRight />
+      </div>
+      <h1 class='mt-5 font-extrabold text-2xl lg:text-5xl text-center'>
+        {t('register.register_student')}
+      </h1>
+      <RegisterFormStudent
+        translates={registerTranslations}
+        currentLanguage={currentLanguage}
+        client:only='react'
+      />
+    </section>
+  </main>
+</LayoutRegister>
+
+<style>
+  body {
+    background-color: white;
+    color: black;
+  }
+</style>

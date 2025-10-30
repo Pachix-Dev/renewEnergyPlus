@@ -386,6 +386,14 @@
         "button_1": "Get vip programme",
         "info_personal": "INFORMATION",
         "info_company": "COMPANY",
+        "info_escuela": "EDUCATIONAL INSTITUTE",
+        "nivel_educativo": "Educational level",
+        "institute": "Name of educational institution",
+        "placeholder_institute": "Enter the name of your educational institution or school",
+        "area_1": "DOCTORATE",
+        "area_2": "MASTER'S",
+        "area_3": "BACHELOR'S DEGREE / ENGINEERING",
+        "area_4": "SECONDARY SCHOOL",
         "finish": "FINISH",
         "info_survey": "SURVEY",
         "genre": "Genre",
@@ -518,7 +526,9 @@
         "position_1": "CEO / PRESIDENT",
         "position_2": "DIRECTOR / AREA COORDINATOR",
         "position_3": "CHIEF / AREA MANAGER",
-        "position_4": "OPERATING PERSONNEL"
+        "position_4": "OPERATING PERSONNEL",
+        "student_register": "* The free access for students is only valid on April 16 from 15:00 hrs. to 17:00 hrs.",
+        "register_student": "Register as student"
     },
     "thanks_page":{
         "title": "Thank you for registering",

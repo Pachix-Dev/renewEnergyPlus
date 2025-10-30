@@ -386,6 +386,14 @@
         "button_1": "Obtén el programa vip",
         "info_personal": "INFORMACIÓN",
         "info_company": "EMPRESA",
+        "info_escuela": "INSTITUTO EDUCATIVO",
+        "nivel_educativo": "Nivel educativo",
+        "institute": "Nombre de la institución educativa",
+        "placeholder_institute": "Ingresa el nombre de tu institución educativa o escuela",
+        "area_1": "DOCTORADO",
+        "area_2": "MAESTRÍA",
+        "area_3": "LICENCIATURA / INGENIERÍA",
+        "area_4": "EDUCACIÓN MEDIA",
         "finish": "FINALIZAR",
         "info_survey": "ENCUESTA",
         "genre": "Género",
@@ -518,7 +526,9 @@
         "position_1": "CEO / PRESIDENTE",
         "position_2": "DIRECTOR / COORDINADOR DE AREA",
         "position_3": "JEFE / GERENTE DE AREA",
-        "position_4": "PERSONAL OPERATIVO"        
+        "position_4": "PERSONAL OPERATIVO",
+        "student_register": "* El acceso gratuito para estudiantes solo es válido el 16 de abril a partir de las 15:00 hrs. a 17:00 hrs.",
+        "register_student": "Registro de estudiantes"
         
     },
     "thanks_page":{
