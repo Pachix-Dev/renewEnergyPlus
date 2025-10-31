@@ -1,15 +1,15 @@
 ---
-import i18next, { changeLanguage, t } from 'i18next'
-import LayoutRegister from '../layouts/LayoutRegister.astro'
-import { sponsors } from '../data/constanst_logos.js'
-import MarqueeSponsors from '../components/register/MarqueeSponsors.astro'
-import { PreValidation } from '../components/register/PreValidation'
+import i18next, { changeLanguage, t } from "i18next";
+import LayoutRegister from "../layouts/LayoutRegister.astro";
+import { sponsors } from "../data/constanst_logos.js";
+import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
+import { PreValidation } from "../components/register/PreValidation";
 
-changeLanguage('es')
+changeLanguage("es");
 
-const registerTranslations = t('register', { returnObjects: true })
-const currentLanguage = i18next.language
-const base = currentLanguage === 'es' ? '' : `/${currentLanguage}`
+const registerTranslations = t("register", { returnObjects: true });
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
 <LayoutRegister title='RE+ MEXICO | Registro'>

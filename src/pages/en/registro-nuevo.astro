@@ -13,7 +13,7 @@ const currentLanguage = i18next.language;
 
 <LayoutRegister title='RE+ MEXICO | Registro'>
   <main class='py-5 w-full max-w-screen-xl container mx-auto px-4'>
-    <section class='mx-auto'>
+    <section class='mx-auto relative'>
       <div
         class='bg-gradient-to-r from-[#766EA6] to-[#565078] p-7 text-white relative rounded-2xl'
       >
@@ -60,16 +60,17 @@ const currentLanguage = i18next.language;
       <div class='bg-[#FFFFFF]'>
         <MarqueeSponsors partners={sponsors} isLeftToRight />
       </div>
-    </section>
-    <h1 class='font-extrabold text-5xl'>
-      {t('register.title')}
-    </h1>
 
-    <RegisterForm
-      translates={registerTranslations}
-      currentLanguage={currentLanguage}
-      client:only='react'
-    />
+      <h1 class='font-extrabold text-5xl'>
+        {t('register.title')}
+      </h1>
+
+      <RegisterForm
+        translates={registerTranslations}
+        currentLanguage={currentLanguage}
+        client:only='react'
+      />
+    </section>
   </main>
 </LayoutRegister>
 

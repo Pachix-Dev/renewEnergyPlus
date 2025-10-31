@@ -642,7 +642,7 @@ async function generatePDF_freePass_student( body, uuid) {
     .moveDown(0.5)
     .text(body.company);
 
-    doc.image('img/footer_ecomondo_gafete_student.png', 0, 328, { width: 305 });
+    doc.image('img/footer_replus_student.jpg', 0, 328, { width: 305 });
     doc
     .font('Helvetica-Bold')
     .fontSize(17)

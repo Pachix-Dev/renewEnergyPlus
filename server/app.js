@@ -9,7 +9,7 @@ import {email_template_eng} from './TemplateEmailEng.js';
 import {email_template_student} from './TemplateEmail_student.js';
 import {email_template_eng_student} from './TemplateEmailEng_student.js';
 
-import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice, generatePDFInvoice_energynight } from './generatePdf.js';
+import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice, generatePDFInvoice_energynight, generatePDF_freePass_student } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 
@@ -299,7 +299,7 @@ app.post('/free-register-student-re-plus-mexico', async (req, res) => {
             uuid: uuidv4(),            
             ...body
         };          
-        const userResponse = await RegisterModel.create_user({ ...data }); 
+        const userResponse = await RegisterModel.create_user_replus_student({ ...data }); 
         
         if(!userResponse.status){
             return  res.status(500).send({
@@ -307,7 +307,7 @@ app.post('/free-register-student-re-plus-mexico', async (req, res) => {
             });
         }                 
 
-        const pdfAtch = await generatePDF_freePass(body, data.uuid );
+        const pdfAtch = await generatePDF_freePass_student(body, data.uuid );
 
         const mailResponse = await sendEmailStudent(data, pdfAtch, data.uuid);   
 

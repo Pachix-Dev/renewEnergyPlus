@@ -1,0 +1,48 @@
+---
+import i18next, { changeLanguage, t } from "i18next";
+import Layout from "../layouts/Layout.astro";
+import Confettti from "../components/shared/Confetti";
+import { Redirect } from "../components/shared/Redirect.jsx";
+import { DonwloadAccess } from "../components/register/DonwloadAccess";
+import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
+import { sponsors } from "../data/constanst_logos";
+
+changeLanguage("es");
+
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
+---
+
+<Layout title='RE+ MEXICO | Gracias por registrarte'>
+  <Redirect client:only='react' />
+  <section class='my-10 max-w-screen-lg mx-auto'>
+    <MarqueeSponsors partners={sponsors} isLeftToRight />
+  </section>
+  <div class='p-5 lg:p-20'>
+    <div
+      class='px-4 ecomondo-bloq-1 w-full h-full text-color flex flex-col items-center justify-center relative'
+    >
+      <Confettti client:visible />
+
+      <div class='grid md:flex gap-6 place-items-center w-full justify-center'>
+        <div class='grid place-items-center place-content-center w-full'>
+          <div
+            class=`box uppercase text-center lg:text-6xl text-5xl after:content-['${t('thanks_page.title2')}'`
+            id='box1'
+          >
+            {t('thanks_page.title')}
+          </div>
+
+          <div
+            class='mt-10 font-bold text-center text-xl'
+            set:html={t('thanks_page.description')}
+          />
+          <DonwloadAccess
+            client:only='react'
+            text={t('thanks_page.download_pass')}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

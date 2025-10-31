@@ -1,11 +1,11 @@
 ---
 import i18next, { changeLanguage, t } from "i18next";
-import LayoutRegister from "../layouts/LayoutRegister.astro";
-import { RegisterFormStudent } from "../components/register/RegisterFormStudent";
-import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
-import { sponsors } from "../data/constanst_logos";
+import LayoutRegister from "../../layouts/LayoutRegister.astro";
+import { RegisterFormStudent } from "../../components/register/RegisterFormStudent";
+import MarqueeSponsors from "../../components/register/MarqueeSponsors.astro";
+import { sponsors } from "../../data/constanst_logos";
 
-changeLanguage("es");
+changeLanguage("en");
 
 const registerTranslations = t("register", { returnObjects: true });
 const currentLanguage = i18next.language;

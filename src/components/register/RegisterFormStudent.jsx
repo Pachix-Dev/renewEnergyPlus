@@ -142,135 +142,6 @@ export function RegisterFormStudent({ translates, currentLanguage }) {
   const [message, setMessage] = useState('')
   const [processing, setProcessing] = useState(false)
 
-  const options = [
-    {
-      label:
-        'AMRRE (Asociación Mexicana de Recicladores de Residuos Electrónicos)',
-      value:
-        'AMRRE (Asociación Mexicana de Recicladores de Residuos Electrónicos)',
-    },
-    {
-      label: 'ANES (Asociación Nacional de Energía Solar)',
-      value: 'ANES (Asociación Nacional de Energía Solar)',
-    },
-    {
-      label: 'HHM (Holland House México)',
-      value: 'HHM (Holland House México)',
-    },
-    {
-      label: 'PMRJ (Profesionales en Manejo de Residuos Jalisco)',
-      value: 'PMRJ (Profesionales en Manejo de Residuos Jalisco)',
-    },
-    { label: 'EGB (El Gran Bajio)', value: 'EGB (El Gran Bajio)' },
-    {
-      label:
-        'IER-UNAM (Instituto de Energías Renovables, Universidad Nacional Autónoma de México)',
-      value:
-        'IER-UNAM (Instituto de Energías Renovables, Universidad Nacional Autónoma de México)',
-    },
-    {
-      label: 'AMH (Asociación Mexicana de Hidráulica)',
-      value: 'AMH (Asociación Mexicana de Hidráulica)',
-    },
-    {
-      label:
-        'ALADYR (Asociación Latinoamericana de Desalación y Reúso de Agua)',
-      value:
-        'ALADYR (Asociación Latinoamericana de Desalación y Reúso de Agua)',
-    },
-    {
-      label: 'CNBiogás (Consejo Nacional de Biogás)',
-      value: 'CNBiogás (Consejo Nacional de Biogás)',
-    },
-    {
-      label: 'AExC (Alianza Empresarial por el Clima)',
-      value: 'AExC (Alianza Empresarial por el Clima)',
-    },
-    {
-      label: 'ARS (Asociación para el Estudio de Residuos Sólidos)',
-      value: 'ARS (Asociación para el Estudio de Residuos Sólidos)',
-    },
-    {
-      label:
-        'ONUDI - UNIDO (Organización de las Naciones Unidas para el desarrollo Industrial)',
-      value:
-        'ONUDI - UNIDO (Organización de las Naciones Unidas para el desarrollo Industrial)',
-    },
-    {
-      label:
-        'COMCE (Consejo Empresarial Mexicano de Comercio Exterior, Inversión y Tecnología)',
-      value:
-        'COMCE (Consejo Empresarial Mexicano de Comercio Exterior, Inversión y Tecnología)',
-    },
-    {
-      label: 'ANEAS (Asociación Nacional de Entidades de Agua y Saneamiento)',
-      value: 'ANEAS (Asociación Nacional de Entidades de Agua y Saneamiento)',
-    },
-    {
-      label:
-        'CIDETT (Centro de Innovación, Desarrollo Empresarial y Transferencia de Tecnología)',
-      value:
-        'CIDETT (Centro de Innovación, Desarrollo Empresarial y Transferencia de Tecnología)',
-    },
-    {
-      label: 'AMB (Asociación Mexicana de Bioplásticos)',
-      value: 'AMB (Asociación Mexicana de Bioplásticos)',
-    },
-    {
-      label:
-        'CANACINTRA León (Cámara Nacional de la industria de Transformación)',
-      value:
-        'CANACINTRA León (Cámara Nacional de la industria de Transformación)',
-    },
-    {
-      label:
-        'CCP (Clúster de la Industrial del Plástico y Economía Circular del Estado de Puebla)',
-      value:
-        'CCP (Clúster de la Industrial del Plástico y Economía Circular del Estado de Puebla)',
-    },
-    {
-      label: 'COMURE (Comunidad de Mujeres en el Reciclaje)',
-      value: 'COMURE (Comunidad de Mujeres en el Reciclaje)',
-    },
-    {
-      label: 'CICEJ (Colegio de Ingenieros Civiles del Estado de Jalisco)',
-      value: 'CICEJ (Colegio de Ingenieros Civiles del Estado de Jalisco)',
-    },
-    {
-      label: 'H2 México (Asociación Mexicana de Hidrógeno)',
-      value: 'H2 México (Asociación Mexicana de Hidrógeno)',
-    },
-    {
-      label:
-        'Coparmex, Sustainability Committee (Confederación Patronal de la República Mexicana)',
-      value:
-        'Coparmex, Sustainability Committee (Confederación Patronal de la República Mexicana)',
-    },
-    { label: 'COGENERA MÉXICO', value: 'COGENERA MÉXICO' },
-    {
-      label: 'CANCHAM (Cámara de Comercio de Canadá en México)',
-      value: 'CANCHAM (Cámara de Comercio de Canadá en México)',
-    },
-    {
-      label: 'Embajada Británica en México',
-      value: 'Embajada Británica en México',
-    },
-    {
-      label: 'SMAAC (Sociedad Mexicana De Aguas)',
-      value: 'SMAAC (Sociedad Mexicana De Aguas)',
-    },
-    {
-      label:
-        'IMEI - BOMA (Asociación Mexicana del Edificio Inteligente y Sustentable)',
-      value:
-        'IMEI - BOMA (Asociación Mexicana del Edificio Inteligente y Sustentable)',
-    },
-    {
-      label: 'AMEE (Asociación Mexicana de Envase y Embalaje)',
-      value: 'AMEE (Asociación Mexicana de Envase y Embalaje)',
-    },
-  ]
-
   const urlbase = import.meta.env.DEV
     ? 'http://localhost:3010/'
     : 'https://re-plus-mexico.com.mx/server/'
@@ -322,8 +193,8 @@ export function RegisterFormStudent({ translates, currentLanguage }) {
       setCompleteRegister(true)
       setInvoiceDownToLoad(orderData?.invoice)
       currentLanguage === 'es'
-        ? (window.location.href = '/gracias-por-registrarte')
-        : (window.location.href = '/en/gracias-por-registrarte')
+        ? (window.location.href = '/gracias-por-registrarte-estudiante')
+        : (window.location.href = '/en/gracias-por-registrarte-estudiante')
     } else {
       setProcessing(false)
       setMessage(orderData?.message)
