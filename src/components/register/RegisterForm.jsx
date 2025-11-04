@@ -99,7 +99,16 @@ export function RegisterForm({ translates, currentLanguage }) {
   const urlcp = 'https://industrialtransformation.mx/server/'
 
   const handlePostalCode = async (e) => {
+    // Verificar que hay un país seleccionado antes de procesar
+    if (!country) {
+      setMessagePostalCode(
+        translates.select_country_first || 'Selecciona un país primero'
+      )
+      return
+    }
+
     setPostalCode(e)
+
     if (e.length === 5 && country === 'Mexico') {
       const res = await fetch(urlcp + `get-postalcode/${e}`)
       const data = await res.json()
@@ -124,6 +133,7 @@ export function RegisterForm({ translates, currentLanguage }) {
         setColonia('')
       }
     }
+
     if (e.length > 5 && country === 'Mexico') {
       setMessagePostalCode(translates.no_postal_code_valid)
       setMunicipality('')
@@ -131,6 +141,11 @@ export function RegisterForm({ translates, currentLanguage }) {
       setCity('')
       setColonias([])
       setColonia('')
+    }
+
+    // Para otros países, simplemente almacenar el código postal
+    if (country && country !== 'Mexico') {
+      setMessagePostalCode('')
     }
   }
 
@@ -895,7 +910,19 @@ export function RegisterForm({ translates, currentLanguage }) {
               <select
                 {...register('country', {
                   required: `${translates.requiered}`,
-                  onChange: (e) => setCountry(e.target.value),
+                  onChange: (e) => {
+                    setCountry(e.target.value)
+                    // Limpiar datos relacionados con código postal cuando cambie el país
+                    setPostalCode('')
+                    setMunicipality('')
+                    setState('')
+                    setCity('')
+                    setColonias([])
+                    setColonia('')
+                    setMessagePostalCode('')
+                    // Limpiar el valor en el formulario
+                    setValue('postalCode', '')
+                  },
                 })}
                 defaultValue={country}
                 className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-black *:text-black'
@@ -913,6 +940,7 @@ export function RegisterForm({ translates, currentLanguage }) {
                 </p>
               )}
             </div>
+
             <div>
               <p className='text-black'>
                 {translates.postal_code} <span className='text-red-600'>*</span>
@@ -922,14 +950,30 @@ export function RegisterForm({ translates, currentLanguage }) {
                   type='text'
                   {...register('postalCode', {
                     required: `${translates.requiered}`,
-                    onChange: (e) => handlePostalCode(e.target.value),
+                    onChange: (e) => {
+                      // Solo permitir cambios si hay un país seleccionado
+                      if (country) {
+                        handlePostalCode(e.target.value)
+                      }
+                    },
                   })}
                   name='postalCode'
                   id='postalCode'
-                  className='w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm shadow-sm'
-                  placeholder={translates.placeholder_postal_code}
+                  className={`w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm transition-all duration-200 ${
+                    !country
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'bg-transparent'
+                  }`}
+                  placeholder={
+                    !country
+                      ? translates.select_country_first ||
+                        'Selecciona un país primero'
+                      : translates.placeholder_postal_code
+                  }
                   autoComplete='postalCode'
                   defaultValue={postalCode}
+                  disabled={!country}
+                  readOnly={!country}
                 />
                 <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
                   <svg
@@ -938,7 +982,9 @@ export function RegisterForm({ translates, currentLanguage }) {
                     viewBox='0 0 24 24'
                     strokeWidth={1.5}
                     stroke='currentColor'
-                    className='h-4 w-4 text-gray-400'
+                    className={`h-4 w-4 transition-colors duration-200 ${
+                      !country ? 'text-gray-300' : 'text-gray-400'
+                    }`}
                   >
                     <path
                       strokeLinecap='round'
@@ -953,6 +999,27 @@ export function RegisterForm({ translates, currentLanguage }) {
                   </svg>
                 </span>
               </div>
+
+              {/* Mensaje de advertencia cuando no hay país seleccionado */}
+              {!country && (
+                <p className='text-amber-600 font-light text-sm mt-1 flex items-center gap-1'>
+                  <svg
+                    className='w-4 h-4'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z'
+                    />
+                  </svg>
+                  {translates.select_country_first ||
+                    'Por favor selecciona un país primero'}
+                </p>
+              )}
 
               <p className='text-red-600 font-light'>{messagePostalCode}</p>
 

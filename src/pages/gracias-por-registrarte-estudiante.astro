@@ -3,7 +3,7 @@ import i18next, { changeLanguage, t } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import Confettti from "../components/shared/Confetti";
 import { Redirect } from "../components/shared/Redirect.jsx";
-import { DonwloadAccess } from "../components/register/DonwloadAccess";
+import { DonwloadAccess_student } from "../components/register/DonwloadAccess_student";
 import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
 import { sponsors } from "../data/constanst_logos";
 
@@ -37,7 +37,7 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
             class='mt-10 font-bold text-center text-xl'
             set:html={t('thanks_page.description')}
           />
-          <DonwloadAccess
+          <DonwloadAccess_student
             client:only='react'
             text={t('thanks_page.download_pass')}
           />
