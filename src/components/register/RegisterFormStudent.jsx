@@ -1,4 +1,4 @@
-import { useRegisterForm } from '../../store/register-form'
+import { useRegisterStudent } from '../../store/register-student'
 import { useForm } from 'react-hook-form'
 import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
 import { MultiSelect } from 'react-multi-select-component'
@@ -71,7 +71,7 @@ export function RegisterFormStudent({ translates, currentLanguage }) {
     setInvoiceDownToLoad,
 
     clear,
-  } = useRegisterForm()
+  } = useRegisterStudent()
 
   const {
     register,
