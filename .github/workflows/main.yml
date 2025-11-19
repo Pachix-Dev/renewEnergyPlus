@@ -5,7 +5,7 @@ on:
   pull_request:
     branches:
       - main
-name: 🚀 Deploy website on push main branch
+name: 🚀 Deploy website on push main branchs
 jobs:
   web-deploy:
     name: 🎉 Deploy
