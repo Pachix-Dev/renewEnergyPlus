@@ -80,7 +80,16 @@ import Footer from '../components/Footer.astro'
         'script',
         'https://connect.facebook.net/en_US/fbevents.js'
       )
-      fbq('init', '1047851480332189')
+      fbq('init', '1047851480332189', {
+        em: '', // email - será completado por PayPal
+        ph: '', // teléfono - será completado por PayPal
+        fn: '', // first name - será completado por PayPal
+        ln: '', // last name - será completado por PayPal
+        ct: '', // city - será completado por PayPal
+        st: '', // state - será completado por PayPal
+        zp: '', // zip code - será completado por PayPal
+        country: 'MX', // país fijo
+      })
       fbq('track', 'PageView')
       fbq('track', 'Purchase', {
         value: 0.0,
