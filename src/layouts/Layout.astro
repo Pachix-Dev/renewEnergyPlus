@@ -53,19 +53,18 @@ const canonicalURL = new URL(
     />
     <link rel='apple-touch-icon' href='/img/favicon.webp' />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Facebook Meta Tags -->
+    <meta property='og:url' content='https://re-plus-mexico.com.mx/' />
     <meta property='og:type' content='website' />
-    <meta property='og:url' content={url} />
-    <meta property='og:title' content={title} />
-    <meta property='og:description' content={description} />
-    <meta property='og:image' content={image} />
-    <meta property='og:image:width' content='1200' />
-    <meta property='og:image:height' content='630' />
+    <meta property='og:title' content='RE+ MEXICO' />
     <meta
-      property='og:locale'
-      content={i18next.language === 'es' ? 'es_MX' : 'en_US'}
+      property='og:description'
+      content='La feria líder en energías renovables. 14–16 abril 2026, Expo Guadalajara.'
     />
-    <meta property='og:site_name' content='RE+ MEXICO' />
+    <meta
+      property='og:image'
+      content='https://re-plus-mexico.com.mx/img/logo_replus_blue.png'
+    />
 
     <!-- Twitter Card -->
     <meta name='twitter:card' content='summary_large_image' />
