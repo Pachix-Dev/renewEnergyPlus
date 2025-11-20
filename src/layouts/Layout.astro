@@ -1,5 +1,9 @@
 ---
-// filepath: c:\Users\FABIAN YAPURA\Documents\dev\renewEnergyPlus\src\layouts\Layout.astro
+import Menu from '../components/Menu.astro'
+import i18next, { t } from 'i18next'
+import { HeadHrefLangs } from 'astro-i18next/components'
+import Footer from '../components/Footer.astro'
+
 interface Props {
   title: string
   description?: string
@@ -13,11 +17,6 @@ const {
   image = 'https://re-plus-mexico.com.mx/img/logo_replus_blue.png',
   url = 'https://re-plus-mexico.com.mx/',
 } = Astro.props
-
-import Menu from '../components/Menu.astro'
-import i18next, { t } from 'i18next'
-import { HeadHrefLangs } from 'astro-i18next/components'
-import Footer from '../components/Footer.astro'
 
 // Canonical URL basado en la página actual
 const canonicalURL = new URL(
