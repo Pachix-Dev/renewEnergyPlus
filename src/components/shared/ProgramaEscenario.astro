@@ -7,8 +7,11 @@ interface Props {
 }
 
 const { escenario } = Astro.props
-const API_URL =
-  import.meta.env.PUBLIC_API_URL || 'http://localhost:3000/ponentes/'
+
+const API_URL = import.meta.env.DEV
+  ? 'http://localhost:3000/ponentes/'
+  : 'https://dashboard.igeco.mx/ponentes/'
+
 const currentLanguage = i18next.language || 'es'
 
 const typeColors = {
