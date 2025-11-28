@@ -1,33 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import i18next, { t, changeLanguage } from "i18next";
-import { sponsors } from "../data/constanst_logos.js";
-import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
-import ProgramaEscenario from "../components/shared/ProgramaEscenario.astro";
-import { ProgramaEscenarioClient } from "../components/shared/ProgramaEscenarioClient";
+import Layout from '../layouts/Layout.astro'
+import i18next, { t, changeLanguage } from 'i18next'
+import { sponsors } from '../data/constanst_logos.js'
+import MarqueeSponsors from '../components/register/MarqueeSponsors.astro'
+import ProgramaEscenario from '../components/shared/ProgramaEscenario.astro'
+import { ProgramaEscenarioClient } from '../components/shared/ProgramaEscenarioClient'
 
-changeLanguage("es");
+changeLanguage('es')
 
 const API_URL = import.meta.env.DEV
-    ? "http://localhost:3000"
-    : "https://dashboard.igeco.mx";
-let escenarios: Escenario[] = [];
-try {
-    const response = await fetch(`${API_URL}/api/programa/completo`);
-    if (response.ok) {
-        const json = await response.json();
-        escenarios = Array.isArray(json?.data) ? json.data : [];
-    }
-}
-catch (err) {
-    escenarios = [];
-}
-// Define el tipo para escenario
-type Escenario = {
-    [key: string]: any;
-};
-const translate = t("program", { returnObjects: true });
-const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+  ? 'http://localhost:3000'
+  : 'https://dashboard.igeco.mx'
+
+const base = i18next.language === 'es' ? '' : `/${i18next.language}`
 ---
 
 <Layout title='RE+ MEXICO | programa premium'>

@@ -5,7 +5,9 @@ import type { Ponente } from './PonenteModal'
 interface EscenarioDiaConferencia {
   id: number
   title: string
+  title_en?: string
   description?: string
+  description_en?: string
   start_time: string
   end_time: string
   type?: string
@@ -83,7 +85,8 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
       if(!res.ok) throw new Error(`HTTP ${res.status}`)
       const json = await res.json()
       const data = Array.isArray(json?.data) ? json.data : []
-      setEscenarios(data)
+      //setEscenarios(data)
+      setEscenarios(null)
     } catch(e:any){
       setError(e.message || 'Error')
     } finally {
@@ -122,7 +125,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
     )
   }
   if(!escenarios || escenarios.length === 0){
-    return <div className='container mx-auto px-4 py-16 text-center text-white/70'>{language==='es'?'Programa aún no disponible.':'Program not available yet.'}</div>
+    return <div className='container mx-auto px-4 py-16 text-center text-black text-2xl font-bold'>{language==='es'?'Programa aún no disponible...':'Program not available yet...'}</div>
   }
 
   const escenario = escenarios[Math.min(escenarioIndex, escenarios.length - 1)]
@@ -224,15 +227,15 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                                         <svg className='w-4 h-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                                           <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M3 7h18M3 12h18M3 17h18' />
                                         </svg>
-                                        <span>{language==='es'?'Sala':'Room'} {conf.room}</span>
+                                        <span>{conf.room}</span>
                                       </span>
                                     )}
                                   </div>
                                 </div>
                                 <div className='p-6 space-y-4'>
-                                  <h4 className='text-xl sm:text-2xl font-bold leading-tight text-white'>{conf.title}</h4>
+                                  <h4 className='text-xl sm:text-2xl font-bold leading-tight text-white'>{language==='es'? conf.title : conf.title_en}</h4>
                                   {conf.description && (
-                                    <p className='text-white/80 leading-relaxed'>{conf.description}</p>
+                                    <p className='text-white/80 leading-relaxed'>{language==='es'? conf.description : conf.description_en}</p>
                                   )}
                                   {ponentes.length > 0 && (
                                     <div className='border-t border-white/10 pt-4 space-y-3'>
