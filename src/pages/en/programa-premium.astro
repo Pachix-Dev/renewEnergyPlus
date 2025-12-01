@@ -11,22 +11,6 @@ changeLanguage("en");
 const API_URL = import.meta.env.DEV
     ? "http://localhost:3000"
     : "https://dashboard.igeco.mx";
-let escenarios: Escenario[] = [];
-try {
-    const response = await fetch(`${API_URL}/api/programa/completo`);
-    if (response.ok) {
-        const json = await response.json();
-        escenarios = Array.isArray(json?.data) ? json.data : [];
-    }
-}
-catch (err) {
-    escenarios = [];
-}
-// Define el tipo para escenario
-type Escenario = {
-    [key: string]: any;
-};
-const translate = t("program", { returnObjects: true });
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 ---
 
