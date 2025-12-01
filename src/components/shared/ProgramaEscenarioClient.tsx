@@ -152,7 +152,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                 <p className='text-lg text-white/80 leading-relaxed'>{escenario.description}</p>
               )}
             </div>
-            {(escenario.location || escenario.capacity) && (
+            {(escenario.location) && (
               <div className='flex flex-col gap-3 md:items-end text-sm text-white/80'>
                 {escenario.location && (
                   <div className='flex items-center gap-3 bg-white/10 border border-white/10 backdrop-blur-sm px-5 py-3 rounded-xl shadow-md'>
@@ -282,13 +282,13 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                                       </div>
                                     </div>
                                   )}
-                                  {tags.length > 0 && (
+                                  {/*tags.length > 0 && (
                                     <div className='flex flex-wrap gap-2'>
                                       {tags.map(tag => (
                                         <span key={tag} className='px-3 py-1 bg-white/10 border border-white/10 text-white/80 text-xs font-semibold rounded-full'>#{tag}</span>
                                       ))}
                                     </div>
-                                  )}
+                                  )*/}
                                 </div>
                               </div>
                             </article>
