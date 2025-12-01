@@ -387,6 +387,16 @@ app.get('/get-user-by-email', async (req, res) => {
     }
 });
 
+app.get('/get-badge-to-print', async (req, res) => {
+    const { email } = req.query;
+    const user = await RegisterModel.get_raw_user_by_email(email);
+    if (user) {
+        return res.status(200).send(user);
+    } else {
+        return res.status(404).send({ message: 'No se encontró el usuario' });
+    }
+});
+
 app.use(express.static('public'));
 
 app.get('/generate-pdf', async (req, res) => {

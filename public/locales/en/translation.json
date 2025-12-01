@@ -199,6 +199,24 @@
         "testimonial": "TESTIMONIALS",
         "text_1": "“What we have enjoyed the most is the brand exposure we have gained, allowing us to connect with clients and showcase our full product portfolio, which has been highly valuable.”",
         "text_2": "Product Engineer, Huawei Technologies de México",
+        "register": {
+            "reprint_hint": "Can't find your badge? Look it up by email.",
+            "reprint_button": "Reprint badge"
+        },
+        "reprint": {
+            "title": "Reprint your badge",
+            "description": "Enter the email you registered with and we will open your PDF.",
+            "email_label": "Email",
+            "submit": "Show badge",
+            "loading": "Searching…",
+            "success": "Badge ready. Opening your PDF…",
+            "open_again": "Open PDF again",
+            "error_invalid": "Enter a valid email address.",
+            "error_service": "The service could not be consulted",
+            "error_generic": "An error occurred. Please try again.",
+            "not_found": "User not found",
+            "tip": "Tip: check your Downloads folder if the browser opens the PDF directly."
+        },
         "text_3": "“This is the future of solar energy, and this trade fair serves as a driving force for the industry.”",
         "text_4": "General Manager of Tiga Power",
         "text_5": "“I greatly enjoy attending these conferences in different countries. This is my third time at RE+ Mexico, and I am pleased to see how much it has grown. I find both the exhibitors and the conferences to be highly valuable.”",

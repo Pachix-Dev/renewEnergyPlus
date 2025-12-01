@@ -199,6 +199,24 @@
         "testimonial": "TESTIMONIALES",
         "text_1": "“Lo que más nos ha gustado es la proyección que tenemos con la marca, poder tener esa exposición con los clientes y que puedan conocernos y toda nuestra cartera de productos es bastante bueno”.",
         "text_2": "Ingeniero de Producto de Huawei Technologies de México",
+        "register": {
+            "reprint_hint": "¿No encuentras tu gafete? Búscalo aquí por correo.",
+            "reprint_button": "Reimprimir gafete"
+        },
+        "reprint": {
+            "title": "Reimprime tu gafete",
+            "description": "Ingresa el correo con el que te registraste y abriremos tu PDF.",
+            "email_label": "Correo electrónico",
+            "submit": "Mostrar gafete",
+            "loading": "Buscando…",
+            "success": "Gafete listo. Abriendo tu PDF…",
+            "open_again": "Abrir PDF nuevamente",
+            "error_invalid": "Ingresa un correo electrónico válido.",
+            "error_service": "No se pudo consultar el servicio",
+            "error_generic": "Ocurrió un error. Intenta nuevamente.",
+            "not_found": "No se encontró el usuario",
+            "tip": "Consejo: revisa tu carpeta de Descargas si el navegador abre el PDF directamente."
+        },
         "text_3": "“Este es el futuro de la energía solar y esta feria es un impulso para esta industria”.",
         "text_4": "Director General de Tiga Power",
         "text_5": "“Disfruto mucho asistir a estas conferencias en diferentes países. Esta es la tercera vez que vengo a RE+ México y me agrada ver cuánto ha crecido. Encuentro expositores y conferencias de gran valor”.",

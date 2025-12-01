@@ -627,4 +627,22 @@ export class RegisterModel {
 			await connection.end()
 		}
 	}
+
+  // obtener ultimo registro por email sin validaciones de pase
+  static async get_raw_user_by_email(email) {
+    const connection = await mysql.createConnection(config)
+    try {
+      const [users] = await connection.query(
+        'SELECT * FROM users_2026 WHERE email = ? ORDER BY id DESC LIMIT 1',
+        [email]
+      )
+      if (users.length === 0) {
+        return { status: false, error: 'No se encontró el usuario' }
+      }
+      return { status: true, user: users[0] }
+    } finally {
+      await connection.end()
+    }
+  }
+  
 }
