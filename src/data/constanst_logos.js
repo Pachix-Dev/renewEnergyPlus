@@ -649,6 +649,11 @@ const toolkit_en = [
 ]
 
 const sponsors = [
+    {
+        src: '/img/sponsors/Huawei.webp',
+        alt: 'Huawei',
+        width: 250,
+    },
 	{
 		src:'/img/quartux_nuevo.png',
     	alt: 'quartux',
