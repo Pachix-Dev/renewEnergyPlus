@@ -252,4 +252,42 @@ const hotels = [
   }*/
 ]
 
-export { hotels }
+const restaurants = [
+  {
+    src: '/cocina_tres16.webp',
+    name: 'Cocina Tres16',
+    description_es: 'Ubicado a menos de 5 minutos caminando de la Expo, es una opción conveniente para desayunar o almorzar, abriendo de 8 AM a 5 PM todos los días.',
+    description_en: 'Located less than a 5-minute walk from the Expo, it is a convenient option for breakfast or lunch, open from 8 AM to 5 PM every day.',
+    link: 'https://www.google.com/search?q=Cocina+Tres16&sca_esv=a63806a710cbffd6&sxsrf=AE3TifMQqH-DSF-toRByYOhb0H7fituWnQ%3A1764355692071&ei=bO4pafiDBP7NkPIPprzpqA0&ved=2ahUKEwiTyLzjxZWRAxX3l-4BHcOJDv8QgK4QegQIAxAB&uact=5&oq=que+hacer+en+guadalajara+gastronomicamente+cerca+de+expo+gdl&gs_lp=Egxnd3Mtd2l6LXNlcnAiPHF1ZSBoYWNlciBlbiBndWFkYWxhamFyYSBnYXN0cm9ub21pY2FtZW50ZSBjZXJjYSBkZSBleHBvIGdkbDIFECEYoAFIhVxQtBZYrFhwCHgBkAEAmAHxAqAB4jOqAQgwLjI5LjYuMrgBA8gBAPgBAZgCLaACqzbCAgoQABiwAxjWBBhHwgIFEAAYgATCAgoQABiABBgUGIcCwgIJEAAYFhjJAxgewgIGEAAYFhgewgIIEAAYgAQYogTCAgsQABiABBiSAxiKBcICBBAjGCfCAg0QABiABBixAxgUGIcCwgIFEAAY7wXCAgUQIRiSA8ICBBAhGBWYAwCIBgGQBgiSBwg4LjI4LjYuM6AHq9kBsgcIMC4yOC42LjO4B_I1wgcIMC42LjM3LjLIB9sB&sclient=gws-wiz-serp&mstk=AUtExfC4jmUvjHGe_XO5eQGgvZjB0SZRWyFvYyjCOLqOzPQ3e0nW-wil3WvipfjxNgvM5YfuEGLGCeL6aRZRuWeG4KMXlbZRVBZX131YLFnE4DodfN2LBsvxiCdkdaCWtv5Tdqfsx0tqSXd0xkot1IRJY6nEYgPF7cA7lRhKJushjMB7MWY&csui=3'
+  },
+  {
+    src: '/palo_alto.webp',
+    name: 'Palo Alto Cocina Italoamericana',
+    description_es: 'Restaurante de comida mexicana contemporánea ubicado dentro del hotel Barceló Guadalajara.',
+    description_en: 'Contemporary Mexican cuisine restaurant located inside the Barceló Guadalajara hotel.',
+    link: 'https://share.google/PFAuj5yQkvZLMGaHv'
+  },
+  {
+    src: '/isabela_gdl.webp',
+    name: 'Isabela - GDL',
+    description_es: 'Otra opción bien calificada y cerca de la Expo.',
+    description_en: 'Another well-rated option near the Expo.',
+    link: 'https://share.google/s2DZFm7DV331bZKwI'
+  },
+  {
+    src: '/Losteria.webp',
+    name: "L'Osteria de Il Duomo",
+    description_es: 'Si buscas comida italiana, este es un restaurante bien valorado en la zona',
+    description_en: 'If you are looking for Italian food, this is a highly rated restaurant in the area.',
+    link: 'https://maps.app.goo.gl/QsfZk9hEm1jYcGvE9'
+  },
+  {
+    src: '/plaza_perla.webp',
+    name: 'Centro Comercial La Perla',
+    description_es: 'La Perla es una plaza moderna en Zapopan con más de 200 tiendas, áreas verdes y espacios de convivencia. Ideal para comprar, pasear y disfrutar actividades al aire libre en un ambiente familiar.',
+    description_en: 'La Perla is a modern mall in Zapopan with over 200 stores, green areas, and social spaces. It is ideal for shopping, strolling, and enjoying outdoor activities in a family-friendly environment.',
+    link: 'https://laperla.com.mx/'
+  }
+]
+
+export { hotels, restaurants };

@@ -1,6 +1,7 @@
 ---
-import { hotels } from '../../data/constans_hotels'
+import { hotels } from '../../data/directorio_turistico'
 import { t } from 'i18next'
+import Restaurants from './Restaurants.astro'
 ---
 
 <section class='mt-14 container mx-auto hotels'>
@@ -159,6 +160,7 @@ import { t } from 'i18next'
       </div>
       <p class='text-base md:text-lg text-gray-700 leading-relaxed' set:html={t('hotels.restaurants_desc')} />
     </div>
+    <Restaurants />
 
     <!-- Entretenimiento -->
     <div class='bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg border border-purple-100 hover:shadow-xl transition-shadow duration-300'>
