@@ -372,6 +372,7 @@
         "message_button": "Send message"
     },
     "hotels":{
+        "cede": "venue cedes",
         "cedera": "Headquarters",
         "text_description": "Expo Guadalajara is the largest convention center in Mexico and Latin America, with more than 1,230,000 square feet of modern space for international trade shows, conferences, and exhibitions.<br /><br /> Located in the heart of Guadalajara, it offers first-class connectivity and is surrounded by hotels, restaurants, and services that make it the ideal venue for world-class events.",
         "title": "Special Hotel Rates",
