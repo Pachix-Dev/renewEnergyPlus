@@ -256,7 +256,7 @@ const restaurants = [
   {
     src: '/cocina_tres16.webp',
     name: 'Cocina Tres16',
-    description_es: 'Ubicado a menos de 5 minutos caminando de la Expo, es una opción conveniente para desayunar o almorzar, abriendo de 8 AM a 5 PM todos los días.',
+    description_es: 'Ubicado a menos de 5 minutos de la Expo, es una opción conveniente para desayunar o almorzar, abriendo de 8 AM a 5 PM todos los días.',
     description_en: 'Located less than a 5-minute walk from the Expo, it is a convenient option for breakfast or lunch, open from 8 AM to 5 PM every day.',
     link: 'https://www.google.com/search?q=Cocina+Tres16&sca_esv=a63806a710cbffd6&sxsrf=AE3TifMQqH-DSF-toRByYOhb0H7fituWnQ%3A1764355692071&ei=bO4pafiDBP7NkPIPprzpqA0&ved=2ahUKEwiTyLzjxZWRAxX3l-4BHcOJDv8QgK4QegQIAxAB&uact=5&oq=que+hacer+en+guadalajara+gastronomicamente+cerca+de+expo+gdl&gs_lp=Egxnd3Mtd2l6LXNlcnAiPHF1ZSBoYWNlciBlbiBndWFkYWxhamFyYSBnYXN0cm9ub21pY2FtZW50ZSBjZXJjYSBkZSBleHBvIGdkbDIFECEYoAFIhVxQtBZYrFhwCHgBkAEAmAHxAqAB4jOqAQgwLjI5LjYuMrgBA8gBAPgBAZgCLaACqzbCAgoQABiwAxjWBBhHwgIFEAAYgATCAgoQABiABBgUGIcCwgIJEAAYFhjJAxgewgIGEAAYFhgewgIIEAAYgAQYogTCAgsQABiABBiSAxiKBcICBBAjGCfCAg0QABiABBixAxgUGIcCwgIFEAAY7wXCAgUQIRiSA8ICBBAhGBWYAwCIBgGQBgiSBwg4LjI4LjYuM6AHq9kBsgcIMC4yOC42LjO4B_I1wgcIMC42LjM3LjLIB9sB&sclient=gws-wiz-serp&mstk=AUtExfC4jmUvjHGe_XO5eQGgvZjB0SZRWyFvYyjCOLqOzPQ3e0nW-wil3WvipfjxNgvM5YfuEGLGCeL6aRZRuWeG4KMXlbZRVBZX131YLFnE4DodfN2LBsvxiCdkdaCWtv5Tdqfsx0tqSXd0xkot1IRJY6nEYgPF7cA7lRhKJushjMB7MWY&csui=3'
   },
@@ -284,10 +284,69 @@ const restaurants = [
   {
     src: '/plaza_perla.webp',
     name: 'Centro Comercial La Perla',
-    description_es: 'La Perla es una plaza moderna en Zapopan con más de 200 tiendas, áreas verdes y espacios de convivencia. Ideal para comprar, pasear y disfrutar actividades al aire libre en un ambiente familiar.',
-    description_en: 'La Perla is a modern mall in Zapopan with over 200 stores, green areas, and social spaces. It is ideal for shopping, strolling, and enjoying outdoor activities in a family-friendly environment.',
+    description_es: 'La Perla es una plaza moderna en Zapopan con tiendas, áreas verdes y espacios para pasear y disfrutar al aire libre.',
+    description_en: 'La Perla is a modern mall in Zapopan with stores, green areas, and spaces to stroll and enjoy the outdoors.',
     link: 'https://laperla.com.mx/'
   }
 ]
 
-export { hotels, restaurants };
+const parques = [
+  {
+    src: '/lugares_gdl/acuario.webp',
+    name: 'Acuario Michin',
+    description_es: 'Ubicado en pleno centro de la ciudad, con una amplia variedad de peces y rayas que enriquecen la experiencia de los visitantes',
+    description_en: 'Located in the heart of the city, with a wide variety of fish and rays that enrich the visitor experience.',
+    link: 'https://share.google/Dw5Hqa5j61Pm5Awwb'
+  },
+  {
+    src: '/lugares_gdl/zoologico.webp',
+    name: 'Zoológico Guadalajara',
+    description_es: 'Un espacio verde ideal para caminatas, picnics y actividades al aire libre, ubicado a solo 10 minutos en coche de la Expo Guadalajara.',
+    description_en: 'A green space ideal for walks, picnics, and outdoor activities, located just a 10-minute drive from Expo Guadalajara.',
+    link: 'https://share.google/6WS3QpR6pVTpRsygD'
+  },
+  {
+    src: '/lugares_gdl/selvaMagica.webp',
+    name: 'Selva Mágica',
+    description_es: 'Un parque de atracciones lleno de emoción y diversión, perfecto para los amantes de las aventuras extremas',
+    description_en: 'An amusement park full of excitement and fun, perfect for lovers of extreme adventures.',
+    link: 'https://share.google/gZ9a7ujVXSMma52Zt'
+  },
+  {
+    src: '/lugares_gdl/centroGDL.webp',
+    name: 'Centro Histórico',
+    description_es: 'Descubre el corazón cultural de Guadalajara: recorre su arquitectura colonial y visita la Catedral, el Cabañas y el Degollado.',
+    description_en: ' Discover the cultural heart of Guadalajara: explore its colonial architecture and visit the Cathedral, Cabañas, and Degollado.',
+    link: 'https://share.google/sC07UlHDHaVJh4hss'
+  },
+  {
+    src: '/lugares_gdl/plaza_mariachi.webp',
+    name: 'Plaza de los Mariachis',
+    description_es: 'Vive el ambiente tradicional tapatío en este lugar emblemático.  ',
+    description_en: ' Experience the traditional Tapatío atmosphere in this iconic place.',
+    link: 'https://share.google/gpFsOq9Rc3GyAmqzj'
+  },
+  {
+    src: '/lugares_gdl/mercado.webp',
+    name: 'Mercado San Juan de Dios',
+    description_es: 'Explora uno de los mercados más grandes de Latinoamérica, con tres niveles llenos de gastronomía, artesanías y ropa',
+    description_en: 'Explore one of the largest markets in Latin America, with three levels full of gastronomy, crafts, and clothing.',
+    link: 'https://share.google/nDKr8jYNDQSYO8FfC'
+  },
+  {
+    src: '/lugares_gdl/tlaquepaque.webp',
+    name: 'Tlaquepaque',
+    description_es: 'Recorre las coloridas calles de este pueblo mágico cercano y descubre su riqueza artística y artesanal.',
+    description_en: 'Stroll through the colorful streets of this nearby magical town and discover its artistic and artisanal treasures.',
+    link: 'https://maps.app.goo.gl/psLE5Vto2LNbsfSWA'
+  },
+  {
+    src: '/lugares_gdl/tequila.webp',
+    name: 'Tour a Tequila',
+    description_es: 'Visita el pueblo de Tequila, conoce cómo se elabora la bebida y disfruta un recorrido en tren.',
+    description_en: ' Visit the town of Tequila, learn how the drink is made, and enjoy a train tour.',
+    link: 'https://share.google/lR5QHSwxYylTRqqbe'
+  }
+]
+
+export { hotels, restaurants, parques };

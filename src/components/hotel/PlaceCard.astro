@@ -1,6 +1,13 @@
 ---
-import { restaurants } from "../../data/directorio_turistico";
-import i18next,{ t } from 'i18next';
+import i18next from 'i18next';
+
+// Definir la interfaz de Props para este componente
+interface Props {
+  places: any[];
+}
+
+// Recibir el parámetro 'places' que se envía desde TarifasHoteles
+const { places } = Astro.props;
 const language = i18next.language;
 ---
 
@@ -10,36 +17,10 @@ const language = i18next.language;
   <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#565078]/5 rounded-full blur-3xl -z-0"></div>
 
   <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-    <!-- Header Section with Description -->
-    <div class="max-w-4xl mx-auto text-center mb-16">
-      <!-- Badge -->
-      <div class="inline-flex items-center gap-2 mb-6 bg-gradient-to-r from-orange-50 to-orange-100 px-5 py-2.5 rounded-full border border-orange-200 shadow-sm">
-        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width={2.5} stroke='currentColor' class='w-5 h-5 text-[#fc913f]'>
-          <path stroke-linecap='round' stroke-linejoin='round' d='M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.379a48.474 48.474 0 00-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265zm-3 0a.375.375 0 11-.53 0L9 2.845l.265.265zm6 0a.375.375 0 11-.53 0L15 2.845l.265.265z' />
-        </svg>
-        <span class="text-sm font-bold text-[#fc913f] uppercase tracking-wide">
-          Gastronomía Local
-        </span>
-      </div>
-
-      <!-- Title -->
-      <h2 class='font-extrabold text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#565078] to-[#6a5f8e] mb-6 leading-tight'>
-        {t('hotels.restaurants')}
-      </h2>
-
-      <!-- Divider -->
-      <div class="h-1 w-24 bg-gradient-to-r from-[#565078] to-[#fc913f] rounded-full mx-auto mb-8"></div>
-
-      <!-- Description Card -->
-      <div class='bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100/50 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]'>
-        <div class='prose prose-lg max-w-none text-gray-700 leading-relaxed [&>p]:mb-0' set:html={t('hotels.restaurants_desc')} />
-      </div>
-    </div>
-
     <!-- Restaurants Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
       {
-        restaurants.map((restaurant, index) => (
+        places.map((place, index) => (
           <div 
             class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#fc913f]/50 hover:-translate-y-2"
             style={`animation-delay: ${index * 100}ms`}
@@ -47,8 +28,8 @@ const language = i18next.language;
             <!-- Image Container -->
             <div class="relative overflow-hidden aspect-[4/3]">
               <img
-                src={`/img/${restaurant.src}`}
-                alt={restaurant.name}
+                src={`/img/${place.src}`}
+                alt={place.name}
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
@@ -59,7 +40,7 @@ const language = i18next.language;
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <div class="transform transition-transform duration-300 group-hover:translate-y-0">
                   <h3 class="text-2xl font-extrabold text-white drop-shadow-2xl mb-1">
-                    {restaurant.name}
+                    {place.name}
                   </h3>
                   <div class="h-1 w-16 bg-[#fc913f] rounded-full transform origin-left transition-all duration-300 group-hover:w-24"></div>
                 </div>
@@ -69,14 +50,14 @@ const language = i18next.language;
             <!-- Content Container -->
             <div class="p-6 md:p-7">
               <!-- Description -->
-              <p class="text-gray-600 text-base leading-relaxed mb-6 min-h-[90px] line-clamp-4">
-                {language === 'en' ? restaurant.description_en : restaurant.description_es}
+              <p class="text-gray-600 text-base leading-relaxed mb-6 min-h-[90px] line-clamp-4 text-justify">
+                {language === 'en' ? place.description_en : place.description_es}
               </p>
               
               <!-- Location Button -->
-              {restaurant.link && (
+              {place.link && (
                 <a 
-                  href={restaurant.link} 
+                  href={place.link} 
                   target="_blank"
                   rel="noopener noreferrer"
                   class="group/btn relative inline-flex items-center justify-center gap-3 px-6 py-4 text-sm font-bold text-white bg-gradient-to-r from-[#565078] via-[#6a5f8e] to-[#565078] bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-xl shadow-md hover:shadow-xl transition-all duration-500 w-full overflow-hidden"
