@@ -87,7 +87,7 @@ import { t } from "i18next";
             </div>
             <div class="bg-gradient-to-r from-[#565078] to-[#6a5f8e] text-white p-3.5 rounded-lg">
               <p class="text-sm font-semibold mb-1">{t("hotels.rate")}</p>
-              <p class="text-2xl font-bold">{hotel.rate}</p>
+              <p class="text-2xl font-bold" set:html={hotel.rate}></p>
               <p class="text-xs opacity-90">+ {t("hotels.taxes")}</p>
             </div>
             <div class="space-y-2">

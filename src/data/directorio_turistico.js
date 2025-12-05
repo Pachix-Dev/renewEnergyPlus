@@ -29,7 +29,7 @@ const hotels = [
       src: '/hotel_ibis.webp',
       name: 'IBIS Expo Guadalajara',
       address: 'Av. Mariano Otero 1400 Col, Jardines del Bosque, 44520 Guadalajara, Jalisco.',
-      rate: 'Sencilla $946.28 - Doble $1,144.63 MXN',
+      rate: 'Sencilla $946.28 MXN <br/> Doble $1,144.63 MXN',
       phone: '+52 (33) 3880 9600',
       email: 'cristina.casillas@accor.com',
       code: 'ECOMONDO / RE+ MEXICO 2026',
