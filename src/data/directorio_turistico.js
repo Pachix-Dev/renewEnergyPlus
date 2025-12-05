@@ -293,7 +293,7 @@ const restaurants = [
 const gastronomiaLocal = [
   {
     src: '/birrieria_nogales.webp',
-    name: 'Birriería Los Nogales',
+    name: 'Santo Coyote',
     description_es: 'Es un lugar que ofrece una experiencia única donde se combinan sabores, aromas y espacios llenos de magia, cultura y misticismo mexicano. El restaurante celebra la fusión de dos razas en Nuevo México, dando origen a la cocina criolla y reflejando tradiciones paganas con calidez y orgullo en cada rincón.',
     description_en: 'It is a place that offers a unique experience where flavors, aromas, and spaces full of magic, culture, and Mexican mysticism are combined. The restaurant celebrates the fusion  of two races in New Mexico, giving rise to Creole cuisine and reflecting pagan traditions with warmth and pride in every corner.',
     link: ''
