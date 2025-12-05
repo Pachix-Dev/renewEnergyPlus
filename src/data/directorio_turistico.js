@@ -327,13 +327,6 @@ const parques = [
     link: 'https://share.google/gpFsOq9Rc3GyAmqzj'
   },
   {
-    src: '/lugares_gdl/mercado.webp',
-    name: 'Mercado San Juan de Dios',
-    description_es: 'Explora uno de los mercados más grandes de Latinoamérica, con tres niveles llenos de gastronomía, artesanías y ropa',
-    description_en: 'Explore one of the largest markets in Latin America, with three levels full of gastronomy, crafts, and clothing.',
-    link: 'https://share.google/nDKr8jYNDQSYO8FfC'
-  },
-  {
     src: '/lugares_gdl/tlaquepaque.webp',
     name: 'Tlaquepaque',
     description_es: 'Recorre las coloridas calles de este pueblo mágico cercano y descubre su riqueza artística y artesanal.',
