@@ -12,74 +12,107 @@ const base = lang === "es" ? "" : `/${lang}`;
 
 <Layout title='RE+ MEXICO | por que visitar'>
   <!-- Hero Section -->
-  <section class='relative overflow-hidden'>
-    <div class='bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200'>
-      <div class='container mx-auto px-4 py-16'>
+  <section class='relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-gray-50 min-h-screen flex items-center'>
+    <!-- Background Pattern -->
+    <div class='absolute inset-0 bg-grid-pattern opacity-5'></div>
+    
+    <div class='container mx-auto px-6 md:px-12 lg:px-20 py-12 md:py-16'>
+      <div class='grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto'>
+        <!-- Left Content -->
         <div
-          class='text-center mb-12'
-          data-aos='fade-up'
+          class='space-y-6 lg:space-y-8'
+          data-aos='fade-right'
           data-aos-duration='1000'
         >
-          <h1
-            class='text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight'
+          <!-- Badge -->
+          <div 
+            class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-200 shadow-sm"
+            data-aos='fade-down'
+            data-aos-duration='800'
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width={2}
+              stroke="currentColor"
+              class="w-4 h-4 text-[#64267F]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"
+              ></path>
+            </svg>
+            <span class="text-sm font-semibold text-gray-700 uppercase tracking-wide">RE+ Mexico 2026</span>
+          </div>
+
+          <!-- Title -->
+          <h1 
+            class='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight'
+            data-aos='fade-up'
+            data-aos-duration='1000'
+            data-aos-delay='100'
           >
             {t('whyasist.title')}
           </h1>
-          <div
-            class='w-24 h-1 bg-gradient-to-r from-[#BC0100] to-[#D76901] mx-auto rounded-full'
+
+          <!-- Divider -->
+          <div 
+            class='h-1 w-20 bg-gradient-to-r from-[#64267F] to-[#BC0100] rounded-full'
+            data-aos='zoom-in'
+            data-aos-duration='800'
+            data-aos-delay='200'
+          ></div>
+
+          <!-- Description -->
+          <div 
+            class='prose prose-lg max-w-none text-gray-600 [&>p]:mb-3 [&>p]:leading-relaxed'
+            data-aos='fade-up'
+            data-aos-duration='1000'
+            data-aos-delay='300'
           >
+            <p set:html={t('WhyVisit.description')} />
+          </div>
+
+          <!-- CTA Button -->
+          <div 
+            class='pt-4'
+            data-aos='fade-up'
+            data-aos-duration='1000'
+            data-aos-delay='400'
+          >
+            <a href={`${base}/registro`} class='button'>
+              <span>{t('home.free_register')}</span>
+              <svg
+                class='icon'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
+              </svg>
+            </a>
           </div>
         </div>
 
-        <div class='grid lg:grid-cols-2 gap-12 items-center'>
-          <div
-            class='space-y-6'
-            data-aos='fade-right'
-            data-aos-duration='1200'
-            data-aos-delay='200'
-          >
-            <div class='prose prose-lg text-gray-600 leading-relaxed'>
-              <p set:html={t('WhyVisit.description')} />
-            </div>
-            <div
-              class='flex gap-4'
-              data-aos='fade-up'
-              data-aos-duration='800'
-              data-aos-delay='400'
-            >
-              <a href={`${base}/registro`} class='button'>
-                <span>{t('home.free_register')}</span>
-                <svg
-                  class='icon'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                >
-                  <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div
-            class='relative'
-            data-aos='fade-left'
-            data-aos-duration='1200'
-            data-aos-delay='200'
-          >
-            <div
-              class='absolute -inset-4 bg-gradient-to-r from-[#BC0100] to-[#D76901] rounded-2xl blur opacity-20'
-            >
-            </div>
-            <img
-              class='relative rounded-2xl shadow-2xl object-cover w-full h-96'
-              src='/img/bgWhyvisitnew.webp'
-              alt='RE+ Mexico Event'
-            />
-          </div>
+        <!-- Right Image -->
+        <div
+          class='relative lg:h-[calc(100vh-8rem)] h-64 md:h-96'
+          data-aos='fade-left'
+          data-aos-duration='1000'
+          data-aos-delay='200'
+        >
+          <div class='absolute inset-0 bg-gradient-to-tr from-[#64267F]/10 to-[#BC0100]/10 rounded-2xl'></div>
+          <img
+            class='relative rounded-2xl shadow-2xl object-cover w-full h-full border border-gray-200'
+            src='/img/bgWhyvisitnew.webp'
+            alt='RE+ Mexico Event'
+          />
         </div>
       </div>
     </div>
@@ -409,10 +442,10 @@ const base = lang === "es" ? "" : `/${lang}`;
   <style>
     .button {
       position: relative;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-      padding: 1rem 2rem;
-      background: #4e549f;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 30px rgba(188, 1, 0, 0.3), 0 0 20px rgba(100, 38, 127, 0.2);
+      padding: 1.125rem 2.5rem;
+      background: linear-gradient(135deg, #64267F 0%, #BC0100 100%);
       border-radius: 50px;
       display: inline-flex;
       align-items: center;
@@ -420,12 +453,14 @@ const base = lang === "es" ? "" : `/${lang}`;
       cursor: pointer;
       color: white;
       gap: 12px;
-      font-weight: 600;
+      font-weight: 700;
       border: 2px solid transparent;
       outline: none;
       overflow: hidden;
-      font-size: 16px;
+      font-size: 17px;
       text-decoration: none;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
     .icon {
@@ -435,9 +470,10 @@ const base = lang === "es" ? "" : `/${lang}`;
     }
 
     .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
-      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(188, 1, 0, 0.5), 0 0 30px rgba(100, 38, 127, 0.4);
+      border-color: rgba(255, 255, 255, 0.3);
+      background: linear-gradient(135deg, #7A2F99 0%, #D60100 100%);
     }
 
     .button:hover .icon {
@@ -451,28 +487,46 @@ const base = lang === "es" ? "" : `/${lang}`;
     .button::before {
       content: '';
       position: absolute;
-      width: 100px;
+      width: 120px;
       height: 100%;
       background-image: linear-gradient(
         120deg,
         rgba(255, 255, 255, 0) 30%,
-        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.8),
         rgba(255, 255, 255, 0) 70%
       );
       top: 0;
-      left: -100px;
-      opacity: 0.6;
+      left: -120px;
+      opacity: 0.8;
+    }
+
+    .button::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50px;
+      padding: 2px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .button:hover::after {
+      opacity: 1;
     }
 
     @keyframes shine {
       0% {
-        left: -100px;
+        left: -120px;
       }
       60% {
-        left: 100%;
+        left: 110%;
       }
       to {
-        left: 100%;
+        left: 110%;
       }
     }
 
