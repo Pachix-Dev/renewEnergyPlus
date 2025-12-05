@@ -118,7 +118,7 @@ const hotels = [
     whatsapp: ''
   },
   {
-    src: '/holiday_inn_gdl.webp',
+    src: '/holiday-inn.webp',
     name: 'Holiday Inn Guadalajara Expo',
     address: 'Av. Niños Héroes 3089 Col. Jardines de los Arcos C.P. 44500, Guadalajara, Jalisco.',
     rate: '$1,500 MXN',
@@ -131,7 +131,7 @@ const hotels = [
     whatsapp: ''
   },
   {
-    src: '/holiday_inn_select.webp',
+    src: '/holiday-inn-guadalajara-select.webp',
     name: 'Holiday Inn Guadalajara Select',
     address: 'Av. López Mateos Sur 2500 Col. Ciudad del Sol, C.P. 45050, Guadalajara, Jalisco.',
     rate: '$1,500 MXN',
@@ -144,7 +144,7 @@ const hotels = [
     whatsapp: ''
   },
   {
-    src: '/wyndham_garden.webp',
+    src: '/wyndham.webp',
     name: 'Wyndham Garden',
     address: 'Av. Mariano Otero 3875 Col. Ciudad del Sol, C.P. 45050, Guadalajara, Jalisco.',
     rate: '$1,290 MXN',
