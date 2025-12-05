@@ -1,0 +1,66 @@
+---
+import PlaceCard from "../components/hotel/PlaceCard.astro";
+import { parques } from "../data/directorio_turistico";
+import Layout from "../layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("es");
+---
+
+<Layout title="RE+ México | Entretenimiento en Guadalajara ">
+  <section class="container mx-auto px-6 md:px-12 lg:px-20 my-10">
+    <!-- Restaurantes -->
+    <section
+      class="py-10 bg-gradient-to-br from-gray-200 to-white"
+      data-aos="fade-down"
+      data-aos-duration="2000"
+      data-aos-delay="200"
+      data-aos-anchor-placement="top-center"
+    >
+      <div class="max-w-6xl mx-auto space-y-12 mb-10">
+        <!-- Título -->
+        <div class="max-w-4xl mx-auto text-center mb-16">
+        <!-- Badge -->
+          <div
+            class="inline-flex items-center gap-2 mb-6 bg-gradient-to-r from-purple-50 to-purple-100 px-5 py-2.5 rounded-full border border-purple-200 shadow-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+              fill="currentColor"
+              class="w-7 h-7 text-[#565078]"
+            >
+              <path
+                d="M560 160A80 80 0 1 0 560 0a80 80 0 1 0 0 160zM55.9 512H381.1h75H578.9c33.8 0 61.1-27.4 61.1-61.1c0-11.2-3.1-22.2-8.9-31.8l-132-216.3C495 196.1 487.8 192 480 192s-15 4.1-19.1 10.7l-48.2 79L286.8 81c-6.6-10.6-18.3-17-30.8-17s-24.1 6.4-30.8 17L8.6 426.4C3 435.3 0 445.6 0 456.1C0 487 25 512 55.9 512z"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- Title -->
+          <h2
+            class="font-extrabold text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#565078] to-[#6a5f8e] mb-6 leading-tight uppercase"
+          >
+            {t("hotels.entertainment")}
+          </h2>
+
+          <!-- Divider -->
+          <div
+            class="h-1 w-24 bg-gradient-to-r from-[#565078] to-[#fc913f] rounded-full mx-auto mb-8"
+          >
+          </div>
+
+          <!-- Description Card -->
+          <div
+            class="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100/50 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+          >
+            <div
+              class="prose prose-lg max-w-none text-gray-700 leading-relaxed [&>p]:mb-0"
+              set:html={t("hotels.entertainment_desc")}
+            />
+          </div>
+        </div>
+      </div>
+      <PlaceCard places={parques} />
+    </section>
+  </section>
+</Layout>

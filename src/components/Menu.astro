@@ -54,6 +54,7 @@ const base = lang === 'es' ? '' : `/${lang}`
       <ul
         class='flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase items-center'
       >
+        <!-- SECCIÓN: ACERCA DE -->
         <li>
           <button
             id='dropdownExhibitors'
@@ -104,6 +105,7 @@ const base = lang === 'es' ? '' : `/${lang}`
             </ul>
           </div>
         </li>
+        <!-- SECCIÓN: PARA EXPOSITORES -->
         <li>
           <button
             id='dropdownExhibitors'
@@ -237,6 +239,7 @@ const base = lang === 'es' ? '' : `/${lang}`
             </ul>
           </div>
         </li>
+        <!-- SECCIÓN: PARA VISITANTES -->
         <li>
           <button
             id='dropdownExhibitors'
@@ -256,15 +259,12 @@ const base = lang === 'es' ? '' : `/${lang}`
             >
               <li class='hover:bg-blue-100 font-semibold'>
                 <a href={`${base}/por-que-visitar`} class='block px-4 py-2'
-                  >{t('menu.submenu_3.option_1')}</a
+                  >{t('menu.submenu_3.option_1')} RE+ MEXICO</a
                 >
               </li>
-
-
-
               <li class='hover:bg-blue-100 font-semibold'>
                 <a href='/hoteles' class='block px-4 py-2'
-                  >  {t('menu.submenu_2.option_16')} </a
+                  >  {t('menu.submenu_3.option_4')} </a
                 >
               </li>
               <li class='hover:bg-blue-100 font-semibold'>
@@ -272,10 +272,11 @@ const base = lang === 'es' ? '' : `/${lang}`
                   > {t('menu.submenu_2.option_17')} </a
                 >
               </li>
-
-
-
-
+              <li class='hover:bg-blue-100 font-semibold'>
+                <a href='/entretenimiento-guadalajara' class='block px-4 py-2'
+                  >  {t('menu.submenu_2.option_16')} </a
+                >
+              </li>
               <li class='hover:bg-blue-100 font-semibold'>
                 <a href={`${base}/programa-premium`} class='block px-4 py-2'>
                   {t('menu.submenu_2.option_9')}
@@ -325,6 +326,7 @@ const base = lang === 'es' ? '' : `/${lang}`
             </ul>
           </div>
         </li>
+        <!-- SECCIÓN: EDICIONES ANTERIORES -->
         <li>
           <button
             id='dropdownExhibitors'
@@ -458,6 +460,7 @@ const base = lang === 'es' ? '' : `/${lang}`
             </ul>
           </div>
         </li>
+        <!-- SECCIÓN: GALERÍA -->
         <li>
           <button
             id='dropdownExhibitors'
@@ -483,6 +486,7 @@ const base = lang === 'es' ? '' : `/${lang}`
             </ul>
           </div>
         </li>
+        <!-- SELECTOR DE IDIOMA -->
         <li class='flex items-center'>
           <LanguageSelector
             aria-label='Select language'
