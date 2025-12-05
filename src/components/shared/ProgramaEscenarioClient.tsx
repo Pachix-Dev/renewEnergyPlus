@@ -85,8 +85,8 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
       if(!res.ok) throw new Error(`HTTP ${res.status}`)
       const json = await res.json()
       const data = Array.isArray(json?.data) ? json.data : []
-      //setEscenarios(data)
-      setEscenarios(null)
+      setEscenarios(data)
+      // setEscenarios(null)
     } catch(e:any){
       setError(e.message || 'Error')
     } finally {
