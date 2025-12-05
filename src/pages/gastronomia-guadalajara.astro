@@ -44,8 +44,18 @@ changeLanguage("es");
 
         <!-- Divider -->
         <div
-          class="h-1 w-24 bg-gradient-to-r from-[#565078] to-[#fc913f] rounded-full mx-auto"
+          class="h-1 w-24 bg-gradient-to-r from-[#565078] to-[#fc913f] rounded-full mx-auto mb-8"
         >
+        </div>
+
+        <!-- Description Card -->
+        <div
+          class="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100/50 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+        >
+          <div
+            class="prose prose-lg max-w-none text-gray-700 leading-relaxed [&>p]:mb-0"
+            set:html={t("hotels.restaurants_desc")}
+          />
         </div>
       </div>
       <PlaceCard places={restaurants} />
