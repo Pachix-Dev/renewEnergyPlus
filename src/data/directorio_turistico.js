@@ -332,8 +332,8 @@ const gastronomiaGurmet = [
   {
     src: '/',
     name: 'Octo',
-    description_es: 'Restaurante único con impresionante arquitectura de ladrillo hexagonal, que combina exposiciones de arte, menú especializado en comida del mar y carnes, y mixología con destilados mexicanos. Ganador del PRIX VERSAILLES 2022.',
-    description_en: 'Unique restaurant with impressive hexagonal brick architecture, combining art exhibitions, a menu specialized in seafood and meats, and mixology with Mexican spirits. Winner of the PRIX VERSAILLES 2022.',
+    description_es: 'Es un restaurante único en Guadalajara que combina arquitectura impresionante de ladrillo hexagonal con exposiciones de arte. Su menú se especializa en comida del mar y carnes selectas, complementado con mixología elaborada con destilados mexicanos. Ganador del PRIX VERSAILLES 2022.',
+    description_en: 'Es un restaurante único en Guadalajara que combina arquitectura impresionante de ladrillo hexagonal con exposiciones de arte. Su menú se especializa en comida del mar y carnes selectas, complementado con mixología elaborada con destilados mexicanos. Ganador del PRIX VERSAILLES 2022.',
     link: ''
   },
   {
