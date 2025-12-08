@@ -292,28 +292,28 @@ const restaurants = [
 
 const gastronomiaLocal = [
   {
-    src: '/birrieria_nogales.webp',
+    src: '/lugares_gdl/coyote.webp',
     name: 'Santo Coyote',
     description_es: 'Es un lugar que ofrece una experiencia única donde se combinan sabores, aromas y espacios llenos de magia, cultura y misticismo mexicano. El restaurante celebra la fusión de dos razas en Nuevo México, dando origen a la cocina criolla y reflejando tradiciones paganas con calidez y orgullo en cada rincón.',
     description_en: 'It is a place that offers a unique experience where flavors, aromas, and spaces full of magic, culture, and Mexican mysticism are combined. The restaurant celebrates the fusion  of two races in New Mexico, giving rise to Creole cuisine and reflecting pagan traditions with warmth and pride in every corner.',
     link: ''
   },
   {
-    src: '/la_chata.webp',
+    src: '/lugares_gdl/bariachi.webp',
     name: 'Casa bariachi',
     description_es: 'Casa Bariachi abrió en 1995 en Guadalajara para ofrecer a visitantes nacionales y extranjeros una experiencia llena de hospitalidad, mariachi y folklore mexicano. El lugar combina excelente gastronomía, música tradicional, bailes regionales y bebidas mexicanas en una fiesta colorida y alegre que celebra la cultura de México.',
     description_en: 'Casa Bariachi opened in 1995 in Guadalajara to offer national and international visitors an experience full of hospitality, mariachi, and Mexican folklore. The place combines excellent gastronomy, traditional music, regional dances, and Mexican drinks in a colorful and joyful party that celebrates Mexican culture.',
     link: ''
   },
   {
-    src: '/sanborns_gdl.webp',
+    src: '/lugares_gdl/abanejo.webp',
     name: 'Abajeño',
     description_es: 'Ofrece una experiencia gastronómica única con platillos 100% mexicanos de sabores auténticos y tradicionales transmitidos de generación en generación. Cada plato está diseñado para deleitar tu paladar con recetas excepcionales de la cocina mexicana.',
     description_en: ' It offers a unique gastronomic experience with 100% Mexican dishes of authentic and traditional flavors passed down from generation to generation. Each dish is designed to delight your palate with exceptional recipes from Mexican cuisine.',
     link: ''
   },
   {
-    src: '/lugares_gdl/taqueria.webp',
+    src: '/lugares_gdl/garibaldi.webp',
     name: 'Karne Garibaldi',
     description_es: 'Es un famoso restaurante de Guadalajara con Récord Guinness por servir comida en menos de 20 segundos. Desde 1970, su especialidad es la Carne en su Jugo, un ícono tapatío que llega a la mesa casi instantáneamente junto con aperitivos como frijoles, cebolla y limón.',
     description_en: ' It is a famous restaurant in Guadalajara with a Guinness World Record for serving food in less than 20 seconds. Since 1970, its specialty has been Carne en su Jugo, a Tapatío icon that arrives at the table almost instantly along with appetizers such as beans, onion, and lime.',
@@ -323,28 +323,28 @@ const gastronomiaLocal = [
 
 const gastronomiaGurmet = [
   {
-    src: '/',
+    src: '/lugares_gdl/hueso.webp',
     name: 'Hueso',
     description_es: 'Restaurante de cocina mexicana de autor del Chef Poncho Cadena, ubicado en una casa de los años 40 en el distrito de diseño de Guadalajara. Destaca por sus paredes con más de 10,000 huesos, menú de temporada, coctelería de autor y una experiencia sensorial que combina música, diseño y gastronomía. Reconocido en 2015 como The Americas Restaurant en Londres.',
     description_en: 'Author Mexican cuisine restaurant by Chef Poncho Cadena, located in a 1940s house in Guadalajara\'s design district. It stands out for its walls with more than 10,000 bones, seasonal menu, signature cocktails, and a sensory experience that combines music, design, and gastronomy. Recognized in 2015 as The Americas Restaurant in London.',
     link: ''
   },
   {
-    src: '/',
+    src: '/lugares_gdl/octo.webp',
     name: 'Octo',
     description_es: 'Es un restaurante único en Guadalajara que combina arquitectura impresionante de ladrillo hexagonal con exposiciones de arte. Su menú se especializa en comida del mar y carnes selectas, complementado con mixología elaborada con destilados mexicanos. Ganador del PRIX VERSAILLES 2022.',
     description_en: 'Es un restaurante único en Guadalajara que combina arquitectura impresionante de ladrillo hexagonal con exposiciones de arte. Su menú se especializa en comida del mar y carnes selectas, complementado con mixología elaborada con destilados mexicanos. Ganador del PRIX VERSAILLES 2022.',
     link: ''
   },
   {
-    src: '/',
+    src: '/lugares_gdl/bruna.webp',
     name: 'Bruna',
     description_es: 'La tarea del Chef Óscar Garza ha sido innovar en la preparación de platillos mexicanos tradicionales, haciendo intervención con técnicas, procesos y nuevos sabores con la finalidad de obtener piezas abstractas y contemporáneas convertidas en platillos, siempre respetando la esencia de cada receta apegándose a la tradición',
     description_en: 'Chef Óscar Garza\'s task has been to innovate in the preparation of traditional Mexican dishes, intervening with techniques, processes, and new flavors to obtain abstract and contemporary pieces turned into dishes, always respecting the essence of each recipe while adhering to tradition.',
     link: ''
   },
   {
-    src: '/',
+    src: '/lugares_gdl/alcalde.webp',
     name: 'Alcalde',
     description_es: 'Fundado en 2013, ofrece cocina viva y sincera que respeta las estaciones del año y los ciclos de la tierra. Busca la excelencia en lo sencillo, presentando gastronomía actual sin artificios, solo sabor auténtico.',
     description_en: 'Founded in 2013, it offers lively and sincere cuisine that respects the seasons of the year and the cycles of the earth. It seeks excellence in simplicity, presenting contemporary gastronomy without artifice, only authentic flavor.',
