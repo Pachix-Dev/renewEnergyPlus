@@ -354,6 +354,27 @@ const gastronomiaGurmet = [
 
 const parques = [
   {
+    src: '/lugares_gdl/centroGDL.webp',
+    name: 'Centro Histórico',
+    description_es: 'Descubre el corazón cultural de Guadalajara: recorre su arquitectura colonial y visita la Catedral, el Cabañas y el Degollado.',
+    description_en: ' Discover the cultural heart of Guadalajara: explore its colonial architecture and visit the Cathedral, Cabañas, and Degollado.',
+    link: 'https://share.google/sC07UlHDHaVJh4hss'
+  },
+  {
+    src: '/lugares_gdl/tlaquepaque.webp',
+    name: 'Tlaquepaque',
+    description_es: 'Recorre las coloridas calles de este pueblo mágico cercano y descubre su riqueza artística y artesanal.',
+    description_en: 'Stroll through the colorful streets of this nearby magical town and discover its artistic and artisanal treasures.',
+    link: 'https://maps.app.goo.gl/psLE5Vto2LNbsfSWA'
+  },
+   {
+    src: '/lugares_gdl/tequila.webp',
+    name: 'Tour a Tequila',
+    description_es: 'Visita el pueblo de Tequila, conoce cómo se elabora la bebida y disfruta un recorrido en tren.',
+    description_en: ' Visit the town of Tequila, learn how the drink is made, and enjoy a train tour.',
+    link: 'https://share.google/lR5QHSwxYylTRqqbe'
+  },
+  {
     src: '/lugares_gdl/acuario.webp',
     name: 'Acuario Michin',
     description_es: 'Ubicado en pleno centro de la ciudad, con una amplia variedad de peces y rayas que enriquecen la experiencia de los visitantes',
@@ -375,33 +396,12 @@ const parques = [
     link: 'https://share.google/gZ9a7ujVXSMma52Zt'
   },
   {
-    src: '/lugares_gdl/centroGDL.webp',
-    name: 'Centro Histórico',
-    description_es: 'Descubre el corazón cultural de Guadalajara: recorre su arquitectura colonial y visita la Catedral, el Cabañas y el Degollado.',
-    description_en: ' Discover the cultural heart of Guadalajara: explore its colonial architecture and visit the Cathedral, Cabañas, and Degollado.',
-    link: 'https://share.google/sC07UlHDHaVJh4hss'
-  },
-  {
     src: '/lugares_gdl/plaza_mariachi.webp',
     name: 'Plaza de los Mariachis',
     description_es: 'Vive el ambiente tradicional tapatío en este lugar emblemático.  ',
     description_en: ' Experience the traditional Tapatío atmosphere in this iconic place.',
     link: 'https://share.google/gpFsOq9Rc3GyAmqzj'
   },
-  {
-    src: '/lugares_gdl/tlaquepaque.webp',
-    name: 'Tlaquepaque',
-    description_es: 'Recorre las coloridas calles de este pueblo mágico cercano y descubre su riqueza artística y artesanal.',
-    description_en: 'Stroll through the colorful streets of this nearby magical town and discover its artistic and artisanal treasures.',
-    link: 'https://maps.app.goo.gl/psLE5Vto2LNbsfSWA'
-  },
-  {
-    src: '/lugares_gdl/tequila.webp',
-    name: 'Tour a Tequila',
-    description_es: 'Visita el pueblo de Tequila, conoce cómo se elabora la bebida y disfruta un recorrido en tren.',
-    description_en: ' Visit the town of Tequila, learn how the drink is made, and enjoy a train tour.',
-    link: 'https://share.google/lR5QHSwxYylTRqqbe'
-  }
 ]
 
 export { hotels, restaurants, parques, gastronomiaLocal, gastronomiaGurmet };
