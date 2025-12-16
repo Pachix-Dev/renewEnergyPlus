@@ -1,105 +1,105 @@
 ---
-import i18next, { t } from 'i18next'
-import { LanguageSelector } from 'astro-i18next/components'
+import i18next, { t } from "i18next";
+import { LanguageSelector } from "astro-i18next/components";
 
-const lang = i18next.language
-const base = lang === 'es' ? '' : `/${lang}`
+const lang = i18next.language;
+const base = lang === "es" ? "" : `/${lang}`;
 ---
 
-<nav class='sticky top-0 z-50 w-full bg-slate-800'>
+<nav class="sticky top-0 z-50 w-full bg-slate-800">
   <div
-    class='container flex flex-wrap items-center justify-between mx-auto p-4'
+    class="container flex flex-wrap items-center justify-between mx-auto p-4"
   >
     <a
       href={`${base}/`}
-      class='flex items-center space-x-3 rtl:space-x-reverse'
+      class="flex items-center space-x-3 rtl:space-x-reverse"
     >
       <img
-        src='/img/replusR.webp'
-        class='w-24 lg:my-0 my-4'
-        alt='Renew Energy Plus 2025'
+        src="/img/replusR.webp"
+        class="w-24 lg:my-0 my-4"
+        alt="Renew Energy Plus 2025"
       />
     </a>
 
     <div
-      class='flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse'
+      class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse"
     >
       <button
-        data-collapse-toggle='mega-menu'
-        type='button'
-        class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'
-        aria-controls='mega-menu'
-        aria-expanded='false'
+        data-collapse-toggle="mega-menu"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="mega-menu"
+        aria-expanded="false"
       >
-        <span class='sr-only'>Open main menu</span>
+        <span class="sr-only">Open main menu</span>
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          stroke-width='1.5'
-          stroke='currentColor'
-          class='size-6'
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
         >
           <path
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'></path>
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
       </button>
     </div>
     <div
-      id='mega-menu'
-      class='text-white items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
+      id="mega-menu"
+      class="text-white items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
     >
       <ul
-        class='flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase items-center'
+        class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse uppercase items-center"
       >
         <!-- SECCIÓN: ACERCA DE -->
         <li>
           <button
-            id='dropdownExhibitors'
-            data-dropdown-toggle='dropdownNavbar1'
-            data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+            id="dropdownExhibitors"
+            data-dropdown-toggle="dropdownNavbar1"
+            data-dropdown-trigger="hover"
+            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
           >
-            {t('menu.submenu_1.title')}
+            {t("menu.submenu_1.title")}
           </button>
           <div
-            id='dropdownNavbar1'
-            class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+            id="dropdownNavbar1"
+            class="dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto"
           >
             <ul
-              class='py-2 text-sm text-gray-700'
-              aria-labelledby='dropdownLargeButton'
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="dropdownLargeButton"
             >
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={`${base}/acerca-de-replus-mexico`}
-                  class='block px-4 py-2'
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_1.option_1')}
+                  {t("menu.submenu_1.option_1")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={`${base}/acerca-de-replus-eventos`}
-                  class='block px-4 py-2'
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_1.option_2')}
+                  {t("menu.submenu_1.option_2")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/acerca-de-snec`} class='block px-4 py-2'>
-                  {t('menu.submenu_1.option_3')}
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href={`${base}/acerca-de-snec`} class="block px-4 py-2">
+                  {t("menu.submenu_1.option_3")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
-                  href='https://igeco.mx/'
-                  target='_blank'
-                  class='block px-4 py-2'
+                  href="https://igeco.mx/"
+                  target="_blank"
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_1.option_4')}
+                  {t("menu.submenu_1.option_4")}
                 </a>
               </li>
             </ul>
@@ -108,95 +108,95 @@ const base = lang === 'es' ? '' : `/${lang}`
         <!-- SECCIÓN: PARA EXPOSITORES -->
         <li>
           <button
-            id='dropdownExhibitors'
-            data-dropdown-toggle='dropdownNavbar2'
-            data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+            id="dropdownExhibitors"
+            data-dropdown-toggle="dropdownNavbar2"
+            data-dropdown-trigger="hover"
+            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
           >
-            {t('menu.submenu_2.title')}
+            {t("menu.submenu_2.title")}
           </button>
           <div
-            id='dropdownNavbar2'
-            class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+            id="dropdownNavbar2"
+            class="dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto"
           >
             <ul
-              class='py-2 text-sm text-gray-700'
-              aria-labelledby='dropdownLargeButton'
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="dropdownLargeButton"
             >
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={`${base}/quiero-ser-expositor`}
-                  class='block px-4 py-2'
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_2.option_2')}
+                  {t("menu.submenu_2.option_2")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/RE+ FS 2026 ESP_05122025.pdf'
-                    : '/doc/RE+ FS 2026 ENG_05122025.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2'
+                  href={i18next.language === "es"
+                    ? "/doc/RE+ FS 2026 ESP_05122025.pdf"
+                    : "/doc/RE+ FS 2026 ENG_05122025.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_2.option_6')}
-                </a>
-              </li>
-
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a
-                  href={i18next.language === 'es'
-                    ? '/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V7_compressed.pdf'
-                    : '/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V7_compressed.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2'
-                >
-                  {t('menu.submenu_2.option_14')}
+                  {t("menu.submenu_2.option_6")}
                 </a>
               </li>
 
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/ENLIGHTENMENT-ESP-2026-V2.pdf'
-                    : '/doc/ENLIGHTENMENT-ING-2026-V2.pdf'}
-                  class='block px-4 py-2'
-                  target='_blank'
+                  href={i18next.language === "es"
+                    ? "/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V7_compressed.pdf"
+                    : "/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V7_compressed.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2"
+                >
+                  {t("menu.submenu_2.option_14")}
+                </a>
+              </li>
+
+              <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href={i18next.language === "es"
+                    ? "/doc/ENLIGHTENMENT-ESP-2026-V2.pdf"
+                    : "/doc/ENLIGHTENMENT-ING-2026-V2.pdf"}
+                  class="block px-4 py-2"
+                  target="_blank"
                 >
                   Enlightenment Area
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/PAVILIONS-RE-MEX-ESP_compressed.pdf'
-                    : '/doc/PAVILIONS-RE-MEX-ENG_compressed.pdf'}
-                  class='block px-4 py-2'
-                  target='_blank'
+                  href={i18next.language === "es"
+                    ? "/doc/PAVILIONS-RE-MEX-ESP_compressed.pdf"
+                    : "/doc/PAVILIONS-RE-MEX-ENG_compressed.pdf"}
+                  class="block px-4 py-2"
+                  target="_blank"
                 >
-                  {t('menu.submenu_2.option_15')}
+                  {t("menu.submenu_2.option_15")}
                 </a>
               </li>
 
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={`${base}/plano-re-plus-mexico-2026`}
-                  class='block px-4 py-2'
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_2.option_8')}
+                  {t("menu.submenu_2.option_8")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
-                  href='/doc/CONTRATO-DE-EXPOSICION-REMEX-2026.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'
+                  href="/doc/CONTRATO-DE-EXPOSICION-REMEX-2026.pdf"
+                  target="_blank"
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_2.option_7')}
+                  {t("menu.submenu_2.option_7")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/toolkit`} class='block px-4 py-2'>
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href={`${base}/toolkit`} class="block px-4 py-2">
                   TOOLKIT 2026
                 </a>
               </li>
@@ -241,59 +241,59 @@ const base = lang === 'es' ? '' : `/${lang}`
         <!-- SECCIÓN: PARA VISITANTES -->
         <li>
           <button
-            id='dropdownExhibitors'
-            data-dropdown-toggle='dropdownNavbar3'
-            data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+            id="dropdownExhibitors"
+            data-dropdown-toggle="dropdownNavbar3"
+            data-dropdown-trigger="hover"
+            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
           >
-            {t('menu.submenu_3.title')}
+            {t("menu.submenu_3.title")}
           </button>
           <div
-            id='dropdownNavbar3'
-            class='dropdown z-[100] hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+            id="dropdownNavbar3"
+            class="dropdown z-[100] hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto"
           >
             <ul
-              class='py-2 text-sm text-gray-700'
-              aria-labelledby='dropdownLargeButton'
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="dropdownLargeButton"
             >
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/por-que-visitar`} class='block px-4 py-2'
-                  >{t('menu.submenu_3.option_1')} RE+ MEXICO</a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href='/hoteles' class='block px-4 py-2'
-                  >  {t('menu.submenu_3.option_4')} </a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href='/gastronomia-guadalajara' class='block px-4 py-2'
-                  > {t('menu.submenu_2.option_17')} </a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href='/entretenimiento-guadalajara' class='block px-4 py-2'
-                  >  {t('menu.submenu_2.option_16')} </a
-                >
-              </li>
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/programa-premium`} class='block px-4 py-2'>
-                  {t('menu.submenu_2.option_9')}
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href={`${base}/programa-premium`} class="block px-4 py-2">
+                  {t("menu.submenu_2.option_9")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={`${base}/talleres-capacitaciones`}
-                  class='block px-4 py-2'
+                  class="block px-4 py-2"
                 >
-                  {t('menu.submenu_3.option_5')}
+                  {t("menu.submenu_3.option_5")}
                 </a>
               </li>
-              <li class='hover:bg-blue-100 font-semibold'>
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href={`${base}/por-que-visitar`} class="block px-4 py-2"
+                  >{t("menu.submenu_3.option_1")} RE+ MEXICO</a
+                >
+              </li>
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href="/hoteles" class="block px-4 py-2">
+                  {t("menu.submenu_3.option_4")}
+                </a>
+              </li>
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href="/gastronomia-guadalajara" class="block px-4 py-2">
+                  {t("menu.submenu_2.option_17")}
+                </a>
+              </li>
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href="/entretenimiento-guadalajara" class="block px-4 py-2">
+                  {t("menu.submenu_2.option_16")}
+                </a>
+              </li>
+              <li class="hover:bg-blue-100 font-semibold">
                 <a
-                  href='/doc/LETTER-TEMPLATE-2026-RE-MEXICO-ED.pdf'
-                  target='_blank'
-                  class='block px-4 py-2'>{t('menu.submenu_3.option_3')}</a
+                  href="/doc/LETTER-TEMPLATE-2026-RE-MEXICO-ED.pdf"
+                  target="_blank"
+                  class="block px-4 py-2">{t("menu.submenu_3.option_3")}</a
                 >
               </li>
               {
@@ -328,48 +328,48 @@ const base = lang === 'es' ? '' : `/${lang}`
         <!-- SECCIÓN: EDICIONES ANTERIORES -->
         <li>
           <button
-            id='dropdownExhibitors'
-            data-dropdown-toggle='dropdownNavbar4'
-            data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+            id="dropdownExhibitors"
+            data-dropdown-toggle="dropdownNavbar4"
+            data-dropdown-trigger="hover"
+            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
           >
-            {t('menu.submenu_4.title')}
+            {t("menu.submenu_4.title")}
           </button>
           <div
-            id='dropdownNavbar4'
-            class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+            id="dropdownNavbar4"
+            class="dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto"
           >
             <ul
-              class='py-2 text-sm text-gray-700'
-              aria-labelledby='dropdownLargeButton'
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="dropdownLargeButton"
             >
-              <li class='font-semibold'>
-                <span class='ps-2 text-gray-500 font-bold'>RE+ MEXICO 2025</span
+              <li class="font-semibold">
+                <span class="ps-2 text-gray-500 font-bold">RE+ MEXICO 2025</span
                 >
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/aftershow_report_ecomondo_RE_Mexico_2025_esp_compressed.pdf'
-                    : '/doc/aftershow_report_ecomondo_RE_Mexico_2025_eng_compressed.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2 hover:bg-blue-100'
-                  >{t('menu.submenu_4.results')}
+                  href={i18next.language === "es"
+                    ? "/doc/aftershow_report_ecomondo_RE_Mexico_2025_esp_compressed.pdf"
+                    : "/doc/aftershow_report_ecomondo_RE_Mexico_2025_eng_compressed.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2 hover:bg-blue-100"
+                  >{t("menu.submenu_4.results")}
                 </a>
                 <a
-                  href='/directorio-digital'
-                  target='_blank'
-                  class='block px-4 py-2 hover:bg-blue-100'
-                  >{t('menu.submenu_4.directory')}
+                  href="/directorio-digital"
+                  target="_blank"
+                  class="block px-4 py-2 hover:bg-blue-100"
+                  >{t("menu.submenu_4.directory")}
                 </a>
               </li>
-              <li class='font-semibold'>
-                <span class='ps-2 text-gray-500 font-bold'>SSM 2024</span>
+              <li class="font-semibold">
+                <span class="ps-2 text-gray-500 font-bold">SSM 2024</span>
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ESP_AF_2024_v3.pdf'
-                    : '/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ENG_AF_2024_v3.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2 hover:bg-blue-100'
-                  >{t('menu.submenu_4.results')}
+                  href={i18next.language === "es"
+                    ? "/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ESP_AF_2024_v3.pdf"
+                    : "/doc/AFTER_SHOW_REPORT_ECO_SOLAR_ENG_AF_2024_v3.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2 hover:bg-blue-100"
+                  >{t("menu.submenu_4.results")}
                 </a>
                 {
                   /* <a
@@ -380,15 +380,15 @@ const base = lang === 'es' ? '' : `/${lang}`
                 </a>*/
                 }
               </li>
-              <li class='font-semibold'>
-                <span class='ps-2 text-gray-500 font-bold'>SSM 2023</span>
+              <li class="font-semibold">
+                <span class="ps-2 text-gray-500 font-bold">SSM 2023</span>
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2023-ESP.pdf'
-                    : '/doc/RESULTS-REPORT-SSM-2023-ENG.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2 hover:bg-blue-100'
-                  >{t('menu.submenu_4.results')}
+                  href={i18next.language === "es"
+                    ? "/doc/REPORTE-DE-RESULTADOS-SSM-2023-ESP.pdf"
+                    : "/doc/RESULTS-REPORT-SSM-2023-ENG.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2 hover:bg-blue-100"
+                  >{t("menu.submenu_4.results")}
                 </a>
                 {
                   /*<a
@@ -399,15 +399,15 @@ const base = lang === 'es' ? '' : `/${lang}`
                 </a>*/
                 }
               </li>
-              <li class='font-semibold'>
-                <span class='ps-2 text-gray-500 font-bold'>SPM 2022</span>
+              <li class="font-semibold">
+                <span class="ps-2 text-gray-500 font-bold">SPM 2022</span>
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2022-ESP.pdf'
-                    : '/doc/RESULTS-REPORT-SSM-2022-ENG.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2 hover:bg-blue-100'
-                  >{t('menu.submenu_4.results')}
+                  href={i18next.language === "es"
+                    ? "/doc/REPORTE-DE-RESULTADOS-SSM-2022-ESP.pdf"
+                    : "/doc/RESULTS-REPORT-SSM-2022-ENG.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2 hover:bg-blue-100"
+                  >{t("menu.submenu_4.results")}
                 </a>
                 {
                   /*<a
@@ -418,15 +418,15 @@ const base = lang === 'es' ? '' : `/${lang}`
                 </a>*/
                 }
               </li>
-              <li class='font-semibold'>
-                <span class='ps-2 text-gray-500 font-bold'>SPM 2021</span>
+              <li class="font-semibold">
+                <span class="ps-2 text-gray-500 font-bold">SPM 2021</span>
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2021-ESP.pdf'
-                    : '/doc/RESULTS-REPORT-SSM-2021-ENG.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2 hover:bg-blue-100'
-                  >{t('menu.submenu_4.results')}
+                  href={i18next.language === "es"
+                    ? "/doc/REPORTE-DE-RESULTADOS-SSM-2021-ESP.pdf"
+                    : "/doc/RESULTS-REPORT-SSM-2021-ENG.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2 hover:bg-blue-100"
+                  >{t("menu.submenu_4.results")}
                 </a>
                 {
                   /*<a
@@ -437,15 +437,15 @@ const base = lang === 'es' ? '' : `/${lang}`
                 </a>*/
                 }
               </li>
-              <li class='font-semibold'>
-                <span class='ps-2 text-gray-500 font-bold'>SPM 2019</span>
+              <li class="font-semibold">
+                <span class="ps-2 text-gray-500 font-bold">SPM 2019</span>
                 <a
-                  href={i18next.language === 'es'
-                    ? '/doc/REPORTE-DE-RESULTADOS-SSM-2019-ESP.pdf'
-                    : '/doc/RESULTS-REPORT-SSM-2019-ENG.pdf'}
-                  target='_blank'
-                  class='block px-4 py-2 hover:bg-blue-100'
-                  >{t('menu.submenu_4.results')}
+                  href={i18next.language === "es"
+                    ? "/doc/REPORTE-DE-RESULTADOS-SSM-2019-ESP.pdf"
+                    : "/doc/RESULTS-REPORT-SSM-2019-ENG.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2 hover:bg-blue-100"
+                  >{t("menu.submenu_4.results")}
                 </a>
                 {
                   /*<a
@@ -462,34 +462,34 @@ const base = lang === 'es' ? '' : `/${lang}`
         <!-- SECCIÓN: GALERÍA -->
         <li>
           <button
-            id='dropdownExhibitors'
-            data-dropdown-toggle='dropdownNavbar5'
-            data-dropdown-trigger='hover'
-            class='flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto'
+            id="dropdownExhibitors"
+            data-dropdown-toggle="dropdownNavbar5"
+            data-dropdown-trigger="hover"
+            class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-bold border-b border-gray-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
           >
-            {t('menu.submenu_5.title')}
+            {t("menu.submenu_5.title")}
           </button>
           <div
-            id='dropdownNavbar5'
-            class='dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto'
+            id="dropdownNavbar5"
+            class="dropdown z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-auto"
           >
             <ul
-              class='py-2 text-sm text-gray-700'
-              aria-labelledby='dropdownLargeButton'
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="dropdownLargeButton"
             >
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href={`${base}/gallery`} class='block px-4 py-2'>
-                  {t('menu.submenu_5.option_1')}
+              <li class="hover:bg-blue-100 font-semibold">
+                <a href={`${base}/gallery`} class="block px-4 py-2">
+                  {t("menu.submenu_5.option_1")}
                 </a>
               </li>
             </ul>
           </div>
         </li>
         <!-- SELECTOR DE IDIOMA -->
-        <li class='flex items-center'>
+        <li class="flex items-center">
           <LanguageSelector
-            aria-label='Select language'
-            class='block w-full p-2.5 rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+            aria-label="Select language"
+            class="block w-full p-2.5 rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
           />
         </li>
       </ul>
