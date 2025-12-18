@@ -14,542 +14,242 @@ const API_URL = import.meta.env.DEV
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 ---
 
-<Layout title='RE+ MEXICO | programa premium'>
+<Layout title="RE+ MEXICO | programa premium">
   <!-- Video de fondo mejorado -->
-  <div class='relative min-h-screen overflow-hidden'>
+  <div class="relative min-h-screen overflow-hidden">
     <video
-      src='/video/bg_program_vip_720p.mp4'
+      src="/video/bg_program_vip_720p.mp4"
       autoplay
       loop
       muted
       playsinline
-      class='absolute inset-0 w-full h-full object-cover'></video>
+      class="absolute inset-0 w-full h-full object-cover"></video>
 
     <!-- Overlay con gradiente -->
     <div
-      class='absolute inset-0 bg-gradient-to-b from-[#1E293B]/80 via-[#1E293B]/60 to-[#5E5884]/80'
+      class="absolute inset-0 bg-gradient-to-b from-[#1E293B]/80 via-[#1E293B]/60 to-[#5E5884]/80"
     >
     </div>
 
     <!-- Elementos decorativos flotantes -->
-    <div class='absolute inset-0 overflow-hidden'>
+    <div class="absolute inset-0 overflow-hidden">
       <div
-        class='absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse'
+        class="absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse"
       >
       </div>
       <div
-        class='absolute bottom-32 right-32 w-24 h-24 border-2 border-[#5E5884]/30 rounded-full animate-bounce'
+        class="absolute bottom-32 right-32 w-24 h-24 border-2 border-[#5E5884]/30 rounded-full animate-bounce"
       >
       </div>
       <div
-        class='absolute top-1/3 right-20 w-16 h-16 bg-[#5E5884]/20 rounded-full blur-xl animate-pulse'
+        class="absolute top-1/3 right-20 w-16 h-16 bg-[#5E5884]/20 rounded-full blur-xl animate-pulse"
       >
       </div>
       <div
-        class='absolute bottom-1/4 left-32 w-20 h-20 border border-white/10 rotate-45 animate-spin-slow'
+        class="absolute bottom-1/4 left-32 w-20 h-20 border border-white/10 rotate-45 animate-spin-slow"
       >
       </div>
     </div>
 
     <!-- Contenido principal -->
-    <div class='relative z-10 min-h-screen flex flex-col'>
+    <div class="relative z-10 min-h-screen flex flex-col">
       <!-- Header Section -->
       <div
-        class='container mx-auto px-4 pt-32 pb-16 flex-1 flex flex-col justify-center'
+        class="container mx-auto px-4 pt-32 pb-16 flex-1 flex flex-col justify-center"
       >
         <!-- Main Title -->
         <div
-          class='text-center mb-16'
-          data-aos='fade-up'
-          data-aos-duration='1000'
-          data-aos-delay='200'
+          class="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
         >
           <h1
-            class='text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight'
+            class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
           >
             <span
-              class='block text-3xl sm:text-4xl font-bold text-[#5E5884] mb-4 filter drop-shadow-lg'
+              class="block text-3xl sm:text-4xl font-bold text-[#ffffff] mb-4 filter drop-shadow-lg"
             >
               RE+ MEXICO
             </span>
-            <span class=''>
-              {t('program.title_1')}
+            <span class="">
+              {t("program.title_content_premium")}
             </span>
           </h1>
           <div
-            class='w-32 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full'
+            class="w-32 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full"
           >
           </div>
-        </div>
 
-        <!-- Ejes Temáticos Section -->
-        <div
-          class='py-16 bg-black/20 backdrop-blur-sm rounded-3xl border border-white/10 mb-16'
-        >
-          <div class='container mx-auto px-4'>
-            <div class='text-center mb-12'>
-              <h2 class='text-4xl font-bold text-white mb-4'>
-                {
-                  i18next.language === 'es'
-                    ? 'Ejes Temáticos'
-                    : 'Thematic Areas'
-                }
-              </h2>
-              <div
-                class='w-24 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full'
-              >
-              </div>
-            </div>
-
+          <!-- Tarjetas de contenido experiencia premium -->
+          <div
+            class="mt-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
+          >
+            <!-- Tarjeta: Conferencias Premium -->
             <div
-              class='grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto'
+              class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden"
             >
-              <!-- Energía Solar -->
-              <div
-                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
-              >
+              <div class="w-full flex justify-center -mt-8">
                 <div
-                  class='w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+                  class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
                 >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='h-10 w-10 text-white'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
+                  <div
+                    class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
                   >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
-                    ></path>
-                  </svg>
+                    <img
+                      src="/img/conferencias_premium.webp"
+                      alt="Conferencias Premium"
+                      class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                    />
+                  </div>
                 </div>
-                <h3 class='text-xl font-bold text-white mb-4'>
-                  {i18next.language === 'es' ? 'Energía Solar' : 'Solar Energy'}
-                </h3>
-                <ul class='text-white/70 text-sm space-y-2 text-left'>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Política energética y regulación del sector solar'
-                        : 'Energy policy and solar sector regulation'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Desarrollo de proyectos solares a escala industrial'
-                        : 'Industrial scale solar project development'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Autoconsumo y nuevos modelos de generación limpia'
-                        : 'Self-consumption and new clean generation models'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Perspectivas y retos de la generación distribuida'
-                        : 'Distributed generation perspectives and challenges'
-                    }
-                  </li>
-                </ul>
               </div>
-
-              <!-- Almacenamiento de Energía -->
               <div
-                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
+                class="flex flex-col sm:justify-start items-center px-6 p-5 pt-10 pb-8"
               >
-                <div
-                  class='w-20 h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
+                <h3
+                  class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
                 >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke-width='1.5'
-                    stroke='currentColor'
-                    class='h-10 w-10 text-white'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      d='M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z'
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class='text-xl font-bold text-white mb-4'>
-                  {
-                    i18next.language === 'es'
-                      ? 'Almacenamiento de Energía'
-                      : 'Energy Storage'
-                  }
+                  {t("program.item_premium_1")}
                 </h3>
-                <ul class='text-white/70 text-sm space-y-2 text-left'>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Evolución del mercado y oportunidades de inversión'
-                        : 'Market evolution and investment opportunities'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Modelos de negocio y estrategias de monetización'
-                        : 'Business models and monetization strategies'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Regulación, financiamiento y perspectivas de integración'
-                        : 'Regulation, financing and integration perspectives'
-                    }
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Hidrógeno Verde -->
-              <div
-                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
-              >
-                <div
-                  class='w-20 h-20 bg-gradient-to-r from-cyan-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
-                >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='h-10 w-10 text-white'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M13 10V3L4 14h7v7l9-11h-7z'></path>
-                  </svg>
-                </div>
-                <h3 class='text-xl font-bold text-white mb-4'>
-                  {
-                    i18next.language === 'es'
-                      ? 'Hidrógeno Verde'
-                      : 'Green Hydrogen'
-                  }
-                </h3>
-                <ul class='text-white/70 text-sm space-y-2 text-left'>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Desarrollo industrial y escalamiento de proyectos'
-                        : 'Industrial development and project scaling'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Descarbonización a través del hidrógeno verde'
-                        : 'Decarbonization through green hydrogen'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Inversión y desarrollo tecnológico del nuevo vector energético'
-                        : 'Investment and technological development of the new energy vector'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Conexión estratégica entre las energías renovables'
-                        : 'Strategic connection between renewable energies'
-                    }
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Energía Eólica -->
-              <div
-                class='group text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300'
-              >
-                <div
-                  class='w-20 h-20 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'
-                >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='h-10 w-10 text-white'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10'
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class='text-xl font-bold text-white mb-4'>
-                  {i18next.language === 'es' ? 'Energía Eólica' : 'Wind Energy'}
-                </h3>
-                <ul class='text-white/70 text-sm space-y-2 text-left'>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Tendencias globales y perspectivas del mercado eólico'
-                        : 'Global trends and wind market perspectives'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Innovaciones tecnológicas para una generación más eficiente'
-                        : 'Technological innovations for more efficient generation'
-                    }
-                  </li>
-                  <li>
-                    • {
-                      i18next.language === 'es'
-                        ? 'Convergencia entre energía eólica y otras fuentes renovables'
-                        : 'Convergence between wind energy and other renewable sources'
-                    }
-                  </li>
-                </ul>
               </div>
             </div>
-
-            <!-- Y mucho más section -->
-            <div class='text-center mt-12'>
+            <!-- Tarjeta: VIP Area de Networking -->
+            <div
+              class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden"
+            >
+              <div class="w-full flex justify-center -mt-8">
+                <div
+                  class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
+                >
+                  <div
+                    class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
+                  >
+                    <img
+                      src="/img/vip_area.webp"
+                      alt="Conferencias Premium"
+                      class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                    />
+                  </div>
+                </div>
+              </div>
               <div
-                class='inline-flex items-center gap-4 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white px-8 py-4 rounded-full border-2 border-white/20'
+                class="flex-1 flex flex-col justify-start items-center px-6 p-5 pt-10 pb-8"
               >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
+                <h3
+                  class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
                 >
-                  <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M12 6v6m0 0v6m0-6h6m-6 0H6'></path>
-                </svg>
-                <span class='text-xl font-bold uppercase tracking-wider'>
-                  {
-                    i18next.language === 'es'
-                      ? '¡Y mucho más!'
-                      : 'And much more!'
-                  }
-                </span>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  {t("program.item_premium_2")}
+                </h3>
+              </div>
+            </div>
+            <!-- Tarjeta: Energy Night -->
+            <div
+              class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden"
+            >
+              <div class="w-full flex justify-center -mt-8">
+                <div
+                  class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
                 >
+                  <div
+                    class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
+                  >
+                    <img
+                      src="/img/energy_night.webp"
+                      alt="Conferencias Premium"
+                      class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex-1 flex flex-col justify-start items-center px-6 p-5 pt-10 pb-8"
+              >
+                <h3
+                  class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
+                  set:html={t("program.item_premium_3")}
+                />
+              </div>
+            </div>
+            <!-- Tarjeta: Sunset Cocktail -->
+            <div
+              class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden"
+            >
+              <div class="w-full flex justify-center -mt-8">
+                <div
+                  class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
+                >
+                  <div
+                    class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
+                  >
+                    <img
+                      src="/img/sunset_cocktail.webp"
+                      alt="Conferencias Premium"
+                      class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex-1 flex flex-col justify-start items-center px-6 p-5 pt-10 pb-8"
+              >
+                <h3
+                  class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
+                >
+                  {t("program.item_premium_4")}
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boton de venta de pases premium -->
+          <div class="flex justify-center mt-14">
+            <a
+              href={`${base}/programa-premium-productos`}
+              class="inline-flex items-center gap-4 px-8 sm:px-12 py-5 sm:text-2xl font-extrabold rounded-full shadow-xl border-4 border-yellow-400 bg-gradient-to-r from-yellow-400 via-[#5E5884] to-[#1E293B] text-white tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-yellow-400/40 focus:outline-none focus:ring-4 focus:ring-yellow-300/40"
+            >
+              <span class="uppercase tracking-wider drop-shadow-lg"
+                >{t("program.button2")}</span
+              >
+              <svg
+                version="1.1"
+                id="Uploaded to svgrepo.com"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="26px"
+                height="26px"
+                viewBox="0 0 32 32"
+                xml:space="preserve"
+                fill="#000000"
+                ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                  <style type="text/css">
+                    .puchipuchi_een {
+                      fill: #ffffff;
+                    }
+                  </style>
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
+                    class="puchipuchi_een"
+                    d="M20.414,26.414l9-9c0.781-0.781,0.781-2.047,0-2.828l-9-9c-0.781-0.781-2.047-0.781-2.828,0 s-0.781,2.047,0,2.828L23.172,14H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h19.172l-5.586,5.586c-0.781,0.781-0.781,2.047,0,2.828 S19.633,27.195,20.414,26.414z"
                   ></path>
-                </svg>
-              </div>
-            </div>
+                </g></svg
+              >
+            </a>
           </div>
-        </div>
-
-        <!-- Features Section -->
-        <div class='py-20'>
-          <div class='container mx-auto px-4'>
-            <div
-              class='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'
-              data-aos='fade-up'
-              data-aos-duration='1000'
-              data-aos-delay='800'
-            >
-              <div class='text-center'>
-                <div
-                  class='w-16 h-16 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] rounded-2xl flex items-center justify-center mx-auto mb-4'
-                >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='h-8 w-8 text-white'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7'
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class='text-xl font-bold text-white mb-2'>
-                  {
-                    i18next.language === 'es'
-                      ? 'Acceso Exclusivo'
-                      : 'Exclusive Access'
-                  }
-                </h3>
-                <p class='text-white/70'>
-                  {
-                    i18next.language === 'es'
-                      ? 'Contenido premium y experiencias únicas'
-                      : 'Premium content and unique experiences'
-                  }
-                </p>
-              </div>
-
-              <div class='text-center'>
-                <div
-                  class='w-16 h-16 bg-gradient-to-r from-[#1E293B] to-[#374151] rounded-2xl flex items-center justify-center mx-auto mb-4'
-                >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='h-8 w-8 text-white'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class='text-xl font-bold text-white mb-2'>
-                  Networking VIP
-                </h3>
-                <p class='text-white/70'>
-                  {
-                    i18next.language === 'es'
-                      ? 'Conecta con líderes de la industria'
-                      : 'Connect with industry leaders'
-                  }
-                </p>
-              </div>
-
-              <div class='text-center'>
-                <div
-                  class='w-16 h-16 bg-gradient-to-r from-[#5E5884] to-[#1E293B] rounded-2xl flex items-center justify-center mx-auto mb-4'
-                >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='h-8 w-8 text-white'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class='text-xl font-bold text-white mb-2'>
-                  {i18next.language === 'es' ? 'Innovación' : 'Innovation'}
-                </h3>
-                <p class='text-white/70'>
-                  {
-                    i18next.language === 'es'
-                      ? 'Las últimas tendencias y tecnologías'
-                      : 'The latest trends and technologies'
-                  }
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p
-          data-aos='fade-up'
-          data-aos-duration='1000'
-          class='text-white text-center text-xl mb-16'
-        >
-          {t('program.text_3')}
-        </p>
-
-        <!-- CTA Button -->
-        <div
-          class='text-center mt-10'
-          data-aos='zoom-in'
-          data-aos-duration='1000'
-          data-aos-delay='600'
-        >
-          <a
-            href={`${base}/programa-premium-productos`}
-            class='group relative inline-flex items-center gap-4 px-12 py-6 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden border-2 border-white/20'
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="text-white text-xl text-center py-10"
           >
-            <!-- Efecto de brillo -->
-            <div
-              class='absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000'
-            >
-            </div>
-
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              class='h-6 w-6 relative z-10'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
-              ></path>
-            </svg>
-
-            <span class='relative z-10 uppercase tracking-wider'>
-              {t('program.button2')}
-            </span>
-
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              class='h-6 w-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
-            </svg>
-          </a>
+            {
+              i18next.language === "es"
+                ? "Mantente pendiente de la agenda de conferencias y descubre las tendencias que están transformando el panorama energético."
+                : "Stay tuned for the conference schedule and discover the trends that are transforming the energy landscape."
+            }
+          </p>
         </div>
-
-        <p
-          data-aos='fade-up'
-          data-aos-duration='1000'
-          class='text-white text-xl text-center py-10'
-        >
-          {
-            i18next.language === 'es'
-              ? 'Mantente pendiente de la agenda de conferencias y descubre las tendencias que están transformando el panorama energético.'
-              : 'Stay tuned for the conference schedule and discover the trends that are transforming the energy landscape.'
-          }
-        </p>
       </div>
     </div>
   </div>
@@ -621,5 +321,155 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
     .grid.lg\\:grid-cols-4 {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+
+  .modern-card {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(94, 88, 132, 0.15);
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .modern-card:hover {
+    box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.28);
+    background: rgba(94, 88, 132, 0.25);
+    transform: translateY(-6px) scale(1.04);
+  }
+
+  .icon-circle {
+    transition: transform 0.3s;
+    box-shadow: 0 4px 16px 0 rgba(94, 88, 132, 0.25);
+  }
+
+  .img-card {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(30, 41, 59, 0.15);
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+  }
+  .img-card:hover {
+    box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.28);
+    background: rgba(94, 88, 132, 0.25);
+    transform: translateY(-6px) scale(1.04);
+  }
+  .img-card-img {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5e5884 0%, #1e293b 100%);
+    overflow: hidden;
+  }
+  @media (min-width: 640px) {
+    .img-card-img {
+      height: 14rem;
+    }
+  }
+  .img-card-content {
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(30, 41, 59, 0.7) 0%,
+      rgba(94, 88, 132, 0.6) 70%,
+      transparent 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0%;
+  }
+  .card-modern {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(30, 41, 59, 0.1);
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+  }
+  .card-modern:hover {
+    box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.28);
+    background: rgba(94, 88, 132, 0.18);
+    transform: translateY(-6px) scale(1.04);
+  }
+  .card-img {
+    width: 100%;
+    height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5e5884 0%, #1e293b 100%);
+    overflow: hidden;
+    position: relative;
+  }
+  @media (min-width: 640px) {
+    .card-img {
+      height: 14rem;
+    }
+  }
+
+  .premium-card-v2 {
+    background: linear-gradient(
+      135deg,
+      #1e293bcc 0%,
+      #5e588499 60%,
+      #1e293bcc 100%
+    );
+    border-radius: 1.25rem;
+    border: 2px solid #5e5884;
+    box-shadow:
+      0 8px 32px 0 rgba(94, 88, 132, 0.18),
+      0 0 24px 0 #5e5884aa;
+    transition:
+      box-shadow 0.4s,
+      transform 0.4s;
+    overflow: hidden;
+    /* min-height eliminado para responsividad */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .premium-card-v2:hover {
+    box-shadow:
+      0 20px 60px 0 #5e5884cc,
+      0 0 32px 0 #1e293bcc;
+    background: linear-gradient(
+      135deg,
+      #5e5884cc 0%,
+      #1e293b99 60%,
+      #1e293bcc 100%
+    );
+    transform: translateY(-8px) scale(1.04);
+  }
+  .premium-img-circle {
+    box-shadow: 0 4px 24px 0 #5e5884aa;
+    border-radius: 9999px;
+    background: rgba(30, 41, 59, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      box-shadow 0.3s,
+      border 0.3s;
   }
 </style>
