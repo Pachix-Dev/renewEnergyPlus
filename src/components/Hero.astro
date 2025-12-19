@@ -65,14 +65,14 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         <a
           href={`${base}/registro`}
           target="_blank"
-          class="relative w-full flex items-center justify-center gap-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 border-4 border-blue-400 shadow-[0_8px_32px_0_rgba(56,189,248,0.25)] text-white text-2xl lg:text-3xl uppercase font-extrabold transition-all duration-300 hover:bg-blue-600 hover:text-white hover:scale-105 focus:ring-4 focus:ring-blue-200 focus:outline-none group overflow-hidden"
+          class="relative w-full flex items-center justify-center gap-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 border-4 border-yellow-400 shadow-[0_8px_32px_0_rgba(251,191,36,0.25)] text-white text-2xl lg:text-3xl uppercase font-extrabold transition-all duration-300 hover:bg-orange-600 hover:text-white hover:scale-105 focus:ring-4 focus:ring-yellow-200 focus:outline-none group overflow-hidden"
         >
           <span
-            class="absolute inset-0 rounded-2xl border-4 border-blue-400 animate-[border-glow-blue_2s_linear_infinite] pointer-events-none"
+            class="absolute inset-0 rounded-2xl border-4 border-yellow-400 animate-[border-glow-yellow_2s_linear_infinite] pointer-events-none"
           ></span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-9 w-9 text-sky-200 drop-shadow-lg"
+            class="h-9 w-9 text-yellow-100 drop-shadow-lg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -284,6 +284,23 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
     100% {
       box-shadow:
         0 0 0 0 #38bdf8,
+        0 0 0 0 #fff;
+    }
+  }
+  @keyframes border-glow-yellow {
+    0% {
+      box-shadow:
+        0 0 0 0 #fbbf24,
+        0 0 0 0 #fff;
+    }
+    50% {
+      box-shadow:
+        0 0 24px 8px #fbbf24,
+        0 0 12px 4px #fff;
+    }
+    100% {
+      box-shadow:
+        0 0 0 0 #fbbf24,
         0 0 0 0 #fff;
     }
   }
