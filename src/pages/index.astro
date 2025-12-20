@@ -13,11 +13,13 @@ import Segmentos from "../components/home/Segmentos.astro";
 import Recinto from "../components/hotel/Recinto.astro";
 import Experience from "../components/home/Experience.astro";
 import Highlights from "../components/home/Highlights.astro";
+import HomePopup from "../components/home/HomePopup.jsx";
 
 changeLanguage("es");
 ---
 
 <Layout title='RE+ MEXICO'>
+  <HomePopup client:load/>
   <Hero />
   <BecomeExhibitor />
   <Cifras />
