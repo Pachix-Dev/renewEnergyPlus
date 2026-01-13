@@ -712,6 +712,7 @@
         "subtitle": "Experiencia Premium",
         "date-element": "fecha",
         "time-element": "hora",
+        "place-element": "lugar",
         "date": "15 de abril",
         "time": "17:00 - 20:00 hrs",
         "desc-element": "Sobre el evento",

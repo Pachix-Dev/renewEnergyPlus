@@ -431,7 +431,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 
       <!-- Layout principal -->
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-        <!-- Video - columna más ancha -->
+        <!-- Video  -->
         <div
           class="lg:col-span-3"
           data-aos="fade-right"
@@ -465,28 +465,29 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           </div>
         </div>
 
-        <!-- Información - columna más angosta -->
+        <!-- Información -->
         <div
           class="lg:col-span-2 space-y-6"
           data-aos="fade-left"
           data-aos-duration="1000"
           data-aos-delay="300"
         >
-          <!-- Fecha y Hora Card -->
+          <!-- Fecha, Hora y Lugar Card - Compacta -->
           <div class="relative group">
             <div
               class="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-[#5E5884] rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"
             >
             </div>
             <div
-              class="relative bg-gradient-to-br from-yellow-400/15 via-[#5E5884]/15 to-[#1E293B]/80 backdrop-blur-xl border-2 border-yellow-400/40 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+              class="relative bg-gradient-to-br from-yellow-400/15 via-[#5E5884]/15 to-[#1E293B]/80 backdrop-blur-xl border-2 border-yellow-400/40 rounded-2xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-300"
             >
-              <div class="flex items-center gap-3 mb-4">
+              <!-- Fecha -->
+              <div class="flex items-center gap-2.5 mb-3">
                 <div
-                  class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-lg"
+                  class="w-9 h-9 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-lg flex-shrink-0"
                 >
                   <svg
-                    class="w-6 h-6 text-[#1E293B]"
+                    class="w-5 h-5 text-[#1E293B]"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -496,25 +497,25 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                       clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <div>
+                <div class="flex-1 min-w-0">
                   <p
-                    class="text-xs text-yellow-400/80 font-semibold uppercase tracking-wider"
+                    class="text-[10px] text-yellow-400/80 font-semibold uppercase tracking-wider"
                   >
                     {t("sunset_cocktail.date-element")}
                   </p>
-                  <p class="text-white font-bold text-base">
+                  <p class="text-white font-bold text-sm">
                     {t("sunset_cocktail.date")}
                   </p>
                 </div>
               </div>
-              <div
-                class="flex items-center gap-3 pt-4 border-t border-white/10"
-              >
+              
+              <!-- Hora -->
+              <div class="flex items-center gap-2.5 mb-3 pt-3 border-t border-white/10">
                 <div
-                  class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#5E5884] to-[#1E293B] flex items-center justify-center shadow-lg"
+                  class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#5E5884] to-[#1E293B] flex items-center justify-center shadow-lg flex-shrink-0"
                 >
                   <svg
-                    class="w-6 h-6 text-yellow-400"
+                    class="w-5 h-5 text-yellow-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -524,14 +525,44 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                       clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <div>
+                <div class="flex-1 min-w-0">
                   <p
-                    class="text-xs text-yellow-400/80 font-semibold uppercase tracking-wider"
+                    class="text-[10px] text-yellow-400/80 font-semibold uppercase tracking-wider"
                   >
                     {t("sunset_cocktail.time-element")}
                   </p>
-                  <p class="text-white font-bold text-base">
+                  <p class="text-white font-bold text-sm">
                     {t("sunset_cocktail.time")}
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Lugar -->
+              <div
+                class="flex items-center gap-2.5 pt-3 border-t border-white/10"
+              >
+                <div
+                  class="w-9 h-9 rounded-lg bg-gradient-to-br from-yellow-400 to-[#5E5884] flex items-center justify-center shadow-lg flex-shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5 text-[#1E293B]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p
+                    class="text-[10px] text-yellow-400/80 font-semibold uppercase tracking-wider"
+                  >
+                    {t("sunset_cocktail.place-element")}
+                  </p>
+                  <p class="text-white font-bold text-sm">
+                    VIP Area
                   </p>
                 </div>
               </div>

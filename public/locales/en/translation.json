@@ -713,6 +713,7 @@
         "subtitle": "Premium Experience",
         "date-element": "date",
         "time-element": "time",
+        "place-element": "place",
         "date": "April 15",
         "time": "5:00 PM - 8:00 PM",
         "desc-element": "About the event",
