@@ -708,5 +708,18 @@
         "text_10": "Your Premium access guarantees entry to an event reserved for the most influential figures in the sector.",
         "text_11": "Don't miss out",
         "text_12": "BUY YOUR PREMIUM PASS"
+    },
+    "sunset_cocktail":{
+        "subtitle": "Premium Experience",
+        "date-element": "date",
+        "time-element": "time",
+        "date": "April 15",
+        "time": "5:00 PM - 8:00 PM",
+        "desc-element": "About the event",
+        "description": "An exclusive evening with music, drinks, and networking. It will feature exhibitors, VIP guests, and leaders from the energy sector.",
+        "tag01": "Music",
+        "tag02": "Drinks",
+        "tag03": "Networking",
+        "button": "Get your Premium access"
     }
 }

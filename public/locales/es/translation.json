@@ -707,5 +707,18 @@
         "text_10": "Tu acceso Premium te garantiza entrada a un evento reservado para las figuras más influyentes del sector.",
         "text_11": "No te quedes fuera",
         "text_12": "COMPRA TU PASE PREMIUM"
+    },
+    "sunset_cocktail":{
+        "subtitle": "Experiencia Premium",
+        "date-element": "fecha",
+        "time-element": "hora",
+        "date": "15 de abril",
+        "time": "17:00 - 20:00 hrs",
+        "desc-element": "Sobre el evento",
+        "description": "Una tarde exclusiva con música, bebidas y networking. Contará con la presencia de expositores, invitados VIP y líderes del sector energético.",
+        "tag01": "Música",
+        "tag02": "Bebidas",
+        "tag03": "Networking",
+        "button": "Adquiere tu acceso Premium"
     }
 }
