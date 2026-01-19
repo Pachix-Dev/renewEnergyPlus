@@ -68,6 +68,13 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
           >
         </div>
 
+        <div class="mt-8 p-4 border rounded-xl bg-yellow-100 text-yellow-800 text-center">
+          <p class="font-bold text-sm md:text-base">
+            {t("register.media_messege")}
+            <a href="mailto:social.media@igeco.mx"> social.media@igeco.mx </a>
+          </p>
+        </div>
+
         {/* Formulario de actualizanción de datos */}
         <PreValidation
           client:only='react'
