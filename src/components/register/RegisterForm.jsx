@@ -327,8 +327,14 @@ export function RegisterForm({ translates, currentLanguage }) {
 
             <div>
               <p className='mb-4 font-semibold text-black'>
-                {translates.type_register}{' '}
-                <span className='text-red-600'>*</span>
+                {translates.type_register}
+                <span className='text-red-600'>*</span><br />
+                <span className="text-red-600 font-bold">
+                  {translates.media_messege}
+                  <a href="mailto:social.media@igeco.mx" className='underline'>
+                    social.media@igeco.mx
+                  </a>
+                </span>
               </p>
               <select
                 {...register('typeRegister', {
@@ -344,9 +350,9 @@ export function RegisterForm({ translates, currentLanguage }) {
                 <option value='VISITANTE' className='text-black'>
                   {translates.type_register_2}
                 </option>
-                <option value='MEDIO' className='text-black'>
+                {/* <option value='MEDIO' className='text-black'>
                   {translates.type_register_3}
-                </option>
+                </option> */}
               </select>
               {errors.typeRegister && (
                 <p className='text-red-600 font-light'>

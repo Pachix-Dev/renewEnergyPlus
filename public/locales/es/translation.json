@@ -556,7 +556,8 @@
         "position_4": "PERSONAL OPERATIVO",
         "student_register": "* El acceso para estudiantes solo es válido el 16 de abril a partir de las 15:00 hrs. a 17:00 hrs.",
         "register_student": "Registro de estudiantes",
-        "select_country_first": "Por favor selecciona un país primero"
+        "select_country_first": "Por favor selecciona un país primero",
+        "media_messege": "Para atención a medios, favor de contactar a "
     },
     "thanks_page":{
         "title": "Gracias por registrarte",

@@ -557,7 +557,8 @@
         "position_4": "OPERATING PERSONNEL",
         "student_register": "* The access for students is only valid on April 16 from 15:00 hrs. to 17:00 hrs.",
         "register_student": "Register as student",
-        "select_country_first": "Please select a country first"        
+        "select_country_first": "Please select a country first",
+        "media_messege": "For media inquiries, please contact "      
     },
     "thanks_page":{
         "title": "Thank you for registering",
