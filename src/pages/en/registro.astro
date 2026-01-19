@@ -19,18 +19,19 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
     <div class='md:w-1/2 bg-white overflow-hidden rounded-2xl shadow-2xl'>
       {/* Panel Izquierdo - Formulario */}
       <div class='p-12 bg-white'>
+
         {/* Título */}
-        <div class='mb-8'>
-          <h1 class='text-left font-extrabold text-4xl'>
+        <div class='mb-8 text-center md:text-left'>
+          <h1 class='font-extrabold text-4xl'>
             {t('register.title')}
           </h1>
           <p class='text-gray-600 font-bold text-sm'>
             {t('register.welcome')}
           </p>
         </div>
-        <div
-          class='mt-6 p-4 border rounded-xl bg-gray-50 flex items-center justify-between gap-4'
-        >
+
+        {/* Reimpresión de Gafete */}
+        <div class='mt-6 p-4 border rounded-xl bg-gray-50 flex flex-wrap items-center justify-center md:justify-between gap-4 text-center md:text-left'>
           <p class='text-gray-700 font-medium'>
             {t('home.register.reprint_hint')}
           </p>
@@ -41,7 +42,9 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
             {t('home.register.reprint_button')}
           </a>
         </div>
-        <div class='mt-8 flex items-center gap-4 font-bold'>
+
+        {/* Formulario de Registro */}
+        <div class='mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4 font-bold'>
           {t('register.first_time')}
           <a
             href={`${base}/registro-nuevo`}
@@ -64,6 +67,8 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
             {t('register.button')}</a
           >
         </div>
+
+        {/* Formulario de actualizanción de datos */}
         <PreValidation
           client:only='react'
           translates={registerTranslations}
