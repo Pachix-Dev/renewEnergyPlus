@@ -8,21 +8,24 @@ changeLanguage("en");
 const translate = t("workshops", { returnObjects: true });
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 ---
-<Layout title="Enlightenment Program 2026 | Renew Energy Plus" description="Descubre el programa completo del Enlightenment Program 2026 en Renew Energy Plus. Explora charlas, talleres y sesiones especializadas sobre energías renovables e innovación tecnológica." >
-    <section class="bg-gradient-to-b from-gray-900 via-gray-950 to-black py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
-                Enlightenment Program 2026
-            </h1>
-            <p class="mt-4 text-lg leading-6 text-gray-300">
-                Explora el programa completo del Enlightenment Program 2026 en Renew Energy Plus. Descubre charlas, talleres y sesiones especializadas sobre energías renovables e innovación tecnológica.
-            </p>
-        </div>
-    </section>
 
-    <section class="py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <EnlightenmentProgram language={i18next.language} client:only="react" />
-        </div>
-    </section>
+<Layout
+  title="Enlightenment Program 2026 | Renew Energy Plus"
+  description="Un espacio para conectar, aprender y descubrir, donde las empresas tecnológicas del sector energético comparten su experiencia, innovación, casos de éxito, tendencias y soluciones a través de charlas y capacitaciones especializadas."
+>
+  <section
+    class="bg-gradient-to-b from-gray-900 via-gray-950 to-black py-10"
+  >
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
+        ENLIGHTENMENT AREA
+      </h1>
+    </div>
+
+    <div class="">
+      <div class="">
+        <EnlightenmentProgram language={i18next.language} client:only="react" />
+      </div>
+    </div>
+  </section>
 </Layout>
