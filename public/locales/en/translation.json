@@ -360,7 +360,16 @@
         },
         "text_1": "Live the VIP experience with our Premium Conference Program!",
         "text_2": "Are you ready to take your knowledge and connections to the next level? Our Premium Conference Program gives you exclusive access to the most innovative talks and influential industry experts.",
-        "text_3": "The RE+ MEXICO Premium Conferences are your opportunity to explore trends, innovation, and connect with industry leaders!"
+        "text_3": "The RE+ MEXICO Premium Conferences are your opportunity to explore trends, innovation, and connect with industry leaders!",
+        "title_topics": "Two Spaces, One Mission",
+        "subtitle_topics":"Discover the knowledge and innovation driving the future of energy",
+        "topic_subtitle_1":"Strategic Conferences",
+        "topic_subtitle_2":"Practical Innovation",
+         "enlightenment_desc": "A space to connect, learn, and discover, where technology companies in the energy sector share their experience, innovation, success stories, trends, and solutions through talks and specialized training.",
+        "installer_desc": "A space dedicated to specialized workshops in collaboration with strategic partners, offering practical and up-to-date content on relevant innovations, trends, and advances in the renewable energy industry.",
+        "btn_program": "SEE THE FULL PROGRAM",
+        "text_program": "PROGRAM"
+
     },
     "counterDown": {
         "description": "<strong>An exclusive networking event for executives and industry leaders where you will be able to</strong> create strategic networks AND meet new business.",

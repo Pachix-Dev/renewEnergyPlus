@@ -360,7 +360,16 @@
         },
         "text_1": "¡Vive la experiencia VIP con nuestro Programa de Conferencias Premium!",
         "text_2": "¿Estás listo para llevar tus conocimientos y conexiones al siguiente nivel? Nuestro Programa de Conferencias Premium te ofrece acceso exclusivo a las charlas más innovadoras y a los expertos más influyentes de la industria.",
-        "text_3": "¡Las Conferencias Premium de RE+ MEXICO son tu oportunidad para explorar tendencias, innovación y conectar con los líderes de la industria!"
+        "text_3": "¡Las Conferencias Premium de RE+ MEXICO son tu oportunidad para explorar tendencias, innovación y conectar con los líderes de la industria!",
+        "title_topics": "Dos Espacios, Una Misión",
+        "subtitle_topics":"Descubre el conocimiento y la innovación que impulsa el futuro energético.",
+        "topic_subtitle_1": "Conferencias Estratégicas",
+        "topic_subtitle_2": "Innovación Práctica",
+        "enlightenment_desc": "Un espacio para conectar, aprender y descubrir, donde las empresas tecnológicas del sector energético comparten su experiencia, innovación, casos de éxito, tendencias y soluciones a través de charlas y capacitaciones especializadas.",
+        "installer_desc": "Espacio dedicado a workshops especializados en colaboración con aliados estratégicos, para ofrecer contenido práctico y actualizado sobre innovaciones, tendencias y avances relevantes en la industria de las energías renovables.",
+        "btn_program": "Ver programa completo",
+        "text_program":"PROGRAMA"
+
     },
     "counterDown": {
         "description": "<strong>Un evento exclusivo de networking para empresarios y líderes de la industria donde podrás</strong> crear redes estratégicas Y conocer nuevos negocios.",
