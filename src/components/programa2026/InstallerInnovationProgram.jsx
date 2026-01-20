@@ -2,24 +2,24 @@ import { useState, useEffect } from 'react';
 
 export function InstallerInnovationProgram( { language } ) {
 
+   
     const [programData, setProgramData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [activeDayId, setActiveDayId] = useState(null);
-    const [typeFilter, setTypeFilter] = useState('todos');
     const [selectedSpeaker, setSelectedSpeaker] = useState(null);
-    
+
     useEffect(() => {
         fetch('https://dashboard.igeco.mx/api/programa/completo')
             .then((response) => response.json())
             .then((data) => {
-                const ecoPitch = data?.data?.find((stage) => stage.id === 4); // ID fijo para Installer & Innovation Area 2026
+                const ecoStage = data?.data?.find((stage) => stage.id === 4); // ID fijo para Enlightenment Area 2026
                 // Ordenar días por el campo date (ascendente)
-                const sortedDias = (ecoPitch?.dias || [])
+                const sortedDias = (ecoStage?.dias || [])
                     .slice()
                     .sort((a, b) => String(a.date || '').localeCompare(String(b.date || '')));
 
-                setProgramData(ecoPitch ? { ...ecoPitch, dias: sortedDias } : null);
+                setProgramData(ecoStage ? { ...ecoStage, dias: sortedDias } : null);
                 const firstDayWithItems = sortedDias.find((d) => (d.conferencias || []).length > 0)?.id || sortedDias[0]?.id || null;
                 setActiveDayId(firstDayWithItems);
                 setLoading(false);
@@ -60,8 +60,8 @@ export function InstallerInnovationProgram( { language } ) {
     const typeColor = (type) => {
         const t = normalizeType(type);
         if (t === 'panel') return 'bg-amber-100 text-amber-800 ring-amber-200';
-        if (t === 'keynote') return 'bg-indigo-100 text-indigo-800 ring-indigo-200';
-        if (t === 'presentation') return 'bg-emerald-100 text-emerald-800 ring-emerald-200';
+        if (t === 'keynote') return 'bg-purple-100 text-purple-800 ring-purple-200';
+        if (t === 'presentation') return 'bg-indigo-100 text-indigo-800 ring-indigo-200';
         return 'bg-slate-100 text-slate-700 ring-slate-200';
     };
 
@@ -72,49 +72,45 @@ export function InstallerInnovationProgram( { language } ) {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center py-16">
-                <div className="h-12 w-12 animate-spin rounded-full border-2 border-slate-300 border-t-emerald-500"></div>
+            <div className="flex justify-center items-center min-h-[40vh] bg-gradient-to-b from-slate-50 via-white to-slate-50">
+                <div className="h-10 w-10 animate-spin rounded-full border-2 border-slate-200 border-t-[#BC0100]" />
             </div>
         );
     }
 
     if (error) {
         return (
-            <div className="mx-auto max-w-3xl rounded-lg border border-red-200 bg-red-50 p-4 text-red-700">
+            <div className="mx-auto max-w-xl rounded-xl border border-red-200 bg-red-50 p-4 text-red-700 text-center shadow-sm">
                 Error al cargar el programa: {error}
             </div>
         );
     }
 
     if (!programData) {
-        return <div className="text-center py-12">No se encontró información del ECO PITCH 2026</div>;
+        return <div className="text-center py-16 text-slate-400">No se encontró información del ECO STAGE</div>;
     }
 
     const days = (programData.dias || []).slice().sort((a, b) => String(a.date || '').localeCompare(String(b.date || '')));
     const activeDay = days.find((d) => d.id === activeDayId) || days[0] || null;
     const sessions = (activeDay?.conferencias || [])
         .slice()
-        .sort((a, b) => String(a.start_time || '').localeCompare(String(b.start_time || '')))
-        .filter((c) => (typeFilter === 'todos' ? true : normalizeType(c.type) === typeFilter));
-
-    const availableTypes = Array.from(
-        new Set((activeDay?.conferencias || []).map((c) => normalizeType(c.type)))
-    ).filter(Boolean);
+        .sort((a, b) => String(a.start_time || '').localeCompare(String(b.start_time || '')));
 
     return (
-        <>
+        <div className="py-10">
+
             {/* Modal de semblanza */}
             {selectedSpeaker && (
-                <div 
+                <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
                     onClick={() => setSelectedSpeaker(null)}
                 >
-                    <div 
+                    <div
                         className="relative max-h-[95vh] w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-2xl animate-in fade-in zoom-in duration-200"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Header con imagen grande */}
-                        <div className="relative bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-600 px-4 py-6 md:px-8 md:py-12">
+                        <div className="relative bg-gradient-to-br from-[#BC0100] via-[#D76901] to-[#BC0100] px-4 py-6 md:px-8 md:py-12">
                             <button
                                 onClick={() => setSelectedSpeaker(null)}
                                 className="absolute top-3 right-3 md:top-4 md:right-4 flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30 hover:scale-110"
@@ -123,26 +119,21 @@ export function InstallerInnovationProgram( { language } ) {
                                     <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
                                 </svg>
                             </button>
-                            
+
                             <div className="flex flex-col items-center gap-4 md:gap-6 md:flex-row md:items-start">
                                 {/* Imagen más grande */}
                                 <div className="relative">
                                     {speakerAvatar(selectedSpeaker.photo) ? (
-                                        <img 
-                                            src={speakerAvatar(selectedSpeaker.photo)} 
-                                            alt={selectedSpeaker.name} 
-                                            className="h-24 w-24 md:h-40 md:w-40 rounded-2xl object-cover ring-4 ring-white/40 shadow-xl" 
+                                        <img
+                                            src={speakerAvatar(selectedSpeaker.photo)}
+                                            alt={selectedSpeaker.name}
+                                            className="h-24 w-24 md:h-40 md:w-40 rounded-2xl object-cover ring-4 ring-white/40 shadow-xl"
                                         />
                                     ) : (
                                         <div className="h-24 w-24 md:h-40 md:w-40 rounded-2xl bg-white/20 text-white flex items-center justify-center text-3xl md:text-5xl font-bold ring-4 ring-white/40 shadow-xl">
                                             {(selectedSpeaker.name || '?').slice(0, 2).toUpperCase()}
                                         </div>
                                     )}
-                                    {/* {selectedSpeaker.role && (
-                                        <div className="absolute -bottom-2 md:-bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-2 py-1 md:px-4 md:py-1.5 text-xs font-bold text-emerald-700 shadow-lg ring-2 ring-emerald-200">
-                                            {selectedSpeaker.role}
-                                        </div>
-                                    )} */}
                                 </div>
 
                                 {/* Info principal */}
@@ -151,7 +142,7 @@ export function InstallerInnovationProgram( { language } ) {
                                         {selectedSpeaker.name}
                                     </h3>
                                     {selectedSpeaker.position && (
-                                        <p className="text-sm md:text-lg text-emerald-50 font-medium mb-2">
+                                        <p className="text-sm md:text-lg text-orange-100 font-medium mb-2">
                                             {selectedSpeaker.position}
                                         </p>
                                     )}
@@ -172,7 +163,7 @@ export function InstallerInnovationProgram( { language } ) {
                             {selectedSpeaker.bio_esp ? (
                                 <div>
                                     <div className="mb-4 flex items-center gap-2">
-                                        <div className="h-1 w-12 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+                                        <div className="h-1 w-12 rounded-full bg-gradient-to-r from-[#BC0100] to-[#D76901]"></div>
                                         <h4 className="text-xl font-bold text-slate-800">Semblanza</h4>
                                     </div>
                                     <div className="prose prose-slate max-w-none">
@@ -193,166 +184,149 @@ export function InstallerInnovationProgram( { language } ) {
 
             {/* Programa principal */}
             <div className="mx-auto max-w-7xl px-4 py-8">
-            {/* <div className="relative overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-6 md:p-8">
-                <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-emerald-200/30 blur-2xl" />
-                <div className="absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-emerald-300/20 blur-3xl" />
-                <div className="relative">
-                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-                        {programData.name}
-                    </h1>
-                    {programData.description && (
-                        <p className="mt-3 max-w-3xl text-slate-700 text-base md:text-lg">{programData.description}</p>
-                    )}
-                    <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-600">
-                        <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 ring-1 ring-emerald-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-emerald-600"><path d="M11.47 3.84a.75.75 0 0 1 1.06 0l7.53 7.53a.75.75 0 0 1-1.06 1.06L12 5.56 4.99 12.43a.75.75 0 1 1-1.02-1.1l7.5-7.5z"/><path d="M12 7.75a.75.75 0 0 1 .75.75v11.25h2.25a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1 0-1.5h2.25V8.5a.75.75 0 0 1 .75-.75z"/></svg>
-                            {programData.location || 'Ubicación por confirmar'}
-                        </span>
-                        {programData.capacity ? (
-                            <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 ring-1 ring-emerald-200">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-emerald-600"><path d="M7.5 7.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/><path d="M3 20.25a8.25 8.25 0 1 1 16.5 0 .75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75z"/></svg>
-                                Capacidad: {programData.capacity}
-                            </span>
-                        ) : null}       
-                    </div>
-                </div>
-            </div> */}
 
-        {/* Program content */}
-            <div className="mt-8 space-y-6">
-                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                    <div className="flex flex-wrap gap-2">
-                        {days.map((d) => {
-                            const count = (d.conferencias || []).length;
-                            const active = d.id === activeDayId;
-                            return (
-                                <button
-                                    key={d.id}
-                                    onClick={() => setActiveDayId(d.id)}
-                                    className={
-                                        'relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium ring-1 transition ' +
-                                        (active
-                                            ? 'bg-emerald-600 text-white ring-emerald-600 shadow-sm'
-                                            : 'bg-white text-slate-700 ring-slate-200 hover:bg-slate-50')
-                                    }
-                                >
-                                    <span className="uppercase">{d.name}</span>
-                                </button>
-                            );
-                        })}
-                    </div>
+                {/* Header del programa */}
+                <div className="rounded-3xl">
+                    <div className="flex flex-col gap-4">
+                        {/* Título y metadatos */}
+                        {/* <div className="space-y-3">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                                {programData.name}
+                            </h1>
+                            <div className="flex flex-wrap items-center gap-3 text-sm">
+                                {programData.location && (
+                                    <div className="inline-flex items-center gap-2 text-slate-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-[#565078]">
+                                            <path fillRule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clipRule="evenodd" />
+                                        </svg>
+                                        <span className="font-medium">{programData.location}</span>
+                                    </div>
+                                )}
+                                {programData.capacity && (
+                                    <div className="inline-flex items-center gap-2 text-slate-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-[#565078]">
+                                            <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
+                                        </svg>
+                                        <span className="font-medium">Capacidad: {programData.capacity}</span>
+                                    </div>
+                                )}
+                            </div>
+                        </div> */}
 
-                    {/* <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-sm text-slate-600 mr-1">Tipo:</span>
-                        <button
-                            onClick={() => setTypeFilter('todos')}
-                            className={
-                                'inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ring-1 transition ' +
-                                (typeFilter === 'todos'
-                                    ? 'bg-slate-900 text-white ring-slate-900'
-                                    : 'bg-white text-slate-700 ring-slate-200 hover:bg-slate-50')
-                            }
-                        >
-                            Todos
-                        </button>
-                        {availableTypes.map((t) => (
-                            <button
-                                key={t}
-                                onClick={() => setTypeFilter(t)}
-                                className={
-                                    'inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ring-1 transition ' +
-                                    (typeFilter === t ? 'bg-emerald-600 text-white ring-emerald-600' : 'bg-white text-slate-700 ring-slate-200 hover:bg-slate-50')
-                                }
-                            >
-                                {typeLabel(t)}
-                            </button>
-                        ))}
-                    </div> */}
-                </div>
-                <div className="relative">
-                    <div className="sticky top-16 z-10 -mx-4 mb-4 bg-gradient-to-r from-emerald-600 to-emerald-500 px-4 py-2 text-white md:rounded-md md:mx-0">
-                        <div className="flex items-center justify-between">
-                            <div className="text-sm font-semibold capitalize">{formatDate(activeDay?.date)}</div>
-                            <div className="text-xs text-emerald-100">{sessions.length} sesiones</div>
+                        {/* Filtros de días */}
+                        <div className="space-y-3">
+                            <div className="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-[#ffffff]">
+                                    <path fillRule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z" clipRule="evenodd" />
+                                </svg>
+                                <span className="text-sm font-semibold text-white">Selecciona el día</span>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {days.map((d) => {
+                                    const active = d.id === activeDayId;
+                                    return (
+                                        <button
+                                            key={d.id}
+                                            onClick={() => setActiveDayId(d.id)}
+                                            className={
+                                                'px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ' +
+                                                (active
+                                                    ? 'bg-gradient-to-br from-[#BC0100] to-[#D76901] text-white shadow-lg shadow-red-500/30 scale-105'
+                                                    : 'bg-white text-slate-700 border border-slate-200 hover:border-[#BC0100] hover:shadow-md')
+                                            }
+                                        >
+                                            <span className="capitalize">{d.name}</span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
-                    </div>
 
+                        {/* Info del día seleccionado */}
+                        {activeDay && (
+                            <div className="rounded-2xl bg-gradient-to-br from-[#D76901] to-[#BC0100]/50 border border-[#BC0100] p-4 sm:p-5 text-white shadow-md">
+                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                                    <div className="flex items-center gap-3">
+                                        <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#BC0100] to-[#D76901] flex items-center justify-center shadow-md">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-white">
+                                                <path fillRule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <div className="text-sm font-bold text-white capitalize">{formatDate(activeDay.date)}</div>
+                                            <div className="text-xs text-white mt-0.5">Día seleccionado</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-200 shadow-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-[#BC0100]">
+                                            <path d="M3.505 2.365A41.369 41.369 0 019 2c1.863 0 3.697.124 5.495.365 1.247.167 2.18 1.108 2.435 2.268a4.45 4.45 0 00-.577-.069 43.141 43.141 0 00-4.706 0C9.229 4.696 7.5 6.727 7.5 8.998v2.24c0 1.413.67 2.735 1.76 3.562l-2.98 2.98A.75.75 0 015 17.25v-3.443c-.501-.048-1-.106-1.495-.172C2.033 13.438 1 12.162 1 10.72V5.28c0-1.441 1.033-2.717 2.505-2.914z" />
+                                            <path d="M14 6c-.762 0-1.52.02-2.271.062C10.157 6.148 9 7.472 9 8.998v2.24c0 1.519 1.147 2.839 2.71 2.935.214.013.428.024.642.034.2.009.385.09.518.224l2.35 2.35a.75.75 0 001.28-.531v-2.07c1.453-.195 2.5-1.463 2.5-2.915V8.998c0-1.526-1.157-2.85-2.729-2.936A41.645 41.645 0 0014 6z" />
+                                        </svg>
+                                        <span className="text-sm font-bold text-slate-900">{sessions.length}</span>
+                                        <span className="text-xs text-slate-600">sesiones</span>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                {/* Lista de conferencias */}
+                <div className="mt-8 space-y-6">
                     {sessions.length === 0 ? (
-                        <div className="rounded-xl border border-slate-200 bg-white p-6 text-center text-slate-600">No hay conferencias para los filtros seleccionados</div>
+                        <div className="rounded-3xl border border-dashed border-slate-200 bg-white/70 p-8 text-center text-slate-500">No hay conferencias para los filtros seleccionados</div>
                     ) : (
                         <ul className="grid grid-cols-1 gap-4 md:gap-6">
                             {sessions.map((conferencia) => (
-                                <li key={conferencia.id} className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5 transition hover:border-emerald-300 hover:shadow-md md:p-6">
-                                    <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-emerald-400 to-emerald-600" />
-                                    <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
-                                        <div className="flex w-full items-center gap-2 md:w-40 md:flex-col md:items-start md:gap-1">
-                                            <div className="inline-flex items-center gap-2 rounded-md bg-slate-50 px-2.5 py-1 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-emerald-600"><path d="M6.75 3A.75.75 0 0 0 6 3.75v.75H4.5A2.25 2.25 0 0 0 2.25 6.75v11.25A2.25 2.25 0 0 0 4.5 20.25h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5H18v-.75a.75.75 0 0 0-1.5 0v.75h-9v-.75A.75.75 0 0 0 6.75 3z"/><path d="M20.25 9H3.75v9a.75.75 0 0 0 .75.75h15a.75.75 0 0 0 .75-.75V9z"/></svg>
-                                                <span>
-                                                    {formatTime(conferencia.start_time)}
-                                                    <span className="mx-1 opacity-70">–</span>
-                                                    {formatTime(conferencia.end_time)}
-                                                </span>
-                                            </div>
-                                            <span className={
-                                                'inline-flex w-fit items-center rounded-full px-2.5 py-1 text-xs font-medium ring-1 ' +
-                                                typeColor(conferencia.type)
-                                            }>
+                                <li key={conferencia.id} className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition">
+                                    <div className="absolute inset-y-3 left-0 w-[3px] rounded-full bg-gradient-to-b from-[#D76901] to-[#BC0100]" />
+
+                                    <div className="pl-3 sm:pl-4 md:pl-6 flex flex-col md:flex-row gap-4 md:gap-5">
+
+                                        <div className="flex flex-row md:flex-col justify-start items-start gap-2 text-xs text-slate-600 md:min-w-[180px] md:max-w-[180px]">
+                                            <span className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-slate-200 bg-slate-50 px-2.5 sm:px-3 py-1 font-semibold text-slate-800 shadow-sm text-xs sm:text-sm">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#BC0100] flex-shrink-0"><path fillRule="evenodd" d="M6 3a1 1 0 011-1h1a1 1 0 010 2v1h4V4a1 1 0 112 0v1h1a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h1V4a1 1 0 011-1zm-1 6v5a1 1 0 001 1h8a1 1 0 001-1V9H5zm3 1a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1z" clipRule="evenodd" /></svg>
+                                                <span className="font-mono tracking-tight whitespace-nowrap">{formatTime(conferencia.start_time)} – {formatTime(conferencia.end_time)}</span>
+                                            </span>
+                                            <span
+                                                className={
+                                                    'inline-flex items-center gap-1.5 rounded-full px-2.5 sm:px-3 py-1 text-[10px] sm:text-[11px] uppercase tracking-wide font-semibold ring-1 shadow-sm whitespace-nowrap ' +
+                                                    typeColor(conferencia.type)
+                                                }
+                                            >
                                                 {typeLabel(conferencia.type)}
                                             </span>
                                         </div>
 
-                                        <div className="min-w-0 flex-1">
-                                            <h3 className="text-lg md:text-xl font-bold text-slate-900"> {language === "es" ? conferencia.title : conferencia.title_en}  </h3>
-                                            {conferencia.description ? (
-                                                <p className="mt-3 text-slate-700"> {language === "es" ? conferencia.description : conferencia.description_en} </p>
-                                            ) : null}
+                                        <div className="flex-1 min-w-0 space-y-3">
+                                            <div className="space-y-2">
+                                                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-slate-900 leading-tight">{language === "es" ? conferencia.title : conferencia.title_en}</h3>
+                                                {conferencia.description ? (
+                                                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{language === "es" ? conferencia.description : conferencia.description_en}</p>
+                                                ) : null}
+                                            </div>
 
-                                            {conferencia.ponentes && conferencia.ponentes.length > 0 ? (
-                                                <div className="mt-4">
-                                                    <div className="mb-2 text-sm font-semibold text-slate-900">Ponentes</div>
-                                                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-                                                        {conferencia.ponentes.map((p) => (
-                                                            <div
-                                                                key={p.id}
-                                                                className="ml-2 flex flex-col rounded-lg bg-slate-50 p-3 ring-1 ring-slate-200 hover:bg-slate-100 transition-all"
-                                                            >
-                                                                <div className="flex items-center gap-3 mb-2">
-                                                                    {speakerAvatar(p.photo) ? (
-                                                                        <img src={speakerAvatar(p.photo)} alt={p.name} className="h-10 w-10 rounded-full object-cover" />
-                                                                    ) : (
-                                                                        <div className="h-10 w-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-bold">
-                                                                            {(p.name || '?').slice(0, 2).toUpperCase()}
-                                                                        </div>
-                                                                    )}
-                                                                    <div className="min-w-0 flex flex-row items-center gap-2">
-                                                                        <div className="truncate text-sm font-semibold text-slate-900">
-                                                                            {p.name}
-                                                                        </div>
-                                                                        {p.role && (
-                                                                            <span className="inline-block rounded bg-slate-200 px-1.5 py-0.5 text-xs text-slate-700 mt-0.5"> {p.role} </span>
-                                                                        )}
-                                                                    </div>
+                                            {conferencia.ponentes && conferencia.ponentes.length > 0 && (
+                                                <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
+                                                    {conferencia.ponentes.map((p) => (
+                                                        <button
+                                                            key={p.id}
+                                                            onClick={() => setSelectedSpeaker(p)}
+                                                            className="flex items-center gap-2 rounded-full bg-slate-50 px-2.5 sm:px-3 py-1 text-xs text-slate-700 border border-slate-100 hover:border-slate-200 transition"
+                                                            title="Ver semblanza"
+                                                        >
+                                                            {speakerAvatar(p.photo) ? (
+                                                                <img src={speakerAvatar(p.photo)} alt={p.name} className="h-6 w-6 sm:h-7 sm:w-7 rounded-full object-cover flex-shrink-0" />
+                                                            ) : (
+                                                                <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                                                                    {(p.name || '?').slice(0, 2).toUpperCase()}
                                                                 </div>
-                                                                {p.position && (
-                                                                    <div className="truncate text-xs text-slate-600 mb-1">{p.position}</div>
-                                                                )}
-                                                                {p.company && (
-                                                                    <div className="truncate text-xs text-slate-500 mb-2">{p.company}</div>
-                                                                )}
-                                                                {p.bio_esp && (
-                                                                    <button
-                                                                        onClick={() => setSelectedSpeaker(p)}
-                                                                        className="mt-auto w-[150px] rounded-md bg-emerald-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-emerald-700 transition-colors"
-                                                                    >
-                                                                        Ver semblanza
-                                                                    </button>
-                                                                )}
-                                                            </div>
-                                                        ))}
-                                                    </div>
+                                                            )}
+                                                            <span className="truncate max-w-[100px] sm:max-w-[140px] text-left">{p.name}</span>
+                                                        </button>
+                                                    ))}
                                                 </div>
-                                            ) : null}
+                                            )}
                                         </div>
                                     </div>
                                 </li>
@@ -362,6 +336,5 @@ export function InstallerInnovationProgram( { language } ) {
                 </div>
             </div>
         </div>
-        </>
     );
 }
