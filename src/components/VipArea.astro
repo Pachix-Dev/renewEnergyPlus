@@ -1,0 +1,132 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black py-12 sm:py-16 md:py-20">
+
+    <!-- Elementos decorativos de fondo -->
+    <div class="pointer-events-none absolute inset-0">
+        <div class="absolute left-1/4 top-20 h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px] rounded-full bg-gradient-to-br from-[#565078]/20 to-transparent blur-3xl"></div>
+        <div class="absolute right-1/4 bottom-20 h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px] rounded-full bg-gradient-to-tl from-[#766EA6]/20 to-transparent blur-3xl"></div>
+        <div class="absolute left-1/2 top-1/2 h-64 w-64 sm:h-80 sm:w-80 md:h-96 md:w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#565078]/10 to-[#766EA6]/10 blur-3xl"></div>
+    </div>
+
+    <div class="container relative mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+        <div class="mb-12 sm:mb-16 md:mb-10 text-center" data-aos="fade-down" data-aos-duration="1000">
+            <div class="inline-block mb-4">
+          <span
+            class="text-yellow-400 text-sm sm:text-base font-bold uppercase tracking-[0.3em] px-6 py-2 border-2 border-yellow-400/40 rounded-full bg-yellow-400/5 backdrop-blur-sm"
+          >
+            {t("sunset_cocktail.subtitle")}
+          </span>
+        </div>
+            
+            <h1 class="mb-6 sm:mb-8 bg-gradient-to-r from-white via-[#a79ee1] to-[#593de6] bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight text-transparent px-4">
+                VIP NETWORKING AREA
+            </h1>
+        </div>
+
+        <!-- Content Card -->
+        <div class="relative mx-auto max-w-7xl">
+            <article 
+                class="group relative"
+                data-aos="fade-up" 
+                data-aos-duration="1000" 
+                data-aos-delay="200"
+            >
+                <!-- Card container -->
+                <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-[#766EA6]/70 bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-black/80 shadow-2xl backdrop-blur-sm transition-all duration-700 hover:shadow-[0_25px_60px_-15px_rgba(86,80,120,0.6)]">
+                    
+                    <!-- Glow effect -->
+                    <div class="absolute -right-16 -top-16 sm:-right-20 sm:-top-20 h-48 w-48 sm:h-60 sm:w-60 rounded-full bg-gradient-to-br from-[#565078]/30 via-[#766EA6]/20 to-transparent blur-3xl transition-all duration-700 group-hover:scale-150 group-hover:opacity-100 opacity-70"></div>
+                    
+                    <!-- Shine effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+
+                    <div class="relative grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+                        
+                        <!-- Imagen del lugar -->
+                        <div class="relative overflow-hidden rounded-t-2xl sm:rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none h-64 sm:h-80 md:h-auto">
+                            <img 
+                                src="/img/vip_area.webp" 
+                                alt="VIP Networking Area"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        </div>
+
+                        <!-- Información del evento -->
+                        <div class="p-6 sm:p-8 md:p-10 space-y-6 sm:space-y-8">
+
+                            <!-- Descripción -->
+                            <p class="text-base sm:text-lg text-gray-300 leading-relaxed text-justify" set:html={t("vip_networking.description")} />
+
+                            <!-- Información del evento -->
+                            <div class="space-y-3 sm:space-y-4">
+                                <!-- Fecha -->
+                                <div class="flex items-center gap-3 sm:gap-4">
+                                    <div class="flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-xl bg-gradient-to-br from-[#565078] to-[#766EA6] flex items-center justify-center shadow-md">
+                                        <svg class="h-4 w-4 sm:h-5 sm:w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-wide">{t("vip_networking.date-element")}</p>
+                                        <p class="text-xs sm:text-sm md:text-base font-bold text-white">{t("vip_networking.date")}</p>
+                                    </div>
+                                </div>
+
+                                <!-- Hora -->
+                                <div class="flex items-center gap-3 sm:gap-4">
+                                    <div class="flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-xl bg-gradient-to-br from-[#565078] to-[#766EA6] flex items-center justify-center shadow-md">
+                                        <svg class="h-4 w-4 sm:h-5 sm:w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-wide">{t("vip_networking.time-element")}</p>
+                                        <p class="text-xs sm:text-sm md:text-base font-bold text-white">{t("vip_networking.time")}</p>
+                                    </div>
+                                </div>
+
+                                <!-- Lugar -->
+                                <div class="flex items-center gap-3 sm:gap-4">
+                                    <div class="flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-xl bg-gradient-to-br from-[#565078] to-[#766EA6] flex items-center justify-center shadow-md">
+                                        <svg class="h-4 w-4 sm:h-5 sm:w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-wide">{t("vip_networking.place-element")}</p>
+                                        <p class="text-xs sm:text-sm md:text-base font-bold text-white">{t("vip_networking.place")}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <div class="pt-2 sm:pt-4">
+                                <a 
+                                    href={`${base}/programa-premium-productos`} 
+                                    class="group/btn inline-flex items-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-[#565078] to-[#766EA6] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold text-white shadow-lg shadow-[#565078]/40 transition-all duration-300 hover:shadow-[#565078]/60 hover:shadow-2xl hover:scale-105"
+                                >
+                                    <span class="uppercase"> {t("vip_networking.button")} </span>
+                                    <svg class="h-4 w-4 sm:h-8 sm:w-8 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Corner decoration -->
+                    <div class="absolute bottom-0 right-0 h-24 w-24 sm:h-32 sm:w-32 translate-x-12 translate-y-12 sm:translate-x-16 sm:translate-y-16 rounded-full bg-gradient-to-tl from-[#565078]/20 to-transparent blur-2xl"></div>
+                </div>
+            </article>
+        </div>
+        
+    </div>
+</section>

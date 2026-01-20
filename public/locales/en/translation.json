@@ -732,5 +732,20 @@
         "tag02": "Drinks",
         "tag03": "Networking",
         "button": "Get your Premium access"
+    },
+    "vip_networking":{
+        "subtitle": "Premium Experience",
+        "date-element": "date",
+        "time-element": "time",
+        "place-element": "place",
+        "date": "The three days of the event",
+        "time": "11:00 AM - 06:00 PM",
+        "place": "Showroom at stand J100",
+        "desc-element": "About the event",
+        "description": "It is an exclusive networking space designed for professional visitors who wish to combine comfort, productivity, and high-level strategic connections.<br><br> The VIP AREA offers coffee breaks and is also the venue for the Sunset Cocktail, an event where exhibitors, sponsors, and VIP buyers gather in a relaxed atmosphere to forge strategic relationships and generate real business opportunities.",
+        "tag01": "Executives",
+        "tag02": "Industry Leaders",
+        "tag03": "Networking",
+        "button": "Get your Premium access"
     }
 }
