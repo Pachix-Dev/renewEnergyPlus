@@ -15,7 +15,7 @@ export function Coupon({ text1, text2 }) {
   }
 
   const checkCoupon = async () => {
-    if (couponCode === 'REPLUSMEXICO500') {
+    if (couponCode === 'REPLUSMEXICO700') {
       if (!items.find((item) => item.id === 1)) {
         setCouponStatus(text1)
         setIsValidCoupon(false)
@@ -31,7 +31,7 @@ export function Coupon({ text1, text2 }) {
           id: 99,
           name: 'Cupon de descuento',
           name_en: 'Discount Coupon',
-          price: -500,
+          price: -700,
         },
         'GENERAL'
       )

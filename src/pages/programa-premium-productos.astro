@@ -38,17 +38,20 @@ const base = lang === "es" ? "" : `/${lang}`;
       <p class='text-center text-2xl font-bold hidden md:block text-black'>
         {t('ecommerce.resume')}
       </p>
-      <Items client:only currentLanguage={currentLanguage} />
-      <Total client:only />
-      {
-        /* <Coupon
-        client:only
+      <Items client:only="react" currentLanguage={currentLanguage} />
+
+      <Total client:only="react" />
+      
+      <!-- Coupon Component -->
+      <Coupon
+        client:only="react"
         text1={t('ecommerce.cupon_text')}
         text2={t('ecommerce.cupon')}
       />
-      */
-      }
-      <Continue client:only translate={t('ecommerce.continue')} base={base} />
+
+      <!-- Continue Button Component -->
+      <Continue client:only="react" translate={t('ecommerce.continue')} base={base} />
+
     </aside>
   </main>
 </LayoutCheckout>
