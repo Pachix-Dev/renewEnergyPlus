@@ -10,237 +10,198 @@ const translate = t("workshops", { returnObjects: true });
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 ---
 
-<Layout title='RE+ MEXICO | Talleres y Capacitaciones'>
+<Layout title="RE+ MEXICO | Talleres y Capacitaciones">
   <!-- Hero Section con video de fondo -->
-  <div class='relative min-h-screen overflow-hidden'>
+  <div class="relative min-h-screen overflow-hidden">
     <video
-      src='/video/bg_program_vip_720p.mp4'
+      src="/video/bg_program_vip_720p.mp4"
       autoplay
       loop
       muted
       playsinline
-      class='absolute inset-0 w-full h-full object-cover'></video>
+      class="absolute inset-0 w-full h-full object-cover"></video>
 
     <!-- Overlay con gradiente -->
     <div
-      class='absolute inset-0 bg-gradient-to-b from-[#1E293B]/90 via-[#1E293B]/70 to-[#5E5884]/80'
+      class="absolute inset-0 bg-gradient-to-b from-[#1E293B]/90 via-[#1E293B]/70 to-[#5E5884]/80"
     >
     </div>
 
     <!-- Elementos decorativos flotantes -->
-    <div class='absolute inset-0 overflow-hidden'>
+    <div class="absolute inset-0 overflow-hidden">
       <div
-        class='absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse'
+        class="absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse"
       >
       </div>
       <div
-        class='absolute bottom-32 right-32 w-24 h-24 border-2 border-[#5E5884]/30 rounded-full animate-bounce'
+        class="absolute bottom-32 right-32 w-24 h-24 border-2 border-[#5E5884]/30 rounded-full animate-bounce"
       >
       </div>
       <div
-        class='absolute top-1/3 right-20 w-16 h-16 bg-[#5E5884]/20 rounded-full blur-xl animate-pulse'
+        class="absolute top-1/3 right-20 w-16 h-16 bg-[#5E5884]/20 rounded-full blur-xl animate-pulse"
       >
       </div>
     </div>
 
     <!-- Contenido principal del hero -->
-    <div class='relative z-10 min-h-screen flex flex-col justify-center'>
-      <div class='container mx-auto px-4 py-32'>
+    <div class="relative z-10 min-h-screen flex flex-col justify-center">
+      <div class="container mx-auto px-4 py-6 sm:py-8 lg:py-10">
+
         <!-- Main Title -->
         <div
-          class='text-center mb-16'
-          data-aos='fade-up'
-          data-aos-duration='1000'
+          class="text-center sm:mb-16"
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           <h1
-            class='text-4xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight'
+            class="text-4xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
           >
             <span
-              class='block text-3xl sm:text-4xl font-bold text-white mb-4 filter drop-shadow-lg'
+              class="block text-3xl sm:text-4xl font-bold text-white mb-4 filter drop-shadow-lg"
             >
-              RE+ MÉXICO
+              RE+ MEXICO
             </span>
-            <span class='text-white bg-clip-text'>
+            <span class="text-white bg-clip-text">
               {
-                i18next.language === 'es'
-                  ? 'Talleres y Capacitaciones'
-                  : 'Workshops & Training'
+                i18next.language === "es"
+                  ? "Talleres y Capacitaciones"
+                  : "Workshops & Training"
               }
             </span>
           </h1>
-          <div
-            class='w-32 h-1 bg-gradient-to-r from-[#5E5884] to-white mx-auto rounded-full'
-          >
-          </div>
         </div>
 
         <!-- Subtitle -->
         <p
-          class='text-white/90 text-center text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed'
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          class="text-white text-center text-xl md:text-2xl sm:mb-12 max-w-4xl mx-auto leading-relaxed"
         >
           {
-            i18next.language === 'es'
-              ? 'Desarrolla tus habilidades técnicas y amplía tu conocimiento en energías renovables con expertos de la industria'
-              : 'Develop your technical skills and expand your renewable energy knowledge with industry experts'
+            i18next.language === "es"
+              ? "Desarrolla tus habilidades técnicas y amplía tu conocimiento en energías renovables con expertos de la industria"
+              : "Develop your technical skills and expand your renewable energy knowledge with industry experts"
           }
         </p>
 
-        <!-- Stats Section -->
-        <div
-          class='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16'
-          data-aos='fade-up'
-          data-aos-delay='200'
-        >
-          <div class='text-center'>
-            <div class='text-4xl font-bold text-white mb-2'>20+</div>
-            <div class='text-white'>
-              {
-                i18next.language === 'es'
-                  ? 'Talleres Especializados'
-                  : 'Specialized Workshops'
-              }
-            </div>
-          </div>
-          <div class='text-center'>
-            <div class='text-4xl font-bold text-white mb-2'>50+</div>
-            <div class='text-white'>
-              {
-                i18next.language === 'es'
-                  ? 'Instructores Certificados'
-                  : 'Certified Instructors'
-              }
-            </div>
-          </div>
-          <div class='text-center'>
-            <div class='text-4xl font-bold text-white mb-2'>3</div>
-            <div class='text-white'>
-              {
-                i18next.language === 'es'
-                  ? 'Días de Aprendizaje'
-                  : 'Days of Learning'
-              }
-            </div>
-          </div>
-        </div>
+        <!-- Program Component -->
+        <ProgramPadre />
       </div>
     </div>
   </div>
 
-  <!-- Program Component -->
-  <ProgramPadre />
-
   <!-- Installer & Innovation Area Section -->
-  <section class='py-20 bg-gradient-to-b from-gray-50 to-white'>
-    <div class='container mx-auto px-4'>
-      <div class='max-w-7xl mx-auto'>
+  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto">
         <!-- Section Header -->
-        <div class='text-center mb-16' data-aos='fade-up'>
+        <div class="text-center mb-16" data-aos="fade-up">
           <div
-            class='inline-flex items-center gap-4 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white px-8 py-3 rounded-full mb-6'
+            class="inline-flex items-center gap-4 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white px-8 py-3 rounded-full mb-6"
           >
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              class='h-6 w-6'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
               <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
               ></path>
             </svg>
-            <span class='font-bold uppercase tracking-wider'
+            <span class="font-bold uppercase tracking-wider"
               >Installer & Innovation Area</span
             >
           </div>
 
-          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {
-              i18next.language === 'es'
-                ? 'Capacitación Técnica Integral'
-                : 'Comprehensive Technical Training'
+              i18next.language === "es"
+                ? "Capacitación Técnica Integral"
+                : "Comprehensive Technical Training"
             }
           </h2>
         </div>
 
         <!-- Content Grid -->
-        <div class='grid lg:grid-cols-2 gap-12 items-center mb-16'>
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <!-- Text Content -->
-          <div data-aos='fade-right'>
+          <div data-aos="fade-right">
             <div
-              class='bg-white rounded-3xl p-8 shadow-2xl border border-gray-100'
+              class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100"
             >
-              <div class='flex items-start gap-4 mb-6'>
+              <div class="flex items-start gap-4 mb-6">
                 <div
-                  class='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0'
+                  class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0"
                 >
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    class='h-6 w-6 text-white'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
                     <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M13 10V3L4 14h7v7l9-11h-7z'></path>
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class='text-2xl font-bold text-gray-900 mb-4'>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">
                     {
-                      i18next.language === 'es'
-                        ? 'Innovación y Tendencias Actuales'
-                        : 'Innovation and Current Trends'
+                      i18next.language === "es"
+                        ? "Innovación y Tendencias Actuales"
+                        : "Innovation and Current Trends"
                     }
                   </h3>
-                  <p class='text-gray-600 leading-relaxed mb-6'>
+                  <p class="text-gray-600 leading-relaxed mb-6">
                     {
-                      i18next.language === 'es'
-                        ? 'En el piso de exhibición de RE+ MEXICO proporciona unaactualización sobre eventos actuales, tendencias, innovaciones, investigación y análisis en la industria de energías renovables.'
-                        : 'The RE+ MEXICO exhibition floor provides an update on current events, trends, innovations, research, and analysis in the renewable energy industry.'
+                      i18next.language === "es"
+                        ? "En el piso de exhibición de RE+ MEXICO proporciona unaactualización sobre eventos actuales, tendencias, innovaciones, investigación y análisis en la industria de energías renovables."
+                        : "The RE+ MEXICO exhibition floor provides an update on current events, trends, innovations, research, and analysis in the renewable energy industry."
                     }
                   </p>
                 </div>
               </div>
 
-              <div class='flex items-start gap-4'>
+              <div class="flex items-start gap-4">
                 <div
-                  class='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0'
+                  class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0"
                 >
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke-width='1.5'
-                    stroke='currentColor'
-                    class='h-6 w-6 text-white'
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6 text-white"
                   >
                     <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      d='M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z'
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z"
                     ></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class='text-2xl font-bold text-gray-900 mb-4'>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">
                     {
-                      i18next.language === 'es'
-                        ? 'Sistemas de Almacenamiento'
-                        : 'Energy Storage Systems'
+                      i18next.language === "es"
+                        ? "Sistemas de Almacenamiento"
+                        : "Energy Storage Systems"
                     }
                   </h3>
-                  <p class='text-gray-600 leading-relaxed'>
+                  <p class="text-gray-600 leading-relaxed">
                     {
-                      i18next.language === 'es'
-                        ? 'Recibe capacitación técnica integral y de calidad por parte de instructores certificados, incluyendo estrategias y consejos para sistemas de almacenamiento de energía.'
-                        : 'Receive comprehensive and high-quality technical training from certified instructors, including strategies and tips for energy storage systems.'
+                      i18next.language === "es"
+                        ? "Recibe capacitación técnica integral y de calidad por parte de instructores certificados, incluyendo estrategias y consejos para sistemas de almacenamiento de energía."
+                        : "Receive comprehensive and high-quality technical training from certified instructors, including strategies and tips for energy storage systems."
                     }
                   </p>
                 </div>
@@ -249,44 +210,44 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           </div>
 
           <!-- Instituciones Participantes -->
-          <div data-aos='fade-left'>
+          <div data-aos="fade-left">
             <div
-              class='bg-gradient-to-br from-[#5E5884] to-[#7B6FA8] rounded-3xl p-8 text-white'
+              class="bg-gradient-to-br from-[#5E5884] to-[#7B6FA8] rounded-3xl p-8 text-white"
             >
-              <h3 class='text-2xl font-bold mb-6 text-center'>
+              <h3 class="text-2xl font-bold mb-6 text-center">
                 {
-                  i18next.language === 'es'
-                    ? 'Instituciones Participantes'
-                    : 'Participating Institutions'
+                  i18next.language === "es"
+                    ? "Instituciones Participantes"
+                    : "Participating Institutions"
                 }
               </h3>
 
               <div
-                class='grid grid-cols-2 gap-8 items-center justify-items-center'
+                class="grid grid-cols-2 gap-8 items-center justify-items-center"
               >
                 <!-- AMIF Logo -->
                 <a
-                  href='https://www.amif.org.mx/'
-                  target='_blank'
-                  class='bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2'
+                  href="https://www.amif.org.mx/"
+                  target="_blank"
+                  class="bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2"
                 >
                   <img
-                    src='/img/amif.webp'
-                    alt='AMIF Logo'
-                    class='max-h-16 object-contain'
+                    src="/img/amif.webp"
+                    alt="AMIF Logo"
+                    class="max-h-16 object-contain"
                   />
                 </a>
 
                 <!-- EUPD Logo -->
                 <a
-                  href='https://eupd-group.com/'
-                  target='_blank'
-                  class='bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2'
+                  href="https://eupd-group.com/"
+                  target="_blank"
+                  class="bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2"
                 >
                   <img
-                    src='/img/aliadosEstrategicos/aliados2/EUPD-Research.webp'
-                    alt='AMIF Logo'
-                    class='max-h-16 object-contain'
+                    src="/img/aliadosEstrategicos/aliados2/EUPD-Research.webp"
+                    alt="AMIF Logo"
+                    class="max-h-16 object-contain"
                   />
                 </a>
               </div>
@@ -298,83 +259,83 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
   </section>
 
   <!-- Enlightenment Area Section -->
-  <section class='py-20 bg-gradient-to-b from-white to-gray-50'>
-    <div class='container mx-auto px-4'>
-      <div class='max-w-7xl mx-auto'>
+  <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto">
         <!-- Section Header -->
-        <div class='text-center mb-16' data-aos='fade-up'>
+        <div class="text-center mb-16" data-aos="fade-up">
           <div
-            class='inline-flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-3 rounded-full mb-6'
+            class="inline-flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-3 rounded-full mb-6"
           >
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              class='h-6 w-6'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
               <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
               ></path>
             </svg>
-            <span class='font-bold uppercase tracking-wider'
+            <span class="font-bold uppercase tracking-wider"
               >Enlightenment Area</span
             >
           </div>
 
-          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {
-              i18next.language === 'es'
-                ? 'Ilumina tu Experiencia con Conocimiento'
-                : 'Illuminate Your Experience with Knowledge'
+              i18next.language === "es"
+                ? "Ilumina tu Experiencia con Conocimiento"
+                : "Illuminate Your Experience with Knowledge"
             }
           </h2>
         </div>
 
         <!-- Content -->
-        <div class='mb-16' data-aos='fade-up'>
+        <div class="mb-16" data-aos="fade-up">
           <div
-            class='bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 max-w-4xl mx-auto'
+            class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 max-w-4xl mx-auto"
           >
-            <div class='text-center'>
+            <div class="text-center">
               <div
-                class='w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6'
+                class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
               >
                 <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='h-10 w-10 text-white'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                   ></path>
                 </svg>
               </div>
 
-              <p class='text-lg text-gray-600 leading-relaxed mb-8'>
+              <p class="text-lg text-gray-600 leading-relaxed mb-8">
                 {
-                  i18next.language === 'es'
-                    ? 'En RE+ MEXICO encontrarás múltiples espacios para aprender, descubrir y conectar, antes y durante la exposición. Ilumina tu experiencia con conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector energético a través de charlas y capacitaciones especializadas'
-                    : 'At RE+ MEXICO you will find multiple spaces to learn, discover and connect, before and during the exhibition. Illuminate your experience with knowledge, innovation, success stories, trends, technologies and solutions from the energy sector through specialized talks and training sessions.'
+                  i18next.language === "es"
+                    ? "En RE+ MEXICO encontrarás múltiples espacios para aprender, descubrir y conectar, antes y durante la exposición. Ilumina tu experiencia con conocimiento, innovación, casos de éxito, tendencias, tecnologías y soluciones del sector energético a través de charlas y capacitaciones especializadas"
+                    : "At RE+ MEXICO you will find multiple spaces to learn, discover and connect, before and during the exhibition. Illuminate your experience with knowledge, innovation, success stories, trends, technologies and solutions from the energy sector through specialized talks and training sessions."
                 }
               </p>
 
               <div
-                class='bg-gradient-to-r from-[#5E5884]/10 to-[#7B6FA8]/10 rounded-2xl p-6'
+                class="bg-gradient-to-r from-[#5E5884]/10 to-[#7B6FA8]/10 rounded-2xl p-6"
               >
-                <p class='text-lg font-semibold text-gray-800'>
+                <p class="text-lg font-semibold text-gray-800">
                   {
-                    i18next.language === 'es'
-                      ? 'Si buscas nuevas oportunidades de negocio y ampliar tu red de contactos en América Latina, este es el espacio ideal para ti.'
-                      : 'If you are looking for new business opportunities and expanding your network in Latin America, this is the ideal space for you.'
+                    i18next.language === "es"
+                      ? "Si buscas nuevas oportunidades de negocio y ampliar tu red de contactos en América Latina, este es el espacio ideal para ti."
+                      : "If you are looking for new business opportunities and expanding your network in Latin America, this is the ideal space for you."
                   }
                 </p>
               </div>
@@ -383,85 +344,85 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         </div>
 
         <!-- Marcas Participantes -->
-        <div data-aos='fade-up' data-aos-delay='200'>
-          <h3 class='text-3xl font-bold text-center text-gray-900 mb-12'>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">
             {
-              i18next.language === 'es'
-                ? 'Marcas Participantes Confirmadas'
-                : 'Confirmed Participating Brands'
+              i18next.language === "es"
+                ? "Marcas Participantes Confirmadas"
+                : "Confirmed Participating Brands"
             }
           </h3>
 
           <div
-            class='bg-white rounded-3xl p-8 shadow-2xl border border-gray-100'
+            class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100"
           >
             <div
-              class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6'
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6"
             >
               <!-- Brand Cards -->
               {
                 [
                   {
-                    src: '/img/sponsors/Huawei.webp',
+                    src: "/img/sponsors/Huawei.webp",
                     width: 200,
-                    alt: 'Huawei',
-                    link: 'https://www.huawei.com/',
+                    alt: "Huawei",
+                    link: "https://www.huawei.com/",
                   },
                   {
-                    src: '/img/expo/carousel6/battery-depot.webp',
+                    src: "/img/expo/carousel6/battery-depot.webp",
                     width: 200,
-                    alt: 'Battery Depot',
-                    link: 'https://batterydepot.com.mx/',
+                    alt: "Battery Depot",
+                    link: "https://batterydepot.com.mx/",
                   },
                   {
-                    src: '/img/expo/carousel1/apSystems.webp',
+                    src: "/img/expo/carousel1/apSystems.webp",
                     width: 200,
-                    alt: 'AP Systems',
-                    link: 'https://www.apsystems.com/',
+                    alt: "AP Systems",
+                    link: "https://www.apsystems.com/",
                   },
                   {
-                    src: '/img/expo/carousel4/metering.webp',
+                    src: "/img/expo/carousel4/metering.webp",
                     width: 190,
-                    alt: 'Metering',
-                    link: 'https://metering.com.mx/',
+                    alt: "Metering",
+                    link: "https://metering.com.mx/",
                   },
                   {
-                    src: '/img/expo/carousel1/ecoflow.webp',
+                    src: "/img/expo/carousel1/ecoflow.webp",
                     width: 200,
-                    alt: 'EcoFlow',
-                    link: 'https://www.ecoflow.com/',
+                    alt: "EcoFlow",
+                    link: "https://www.ecoflow.com/",
                   },
                   {
-                    src: '/img/expo/carousel5/exel_solar.webp',
+                    src: "/img/expo/carousel5/exel_solar.webp",
                     width: 200,
-                    alt: 'Exel Solar',
-                    link: 'https://www.exelsolar.com/',
+                    alt: "Exel Solar",
+                    link: "https://www.exelsolar.com/",
                   },
                   {
-                    src: '/img/expo/carousel5/solar_max.webp',
+                    src: "/img/expo/carousel5/solar_max.webp",
                     width: 190,
-                    alt: 'Solar Max',
-                    link: 'https://www.solarmax.com/',
+                    alt: "Solar Max",
+                    link: "https://www.solarmax.com/",
                   },
                   {
-                    src: '/img/expo/carousel1/solarever.webp',
+                    src: "/img/expo/carousel1/solarever.webp",
                     width: 200,
-                    alt: 'SolarEver',
-                    link: 'https://www.solarever.com/',
+                    alt: "SolarEver",
+                    link: "https://www.solarever.com/",
                   },
                   {
-                    src: '/img/sponsors/S-5logo.webp',
+                    src: "/img/sponsors/S-5logo.webp",
                     width: 80,
-                    alt: 'S-5!',
-                    link: 'https://www.s-5.com/',
+                    alt: "S-5!",
+                    link: "https://www.s-5.com/",
                   },
                 ].map((brand) => (
                   <a
-                    href={brand.link || '#'}
-                    target='_blank'
-                    class='w-full flex items-center justify-center min-h-[100px] p-2'
+                    href={brand.link || "#"}
+                    target="_blank"
+                    class="w-full flex items-center justify-center min-h-[100px] p-2"
                   >
-                    <img src={brand.src} alt='' width={brand.width} />
+                    <img src={brand.src} alt="" width={brand.width} />
                   </a>
                 ))
               }
