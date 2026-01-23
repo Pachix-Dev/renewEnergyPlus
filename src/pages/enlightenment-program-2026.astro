@@ -5,27 +5,134 @@ import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
 
-const translate = t("workshops", { returnObjects: true });
-const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+const brands = [
+    { src: "/img/sponsors/Huawei.webp", width: 200, alt: "Huawei", link: "https://www.huawei.com/" },
+    { src: "/img/expo/carousel6/battery-depot.webp", width: 200, alt: "Battery Depot", link: "https://batterydepot.com.mx/" },
+    { src: "/img/expo/carousel1/apSystems.webp", width: 200, alt: "AP Systems", link: "https://www.apsystems.com/" },
+    { src: "/img/expo/carousel4/metering.webp", width: 190, alt: "Metering", link: "https://metering.com.mx/" },
+    { src: "/img/expo/carousel1/ecoflow.webp", width: 200, alt: "EcoFlow", link: "https://www.ecoflow.com/" },
+    { src: "/img/expo/carousel5/exel_solar.webp", width: 200, alt: "Exel Solar", link: "https://www.exelsolar.com/" },
+    { src: "/img/expo/carousel5/solar_max.webp", width: 190, alt: "Solar Max", link: "https://www.solarmax.com/" },
+    { src: "/img/expo/carousel1/solarever.webp", width: 200, alt: "SolarEver", link: "https://www.solarever.com/" },
+    { src: "/img/sponsors/S-5logo.webp", width: 80, alt: "S-5!", link: "https://www.s-5.com/" },
+];
 ---
 
 <Layout
   title="Enlightenment Program 2026 | Renew Energy Plus"
   description="Un espacio para conectar, aprender y descubrir, donde las empresas tecnológicas del sector energético comparten su experiencia, innovación, casos de éxito, tendencias y soluciones a través de charlas y capacitaciones especializadas."
 >
-  <section
-    class="bg-gradient-to-b from-gray-900 via-gray-950 to-black py-10"
-  >
-    <div class="max-w-7xl mx-auto text-center">
-      <h1 class="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
-        ENLIGHTENMENT AREA
-      </h1>
-    </div>
-
-    <div class="">
-      <div class="">
-        <EnlightenmentProgram language={i18next.language} client:only="react" />
+  <section class="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-950 to-black">
+    
+    <!-- Hero -->
+    <div class="relative py-10 lg:py-12">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div class="container relative mx-auto px-4">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up">
+          <div class="text-center space-y-6">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight">
+              <span class="block text-white">ENLIGHTENMENT AREA</span>
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 font-semibold max-w-3xl mx-auto lowercase">
+              {t("enlightenmentArea.subtitle")}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Content Grid -->
+    <div class="container mx-auto px-4 pb-20">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-1 gap-8 lg:gap-12 items-center" data-aos="fade-up">
+          
+          <!-- Icon Card -->
+          <div class="order-2 lg:order-1">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition"></div>
+              <div class="relative bg-white rounded-3xl p-8 lg:p-10">
+                <div class="flex justify-center mb-6">
+                  <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-xl">
+                    <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-base lg:text-lg text-gray-700 leading-relaxed text-center">
+                  {t("enlightenmentArea.text_01")}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight Box -->
+          <div class="order-1 lg:order-2">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-3xl blur-2xl"></div>
+              <div class="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-white/10">
+                <p class="text-base lg:text-lg text-white leading-relaxed font-medium">
+                  {t("enlightenmentArea.text_02")}
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Program Section -->
+    <div class="container mx-auto px-4 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            {i18next.language === "es" ? "Programa de Conferencias" : "Conference Program"}
+          </h2>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <EnlightenmentProgram language={i18next.language} client:only="react" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Marcas Participantes Confirmadas -->
+    <div class="container mx-auto px-4 pb-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-2" data-aos="fade-up">
+          <h3 class="text-3xl sm:text-4xl font-bold text-white uppercase">
+            {i18next.language === "es" ? "Marcas Participantes Confirmadas" : "Confirmed Participating Brands"}
+          </h3>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="relative group">
+            <div class="relative bg-white/0 backdrop-blur-sm rounded-3xl p-6 lg:p-10">
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 lg:gap-6">
+                {brands.map((brand) => (
+                  <a
+                    href={brand.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group/card flex items-center justify-center min-h-[90px] p-3 rounded-2xl border border-gray-100 bg-white hover:border-orange-200 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                  >
+                    <img
+                      src={brand.src}
+                      alt={brand.alt}
+                      width={brand.width}
+                      loading="lazy"
+                      class="max-h-20 object-contain transition-all"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 </Layout>

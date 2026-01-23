@@ -585,7 +585,11 @@
         "description": "offers you multiple spaces for promotion and presence, before and during the exhibition to attract professional buyers and obtain a greater return on investment for your participation. Illuminate the space of knowledge, innovation, success stories, trends, technologies and solutions for the solar sector through a training program. If you are looking for new business opportunities and increase your potential contacts in Latin America, this is the ideal space for you.",
         "hour": "Schedules",
         "title": "Topic",
-        "speaker": "Speaker"
+        "speaker": "Speaker",
+        "subtitle":"Illuminate Your Experience with Knowledge",
+        "text_01":"At RE+ MEXICO, you will find multiple spaces to learn, discover, and connect, before and during the exhibition. Illuminate your experience with knowledge, innovation, success stories, trends, technologies, and solutions in the energy sector through specialized talks and training sessions.",
+        "text_02":"If you are looking for new business opportunities and to expand your network in Latin America, this is the ideal space for you."
+
     },
     "installer_innovationArea":{
         "description": "The Installer and Innovation Area on the showfloor at RE+ Mexico will provide an update on current events, trends, innovations, research and analyses in the solar, storage, and clean energy industries. Receive quality, comprehensive technical training from certified instructors including strategies and tips for energy storage systems."
