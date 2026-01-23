@@ -13,67 +13,111 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
   title="Installer & Innovation Program 2026"
   description="Descubre el programa completo del Installer & Innovation Program 2026 en Renew Energy Plus. Explora charlas, talleres y sesiones especializadas sobre energías renovables e innovación tecnológica."
 >
-  <section
-    class="bg-gradient-to-b from-gray-900 via-gray-950 to-black py-8 sm:py-16 "
-  >
-    <div class="max-w-7xl mx-auto text-center">
-      <h1 class="text-3xl font-extrabold text-white sm:text-5xl lg:text-6xl">
-       INSTALLER & INNOVATION AREA
-      </h1>
-    </div>
-      <div class="max-w-7xl mx-auto">
-        <InstallerInnovationProgram
-          language={i18next.language}
-          client:only="react"
-        />
-    </div>
-  </section>
-
   <!-- Installer & Innovation Area Section -->
-  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
-    <div class="container mx-auto px-4">
-      <div class="max-w-7xl mx-auto">
-        <!-- Section Header -->
-        <div class="text-center mb-16" data-aos="fade-up">
-          <div
-            class="inline-flex items-center gap-4 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white px-8 py-3 rounded-full mb-6"
+  <section
+    class="relative overflow-hidden bg-gradient-to-b from-slate-950 via-gray-900 to-black py-12"
+  >
+    <!-- Sección sobre Installer & Innovation Area -->
+    <div>
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute -top-10 -left-24 w-96 h-96 bg-cyan-400/15 rounded-full blur-3xl"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 -right-16 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl"
+        >
+        </div>
+      </div>
+
+      <div class="container relative mx-auto px-4">
+        <!-- Header Section -->
+        <div class="max-w-7xl mx-auto space-y-4 text-white">
+          <h1
+            data-aos="fade-up"
+            class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-center"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            INSTALLER & INNOVATION AREA
+          </h1>
+
+          <!-- Subheader, description, chips and stats -->
+          <div data-aos="fade-up" data-aos-delay="80">
+            <p
+              class="text-2xl sm:text-3xl font-semibold text-gray-100 text-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-              ></path>
-            </svg>
-            <span class="font-bold uppercase tracking-wider"
-              >Installer & Innovation Area</span
-            >
+              {
+                i18next.language === "es"
+                  ? "Capacitación Técnica Integral"
+                  : "Comprehensive Technical Training"
+              }
+            </p>
           </div>
 
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {
-              i18next.language === "es"
-                ? "Capacitación Técnica Integral"
-                : "Comprehensive Technical Training"
-            }
-          </h2>
+          <!-- Instituciones Participantes -->
+          <div class="relative">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              class="relative rounded-3xl p-8 shadow-2xl text-white"
+            >
+              <div class="flex items-center justify-center mb-6">
+                <h3 class="text-xl font-bold text-center uppercase">
+                  {
+                    i18next.language === "es"
+                      ? "Instituciones Participantes"
+                      : "Participating Institutions"
+                  }
+                </h3>
+              </div>
+
+              <!--logos -->
+              <div class="flex justify-center flex-grow gap-6 sm:gap-8">
+                <a
+                  href="https://www.amif.org.mx/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-white rounded-2xl w-[250px] flex items-center justify-center min-h-[110px] p-3 border border-gray-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition"
+                >
+                  <img
+                    src="/img/amif.webp"
+                    alt="AMIF Logo"
+                    class="max-h-16 object-contain"
+                  />
+                </a>
+
+                <a
+                  href="https://eupd-group.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-white rounded-2xl w-[250px] flex items-center justify-center min-h-[110px] p-3 border border-gray-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition"
+                >
+                  <img
+                    src="/img/aliadosEstrategicos/aliados2/EUPD-Research.webp"
+                    alt="EUPD Research"
+                    class="max-h-16 object-contain"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Content Grid -->
-        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <!-- Text Content -->
-          <div data-aos="fade-right">
+        <div
+          class="grid lg:grid-cols-2 gap-8 items-center mt-16 max-w-7xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <!-- Texto de installer  -->
+          <div class="relative h-full">
             <div
-              class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100"
+              class="absolute -inset-1 bg-gradient-to-br from-indigo-400/30 to-purple-500/20 rounded-3xl blur"
             >
-              <div class="flex items-start gap-4 mb-6">
+            </div>
+            <div
+              class="relative bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 h-full flex flex-col"
+            >
+              <div class="flex items-start gap-4 mb-8">
                 <div
                   class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0"
                 >
@@ -92,17 +136,17 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-3">
                     {
                       i18next.language === "es"
                         ? "Innovación y Tendencias Actuales"
                         : "Innovation and Current Trends"
                     }
                   </h3>
-                  <p class="text-gray-600 leading-relaxed mb-6">
+                  <p class="text-gray-700 leading-relaxed">
                     {
                       i18next.language === "es"
-                        ? "En el piso de exhibición de RE+ MEXICO proporciona unaactualización sobre eventos actuales, tendencias, innovaciones, investigación y análisis en la industria de energías renovables."
+                        ? "En el piso de exhibición de RE+ MEXICO proporciona una actualización sobre eventos actuales, tendencias, innovaciones, investigación y análisis en la industria de energías renovables."
                         : "The RE+ MEXICO exhibition floor provides an update on current events, trends, innovations, research, and analysis in the renewable energy industry."
                     }
                   </p>
@@ -129,14 +173,14 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-3">
                     {
                       i18next.language === "es"
                         ? "Sistemas de Almacenamiento"
                         : "Energy Storage Systems"
                     }
                   </h3>
-                  <p class="text-gray-600 leading-relaxed">
+                  <p class="text-gray-700 leading-relaxed">
                     {
                       i18next.language === "es"
                         ? "Recibe capacitación técnica integral y de calidad por parte de instructores certificados, incluyendo estrategias y consejos para sistemas de almacenamiento de energía."
@@ -148,53 +192,58 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
             </div>
           </div>
 
-          <!-- Instituciones Participantes -->
-          <div data-aos="fade-left">
+          <!-- Imagen Principal -->
+          <div
+            class="relative h-full"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             <div
-              class="bg-gradient-to-br from-[#5E5884] to-[#7B6FA8] rounded-3xl p-8 text-white"
+              class="absolute inset-0 bg-gradient-to-br from-cyan-400/25 via-indigo-500/20 to-purple-500/10 rounded-3xl blur-3xl"
             >
-              <h3 class="text-2xl font-bold mb-6 text-center">
-                {
-                  i18next.language === "es"
-                    ? "Instituciones Participantes"
-                    : "Participating Institutions"
-                }
-              </h3>
-
+            </div>
+            <div
+              class="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl bg-white/5 backdrop-blur h-full flex"
+            >
+              <img
+                src="/img/installes_inovations.webp"
+                alt={i18next.language === "es"
+                  ? "Sesiones técnicas y talleres para instaladores"
+                  : "Technical sessions and workshops for installers"}
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
               <div
-                class="grid grid-cols-2 gap-8 items-center justify-items-center"
+                class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent"
               >
-                <!-- AMIF Logo -->
-                <a
-                  href="https://www.amif.org.mx/"
-                  target="_blank"
-                  class="bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2"
-                >
-                  <img
-                    src="/img/amif.webp"
-                    alt="AMIF Logo"
-                    class="max-h-16 object-contain"
-                  />
-                </a>
-
-                <!-- EUPD Logo -->
-                <a
-                  href="https://eupd-group.com/"
-                  target="_blank"
-                  class="bg-white rounded-lg w-full flex items-center justify-center min-h-[100px] p-2"
-                >
-                  <img
-                    src="/img/aliadosEstrategicos/aliados2/EUPD-Research.webp"
-                    alt="AMIF Logo"
-                    class="max-h-16 object-contain"
-                  />
-                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Program Section -->
+    <div
+      class="bg-gradient-to-b from-gray-900 via-gray-950 to-black pt-20 pb-10 sm:pb-16"
+    >
+      <div class="text-center" data-aos="fade-up">
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white uppercase"
+        >
+          {
+            i18next.language === "es"
+              ? "Programa de Conferencias"
+              : "Conference Program"
+          }
+        </h2>
+      </div>
+      <div class="max-w-7xl mx-auto">
+        <InstallerInnovationProgram
+          language={i18next.language}
+          client:only="react"
+        />
+      </div>
+    </div>
   </section>
-  
 </Layout>
