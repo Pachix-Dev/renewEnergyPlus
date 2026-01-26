@@ -9,15 +9,16 @@ const products = [
     id: 1,
     name: 'PASE COMPLETO, ENERGY NIGHT Y VIP AREA',
     name_en: 'FULL PASS, ENERGY NIGHT AND VIP AREA',
-    price: 7000, // Precio de fase 1
-    originalPrice: 7500, // Precio final
+    price: 6500, // Precio de fase 1
+    originalPrice: 7000, // Precio final
     isPresale: false,
-    savings: 500,
+    savings: 1000,
     // Estructura de precios por fases
     pricingPhases: {
       presale: { price: 6500, endDate: '15 de enero, 2026' },
-      phase1: { price: 7000, startDate: '16 de enero', endDate: '15 de marzo, 2026' },
-      phase2: { price: 7500, startDate: '16 de marzo', endDate: 'hasta la expo' }
+      phase1: { price: 7000, startDate: '01 de febrero, 2026', endDate: '15 de marzo, 2026' },
+      phase2: { price: 7500, startDate: '16 de marzo, 2026', endDate: 'hasta la expo' },
+      phaseEspecial: { price: 8000, startDate: 'Día del evento', endDate: '31 de enero, 2026' },
     },
     included: [
       '3 días de conferencias 14, 15 y 16 abril 2026',
@@ -43,8 +44,9 @@ const products = [
     // Estructura de precios por fases
     pricingPhases: {
       presale: { price: 1000, endDate: '15 de enero, 2026' },
-      phase1: { price: 1100, startDate: '16 de enero', endDate: '15 de marzo, 2026' },
-      phase2: { price: 1200, startDate: '16 de marzo', endDate: 'hasta la expo' }
+      phase1: { price: 1100, startDate: '16 de enero, 2026', endDate: '15 de marzo, 2026' },
+      phase2: { price: 1200, startDate: '16 de marzo', endDate: 'hasta la expo' },
+      phaseEspecial: { price: 1300, startDate: 'Día del evento', endDate: 'hasta agotar existencias' },
     },
     included: [
       '1 Entrada para la Energy Night con acceso a bebidas ilimitadas y snack',
@@ -120,43 +122,56 @@ const products = [
             </div>
 
             <div class='px-8 py-6 flex flex-col'>
-              <!-- Pricing section con estructura de fases -->
+              
+              {/* <!-- Pricing section con estructura de fases --> */}
               <div class='text-center mb-6'>
-                {/* Precio actual (Preventa) */}
-                <div class='bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-5 mb-6 border-2 border-blue-300'>
+                
+                {/* Precio actual */}
+                <div class={`rounded-2xl p-5 mb-6 border-2 ${product.id === 1 ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-300' : 'bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-300'}`}>
                   <div class='flex items-center justify-center gap-2 mb-3'>
-                    <span class='bg-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full flex items-center gap-2'>
+                    <span class={`text-white text-sm font-bold px-4 py-2 rounded-full flex items-center gap-2 ${product.id === 1 ? 'bg-green-500' : 'bg-blue-500'}`}>
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                       </svg>
-                      {i18next.language === 'es' ? 'FASE 1 ACTIVA' : 'PHASE 1 ACTIVE'}
+                      {product.id === 1 
+                        ? (i18next.language === 'es' ? 'PRECIO ESPECIAL' : 'SPECIAL PRICE')
+                        : (i18next.language === 'es' ? 'FASE 1 ACTIVA' : 'PHASE 1 ACTIVE')
+                      }
                     </span>
                   </div>
                   
                   <div class='flex items-baseline justify-center text-gray-900 mb-3'>
                     <span class='text-2xl font-semibold'>$</span>
-                    <span class={`font-black tracking-tight text-blue-600 text-4xl`}>
-                      {product.pricingPhases.phase1.price.toLocaleString('es-MX')}
+                    <span class={`font-black tracking-tight text-4xl ${product.id === 1 ? 'text-green-600' : 'text-blue-600'}`}>
+                      {product.id === 1 
+                        ? product.pricingPhases.presale.price.toLocaleString('es-MX')
+                        : product.pricingPhases.phase1.price.toLocaleString('es-MX')
+                      }
                     </span>
                     <span class='text-lg font-normal text-gray-500 ml-1'>MXN</span>
                   </div>
                   
-                  <p class='text-sm text-blue-800 font-bold'>
+                  <p class={`text-sm font-bold ${product.id === 1 ? 'text-green-800' : 'text-blue-800'}`}>
                     ⏰ {i18next.language === 'es' ? 'Válido hasta el' : 'Valid until'} 
-                    <span class="underline">{product.pricingPhases.phase1.endDate}</span>
+                    <span class="underline">
+                      {product.id === 1 
+                        ? product.pricingPhases.phaseEspecial.endDate
+                        : product.pricingPhases.phase1.endDate
+                      }
+                    </span>
                   </p>
                 </div>
 
                 {/* Tabla de precios por fases */}
                 <div class='bg-gray-50 rounded-2xl p-4 mb-6 border border-gray-200'>
                   
-                  
                   <div class='space-y-2'>
-                    {/* Preventa */}
+
+                    {/* Precio especial o de preventa */}
                     {/* <div class='flex items-center justify-between p-2 bg-green-100 rounded-lg border-l-4 border-green-500'>
                       <div class="flex-1">
                         <span class='font-bold text-green-800 text-sm'>
-                          {i18next.language === 'es' ? 'PREVENTA' : 'PRE-SALE'}
+                          {i18next.language === 'es' ? 'PRECIO ESPECIAL' : 'SPECIAL PRICE'}
                         </span>
                         <p class="text-xs text-green-700">
                           {i18next.language === 'es' ? 'Hasta el 15 enero' : 'Until Jan 15'}
@@ -174,7 +189,11 @@ const products = [
                           {i18next.language === 'es' ? 'FASE 1' : 'PHASE 1'}
                         </span>
                         <p class="text-xs text-yellow-700">
-                          {i18next.language === 'es' ? '16 ene - 15 mar' : 'Jan 16 - Mar 15'}
+                          {
+                            product.id === 1 
+                              ? (i18next.language === 'es' ? '01 feb - 15 mar' : 'Feb 01 - Mar 15')
+                              : (i18next.language === 'es' ? '16 ene - 15 mar' : 'Jan 16 - Mar 15')
+                          }
                         </p>
                       </div>
                       <span class='text-lg font-bold text-yellow-700'>
