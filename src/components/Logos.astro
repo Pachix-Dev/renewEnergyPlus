@@ -1,280 +1,118 @@
 ---
-import { t } from 'i18next'
-import { MarqueeReact } from './MarqueeReact'
-import { aliados } from '../data/constanst_aliados'
+import { t } from "i18next";
+import { MarqueeReact } from "./MarqueeReact";
+import { aliados } from "../data/constanst_aliados";
+import { allied_media } from "../data/constanst_logos";
 ---
 
-<section class='py-10 container mx-auto px-4'>
-  <p class='text-[#565078] font-bold text-4xl text-center py-10 uppercase'>
-    {t('home.organized_by')} :
+<section class="py-10 container mx-auto px-4">
+  <p class="text-[#565078] font-bold text-4xl text-center py-10 uppercase">
+    {t("home.organized_by")} :
   </p>
   <div
-    class='mt-5 grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2'
-    data-aos='fade-up'
-    data-aos-duration='1500'
+    class="mt-5 grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2"
+    data-aos="fade-up"
+    data-aos-duration="1500"
   >
-    <a href='https://www.iegexpo.it/en/' target='_blank' rel='noreferrer'>
+    <a href="https://www.iegexpo.it/en/" target="_blank" rel="noreferrer">
       <img
-        src='/img/italianExhibitionGroup.webp'
-        alt='Logo Italian Exhibition Gropup'
-        class='w-[150px] h-[82px] my-auto'
+        src="/img/italianExhibitionGroup.webp"
+        alt="Logo Italian Exhibition Gropup"
+        class="w-[150px] h-[82px] my-auto"
       />
     </a>
-    <a href='https://www.messe.de/en/' target='_blank' rel='noreferrer'>
+    <a href="https://www.messe.de/en/" target="_blank" rel="noreferrer">
       <img
-        src='/img/deutscheMesse.webp'
-        alt='Logo DeutscheMesse'
-        class='w-[250px] h-[54px] my-auto'
+        src="/img/deutscheMesse.webp"
+        alt="Logo DeutscheMesse"
+        class="w-[250px] h-[54px] my-auto"
       />
     </a>
-    <a href='https://re-plus.events/es/' target='_blank' rel='noreferrer'>
+    <a href="https://re-plus.events/es/" target="_blank" rel="noreferrer">
       <img
-        src='/img/RE_Events_orange.webp'
-        alt='Logo RE Events Orange'
-        class='w-[100px] h-[80px] my-auto'
+        src="/img/RE_Events_orange.webp"
+        alt="Logo RE Events Orange"
+        class="w-[100px] h-[80px] my-auto"
       />
     </a>
-    <a href='https://pv.snec.org.cn/' target='_blank' rel='noreferrer'>
+    <a href="https://pv.snec.org.cn/" target="_blank" rel="noreferrer">
       <img
-        src='/img/snec-logo-new.webp'
-        alt='Logo DeutscheMesse'
-        class='w-[228px] h-[114px] my-auto'
+        src="/img/snec-logo-new.webp"
+        alt="Logo DeutscheMesse"
+        class="w-[228px] h-[114px] my-auto"
       />
     </a>
   </div>
 
-  <p class='text-[#565078] font-bold text-4xl text-center py-10 uppercase'>
-    {t('home.powered_by')}
+  <p class="text-[#565078] font-bold text-4xl text-center py-10 uppercase">
+    {t("home.powered_by")}
   </p>
   <div
-    class='mt-5 grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2'
-    data-aos='fade-up'
-    data-aos-duration='1500'
+    class="mt-5 grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2"
+    data-aos="fade-up"
+    data-aos-duration="1500"
   >
-    <a href='https://amif.org.mx/' target='_blank' rel='noreferrer'>
+    <a href="https://amif.org.mx/" target="_blank" rel="noreferrer">
       <img
-        src='/img/amif.webp'
-        alt='Logo amif'
-        class='w-[200px] h-[59px] my-auto'
+        src="/img/amif.webp"
+        alt="Logo amif"
+        class="w-[200px] h-[59px] my-auto"
       />
     </a>
-    <a href='https://asolmex.org/' target='_blank' rel='noreferrer'>
+    <a href="https://asolmex.org/" target="_blank" rel="noreferrer">
       <img
-        src='/img/asolmex.webp'
-        alt='Logo Asolmex'
-        class='w-[150px] h-[150px] my-auto'
+        src="/img/asolmex.webp"
+        alt="Logo Asolmex"
+        class="w-[150px] h-[150px] my-auto"
       />
     </a>
-    <a href='https://seia.org/' target='_blank' rel='noreferrer'>
+    <a href="https://seia.org/" target="_blank" rel="noreferrer">
       <img
-        src='/img/seiaSolarEnergy.webp'
-        alt='Logo seia Solar Energy'
-        class='w-[200px] h-[62px] my-auto'
+        src="/img/seiaSolarEnergy.webp"
+        alt="Logo seia Solar Energy"
+        class="w-[200px] h-[62px] my-auto"
       />
     </a>
-    <a href='https://sepapower.org/' target='_blank' rel='noreferrer'>
+    <a href="https://sepapower.org/" target="_blank" rel="noreferrer">
       <img
-        src='/img/SmartElectric.webp'
-        alt='Logo Smart Electric'
-        class='w-[200px] h-[62px] my-auto'
+        src="/img/SmartElectric.webp"
+        alt="Logo Smart Electric"
+        class="w-[200px] h-[62px] my-auto"
       />
     </a>
   </div>
 
-  <p class='text-[#565078] font-bold text-4xl text-center py-10 uppercase'>
-    {t('home.strategic_partners')} :
+  <p class="text-[#565078] font-bold text-4xl text-center py-10 uppercase">
+    {t("home.strategic_partners")} :
   </p>
   <div
-    class='mt-5 grid grid-cols-[repeat(auto-fit,_minmax(170px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2'
-    data-aos='fade-up'
-    data-aos-duration='1500'
+    class="mt-5 grid grid-cols-[repeat(auto-fit,_minmax(170px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2"
+    data-aos="fade-up"
+    data-aos-duration="1500"
   >
     {
       aliados.map((aliado) => (
-        <a href={aliado.link} target='_blank' rel='noreferrer'>
+        <a href={aliado.link} target="_blank" rel="noreferrer">
           <img src={aliado.src} alt={aliado.alt} width={aliado.width} />
         </a>
       ))
     }
   </div>
 
-  <div class='mt-10 text-[#565078] font-bold text-4xl text-center py-10'>
-    {t('home.media_allies')}
+  <div class="mt-10 text-[#565078] font-bold text-4xl text-center py-10">
+    {t("home.media_allies")}
   </div>
-
   <div
-    class='mt-5 grid grid-cols-[repeat(auto-fit,_minmax(180px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2'
-    data-aos='fade-up'
-    data-aos-duration='1500'
+    class="grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-1"
+    data-aos="fade-up"
+    data-aos-duration="1500"
   >
-    <a
-      href='https://energyandcommerce.com.mx/'
-      target='_blank'
-      rel='noreferrer'
-    >
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/Energy-Commerce.webp'
-        alt='Energy Commerce'
-        width='200'
-      />
-    </a>
-    <a href='https://www.pv-magazine.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/pv-magazine-group.webp'
-        alt='PV Magazine Group'
-        width='240'
-      />
-    </a>
-    <a href='https://globalenergy.mx/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting2/global-energy-v2.webp'
-        alt='Global Energy'
-        width='240'
-      />
-    </a>
-    <a href='https://globalindustries.mx/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting2/global-industries_v2.webp'
-        alt='Global Industries'
-        width='240'
-      />
-    </a>
-
-    <a href='https://gerencia-ambiental.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/gerencia_ambiental.webp'
-        alt='Heraldo'
-        width='200'
-      />
-    </a>
-    <a href='https://cuatro-cero.com.mx/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/cuatroCero.webp'
-        alt='Heraldo'
-        width='200'
-      />
-    </a>
-
-    <a href='https://www.made-in-china.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/made-in-china.webp'
-        alt='Made in China'
-        width='300'
-      />
-    </a>
-    <a href='https://www.industrynewsmx.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting2/industrynewsmx.webp'
-        alt='Industry news MX'
-        width='180'
-      />
-    </a>
-    <a href='hhttps://mexicoindustry.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/mexicoIndustry.webp'
-        alt='Mexico Industry'
-        width='180'
-      />
-    </a>
-    <a href='https://energiahoy.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/EnergiaHoy.webp'
-        alt='Energia hoy'
-        width='200'
-      />
-    </a>
-
-    <a href='https://greentology.life/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting2/GreentologyV2.webp'
-        alt='Greentology'
-        width='200'
-      />
-    </a>
-    <a href='https://dplnews.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting2/dpl.webp'
-        alt='DPL NEWS'
-        width='200'
-      />
-    </a>
-    <a
-      href='https://www.bnamericas.com/es#financialServices'
-      target='_blank'
-      rel='noreferrer'
-    >
-      <img src='/img/bnamericas-logo.png' alt='DPL NEWS' width='200' />
-    </a>
-    <a href='https://www.infoenergetica.com/' target='_blank' rel='noreferrer'>
-      <img src='/img/infoenergetica.png' alt='DPL NEWS' width='200' />
-    </a>
-    <a href="https://tradeshowexecutive.com/" target='_blank' rel='noreferrer'>
-      <img
-        src='/img/media_partners/trade_show_executive.webp'
-        alt='Trade Show Executive'
-        width='200'
-      />
-    </a>
     {
-      /* 
-      <a
-      href='https://www.vanguardia-industrial.net/'
-      target='_blank'
-      rel='noreferrer'
-    >
-      <img
-        src='/img/VanguardiaIndustrial.webp'
-        alt='Vanguardia Industrial'
-        width='200'
-      />
-    </a>
-    <a href='https://industria360.com.mx/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/industria360.webp'
-        alt='Industria 360'
-        width='200'
-      />
-    </a>
-    <a href='https://heraldodemexico.com.mx/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/heraldoHorizontal.webp'
-        alt='Heraldo'
-        width='200'
-      />
-    </a>
-      <a href='https://factorenergetico.mx/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/factor-energetico.webp'
-        alt='Factor Energetico'
-        width='200'
-      />
-    </a>
-    <a href='https://lasempresasverdes.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting2/empresas-verdes.webp'
-        alt='Empresas Verdes'
-        width='200'
-      />
-    </a>
-    <a
-      href='https://revistaconsultoria.com.mx/'
-      target='_blank'
-      rel='noreferrer'
-    >
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting2/revistaConsultoria.webp'
-        alt='Energia Estrategica'
-        width='200'
-      />
-    </a>
-    <a href='https://efe.com/' target='_blank' rel='noreferrer'>
-      <img
-        src='/img/aliadosEstrategicos/Broadcasting1/EFE.webp'
-        alt='EFE'
-        width='180'
-      />
-    </a>
-    */
+      allied_media.map((medio) => (
+        <a href={medio.link} target="_blank" rel="noreferrer">
+          <img src={medio.src} alt={medio.alt} width={medio.width} />
+        </a>
+      ))
     }
   </div>
 </section>
