@@ -2,10 +2,12 @@
 import { t } from "i18next";
 import { MarqueeReact } from "./MarqueeReact";
 import { aliados } from "../data/constanst_aliados";
-import { allied_media } from "../data/constanst_logos";
+import { media_platinum, media_partners } from "../data/constanst_logos";
 ---
 
 <section class="py-10 container mx-auto px-4">
+  
+  <!-- Comite organizador -->
   <p class="text-[#565078] font-bold text-4xl text-center py-10 uppercase">
     {t("home.organized_by")} :
   </p>
@@ -44,7 +46,8 @@ import { allied_media } from "../data/constanst_logos";
     </a>
   </div>
 
-  <p class="text-[#565078] font-bold text-4xl text-center py-10 uppercase">
+  <!-- Powered by -->
+  <p class="text-[#565078] font-bold text-4xl text-center pt-12 pb-6 uppercase ">
     {t("home.powered_by")}
   </p>
   <div
@@ -82,11 +85,12 @@ import { allied_media } from "../data/constanst_logos";
     </a>
   </div>
 
-  <p class="text-[#565078] font-bold text-4xl text-center py-10 uppercase">
+  <!-- Aliados estrategicos -->
+  <p class="text-[#565078] font-bold text-4xl text-center pt-12 pb-6 uppercase ">
     {t("home.strategic_partners")} :
   </p>
   <div
-    class="mt-5 grid grid-cols-[repeat(auto-fit,_minmax(170px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-2"
+    class="mt-5 grid grid-cols sm:grid-cols-8 gap-8"
     data-aos="fade-up"
     data-aos-duration="1500"
   >
@@ -99,7 +103,26 @@ import { allied_media } from "../data/constanst_logos";
     }
   </div>
 
-  <div class="mt-10 text-[#565078] font-bold text-4xl text-center py-10">
+  <!-- medios aliados platinos -->
+  <div class=" text-[#565078] font-bold text-4xl text-center pt-12 pb-6 uppercase ">
+    {t("home.media_platinum")}
+  </div>
+  <div
+    class="grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-1"
+    data-aos="fade-up"
+    data-aos-duration="1500"
+  >
+    {
+      media_platinum.map((medio) => (
+        <a href={medio.link} target="_blank" rel="noreferrer">
+          <img src={medio.src} alt={medio.alt} width={medio.width} />
+        </a>
+      ))
+    }
+  </div>
+
+  <!-- Medios aliados -->
+  <div class=" text-[#565078] font-bold text-4xl text-center pt-12 pb-6 uppercase ">
     {t("home.media_allies")}
   </div>
   <div
@@ -108,13 +131,14 @@ import { allied_media } from "../data/constanst_logos";
     data-aos-duration="1500"
   >
     {
-      allied_media.map((medio) => (
+      media_partners.map((medio) => (
         <a href={medio.link} target="_blank" rel="noreferrer">
           <img src={medio.src} alt={medio.alt} width={medio.width} />
         </a>
       ))
     }
   </div>
+
 </section>
 <style>
   .title {

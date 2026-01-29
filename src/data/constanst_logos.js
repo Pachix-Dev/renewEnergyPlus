@@ -847,19 +847,7 @@ const energy_night = [
   },
 ];
 
-const allied_media = [
-  {
-    link: "",
-    src: "/img/aliadosEstrategicos/Broadcasting1/pv-magazine-group.webp",
-    alt: "PV Magazine Group",
-    width: 250,
-  },
-  // {
-  //   link: "",
-  //   src: "/img/aliadosEstrategicos/Broadcasting2/GreentologyV2.webp",
-  //   alt: "Greentology",
-  //   width: 250,
-  // },
+const media_platinum = [
   {
     link: "",
     src: "/img/aliadosEstrategicos/Broadcasting2/Industry_Energy_Magazine.webp",
@@ -868,22 +856,31 @@ const allied_media = [
   },
   {
     link: "",
+    src: "/img/aliadosEstrategicos/Broadcasting2/global-energy-v2.webp",
+    alt: "Global Energy",
+    width: 250,
+  },
+  {
+    link: "",
+    src: "/img/aliadosEstrategicos/Broadcasting2/global-industries_v2.webp",
+    alt: "Global Industries",
+    width: 250,
+  },
+];
+
+const media_partners = [
+   {
+    link: "",
+    src: "/img/aliadosEstrategicos/Broadcasting1/pv-magazine-group.webp",
+    alt: "PV Magazine Group",
+    width: 250,
+  },
+  {
+    link: "",
     src: "/img/aliadosEstrategicos/Broadcasting1/EnergiaHoy.webp",
     alt: "Energía Hoy",
     width: 250,
-  },
-  // {
-  //   link: "",
-  //   src: "/img/aliadosEstrategicos/Broadcasting2/global-energy-v2.webp",
-  //   alt: "Global Energy",
-  //   width: 250,
-  // },
-  // {
-  //   link: "",
-  //   src: "/img/aliadosEstrategicos/Broadcasting2/global-industries_v2.webp",
-  //   alt: "Global Industries",
-  //   width: 300,
-  // },
+  }
 ];
 
 export {
@@ -892,5 +889,6 @@ export {
   exhibitors,
   sponsors,
   energy_night,
-  allied_media,
+  media_platinum,
+  media_partners,
 };
