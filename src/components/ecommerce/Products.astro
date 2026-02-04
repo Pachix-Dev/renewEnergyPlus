@@ -9,8 +9,8 @@ const products = [
     id: 1,
     name: 'PASE COMPLETO, ENERGY NIGHT Y VIP AREA',
     name_en: 'FULL PASS, ENERGY NIGHT AND VIP AREA',
-    price: 6500, // Precio de fase 1
-    originalPrice: 7000, // Precio final
+    price: 7000, // Precio de fase 1
+    originalPrice: 7500, // Precio final
     isPresale: false,
     savings: 1000,
     // Estructura de precios por fases
@@ -133,20 +133,14 @@ const products = [
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                       </svg>
-                      {product.id === 1 
-                        ? (i18next.language === 'es' ? 'PRECIO ESPECIAL' : 'SPECIAL PRICE')
-                        : (i18next.language === 'es' ? 'FASE 1 ACTIVA' : 'PHASE 1 ACTIVE')
-                      }
+                      {i18next.language === 'es' ? 'FASE 1 ACTIVA' : 'PHASE 1 ACTIVE'}
                     </span>
                   </div>
                   
                   <div class='flex items-baseline justify-center text-gray-900 mb-3'>
                     <span class='text-2xl font-semibold'>$</span>
                     <span class={`font-black tracking-tight text-4xl ${product.id === 1 ? 'text-green-600' : 'text-blue-600'}`}>
-                      {product.id === 1 
-                        ? product.pricingPhases.presale.price.toLocaleString('es-MX')
-                        : product.pricingPhases.phase1.price.toLocaleString('es-MX')
-                      }
+                      {product.pricingPhases.phase1.price.toLocaleString('es-MX')}
                     </span>
                     <span class='text-lg font-normal text-gray-500 ml-1'>MXN</span>
                   </div>
@@ -154,10 +148,7 @@ const products = [
                   <p class={`text-sm font-bold ${product.id === 1 ? 'text-green-800' : 'text-blue-800'}`}>
                     ⏰ {i18next.language === 'es' ? 'Válido hasta el' : 'Valid until'} 
                     <span class="underline">
-                      {product.id === 1 
-                        ? product.pricingPhases.phaseEspecial.endDate
-                        : product.pricingPhases.phase1.endDate
-                      }
+                      {product.pricingPhases.phase1.endDate}
                     </span>
                   </p>
                 </div>
