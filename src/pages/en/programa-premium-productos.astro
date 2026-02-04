@@ -43,11 +43,14 @@ const base = lang === "es" ? "" : `/${lang}`;
       <Total client:only="react" />
       
       <!-- Coupon Component -->
-      <!-- <Coupon
+       <h2 class='text-center md:text-left text-xl sm:text-2xl font-bold mt-5 text-black'>
+        Captura tu codigo de descuento
+      </h2>
+      <Coupon
         client:only="react"
         text1={t('ecommerce.cupon_text')}
         text2={t('ecommerce.cupon')}
-      /> -->
+      />
 
       <!-- Continue Button Component -->
       <Continue client:only="react" translate={t('ecommerce.continue')} base={base} />

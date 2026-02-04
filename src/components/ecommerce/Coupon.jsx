@@ -14,8 +14,29 @@ export function Coupon({ text1, text2 }) {
     setCouponStatus('')
   }
 
+  const AVAILABLE_COUPONS = {
+    REPLUSMEXICO700: {
+      id: 99,
+      nameCode: 'REPLUSMEXICO700',
+      price: -700,
+    },
+    REPLUSASOLMEX:{
+      id: 8,
+      nameCode: 'REPLUSASOLMEX',
+      price: -700,
+    },
+    REPLUSAMIF:{
+      id: 9,
+      nameCode: 'REPLUSAMIF',
+      price: -700,
+    }
+  }
+
   const checkCoupon = async () => {
-    if (couponCode === 'REPLUSMEXICO700') {
+    const normalizedCode = couponCode.trim().toUpperCase()
+    const coupon = AVAILABLE_COUPONS[normalizedCode]
+
+    if (coupon) {
       if (!items.find((item) => item.id === 1)) {
         setCouponStatus(text1)
         setIsValidCoupon(false)
@@ -28,15 +49,16 @@ export function Coupon({ text1, text2 }) {
       setCouponCode('')
       addDiscount(
         {
-          id: 99,
+          id: coupon.id,
           name: 'Cupon de descuento',
           name_en: 'Discount Coupon',
-          price: -700,
+          price: coupon.price,
         },
         'GENERAL'
       )
     } else {
       setCouponStatus('Invalid coupon...')
+      setIsValidCoupon(false)
       setTimeout(() => setCouponStatus(''), 3000)
       setCouponCode('')
       return
