@@ -102,7 +102,7 @@ export function RegisterForm({ translates, currentLanguage }) {
     // Verificar que hay un país seleccionado antes de procesar
     if (!country) {
       setMessagePostalCode(
-        translates.select_country_first || 'Selecciona un país primero'
+        translates.select_country_first || 'Selecciona un país primero',
       )
       return
     }
@@ -120,7 +120,7 @@ export function RegisterForm({ translates, currentLanguage }) {
         setCity(
           data.records[0].d_ciudad === ''
             ? data.records[0].d_estado
-            : data.records[0].d_ciudad
+            : data.records[0].d_ciudad,
         )
         setColonias(data.records.map((record) => record.d_asenta))
         setColonia('')
@@ -212,7 +212,7 @@ export function RegisterForm({ translates, currentLanguage }) {
       setMessage(orderData?.message)
       setTimeout(() => {
         setMessage('')
-      }, 5000)
+      }, 8000)
     }
   }
 
@@ -328,10 +328,11 @@ export function RegisterForm({ translates, currentLanguage }) {
             <div>
               <p className='mb-4 font-semibold text-black'>
                 {translates.type_register}
-                <span className='text-red-600'>*</span><br />
-                <span className="text-red-600 font-bold">
+                <span className='text-red-600'>*</span>
+                <br />
+                <span className='text-red-600 font-bold'>
                   {translates.media_messege}
-                  <a href="mailto:social.media@igeco.mx" className='underline'>
+                  <a href='mailto:social.media@igeco.mx' className='underline'>
                     social.media@igeco.mx
                   </a>
                 </span>
@@ -1367,7 +1368,7 @@ export function RegisterForm({ translates, currentLanguage }) {
                   (item, index) => ({
                     label: item,
                     value: item,
-                  })
+                  }),
                 )}
                 value={Array.isArray(productInterest) ? productInterest : []}
                 onChange={(selected) => {
@@ -1376,7 +1377,7 @@ export function RegisterForm({ translates, currentLanguage }) {
                   // Actualizar el valor en react-hook-form
                   setValue(
                     'productInterest',
-                    selectedArray.length > 0 ? selectedArray : null
+                    selectedArray.length > 0 ? selectedArray : null,
                   )
                 }}
                 labelledBy='Select'
@@ -1485,13 +1486,15 @@ export function RegisterForm({ translates, currentLanguage }) {
             </div>
           </div>
         </div>
-        <div className='flex justify-center my-10'>
+        <div className='flex justify-center mt-10'>
           <button className='button' onClick={handleSubmit(handleRegister)}>
             {translates.finish}
           </button>
         </div>
         {message && (
-          <p className='mt-5 text-red-600 font-bold text-center'>{message}</p>
+          <p className='text-red-600 font-bold text-center uppercase bg-red-100 p-3 my-4 rounded-lg w-auto'>
+            {message}
+          </p>
         )}
         {processing && (
           <div className='absolute bottom-0 left-0 bg-gray-400 bg-opacity-85 z-[999] w-full h-full px-4'>
