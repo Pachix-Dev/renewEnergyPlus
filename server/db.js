@@ -644,5 +644,48 @@ export class RegisterModel {
       await connection.end()
     }
   }
+
+   // Validar si un usuario ya existe en tabla users_2026
+  static async check_user_exists_2026(email) {
+    const connection = await mysql.createConnection(config)
+    try {
+      const [users] = await connection.query(
+        'SELECT id FROM users_2026 WHERE email = ? LIMIT 1',
+        [email]
+      )
+      return users.length > 0
+    } finally {
+      await connection.end()
+    }
+  }
+
+  // Validar si un usuario ya existe en tabla users_students_2026
+  static async check_user_exists_students_2026(email) {
+    const connection = await mysql.createConnection(config)
+    try {
+      const [users] = await connection.query(
+        'SELECT id FROM users_students_2026 WHERE email = ? LIMIT 1',
+        [email]
+      )
+      return users.length > 0
+    } finally {
+      await connection.end()
+    }
+  }
+
+  // Validar si un usuario ya existe en tabla users (sitio)
+  static async check_user_exists_sitio(email) {
+    const connection = await mysql.createConnection(config)
+    try {
+      const [users] = await connection.query(
+        'SELECT id FROM users WHERE email = ? LIMIT 1',
+        [email]
+      )
+      return users.length > 0
+    } finally {
+      await connection.end()
+    }
+  }
+
   
 }

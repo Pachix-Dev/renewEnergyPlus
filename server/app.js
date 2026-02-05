@@ -260,7 +260,17 @@ app.post('/susbribe-email', async (req, res) => {
 app.post('/free-register', async (req, res) => {
     const { body } = req;
 
-    try {        
+    try {    
+        
+        // Validar que el usuario no exista previamente
+        const userExists = await RegisterModel.check_user_exists_2026(body.email);
+        if (userExists) {
+            return res.status(400).send({
+                status: false,
+                message: 'Ya estás registrado con este correo electrónico...'
+            });
+        }
+
         const data = { 
             uuid: uuidv4(),            
             ...body
@@ -294,7 +304,16 @@ app.post('/free-register', async (req, res) => {
 app.post('/free-register-student-re-plus-mexico', async (req, res) => {
     const { body } = req;
 
-    try {        
+    try {
+        // Validar que el usuario no exista previamente
+        const userExists = await RegisterModel.check_user_exists_students_2026(body.email);
+        if (userExists) {
+            return res.status(400).send({
+                status: false,
+                message: 'Ya estás registrado con este correo electrónico...'
+            });
+        }
+        
         const data = { 
             uuid: uuidv4(),            
             ...body
@@ -328,7 +347,16 @@ app.post('/free-register-student-re-plus-mexico', async (req, res) => {
 app.post('/free-register-sitio', async (req, res) => {
     const { body } = req;
 
-    try {        
+    try {
+        // Validar que el usuario no exista previamente
+        const userExists = await RegisterModel.check_user_exists_sitio(body.email);
+        if (userExists) {
+            return res.status(400).send({
+                status: false,
+                message: 'Ya estás registrado con este correo electrónico...'
+            });
+        }
+        
         const data = { 
             uuid: uuidv4(),            
             ...body
