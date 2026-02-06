@@ -256,7 +256,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                                           >
                                             {p.photo ? (
                                               <img
-                                                src={p.photo.startsWith('http')? p.photo: `${apiUrl}${p.photo}`}
+                                                src={p.photo.startsWith('http') ? p.photo : `${apiUrl}/ponentes/${String(p.photo).replace(/^\//, '')}`}
                                                 alt={p.name}
                                                 className='w-14 h-14 rounded-full object-cover border-2 border-[#7B6FA8] shadow-md'
                                                 loading='lazy'
