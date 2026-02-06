@@ -91,7 +91,7 @@ export const PonenteModal: React.FC<PonenteModalProps> = ({
             <div className='relative'>
               {ponente.photo ? (
                 <img
-                  src={ponente.photo.startsWith('http') ? ponente.photo : `${apiUrl}${ponente.photo}`}
+                  src={ponente.photo.startsWith('http') ? ponente.photo : `${apiUrl}/ponentes/${String(ponente.photo).replace(/^\//, '')}`}
                   alt={ponente.name}
                   className='w-32 h-32 rounded-2xl object-cover border-4 border-white/20 shadow-2xl'
                 />
