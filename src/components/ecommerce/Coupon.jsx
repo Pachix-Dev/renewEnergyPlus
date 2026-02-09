@@ -32,7 +32,7 @@ export function Coupon({ text1, text2 }) {
     },
     REPLUSANEST: {
       id: 10,
-      nameCode: 'REPLUSANEST',
+      nameCode: 'REPLUSANES',
       price: -700,
     },
   }
