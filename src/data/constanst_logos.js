@@ -880,6 +880,12 @@ const media_partners = [
     src: "/img/aliadosEstrategicos/Broadcasting1/EnergiaHoy.webp",
     alt: "Energía Hoy",
     width: 250,
+  },
+  {
+    link: "",
+    src: "/img/aliadosEstrategicos/Broadcasting1/GreentologyV2.webp",
+    alt: "Greentology",
+    width: 250,
   }
 ];
 
