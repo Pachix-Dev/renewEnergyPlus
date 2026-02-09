@@ -29,7 +29,12 @@ export function Coupon({ text1, text2 }) {
       id: 9,
       nameCode: 'REPLUSAMIF',
       price: -700,
-    }
+    },
+    REPLUSANEST: {
+      id: 10,
+      nameCode: 'REPLUSANEST',
+      price: -700,
+    },
   }
 
   const checkCoupon = async () => {
