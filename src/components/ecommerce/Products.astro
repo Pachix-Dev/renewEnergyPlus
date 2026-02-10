@@ -61,6 +61,51 @@ const products = [
       'Duration 6:30 p.m. - 10:00 p.m.',      
     ],
   },
+  {
+    id: '',
+    name: 'DAY PASS PREMIUM',
+    name_en: 'DAY PASS PREMIUM',
+    price: 2500,
+    originalPrice: 2600,
+    isPresale: false,
+    savings: 100,
+    requiresDaySelection: true,
+    dayLabel_es: 'Selecciona el dia de asistencia',
+    dayLabel_en: 'Select your attendance day',
+    dayPlaceholder_es: 'Selecciona un dia',
+    dayPlaceholder_en: 'Select a day',
+    days: [
+      {
+        value: '2026-04-14',
+        label_es: 'Martes 14 de abril',
+        label_en: 'Tuesday, April 14',
+      },
+      {
+        value: '2026-04-15',
+        label_es: 'Miercoles 15 de abril',
+        label_en: 'Wednesday, April 15',
+      },
+      {
+        value: '2026-04-16',
+        label_es: 'Jueves 16 de abril',
+        label_en: 'Thursday, April 16',
+      },
+    ],
+    pricingPhases: {
+      phase1: { price: 2500, startDate: '01 de febrero, 2026', endDate: '15 de marzo, 2026' },
+      phase2: { price: 2600, startDate: '16 de marzo, 2026', endDate: 'hasta la expo' },
+    },
+    included: [
+      'Acceso a conferencias premium por un dia',
+      'Valido solo para el dia seleccionado',
+      'Incluye Coffee Break',
+    ],
+    included_en: [
+      'Premium conference access for one day',
+      'Valid only for the selected day',
+      'Includes Coffee Break',
+    ],
+  },
 ]
 ---
 
@@ -116,6 +161,11 @@ const products = [
                 {product.id === 2 && (
                   <p class='text-sm text-white/90 font-semibold'>
                     {i18next.language === 'es' ? 'La noche más esperada del sector' : 'The most anticipated night in the industry'}
+                  </p>
+                )}
+                {product.id === 6 && (
+                  <p class='text-sm text-white/90 font-semibold'>
+                    {i18next.language === 'es' ? 'Acceso premium por un dia' : 'Premium access for one day'}
                   </p>
                 )}
               </div>
@@ -183,7 +233,9 @@ const products = [
                           {
                             product.id === 1 
                               ? (i18next.language === 'es' ? '01 feb - 15 mar' : 'Feb 01 - Mar 15')
-                              : (i18next.language === 'es' ? '16 ene - 15 mar' : 'Jan 16 - Mar 15')
+                              : product.id === 2
+                                ? (i18next.language === 'es' ? '16 ene - 15 mar' : 'Jan 16 - Mar 15')
+                                : (i18next.language === 'es' ? '01 feb - 15 mar' : 'Feb 01 - Mar 15')
                           }
                         </p>
                       </div>
@@ -243,7 +295,7 @@ const products = [
 
               {/* Botón de compra */}
               <div class='mx-auto mb-4'>
-                <AddCart item={product} translate={translate} client:only />
+                <AddCart item={product} translate={translate} language={i18next.language} client:only="react" />
               </div>
             </div>
 

@@ -93,7 +93,7 @@ const useRegisterForm = create(
             addToCart: (item) => set((state) => {
                 const itemWithId1Exists = state.items.some(i => i.id === 1);
                 const energyDrinkExists = state.items.some(i => i.id === 2);
-                const discountableProducts = [3, 4, 5];
+                const discountableProducts = [3, 4, 5];//Modificado y coloca los id de los productos a los que se les aplicará el descuento por la compra del PassMatch(Promoción)
             
                 // Si el producto con id 1 ya está en el carrito, no permitir agregar más productos
                 if (itemWithId1Exists) {

@@ -90,18 +90,19 @@ app.post('/create-order-replus', async (req, res) => {
             });
         }
     
-        let productPrice = product.price; // Precio base del producto
+        // Precio base del producto
+        let productPrice = product.price;
+        
+        /* Aplica descuento por promoción  PassMatch */
+        const energyDrinkExists = body.items.some(i => i.id == 2);// Verificar si el producto con id 2 está en la compra
+        const discountableProducts = [3, 4, 5];//Modificado y coloca el numero 2 para que funcione con el nuevo id de bebida energetica
     
-        // Verificar si el producto con id 2 está en la compra
-        const energyDrinkExists = body.items.some(i => i.id == 2);
-        const discountableProducts = [3, 4, 5];
-    
-        // Aplicar descuento si el producto es 3, 4 o 5 y el producto 2 está en la lista
-        if (energyDrinkExists && discountableProducts.includes(item.id)) {
-            productPrice = Math.max(productPrice - 500, 0); // Evita precios negativos
+        
+        if (energyDrinkExists && discountableProducts.includes(item.id)) {//Aplicar descuento si el producto es 3, 4 o 5 y el producto 2 está en la lista
+            productPrice = Math.max(productPrice - 500, 0);  //Evita precios negativos
         }
     
-        total += productPrice; // Sumar el precio al total
+        total += productPrice; //Sumar el precio al total
     });
     
     if (total !== body.total) {
