@@ -16,7 +16,7 @@ const base = lang === "es" ? "" : `/${lang}`;
 
 <LayoutCheckout title='RE+ MEXICO | productos'>
   <main class='md:flex grid'>
-    <section class='p-5 sm:p-10 w-full sm:w-3/5 sm:order-1'>
+    <section class='p-5 sm:p-10 w-full sm:w-3/4 sm:order-1'>
       <div
         class='flex items-center gap-5 bg-gray-700 p-2 text-white rounded-md'
       >
@@ -33,9 +33,9 @@ const base = lang === "es" ? "" : `/${lang}`;
       <Products />
     </section>
     <aside
-      class='sm:fixed right-0 top-0 z-50 p-5 w-full sm:w-2/5 sm:order-2 bg-[#f7f7f8] h-auto sm:h-full border rounded-lg shadow-lg overflow-y-scroll'
+      class='sm:fixed right-0 top-0 z-50 p-5 w-full sm:w-1/4 sm:order-2 bg-[#f7f7f8] h-auto sm:h-full border rounded-lg shadow-lg overflow-y-scroll'
     >
-      <p class='text-center text-2xl font-bold hidden md:block text-black'>
+      <p class='text-center text-2xl font-extrabold hidden md:block text-black uppercase'>
         {t('ecommerce.resume')}
       </p>
       <Items client:only="react" currentLanguage={currentLanguage} />
@@ -43,13 +43,14 @@ const base = lang === "es" ? "" : `/${lang}`;
       <Total client:only="react" />
       
       <!-- Coupon Component -->
-       <h2 class='text-center md:text-left text-xl sm:text-2xl font-bold mt-5 text-black'>
-        Captura tu codigo de descuento
+       <h2 class='text-center md:text-left text-xl sm:text-base font-extrabold mt-8 text-black uppercase'>
+        { lang === "es" ? "Captura tu código de descuento" : "Enter your discount code" }
       </h2>
       <Coupon
         client:only="react"
         text1={t('ecommerce.cupon_text')}
         text2={t('ecommerce.cupon')}
+        language={currentLanguage}
       />
 
       <!-- Continue Button Component -->

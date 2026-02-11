@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRegisterForm } from '../../store/register-form.js'
 
-export function Coupon({ text1, text2 }) {
+export function Coupon({ text1, text2 , language}) {
   const [couponCode, setCouponCode] = useState('')
   const [couponStatus, setCouponStatus] = useState('')
   const [isValidCoupon, setIsValidCoupon] = useState(null)
@@ -82,11 +82,11 @@ export function Coupon({ text1, text2 }) {
 
   return (
     <>
-      <div className='flex gap-4 justify-between pt-5'>
+      <div className='flex gap-4 justify-between pt-2'>
         <input
           type='text'
           className='w-full border-2 border-gray-300 rounded-lg px-2 py-1 focus:border-[#941E81] focus: focus:ring-[#941E81]'
-          placeholder='Código de descuento'
+          placeholder= { language === "es" ? "Ingresa tu código de descuento" : "Enter your discount code" }
           value={couponCode}
           onChange={handleCouponChange}
         />
@@ -95,7 +95,7 @@ export function Coupon({ text1, text2 }) {
           onClick={checkCoupon}
           disabled={!couponCode.trim()}
         >
-          Aplicar
+          { language === "es" ? "Aplicar" : "Apply" }
         </button>
       </div>
       {couponStatus && (
