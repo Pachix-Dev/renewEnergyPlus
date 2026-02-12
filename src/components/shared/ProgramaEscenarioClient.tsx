@@ -138,6 +138,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
         <div className='absolute top-1/3 right-1/4 w-48 h-48 bg-[#7B6FA8]/20 blur-2xl rounded-full' />
       </div>
       <div className='relative max-w-7xl mx-auto space-y-12'>
+        {/* Header de programa */}
         <div className='bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl'>
           <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-6'>
             <div className='flex-1 space-y-4'>
@@ -151,6 +152,12 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
               {escenario.description && (
                 <p className='text-lg text-white/80 leading-relaxed'>{escenario.description}</p>
               )}
+              <p className='inline-flex items-center gap-2 rounded-xl border border-amber-300/40 bg-amber-400/10 px-4 py-3 text-sm md:text-base font-semibold text-amber-100 shadow-sm'>
+                <svg className='w-5 h-5 shrink-0 text-amber-200' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 9v2m0 4h.01M10.29 3.86l-8.08 13.99A2 2 0 003.92 21h16.16a2 2 0 001.71-3.15L13.71 3.86a2 2 0 00-3.42 0z' />
+                </svg>
+                <span> { language === 'es'?'Mantente atento: pronto anunciaremos a más speakers.' : 'Stay tuned: more speakers coming soon' }</span>
+              </p>
             </div>
             {(escenario.location) && (
               <div className='flex flex-col gap-3 md:items-end text-sm text-white/80'>
@@ -168,6 +175,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
           </div>
         </div>
 
+        {/* Body program */}
         <div className='space-y-12'>
           {escenario.dias && escenario.dias.length > 0 ? (
             escenario.dias.map((dia, diaIndex) => (
