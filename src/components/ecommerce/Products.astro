@@ -70,9 +70,9 @@ const products = [
     isPresale: false,
     savings: 100,
     requiresDaySelection: true,
-    dayLabel_es: 'Selecciona el dia de asistencia',
+    dayLabel_es: 'Selecciona el día de asistencia',
     dayLabel_en: 'Select your attendance day',
-    dayPlaceholder_es: 'Selecciona un dia',
+    dayPlaceholder_es: 'Selecciona un día',
     dayPlaceholder_en: 'Select a day',
     days: [
       {
@@ -82,7 +82,7 @@ const products = [
       },
       {
         value: '2026-04-15',
-        label_es: 'Miercoles 15 de abril',
+        label_es: 'Miércoles 15 de abril',
         label_en: 'Wednesday, April 15',
       },
       {
@@ -96,8 +96,8 @@ const products = [
       phase2: { price: 2600, startDate: '16 de marzo, 2026', endDate: 'hasta la expo' },
     },
     included: [
-      'Acceso a conferencias premium por un dia',
-      'Valido solo para el dia seleccionado',
+      'Acceso a conferencias premium por un día',
+      'Válido solo para el día seleccionado',
       'Incluye Coffee Break',
     ],
     included_en: [
@@ -139,7 +139,7 @@ const products = [
           </div>
 
           <!-- Card principal -->
-          <div class={`relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl border overflow-hidden h-full ${product.id === 1 ? 'border-yellow-200 ring-2 ring-yellow-300/50' : 'border-gray-100'}`}>
+          <div class={`relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl border overflow-hidden h-full flex flex-col ${product.id === 1 ? 'border-yellow-200 ring-2 ring-yellow-300/50' : 'border-gray-100'}`}>
             
             <!-- Header del card -->
             <div class={`h-32 px-8 py-6 text-center relative overflow-hidden ${product.id === 1 ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : 'bg-gradient-to-r from-[#5E5884] to-[#7B6FA8]'}`}>
@@ -165,17 +165,15 @@ const products = [
                 )}
                 {product.id === 3 && (
                   <p class='text-sm text-white/90 font-semibold'>
-                    {i18next.language === 'es' ? 'Acceso premium por un dia' : 'Premium access for one day'}
+                    {i18next.language === 'es' ? 'Acceso premium por un día' : 'Premium access for one day'}
                   </p>
                 )}
               </div>
             </div>
 
-            <div class='px-8 py-6 flex flex-col'>
-              
+            <div class='px-8 py-6 flex flex-col flex-1'>
               {/* <!-- Pricing section con estructura de fases --> */}
               <div class='text-center mb-6'>
-                
                 {/* Precio actual */}
                 <div class={`rounded-2xl p-5 mb-6 border-2 ${product.id === 1 ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-300' : 'bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-300'}`}>
                   <div class='flex items-center justify-center gap-2 mb-3'>
@@ -292,6 +290,18 @@ const products = [
                   </li>
                 ))}
               </ul>
+
+              {/* Botón de ver programa premium para el pase completo y day pass */}
+              {(product.id === 1 || product.id === 3) && (
+                <div class='mx-auto mb-4'>
+                  <a
+                    href='/programa-premium'
+                    class='inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] hover:opacity-90 transition-opacity'
+                  >
+                    {i18next.language === 'es' ? 'Ver programa premium' : 'See premium program'}
+                  </a>
+                </div>
+              )}
 
               {/* Botón de compra */}
               <div class='mx-auto mb-4'>
