@@ -15,6 +15,7 @@ export function Coupon({ text1, text2 , language}) {
   }
 
   const AVAILABLE_COUPONS = {
+
     REPLUSMEXICO700: {
       id: 99,
       nameCode: 'REPLUSMEXICO700',
@@ -33,6 +34,36 @@ export function Coupon({ text1, text2 , language}) {
     REPLUSANES: {
       id: 10,
       nameCode: 'REPLUSANES',
+      price: -700,
+    },
+    REPLUSMERM:{
+      id: 11,
+      nameCode: 'REPLUSMERM',
+      price: -700,
+    },
+    REPLUSEXP: {
+      id: 12,
+      nameCode: 'REPLUSEXP',
+      price: -500,
+    },
+    IERUNAM : {
+      id: 13,
+      nameCode: 'IERUNAM',
+      price: -700,
+    },
+    AMENEER: {
+      id: 14,
+      nameCode: 'AMENEER',
+      price: -700,
+    },
+    ECOMONDO: {
+      id: 15,
+      nameCode: 'ECOMONDO',
+      price: -700,
+    },
+    SPEAKER: {
+      id: 16,
+      nameCode: 'SPEAKER',
       price: -700,
     },
   }
