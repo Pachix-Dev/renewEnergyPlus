@@ -33,11 +33,12 @@ const base = lang === "es" ? "" : `/${lang}`;
       <Products />
     </section>
     <aside
-      class='sm:fixed right-0 top-0 z-50 p-5 w-full sm:w-1/4 sm:order-2 bg-[#f7f7f8] h-auto sm:h-full border rounded-lg shadow-lg overflow-y-scroll'
+      class='sm:fixed right-0 top-0 z-50 p-4 w-full sm:w-1/4 sm:order-2 bg-[#f7f7f8] h-auto sm:h-full border rounded-lg shadow-lg overflow-y-scroll'
     >
       <p class='text-center text-2xl font-extrabold hidden md:block text-black uppercase'>
         {t('ecommerce.resume')}
       </p>
+      <!--  -->
       <Items client:only="react" currentLanguage={currentLanguage} />
 
       <Total client:only="react" />
