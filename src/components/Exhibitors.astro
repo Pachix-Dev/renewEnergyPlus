@@ -1,12 +1,12 @@
 ---
 import { MarqueeReact } from '../components/MarqueeReact'
-import { exhibitors } from '../data/constanst_logos'
+import { exhibitors2026 } from '../data/constans_exhibitors'
 import { t } from 'i18next'
 ---
 
 <section class='container mx-auto px-4 my-10'>
   <p class='text-[#565078] text-4xl text-center font-bold p-10'>
-    {t('menu.submenu_2.title')} 2025
+    {t('menu.submenu_2.title')} 2026
   </p>
   <div
     class='mt-5 grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-1'
@@ -14,7 +14,7 @@ import { t } from 'i18next'
     data-aos-duration='1500'
   >
     {
-      exhibitors.map((exhibitor) => (
+      exhibitors2026.map((exhibitor) => (
         <a href={exhibitor.link} target='_blank' rel='noreferrer'>
           <img
             src={exhibitor.src}
