@@ -70,6 +70,7 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/solar_ing.webp", alt: "Solar Ing", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/solar_insurance.webp", alt: "Solar Insurance", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/solar_max.webp", alt: "Solar Max", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/solarama.webp", alt: "Solarama", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/soles.webp", alt: "Soles", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/solis.webp", alt: "Solis", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/sosen.webp", alt: "Sosen", width: 200, height: 200 },
