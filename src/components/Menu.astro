@@ -198,7 +198,7 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_12")}
                 </a>
               </li>
-
+              <!-- Contrato de Exposición -->
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href="/doc/CONTRATO-DE-EXPOSICION-REMEX-2026.pdf"
@@ -208,6 +208,18 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_7")}
                 </a>
               </li>
+              <!-- Formato de contrato de lectoras -->
+              <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href={i18next.language === "es"
+                    ? "/doc/RE+_renta_lectora_gafetes_2026.pdf"
+                    : "/doc/RE+_bagde_reader_rental_2026.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2">
+                  {t("menu.submenu_2.option_18")}
+                </a>
+              </li>
+              <!-- Toolkit 2026 -->
               <li class="hover:bg-blue-100 font-semibold">
                 <a href={`${base}/toolkit`} class="block px-4 py-2">
                   TOOLKIT 2026
