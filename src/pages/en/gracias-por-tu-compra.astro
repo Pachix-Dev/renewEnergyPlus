@@ -61,3 +61,24 @@ changeLanguage("en");
     color: transparent;
   }
 </style>
+
+<!-- Google Tag Manager para seguimiento de compras -->
+<script>
+  const purchaseRaw = sessionStorage.getItem('replus_purchase');
+
+  if (purchaseRaw) {
+    const purchase = JSON.parse(purchaseRaw);
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'purchase',
+      ecommerce: {
+        transaction_id: purchase.transaction_id,
+        value: Number(purchase.value) || 0,
+        currency: purchase.currency || 'MXN',
+      }
+    });
+
+    sessionStorage.removeItem('replus_purchase');
+  }
+</script>

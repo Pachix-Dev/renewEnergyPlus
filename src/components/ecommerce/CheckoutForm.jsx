@@ -155,6 +155,14 @@ export function CheckoutForm({ currentLanguage, translates }) {
     })
     const orderData = await response.json()
     if (orderData.status) {
+      sessionStorage.setItem(
+        'replus_purchase',
+        JSON.stringify({
+          transaction_id: data.orderID,
+          value: Number(total) || 0,
+          currency: 'MXN',
+        })
+      )
       clear()
       setCompleteRegister(true)
       setInvoiceDownToLoad(orderData?.invoice)
