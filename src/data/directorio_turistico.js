@@ -59,7 +59,7 @@ const hotels = [
     phone: '+52 (33) 38 80 06 00',
     email: 'POR CONFIRMAR',
     code: 'RE+ MEXICO / ECOMONDO MEXICO',
-    link: '',
+    link: 'https://www.marriott.com/es/event-reservations/reservation-link.mi?id=1770847860103&key=GRP&guestreslink2=true&app=resvlink',
     time_walk: '20',
     time_drive: '5  ',
     whatsapp: '33 18 93 37 90'
