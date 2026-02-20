@@ -184,35 +184,35 @@ const canonicalURL = new URL(
       })(
         window,
         document,
-        'script',
-        'https://connect.facebook.net/en_US/fbevents.js'
+        // 'script',
+        // 'https://connect.facebook.net/en_US/fbevents.js'
       )
 
       // Inicializar con coincidencias avanzadas vacías
-      fbq('init', '1047851480332189', {
-        em: '',
-        ph: '',
-        fn: '',
-        ln: '',
-        ct: '',
-        st: '',
-        zp: '',
-        country: 'MX',
-      })
+      // fbq('init', '1047851480332189', {
+      //   em: '',
+      //   ph: '',
+      //   fn: '',
+      //   ln: '',
+      //   ct: '',
+      //   st: '',
+      //   zp: '',
+      //   country: 'MX',
+      // })
 
       // Solo PageView en Layout.astro (NO Purchase)
-      fbq('track', 'PageView')
+      // fbq('track', 'PageView')
 
       // Purchase solo debe estar en LayoutCheckout.astro
     </script>
-    <noscript>
+    <!-- <noscript>
       <img
         height='1'
         width='1'
         style='display:none'
         src='https://www.facebook.com/tr?id=1047851480332189&ev=PageView&noscript=1'
       />
-    </noscript>
+    </noscript> -->
     <!-- End Meta Pixel Code -->
   </head>
 
