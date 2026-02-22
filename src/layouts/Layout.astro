@@ -1,109 +1,109 @@
 ---
-import Menu from '../components/Menu.astro'
-import i18next, { t } from 'i18next'
-import { HeadHrefLangs } from 'astro-i18next/components'
-import Footer from '../components/Footer.astro'
+import Menu from "../components/Menu.astro";
+import i18next, { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-  title: string
-  description?: string
-  image?: string
-  url?: string
+  title: string;
+  description?: string;
+  image?: string;
+  url?: string;
 }
 
 const {
   title,
-  description = 'La feria líder en energías renovables. 14–16 abril 2026, Expo Guadalajara.',
-  image = 'https://re-plus-mexico.com.mx/img/logo_replus_blue.png',
-  url = 'https://re-plus-mexico.com.mx/',
-} = Astro.props
+  description = "La feria líder en energías renovables. 14–16 abril 2026, Expo Guadalajara.",
+  image = "https://re-plus-mexico.com.mx/img/logo_replus_blue.png",
+  url = "https://re-plus-mexico.com.mx/",
+} = Astro.props;
 
 // Canonical URL basado en la página actual
 const canonicalURL = new URL(
   Astro.url.pathname,
-  Astro.site || 'https://re-plus-mexico.com.mx'
-)
+  Astro.site || "https://re-plus-mexico.com.mx",
+);
 ---
 
 <!doctype html>
 <html lang={i18next.language}>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
 
     <!-- SEO Básico -->
     <title>{title}</title>
-    <meta name='description' content={description} />
-    <link rel='canonical' href={canonicalURL} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Favicon mejorado -->
     <link
-      rel='icon'
-      type='image/webp'
-      href='/img/favicon32x32.webp'
-      sizes='32x32'
+      rel="icon"
+      type="image/webp"
+      href="/img/favicon32x32.webp"
+      sizes="32x32"
     />
     <link
-      rel='icon'
-      type='image/webp'
-      href='/img/favicon.webp'
-      sizes='192x192'
+      rel="icon"
+      type="image/webp"
+      href="/img/favicon.webp"
+      sizes="192x192"
     />
-    <link rel='apple-touch-icon' href='/img/favicon.webp' />
+    <link rel="apple-touch-icon" href="/img/favicon.webp" />
 
     <!-- Facebook Meta Tags -->
-    <meta property='og:url' content='https://re-plus-mexico.com.mx/' />
-    <meta property='og:type' content='website' />
-    <meta property='og:title' content='RE+ MEXICO' />
+    <meta property="og:url" content="https://re-plus-mexico.com.mx/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RE+ MEXICO" />
     <meta
-      property='og:description'
-      content='La feria líder en energías renovables. 14–16 abril 2026, Expo Guadalajara.'
+      property="og:description"
+      content="La feria líder en energías renovables. 14–16 abril 2026, Expo Guadalajara."
     />
     <meta
-      property='og:image'
-      content='https://re-plus-mexico.com.mx/img/logo_replus_blue.png'
+      property="og:image"
+      content="https://re-plus-mexico.com.mx/img/logo_replus_blue.png"
     />
 
     <!-- Twitter Card -->
-    <meta name='twitter:card' content='summary_large_image' />
-    <meta name='twitter:url' content={url} />
-    <meta name='twitter:title' content={title} />
-    <meta name='twitter:description' content={description} />
-    <meta name='twitter:image' content={image} />
-    <meta name='twitter:site' content='@replusmexico' />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:site" content="@replusmexico" />
     <!-- Agrega tu handle de Twitter -->
-    <meta name='twitter:creator' content='@replusmexico' />
+    <meta name="twitter:creator" content="@replusmexico" />
 
     <!-- Robots -->
     <meta
-      name='robots'
-      content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
 
     <!-- Theme Color -->
-    <meta name='theme-color' content='#5E5884' />
+    <meta name="theme-color" content="#5E5884" />
 
     <!-- Facebook Domain Verification -->
     <meta
-      name='facebook-domain-verification'
-      content='syaqfimr31v8tvs6tiet05x36k94vh'
+      name="facebook-domain-verification"
+      content="syaqfimr31v8tvs6tiet05x36k94vh"
     />
 
     <!-- Preconnect para mejorar performance -->
-    <link rel='preconnect' href='https://www.googletagmanager.com' />
-    <link rel='preconnect' href='https://www.google-analytics.com' />
-    <link rel='preconnect' href='https://connect.facebook.net' />
-    <link rel='preconnect' href='https://unpkg.com' />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://connect.facebook.net" />
+    <link rel="preconnect" href="https://unpkg.com" />
 
     <!-- AOS CSS -->
-    <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet' />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- HeadHrefLangs para i18n -->
     <HeadHrefLangs />
 
     <!-- Structured Data (Schema.org) -->
-    <script type='application/ld+json' is:inline>
+    <script type="application/ld+json" is:inline>
       {
         "@context": "https://schema.org",
         "@type": "Event",
@@ -135,58 +135,111 @@ const canonicalURL = new URL(
     </script>
 
     <!-- Google Tag Manager -->
-    <script is:inline>
-      ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+    <!-- <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtag/js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-M425LL8X')
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtag/js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M425LL8X");
+    </script> -->
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager Corregido-->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M425LL8X");
     </script>
     <!-- End Google Tag Manager -->
 
     <!-- Google Analytics -->
-    <script async src='https://www.googletagmanager.com/gtag/js?id=G-6GJCSFD2EH'
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GJCSFD2EH"
     ></script>
     <script is:inline>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
-      gtag('config', 'G-6GJCSFD2EH')
+      gtag("js", new Date());
+      gtag("config", "G-6GJCSFD2EH");
     </script>
     <!-- End Google Analytics -->
 
-    <!-- Meta Pixel Code - CORREGIDO -->
+    <!-- Meta Pixel Code -->
     <script is:inline>
       !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return
+        if (f.fbq) return;
         n = f.fbq = function () {
           n.callMethod
             ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments)
-        }
-        if (!f._fbq) f._fbq = n
-        n.push = n
-        n.loaded = !0
-        n.version = '2.0'
-        n.queue = []
-        t = b.createElement(e)
-        t.async = !0
-        t.src = v
-        s = b.getElementsByTagName(e)[0]
-        s.parentNode.insertBefore(t, s)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "1047851480332189");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=1047851480332189&ev=PageView&noscript=1"
+      /></noscript
+    >
+    <!-- End Meta Pixel Code -->
+
+    <!-- Meta Pixel Code - CORREGIDO -->
+    <!-- <script is:inline>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
       })(
         window,
         document,
         // 'script',
         // 'https://connect.facebook.net/en_US/fbevents.js'
-      )
+      );
 
       // Inicializar con coincidencias avanzadas vacías
       // fbq('init', '1047851480332189', {
@@ -204,7 +257,7 @@ const canonicalURL = new URL(
       // fbq('track', 'PageView')
 
       // Purchase solo debe estar en LayoutCheckout.astro
-    </script>
+    </script> -->
     <!-- <noscript>
       <img
         height='1'
@@ -218,36 +271,46 @@ const canonicalURL = new URL(
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
+    <!-- <noscript>
       <iframe
-        src='https://www.googletagmanager.com/ns.html?id=GTM-M425LL8X'
-        height='0'
-        width='0'
-        style='display:none;visibility:hidden'></iframe>
-    </noscript>
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M425LL8X"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M425LL8X"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Widget Ecomondo -->
-    <div class='icon-wrapper fixed bottom-5 right-5 z-50'>
+    <div class="icon-wrapper fixed bottom-5 right-5 z-50">
       <a
-        href='https://ecomondomexico.com.mx/'
-        target='_blank'
-        rel='noopener noreferrer'
+        href="https://ecomondomexico.com.mx/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <img
-          src='/img/widgetEcomondo.webp'
-          alt='Ecomondo Mexico - Evento simultáneo'
-          class='rounded-full w-20 h-20'
-          loading='lazy'
-          width='80'
-          height='80'
+          src="/img/widgetEcomondo.webp"
+          alt="Ecomondo Mexico - Evento simultáneo"
+          class="rounded-full w-20 h-20"
+          loading="lazy"
+          width="80"
+          height="80"
         />
       </a>
-      <div class='icon-tooltip'>
+      <div class="icon-tooltip">
         {
-          i18next.language === 'en'
-            ? 'Event celebrated simultaneously with ECOMONDO'
-            : 'Evento celebrado simultáneamente con ECOMONDO'
+          i18next.language === "en"
+            ? "Event celebrated simultaneously with ECOMONDO"
+            : "Evento celebrado simultáneamente con ECOMONDO"
         }
       </div>
     </div>
@@ -259,26 +322,26 @@ const canonicalURL = new URL(
     <!-- Flowbite -->
     <script
       is:inline
-      src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js'
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"
     ></script>
 
     <!-- AOS -->
     <script
       is:inline
       data-astro-rerun
-      src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script is:inline data-astro-rerun>
       AOS.init({
         duration: 800,
         once: true,
         offset: 100,
-      })
+      });
     </script>
 
     <style is:global>
       @font-face {
-        font-family: 'Tungsten-Medium';
-        src: url('/fonts/Tungsten-Medium.otf') format('opentype');
+        font-family: "Tungsten-Medium";
+        src: url("/fonts/Tungsten-Medium.otf") format("opentype");
         font-weight: normal;
         font-style: normal;
         font-display: swap;

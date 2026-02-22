@@ -10,33 +10,33 @@ import { sponsors } from "../data/constanst_logos";
 changeLanguage("es");
 ---
 
-<Layout title='RE+ MEXICO | Gracias por tu Compra'>
-  <Redirect client:only='react' />
-  <section class='my-10 max-w-screen-lg mx-auto'>
+<Layout title="RE+ MEXICO | Gracias por tu Compra">
+  <Redirect client:only="react" />
+  <section class="my-10 max-w-screen-lg mx-auto">
     <MarqueeSponsors partners={sponsors} isLeftToRight />
   </section>
-  <div class='p-5 lg:p-20'>
+  <div class="p-5 lg:p-20">
     <div
-      class='px-4 ecomondo-bloq-1 w-full h-full text-color flex flex-col items-center justify-center relative'
+      class="px-4 ecomondo-bloq-1 w-full h-full text-color flex flex-col items-center justify-center relative"
     >
       <Confettti client:visible />
 
-      <div class='grid md:flex gap-6 place-items-center w-full justify-center'>
-        <div class='grid place-items-center place-content-center w-full'>
+      <div class="grid md:flex gap-6 place-items-center w-full justify-center">
+        <div class="grid place-items-center place-content-center w-full">
           <div
             class=`box uppercase text-center lg:text-6xl text-5xl after:content-['${t('thanks_page.title2')}'`
-            id='box1'
+            id="box1"
           >
-            {t('thanks_page.thanks_purchasing')}
+            {t("thanks_page.thanks_purchasing")}
           </div>
 
           <div
-            class='mt-10 font-bold text-center text-xl'
-            set:html={t('thanks_page.description')}
+            class="mt-10 font-bold text-center text-xl"
+            set:html={t("thanks_page.description")}
           />
           <DonwloadAccess
-            client:only='react'
-            text={t('thanks_page.download_pass')}
+            client:only="react"
+            text={t("thanks_page.download_pass")}
           />
         </div>
       </div>
@@ -63,21 +63,31 @@ changeLanguage("es");
 </style>
 
 <!-- Google Tag Manager para seguimiento de compras -->
-<script>
+<script is:inline>
   const purchaseRaw = sessionStorage.getItem('replus_purchase');
 
   if (purchaseRaw) {
     const purchase = JSON.parse(purchaseRaw);
+    const value = Number(purchase.value) || 0;
+    const currency = purchase.currency || 'MXN';
+    const transactionId = purchase.transaction_id;
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'purchase',
       ecommerce: {
-        transaction_id: purchase.transaction_id,
-        value: Number(purchase.value) || 0,
-        currency: purchase.currency || 'MXN',
+        transaction_id: transactionId,
+        value,
+        currency,
       }
     });
+
+    if (typeof fbq === 'function') {
+      fbq('track', 'Purchase', {
+        value,
+        currency,
+      });
+    }
 
     sessionStorage.removeItem('replus_purchase');
   }
