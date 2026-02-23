@@ -392,10 +392,10 @@ export function EnlightenmentProgram({ language }) {
                       </span>
                     </div>
 
-                    <div className="flex-1 flex flex-row justify-between gap-4">
+                    <div className="flex flex-col gap-4 md:flex-row md:items-start justify-between">
 
                     {/* Información de la conferencia */}
-                      <div className="space-y-2">
+                      <div className="space-y-2 flex-1 w-4/12   ">
                         <div>
                           <h3 className="text-base sm:text-lg md:text-xl font-semibold text-slate-900 leading-tight">
                             {language === "es"
@@ -405,7 +405,7 @@ export function EnlightenmentProgram({ language }) {
                         </div>
                         <div>
                           {conferencia.description ? (
-                            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed text-justify">
                               {language === "es"
                                 ? conferencia.description
                                 : conferencia.description_en}
@@ -448,13 +448,18 @@ export function EnlightenmentProgram({ language }) {
                       </div>
 
                       {/* Bloque de información de la conferencia: aquí se muestra el logo de empresa */}
-                      <div className="flex items-start justify-between gap-3">
+                      <div className="flex w-full items-start justify-start md:w-auto md:justify-end">
                         {companyLogo(conferencia.company_logo) ? (
-                          <img
-                            src={companyLogo(conferencia.company_logo)}
-                            alt={conferencia.company || "Empresa"}
-                            className="h-8 w-16 sm:h-24 sm:w-40 rounded bg-slate-50 object-contain p-1 border border-slate-200"
-                          />
+                          <div className="flex flex-col items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+                            <span className="text-xs sm:text-sm font-medium text-black whitespace-nowrap">
+                              {language === "es" ? "Patrocinado por" : "Powered by"}
+                            </span>
+                            <img
+                              src={companyLogo(conferencia.company_logo)}
+                              alt={conferencia.company || "Empresa"}
+                              className="h-12 w-28 sm:h-16 sm:w-36 md:h-20 md:w-40 rounded-lg bg-white object-contain p-2 border border-slate-200 shadow-sm"
+                            />
+                          </div>
                         ) : null}
                       </div>
                     </div>
