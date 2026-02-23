@@ -420,7 +420,7 @@ export function EnlightenmentProgram({ language }) {
                                   <button
                                     key={p.id}
                                     onClick={() => setSelectedSpeaker(p)}
-                                    className="flex items-center gap-2 rounded-xl bg-slate-50 px-2.5 sm:px-3 py-1 text-xs text-slate-700 border border-slate-100 hover:border-slate-200 transition"
+                                    className="group flex items-center gap-2 rounded-xl bg-slate-50 px-2.5 sm:px-3 py-1 text-xs text-slate-700 border border-slate-100 hover:border-slate-200 transition"
                                     title="Ver semblanza"
                                   >
                                     {speakerAvatar(p.photo) ? (
@@ -436,10 +436,30 @@ export function EnlightenmentProgram({ language }) {
                                           .toUpperCase()}
                                       </div>
                                     )}
-                                    <p className="truncate text-left font-semibold text-slate-900">
-                                     <span>{p.name}</span><br />
-                                     <span className="italic font-normal">{p.position}</span>
-                                    </p>
+                                    <div className="min-w-0">
+                                      <p className="truncate text-left font-semibold text-slate-900">
+                                        <span>{p.name}</span>
+                                        <br />
+                                        <span className="italic font-normal">{p.position}</span>
+                                      </p>
+                                    </div>
+                                    <span className="ml-1 inline-flex h-5 w-5 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 group-hover:text-[#565078] group-hover:border-[#565078] transition">
+                                      <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M9 6L15 12L9 18"
+                                          stroke="currentColor"
+                                          strokeWidth="1.8"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        />
+                                      </svg>
+                                    </span>
                                   </button>
                                 ))}
                               </div>
