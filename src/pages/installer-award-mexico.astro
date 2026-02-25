@@ -5,117 +5,164 @@ import i18next, { t, changeLanguage } from "i18next";
 changeLanguage("es");
 ---
 
-<Layout title='RE+ MEXICO | Installer Award Mexico'>
+<Layout title="RE+ MEXICO | Installer Award Mexico">
   <!-- Hero Section -->
-  <section class='relative min-h-screen overflow-hidden'>
-    <!-- Background Video/Image -->
-    <div class='absolute inset-0'>
+  <section class="relative min-h-screen overflow-hidden">
+    <div class="absolute inset-0">
       <img
-        src='/img/bgaward.webp'
-        alt='Background'
-        class='w-full h-full object-cover'
+        src="/img/bgaward.webp"
+        alt="Background"
+        class="w-full h-full object-cover"
       />
       <div
-        class='absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70'
+        class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/85"
       >
       </div>
     </div>
 
-    <!-- Elementos decorativos -->
-    <div class='absolute inset-0 overflow-hidden'>
-      <div
-        class='absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse'
-      >
-      </div>
-      <div
-        class='absolute bottom-32 right-32 w-24 h-24 border-2 border-red-500/30 rounded-full animate-bounce'
-      >
-      </div>
-      <div
-        class='absolute top-1/3 right-20 w-16 h-16 bg-red-500/20 rounded-full blur-xl animate-pulse'
-      >
-      </div>
-    </div>
+    <div class="relative z-10 min-h-screen flex items-center">
+      <div class="container mx-auto px-8 py-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
-    <!-- Contenido principal -->
-    <div class='relative z-10 min-h-screen flex flex-col justify-center'>
-      <div class='container mx-auto px-4 py-20'>
-        <!-- Logo EUPD -->
-        <div class='text-center mb-12' data-aos='fade-down'>
-          <img
-            src='/img/eupd.webp'
-            alt='EUPD Research'
-            width='250'
-            class='mx-auto filter drop-shadow-2xl'
-          />
-        </div>
+          <!-- Hero Content -->
+          <div class="justify-center items-center lg:col-span-7 text-white text-center lg:text-left" data-aos="fade-right">
+            <img
+              src="/img/eupd.webp"
+              alt="EUPD Research"
+              width="220"
+              class="mb-6 mx-auto lg:mx-0 filter drop-shadow-2xl"
+            />
 
-        <!-- Título principal -->
-        <div class='text-center mb-16' data-aos='fade-up' data-aos-delay='200'>
-          <div class='inline-block relative'>
             <div
-              class='bg-gradient-to-r from-[#605986] to-[#4E549F] text-white px-8 py-6 rounded-3xl border-4 border-white/20 shadow-2xl backdrop-blur-sm'
+              class="inline-flex items-center rounded-full bg-white/15 border border-white/30 px-4 py-2 mb-6"
             >
-              <h1
-                class='text-2xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider leading-tight'
+              <span class="text-sm md:text-base font-semibold">
+                {
+                  i18next.language === "es"
+                    ? "3ª edición en México"
+                    : "3rd edition in Mexico"
+                }
+              </span>
+            </div>
+
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 uppercase"
+            >
+              Top Installer <br /><span class="text-yellow-300"
+                >Awards 2026</span
               >
-                Top Installer<br />
-                <span class='text-yellow-300'>Awards 2026</span>
-              </h1>
-              <div class='w-32 h-1 bg-white mx-auto mt-4 rounded-full'></div>
-            </div>
-            <!-- Efecto de brillo -->
-            <div
-              class='absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-shimmer'
+            </h1>
+
+            <p
+              class="text-base md:text-2xl text-white/90 font-medium leading-relaxed mb-8 max-w-3xl mx-auto lg:mx-0"
             >
-            </div>
-          </div>
-        </div>
+              {
+                i18next.language === "es"
+                  ? "Reconocemos a las empresas instaladoras solares más destacadas de México por su excelencia técnica, innovación y satisfacción del cliente."
+                  : "We recognize Mexico's leading solar installation companies for technical excellence, innovation and customer satisfaction."
+              }
+            </p>
 
-        <!-- Subtítulo -->
-        <div
-          class='text-center max-w-4xl mx-auto'
-          data-aos='fade-up'
-          data-aos-delay='400'
-        >
-          <p
-            class='text-white text-xl md:text-2xl font-semibold mb-8 leading-relaxed'
-          >
-            {
-              i18next.language === 'es'
-                ? 'Participa en la tercera entrega de los Installer Awards 2026 – México'
-                : 'Participate in the third edition of the Installer Awards 2026 – Mexico'
-            }
-          </p>
-
-          <!-- Stats -->
-          <div class='grid md:grid-cols-3 gap-8 mb-12'>
-            <div class='text-center'>
-              <div class='text-4xl font-bold text-white mb-2'>3ª</div>
-              <div class='text-white/80 text-lg'>
-                {i18next.language === 'es' ? 'Edición' : 'Edition'}
+            <div class="mt-2 pt-2 flex justify-center lg:justify-start">
+              <div
+                class="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded-2xl border border-white/30"
+              >
+                <span class="text-xs font-medium opacity-80">POWERED BY</span>
+                <img src="/img/sponsors/quartux.webp" width="130" />
               </div>
             </div>
-            <div class='text-center'>
-              <div class='text-4xl font-bold text-white mb-2'>2026</div>
-              <div class='text-white/80 text-lg'>México</div>
-            </div>
-            <div class='text-center'>
-              <div class='text-4xl font-bold text-white mb-2'>TOP</div>
-              <div class='text-white/80 text-lg'>
-                {i18next.language === 'es' ? 'Instaladores' : 'Installers'}
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Power by badge -->
-        <div class='text-center' data-aos='fade-up' data-aos-delay='600'>
-          <div
-            class='inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-3xl border border-white/20'
-          >
-            <span class='text-sm font-medium opacity-80'>POWERED BY</span>
-            <img src='/img/sponsors/quartux.webp' width='150' />
+          </div>
+
+          <!-- Registration Section -->
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
+            <div
+              class="bg-white/95 rounded-3xl p-6 md:p-8 shadow-2xl border border-white/40"
+            >
+              <div class="flex items-start justify-between gap-4 mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">
+                  📌{i18next.language === "es" ? "Registro" : "Registration"}
+                </h2>
+                <span
+                  class="inline-flex items-center rounded-full bg-green-100 text-green-800 px-3 py-1 text-xs font-bold uppercase tracking-wide"
+                >
+                  {i18next.language === "es" ? "Abierto" : "Open"}
+                </span>
+              </div>
+
+              <p class="text-gray-600 mb-5">
+                {
+                  i18next.language === "es"
+                    ? "Consulta las fechas oficiales de convocatoria y completa tu registro dentro del periodo vigente."
+                    : "Review the official call dates and complete your registration within the active period."
+                }
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <div
+                  class="rounded-2xl bg-gradient-to-r from-[#605986]/10 to-[#605986]/5 border border-[#605986]/20 p-4"
+                >
+                  <p
+                    class="text-xs font-semibold uppercase tracking-wide text-[#605986] mb-1"
+                  >
+                    {
+                      i18next.language === "es"
+                        ? "Apertura de convocatoria"
+                        : "Call opening"
+                    }
+                  </p>
+                  <p class="text-lg font-bold text-gray-900">
+                    {
+                      i18next.language === "es"
+                        ? "16 de febrero de 2026"
+                        : "February 16, 2026"
+                    }
+                  </p>
+                </div>
+
+                <div
+                  class="rounded-2xl bg-gradient-to-r from-[#D76901]/10 to-[#D76901]/5 border border-[#D76901]/20 p-4"
+                >
+                  <p
+                    class="text-xs font-semibold uppercase tracking-wide text-[#D76901] mb-1"
+                  >
+                    {
+                      i18next.language === "es"
+                        ? "Cierre de convocatoria"
+                        : "Call closing"
+                    }
+                  </p>
+                  <p class="text-lg font-bold text-gray-900">
+                    {
+                      i18next.language === "es"
+                        ? "31 de marzo de 2026"
+                        : "March 31, 2026"
+                    }
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="https://survey.eupd-research.com/index.php?r=survey/index&sid=486989&lang=es"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button w-full text-white uppercase text-base md:text-xl font-bold flex items-center justify-center"
+              >
+                {
+                  i18next.language === "es"
+                    ? "Registrarme ahora"
+                    : "Register now"
+                }
+              </a>
+
+              <p class="text-xs text-gray-500 mt-3">
+                {
+                  i18next.language === "es"
+                    ? "Al hacer clic, serás redirigido al formulario oficial de EUPD Research."
+                    : "Clicking the button redirects you to EUPD Research's official form."
+                }
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -123,134 +170,134 @@ changeLanguage("es");
   </section>
 
   <!-- Descripción principal -->
-  <section class='py-20 bg-gradient-to-b from-gray-50 to-white'>
-    <div class='container mx-auto px-4'>
-      <div class='max-w-5xl mx-auto'>
-        <div class='text-center mb-16' data-aos='fade-up'>
-          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {
-              i18next.language === 'es'
-                ? 'Excelencia, Dedicación e Innovación'
-                : 'Excellence, Dedication and Innovation'
+              i18next.language === "es"
+                ? "Excelencia, Dedicación e Innovación"
+                : "Excellence, Dedication and Innovation"
             }
           </h2>
-          <div class='w-24 h-1 bg-[#605986] mx-auto rounded-full'></div>
+          <div class="w-24 h-1 bg-[#605986] mx-auto rounded-full"></div>
         </div>
 
         <div
-          class='bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100'
-          data-aos='fade-up'
-          data-aos-delay='200'
+          class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
-          <div class='prose prose-lg max-w-none text-gray-700 leading-relaxed'>
-            <p class='text-xl mb-6'>
+          <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <p class="text-xl mb-6">
               {
-                i18next.language === 'es'
-                  ? 'Los Top Installer Awards 2026 celebran la excelencia, dedicación e innovación de las empresas de instalación solar más vanguardistas de México. Tras el gran impulso de los últimos años, esta nueva edición promete ser aún más destacada, reuniendo a los principales profesionales solares del país para una noche de reconocimiento, inspiración y conexión.'
+                i18next.language === "es"
+                  ? "Los Top Installer Awards 2026 celebran la excelencia, dedicación e innovación de las empresas de instalación solar más vanguardistas de México. Tras el gran impulso de los últimos años, esta nueva edición promete ser aún más destacada, reuniendo a los principales profesionales solares del país para una noche de reconocimiento, inspiración y conexión."
                   : "The Top Installer Awards 2026 celebrate the excellence, dedication and innovation of Mexico's most cutting-edge solar installation companies. Following the great momentum of recent years, this new edition promises to be even more outstanding, bringing together the country's leading solar professionals for a night of recognition, inspiration and connection."
               }
             </p>
 
             <div
-              class='bg-gradient-to-r from-[#605986]/10 to-[#D76901]/10 rounded-2xl p-6 mb-6'
+              class="bg-gradient-to-r from-[#605986]/10 to-[#D76901]/10 rounded-2xl p-6 mb-6"
             >
-              <p class='text-lg font-semibold text-gray-800 mb-4'>
+              <p class="text-lg font-semibold text-gray-800 mb-4">
                 {
-                  i18next.language === 'es'
-                    ? 'Organizados por EUPD Research, los premios reconocen a los instaladores que demuestran un desempeño excepcional en:'
-                    : 'Organized by EUPD Research, the awards recognize installers who demonstrate exceptional performance in:'
+                  i18next.language === "es"
+                    ? "Organizados por EUPD Research, los premios reconocen a los instaladores que demuestran un desempeño excepcional en:"
+                    : "Organized by EUPD Research, the awards recognize installers who demonstrate exceptional performance in:"
                 }
               </p>
-              <div class='grid md:grid-cols-3 gap-4 text-center'>
-                <div class='bg-white rounded-xl p-4 shadow-sm'>
+              <div class="grid md:grid-cols-3 gap-4 text-center">
+                <div class="bg-white rounded-xl p-4 shadow-sm">
                   <div
-                    class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3'
+                    class="w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3"
                   >
                     <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      class='h-6 w-6 text-white'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                     >
                       <path
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='2'
-                        d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
                       ></path>
                     </svg>
                   </div>
-                  <div class='text-sm font-medium text-gray-800'>
+                  <div class="text-sm font-medium text-gray-800">
                     {
-                      i18next.language === 'es'
-                        ? 'Experiencia Técnica'
-                        : 'Technical Experience'
+                      i18next.language === "es"
+                        ? "Experiencia Técnica"
+                        : "Technical Experience"
                     }
                   </div>
                 </div>
-                <div class='bg-white rounded-xl p-4 shadow-sm'>
+                <div class="bg-white rounded-xl p-4 shadow-sm">
                   <div
-                    class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3'
+                    class="w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3"
                   >
                     <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      class='h-6 w-6 text-white'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                     >
                       <path
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='2'
-                        d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                       ></path>
                     </svg>
                   </div>
-                  <div class='text-sm font-medium text-gray-800'>
+                  <div class="text-sm font-medium text-gray-800">
                     {
-                      i18next.language === 'es'
-                        ? 'Satisfacción del Cliente'
-                        : 'Customer Satisfaction'
+                      i18next.language === "es"
+                        ? "Satisfacción del Cliente"
+                        : "Customer Satisfaction"
                     }
                   </div>
                 </div>
-                <div class='bg-white rounded-xl p-4 shadow-sm'>
+                <div class="bg-white rounded-xl p-4 shadow-sm">
                   <div
-                    class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3'
+                    class="w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center mx-auto mb-3"
                   >
                     <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      class='h-6 w-6 text-white'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                     >
                       <path
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='2'
-                        d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9'
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
                       ></path>
                     </svg>
                   </div>
-                  <div class='text-sm font-medium text-gray-800'>
+                  <div class="text-sm font-medium text-gray-800">
                     {
-                      i18next.language === 'es'
-                        ? 'Prácticas Sostenibles'
-                        : 'Sustainable Practices'
+                      i18next.language === "es"
+                        ? "Prácticas Sostenibles"
+                        : "Sustainable Practices"
                     }
                   </div>
                 </div>
               </div>
             </div>
 
-            <p class='text-lg'>
+            <p class="text-lg">
               {
-                i18next.language === 'es'
-                  ? 'Ser reconocido como un Top Installer es más que un título: es una distinción confiable en la industria que refleja calidad, confiabilidad y liderazgo en uno de los mercados solares de más rápido crecimiento a nivel mundial.'
-                  : 'Being recognized as a Top Installer is more than a title: it is a reliable industry distinction that reflects quality, reliability and leadership in one of the fastest-growing solar markets worldwide.'
+                i18next.language === "es"
+                  ? "Ser reconocido como un Top Installer es más que un título: es una distinción confiable en la industria que refleja calidad, confiabilidad y liderazgo en uno de los mercados solares de más rápido crecimiento a nivel mundial."
+                  : "Being recognized as a Top Installer is more than a title: it is a reliable industry distinction that reflects quality, reliability and leadership in one of the fastest-growing solar markets worldwide."
               }
             </p>
           </div>
@@ -261,188 +308,188 @@ changeLanguage("es");
 
   <!-- Beneficios Section -->
   <section
-    class='relative py-20'
+    class="relative py-20"
     style="background-image: url('/img/bgaward2.webp'); background-size: cover; background-position: center;"
   >
-    <div class='absolute inset-0 bg-gradient-to-b from-black/70 to-black/50'>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50">
     </div>
 
-    <div class='relative z-10 container mx-auto px-4'>
-      <div class='text-center mb-16' data-aos='fade-up'>
-        <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+    <div class="relative z-10 container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
           {
-            i18next.language === 'es'
-              ? 'Los Galardonados Obtienen'
-              : 'Award Winners Get'
+            i18next.language === "es"
+              ? "Los Galardonados Obtienen"
+              : "Award Winners Get"
           }
         </h2>
-        <div class='w-24 h-1 bg-[#605986] mx-auto rounded-full'></div>
+        <div class="w-24 h-1 bg-[#605986] mx-auto rounded-full"></div>
       </div>
 
-      <div class='grid md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto'>
+      <div class="grid md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
         <!-- Contenido lado derecho -->
-        <div class='space-y-6' data-aos='fade-right'>
+        <div class="space-y-6" data-aos="fade-right">
           <img
-            src='/img/awardimg2.webp'
-            alt='Award Image 2'
-            class='w-full rounded-2xl shadow-2xl border-4 border-white/20 mb-8'
+            src="/img/awardimg2.webp"
+            alt="Award Image 2"
+            class="w-full rounded-2xl shadow-2xl border-4 border-white/20 mb-8"
           />
         </div>
         <!-- Lista de beneficios -->
-        <div class='space-y-4'>
-          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
-            <div class='flex items-start gap-4'>
+        <div class="space-y-4">
+          <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+            <div class="flex items-start gap-4">
               <div
-                class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center flex-shrink-0'
+                class="w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center flex-shrink-0"
               >
                 <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6 text-white'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
               <div>
-                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">
                   {
-                    i18next.language === 'es'
-                      ? 'Credibilidad y Confianza'
-                      : 'Credibility and Trust'
+                    i18next.language === "es"
+                      ? "Credibilidad y Confianza"
+                      : "Credibility and Trust"
                   }
                 </h4>
-                <p class='text-gray-600'>
+                <p class="text-gray-600">
                   {
-                    i18next.language === 'es'
-                      ? 'Reconocimiento oficial de una organización internacional de investigación independiente.'
-                      : 'Official recognition from an independent international research organization.'
+                    i18next.language === "es"
+                      ? "Reconocimiento oficial de una organización internacional de investigación independiente."
+                      : "Official recognition from an independent international research organization."
                   }
                 </p>
               </div>
             </div>
           </div>
 
-          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
-            <div class='flex items-start gap-4'>
+          <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+            <div class="flex items-start gap-4">
               <div
-                class='w-12 h-12 bg-[#D76901] rounded-xl flex items-center justify-center flex-shrink-0'
+                class="w-12 h-12 bg-[#D76901] rounded-xl flex items-center justify-center flex-shrink-0"
               >
                 <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6 text-white'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'></path>
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                   ></path>
                 </svg>
               </div>
               <div>
-                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">
                   {
-                    i18next.language === 'es'
-                      ? 'Visibilidad y Exposición'
-                      : 'Visibility and Exposure'
+                    i18next.language === "es"
+                      ? "Visibilidad y Exposición"
+                      : "Visibility and Exposure"
                   }
                 </h4>
-                <p class='text-gray-600'>
+                <p class="text-gray-600">
                   {
-                    i18next.language === 'es'
-                      ? 'Presencia en medios, reconocimiento en la industria y oportunidades promocionales.'
-                      : 'Media presence, industry recognition and promotional opportunities that strengthen brand positioning.'
+                    i18next.language === "es"
+                      ? "Presencia en medios, reconocimiento en la industria y oportunidades promocionales."
+                      : "Media presence, industry recognition and promotional opportunities that strengthen brand positioning."
                   }
                 </p>
               </div>
             </div>
           </div>
 
-          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
-            <div class='flex items-start gap-4'>
+          <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+            <div class="flex items-start gap-4">
               <div
-                class='w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center flex-shrink-0'
+                class="w-12 h-12 bg-[#605986] rounded-xl flex items-center justify-center flex-shrink-0"
               >
                 <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6 text-white'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                   ></path>
                 </svg>
               </div>
               <div>
-                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">
                   {
-                    i18next.language === 'es'
-                      ? 'Networking y Alianzas'
-                      : 'Networking and Partnerships'
+                    i18next.language === "es"
+                      ? "Networking y Alianzas"
+                      : "Networking and Partnerships"
                   }
                 </h4>
-                <p class='text-gray-600'>
+                <p class="text-gray-600">
                   {
-                    i18next.language === 'es'
-                      ? 'Acceso exclusivo a una comunidad de colegas de alto desempeño y líderes tecnológicos.'
-                      : 'Exclusive access to a community of high-performing colleagues, technology leaders and project developers.'
+                    i18next.language === "es"
+                      ? "Acceso exclusivo a una comunidad de colegas de alto desempeño y líderes tecnológicos."
+                      : "Exclusive access to a community of high-performing colleagues, technology leaders and project developers."
                   }
                 </p>
               </div>
             </div>
           </div>
 
-          <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
-            <div class='flex items-start gap-4'>
+          <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+            <div class="flex items-start gap-4">
               <div
-                class='w-12 h-12 bg-[#D76901] rounded-xl flex items-center justify-center flex-shrink-0'
+                class="w-12 h-12 bg-[#D76901] rounded-xl flex items-center justify-center flex-shrink-0"
               >
                 <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6 text-white'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
-                    d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'></path>
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                 </svg>
               </div>
               <div>
-                <h4 class='text-lg font-bold text-gray-900 mb-2'>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">
                   {
-                    i18next.language === 'es'
-                      ? 'Crecimiento de Negocio'
-                      : 'Business Growth'
+                    i18next.language === "es"
+                      ? "Crecimiento de Negocio"
+                      : "Business Growth"
                   }
                 </h4>
-                <p class='text-gray-600'>
+                <p class="text-gray-600">
                   {
-                    i18next.language === 'es'
-                      ? 'Reputación fortalecida que atrae nuevos clientes, inversionistas y colaboraciones estratégicas.'
-                      : 'Strengthened reputation that attracts new customers, investors and strategic collaborations.'
+                    i18next.language === "es"
+                      ? "Reputación fortalecida que atrae nuevos clientes, inversionistas y colaboraciones estratégicas."
+                      : "Strengthened reputation that attracts new customers, investors and strategic collaborations."
                   }
                 </p>
               </div>
@@ -452,18 +499,18 @@ changeLanguage("es");
       </div>
 
       <!-- Imagen lado izquierdo -->
-      <div class='space-y-8 max-w-xl mx-auto' data-aos='fade-right'>
+      <div class="space-y-8 max-w-xl mx-auto" data-aos="fade-right">
         <img
-          src='/img/awardimg1.webp'
-          alt='Award Image'
-          class='w-full rounded-2xl shadow-2xl border-4 border-white/20'
+          src="/img/awardimg1.webp"
+          alt="Award Image"
+          class="w-full rounded-2xl shadow-2xl border-4 border-white/20"
         />
-        <div class='bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl'>
-          <h3 class='text-2xl font-bold text-gray-900 text-center'>
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+          <h3 class="text-2xl font-bold text-gray-900 text-center">
             {
-              i18next.language === 'es'
-                ? 'Reconocimiento Oficial'
-                : 'Official Recognition'
+              i18next.language === "es"
+                ? "Reconocimiento Oficial"
+                : "Official Recognition"
             }
           </h3>
         </div>
@@ -472,39 +519,39 @@ changeLanguage("es");
   </section>
 
   <!-- Fechas Clave Section -->
-  <section class='py-20 bg-gradient-to-b from-white to-gray-50'>
-    <div class='container mx-auto px-4 text-center'>
-      <div class='max-w-4xl mx-auto'>
-        <div class='mb-16' data-aos='fade-up'>
-          <h2 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
-            {i18next.language === 'es' ? 'Fechas Clave' : 'Key Dates'}
+  <!-- <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-16" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            {i18next.language === "es" ? "Fechas Clave" : "Key Dates"}
           </h2>
-          <div class='w-24 h-1 bg-[#605986] mx-auto rounded-full'></div>
+          <div class="w-24 h-1 bg-[#605986] mx-auto rounded-full"></div>
         </div>
 
         <div
-          class='bg-gradient-to-r from-[#605986] to-[#D76901] rounded-3xl p-12 text-white shadow-2xl'
-          data-aos='zoom-in'
+          class="bg-gradient-to-r from-[#605986] to-[#D76901] rounded-3xl p-12 text-white shadow-2xl"
+          data-aos="zoom-in"
         >
-          <div class='text-6xl mb-6'>🗓️</div>
-          <h3 class='text-3xl md:text-4xl font-bold mb-6'>
-            {i18next.language === 'es' ? 'Próximamente' : 'Coming Soon'}
+          <div class="text-6xl mb-6">🗓️</div>
+          <h3 class="text-3xl md:text-4xl font-bold mb-6">
+            {i18next.language === "es" ? "Próximamente" : "Coming Soon"}
           </h3>
-          <p class='text-xl md:text-2xl mb-8'>
+          <p class="text-xl md:text-2xl mb-8">
             {
-              i18next.language === 'es'
-                ? 'Mantente atento a la convocatoria'
-                : 'Stay tuned for the call for applications'
+              i18next.language === "es"
+                ? "Mantente atento a la convocatoria"
+                : "Stay tuned for the call for applications"
             }
           </p>
 
           <div
-            class='bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30'
+            class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30"
           >
-            <p class='text-lg'>
+            <p class="text-lg">
               {
-                i18next.language === 'es'
-                  ? 'Las fechas importantes para los Top Installer Awards 2026 serán anunciadas muy pronto. ¡No te pierdas la oportunidad de formar parte de este prestigioso reconocimiento!'
+                i18next.language === "es"
+                  ? "Las fechas importantes para los Top Installer Awards 2026 serán anunciadas muy pronto. ¡No te pierdas la oportunidad de formar parte de este prestigioso reconocimiento!"
                   : "Important dates for the Top Installer Awards 2026 will be announced very soon. Don't miss the opportunity to be part of this prestigious recognition!"
               }
             </p>
@@ -512,7 +559,7 @@ changeLanguage("es");
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </Layout>
 
 <style>
@@ -586,7 +633,7 @@ changeLanguage("es");
   }
 
   .button::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100px;
     height: 100%;
