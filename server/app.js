@@ -171,7 +171,9 @@ app.post("/complete-order", async (req, res) => {
       }
     );
 
-    const id_items = body.items.map(item => item.id)
+    // Obtener los items completos (con precios) para pasarlos a save_order
+    const completeItems = body.items
+      .filter(item => !item.isDiscount)
 
     // buscar el id del cupon de descuento si existe
     const discountItem = body.items?.find((item) => item?.isDiscount);
@@ -187,17 +189,24 @@ app.post("/complete-order", async (req, res) => {
         const paypal_id_order = json.id;
         const paypal_id_transaction =
           json.purchase_units[0].payments.captures[0].id;
-        await RegisterModel.save_order(
+        
+        const saveOrderResponse = await RegisterModel.save_order(
           body.idUser,
-          id_items,
-          body.total,
+          completeItems,
           paypal_id_order,
           paypal_id_transaction,
           id_code
         );
 
+        if (!saveOrderResponse.status) {
+          return res.status(500).send({
+            status: false,
+            message: 'Error al guardar tu compra: ' + saveOrderResponse.message
+          });
+        }
+
         // Validar si solo hay el id 2 en la compra (Energy Night)
-        const isOnlyEnergyNight = id_items.length === 1 && id_items[0] === 2;
+        const isOnlyEnergyNight = completeItems.length === 1 && completeItems[0].id === 2;
         
         let pdfAtch;
         if (isOnlyEnergyNight) {

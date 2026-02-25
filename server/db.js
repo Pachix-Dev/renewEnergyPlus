@@ -371,30 +371,35 @@ export class RegisterModel {
     }
   }
 
-  static async save_order (user_id,items,total, paypal_id_order,paypal_id_transaction,id_code) {
+  static async save_order (user_id, items, paypal_id_order, paypal_id_transaction, id_code) {
     const connection = await mysql.createConnection(config)
     try {      
-      // Crear placeholders dinámicos para cada item
-      const placeholders = items.map(() => '(?, ?, ?, ?, ?)').join(',');
-
-      // Crear un arreglo con los valores para cada item
-      const values = items.flatMap(id_item => [
-        user_id,
-        id_item,
-        total,
-        paypal_id_order,
-        paypal_id_transaction,  
-        id_code || null,  
-      ]);
+      // Insertar cada item por separado con su precio individual
+      const results = [];
       
-      const query = `
-        INSERT INTO users_replus_vip (user_id, id_item, total, paypal_id_order, paypal_id_transaction) 
-        VALUES ${placeholders}
-      `;
+      for (const item of items) {
+        const query = `
+          INSERT INTO users_replus_vip (user_id, id_item, total, paypal_id_order, paypal_id_transaction, cupon) 
+          VALUES (?, ?, ?, ?, ?, ?)
+        `;
+        
+        const [register] = await connection.query(query, [
+          user_id,
+          item.id,
+          item.price || item.total || 0,  // Usar el precio individual del item
+          paypal_id_order,
+          paypal_id_transaction,
+          id_code || null
+        ]);
+        
+        results.push(register);
+      }
 
-      const [registers] = await connection.query(query, values);
-
-      return registers;
+      return {
+        status: true,
+        insertedRecords: results.length,
+        results: results
+      };
     } catch (error) {
       console.log(error)
       return hableError(error)
