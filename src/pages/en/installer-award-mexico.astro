@@ -518,48 +518,86 @@ changeLanguage("en");
     </div>
   </section>
 
-  <!-- Fechas Clave Section -->
-  <!-- <section class="py-20 bg-gradient-to-b from-white to-gray-50">
-    <div class="container mx-auto px-4 text-center">
-      <div class="max-w-4xl mx-auto">
-        <div class="mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {i18next.language === "es" ? "Fechas Clave" : "Key Dates"}
+  <!-- Evaluación, Confirmación y Premiación -->
+  <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            {i18next.language === "es" ? "Proceso y Premiación" : "Process and Award Ceremony"}
           </h2>
-          <div class="w-24 h-1 bg-[#605986] mx-auto rounded-full"></div>
+          
         </div>
 
-        <div
-          class="bg-gradient-to-r from-[#605986] to-[#D76901] rounded-3xl p-12 text-white shadow-2xl"
-          data-aos="zoom-in"
-        >
-          <div class="text-6xl mb-6">🗓️</div>
-          <h3 class="text-3xl md:text-4xl font-bold mb-6">
-            {i18next.language === "es" ? "Próximamente" : "Coming Soon"}
-          </h3>
-          <p class="text-xl md:text-2xl mb-8">
-            {
-              i18next.language === "es"
-                ? "Mantente atento a la convocatoria"
-                : "Stay tuned for the call for applications"
-            }
-          </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div
+            class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100"
+            data-aos="fade-up"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              {i18next.language === "es" ? "Evaluación y confirmación" : "Evaluation and confirmation"}
+            </h3>
+
+            <div class="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                {
+                  i18next.language === "es"
+                    ? "Una vez enviado el registro, el equipo de análisis de EUPD Research revisará la información proporcionada."
+                    : "Once the registration is submitted, EUPD Research's analysis team will review the provided information."
+                }
+              </p>
+              <p>
+                {
+                  i18next.language === "es"
+                    ? "En un plazo aproximado de 5 a 7 días hábiles, el instalador recibirá confirmación sobre si calificó o no para el reconocimiento."
+                    : "Within approximately 5 to 7 business days, the installer will receive confirmation on whether they qualified for the recognition."
+                }
+              </p>
+              <p>
+                {
+                  i18next.language === "es"
+                    ? "Posteriormente, el equipo de EUPD se contactará directamente con cada empresa seleccionada para compartir los detalles del evento y la ceremonia."
+                    : "After that, the EUPD team will contact each selected company directly to share event and ceremony details."
+                }
+              </p>
+            </div>
+          </div>
 
           <div
-            class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30"
+            class="bg-gradient-to-br from-[#605986] to-[#4E549F] rounded-3xl p-8 shadow-xl text-white"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            <p class="text-lg">
+            <h3 class="text-2xl font-bold mb-4">
+              {i18next.language === "es" ? "Premiación" : "Award Ceremony"}
+            </h3>
+
+            <p class="text-white/95 leading-relaxed mb-6">
               {
                 i18next.language === "es"
-                  ? "Las fechas importantes para los Top Installer Awards 2026 serán anunciadas muy pronto. ¡No te pierdas la oportunidad de formar parte de este prestigioso reconocimiento!"
-                  : "Important dates for the Top Installer Awards 2026 will be announced very soon. Don't miss the opportunity to be part of this prestigious recognition!"
+                  ? "La premiación se realizará de manera presencial durante RE+ Mexico."
+                  : "The award ceremony will be held in person during RE+ Mexico."
               }
             </p>
+
+            <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-5 border border-white/25">
+              <p class="text-sm uppercase tracking-wide font-semibold text-white/80 mb-2">
+                {i18next.language === "es" ? "Fecha y hora" : "Date and time"}
+              </p>
+              <p class="text-xl md:text-2xl font-bold mb-2">
+                {i18next.language === "es" ? "14 de abril · 17:30 hrs" : "April 14 · 5:30 PM"}
+              </p>
+              <p class="text-white/90 font-medium">
+                {i18next.language === "es" ? "Installer & Innovation Area" : "Installer & Innovation Area"}
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+
+  
 </Layout>
 
 <style>
