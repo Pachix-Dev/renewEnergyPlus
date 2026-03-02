@@ -1,7 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
-import ListDirectory from "../../components/directorio-digital/ListDirectory";
+import ListDirectory from "../../components/directorio/ListDirectory.jsx";
+import data from "../../data/digital-directory.js";
 
 changeLanguage("en");
 
@@ -98,7 +99,7 @@ const currentLanguage = i18next.language;
   <!-- lista de expositores -->
   <div class='z-0 relative flex flex-col md:flex-row gap-0 px-8'>
     <div class='md:w-3/4'>
-      <ListDirectory currentLanguage={currentLanguage} client:only='react' />
+      <ListDirectory currentLanguage={currentLanguage} listExhibitor={data} client:only='react' />
     </div>
 
     <div class='flex m-8 md:w-1/4 md:px-0'>

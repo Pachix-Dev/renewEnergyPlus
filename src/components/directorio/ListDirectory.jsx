@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
-import data from '../../data/digital-directory.js'
 
-const ListDirectory = ({ currentLanguage }) => {
-  const [directorioDigital, setDirectorioDigital] = useState(data)
+const ListDirectory = ({ currentLanguage, listExhibitor }) => {
+  const [directorioDigital, setDirectorioDigital] = useState(listExhibitor)
   const [filter, setFilter] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const maxSize = 20
-
-  const [pagesSize, setPagesSize] = useState(
-    Math.ceil(directorioDigital.length / maxSize)
-  )
+  const pagesSize = Math.ceil(directorioDigital.length / maxSize)
 
   const phoneFormat = (itemPhone) => {
     let phones = itemPhone.split('\n')
@@ -46,28 +42,37 @@ const ListDirectory = ({ currentLanguage }) => {
   }
 
   const handleFilter = (e) => {
-    setFilter(e.target.value)
-    filter !== ''
+    const searchText = e.target.value
+    const normalizedSearch = searchText.toLowerCase()
+
+    setFilter(searchText)
+    setCurrentPage(1)
+
+    searchText !== ''
       ? setDirectorioDigital(
-          data.filter(
+          listExhibitor.filter(
             (item) =>
-              item.nombreComercial
+              (item.nombreComercial || '')
                 .toLowerCase()
-                .includes(filter.toLowerCase()) ||
-              item.nombreContacto
+                .includes(normalizedSearch) ||
+              (item.nombreContacto || '')
                 .toLowerCase()
-                .includes(filter.toLowerCase()) ||
-              item.Puesto.toLowerCase().includes(filter.toLowerCase()) ||
-              item.Correo.toLowerCase().includes(filter.toLowerCase()) ||
-              item.paginaWeb.toLowerCase().includes(filter.toLowerCase()) ||
-              item.stand.toLowerCase().includes(filter.toLowerCase()) ||
-              item.descripcion_es
+                .includes(normalizedSearch) ||
+              (item.Puesto || '').toLowerCase().includes(normalizedSearch) ||
+              (item.Correo || '').toLowerCase().includes(normalizedSearch) ||
+              (item.paginaWeb || '')
                 .toLowerCase()
-                .includes(filter.toLowerCase()) ||
-              item.descripcion_en.toLowerCase().includes(filter.toLowerCase())
+                .includes(normalizedSearch) ||
+              (item.stand || '').toLowerCase().includes(normalizedSearch) ||
+              (item.descripcion_es || '')
+                .toLowerCase()
+                .includes(normalizedSearch) ||
+              (item.descripcion_en || '')
+                .toLowerCase()
+                .includes(normalizedSearch)
           )
         )
-      : setDirectorioDigital(data)
+      : setDirectorioDigital(listExhibitor)
   }
 
   const handleChangePage = (newPage) => {
@@ -84,10 +89,10 @@ const ListDirectory = ({ currentLanguage }) => {
         <button
           key={index}
           onClick={() => handleChangePage(page)}
-          className={`inline-flex items-center px-4 py-2 text-sm font-semibold hover:bg-gray-400 focus:z-20 focus:outline-offset-0 ${
+          className={`inline-flex items-center px-3.5 py-2 text-sm font-semibold rounded-lg border transition-colors duration-200 focus:z-20 focus:outline-none focus:ring-2 focus:ring-amber-300 ${
             currentPage === page
-              ? 'bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white '
-              : 'bg-gray-200 text-gray-700'
+              ? 'bg-amber-500 border-amber-500 text-white shadow-sm'
+              : 'bg-white border-gray-200 text-gray-700 hover:bg-amber-50 hover:border-amber-300'
           }`}
         >
           {page}
@@ -109,7 +114,7 @@ const ListDirectory = ({ currentLanguage }) => {
   }
 
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-6'>
       <div className='w-full my-2'>
         <label
           htmlFor='default-search'
@@ -138,7 +143,7 @@ const ListDirectory = ({ currentLanguage }) => {
           <input
             type='search'
             id='default-search'
-            className='block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-0 focus:border-[#bc0100]'
+            className='block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-200 rounded-xl bg-white shadow-sm focus:ring-0 focus:border-[#bc0100]'
             placeholder={
               currentLanguage === 'en' ? 'Search exhibitor' : 'Buscar expositor'
             }
@@ -147,7 +152,7 @@ const ListDirectory = ({ currentLanguage }) => {
           />
           <button
             type='submit'
-            className='absolute end-2.5 bottom-2.5 bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white hover:brightness-[105%] focus:ring-2 focus:outline-none focus:ring-[#d86a03] font-medium rounded-lg text-sm px-4 py-2'
+            className='absolute end-2.5 bottom-2.5 bg-gradient-to-r from-[#bc0100] to-[#d86a03] text-white hover:brightness-[105%] focus:ring-2 focus:outline-none focus:ring-[#d86a03] font-medium rounded-lg text-sm px-5 py-2'
           >
             {currentLanguage === 'en' ? 'Search' : 'Buscar'}
           </button>
@@ -156,11 +161,12 @@ const ListDirectory = ({ currentLanguage }) => {
 
       {/* Pagination handlers */}
       <div className='flex flex-col align-middle items-center gap-2'>
-        <div className='isolate inline-flex -space-x-px rounded-md shadow-xs'>
+        <div className='isolate inline-flex items-center gap-1 rounded-2xl bg-white p-1.5 shadow-sm border border-gray-200'>
           <button
             type='button'
-            className='bg-gradient-to-l from-[#bc0100] to-[#d86a03] text-white relative inline-flex items-center rounded-l-md px-2 py-2 hover:bg-gray-50 focus:z-20 focus:outline-offset-0'
+            className='bg-gray-900 text-white relative inline-flex items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-800 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed'
             onClick={() => previousPage()}
+            disabled={currentPage === 1}
           >
             <span className='sr-only'>Previous</span>
             <svg
@@ -179,8 +185,9 @@ const ListDirectory = ({ currentLanguage }) => {
           {createpageButtons()}
           <button
             type='button'
-            className='bg-gradient-to-r from-[#d86a03] to-[#bc0100] text-white relative inline-flex items-center rounded-r-md px-2 py-2 hover:bg-gray-50 focus:z-20 focus:outline-offset-0'
+            className='bg-gray-900 text-white relative inline-flex items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-800 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed'
             onClick={nextPage}
+            disabled={currentPage === pagesSize || pagesSize === 0}
           >
             <span className='sr-only'>Previous</span>
             <svg
@@ -205,27 +212,29 @@ const ListDirectory = ({ currentLanguage }) => {
           .map((item, index) => {
             return (
               <div
-                className='bg-gray-500 text-white flex flex-col md:flex-row align-middle items-center gap-4 mx-auto rounded-lg p-2 w-full md:w-11/12'
+                className='bg-white text-gray-800 flex flex-col md:flex-row align-middle items-center gap-5 mx-auto rounded-2xl p-4 w-full md:w-11/12 border border-gray-200 shadow-sm'
                 key={index}
               >
-                <div className='rounded-xl z-10 bg-gray-300 w-3/5 md:w-1/4 border-2 border-slate-400 p-2'>
+                <div className='rounded-xl z-10 bg-gray-100 w-3/5 md:w-1/4 border border-gray-200 p-3'>
                   <img
-                    src={item.imagen.src}
+                    src={item.logotipo}
                     alt={item.nombreComercial}
                     className='w-40 h-32 md:w-64 md:h-64 object-contain m-auto rounded-md'
                   />
                 </div>
                 <div className='mx-4 md:ml-0 md:w-3/4 z-10'>
-                  <span className='ms-[-10px] font-bold'>
+                  <span className='inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-700'>
                     Stand: {item.stand}
                   </span>
-                  <h2 className='text-2xl font-bold'>{item.nombreComercial}</h2>
-                  <p className='text-lg mt-2 text-justify'>
+                  <h2 className='text-2xl font-bold mt-3 text-gray-900'>
+                    {item.nombreComercial}
+                  </h2>
+                  <p className='text-base mt-2 text-justify text-gray-700 leading-relaxed'>
                     {currentLanguage === 'en'
                       ? item.descripcion_en
                       : item.descripcion_es}
                   </p>
-                  <div className='mt-2 text-lg flex flex-row items-center gap-2'>
+                  <div className='mt-4 text-base flex flex-row items-center gap-2 text-gray-600'>
                     {item.direccion ? (
                       <span>
                         <svg
@@ -265,18 +274,19 @@ const ListDirectory = ({ currentLanguage }) => {
           })
       ) : (
         //"Sin resultados"
-        <h1 className='p-4 rounded-lg card-program-light my-8 text-black text-2xl font-bold '>
+        <h1 className='p-6 rounded-xl bg-gray-100 border border-gray-200 my-8 text-gray-800 text-2xl font-bold text-center'>
           No hay resultados
         </h1>
       )}
 
       {/* Pagination handlers */}
       <div className='flex flex-col align-middle items-center gap-2 mb-8'>
-        <div className='isolate inline-flex -space-x-px rounded-md shadow-xs'>
+        <div className='isolate inline-flex items-center gap-1 rounded-2xl bg-white p-1.5 shadow-sm border border-gray-200'>
           <button
             type='button'
-            className='bg-gradient-to-l from-[#bc0100] to-[#d86a03] text-white relative inline-flex items-center rounded-l-md px-2 py-2 hover:bg-gray-50 focus:z-20 focus:outline-offset-0'
+            className='bg-gray-900 text-white relative inline-flex items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-800 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed'
             onClick={() => previousPage()}
+            disabled={currentPage === 1}
           >
             <span className='sr-only'>Previous</span>
             <svg
@@ -295,8 +305,9 @@ const ListDirectory = ({ currentLanguage }) => {
           {createpageButtons()}
           <button
             type='button'
-            className='bg-gradient-to-r from-[#d86a03] to-[#bc0100] text-white relative inline-flex items-center rounded-r-md px-2 py-2 hover:bg-gray-50 focus:z-20 focus:outline-offset-0'
+            className='bg-gray-900 text-white relative inline-flex items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-800 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed'
             onClick={nextPage}
+            disabled={currentPage === pagesSize || pagesSize === 0}
           >
             <span className='sr-only'>Previous</span>
             <svg

@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import i18next, { changeLanguage } from "i18next";
+import ListDirectory from "../components/directorio/ListDirectory.jsx";
+import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
+// import { patrocinadorfesgold } from "../logos";
+import infoDirectorioDigital2026 from "../data/directorio_digital_2026.js";
+
+changeLanguage("es");
+
+const currentLanguage = i18next.language;
+const title = currentLanguage === "en" ? "Digital directory" : "Directorio digital";
+---
+
+<Layout title={title}>
+  <!-- <section class='max-w-screen-lg mx-auto h-2/3'>
+    <MarqueeSponsors partners={patrocinadorfesgold} isLeftToRight />
+  </section> -->
+  <!-- título -->
+  <p class='text-4xl font-extrabold text-center mb-8 mt-12 uppercase'>
+    {title} <br> <span class='text-[#6f19be] font-extrabold'>RE+ MEXICO 2026</span>
+  </p>
+
+  <!-- lista de expositores -->
+  <div class='relative flex flex-col gap-0 px-8'>
+    <div class="">
+      <ListDirectory currentLanguage={currentLanguage} listExhibitor={infoDirectorioDigital2026} client:only='react' />
+    </div>
+  </div>
+</Layout>
