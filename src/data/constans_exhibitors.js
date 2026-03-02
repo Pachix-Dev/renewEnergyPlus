@@ -28,10 +28,12 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/epever.webp", alt: "Epever", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/exel_solar.webp", alt: "Exel Solar", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/felicity_solar.webp", alt: "Felicity Solar", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/fortress_power.webp", alt: "Fortress Power", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/gcl.webp", alt: "GCL", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/genixgreen.webp", alt: "GenixGreen", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/geolis_energia.webp", alt: "Geolis Energia", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/goowe.webp", alt: "Goowe", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/gte.webp", alt: "GTE", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/hebei_srne.webp", alt: "Hebei SRNE", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/hoymiles.webp", alt: "Hoymiles", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/huawei.webp", alt: "Huawei", width: 300, height: 300 },
@@ -59,6 +61,7 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/quartux.webp", alt: "Quartux", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/r_poweroad.webp", alt: "R Poweroad", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/refacsol.webp", alt: "Refacsol", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/renon.webp", alt: "Renon", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/rolls_battery.webp", alt: "Rolls Battery", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/runenergy.webp", alt: "Runenergy", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/s5.webp", alt: "S5", width: 100, height: 100 },
@@ -90,10 +93,7 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/wts.webp", alt: "WTS", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/x_solax.webp", alt: "X Solax", width: 250, height: 250 },
     { link: "", src: "/img/expositores2026/xyz_storage_tecnology.webp", alt: "XYZ Storage Technology", width: 200, height: 200 },
-    { link: "", src: "/img/expositores2026/znshine_solar.webp", alt: "Znshine Solar", width: 200, height: 200 },
-    
-
-
+    { link: "", src: "/img/expositores2026/znshine_solar.webp", alt: "Znshine Solar", width: 200, height: 200 }
 ];
 
 const exhibitors2025 = [
