@@ -452,7 +452,7 @@ export function ConferenceProgramBase({
                           {companyLogo(conferencia.company_logo) ? (
                             <div className="flex flex-col items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
                               <span className="text-xs sm:text-sm font-medium text-black whitespace-nowrap">
-                                {language === "es" ? "Patrocinado por" : "Powered by"}
+                               Powered by
                               </span>
                               <img
                                 src={companyLogo(conferencia.company_logo)}
