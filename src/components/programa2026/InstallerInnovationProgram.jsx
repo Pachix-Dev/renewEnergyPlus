@@ -31,7 +31,7 @@ export function InstallerInnovationProgram({ language }) {
       language={language}
       stageId={4}
       theme={installerTheme}
-      showCompanyLogo={false}
+      showCompanyLogo={true}
     />
   );
 }
