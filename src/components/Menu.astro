@@ -142,7 +142,6 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_6")}
                 </a>
               </li>
-
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={i18next.language === "es"
@@ -154,7 +153,15 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_14")}
                 </a>
               </li>
-
+              <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href={i18next.language === "es"
+                    ? "/installer-award-mexico"
+                    : "/en/installer-award-mexico"}
+                  class="block px-4 py-2">
+                  Installer Awards 2026
+                </a>
+              </li>
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={i18next.language === "es"
@@ -177,7 +184,6 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_15")}
                 </a>
               </li>
-
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={`${base}/plano-re-plus-mexico-2026`}
