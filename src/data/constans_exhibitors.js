@@ -9,7 +9,7 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/battery_master.png.webp", alt: "Battery Master", width: 150, height: 150 },
     { link: "", src: "/img/expositores2026/bluetti.webp", alt: "Bluetti", width: 150, height: 150 },
     { link: "", src: "/img/expositores2026/bslbatt.webp", alt: "BSLBatt", width: 200, height: 200 },
-    { link: "", src: "/img/expositores2026/cesc.webp", alt: "Cesc", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/cesc_bn.webp", alt: "Cesc", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/cnbm.webp", alt: "CNBM", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/comAp.webp", alt: "ComAp", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/d_narada.webp", alt: "D Narada", width: 200, height: 200 },
