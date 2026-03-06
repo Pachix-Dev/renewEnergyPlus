@@ -161,6 +161,29 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
     })
   }
 
+  const translateDayName = (name?: string) => {
+    if (!name) return ''
+
+    const normalized = name
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+
+    const dayMap: Record<string, { es: string; en: string }> = {
+      martes: { es: 'Martes', en: 'Tuesday' },
+      miercoles: { es: 'Miércoles', en: 'Wednesday' },
+      jueves: { es: 'Jueves', en: 'Thursday' },
+      tuesday: { es: 'Martes', en: 'Tuesday' },
+      wednesday: { es: 'Miércoles', en: 'Wednesday' },
+      thursday: { es: 'Jueves', en: 'Thursday' }
+    }
+
+    const translated = dayMap[normalized]
+    if (!translated) return name
+    return language === 'es' ? translated.es : translated.en
+  }
+
   return (
     <section className='relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B] text-white py-16 sm:py-20 px-4 sm:px-6'>
       <div className='absolute inset-0 pointer-events-none'>
@@ -228,7 +251,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                             : 'bg-white text-slate-700 border-slate-200 hover:border-[#5E5884] hover:shadow-md'
                         }`}
                       >
-                        <span className='capitalize'>{day.name || formatDayLabel(day.date)}</span>
+                        <span className='capitalize'>{translateDayName(day.name) || formatDayLabel(day.date)}</span>
                       </button>
                     )
                   })}
