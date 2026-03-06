@@ -17,6 +17,8 @@ interface EscenarioDiaConferencia {
 }
 
 interface EscenarioDia {
+  id?: number
+  name?: string
   date: string
   conferencias?: EscenarioDiaConferencia[]
 }
@@ -74,6 +76,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
   const [escenarios, setEscenarios] = useState<Escenario[]|null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string|null>(null)
+  const [activeDayKey, setActiveDayKey] = useState<string | null>(null)
   const [selectedPonente, setSelectedPonente] = useState<Ponente|null>(null)
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -86,6 +89,14 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
       const json = await res.json()
       const data = Array.isArray(json?.data) ? json.data : []
       setEscenarios(data)
+      const escenario = data[Math.min(escenarioIndex, Math.max(data.length - 1, 0))]
+      const dias = Array.isArray(escenario?.dias) ? escenario.dias : []
+      const firstDay = dias
+        .slice()
+        .sort((a: EscenarioDia, b: EscenarioDia) => String(a.date || '').localeCompare(String(b.date || '')))[0]
+      if (firstDay?.date) {
+        setActiveDayKey(String(firstDay.date))
+      }
       // setEscenarios(null)
     } catch(e:any){
       setError(e.message || 'Error')
@@ -129,6 +140,26 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
   }
 
   const escenario = escenarios[Math.min(escenarioIndex, escenarios.length - 1)]
+  const days = (escenario?.dias || [])
+    .slice()
+    .sort((a, b) => String(a.date || '').localeCompare(String(b.date || '')))
+  const selectedDay =
+    days.find((day) => String(day.date) === String(activeDayKey)) ||
+    days[0] ||
+    null
+  const selectedDayConferencias = (selectedDay?.conferencias || [])
+    .slice()
+    .sort((a, b) => String(a.start_time || '').localeCompare(String(b.start_time || '')))
+
+  const formatDayLabel = (date: string) => {
+    const parsed = new Date(date)
+    if (Number.isNaN(parsed.getTime())) return date
+    return parsed.toLocaleDateString(language === 'es' ? 'es-ES' : 'en-US', {
+      weekday: 'short',
+      day: 'numeric',
+      month: 'short'
+    })
+  }
 
   return (
     <section className='relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B] text-white py-16 sm:py-20 px-4 sm:px-6'>
@@ -177,20 +208,46 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
 
         {/* Body program */}
         <div className='space-y-12'>
-          {escenario.dias && escenario.dias.length > 0 ? (
-            escenario.dias.map((dia, diaIndex) => (
-              <div className='dia-container relative' key={diaIndex}>
+          {days.length > 0 ? (
+            <>
+              <div className='space-y-3'>
+                <p className='text-sm font-semibold uppercase tracking-[0.2em] text-white/80'>
+                  {language === 'es' ? 'Selecciona el día' : 'Select day'}
+                </p>
+                <div className='flex flex-wrap gap-2'>
+                  {days.map((day, dayIndex) => {
+                    const isActive = String(day.date) === String(selectedDay?.date)
+                    return (
+                      <button
+                        type='button'
+                        key={`${day.date}-${dayIndex}`}
+                        onClick={() => setActiveDayKey(String(day.date))}
+                        className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all border ${
+                          isActive
+                            ? 'bg-gradient-to-br from-[#5E5884] to-[#7B6FA8] text-white border-transparent shadow-lg shadow-[#5E5884]/30'
+                            : 'bg-white text-slate-700 border-slate-200 hover:border-[#5E5884] hover:shadow-md'
+                        }`}
+                      >
+                        <span className='capitalize'>{day.name || formatDayLabel(day.date)}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {selectedDay && (
+                <div className='dia-container relative'>
                 <div className='sticky top-4 z-10'>
                   <div className='flex items-center gap-4 bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-lg'>
                     <div className='w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#5E5884] to-[#7B6FA8] rounded-2xl flex items-center justify-center text-2xl font-black text-white shadow-lg'>
-                      {new Date(dia.date).getDate()}
+                      {new Date(selectedDay.date).getDate()}
                     </div>
                     <div>
                       <h3 className='text-xl sm:text-2xl font-bold capitalize'>
-                        {new Date(dia.date).toLocaleDateString(language==='es'?'es-ES':'en-US',{ weekday:'long'})}
+                        {new Date(selectedDay.date).toLocaleDateString(language==='es'?'es-ES':'en-US',{ weekday:'long'})}
                       </h3>
                       <p className='text-sm text-white/70'>
-                        {new Date(dia.date).toLocaleDateString(language==='es'?'es-ES':'en-US',{ day:'numeric', month:'long', year:'numeric'})}
+                        {new Date(selectedDay.date).toLocaleDateString(language==='es'?'es-ES':'en-US',{ day:'numeric', month:'long', year:'numeric'})}
                       </p>
                     </div>
                     <div className='ml-auto hidden md:flex items-center gap-2 bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-semibold text-white/80'>
@@ -198,19 +255,16 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 8v4l3 3' />
                         <circle cx='12' cy='12' r='9' stroke='currentColor' strokeWidth='2' />
                       </svg>
-                      <span>{dia.conferencias?.length || 0} {dia.conferencias?.length===1?(language==='es'?'sesión':'session'):(language==='es'?'sesiones':'sessions')}</span>
+                      <span>{selectedDayConferencias.length} {selectedDayConferencias.length===1?(language==='es'?'sesión':'session'):(language==='es'?'sesiones':'sessions')}</span>
                     </div>
                   </div>
                 </div>
 
-                {dia.conferencias && dia.conferencias.length > 0 ? (
+                {selectedDayConferencias.length > 0 ? (
                   <div className='relative pt-6 md:pt-10'>
                     <div className='absolute left-6 md:left-24 top-0 bottom-0 w-px bg-gradient-to-b from-[#7B6FA8] via-[#5E5884] to-transparent opacity-60' />
                     <div className='space-y-10'>
-                      {dia.conferencias
-                        .slice()
-                        .sort((a,b)=> a.start_time.localeCompare(b.start_time))
-                        .map((conf, confIndex) => {
+                      {selectedDayConferencias.map((conf, confIndex) => {
                           const tags = parseTags(conf.tags)
                           const ponentes = Array.isArray(conf.ponentes)? conf.ponentes: []
                           return (
@@ -310,7 +364,8 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                   </div>
                 )}
               </div>
-            ))
+              )}
+            </>
           ) : (
             <div className='text-center py-20 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl'>
               <div className='inline-block p-8 bg-white/5 border border-white/10 rounded-full mb-6'>
