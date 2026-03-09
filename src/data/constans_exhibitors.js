@@ -66,6 +66,7 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/renon.webp", alt: "Renon", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/rolls_battery.webp", alt: "Rolls Battery", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/runenergy.webp", alt: "Runenergy", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/sadra_energies.webp", alt: "Sadra Energies", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/s5.webp", alt: "S5", width: 100, height: 100 },
     { link: "", src: "/img/expositores2026/saj.webp", alt: "SAJ", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/santamarina.webp", alt: "Santamarina", width: 200, height: 200 },
