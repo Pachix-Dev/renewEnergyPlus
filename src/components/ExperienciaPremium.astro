@@ -1,0 +1,384 @@
+---
+import i18next, { t } from "i18next";
+
+interface Props {
+  base?: string;
+}
+
+const { base = "" } = Astro.props;
+---
+
+<!-- SECCIÓN SOBRE LA EXPERIENCIA PREMIUM -->
+<div class="relative min-h-screen  bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
+
+  <!-- Contenido principal -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <div
+      class="container mx-auto px-4 py-10 flex-1 flex flex-col justify-center"
+    >
+      <!-- Main Title -->
+      <div
+        class="text-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
+        <h1
+          class="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+          data-aos-delay="100"
+        >
+          {t("program.title_content_premium")}
+        </h1>
+
+        <!-- Tarjetas de contenido experiencia premium -->
+        <div
+          class="mt-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
+        >
+          <!-- Tarjeta: Conferencias Premium -->
+          <a
+            href="#conferenciasPrograma"
+            class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-delay="100"
+          >
+            <div class="w-full flex justify-center -mt-8">
+              <div
+                class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
+              >
+                <div
+                  class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
+                >
+                  <img
+                    src="/img/conferencias_premium.webp"
+                    alt="Conferencias Premium"
+                    class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col sm:justify-start items-center p-5 pt-10 pb-8"
+            >
+              <h3
+                class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
+              >
+                {t("program.item_premium_1")}
+              </h3>
+              <p
+                class="text-[12px] sm:text-sm uppercase font-semibold text-yellow-400 flex flex-row items-center gap-2 mt-2 hover:underline"
+              >
+                {t("home.more_info")}
+                <svg
+                  version="1.1"
+                  id="Uploaded to svgrepo.com"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 32 32"
+                  xml:space="preserve"
+                  fill="#000000"
+                  ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .puchipuchi_een {
+                        fill: #ffffff;
+                      }
+                    </style>
+                    <path
+                      class="puchipuchi_een"
+                      d="M20.414,26.414l9-9c0.781-0.781,0.781-2.047,0-2.828l-9-9c-0.781-0.781-2.047-0.781-2.828,0 s-0.781,2.047,0,2.828L23.172,14H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h19.172l-5.586,5.586c-0.781,0.781-0.781,2.047,0,2.828 S19.633,27.195,20.414,26.414z"
+                    ></path>
+                  </g></svg
+                >
+              </p>
+            </div>
+          </a>
+          <!-- Tarjeta: VIP Area de Networking -->
+          <a
+            href="#vipArea"
+            class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-delay="200"
+          >
+            <div class="w-full flex justify-center -mt-8">
+              <div
+                class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
+              >
+                <div
+                  class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
+                >
+                  <img
+                    src="/img/vip_area.webp"
+                    alt="Conferencias Premium"
+                    class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-1 flex flex-col justify-start items-center p-5 pt-10 pb-8"
+            >
+              <h3
+                class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
+              >
+                {t("program.item_premium_2")}
+              </h3>
+              <p
+                class="text-[12px] sm:text-sm uppercase font-semibold text-yellow-400 flex flex-row items-center gap-2 mt-2 hover:underline"
+              >
+                {t("home.more_info")}
+                <svg
+                  version="1.1"
+                  id="Uploaded to svgrepo.com"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 32 32"
+                  xml:space="preserve"
+                  fill="#000000"
+                  ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .puchipuchi_een {
+                        fill: #ffffff;
+                      }
+                    </style>
+                    <path
+                      class="puchipuchi_een"
+                      d="M20.414,26.414l9-9c0.781-0.781,0.781-2.047,0-2.828l-9-9c-0.781-0.781-2.047-0.781-2.828,0 s-0.781,2.047,0,2.828L23.172,14H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h19.172l-5.586,5.586c-0.781,0.781-0.781,2.047,0,2.828 S19.633,27.195,20.414,26.414z"
+                    ></path>
+                  </g></svg
+                >
+              </p>
+            </div>
+          </a>
+          <!-- Tarjeta: Energy Night -->
+          <a
+            href="/energy-night"
+            class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-delay="300"
+          >
+            <div class="w-full flex justify-center -mt-8">
+              <div
+                class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
+              >
+                <div
+                  class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
+                >
+                  <img
+                    src="/img/energy_night.webp"
+                    alt="Conferencias Premium"
+                    class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-1 flex flex-col justify-start items-center p-5 pt-10 pb-8"
+            >
+              <h3
+                class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
+                set:html={t("program.item_premium_3")}
+              />
+              <p
+                class="text-[12px] sm:text-sm uppercase font-semibold text-yellow-400 flex flex-row items-center gap-2 mt-2 hover:underline"
+              >
+                {t("home.more_info")}
+                <svg
+                  version="1.1"
+                  id="Uploaded to svgrepo.com"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 32 32"
+                  xml:space="preserve"
+                  fill="#000000"
+                  ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .puchipuchi_een {
+                        fill: #ffffff;
+                      }
+                    </style>
+                    <path
+                      class="puchipuchi_een"
+                      d="M20.414,26.414l9-9c0.781-0.781,0.781-2.047,0-2.828l-9-9c-0.781-0.781-2.047-0.781-2.828,0 s-0.781,2.047,0,2.828L23.172,14H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h19.172l-5.586,5.586c-0.781,0.781-0.781,2.047,0,2.828 S19.633,27.195,20.414,26.414z"
+                    ></path>
+                  </g></svg
+                >
+              </p>
+            </div>
+          </a>
+          <!-- Tarjeta: Sunset Cocktail -->
+          <a
+            href="#sunsetCocktail"
+            class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-delay="400"
+          >
+            <div class="w-full flex justify-center -mt-8">
+              <div
+                class="premium-img-circle bg-white/10 border-4 border-[#5E5884] rounded-full p-2 shadow-lg mt-6 z-10"
+              >
+                <div
+                  class="relative w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center justify-center rounded-full bg-gradient-to-br from-[#5E5884]/80 via-[#1E293B]/60 to-[#5E5884]/40"
+                >
+                  <img
+                    src="/img/sunset_cocktail.webp"
+                    alt="Conferencias Premium"
+                    class="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] object-cover rounded-full border-4 border-white shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex-1 flex flex-col justify-start items-center p-5 pt-10 pb-8"
+            >
+              <h3
+                class="sm:text-xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg uppercase"
+              >
+                {t("program.item_premium_4")}
+              </h3>
+              <p
+                class="text-[12px] sm:text-sm uppercase font-semibold text-yellow-400 flex flex-row items-center gap-2 mt-2 hover:underline"
+              >
+                {t("home.more_info")}
+                <svg
+                  version="1.1"
+                  id="Uploaded to svgrepo.com"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 32 32"
+                  xml:space="preserve"
+                  fill="#000000"
+                  ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .puchipuchi_een {
+                        fill: #ffffff;
+                      }
+                    </style>
+                    <path
+                      class="puchipuchi_een"
+                      d="M20.414,26.414l9-9c0.781-0.781,0.781-2.047,0-2.828l-9-9c-0.781-0.781-2.047-0.781-2.828,0 s-0.781,2.047,0,2.828L23.172,14H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h19.172l-5.586,5.586c-0.781,0.781-0.781,2.047,0,2.828 S19.633,27.195,20.414,26.414z"
+                    ></path>
+                  </g></svg
+                >
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Boton de venta de pases premium -->
+        <!-- <div class="flex justify-center mt-14">
+          <a
+            href={`${base}/programa-premium-productos`}
+            class="inline-flex items-center gap-4 px-8 sm:px-12 py-5 sm:text-2xl font-extrabold rounded-full shadow-xl border-4 border-yellow-400 bg-gradient-to-r from-yellow-400 via-[#5E5884] to-[#1E293B] text-white tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-yellow-400/40 focus:outline-none focus:ring-4 focus:ring-yellow-300/40"
+          >
+            <span class="uppercase tracking-wider drop-shadow-lg"
+              >{t("program.button2")}</span
+            >
+            <svg
+              version="1.1"
+              id="Uploaded to svgrepo.com"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="26px"
+              height="26px"
+              viewBox="0 0 32 32"
+              xml:space="preserve"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <style type="text/css">
+                  .puchipuchi_een {
+                    fill: #ffffff;
+                  }
+                </style>
+                <path
+                  class="puchipuchi_een"
+                  d="M20.414,26.414l9-9c0.781-0.781,0.781-2.047,0-2.828l-9-9c-0.781-0.781-2.047-0.781-2.828,0 s-0.781,2.047,0,2.828L23.172,14H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h19.172l-5.586,5.586c-0.781,0.781-0.781,2.047,0,2.828 S19.633,27.195,20.414,26.414z"
+                ></path>
+              </g></svg
+            >
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Mejoras en las sombras de texto */
+  h1 {
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  }
+
+  .premium-card-v2 {
+    background: linear-gradient(
+      135deg,
+      #1e293bcc 0%,
+      #5e588499 60%,
+      #1e293bcc 100%
+    );
+    border-radius: 1.25rem;
+    border: 2px solid #5e5884;
+    box-shadow:
+      0 8px 32px 0 rgba(94, 88, 132, 0.18),
+      0 0 24px 0 #5e5884aa;
+    transition:
+      box-shadow 0.4s,
+      transform 0.4s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .premium-card-v2:hover {
+    box-shadow:
+      0 20px 60px 0 #5e5884cc,
+      0 0 32px 0 #1e293bcc;
+    background: linear-gradient(
+      135deg,
+      #5e5884cc 0%,
+      #1e293b99 60%,
+      #1e293bcc 100%
+    );
+    transform: translateY(-8px) scale(1.04);
+  }
+  .premium-img-circle {
+    box-shadow: 0 4px 24px 0 #5e5884aa;
+    border-radius: 9999px;
+    background: rgba(30, 41, 59, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      box-shadow 0.3s,
+      border 0.3s;
+  }
+</style>

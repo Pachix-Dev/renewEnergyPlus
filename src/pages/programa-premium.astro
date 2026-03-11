@@ -11,7 +11,7 @@ import VipArea from "../components/VipArea.astro";
 changeLanguage("es");
 
 const API_URL = import.meta.env.DEV
-    ? "http://localhost:3000"
+    ? "https://dashboard.igeco.mx"
     : "https://dashboard.igeco.mx";
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 ---
