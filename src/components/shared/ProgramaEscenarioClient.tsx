@@ -229,6 +229,68 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
           </div>
         </div>
 
+        {/* Premium Pass CTA */}
+        <div className='relative rounded-3xl overflow-hidden shadow-[0_30px_120px_rgba(0,0,0,0.35)]'>
+          {/* Background image */}
+          <div 
+            className='absolute inset-0 bg-cover bg-center'
+            style={{ backgroundImage: "url('/img/banners/premium-bg.webp')" }}
+          />
+          <div className='absolute inset-0 bg-gradient-to-r from-[#0B1224]/95 via-[#0f172a]/85 to-[#1E293B]/75' />
+          
+          <div className='relative z-10 p-8 md:p-12'>
+            <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8'>
+              <div className='space-y-5'>
+                <h3 className='text-2xl md:text-4xl font-black text-white tracking-tight'>
+                  {language === 'es' ? 'COMPRA TU PASE PREMIUM' : 'BUY YOUR PREMIUM PASS'}
+                </h3>
+                
+                <div className='space-y-3'>
+                  <p className='text-xs font-semibold uppercase tracking-[0.2em] text-white/60'>
+                    {language === 'es' ? 'Incluye' : 'Includes'}
+                  </p>
+                  <div className='flex flex-wrap gap-2'>
+                    <span className='px-4 py-2 bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-semibold rounded-lg backdrop-blur-sm'>
+                      {language === 'es' ? 'CONFERENCIAS PREMIUM' : 'PREMIUM CONFERENCES'}
+                    </span>
+                    <span className='px-4 py-2 bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-semibold rounded-lg backdrop-blur-sm'>
+                      ENERGY NIGHT
+                    </span>
+                    <span className='px-4 py-2 bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-semibold rounded-lg backdrop-blur-sm'>
+                      SUNSET COCKTAIL
+                    </span>
+                    <span className='px-4 py-2 bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-semibold rounded-lg backdrop-blur-sm'>
+                      NETWORKING AREA
+                    </span>
+                  </div>
+                </div>
+
+                <div className='pt-2'>
+                  <p className='text-xs font-semibold uppercase tracking-[0.15em] text-white/60'>
+                    {language === 'es' ? 'Precio especial de preventa' : 'Special presale price'}
+                  </p>
+                  <div className='flex items-baseline gap-2 mt-1'>
+                    <span className='text-4xl md:text-5xl font-black text-amber-400'>$7,000</span>
+                    <span className='text-lg font-bold text-white/80'>MXN</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className='flex-shrink-0'>
+                <a
+                  href={language === 'es' ? '/programa-premium-productos' : '/en/programa-premium-productos'}
+                  className='group inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-900 font-bold text-lg rounded-xl shadow-lg shadow-amber-500/30 hover:shadow-amber-400/40 transition-all duration-300 transform hover:-translate-y-1'
+                >
+                  <span>{language === 'es' ? 'COMPRAR ACCESO AHORA' : 'BUY ACCESS NOW'}</span>
+                  <svg className='w-6 h-6 group-hover:translate-x-1 transition-transform' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2.5' d='M13 7l5 5m0 0l-5 5m5-5H6' />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Body program */}
         <div className='space-y-12'>
           {days.length > 0 ? (
