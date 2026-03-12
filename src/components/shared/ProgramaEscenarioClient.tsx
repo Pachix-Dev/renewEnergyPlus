@@ -14,6 +14,8 @@ interface EscenarioDiaConferencia {
   room?: string
   tags?: string[] | string
   ponentes?: Ponente[]
+  company_logo?: string
+  company?: string
 }
 
 interface EscenarioDia {
@@ -36,6 +38,7 @@ interface Props {
   apiUrl: string
   language: string
   escenarioIndex?: number
+  showCompanyLogo?: boolean
 }
 
 const typeColors: Record<string,string> = {
@@ -72,7 +75,12 @@ function parseTags(tags: any): string[] {
   return []
 }
 
-export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, escenarioIndex = 0 }) => {
+const companyLogo = (apiUrl: string, logo?: string) => {
+  if (!logo) return null
+  return `${apiUrl}/logos/${logo}`
+}
+
+export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, escenarioIndex = 0, showCompanyLogo = false }) => {
   const [escenarios, setEscenarios] = useState<Escenario[]|null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string|null>(null)
@@ -380,7 +388,22 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
                                   </div>
                                 </div>
                                 <div className='p-6 space-y-4'>
-                                  <h4 className='text-xl sm:text-2xl font-bold leading-tight text-white'>{language==='es'? conf.title : conf.title_en}</h4>
+                                  <div className='flex flex-col md:flex-row md:items-start md:justify-between gap-4'>
+                                    <h4 className='text-xl sm:text-2xl font-bold leading-tight text-white flex-1'>{language==='es'? conf.title : conf.title_en}</h4>
+                                    {showCompanyLogo && companyLogo(apiUrl, conf.company_logo) && (
+                                      <div className='flex flex-col items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-3 py-2 flex-shrink-0'>
+                                        <span className='text-xs font-medium text-white/80 whitespace-nowrap'>
+                                          Powered by
+                                        </span>
+                                        <img
+                                          src={companyLogo(apiUrl, conf.company_logo)!}
+                                          alt={conf.company || 'Empresa'}
+                                          className='h-12 w-28 sm:h-14 sm:w-32 rounded-lg bg-white object-contain p-2 border border-white/20 shadow-sm'
+                                          loading='lazy'
+                                        />
+                                      </div>
+                                    )}
+                                  </div>
                                   {conf.description && (
                                     <p className='text-white/80 leading-relaxed'>{language==='es'? conf.description : conf.description_en}</p>
                                   )}
