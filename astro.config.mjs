@@ -7,7 +7,12 @@ import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://re-plus-mexico.com.mx", 
+  site: "https://re-plus-mexico.com.mx",
+  vite: {
+    optimizeDeps: {
+      include: ['react-fast-marquee']
+    }
+  },
   integrations: [sitemap({
     i18n: {
       defaultLocale: "es",

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { PonenteModal } from './PonenteModal'
 import type { Ponente } from './PonenteModal'
+import { KeynoteSpeakersCarousel } from '../programa2026/KeynoteSpeakersCarousel.jsx'
 
 interface EscenarioDiaConferencia {
   id: number
@@ -87,6 +88,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
   const [activeDayKey, setActiveDayKey] = useState<string | null>(null)
   const [selectedPonente, setSelectedPonente] = useState<Ponente|null>(null)
   const [modalOpen, setModalOpen] = useState(false)
+  const keynoteSpeakersSection = <KeynoteSpeakersCarousel language={language} />
 
   const fetchData = useCallback(async () => {
     setLoading(true)
@@ -123,28 +125,47 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
 
   if (loading) {
     return (
-      <div className='container mx-auto px-4 py-16 text-center text-white/70'>
-        <div className='inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10'>
-          <span className='animate-pulse w-3 h-3 rounded-full bg-[#7B6FA8]' />
-          {language === 'es' ? 'Cargando programa...' : 'Loading program...'}
+      <section className='relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B] text-white py-6 sm:py-20 px-4 sm:px-6'>
+        <div className='relative max-w-7xl mx-auto space-y-12'>
+          {keynoteSpeakersSection}
+          <div className='container mx-auto px-4 py-16 text-center text-white/70'>
+            <div className='inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10'>
+              <span className='animate-pulse w-3 h-3 rounded-full bg-[#7B6FA8]' />
+              {language === 'es' ? 'Cargando programa...' : 'Loading program...'}
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     )
   }
   if (error) {
     return (
-      <div className='container mx-auto px-4 py-16 text-center'>
-        <p className='text-red-400 font-semibold mb-4'>
-          {language === 'es' ? 'Error al cargar el programa' : 'Failed to load program'}
-        </p>
-        <button onClick={fetchData} className='px-5 py-2 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white rounded-lg font-medium hover:opacity-90 transition'>
-          {language === 'es' ? 'Reintentar' : 'Retry'}
-        </button>
-      </div>
+      <section className='relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B] text-white py-6 sm:py-20 px-4 sm:px-6'>
+        <div className='relative max-w-7xl mx-auto space-y-12'>
+          {keynoteSpeakersSection}
+          <div className='container mx-auto px-4 py-16 text-center'>
+            <p className='text-red-400 font-semibold mb-4'>
+              {language === 'es' ? 'Error al cargar el programa' : 'Failed to load program'}
+            </p>
+            <button onClick={fetchData} className='px-5 py-2 bg-gradient-to-r from-[#5E5884] to-[#7B6FA8] text-white rounded-lg font-medium hover:opacity-90 transition'>
+              {language === 'es' ? 'Reintentar' : 'Retry'}
+            </button>
+          </div>
+        </div>
+      </section>
     )
   }
   if(!escenarios || escenarios.length === 0){
-    return <div className='container mx-auto px-4 py-16 text-center text-black text-2xl font-bold'>{language==='es'?'Programa aún no disponible...':'Program not available yet...'}</div>
+    return (
+      <section className='relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B] text-white py-6 sm:py-20 px-4 sm:px-6'>
+        <div className='relative max-w-7xl mx-auto space-y-12'>
+          {keynoteSpeakersSection}
+          <div className='container mx-auto px-4 py-16 text-center text-2xl font-bold text-white'>
+            {language==='es'?'Programa aún no disponible...':'Program not available yet...'}
+          </div>
+        </div>
+      </section>
+    )
   }
 
   const escenario = escenarios[Math.min(escenarioIndex, escenarios.length - 1)]
@@ -320,10 +341,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
           {/* Premium Pass CTA - ocupa 2 columnas */}
           <div className="lg:col-span-2 relative rounded-3xl overflow-hidden shadow-[0_30px_120px_rgba(0,0,0,0.35)] border border-white/10">
             {/* Background image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('/img/banners/premium-bg.webp')" }}
-            />
+            <div className="absolute inset-0 bg-cover bg-center"/>
             <div className="absolute inset-0 bg-gradient-to-r from-[#0B1224]/95 via-[#0f172a]/85 to-[#1E293B]/75" />
 
             <div className="relative z-10 p-6 md:p-8 h-full flex flex-col justify-center">
@@ -403,6 +421,8 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
           </div>
         </div>
 
+        <KeynoteSpeakersCarousel language={language} />
+        
         {/* Body program */}
         <div className="space-y-12">
           {days.length > 0 ? (
