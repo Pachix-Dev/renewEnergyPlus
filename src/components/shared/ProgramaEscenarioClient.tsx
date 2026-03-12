@@ -421,6 +421,7 @@ export const ProgramaEscenarioClient: React.FC<Props> = ({ apiUrl, language, esc
           </div>
         </div>
 
+        {/* Keynote Speakers Carousel */}
         <KeynoteSpeakersCarousel language={language} />
         
         {/* Body program */}

@@ -3,6 +3,7 @@ import Menu from "../components/Menu.astro";
 import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import Footer from "../components/Footer.astro";
+import WidgetPage from "../components/WidgetPage.astro";
 
 interface Props {
   title: string;
@@ -291,29 +292,7 @@ const canonicalURL = new URL(
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Widget Ecomondo -->
-    <div class="icon-wrapper fixed bottom-5 right-5 z-50">
-      <a
-        href="https://ecomondomexico.com.mx/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/img/widgetEcomondo.webp"
-          alt="Ecomondo Mexico - Evento simultáneo"
-          class="rounded-full w-20 h-20"
-          loading="lazy"
-          width="80"
-          height="80"
-        />
-      </a>
-      <div class="icon-tooltip">
-        {
-          i18next.language === "en"
-            ? "Event celebrated simultaneously with ECOMONDO"
-            : "Evento celebrado simultáneamente con ECOMONDO"
-        }
-      </div>
-    </div>
+    <WidgetPage />
 
     <Menu />
     <slot />
