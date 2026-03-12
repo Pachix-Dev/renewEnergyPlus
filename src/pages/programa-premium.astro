@@ -7,6 +7,7 @@ import ProgramaEscenario from "../components/shared/ProgramaEscenario.astro";
 import { ProgramaEscenarioClient } from "../components/shared/ProgramaEscenarioClient";
 import SunsetCocktail from "../components/SunsetCocktail.astro";
 import VipArea from "../components/VipArea.astro";
+import ProductosPremiumPreview from "../components/ProductosPremiumPreview.astro";
 
 changeLanguage("es");
 
@@ -26,15 +27,18 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
     escenarioIndex={0}
     showCompanyLogo={true}
   />
+  
+  <ProductosPremiumPreview />
+
 
   <!-- Sunset Cocktail Section -->
-  <div id="sunsetCocktail">
+  <!-- <div id="sunsetCocktail">
     <SunsetCocktail />
   </div>
 
   <div id="vipArea">
     <VipArea />
-  </div>
+  </div> -->
 
 </Layout>
 <style>
