@@ -1,5 +1,6 @@
 ---
 import i18next from "i18next";
+import { KeynoteSpeakersCarousel } from "./programa2026/KeynoteSpeakersCarousel";
 
 const currentLang = i18next.language || "es";
 
@@ -133,11 +134,12 @@ const speakers = [
       </div>
     </div>
 
+    <!-- 
     <h2 class="mb-5 text-center text-2xl font-black uppercase tracking-[0.12em] text-white sm:mb-7 sm:text-4xl">
       KEYNOTE SPEAKERS
     </h2>
 
-    <!-- speakers grid -->
+    speakers grid
     <div class="grid grid-cols-2 gap-4 md:grid-cols-6">
       {
         speakers.map((speaker, index) => (
@@ -147,14 +149,14 @@ const speakers = [
             data-aos-duration="900"
             data-aos-delay={index * 100}
           >
-            {/* <div class='absolute left-3 top-3 z-20 rounded-lg border border-white/75 bg-[#1430d9]/75 px-2 py-1 text-center text-white backdrop-blur-sm'>
+            <div class='absolute left-3 top-3 z-20 rounded-lg border border-white/75 bg-[#1430d9]/75 px-2 py-1 text-center text-white backdrop-blur-sm'>
               <span class='block text-2xl font-black leading-none'>
                 {speaker.date.split(' ')[0]}
               </span>
               <span class='block text-[10px] font-semibold leading-none tracking-wide'>
                 {speaker.date.split(' ').slice(1).join(' ')}
               </span>
-            </div> */}
+            </div>
 
             <div class="relative h-64 overflow-hidden">
               <div class="absolute inset-x-[10%] top-2 h-[88%] rounded-t-[28px] bg-gradient-to-b from-cyan-300/35 to-cyan-100/10" />
@@ -187,7 +189,9 @@ const speakers = [
           </article>
         ))
       }
-    </div>
+    </div> -->
+
+    <KeynoteSpeakersCarousel language={currentLang} client:idle/>
 
     <p class="mt-5 text-end text-xl font-black uppercase tracking-[0.14em] text-cyan-100 sm:text-3xl">
       {currentLang === "es" ? "Y MÁS..." : "AND MORE..."}
