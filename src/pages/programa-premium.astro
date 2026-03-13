@@ -8,6 +8,8 @@ import { ProgramaEscenarioClient } from "../components/shared/ProgramaEscenarioC
 import SunsetCocktail from "../components/SunsetCocktail.astro";
 import VipArea from "../components/VipArea.astro";
 import ProductosPremiumPreview from "../components/ProductosPremiumPreview.astro";
+import ProgramaPremiumHero from "../components/programa2026/ProgramaPremiumHero.astro";
+import { KeynoteSpeakersCarousel } from "../components/programa2026/KeynoteSpeakersCarousel";
 
 changeLanguage("es");
 
@@ -15,32 +17,41 @@ const API_URL = import.meta.env.DEV
     ? "https://dashboard.igeco.mx"
     : "https://dashboard.igeco.mx";
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+const language = i18next.language || "es";
 ---
 
-<Layout title="RE+ MEXICO | programa premium">
-  
-  <!-- Render dinámico en cliente para datos vivos -->
-  <ProgramaEscenarioClient
-    client:load
-    apiUrl={API_URL}
-    language={i18next.language}
-    escenarioIndex={0}
-    showCompanyLogo={true}
-  />
-  
-  <!-- Sección de precios -->
-  <ProductosPremiumPreview />
+<Layout
+  title="RE+ MEXICO | PROGRAMA PREMIUM"
+  description="Foro especializado en donde líderes del sector energético analizan las tendencias, retos y oportunidades que están definiendo el futuro de la energía en México y el mundo."
+>
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B]">
+    <!-- Programa Premium Hero -->
+    <ProgramaPremiumHero />
 
+    <!-- Keynote Speakers Carousel -->
+    <KeynoteSpeakersCarousel language={language} client:load />
 
-  <!-- Sunset Cocktail Section -->
-  <!-- <div id="sunsetCocktail">
+    <!-- Render dinámico en cliente para datos vivos -->
+    <ProgramaEscenarioClient
+      client:load
+      apiUrl={API_URL}
+      language={i18next.language}
+      escenarioIndex={0}
+      showCompanyLogo={true}
+    />
+
+    <!-- Sección de precios -->
+    <ProductosPremiumPreview />
+
+    <!-- Sunset Cocktail Section -->
+    <!-- <div id="sunsetCocktail">
     <SunsetCocktail />
   </div>
 
   <div id="vipArea">
     <VipArea />
   </div> -->
-
+  </section>
 </Layout>
 <style>
   @keyframes spin-slow {

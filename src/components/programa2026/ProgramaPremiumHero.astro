@@ -1,0 +1,211 @@
+---
+import i18next, { t, changeLanguage } from 'i18next';
+const language = i18next.language || 'es';
+---
+<section class="text-white py-6 sm:py-20 px-4 sm:px-6">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -top-24 -left-16 w-72 h-72 bg-[#5E5884]/30 blur-3xl rounded-full" />
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#0ea5e9]/20 blur-3xl rounded-full" />
+        <div class="absolute top-1/3 right-1/4 w-48 h-48 bg-[#7B6FA8]/20 blur-2xl rounded-full" />
+      </div>
+      <div class="relative max-w-7xl mx-auto space-y-12">
+        {/* Header de programa */}
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch">
+          {/* Descripción del escenario - ocupa 3 columnas */}
+          <div class="lg:col-span-3 bg-white/5 border-2 border-[#7B6FA8]/40 rounded-3xl p-8 md:p-12 shadow-[0_30px_120px_rgba(94,88,132,0.25)] backdrop-blur-xl relative overflow-hidden">
+            {/* Glow effect */}
+            <div class="absolute -top-20 -right-20 w-60 h-60 bg-[#7B6FA8]/20 blur-3xl rounded-full pointer-events-none" />
+            <div class="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6 h-full">
+              <div class="flex-1 space-y-5">
+                {/* Badge Escenario */}
+                <div class="flex justify-center sm:justify-start">
+                  <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#7B6FA8]/20 to-[#5E5884]/20 border border-[#7B6FA8]/30 text-xs font-bold uppercase tracking-[0.2em] text-[#c4bde0]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"
+                      />
+                    </svg>
+                    <span>{language === "es" ? "Escenario" : "Stage"}</span>
+                  </div>
+                </div>
+
+                {/* Título del escenario */}
+                <h2 class="text-4xl md:text-4xl lg:text-5xl font-black leading-none tracking-tight text-center md:text-left">
+                  <span class="bg-gradient-to-r from-white via-white to-[#c4bde0] bg-clip-text text-transparent drop-shadow-lg">
+                    {language === "es"? "PROGRAMA PREMIUM" : "PREMIUM PROGRAM"}
+                  </span>
+                </h2>
+
+                {/* Fecha y Lugar */}
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-3 items-center">
+                  {/* Fecha */}
+                  <div class="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500/10 to-amber-400/5 border border-amber-400/30 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-400/20">
+                      <svg
+                        class="w-5 h-5 text-amber-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-[10px] uppercase tracking-wider text-amber-400/80 font-semibold">
+                        {language === "es" ? "Fecha" : "Date"}
+                      </span>
+                      <span class="text-sm font-bold text-white">
+                        {language === "es"
+                          ? "14 – 16 Abril, 2026"
+                          : "April 14 – 16, 2026"}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Lugar */}
+                    <div class="inline-flex items-center gap-3 bg-gradient-to-r from-[#7B6FA8]/10 to-[#5E5884]/5 border border-[#7B6FA8]/30 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg">
+                      <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-[#7B6FA8]/20">
+                        <svg
+                          class="w-5 h-5 text-[#b4abe0]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-[10px] uppercase tracking-wider text-[#b4abe0]/80 font-semibold">
+                          {language === "es" ? "Ubicación" : "Location"}
+                        </span>
+                        <span class="text-sm font-bold text-white uppercase">
+                          {language === "es" ? "SALÓN DE EVENTOS" : "SALÓN DE EVENTOS"} | Expo Guadalajara
+                        </span>
+                      </div>
+                    </div>
+                </div>
+
+               
+                  <p class="text-lg text-white/80 leading-relaxed text-justify">
+                    { language === "es"
+                      ? "Foro especializado en donde líderes del sector energético analizan las tendencias, retos y oportunidades que están definiendo el futuro de la energía en México y el mundo."
+                      : "Specialized forum where energy sector leaders analyze the trends, challenges, and opportunities shaping the future of energy in Mexico and the world."
+                    }
+                  </p>
+                {/* <p class='inline-flex items-center gap-2 rounded-xl border border-amber-300/40 bg-amber-400/10 px-4 py-3 text-sm md:text-base font-semibold text-amber-100 shadow-sm'>
+                <svg class='w-5 h-5 shrink-0 text-amber-200' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 9v2m0 4h.01M10.29 3.86l-8.08 13.99A2 2 0 003.92 21h16.16a2 2 0 001.71-3.15L13.71 3.86a2 2 0 00-3.42 0z' />
+                </svg>
+                <span> { language === 'es'?'Mantente atento: pronto anunciaremos a más speakers.' : 'Stay tuned: more speakers coming soon' }</span>
+              </p> */}
+              </div>
+            </div>
+          </div>
+
+          {/* Premium Pass CTA - ocupa 2 columnas */}
+          <div class="lg:col-span-2 relative rounded-3xl overflow-hidden shadow-[0_30px_120px_rgba(0,0,0,0.35)] border border-white/10">
+            {/* Background image */}
+            <div class="absolute inset-0 bg-cover bg-center"/>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0B1224]/95 via-[#0f172a]/85 to-[#1E293B]/75" />
+
+            <div class="relative z-10 p-6 md:p-8 h-full flex flex-col justify-center">
+              <div class="space-y-4">
+                <h3 class="text-xl md:text-2xl lg:text-3xl font-black text-white tracking-tight">
+                  {language === "es"
+                    ? "COMPRA TU PASE PREMIUM"
+                    : "BUY YOUR PREMIUM PASS"}
+                </h3>
+
+                <div class="space-y-2">
+                  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+                    {language === "es" ? "Incluye" : "Includes"}
+                  </p>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-lg backdrop-blur-sm">
+                      {language === "es"
+                        ? "CONFERENCIAS PREMIUM"
+                        : "PREMIUM CONFERENCES"}
+                    </span>
+                    <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-lg backdrop-blur-sm">
+                      ENERGY NIGHT
+                    </span>
+                    <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-lg backdrop-blur-sm">
+                      SUNSET COCKTAIL
+                    </span>
+                    <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-lg backdrop-blur-sm">
+                      NETWORKING AREA
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-center sm:items-start justify-between gap-4 pt-2">
+                  <div>
+                    <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/60">
+                      {language === "es"
+                        ? "Precio especial de preventa"
+                        : "Special pre-sale price"}
+                    </p>
+                    <div class="flex items-baseline gap-1 mt-0.5">
+                      <span class="text-2xl md:text-5xl font-black text-amber-400">
+                        $7,000
+                      </span>
+                      <span class="text-sm md:text-2xl font-bold text-white/80">
+                        MXN
+                      </span>
+                    </div>
+                  </div>
+                  <a
+                    href={
+                      language === "es"
+                        ? "/programa-premium-productos"
+                        : "/en/programa-premium-productos"
+                    }
+                    class="group inline-flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-900 font-bold text-sm rounded-xl shadow-lg shadow-amber-500/30 hover:shadow-amber-400/40 transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <span class="font-extrabold">
+                      {language === "es" ? "COMPRAR ACCESO" : "BUY ACCESS"}
+                    </span>
+                    <svg
+                      class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
