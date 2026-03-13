@@ -63,10 +63,50 @@ export function KeynoteSpeakersCarousel({ language }) {
       image: "/img/claudia_esteves.webp",
       focus: "50% 22%",
     },
+    {
+      name: "David Rangel",
+      roleEs: "Director Comercial",
+      roleEn: "Commercial Director",
+      orgEs: "Ecotrends",
+      orgEn: "Ecotrends",
+      date: "16 ABR 26",
+      image: "/img/david_rangel.webp",
+      focus: "50% 20%",
+    },
+    {
+      name: "Elisa Márquez ",
+      roleEs: "Gerente General",
+      roleEn: "Manager",
+      orgEs: "Dobotica",
+      orgEn: "Dobotica",
+      date: "16 ABR 26 ",
+      image: "/img/elisa_marquez.webp",
+      focus: "50% 20%",
+    },
+    {
+      name: "Jorge Luis Fernández ",
+      roleEs: "Fundador",
+      roleEn: "Founder",
+      orgEs: "Solarfix",
+      orgEn: "Solarfix",
+      date: "16 ABR 26",
+      image: "/img/jorge_fernandez.webp",
+      focus: "50% 20%",
+    },
+     {
+      name: "Óscar Hernández ",
+      roleEs: "Director General",
+      roleEn: "Manager",
+      orgEs: "Profesionales en Supervision Eléctrica",
+      orgEn: "Profesionales en Supervision Eléctrica",
+      date: "16 ABR 26",
+      image: "/img/oscar_hernadez.webp",
+      focus: "50% 20%",
+    }
   ];
 
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-12 flex flex-col items-center">
       <h2 className="mb-5 text-center text-2xl font-black uppercase tracking-[0.12em] text-white sm:mb-7 sm:text-4xl">
         KEYNOTE SPEAKERS
       </h2>
