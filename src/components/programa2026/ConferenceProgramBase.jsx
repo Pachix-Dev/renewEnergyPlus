@@ -434,7 +434,7 @@ export function ConferenceProgramBase({
                                     </div>
                                   )}
                                   <div className="min-w-0">
-                                    <p className="truncate text-left font-semibold text-slate-900">
+                                    <p className="text-left font-semibold text-slate-900">
                                       <span>{speaker.name}</span>
                                       <br />
                                       <span className="italic font-normal">{speaker.position}</span>
