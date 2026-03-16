@@ -40,6 +40,25 @@ export function ConferenceProgramBase({
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
 
   useEffect(() => {
+    if (!selectedSpeaker) return undefined;
+
+    const originalOverflow = document.body.style.overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = originalPaddingRight;
+    };
+  }, [selectedSpeaker]);
+
+  useEffect(() => {
     fetch("https://dashboard.igeco.mx/api/programa/completo")
       .then((response) => response.json())
       .then((data) => {
