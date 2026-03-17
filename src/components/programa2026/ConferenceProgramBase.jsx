@@ -12,7 +12,7 @@ const defaultTheme = {
   selectedDayCardClass:
     "rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100/50 border border-slate-200 p-4 sm:p-5",
   selectedDayIconClass: "bg-gradient-to-br from-[#565078] to-[#766EA6]",
-  selectedDayDateClass: "text-sm font-bold text-slate-900 capitalize",
+  selectedDayDateClass: "text-sm font-bold text-slate-900 uppercase",
   selectedDaySubClass: "text-xs text-slate-500 mt-0.5",
   selectedDaySessionsBadgeClass:
     "flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-200 shadow-sm",
@@ -328,8 +328,7 @@ export function ConferenceProgramBase({
                       </svg>
                     </div>
                     <div>
-                      <div className={ui.selectedDayDateClass}>{formatDate(activeDay.date)}</div>
-                      <div className={ui.selectedDaySubClass}>Día seleccionado</div>
+                      <div className="font-bold">{formatDate(activeDay.date)}</div>
                     </div>
                   </div>
                   <div className={ui.selectedDaySessionsBadgeClass}>
