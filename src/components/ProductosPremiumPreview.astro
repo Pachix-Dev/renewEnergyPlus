@@ -14,7 +14,7 @@ const products = [
     name_en: 'PREMIUM PASS',
     subtitle: 'La experiencia completa',
     subtitle_en: 'The complete experience',
-    price: 7000,
+    price: 7500, // Precio unitario - Última fase
     originalPrice: 7500,
     popular: true,
     included: [
@@ -41,7 +41,7 @@ const products = [
     name_en: 'ENERGY NIGHT',
     subtitle: 'La noche más esperada',
     subtitle_en: 'The most anticipated night',
-    price: 1100,
+    price: 1200, // Precio unitario - Última fase
     originalPrice: 1200,
     popular: false,
     included: [
@@ -68,7 +68,7 @@ const products = [
     name_en: 'DAY PASS',
     subtitle: 'Acceso por un día',
     subtitle_en: 'One day access',
-    price: 2500,
+    price: 2600, // Precio unitario - Última fase
     originalPrice: 2600,
     popular: false,
     included: [
@@ -160,14 +160,14 @@ const lang = i18next.language;
                     </span>
                     <span class="text-sm font-medium text-gray-500 ml-1">MXN</span>
                   </div>
-                  <div class="flex items-center justify-center gap-2 mt-1">
+                  {/* <div class="flex items-center justify-center gap-2 mt-1">
                     <span class="text-sm text-gray-400 line-through">
                       ${product.originalPrice.toLocaleString('es-MX')}
                     </span>
                     <span class="bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                       {lang === 'es' ? 'FASE 1' : 'PHASE 1'}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
