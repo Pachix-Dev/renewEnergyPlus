@@ -39,7 +39,9 @@ const { base = "" } = Astro.props;
         >
           <!-- Tarjeta: Conferencias Premium -->
           <a
-            href="#conferenciasPrograma"
+            href={
+              `${base}/programa-premium`
+            }
             class="premium-card-v2 group flex flex-col items-center text-center rounded-2xl bg-gradient-to-br from-[#1E293B]/80 via-[#5E5884]/60 to-[#1E293B]/80 border-2 border-[#5E5884] shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-400 p-0 overflow-hidden cursor-pointer"
             data-aos="fade-up"
             data-aos-duration="900"
