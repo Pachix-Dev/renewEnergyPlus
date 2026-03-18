@@ -9,10 +9,10 @@ const products = [
     id: 1,
     name: 'PASE COMPLETO, ENERGY NIGHT Y VIP AREA',
     name_en: 'FULL PASS, ENERGY NIGHT AND VIP AREA',
-    price: 7000, // Precio de fase 1
+    price: 7500, // Precio unitario - Fase 2
     originalPrice: 7500, // Precio final
     isPresale: false,
-    savings: 1000,
+    savings: 0,
     // Estructura de precios por fases
     pricingPhases: {
       presale: { price: 6500, endDate: '15 de enero, 2026' },
@@ -37,10 +37,10 @@ const products = [
     id: 2,
     name: 'ENERGY NIGHT',
     name_en: 'ENERGY NIGHT',
-    price: 1100, // Precio de fase 1
+    price: 1200, // Precio unitario - Fase 2
     originalPrice: 1200, // Precio final
     isPresale: false,
-    savings: 100,
+    savings: 0,
     // Estructura de precios por fases
     pricingPhases: {
       presale: { price: 1000, endDate: '15 de enero, 2026' },
@@ -65,10 +65,10 @@ const products = [
     id: 3,
     name: 'DAY PASS PREMIUM',
     name_en: 'DAY PASS PREMIUM',
-    price: 2500,
+    price: 2600, // Precio unitario - Fase 2
     originalPrice: 2600,
     isPresale: false,
-    savings: 100,
+    savings: 0,
     requiresDaySelection: true,
     dayLabel_es: 'Selecciona el día de asistencia',
     dayLabel_en: 'Select your attendance day',
@@ -129,11 +129,11 @@ const products = [
             </div>
           )}
 
-          <!-- Badge de preventa -->
+          <!-- Badge Precio Unitario -->
           <div class='absolute -top-3 -right-3 z-10'>
-            <div class='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-2xl shadow-lg transform rotate-12 animate-pulse'>
+            <div class='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-2xl shadow-lg transform rotate-12 animate-pulse'>
               <div class='text-xs font-bold uppercase tracking-wider'>
-                {i18next.language === 'es' ? 'FASE 1 ACTIVA' : 'PHASE 1 ACTIVE'}
+                {i18next.language === 'es' ? 'PRECIO UNITARIO' : 'UNIT PRICE'}
               </div>
             </div>
           </div>
@@ -175,28 +175,28 @@ const products = [
               {/* <!-- Pricing section con estructura de fases --> */}
               <div class='text-center mb-6'>
                 {/* Precio actual */}
-                <div class={`rounded-2xl p-5 mb-6 border-2 ${product.id === 1 ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-300' : 'bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-300'}`}>
+                <div class={`rounded-2xl p-5 mb-6 border-2 bg-gradient-to-r from-emerald-50 to-green-50 border-emerald-300`}>
                   <div class='flex items-center justify-center gap-2 mb-3'>
-                    <span class={`text-white text-sm font-bold px-4 py-2 rounded-full flex items-center gap-2 ${product.id === 1 ? 'bg-green-500' : 'bg-blue-500'}`}>
+                    <span class={`text-white text-sm font-bold px-4 py-2 rounded-full flex items-center gap-2 ${product.id === 1 ? 'bg-emerald-500' : 'bg-emerald-500'}`}>
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                       </svg>
-                      {i18next.language === 'es' ? 'FASE 1 ACTIVA' : 'PHASE 1 ACTIVE'}
+                      {i18next.language === 'es' ? 'PRECIO UNITARIO' : 'UNIT PRICE'}
                     </span>
                   </div>
                   
                   <div class='flex items-baseline justify-center text-gray-900 mb-3'>
                     <span class='text-2xl font-semibold'>$</span>
-                    <span class={`font-black tracking-tight text-4xl ${product.id === 1 ? 'text-green-600' : 'text-blue-600'}`}>
-                      {product.pricingPhases.phase1.price.toLocaleString('es-MX')}
+                    <span class={`font-black tracking-tight text-4xl ${product.id === 1 ? 'text-emerald-600' : 'text-emerald-600'}`}>
+                      {product.pricingPhases.phase2.price.toLocaleString('es-MX')}
                     </span>
                     <span class='text-lg font-normal text-gray-500 ml-1'>MXN</span>
                   </div>
                   
-                  <p class={`text-sm font-bold ${product.id === 1 ? 'text-green-800' : 'text-blue-800'}`}>
-                    ⏰ {i18next.language === 'es' ? 'Válido hasta el' : 'Valid until'} 
+                  <p class={`text-sm font-bold ${product.id === 1 ? 'text-emerald-800' : 'text-emerald-800'}`}>
+                    ⏰ {i18next.language === 'es' ? 'Válido hasta' : 'Valid until'} 
                     <span class="underline">
-                      {product.pricingPhases.phase1.endDate}
+                      {product.pricingPhases.phase2.endDate}
                     </span>
                   </p>
                 </div>
@@ -222,7 +222,7 @@ const products = [
                     </div> */}
 
                     {/* Fase 1 */}
-                    <div class='flex items-center justify-between p-2 bg-yellow-100 rounded-lg border-l-4 border-yellow-500'>
+                    {/* <div class='flex items-center justify-between p-2 bg-yellow-100 rounded-lg border-l-4 border-yellow-500'>
                       <div class="flex-1">
                         <span class='font-bold text-yellow-800 text-sm'>
                           {i18next.language === 'es' ? 'FASE 1' : 'PHASE 1'}
@@ -240,7 +240,7 @@ const products = [
                       <span class='text-lg font-bold text-yellow-700'>
                         ${product.pricingPhases.phase1.price.toLocaleString('es-MX')}
                       </span>
-                    </div>
+                    </div> */}
 
                     {/* Fase 2 */}
                     <div class='flex items-center justify-between p-2 bg-red-100 rounded-lg border-l-4 border-red-500'>
@@ -259,13 +259,13 @@ const products = [
                   </div>
 
                   {/* Ahorro destacado */}
-                  <div class='mt-3 p-2 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200'>
+                  {/* <div class='mt-3 p-2 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200'>
                     <div class='text-center'>
                       <span class='bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full'>
                         {i18next.language === 'es' ? '¡Ahorra hasta' : 'Save up to'} ${(product.pricingPhases.phase2.price - product.pricingPhases.phase1.price).toLocaleString('es-MX')} MXN{i18next.language === 'es' ? '!' : '!'}
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
