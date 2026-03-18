@@ -44,7 +44,7 @@ export function Coupon({ text1, text2 , language}) {
     REPLUSEXP: {
       id: 12,
       nameCode: 'REPLUSEXP',
-      price: -500,
+      price: -1000,
     },
     IERUNAM : {
       id: 13,
