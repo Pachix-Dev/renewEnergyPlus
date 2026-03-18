@@ -1,5 +1,11 @@
 ---
 import i18next, { t, changeLanguage } from "i18next";
+
+const sponsors = [
+  { src: "/img/sponsors/sungrow.webp", alt: "Sungrow" },
+  { src: "/img/expositores2026/axen_energy.webp", alt: "Axen Energy" },
+  { src: "/img/expositores2026/quartux.webp", alt: "Quartux" }
+];
 ---
   <!-- Sunset Cocktail Section -->
   <div id="sunsetCocktail"
@@ -41,8 +47,32 @@ import i18next, { t, changeLanguage } from "i18next";
         </h2>
       </div>
 
+      <!-- Grid de patrocinadores -->
+      <div
+        class="mb-12"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="100"
+      >
+        <p class="text-center text-xs font-bold uppercase tracking-[0.3em] text-white/40 mb-6">
+          {i18next.language === "es" ? "Patrocinadores" : "Sponsors"}
+        </p>
+        <div class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-4 items-center justify-items-center">
+          {sponsors.map((sponsor) => (
+            <div class="flex items-center justify-center w-full h-20 px-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-yellow-400/30 transition-all duration-300">
+              <img
+                src={sponsor.src}
+                alt={sponsor.alt}
+                class="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
       <!-- Layout principal -->
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 gap-8 lg:gap-12 items-center">
         <!-- Video  -->
         <div
           class="lg:col-span-3"
@@ -91,10 +121,10 @@ import i18next, { t, changeLanguage } from "i18next";
             >
             </div>
             <div
-              class="relative bg-gradient-to-br from-yellow-400/15 via-[#5E5884]/15 to-[#1E293B]/80 backdrop-blur-xl border-2 border-yellow-400/40 rounded-2xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-300"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 bg-gradient-to-br from-yellow-400/15 via-[#5E5884]/15 to-[#1E293B]/80 backdrop-blur-xl border-2 border-yellow-400/40 rounded-2xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <!-- Fecha -->
-              <div class="flex items-center gap-2.5 mb-3">
+              <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3 sm:p-4 min-w-0">
                 <div
                   class="w-9 h-9 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center shadow-lg flex-shrink-0"
                 >
@@ -115,14 +145,14 @@ import i18next, { t, changeLanguage } from "i18next";
                   >
                     {t("sunset_cocktail.date-element")}
                   </p>
-                  <p class="text-white font-bold text-sm">
+                  <p class="text-white font-bold text-sm sm:text-base leading-tight">
                     {t("sunset_cocktail.date")}
                   </p>
                 </div>
               </div>
               
               <!-- Hora -->
-              <div class="flex items-center gap-2.5 mb-3 pt-3 border-t border-white/10">
+              <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3 sm:p-4 min-w-0">
                 <div
                   class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#5E5884] to-[#1E293B] flex items-center justify-center shadow-lg flex-shrink-0"
                 >
@@ -143,16 +173,14 @@ import i18next, { t, changeLanguage } from "i18next";
                   >
                     {t("sunset_cocktail.time-element")}
                   </p>
-                  <p class="text-white font-bold text-sm">
+                  <p class="text-white font-bold text-sm sm:text-[14px] leading-tight">
                     {t("sunset_cocktail.time")}
                   </p>
                 </div>
               </div>
               
               <!-- Lugar -->
-              <div
-                class="flex items-center gap-2.5 pt-3 border-t border-white/10"
-              >
+              <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3 sm:p-4 min-w-0 sm:col-span-2 lg:col-span-1">
                 <div
                   class="w-9 h-9 rounded-lg bg-gradient-to-br from-yellow-400 to-[#5E5884] flex items-center justify-center shadow-lg flex-shrink-0"
                 >
@@ -173,7 +201,7 @@ import i18next, { t, changeLanguage } from "i18next";
                   >
                     {t("sunset_cocktail.place-element")}
                   </p>
-                  <p class="text-white font-bold text-sm">
+                  <p class="text-white font-bold text-sm sm:text-base leading-tight">
                     VIP Area
                   </p>
                 </div>

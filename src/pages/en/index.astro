@@ -17,6 +17,8 @@ import HomePopup from "../../components/home/HomePopup.jsx";
 import KeynoteSpeakers from "../../components/KeynoteSpeakers.astro";
 import ExperienciaPremium from "../../components/ExperienciaPremium.astro";
 import ProductosPremiumPreview from "../../components/ProductosPremiumPreview.astro";
+import SunsetCocktail from "../../components/SunsetCocktail.astro";
+import VipArea from "../../components/VipArea.astro";
 
 changeLanguage("en");
 ---
@@ -26,6 +28,10 @@ changeLanguage("en");
   <KeynoteSpeakers />
   <ExperienciaPremium />
   <ProductosPremiumPreview />
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2">
+    <SunsetCocktail />
+    <VipArea />
+  </div>
   <!-- <BecomeExhibitor /> -->
   <Cifras />
   <Segmentos />

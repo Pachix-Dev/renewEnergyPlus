@@ -46,10 +46,10 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                     <!-- Shine effect -->
                     <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
-                    <div class="relative grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+                    <div class="relative grid grid-cols-1 gap-6 sm:gap-8">
                         
                         <!-- Imagen del lugar -->
-                        <div class="relative overflow-hidden rounded-t-2xl sm:rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none h-64 sm:h-80 md:h-auto">
+                        <div class="relative overflow-hidden rounded-t-2xl sm:rounded-t-3xl h-64 sm:h-80 md:h-[28rem]">
                             <img 
                                 src="/img/vip_area.webp" 
                                 alt="VIP Networking Area"
@@ -59,7 +59,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                         </div>
 
                         <!-- Información del evento -->
-                        <div class="p-6 sm:p-8 md:p-10 space-y-6 sm:space-y-8">
+                        <div class="p-6 sm:p-8 md:p-10 space-y-6 sm:space-y-8 max-w-4xl">
 
                             <!-- Descripción -->
                             <p class="text-base sm:text-lg text-gray-300 leading-relaxed text-justify" set:html={t("vip_networking.description")} />
