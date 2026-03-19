@@ -70,7 +70,7 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/s5.webp", alt: "S5", width: 100, height: 100 },
     { link: "", src: "/img/expositores2026/saj.webp", alt: "SAJ", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/santamarina.webp", alt: "Santamarina", width: 200, height: 200 },
-    { link: "", src: "/img/expositores2026/smg_global.webp", alt: "SMG Global", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/VMV_Solar.webp", alt: "SMG Global", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/solar_center.webp", alt: "Solar Center", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/solar_clean.webp", alt: "Solar Clean", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/solar_ing.webp", alt: "Solar Ing", width: 200, height: 200 },
