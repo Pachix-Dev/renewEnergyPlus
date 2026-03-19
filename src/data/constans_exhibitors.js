@@ -60,7 +60,7 @@ const exhibitors2026 = [
     { link: "", src: "/img/expositores2026/nos.webp", alt: "NOS", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/one_simple_way.webp", alt: "One Simple Way", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/pytes.webp", alt: "Pytes", width: 200, height: 200 },
-    { link: "", src: "/img/expositores2026/quartux.webp", alt: "Quartux", width: 200, height: 200 },
+    { link: "", src: "/img/expositores2026/quartux_newLogo.webp", alt: "Quartux", width: 400, height: 200 },
     { link: "", src: "/img/expositores2026/r_poweroad.webp", alt: "R Poweroad", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/refacsol.webp", alt: "Refacsol", width: 200, height: 200 },
     { link: "", src: "/img/expositores2026/renon.webp", alt: "Renon", width: 200, height: 200 },
