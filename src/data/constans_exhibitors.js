@@ -661,7 +661,7 @@ const exhibitors2026 = [
     link: "",
     src: "/img/expositores2026/victron_energy.webp",
     alt: "Victron Energy",
-    width: 200,
+    width: 400,
     height: 200,
   },
   {
@@ -706,6 +706,13 @@ const exhibitors2026 = [
     width: 200,
     height: 200,
   },
+  {
+    link: "",
+    src: "/img/expositores2026/ctrl_sun.webp",
+    alt: "Ctrl Sun",
+    width: 200,
+    height: 200,
+  }
 ];
 
 const exhibitors2025 = [
