@@ -2,55 +2,52 @@
 import i18next, { t } from "i18next";
 ---
 
-<section class="py-16 bg-white">
-  <div class="container mx-auto px-4">
+<section class="py-4 md:py-16 bg-white">
+  <div class="container mx-auto px-4 gap-y-4 flex flex-col">
     <!-- Diamond Sponsor -->
     <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
       <h2
-        class="text-xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-8 text-[#565078] uppercase tracking-wide"
       >
         {t("home.sponsor_diamond")}
       </h2>
       <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          <img
-            src="/img/expositores2026/quartux_newLogo.webp"
-            alt="QUARTUX"
-            class="w-[280px] sm:w-[280px] h-auto"
-          />
+        <img
+          src="/img/expositores2026/quartux_newLogo.webp"
+          alt="QUARTUX"
+          class="w-[250px] sm:w-[310px] h-auto"
+        />
       </div>
     </div>
 
     <!-- Platinum Sponsors -->
     <div class="mb-4" data-aos="fade-up" data-aos-duration="1200">
       <h2
-        class="text-xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
       >
         {t("home.sponsor_platinum")}
       </h2>
       <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-        <div class="flex justify-center items-center min-h-[120px]">
-          <img
-            src="/img/axen_energy.png"
-            alt="ECOFLOW"
-            width="140"
-            class="max-w-full h-auto"
-          />
-        </div>
-        <div class="flex justify-center items-center min-h-[120px]">
-          <img
-            src="/img/sponsors/S-5logo.webp"
-            alt="S-5"
-            width="90"
-            class="max-w-full h-auto"
-          />
-        </div>
+        <img
+          src="/img/axen_energy.png"
+          alt="ECOFLOW"
+          width="140"
+          class="w-[140px] sm:w-[170px] h-auto"
+        />
+
+        <img
+          src="/img/sponsors/S-5logo.webp"
+          alt="S-5"
+          width="90"
+          class="w-[80px] sm:w-[100px] h-auto"
+        />
       </div>
     </div>
 
     <!-- Gold Sponsors -->
     <div class="mb-4" data-aos="fade-up" data-aos-duration="1300">
       <h2
-        class="text-xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
       >
         {t("home.sponsor_gold")}
       </h2>
@@ -58,12 +55,12 @@ import i18next, { t } from "i18next";
         <img
           src="/img/sponsors/tesla.webp"
           alt="TESLA"
-          class="w-[150px] sm:w-[280px] h-auto"
+          class="w-[150px] sm:w-[210px] h-auto"
         />
         <img
           src="/img/sponsors/trina-solar.webp"
           alt="TRINA SOLAR"
-          class="w-[150px] sm:w-[280px] h-auto"
+          class="w-[150px] sm:w-[210px] h-auto"
         />
         <!-- <div class="flex justify-center items-center min-h-[100px]">
           <img
@@ -95,7 +92,7 @@ import i18next, { t } from "i18next";
     <!-- Silver Sponsors -->
     <div class="mb-4" data-aos="fade-up" data-aos-duration="1400">
       <h2
-        class="text-xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
       >
         {t("home.sponsor_silver")}
       </h2>
@@ -104,25 +101,25 @@ import i18next, { t } from "i18next";
           src="/img/sponsors/apSystems.webp"
           alt="AP Systems"
           width="200"
-          class="w-[150px] sm:w-[280px] h-auto"
+          class="w-[150px] sm:w-[210px] h-auto"
         />
         <img
           src="/img/expo/carousel5/exel_solar.webp"
           alt="COMETER"
           width="220"
-          class="w-[150px] sm:w-[280px] h-auto"
+          class="w-[150px] sm:w-[210px] h-auto"
         />
         <img
           src="/img/nosmueveelsolnuevo.png"
           alt="nos mueve el sol"
           width="150"
-          class="w-[150px] sm:w-[280px] h-auto"
+          class="w-[150px] sm:w-[180px] h-auto"
         />
         <img
           src="/img/sponsors/sungrow.webp"
           alt="Sungrow"
           width="220"
-          class="w-[150px] sm:w-[280px] h-auto"
+          class="w-[150px] sm:w-[210px] h-auto"
         />
       </div>
     </div>
@@ -130,7 +127,7 @@ import i18next, { t } from "i18next";
     <!-- Bronze Sponsors -->
     <div class="mb-4" data-aos="fade-up" data-aos-duration="1500">
       <h2
-        class="text-xl md:text-4xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
+        class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 text-[#565078] uppercase tracking-wide"
       >
         {t("home.sponsor_bronze")}
       </h2>
@@ -163,7 +160,7 @@ import i18next, { t } from "i18next";
           src="/img/sponsors/dm_solar.webp"
           alt="DM Solar"
           width="180"
-          class="w-[150px] sm:w-[280px] h-auto"
+          class="w-[180px] sm:w-[280px] h-auto"
         />
       </div>
     </div>
