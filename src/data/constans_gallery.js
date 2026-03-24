@@ -1,7 +1,7 @@
 const gallery2025 = [
     {
-        src: '/img/gallery/2025/inauguracion.jpg',
-        width: 1920,
+        src: '/img/gallery/2025/inauguracion_v2.webp',
+        width: 900,
         height: 1280,
         alt: 'Solar Storage 2025'
     },
