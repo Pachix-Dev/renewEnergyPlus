@@ -279,13 +279,13 @@ const exhibitors2026 = [
     width: 200,
     height: 200,
   },
-  {
-    link: "",
-    src: "/img/expositores2026/huawei.webp",
-    alt: "Huawei",
-    width: 300,
-    height: 300,
-  },
+  // {
+  //   link: "",
+  //   src: "/img/expositores2026/huawei.webp",
+  //   alt: "Huawei",
+  //   width: 300,
+  //   height: 300,
+  // },
   {
     link: "",
     src: "/img/expositores2026/igsa.webp",
