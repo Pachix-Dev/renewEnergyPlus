@@ -1,6 +1,5 @@
 /**
  * Ordena un array de logos alfabéticamente por el nombre del archivo en src
- *
  * @param {Array} logos - Array de objetos con la propiedad src
  * @return {Array} - Nuevo array ordenado alfabéticamente
  **/

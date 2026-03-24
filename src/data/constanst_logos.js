@@ -84,10 +84,15 @@ const toolkit_en = [
 ];
 
 const sponsors = [
+  // {
+  //   src: "/img/sponsors/Huawei.webp",
+  //   alt: "Huawei",
+  //   width: 250,
+  // },
   {
-    src: "/img/sponsors/Huawei.webp",
-    alt: "Huawei",
-    width: 250,
+    src: "/img/sponsors/trina-solar.webp",
+    alt: "Trina Solar",
+    width: 200,
   },
   {
     src: "/img/quartux_nuevo.png",
