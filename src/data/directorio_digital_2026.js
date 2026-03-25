@@ -2792,7 +2792,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/jolywoodsolar/posts/?feedView=all",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/jolywood.webp",
   },
   {
       "clasificacion": "Expositor",

@@ -728,6 +728,13 @@ const exhibitors2026 = [
     alt: "Temisa",
     width: 200,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/jolywood.webp",
+    alt: "Jolywood",
+    width: 200,
+    height: 200,
   }
 ];
 
