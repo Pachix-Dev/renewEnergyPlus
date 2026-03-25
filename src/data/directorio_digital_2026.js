@@ -2192,7 +2192,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/sunpro-power-co-ltd/?viewAsMember=true",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/sunpro_power.webp",
   },
   {
     clasificacion: "Expositor",
