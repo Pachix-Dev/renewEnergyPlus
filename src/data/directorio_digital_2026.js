@@ -23,7 +23,7 @@ const data = [
     Facebook: "ALUMINEXT SOLAR RACKING",
     LinkedIn: "ALUMINEXT SOLAR RACKING",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/aluminext.webp",
   },
   {
     clasificacion: "Expositor",
@@ -51,7 +51,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/25years-china-leading-solar-cable-connector-manufacturer/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/leader.webp",
   },
   {
     clasificacion: "Expositor",
@@ -80,7 +80,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/in/srne-solar-170705236/recent-activity/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/hebei_srne.webp",
   },
   {
     clasificacion: "Expositor",
@@ -107,7 +107,7 @@ const data = [
     Facebook: "https://www.facebook.com/Ksengsolar/",
     LinkedIn: "https://www.linkedin.com/company/29835760/admin/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/kseng.webp",
   },
   {
     clasificacion: "Expositor",
@@ -134,7 +134,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/stripsteel.webp",
   },
   {
     clasificacion: "Expositor",
@@ -161,7 +161,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/ecoflowtech/posts/?feedView=all",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/ecoflow.webp",
   },
   {
     clasificacion: "Expositor",
@@ -213,7 +213,7 @@ const data = [
     Facebook: "https://www.facebook.com/apsystemslatam/",
     LinkedIn: "https://mx.linkedin.com/company/apsystems-latam",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/ap_systems.webp",
   },
   {
     clasificacion: "Expositor",
@@ -531,7 +531,7 @@ const data = [
     Facebook: "corporativosoles",
     LinkedIn: "Corporativo SOLES",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/soles.webp",
   },
   {
     clasificacion: "Expositor",
@@ -690,7 +690,7 @@ const data = [
     Facebook: "DEIF | Facebook",
     LinkedIn: "https://www.linkedin.com/company/deifgroup",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/deif.webp",
   },
   {
     clasificacion: "Expositor",
@@ -742,7 +742,7 @@ const data = [
     Facebook: "https://www.facebook.com/ComApGlobal/",
     LinkedIn: "https://www.linkedin.com/company/comap-group/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/comAp.webp",
   },
   {
     clasificacion: "Expositor",
@@ -823,7 +823,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/autel.webp",
   },
   {
     clasificacion: "Expositor",
@@ -849,7 +849,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/axen_energy.webp",
   },
   {
     clasificacion: "Expositor",
@@ -932,7 +932,7 @@ const data = [
     Facebook: "BASEL Racking Systems",
     LinkedIn: "BASEL Racking Systems",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/basel.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1037,7 +1037,7 @@ const data = [
     Facebook: "https://www.facebook.com/aspiria.mx",
     LinkedIn: "https://mx.linkedin.com/company/aspiria/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/aspiria.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1088,7 +1088,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/battery-depotmx/?viewAsMember=true",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/battery_depot.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1486,7 +1486,7 @@ const data = [
     Facebook: "BLUETTI GLOBAL",
     LinkedIn: "BLUETTI",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/bluetti.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1512,7 +1512,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/bslbatt.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1540,7 +1540,7 @@ const data = [
     LinkedIn:
       "https://de.linkedin.com/company/cesc-gmbh?trk=public_post_feed-actor-name",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/cesc_bn.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1569,7 +1569,7 @@ const data = [
       "https://www.facebook.com/p/CNBM-International-Corporation-100069786387210/",
     LinkedIn: "https://www.linkedin.com/company/cnbmjs/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/cnbm.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1596,7 +1596,7 @@ const data = [
     Facebook: "https://www.facebook.com/DAHSolar",
     LinkedIn: "https://www.linkedin.com/company/dahsolarpv/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/daaSolar.webp",
   },
   {
     clasificacion: "Expositor",
@@ -2516,7 +2516,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/lumen_geo.webp",
   },
   {
     clasificacion: "Expositor",
@@ -2693,7 +2693,7 @@ const data = [
     Facebook: "csisolarlatam",
     LinkedIn: "canadian-solar-inc",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/canadianSolar.webp",
   },
   {
     clasificacion: "Expositor",
@@ -2719,7 +2719,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/ctrl_sun.webp",
   },
   {
     clasificacion: "Expositor",
