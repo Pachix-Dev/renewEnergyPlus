@@ -2430,7 +2430,7 @@ const data = [
     Facebook: "https://www.facebook.com/share/1E1CBsy9uH/",
     LinkedIn: "https://mx.linkedin.com/company/tecnologias-eos",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/gte.webp",
   },
   {
     clasificacion: "Expositor",
