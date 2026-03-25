@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 /**
  * Ordena un array de logos alfabéticamente por el nombre del archivo en src
  * @param {Array} logos - Array de objetos con la propiedad src
@@ -711,6 +713,14 @@ const exhibitors2026 = [
     alt: "Ctrl Sun",
     width: 200,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/unirac.webp",
+    alt: "Unirac",
+    width: 400,
+    height: 200,
+
   }
 ];
 

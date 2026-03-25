@@ -1380,7 +1380,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/unirac.webp",
   },
   {
     clasificacion: "Expositor",
