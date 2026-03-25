@@ -1011,7 +1011,7 @@ const data = [
     Facebook: "Solarmax - Distribuidor de Paneles Solares",
     LinkedIn: "SOLARMAX (SOLARMAX) ENERGIA",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/solar_max.webp",
   },
   {
     clasificacion: "Expositor",
