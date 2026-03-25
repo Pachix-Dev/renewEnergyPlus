@@ -374,7 +374,7 @@ const data = [
     Facebook: "https://www.facebook.com/s5techosmetalicos",
     LinkedIn: "https://www.linkedin.com/company/s5techosmetalicos/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/s5.webp",
   },
   {
     clasificacion: "Expositor",
@@ -451,7 +451,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/solarama.webp",
   },
   {
     clasificacion: "Expositor",
@@ -505,7 +505,7 @@ const data = [
     Facebook: "https://www.facebook.com/share/1BfR5kBqFU/?mibextid=wwXIfr",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/smg_global.webp",
   },
   {
     clasificacion: "Expositor",
@@ -584,7 +584,7 @@ const data = [
     Facebook: "Solar Insurance",
     LinkedIn: "Solar Insurance",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/solar_insurance.webp",
   },
   {
     clasificacion: "Expositor",
@@ -664,7 +664,7 @@ const data = [
     Facebook: "SolarCenterMX",
     LinkedIn: "Solar Center MX",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/solar_center.webp",
   },
   {
     clasificacion: "Expositor",
@@ -716,7 +716,7 @@ const data = [
     Facebook: "https://www.facebook.com/RollsBattery",
     LinkedIn: "https://www.linkedin.com/showcase/rollsbatteryengineering",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/rolls_battery.webp",
   },
   {
     clasificacion: "Expositor",
@@ -936,7 +936,7 @@ const data = [
   },
   {
     clasificacion: "Expositor",
-    nombreComercial: "SolarCleano",
+    nombreComercial: "Solar Cleano",
     stand: "",
     nombreContacto: "Loris Sablone",
     Puesto: "Marketing Coordinator",
@@ -1115,7 +1115,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/solar-ing-costarica/posts/?feedView=all",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/solar_ing.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1249,7 +1249,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/santamarina.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1440,7 +1440,7 @@ const data = [
     nombreComercial: "Shenzhen ATESS Power Technology Co., Ltd",
     stand: "J40",
     nombreContacto: "Eileen Cai",
-    Puesto: "Branding Specialist",
+    Puesto: "Branding Specialist",
     telefono: "86 755 2998 8492",
     Correo: "Info@atesspower.com",
     paginaWeb: "www.atesspower.com",
@@ -1450,17 +1450,15 @@ const data = [
     Ciudad: "Shenzhen",
     Estado: "Guangdong",
     País: "China",
-    descripcion_es:
-      "Fundada en 2017, ATESS es un proveedor líder a nivel mundial de soluciones de almacenamiento de energía solar y carga de VE. Nuestra misión es hacer que la energía limpia sea accesible y asequible para las personas de todo el mundo.",
-    descripcion_en:
-      "Founded in 2017, ATESS is a leading global provider of solar energy storage and EV charging solutions. Our mission is to make clean energy accessible and affordable to people across the globe.",
+    descripcion_es:"Fundada en 2017 ATESS es un proveedor líder a nivel mundial de soluciones de almacenamiento de energía solar y carga de VE. Nuestra misión es hacer que la energía limpia sea accesible y asequible para las personas de todo el mundo.",
+    descripcion_en:"Founded in 2017, ATESS is a leading global provider of solar energy storage and EV charging solutions. Our mission is to make clean energy accessible and affordable to people across the globe.",
     categoria: "",
     contacto: "",
     Instagram: "https://www.instagram.com/atess.power/",
     Facebook: "https://www.facebook.com/Atesspower",
     LinkedIn: "https://www.linkedin.com/company/28733253",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/atess.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1762,7 +1760,7 @@ const data = [
   },
   {
     clasificacion: "Expositor",
-    nombreComercial: "Hoymiles Power Electronics Inc.",
+    nombreComercial: "Hoymiles Power Electronics Inc.",
     stand: "I30",
     nombreContacto: "Christian Caro",
     Puesto: "Marketing Manager",
@@ -1871,7 +1869,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/kelin.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1953,7 +1951,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/shenzhen-megarevo-technology-co-ltd",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/megarevo.webp",
   },
   {
     clasificacion: "Expositor",
@@ -2053,7 +2051,7 @@ const data = [
     Estado: "Shanghai",
     País: "China",
     descripcion_es:
-      "**Con más de 20 años de experiencia, Pytes Energy se ha convertido en un nombre confiable en la industria del almacenamiento de energía.** Nuestras soluciones están diseñadas específicamente para satisfacer las demandas únicas del panorama de almacenamiento, empoderando hogares y empresas para lograr independencia energética y sostenibilidad con total confianza.\n\nAtendiendo a clientes en más de 60 países, **Pytes destaca por sus sistemas de almacenamiento certificados UL9540**, reconocidos por su rentabilidad, fiabilidad y versatilidad. Nuestra amplia gama de productos incluye baterías de rack para servidores de baja tensión, sistemas modulares apilables y soluciones de alta tensión (HV), todos diseñados para una instalación sencilla y una experiencia de usuario superior.\n\nEn el corazón de Pytes late un compromiso con la innovación y la calidad. **Aprovechando una amplia experiencia en investigación, desarrollo y fabricación, ofrecemos sistemas de baterías ricos en funciones que proporcionan un valor excepcional sin comprometer el rendimiento.** Garantizamos un servicio y entrega rápidos y locales, perfeccionando continuamente nuestros productos en función de los comentarios de los clientes para satisfacer las dinámicas necesidades del mercado.\n\n**Impulsa una vida mejor con Pytes.**",
+      "**Con más de 20 años de experiencia, Pytes Energy se ha convertido en un nombre confiable en la industria del almacenamiento de energía.** Nuestras soluciones están diseñadas específicamente para satisfacer las demandas únicas del panorama de almacenamiento, empoderando hogares y empresas para lograr independencia energética y sostenibilidad con total confianza.\n\nAtendiendo a clientes en más de 60 países, **Pytes destaca por sus sistemas de almacenamiento certificados UL9540**, reconocidos por su rentabilidad, fiabilidad y versatilidad. Nuestra amplia gama de productos incluye baterías de rack para servidores de baja tensión, sistemas modulares apilables y soluciones de alta tensión (HV), todos diseñados para una instalación sencilla y una experiencia de usuario superior.\n\nEn el corazón de Pytes late un compromiso con la innovación y la calidad. **Aprovechando una amplia experiencia en investigación, desarrollo y fabricación, ofrecemos sistemas de baterías ricos en funciones que proporcionan un valor excepcional sin comprometer el rendimiento.** Garantizamos un servicio y entrega rápidos y locales, perfeccionando continuamente nuestros productos en función de los comentarios de los clientes para satisfacer las dinámicas necesidades del mercado.\n\n**Impulsa una vida mejor con Pytes.",
     descripcion_en:
       "With over 20 years of expertise, Pytes Energy has become a trusted name in the energy storage industry. Pytes solutions are specifically designed to meet the unique demands of the energy storage landscape, empowering homes and businesses to achieve energy independence and sustainability with confidence.\n\nServing customers in more than 60 countries, Pytes stands out with its UL9540-certified energy storage systems, recognized for their cost-effectiveness, reliability, and versatility. Our diverse product range includes low-voltage server rack batteries, stackable modular systems, and high-voltage (HV) solutions, all engineered for seamless installation and superior user experience.\n\nAt the core of Pytes is a commitment to innovation and quality. Leveraging extensive research, development, and manufacturing expertise, we deliver feature-rich battery systems that offer exceptional value without compromising performance. Pytes ensures fast and local service and delivery, while consistently refining our products based on customer feedback to meet the dynamic needs of the market..\n\nPower a better Life with Pytes",
     categoria:
@@ -2063,7 +2061,7 @@ const data = [
     Facebook: "https://www.facebook.com/pytesusaenergy/",
     LinkedIn: "https://www.linkedin.com/company/81934296/admin/dashboard/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/pytes.webp",
   },
   {
     clasificacion: "Expositor",
@@ -2159,9 +2157,8 @@ const data = [
     Ciudad: "Shenzhen",
     Estado: "GUANGDONG",
     País: "CHINA",
-    descripcion_es: "0",
-    descripcion_en:
-      "Shenzhen SOSEN Innovation Technology Co., Ltd. is a leading global player in energy storage inverters manufacturing and smart energy solutions. As a subsidiary of SOSEN Group, which was founded in 2011 and listed on the Shenzhen Stock Market with stock code: 301002, we embody innovation and excellence.\nOur expansive 70,000-square-meter facility, equipped with state-of-the-art production and testing machinery, places us at the forefront of the worldwide solar inverter market.",
+    descripcion_es: " Shenzhen SOSEN Innovation Technology Co., Ltd. es un fabricante líder mundial de inversores de almacenamiento de energía y soluciones de energía inteligente. Como subsidiaria del Grupo SOSEN, fundado en 2011 y cotizado en la Bolsa de Shenzhen con el código de acciones: 301002, encarnamos la innovación y la excelencia.\nNuestra amplia instalación de 70,000 metros cuadrados, equipada con maquinaria de producción y prueba de última generación, nos coloca a la vanguardia del mercado mundial de inversores solares.",
+    descripcion_en: "Shenzhen SOSEN Innovation Technology Co., Ltd. is a leading global player in energy storage inverters manufacturing and smart energy solutions. As a subsidiary of SOSEN Group, which was founded in 2011 and listed on the Shenzhen Stock Market with stock code: 301002, we embody innovation and excellence.\nOur expansive 70,000-square-meter facility, equipped with state-of-the-art production and testing machinery, places us at the forefront of the worldwide solar inverter market.",
     categoria:
       "The core equipment of the solar photovoltaic power generation system",
     contacto: "",
@@ -2169,7 +2166,7 @@ const data = [
     Facebook: "https://www.facebook.com/SosenInverter",
     LinkedIn: "https://www.linkedin.com/company/sosen-inverter",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/sosen.webp",
   },
   {
     clasificacion: "Expositor",
