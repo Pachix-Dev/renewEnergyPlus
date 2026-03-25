@@ -2739,7 +2739,7 @@ const data = [
     Facebook: "temisamx",
     LinkedIn: "linktr.ee/temisa.mx",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/temisa.webp",
   },
   {
     clasificacion: "Expositor",

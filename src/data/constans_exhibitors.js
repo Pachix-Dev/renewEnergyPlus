@@ -721,6 +721,13 @@ const exhibitors2026 = [
     width: 400,
     height: 200,
 
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/temisa.webp",
+    alt: "Temisa",
+    width: 200,
+    height: 200,
   }
 ];
 
