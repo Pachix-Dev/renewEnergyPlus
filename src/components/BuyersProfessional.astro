@@ -42,14 +42,14 @@ import i18next, { t } from 'i18next'
   </div>
 
   <div
-    class='grid grid-cols-[repeat(auto-fit,_minmax(150px,_max-content))] justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-1'
+    class='grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 justify-center *:grid *:place-items-center *:w-full *:h-full gap-6 *:p-1'
     data-aos='fade-up'
     data-aos-duration='1500'
   >
     {
       buyers.map((buyer) => (
         <a href={buyer.link} target='_blank' rel='noreferrer'>
-          <img src={buyer.src} alt={buyer.alt} width={buyer.width} />
+          <img src={buyer.src} alt={buyer.alt} width={buyer.width} height={buyer.height} />
         </a>
       ))
     }
