@@ -9,8 +9,8 @@ export function Items({ currentLanguage }) {
   // Indica si el producto ENERGY NIGHT (id 2) está en el carrito.
   const hasEnergyNight = items?.some((cartItem) => cartItem.id === 2);
 
-  // Monto fijo del descuento visual para DAY PASS (id 3).
-  const dayPassDiscountAmount = 500;
+  // Monto fijo del descuento visual para DAY PASS (id 3), habilitar unicamente SI ENERGY NIGHT está presente.
+  const dayPassDiscountAmount = hasEnergyNight ? 500 : 0;
 
   // Formatea montos en moneda MXN para mostrar en la UI.
   function formatAmountMXN(amount) {
@@ -75,12 +75,10 @@ export function Items({ currentLanguage }) {
                 {formatAmountMXN(item.price)}
               </p>
 
-              {/*
-                Leyenda de descuento:
-                se muestra sólo para DAY PASS (id 3)
-                cuando ENERGY NIGHT (id 2) está presente en el carrito.
+              {/*Leyenda de descuento: se muestra sólo para DAY PASS (id 3),
+                  cuando ENERGY NIGHT (id 2) está presente en el carrito.
               */}
-              {item.id === 3 && hasEnergyNight && (
+              {/* {item.id === 3 && hasEnergyNight && (
                 <div className="mt-2 border-t border-gray-200 pt-2 text-sm">
                   <div className="flex items-center justify-between text-black">
                     <span>{currentLanguage === "es" ? "Precio base" : "Base price"}</span>
@@ -95,7 +93,7 @@ export function Items({ currentLanguage }) {
                     <span>{formatAmountMXN(item.price)}</span>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>

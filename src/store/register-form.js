@@ -92,8 +92,14 @@ const useRegisterForm = create(
             
             addToCart: (item) => set((state) => {
                 const itemWithId1Exists = state.items.some(i => i.id === 1);
-                const energyDrinkExists = state.items.some(i => i.id === 2);
-                const discountableProducts = [3, 4, 5];//Modificado y coloca los id de los productos a los que se les aplicará el descuento por la compra del PassMatch(Promoción)
+
+                /*
+                  Promocion PassMatch deshabilitada temporalmente.
+                  Descuento de $500 para Day Pass (id 3,4,5) al agregar Energy Night (id 2).
+
+                  const energyDrinkExists = state.items.some(i => i.id === 2);
+                  const discountableProducts = [3, 4, 5]; // ids con descuento
+                */
             
                 // Si el producto con id 1 ya está en el carrito, no permitir agregar más productos
                 if (itemWithId1Exists) {
@@ -114,19 +120,23 @@ const useRegisterForm = create(
             
                 let newItems = [...state.items, { ...item }];
             
-                // Si se agrega el producto 2, aplicar el descuento a los productos 3, 4 y 5 ya existentes
-                if (item.id === 2) {
-                    newItems = newItems.map(i =>
-                        discountableProducts.includes(i.id) ? { ...i, price: Math.max(i.price - 500, 0) } : i
-                    );
-                }
-            
-                // Si el producto 2 ya estaba en el carrito y agregamos 3, 4 o 5, aplicar descuento al nuevo producto
-                if (energyDrinkExists && discountableProducts.includes(item.id)) {
-                    newItems = newItems.map(i => 
-                        i.id === item.id ? { ...i, price: Math.max(i.price - 500, 0) } : i
-                    );
-                }
+                /*
+                  Promocion PassMatch deshabilitada temporalmente.
+
+                  // Si se agrega el producto 2, aplicar el descuento a los productos 3, 4 y 5 ya existentes
+                  if (item.id === 2) {
+                      newItems = newItems.map(i =>
+                          discountableProducts.includes(i.id) ? { ...i, price: Math.max(i.price - 500, 0) } : i
+                      );
+                  }
+
+                  // Si el producto 2 ya estaba en el carrito y agregamos 3, 4 o 5, aplicar descuento al nuevo producto
+                  if (energyDrinkExists && discountableProducts.includes(item.id)) {
+                      newItems = newItems.map(i =>
+                          i.id === item.id ? { ...i, price: Math.max(i.price - 500, 0) } : i
+                      );
+                  }
+                */
             
                 // Recalcular el total
                 const newTotal = newItems.reduce((sum, i) => sum + i.price, 0);
