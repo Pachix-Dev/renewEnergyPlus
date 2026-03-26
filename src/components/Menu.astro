@@ -158,7 +158,8 @@ const base = lang === "es" ? "" : `/${lang}`;
                   href={i18next.language === "es"
                     ? "/installer-award-mexico"
                     : "/en/installer-award-mexico"}
-                  class="block px-4 py-2">
+                  class="block px-4 py-2"
+                >
                   Installer Awards 2026
                 </a>
               </li>
@@ -221,7 +222,8 @@ const base = lang === "es" ? "" : `/${lang}`;
                     ? "/doc/RE+_renta_lectora_gafetes_2026.pdf"
                     : "/doc/RE+_bagde_reader_rental_2026.pdf"}
                   target="_blank"
-                  class="block px-4 py-2">
+                  class="block px-4 py-2"
+                >
                   {t("menu.submenu_2.option_18")}
                 </a>
               </li>
@@ -308,6 +310,22 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_16")}
                 </a>
               </li>
+              <!-- <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href={`${base}/installer-award-mexico`}
+                  class="block px-4 py-2"
+                >
+                  INSTALLER AWARDS MEXICO
+                </a>
+              </li> -->
+              <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href={`${base}/directorio-digital-2026`}
+                  class="block px-4 py-2"
+                >
+                  {t("menu.submenu_4.directory")} 2026
+                </a>
+              </li>
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href="/doc/LETTER-TEMPLATE-2026-RE-MEXICO-ED.pdf"
@@ -315,32 +333,6 @@ const base = lang === "es" ? "" : `/${lang}`;
                   class="block px-4 py-2">{t("menu.submenu_3.option_3")}</a
                 >
               </li>
-              {
-                /* 
-              
-              <li class='hover:bg-blue-100 font-semibold'>
-                <a href='/hoteles' target='_blank' class='block px-4 py-2'
-                  >{t('menu.submenu_3.option_4')}</a
-                >
-              </li>
-
-              
-                  <li class='hover:bg-blue-100 font-semibold'>
-                    <a href={`${base}/programa-premium`} class='block px-4 py-2'>
-                      {t('menu.submenu_2.option_9')}
-                    </a>
-                  </li>
-                
-                  <li class='hover:bg-blue-100 font-semibold'>
-                    <a
-                      href={`${base}/installer-award-mexico`}
-                      class='block px-4 py-2'
-                    >
-                      INSTALLER AWARDS MEXICO
-                    </a>
-                  </li>
-                */
-              }
             </ul>
           </div>
         </li>
