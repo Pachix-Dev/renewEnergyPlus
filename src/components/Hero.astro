@@ -31,7 +31,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         <img
           src="/img/logoREPLUS.webp"
           alt="REPLUS MEXICO"
-          class="logoREPLUS w-44 lg:w-54 mx-auto md:mx-0 mb-2"
+          class="logoREPLUS w-0 sm:w-44 lg:w-54 mx-auto md:mx-0 mb-2"
         />
         <p
           class="font-[Tungsten-Medium] text-white text-4xl md:text-4xl lg:text-5xl uppercase font-extrabold drop-shadow-lg tracking-wide bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent"
@@ -97,7 +97,9 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
             </div>
           </div>
         </div>
-
+        <p class="text-white">
+          {t("home.organized_by")}
+        </p>
         <img
           src="/img/logosOrganizado.webp"
           alt="Italian German Exhibition Company Mexico"
