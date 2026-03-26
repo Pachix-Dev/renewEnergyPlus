@@ -4,7 +4,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 ---
 
 <section
-  class="relative bg-no-repeat bg-cover min-h-[100vh] flex items-center justify-center sm:py-10 sm:px-2 overflow-hidden"
+  class="relative bg-no-repeat bg-cover min-h-[100vh] flex items-center justify-center py-2 sm:py-10 sm:px-2 overflow-hidden"
 >
   <video
     src="/video/replusmexicobg.mp4"
@@ -139,107 +139,61 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           >
         </a>
       </div>
-      {/* Otros botones de acción */}
-      <div class="flex flex-col sm:flex-row sm:justify-between gap-5 w-full">
-        {/* Botón: Programa Premium - lleva a /programa-premium */}
-        <div class="w-full group relative">
-          <a
-            href={`${base}/programa-premium`}
-            class="button text-white text-lg lg:text-2xl uppercase relative z-10 font-extrabold"
-          >
-            <div class="flex items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                ></path>
-              </svg>
-              <span class="font-bold text-lg">{t("program.title_1")}</span>
-            </div>
-          </a>
-          <div
-            class="relative -top-8 transform mt-2 bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition pb-2"
-          >
-            {t("home.text_button_program")}
+      {/* Botones: Programa Premium / Experiencia Premium / Energy Night */}
+      <div class="flex flex-col gap-3 w-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+
+        {/* Botón: Programa Premium */}
+        <a href={`${base}/programa-premium`} class="hero-btn hero-btn-blue">
+          <div class="hero-btn-icon hero-btn-icon-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
           </div>
-        </div>
-        {/* Botón: Experiencia Premium - lleva a /experiencia-premium */}
-        <div class="w-full group relative">
-          <a
-            href={`${base}/programa-premium`}
-            class="button bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-[#2D315F] text-lg lg:text-2xl uppercase relative z-10 font-extrabold border-yellow-400 hover:from-yellow-500 hover:to-yellow-700"
-          >
-            <div class="flex items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-party-popper-icon lucide-party-popper"
-                ><path d="M5.8 11.3 2 22l10.7-3.79"></path><path d="M4 3h.01"
-                ></path><path d="M22 8h.01"></path><path d="M15 2h.01"
-                ></path><path d="M22 20h.01"></path><path
-                  d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"
-                ></path><path
-                  d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"
-                ></path><path
-                  d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"
-                ></path><path
-                  d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"
-                ></path></svg
-              >
-              <span class="font-bold text-lg uppercase">{t("home.title_experience_premium")}</span>
-            </div>
-          </a>
-          <div
-            class="relative -top-8 transform bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition pb-2"
-          >
-            {t("home.description_experience_premium")}
+          <div class="hero-btn-text">
+            <span class="hero-btn-label hero-btn-label-blue">{i18next.language === "es" ? "Contenido premium de alta calidad" : "High-quality premium content"}</span>
+            <span class="hero-btn-title">{t("program.title_1")}</span>
           </div>
-        </div>
-        {/* Botón: Energy Night - lleva a /energy-night */}
-        <div class="w-full group relative">
-          <a
-            href={`${base}/energy-night`}
-            class="button text-white text-lg lg:text-2xl uppercase relative z-10 font-extrabold"
-          >
-            <div class="flex items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                ></path>
-              </svg>
-              <span class="font-bold text-lg">ENERGY NIGHT</span>
-            </div>
-          </a>
-          <div
-            class="relative -top-8 transform bg-[#2D315F] text-white text-center text-sm px-4 pt-10 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition pb-2"
-          >
-            {t("home.text_button_energy")}
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hero-btn-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+
+        {/* Botón: Experiencia Premium */}
+        <a href={`${base}/programa-premium`} class="hero-btn hero-btn-yellow">
+          <div class="hero-btn-icon hero-btn-icon-yellow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5.8 11.3 2 22l10.7-3.79"></path><path d="M4 3h.01"></path><path d="M22 8h.01"></path><path d="M15 2h.01"></path><path d="M22 20h.01"></path>
+              <path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"></path>
+              <path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"></path>
+              <path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"></path>
+              <path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"></path>
+            </svg>
           </div>
-        </div>
+          <div class="hero-btn-text">
+            <span class="hero-btn-label hero-btn-label-yellow">{i18next.language === "es" ? "Beneficios exclusivos" : "Exclusive benefits"}</span>
+            <span class="hero-btn-title">{t("home.title_experience_premium")}</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hero-btn-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+
+        {/* Botón: Energy Night */}
+        <a href={`${base}/energy-night`} class="hero-btn hero-btn-purple">
+          <div class="hero-btn-icon hero-btn-icon-purple">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </div>
+          <div class="hero-btn-text">
+            <span class="hero-btn-label hero-btn-label-purple">{i18next.language === "es" ? "La noche más esperada del sector" : "The most anticipated night in the industry"}</span>
+            <span class="hero-btn-title">Energy Night</span>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hero-btn-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+
       </div>
     </div>
   </div>
@@ -353,4 +307,103 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         0 0 0 0 #fff;
     }
   }
+
+  /* Reset global span styles inside hero buttons */
+  .hero-btn span {
+    color: inherit;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: transparent;
+  }
+
+  /* ── Hero buttons ───────────────────────── */
+  .hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 1rem;
+    border-left-width: 4px;
+    border-left-style: solid;
+    background: rgba(30,34,80,0.75);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    text-decoration: none;
+    transition: background 0.25s, box-shadow 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.06), transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+  .hero-btn:hover::before { transform: translateX(100%); }
+  .hero-btn:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.5); transform: translateY(-2px); }
+
+  .hero-btn-blue   { border-left-color: #38bdf8; }
+  .hero-btn-yellow { border-left-color: #fbbf24; }
+  .hero-btn-purple { border-left-color: #a78bfa; }
+
+  .hero-btn-blue:hover   { background: rgba(56,189,248,0.18); }
+  .hero-btn-yellow:hover { background: rgba(251,191,36,0.15); }
+  .hero-btn-purple:hover { background: rgba(167,139,250,0.18); }
+
+  .hero-btn-icon {
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-btn-icon-blue   { background: rgba(56,189,248,0.2);  color: #38bdf8; }
+  .hero-btn-icon-yellow { background: rgba(251,191,36,0.2);  color: #fbbf24; }
+  .hero-btn-icon-purple { background: rgba(167,139,250,0.2); color: #a78bfa; }
+
+  .hero-btn-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+  .hero-btn-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1px 7px;
+    border-radius: 999px;
+    line-height: 1.5;
+    -webkit-text-stroke: 0;
+  }
+  .hero-btn-label-blue   { background: rgba(56,189,248,0.2);  color: #7dd3fc !important; }
+  .hero-btn-label-yellow { background: rgba(251,191,36,0.2);  color: #fde68a !important; }
+  .hero-btn-label-purple { background: rgba(167,139,250,0.2); color: #c4b5fd !important; }
+
+  .hero-btn-title {
+    color: #fff !important;
+    font-weight: 800;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    -webkit-text-stroke: 0;
+  }
+
+  .hero-btn-arrow {
+    flex-shrink: 0;
+    color: rgba(255,255,255,0.6);
+    transition: transform 0.25s, color 0.2s;
+  }
+  .hero-btn:hover .hero-btn-arrow { transform: translateX(4px); color: #fff; }
 </style>
