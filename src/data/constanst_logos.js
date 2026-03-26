@@ -154,6 +154,11 @@ const sponsors = [
     alt: "quartux",
     width: 210,
   },
+  {
+    src: "/img/sponsors/hyper.webp",
+    alt: "Hyper",
+    width: 200,
+  }
 ];
 
 const energy_night = [
