@@ -4,11 +4,16 @@ import {
   exhibitors2026,
   sortLogosAlphabetically,
 } from "../data/constans_exhibitors";
-import { t } from "i18next";
+import i18next, { t, changeLanguage } from "i18next";
+
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
 <section class="container mx-auto px-4 my-10">
-  <p class="text-[#565078] text-2xl sm:text-4xl text-center font-extrabold sm:p-8 uppercase">
+  <p
+    class="text-[#565078] text-2xl sm:text-4xl text-center font-extrabold sm:p-8 uppercase"
+  >
     {t("menu.submenu_2.title")} 2026
   </p>
   <div
@@ -36,4 +41,34 @@ import { t } from "i18next";
   >
     {t("home.entreotros")}
   </p>
+
+  <!-- Button para el directorio de expositores -->
+  <div class="flex justify-center mt-8">
+    <a
+      href={`${base}/directorio-digital-2026`}
+      class="group relative flex sm:inline-flex items-center gap-3 overflow-hidden rounded-full border border-transparent bg-gradient-to-r from-[#ff8a00] via-[#ff5a1f] to-[#bc0100] px-8 py-3 text-base font-bold text-center text-white transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:from-[#ff6a00] hover:via-[#f1441f] hover:to-[#a30000] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#ff5a1f] focus:ring-offset-2 sm:px-10 sm:py-4 sm:text-lg lg:px-14 lg:py-5 lg:text-xl"
+    >
+      <span class="relative z-10">
+        {
+          currentLanguage === "en"
+            ? " 2026"
+            : "VER DIRECTORIO DE EXPOSITORES 2026"
+        }
+      </span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2.5"
+        stroke="currentColor"
+        class="relative z-10 h-8 w-8 transition-transform duration-300 group-hover:translate-x-1 sm:h-6 sm:w-6 lg:h-7 lg:w-7"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+        />
+      </svg>
+    </a>
+  </div>
 </section>
