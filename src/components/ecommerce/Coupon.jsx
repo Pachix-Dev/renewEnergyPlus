@@ -16,30 +16,30 @@ export function Coupon({ text1, text2 , language}) {
 
   const AVAILABLE_COUPONS = {
 
-    REPLUSMEXICO700: {
+    REPLUSMEXICO750: {
       id: 99,
-      nameCode: 'REPLUSMEXICO700',
-      price: -700,
+      nameCode: 'REPLUSMEXICO750',
+      price: -750,
     },
     REPLUSASOLMEX:{
       id: 8,
       nameCode: 'REPLUSASOLMEX',
-      price: -700,
+      price: -750,
     },
     REPLUSAMIF:{
       id: 9,
       nameCode: 'REPLUSAMIF',
-      price: -700,
+      price: -750,
     },
     REPLUSANES: {
       id: 10,
       nameCode: 'REPLUSANES',
-      price: -700,
+      price: -750,
     },
     REPLUSMERM:{
       id: 11,
       nameCode: 'REPLUSMERM',
-      price: -700,
+      price: -750,
     },
     REPLUSEXP: {
       id: 12,
@@ -49,22 +49,22 @@ export function Coupon({ text1, text2 , language}) {
     IERUNAM : {
       id: 13,
       nameCode: 'IERUNAM',
-      price: -700,
+      price: -750,
     },
     AMENEER: {
       id: 14,
       nameCode: 'AMENEER',
-      price: -700,
+      price: -750,
     },
     ECOMONDO: {
       id: 15,
       nameCode: 'ECOMONDO',
-      price: -700,
+      price: -750,
     },
     SPEAKER: {
       id: 16,
       nameCode: 'SPEAKER',
-      price: -700,
+      price: -750,
     },
   }
 
