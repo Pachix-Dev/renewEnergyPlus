@@ -14,6 +14,16 @@ export function KeynoteSpeakersCarousel({ language }) {
       focus: "50% 18%",
     },
     {
+      name: " Sandra Barba",
+      roleEs: "Business Development and Policy Lead, LATAM",
+      roleEn: "Business Development and Policy Lead, LATAM",
+      orgEs: "Tesla",
+      orgEn: "Tesla",
+      date: "15 ABR 26",
+      image: "/img/sandra_barba.webp",
+      focus: "50% 20%",
+    },
+    {
       name: "Manuel Herrera",
       roleEs: "Secretario de Desarrollo Energético Sustentable",
       roleEn: "Sustainable Energy Development Secretary",
@@ -93,7 +103,7 @@ export function KeynoteSpeakersCarousel({ language }) {
       image: "/img/jorge_fernandez.webp",
       focus: "50% 20%",
     },
-     {
+    {
       name: "Óscar Hernández ",
       roleEs: "Director General",
       roleEn: "Manager",
