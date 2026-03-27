@@ -225,12 +225,12 @@ const ListDirectory = ({ currentLanguage, listExhibitor }) => {
           htmlFor='default-search'
           className='mb-2 text-sm font-medium text-gray-900 sr-only'
         >
-          Search
+          {currentLanguage === 'en' ? 'Search' : 'Buscar'}
         </label>
         <div className='relative md:mx-20'>
-          <div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+          <div className='absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none'>
             <svg
-              className='w-4 h-4 text-gray-500'
+              className='h-4 w-4 text-gray-500'
               aria-hidden='true'
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
@@ -248,7 +248,7 @@ const ListDirectory = ({ currentLanguage, listExhibitor }) => {
           <input
             type='search'
             id='default-search'
-            className='block w-full rounded-xl border border-gray-200 bg-white p-3.5 ps-10 pe-28 text-sm text-gray-900 shadow-sm focus:ring-0 focus:border-[#bc0100] md:p-4 md:pe-32'
+            className='block w-full rounded-xl border border-gray-200 bg-white p-3.5 ps-12 pe-28 text-sm text-gray-900 shadow-sm focus:ring-0 focus:border-[#bc0100] md:p-4 md:ps-12 md:pe-32'
             placeholder={
               currentLanguage === 'en' ? 'Search exhibitor' : 'Buscar expositor'
             }
