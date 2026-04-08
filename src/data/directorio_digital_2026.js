@@ -2818,7 +2818,31 @@ const data = [
       "codigoVisitante": "",
       "logotipo": "/img/expositores2026/VMV_Solar.webp"
   },
-  // {
+  {
+      "clasificacion": "EXPOSITOR",
+      "nombreComercial": "Ralux Solar",
+      "stand": "k20",
+      "nombreContacto": "Marilyn Lidia Trewartha Chaidez",
+      "Puesto": "Marilyn Lidia Trewartha Chaidez",
+      "telefono": "6681211742",
+      "Correo": "m.trewartha@raluxsolar.com",
+      "paginaWeb": "www.raluxsolar.com",
+      "direccion": "Av. Insurgentes Sur 237, Tizapán San Ángel, Guadalupe Inn, Álvaro Obregón.",
+      "cp": "1090",
+      "Ciudad": "Ciudad de México",
+      "Estado": "CDMX",
+      "País": "México",
+      "descripcion_es": "RALUX SOLAR es un fabricante italiano de estructuras de montaje para sistemas fotovoltaicos con presencia en Italia, México, Colombia, Panamá, Perú y Ecuador, consolidado gracias a los muchos años de experiencia de sus ingenieros. Ralux Solar ofrece soluciones técnicas de vanguardia para instalaciones residenciales, industriales y de servicios públicos.Gracias a su personal altamente especializado, Ralux Solar ha alcanzado un nivel de excelencia que le ha permitido convertirse en socio de empresas multinacionales para las cuales la garantía del producto y el servicio pre y post venta son requisitos fundamentales.",
+      "descripcion_en": "RALUX SOLAR is an Italian manufacturer of mounting structures for photovoltaic systems with a presence in Italy, Mexico, Colombia, Panama, Peru and Ecuador, consolidated through many years of experience from its engineers. Ralux Solar offers cutting-edge technical solutions for residential, industrial, and utility-scale installations.",
+      "categoria": "Estructuras de montaje para sistemas fotovoltaicos.",
+      "contacto": "",
+      "Instagram": "https://www.instagram.com/vanguardia_ind/",
+      "Facebook": "https://www.facebook.com/vanguardiaindustrial",
+      "LinkedIn": "https://www.linkedin.com/company/vanguardiaindustrial/",
+      "codigoVisitante": "",
+      "logotipo": "/img/expositores2026/ralux.webp"
+  },
+   // {
   //     "clasificacion": "Media Partner",
   //     "nombreComercial": "PV MAGAZINE",
   //     "stand": "",
