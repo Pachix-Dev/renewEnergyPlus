@@ -84,45 +84,15 @@ const toolkit_en = [
 ];
 
 const sponsors = [
-  // {
-  //   src: "/img/sponsors/Huawei.webp",
-  //   alt: "Huawei",
-  //   width: 250,
-  // },
   {
     src: "/img/sponsors/trina-solar.webp",
     alt: "Trina Solar",
     width: 200,
   },
-  {
-    src: "/img/quartux_nuevo.png",
-    alt: "quartux",
-    width: 250,
-  },
-  {
-    src: "/img/sponsors/S-5logo.webp",
-    alt: "S5",
-    width: 80,
-  },
-  {
-    src: "/img/axen_energy.png",
-    alt: "Axen Energy",
-    width: 80,
-  },
-  {
-    src: "/img/nosmueveelsolnuevo.png",
-    alt: "Nos Mueve el Sol",
-    width: 150,
-  },
-  {
+   {
     src: "/img/expo/carousel5/exel_solar.webp",
     alt: "Exel Solar",
     width: 200,
-  },
-  {
-    src: "/img/sponsors/apSystems.webp",
-    alt: "quartux",
-    width: 210,
   },
   {
     src: "/img/quartux_nuevo.png",
@@ -143,11 +113,6 @@ const sponsors = [
     src: "/img/nosmueveelsolnuevo.png",
     alt: "Nos Mueve el Sol",
     width: 150,
-  },
-  {
-    src: "/img/expo/carousel5/exel_solar.webp",
-    alt: "Exel Solar",
-    width: 200,
   },
   {
     src: "/img/sponsors/apSystems.webp",
@@ -159,6 +124,31 @@ const sponsors = [
     alt: "Hyper",
     width: 200,
   }
+  // {
+  //   src: "/img/quartux_nuevo.png",
+  //   alt: "quartux",
+  //   width: 250,
+  // },
+  // {
+  //   src: "/img/sponsors/S-5logo.webp",
+  //   alt: "S5",
+  //   width: 80,
+  // },
+  // {
+  //   src: "/img/axen_energy.png",
+  //   alt: "Axen Energy",
+  //   width: 80,
+  // },
+  // {
+  //   src: "/img/nosmueveelsolnuevo.png",
+  //   alt: "Nos Mueve el Sol",
+  //   width: 150,
+  // },
+  // {
+  //   src: "/img/expo/carousel5/exel_solar.webp",
+  //   alt: "Exel Solar",
+  //   width: 200,
+  // },
 ];
 
 const energy_night = [

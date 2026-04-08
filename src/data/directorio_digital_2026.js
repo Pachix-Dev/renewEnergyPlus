@@ -1222,7 +1222,7 @@ const data = [
     Facebook: "World Technology Supply",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/wts.webp",
   },
   {
     clasificacion: "Expositor",
