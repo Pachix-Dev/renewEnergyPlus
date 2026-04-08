@@ -735,6 +735,13 @@ const exhibitors2026 = [
     alt: "Jolywood",
     width: 200,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/honeywell.webp",
+    alt: "Honeywell",
+    width: 400,
+    height: 200,
   }
 ];
 
