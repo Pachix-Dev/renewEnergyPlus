@@ -2479,13 +2479,13 @@ const data = [
     descripcion_en:
       "Powerchina, a Fortune 500 global company, is leader in the fields of renewable energies, construction of energy infrastructure, among others. We put at your disposal a range of products and services of the commercial and industrial sectors in Mexico. Our gorup has decades of experience in different applications and technologies in the energy sector.",
     categoria:
-      "Para cada uno de los siguientes segmentos, PowerChina es capaz de ofrecer servicios de proyectos llave en mano (EPC) y de operación y mantenimiento (O&M):\n\nSistemas aislados y microredes\nCarports y estaciones EV\nSFV+BESS en GD/Autoconsumo\nInterconexión en diferentes modalidades\nAplicaciones especiales: agrivoltaico,fotovoltaico flotante",
+      "Para cada uno de los siguientes segmentos, PowerChina es capaz de ofrecer servicios de proyectos llave en mano (EPC) y de operación y mantenimiento (O&M): Sistemas aislados y microredes Carports y estaciones EV SFV+BESS en GD/Autoconsumo\nInterconexión en diferentes modalidades Aplicaciones especiales: agrivoltaico,fotovoltaico flotante",
     contacto: "",
     Instagram: "",
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/powerchina.webp",
   },
   {
     clasificacion: "Expositor",
@@ -2865,6 +2865,30 @@ const data = [
       "LinkedIn": "",
       "codigoVisitante": "",
       "logotipo": "/img/expositores2026/honeywell.webp"
+  },
+  {
+      "clasificacion": "EXPOSITOR",
+      "nombreComercial": "Livoltek",
+      "stand": "J01",
+      "nombreContacto": "Lizbeth Monroy",
+      "Puesto": "Sales Manager",
+      "telefono": "52 55 3519 8993",
+      "Correo": "ventas@livoltek.com / lizbeth@hxgroup.com",
+      "paginaWeb": "https://mx.livoltek.com/",
+      "direccion": "Camino a Quintanares Km 1+120, Localidad Quintanares",
+      "cp": "76700",
+      "Ciudad": " Pedro Escobedo",
+      "Estado": "Querétaro",
+      "País": "México",
+      "descripcion_es": "LIVOLTEK, una marca estratégica de Hexing Group, es líder en soluciones de energía sostenible, respaldada por una red global con presencia en más de 90 países y 17 plantas de producción.",
+      "descripcion_en": "LIVOLTEK, a strategic brand of Hexing Group, is a leader in sustainable energy solutions, supported by a global network with presence in 90+ countries and 17 manufacturing facilities.",
+      "categoria": "Soluciones de energía solar, almacenamiento de energía y carga para vehículos eléctricos.",
+      "contacto": "",
+      "Instagram": "https://www.instagram.com/livoltek.mx/",
+      "Facebook": "https://www.facebook.com/livoltekmx",
+      "LinkedIn": "https://www.linkedin.com/company/livoltek-mexico/",
+      "codigoVisitante": "",
+      "logotipo": "/img/expositores2026/livoltek.webp"
   }
   // {
   //     "clasificacion": "",
