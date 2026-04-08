@@ -742,6 +742,27 @@ const exhibitors2026 = [
     alt: "Honeywell",
     width: 400,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/livoltek.webp",
+    alt: "Livoltek",
+    width: 200,
+    height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/powerchina.webp",
+    alt: "PowerChina",
+    width: 200,
+    height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/solarever.webp",
+    alt: "Solarever",
+    width: 200,
+    height: 200,
   }
 ];
 
