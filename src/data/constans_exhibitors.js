@@ -763,6 +763,13 @@ const exhibitors2026 = [
     alt: "Solarever",
     width: 200,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/ralux.webp",
+    alt: "Ralux",
+    width: 200,
+    height: 200,
   }
 ];
 
