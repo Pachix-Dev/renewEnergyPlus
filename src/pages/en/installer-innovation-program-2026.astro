@@ -280,14 +280,53 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           }
         </h2>
       </div>
-      <DownloadProgramButton
-        language={i18next.language}
-        hrefEs="/doc/Installer & Innovation Area Program_RE+mexico_2026_es.pdf"
-        hrefEn="/doc/Installer & Innovation Area Program_RE+mexico_2026_en.pdf"
-        labelEs="DESCARGA PROGRAMA"
-        labelEn="DOWNLOAD PROGRAM"
-        wrapperClass="py-8 px-4"
-      />
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 grid grid-cols-1 items-end gap-4 lg:grid-cols-[max-content,minmax(0,1fr)] lg:gap-6">
+          <DownloadProgramButton
+            language={i18next.language}
+            hrefEs="/doc/Installer & Innovation Area Program_RE+mexico_2026_es.pdf"
+            hrefEn="/doc/Installer & Innovation Area Program_RE+mexico_2026_en.pdf"
+            labelEs="DESCARGA PROGRAMA"
+            labelEn="DOWNLOAD PROGRAM"
+            wrapperClass="w-full px-0 py-2 lg:w-auto lg:py-0"
+          />
+          <div
+            class="w-full rounded-2xl border border-amber-300/70 bg-amber-400/20 px-4 py-4 shadow-sm sm:px-6 sm:py-5"
+          >
+            <div
+              class="mx-auto flex max-w-3xl flex-col items-center justify-center gap-3 text-center text-white sm:flex-row sm:gap-4 sm:text-left"
+            >
+              <div
+                class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-400 text-white shrink-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              </div>
+              <p
+                class="text-sm sm:text-base font-semibold tracking-wide text-center sm:text-left leading-relaxed"
+              >
+                {
+                  i18next.language === "es"
+                    ? "Todas las ponencias se realizarán en español."
+                    : "All presentations will be held in Spanish."
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="max-w-7xl mx-auto">
         <InstallerInnovationProgram
           language={i18next.language}
