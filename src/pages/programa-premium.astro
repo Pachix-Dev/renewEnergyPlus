@@ -25,7 +25,9 @@ const language = i18next.language || "es";
   title="RE+ MEXICO | PROGRAMA PREMIUM"
   description="Foro especializado en donde líderes del sector energético analizan las tendencias, retos y oportunidades que están definiendo el futuro de la energía en México y el mundo."
 >
-  <section class="relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B]">
+  <section
+    class="relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B]"
+  >
     <!-- Programa Premium Hero -->
     <ProgramaPremiumHero />
 
@@ -33,13 +35,53 @@ const language = i18next.language || "es";
     <KeynoteSpeakersCarousel language={language} client:load />
 
     <!-- Boton para descargar Programa Premium -->
-    <DownloadProgramButton
-      language={language}
-      hrefEs="/doc/Programa_Conferencias_Premium_RE+Mexico_2026.pdf"
-      hrefEn="/doc/Premium_Conferences_Program_RE+Mexico_2026.pdf"
-      labelEs="DESCARGA PROGRAMA"
-      labelEn="DOWNLOAD PROGRAM"
-    />
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-8 grid grid-cols-1 items-end gap-4 lg:grid-cols-[max-content,minmax(0,1fr)] lg:gap-6">
+        <DownloadProgramButton
+          language={language}
+          hrefEs="/doc/Programa_Conferencias_Premium_RE+Mexico_2026.pdf"
+          hrefEn="/doc/Premium_Conferences_Program_RE+Mexico_2026.pdf"
+          labelEs="DESCARGA PROGRAMA"
+          labelEn="DOWNLOAD PROGRAM"
+          wrapperClass="w-full px-0 py-2 lg:w-auto lg:py-0"
+        />
+        <div
+          class="w-full rounded-2xl border border-amber-300/70 bg-amber-400/20 px-4 py-4 shadow-sm sm:px-6 sm:py-5"
+        >
+          <div
+            class="mx-auto flex max-w-3xl flex-col items-center justify-center gap-3 text-center text-white sm:flex-row sm:gap-4 sm:text-left"
+          >
+            <div
+              class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-400 text-white shrink-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <p
+              class="text-sm sm:text-base font-semibold tracking-wide text-center sm:text-left leading-relaxed"
+            >
+              {
+                i18next.language === "es"
+                  ? "Todas las ponencias se realizarán en español."
+                  : "All presentations will be held in Spanish."
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Render dinámico en cliente para datos vivos -->
     <ProgramaEscenarioClient
@@ -52,15 +94,6 @@ const language = i18next.language || "es";
 
     <!-- Sección de precios -->
     <ProductosPremiumPreview />
-
-    <!-- Sunset Cocktail Section -->
-    <!-- <div id="sunsetCocktail">
-    <SunsetCocktail />
-  </div>
-
-  <div id="vipArea">
-    <VipArea />
-  </div> -->
   </section>
 </Layout>
 <style>
