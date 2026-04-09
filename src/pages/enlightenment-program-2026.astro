@@ -2,9 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import { EnlightenmentProgram } from "../components/programa2026/EnlightenmentProgram.jsx";
 import i18next, { t, changeLanguage } from "i18next";
+import DownloadProgramButton from "../components/shared/DownloadProgramButton.astro";
 
 changeLanguage("es");
 
+const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+const language = i18next.language || "es";
 const brands = [
     { src: "/img/sponsors/Huawei.webp", width: 200, alt: "Huawei", link: "https://www.huawei.com/" },
     { src: "/img/expo/carousel6/battery-depot.webp", width: 200, alt: "Battery Depot", link: "https://batterydepot.com.mx/" },
@@ -109,6 +112,16 @@ const brands = [
             {i18next.language === "es" ? "Programa de Conferencias" : "Conference Program"}
           </h2>
         </div>
+
+        <DownloadProgramButton
+          language={language}
+          hrefEs="/doc/Enlightenment Area Program_RE+mexico_2026_es.pdf"
+          hrefEn="/doc/Enlightenment Area Program_RE+mexico_2026_en.pdf"
+          labelEs="DESCARGA PROGRAMA"
+          labelEn="DESCARGA PROGRAMA"
+          wrapperClass="py-8 px-4"
+        />
+
         <div data-aos="fade-up" data-aos-delay="100">
           <EnlightenmentProgram language={i18next.language} client:only="react" />
         </div>

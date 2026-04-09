@@ -2,6 +2,7 @@
 import { InstallerInnovationProgram } from "../../components/programa2026/InstallerInnovationProgram.jsx";
 import Layout from "../../layouts/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
+import DownloadProgramButton from "../../components/shared/DownloadProgramButton.astro";
 
 changeLanguage("en");
 
@@ -279,6 +280,14 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           }
         </h2>
       </div>
+      <DownloadProgramButton
+        language={i18next.language}
+        hrefEs="/doc/Installer & Innovation Area Program_RE+mexico_2026_es.pdf"
+        hrefEn="/doc/Installer & Innovation Area Program_RE+mexico_2026_en.pdf"
+        labelEs="DESCARGA PROGRAMA"
+        labelEn="DOWNLOAD PROGRAM"
+        wrapperClass="py-8 px-4"
+      />
       <div class="max-w-7xl mx-auto">
         <InstallerInnovationProgram
           language={i18next.language}
