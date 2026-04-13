@@ -11,65 +11,103 @@ const registerTranslations = t("register", { returnObjects: true });
 const currentLanguage = i18next.language;
 ---
 
-<LayoutRegister title='RE+ MEXICO | Registro'>
-  <main class='py-5 w-full max-w-screen-xl container mx-auto px-4'>
-    <section class='mx-auto relative'>
+<LayoutRegister title="RE+ MEXICO | Registro">
+  <main class="py-5 w-full max-w-screen-xl container mx-auto px-4">
+    <section class="mx-auto relative">
       <div
-        class='bg-gradient-to-r from-[#766EA6] to-[#565078] p-7 text-white relative rounded-2xl'
+        class="bg-gradient-to-r from-[#766EA6] to-[#565078] p-7 text-white relative rounded-2xl"
       >
         {/* Círculos decorativos de fondo */}
-        <div class='absolute inset-0 overflow-hidden'>
+        <div class="absolute inset-0 overflow-hidden">
           <div
-            class='absolute top-10 right-10 w-32 h-32 bg-white bg-opacity-10 rounded-full'
+            class="absolute top-10 right-10 w-32 h-32 bg-white bg-opacity-10 rounded-full"
           >
           </div>
           <div
-            class='absolute bottom-20 left-10 w-24 h-24 bg-white bg-opacity-5 rounded-full'
+            class="absolute bottom-20 left-10 w-24 h-24 bg-white bg-opacity-5 rounded-full"
           >
           </div>
           <div
-            class='absolute top-1/2 right-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full'
+            class="absolute top-1/2 right-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full"
           >
           </div>
         </div>
 
         {/* Contenido Principal */}
         <div
-          class='relative z-10 text-left flex justify-between items-center gap-5'
+          class="relative z-10 text-left flex justify-between items-center gap-5"
         >
           <img
-            src='/img/replusR.webp'
-            alt='RE+ Mexico Logo'
-            class='w-32 mb-8'
+            src="/img/replusR.webp"
+            alt="RE+ Mexico Logo"
+            class="w-32 mb-8"
           />
-          <div class='text-right'>
+          <div class="text-right">
             <p
-              class='font-[Tungsten-Medium] text-white text-3xl lg:text-5xl uppercase font-bold'
+              class="font-[Tungsten-Medium] text-white text-3xl lg:text-5xl uppercase font-bold"
             >
-              {t('home.slogan')}
+              {t("home.slogan")}
             </p>
             <p
-              class='mt-5 font-[Tungsten-Medium] text-white text-3xl lg:text-5xl'
+              class="mt-5 font-[Tungsten-Medium] text-white text-3xl lg:text-5xl"
             >
-              {t('home.event-date')}
-              <span class=''>| 2026</span>
+              {t("home.event-date")}
+              <span class="">| 2026</span>
             </p>
           </div>
         </div>
       </div>
-      <div class='bg-[#FFFFFF]'>
+      <div class="bg-[#FFFFFF]">
         <MarqueeSponsors partners={sponsors} isLeftToRight />
       </div>
-
-      <h1 class='font-extrabold text-5xl'>
+      <!-- <h1 class='font-extrabold text-5xl'>
         {t('register.title')}
       </h1>
-
       <RegisterForm
         translates={registerTranslations}
         currentLanguage={currentLanguage}
         client:only='react'
-      />
+      /> -->
+      <div
+        class="relative w-full flex flex-col items-center justify-center gap-3 px-6 py-5 mt-10 rounded-2xl bg-gradient-to-br from-red-400/20 via-red-500/15 to-orange-red/10 border border-red-400/40 shadow-[0_8px_32px_0_rgba(251,191,36,0.15)] text-white overflow-hidden backdrop-blur-sm"
+      >
+        <!-- shimmer -->
+        <span
+          class="absolute inset-0 rounded-2xl pointer-events-none hero-register-shimmer"
+        ></span>
+        <!-- badge -->
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-400/20 border border-red-400/50 text-red-600 text-[20px] font-normal uppercase tracking-widest z-10"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+            ></path>
+          </svg>
+          {i18next.language === "es" ? "Importante" : "Important"}
+        </span>
+        <!-- mensaje -->
+        <div class="flex items-center gap-3 z-10">
+          <p
+            class="text-sm sm:text-2xl font-extrabold text-red-600 leading-snug uppercase text-center"
+          >
+            {
+              i18next.language === "es"
+                ? "Adquiere tu acceso gratuito en la zona de registro durante el evento"
+                : "Get your free access at the registration area during the event"
+            }
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 </LayoutRegister>
