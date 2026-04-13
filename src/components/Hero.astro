@@ -112,7 +112,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
       
       {/* Botón de registro gratuito destacado */}
       <div class="group relative" data-aos="zoom-in" data-aos-duration="1200">
-        <a
+        {/* <a
           href={`${base}/registro`}
           class="relative w-full flex items-center justify-center gap-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 border-4 border-yellow-400 shadow-[0_8px_32px_0_rgba(251,191,36,0.25)] text-white text-2xl lg:text-3xl uppercase font-extrabold transition-all duration-300 hover:bg-orange-600 hover:text-white hover:scale-105 focus:ring-4 focus:ring-yellow-200 focus:outline-none group overflow-hidden"
         >
@@ -137,7 +137,26 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
             class="font-bold tracking-widest drop-shadow-lg z-10 text-sm sm:text-xl"
             >{t("home.free_register")}</span
           >
-        </a>
+        </a> */}
+        <div class="relative w-full flex flex-col items-center justify-center gap-3 px-6 py-5 rounded-2xl bg-gradient-to-br from-yellow-400/20 via-orange-500/15 to-orange-600/10 border border-yellow-400/40 shadow-[0_8px_32px_0_rgba(251,191,36,0.15)] text-white overflow-hidden backdrop-blur-sm">
+          <!-- shimmer -->
+          <span class="absolute inset-0 rounded-2xl pointer-events-none hero-register-shimmer"></span>
+          <!-- badge -->
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/50 text-yellow-300 text-[20px] font-normal uppercase tracking-widest z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+            </svg>
+            {i18next.language === "es" ? "Importante" : "Important"}
+          </span>
+          <!-- mensaje -->
+          <div class="flex items-center gap-3 z-10">
+            <p class="text-sm sm:text-2xl font-extrabold text-white/90 leading-snug uppercase text-center">
+              {i18next.language === "es"
+                ? "Adquiere tu acceso gratuito en la zona de registro durante el evento"
+                : "Get your free access at the registration area during the event"}
+            </p>
+          </div>
+        </div>
       </div>
       {/* Botones: Programa Premium / Experiencia Premium / Energy Night */}
       <div class="flex flex-col gap-3 w-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -405,4 +424,14 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
     transition: transform 0.25s, color 0.2s;
   }
   .hero-btn:hover .hero-btn-arrow { transform: translateX(4px); color: #fff; }
-</style>
+
+  /* Register info card shimmer */
+  .hero-register-shimmer {
+    background: linear-gradient(120deg, transparent 30%, rgba(251,191,36,0.08), transparent 70%);
+    background-size: 200% 100%;
+    animation: register-shimmer 3s ease-in-out infinite;
+  }
+  @keyframes register-shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }</style>
