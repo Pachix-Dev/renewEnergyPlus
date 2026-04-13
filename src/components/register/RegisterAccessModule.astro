@@ -1,0 +1,54 @@
+---
+interface Props {
+  base: string;
+  language: string;
+  firstTimeLabel: string;
+}
+
+const { base, language, firstTimeLabel } = Astro.props;
+
+const accessMessage =
+  language === "es"
+    ? "Adquiere tu acceso gratuito en la zona de registro durante el evento"
+    : "Get your free access at the registration area during the event";
+
+const dayOne =
+  language === "es"
+    ? "Martes 14 y Miercoles 15 de abril"
+    : "Tuesday April 14 and Wednesday April 15";
+const dayTwo = language === "es" ? "Jueves 16 de abril" : "Thursday April 16";
+const importantLabel = language === "es" ? "Importante" : "Important";
+---
+
+<section class="mt-8 rounded-3xl overflow-hidden shadow-[0_20px_45px_rgba(56,45,95,0.22)] border border-[#5f5888]/30 bg-[radial-gradient(circle_at_0%_0%,#8f84d5_0%,#6C6598_46%,#403a63_100%)]">
+  <div class="relative p-4 md:p-6">
+    <div class="absolute -top-4 right-0 w-36 h-36 bg-white/10 blur-2xl rounded-full"></div>
+    <div class="absolute -bottom-8 -left-8 w-44 h-44 bg-[#d7ccff]/25 blur-3xl rounded-full"></div>
+
+    <div class="relative z-10 rounded-2xl border border-white/75 bg-white/95 p-4 md:p-5">
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="inline-flex items-center gap-2 rounded-full bg-[#f2eeff] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#4d4678] border border-[#d7ccff]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            </svg>
+            {importantLabel}
+          </span>
+        </div>
+
+        <p class="text-[#332d58] text-base md:text-lg font-black leading-tight">{accessMessage}</p>
+
+        <div class="grid gap-2 sm:grid-cols-2">
+          <div class="rounded-xl bg-[#4f4879] text-white px-3 py-2.5 border border-[#6f68a3]">
+            <p class="text-[11px] md:text-xs font-bold uppercase tracking-wide text-white/80 leading-tight">{dayOne}</p>
+            <p class="text-base md:text-lg font-black leading-tight">11:00 - 18:00</p>
+          </div>
+          <div class="rounded-xl bg-[#4f4879] text-white px-3 py-2.5 border border-[#6f68a3]">
+            <p class="text-[11px] md:text-xs font-bold uppercase tracking-wide text-white/80 leading-tight">{dayTwo}</p>
+            <p class="text-base md:text-lg font-black leading-tight">11:00 - 17:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
