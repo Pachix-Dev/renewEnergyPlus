@@ -2889,7 +2889,31 @@ const data = [
       "LinkedIn": "https://www.linkedin.com/company/livoltek-mexico/",
       "codigoVisitante": "",
       "logotipo": "/img/expositores2026/livoltek.webp"
-  }
+  },
+  {
+      "clasificacion": "EXPOSITOR",
+      "nombreComercial": "GRUPO SOLAREVER S.A. DE C.V.",
+      "stand": "I10",
+      "nombreContacto": "Francisco Javier Gómez Sánchez",
+      "Puesto": "Gerente de Mercadotecnia",
+      "telefono": "52 1 55 4454 8224",
+      "Correo": "francisco.gomez@solarever.com.mx",
+      "paginaWeb": "solarver.com.mx",
+      "direccion": "Av. Ejército Nacional Mexicano 436, Polanco, Polanco V Secc, Tercer piso.",
+      "cp": "11560",
+      "Ciudad": "Miguel Hidalgo",
+      "Estado": "CDMX",
+      "País": "MÉXICO",
+      "descripcion_es": "Solarever es una empresa de clase mundial líder en desarrollo, fabricación y distribución de paneles solares, desde proyectos residenciales hasta granjas solares. Comercializamos en México, Canadá, Estados Unidos y América Latina. Contamos con centros de investigación y desarrollo tecnológico en China y Estados Unidos. Ofrecemos capacitación contínua.",
+      "descripcion_en": "Solarever is a world-class company, a leader in the development, manufacturing, and distribution of solar panels, from residential projects to solar farms. We market our products in Mexico, Canada, the United States, and Latin America. We have research and development centers in China and the United States. We offer ongoing training.",
+      "categoria": "Energías",
+      "contacto": "Paneles solares, inversores, microinversores, sistemas de almacenamiento, cargadores ev, estructuras, bombas de agua solar, cajas de protección y accesorios.",
+      "Instagram": "https://www.instagram.com/fortresspowerlatam/",
+      "Facebook": "https://www.facebook.com/fortresspowerlata",
+      "LinkedIn": "https://www.linkedin.com/company/fortresspower",
+      "codigoVisitante": "",
+      "logotipo": "/img/expositores2026/solarever.webp"
+  },
   // {
   //     "clasificacion": "",
   //     "nombreComercial": "",
