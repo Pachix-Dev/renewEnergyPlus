@@ -777,6 +777,13 @@ const exhibitors2026 = [
     alt: "Novotegra",
     width: 200,
     height: 200
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/master_energy.webp",
+    alt: "Master Energy",
+    width: 400,
+    height: 200,
   }
 ];
 

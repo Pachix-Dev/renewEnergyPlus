@@ -2457,7 +2457,7 @@ const data = [
     Facebook: "Master Energy",
     LinkedIn: "https://masterenergy.fourmaster.mx/",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/master_energy.webp",
   },
   {
     clasificacion: "Expositor",
