@@ -791,6 +791,13 @@ const exhibitors2026 = [
     alt: "Sungro",
     width: 200,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/ejot.webp",
+    alt: "Ejot",
+    width: 200,
+    height: 200,
   }
 ];
 
