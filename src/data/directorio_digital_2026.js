@@ -958,7 +958,7 @@ const data = [
     Facebook: "https://www.facebook.com/solarcleano",
     LinkedIn: "https://www.linkedin.com/company/solarcleano",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/solar_clean.webp",
   },
   {
     clasificacion: "Expositor",
@@ -1326,7 +1326,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/sigenergy.webp",
   },
   {
     clasificacion: "Expositor",

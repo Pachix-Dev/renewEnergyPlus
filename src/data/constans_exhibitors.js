@@ -770,6 +770,13 @@ const exhibitors2026 = [
     alt: "Ralux",
     width: 200,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/sigenergy.webp",
+    alt: "Novotegra",
+    width: 200,
+    height: 200
   }
 ];
 
