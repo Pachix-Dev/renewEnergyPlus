@@ -770,7 +770,7 @@ const data = [
     LinkedIn:
       "https://www.linkedin.com/company/nosmueveelsol/?viewAsMember=true",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/nos.webp",
   },
   {
     clasificacion: "Expositor",
