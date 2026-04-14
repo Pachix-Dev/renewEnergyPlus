@@ -2636,7 +2636,7 @@ const data = [
     Facebook: "",
     LinkedIn: "",
     codigoVisitante: "",
-    logotipo: "/img/expositores2026/",
+    logotipo: "/img/expositores2026/sungro.webp",
   },
   // {
   //   clasificacion: "Expositor",

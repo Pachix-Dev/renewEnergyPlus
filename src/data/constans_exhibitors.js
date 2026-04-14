@@ -784,6 +784,13 @@ const exhibitors2026 = [
     alt: "Master Energy",
     width: 400,
     height: 200,
+  },
+  {
+    link: "",
+    src: "/img/expositores2026/sungro.webp",
+    alt: "Sungro",
+    width: 200,
+    height: 200,
   }
 ];
 
