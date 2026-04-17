@@ -24,7 +24,7 @@ const currentLanguage = i18next.language;
         <p class="text-center lg:text-left text-base sm:text-lg md:text-2xl lg:text-3xl font-anton">{currentLanguage === "es" ? "LA FERIA LÍDER EN ENERGÍAS RENOVABLES" : "THE LEADING FAIR IN RENEWABLE ENERGIES"}</p>
         <img src="/img/imagen2027/slogan.webp" alt="Slogan" class="w-full max-w-[320px] sm:max-w-[460px] md:max-w-[620px] lg:max-w-[860px] h-auto" />
         <div class="w-full flex justify-center">
-          <img src="/img/imagen2027/date_event.webp" alt="Date Event" class="w-full max-w-[220px] sm:max-w-[320px] md:max-w-[420px] lg:max-w-[600px] h-auto mx-auto" />
+          <img src={currentLanguage === "es" ? "/img/imagen2027/date_event_replus_en.webp" : "/img/imagen2027/date_event_replus_es.webp"} alt="Date Event" class="w-[350px] sm:w-[600px] h-auto mx-auto" />
         </div>
     </div>
   </div>
