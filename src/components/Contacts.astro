@@ -1,107 +1,81 @@
 ---
 import { t } from 'i18next'
+
+const agents = [
+  {
+    name: 'Samuel Ramírez',
+    region: 'México, Centro & Sudamérica',
+    email: 'samuel.ramirez@igeco.mx',
+    photo: '/img/samuel-ramirez.webp',
+  },
+  {
+    name: 'Rayman Wu',
+    region: 'China',
+    email: 'info@snec.org.cn',
+    photo: '/img/raymanWu.webp',
+  },
+  {
+    name: 'Pamela Velazco',
+    region: 'USA',
+    email: 'pvelazco@re-plus.com',
+    photo: '/img/Pamela-velazquez.webp',
+  },
+]
 ---
 
-<div class='container mx-auto'>
-  <p class='text-white text-4xl text-center font-bold p-10 uppercase'>
-    {t('footer.contact')}
-  </p>
-  <div
-    class='mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-20 justify-around text-xl'
-  >
-    <div
-      class='text-center text-white bg-[#978FD0] rounded-lg px-4 pb-5 relative'
-    >
-      <img
-        src='/img/samuel-ramirez.webp'
-        alt='Samuel Ramírez'
-        class='relative -top-10 rounded-full w-28 mx-auto'
-      />
-      <p class='text-xl font-bold'>Samuel Ramírez</p>
-      <span class='font-bold'>México, Centro & Sudamérica </span>
+<div class='container mx-auto px-6 md:px-12'>
 
-      <a
-        href='mailto:samuel.ramirez@igeco.mx'
-        class='flex justify-center gap-4'
-      >
-        <p class='underline'>samuel.ramirez@igeco.mx</p>
-        <div class='p-1 rounded-full bg-white'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='white'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='black'
-            width='20'
-            ><path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
-            ></path></svg
-          >
-        </div>
-      </a>
-    </div>
-
-    <div
-      class='text-center text-white bg-[#978FD0] rounded-lg px-4 pb-5 relative'
-    >
-      <img
-        src='/img/raymanWu.webp'
-        alt='Rayman Wu'
-        class='relative -top-10 rounded-full w-28 mx-auto'
-      />
-
-      <p class='text-xl font-bold'>Rayman Wu</p>
-      <span class='font-bold'>China </span>
-      <a href='mailto:info@snec.org.cn' class='flex justify-center gap-4'>
-        <p class='underline'>info@snec.org.cn</p>
-        <div class='p-1 rounded-full bg-white'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='white'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='black'
-            width='20'
-            ><path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
-            ></path></svg
-          >
-        </div>
-      </a>
-    </div>
-
-    <div
-      class='text-center text-white bg-[#978FD0] rounded-lg px-4 pb-5 relative'
-    >
-      <img
-        src='/img/Pamela-velazquez.webp'
-        alt='Pamela Velazco'
-        class='relative -top-10 rounded-full w-28 mx-auto'
-      />
-      <p class='text-xl font-bold'>Pamela Velazco</p>
-      <span class='font-bold'>USA </span>
-      <a href='mailto: pvelazco@re-plus.com' class='flex justify-center gap-4'>
-        <p class='underline'>pvelazco@re-plus.com</p>
-        <div class='p-1 rounded-full bg-white'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='white'
-            viewBox='0 0 24 24'
-            stroke-width='1.5'
-            stroke='black'
-            width='20'
-            ><path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
-            ></path></svg
-          >
-        </div>
-      </a>
-    </div>
+  <!-- Section heading -->
+  <div class='text-center mb-4'>
+    <h2 class='text-white text-3xl md:text-4xl font-bold uppercase tracking-wide'>
+      {t('footer.contact')}
+    </h2>
   </div>
+
+  <!-- Agent cards -->
+  <div class='mt-16 grid sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8'>
+    {agents.map((agent) => (
+      <div class='group relative bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl pt-16 pb-7 px-6 text-center hover:bg-white/15 hover:border-white/30 transition-all duration-300'>
+
+        <!-- Avatar -->
+        <div class='absolute -top-10 left-1/2 -translate-x-1/2'>
+          <div class='w-20 h-20 rounded-full ring-4 ring-white/20 group-hover:ring-white/40 transition-all duration-300 overflow-hidden bg-[#978FD0]'>
+            <img
+              src={agent.photo}
+              alt={agent.name}
+              class='w-full h-full object-cover'
+            />
+          </div>
+        </div>
+
+        <!-- Name -->
+        <p class='text-white font-bold text-lg leading-tight'>{agent.name}</p>
+
+        <!-- Region badge -->
+        <span class='inline-block mt-2 mb-5 px-3 py-0.5 bg-white/15 rounded-full text-white/80 text-xs font-medium tracking-wide'>
+          {agent.region}
+        </span>
+
+        <!-- Email button -->
+        <a
+          href={`mailto:${agent.email}`}
+          class='flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-white/10 border border-white/20 text-white text-sm hover:bg-white hover:text-[#5a5390] transition-all duration-200 group/btn'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='1.8'
+            class='w-4 h-4 shrink-0'
+          >
+            <path stroke-linecap='round' stroke-linejoin='round' d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75' />
+          </svg>
+          <span class='truncate'>{agent.email}</span>
+        </a>
+
+      </div>
+    ))}
+  </div>
+
 </div>
