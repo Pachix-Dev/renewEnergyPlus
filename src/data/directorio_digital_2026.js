@@ -2367,7 +2367,7 @@ const data = [
     Ciudad: "Suqian",
     Estado: "Jiangsu",
     País: "CHINA",
-    descripcion_es: "",
+    descripcion_es: "Fundada en 2006, ZNSHINE SOLAR es una de las 500 principales empresas de nuevas energías del mundo. Comprometida con el lema «Hacer que la energía verde sea más eficiente», la empresa se ha convertido en una empresa de alta tecnología que integra I+D, fabricación y venta de módulos solares fotovoltaicos, al tiempo que ofrece servicios de construcción de centrales eléctricas, soluciones integradas de energía fotovoltaica, hidrógeno y almacenamiento, y sistemas BIPV/BAPV.Con múltiples centros de producción e I+D en el extranjero, ZNSHINE SOLAR opera bajo un modelo «nacional + internacional». Como pionera en la industria fotovoltaica china, la empresa se ha centrado constantemente en la innovación en energía",
     descripcion_en:
       "Founded in 2006, ZNSHINE SOLAR is one of the world’s Top 500 New Energy Enterprises. Committed to “Making Green Power More Efficient,” the company has grown into a high-tech enterprise integrating R&D, manufacturing, and sales of solar PV modules, while also providing power plant construction, integrated PV–hydrogen–storage solutions, and BIPV/BAPV systems.\nWith multiple overseas production and R&D bases, ZNSHINE SOLAR operates under a “domestic + overseas” model. As an early pioneer in China’s photovoltaic industry, the company has consistently focused on green energy innovation, building a strong foundation for diversified growth.",
     categoria: "",
