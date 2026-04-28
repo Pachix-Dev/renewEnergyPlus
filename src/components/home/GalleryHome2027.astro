@@ -1,0 +1,192 @@
+---
+import i18next, { t } from "i18next";
+const currentLanguage = i18next.language;
+
+const lang = i18next.language;
+const base = lang === "es" ? "" : `/${lang}`;
+---
+
+<div class="sm:px-4 my-4 md:my-20">
+  <h2
+    class="text-xl md:text-3xl mb-2 sm:mb-8 text-center uppercase text-[#0d0652] font-montserrat font-extrabold"
+  >
+    {t("menu.submenu_5.option_1")} RE+ MEXICO 2026
+  </h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4 gallery-column">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC06573.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07427.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07713.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="grid gap-4 gallery-column">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07167.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07352.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07299.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="grid gap-4 gallery-column">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07374.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07751.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07510.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="grid gap-4 gallery-column">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07442.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC06576.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-base"
+          src="/img/gallery/2026/DSC07459.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center mt-8 md:mt-12">
+    <a href={`${base}/gallery`}>
+      <button type="button" class="gallery-cta text-xl">
+        {
+          currentLanguage === "es"
+            ? "VER GALERÍA COMPLETA"
+            : "VIEW FULL GALLERY"
+        }
+      </button>
+    </a>
+  </div>
+</div>
+
+<style>
+  .gallery-column > div {
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  .gallery-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 0.85rem 1.8rem;
+    border: 0;
+    border-radius: 9999px;
+    font-family: var(--font-montserrat, Montserrat, sans-serif);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(120deg, #0d0652 0%, #1b6dd1 45%, #0502c9 100%);
+    box-shadow: 0 12px 28px rgba(13, 6, 82, 0.28);
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      filter 220ms ease;
+  }
+
+  .gallery-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-110%);
+    background: linear-gradient(
+      100deg,
+      transparent 10%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 90%
+    );
+    transition: transform 400ms ease;
+  }
+
+  .gallery-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(13, 6, 82, 0.36);
+    filter: saturate(1.08);
+  }
+
+  .gallery-cta:hover::before {
+    transform: translateX(110%);
+  }
+
+  .gallery-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(13, 6, 82, 0.24);
+  }
+
+  .gallery-cta:focus-visible {
+    outline: 3px solid rgba(15, 185, 177, 0.65);
+    outline-offset: 3px;
+  }
+</style>
