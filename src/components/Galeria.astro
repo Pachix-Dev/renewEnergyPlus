@@ -13,16 +13,29 @@ interface Props {
 const { images } = Astro.props as Props
 ---
 
-<div class='grid grid-cols-3 max-w-6xl gap-10 mx-auto' id='gallery'>
+<div
+  class='js-pswp-gallery mx-auto grid w-full max-w-6xl grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-4 xl:grid-cols-5'
+>
   {
-    images?.map((image) => (
+    images?.map((image, index) => (
       <a
+        class='group block overflow-hidden rounded-xl bg-slate-100 shadow-sm ring-1 ring-slate-200 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0652]'
         href={image.src}
-        data-pswp-width={image.width}
-        data-pswp-height={image.height}
-        target='_blank'
+        data-pswp-width={image.width ?? 1600}
+        data-pswp-height={image.height ?? 1200}
+        aria-label={`Abrir imagen ${index + 1}`}
       >
-        <img src={image.src} alt={image.alt} />
+        <div class='aspect-[4/3] w-full'>
+          <img
+            src={image.src}
+            alt={image.alt}
+            width={image.width ?? 1600}
+            height={image.height ?? 1200}
+            loading='lazy'
+            decoding='async'
+            class='h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]'
+          />
+        </div>
       </a>
     ))
   }
@@ -30,10 +43,13 @@ const { images } = Astro.props as Props
 
 <script>
   import PhotoSwipeLightbox from 'photoswipe/lightbox'
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '#gallery',
-    children: 'a',
-    pswpModule: () => import('photoswipe'),
+  document.querySelectorAll('.js-pswp-gallery').forEach((galleryEl) => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: galleryEl as HTMLElement,
+
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+    })
+    lightbox.init()
   })
-  lightbox.init()
 </script>
