@@ -3,42 +3,46 @@ import Layout from "../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
 import Galeria from "../components/Galeria.astro";
 import { Gallery as GalleryComponent } from "../components/Gallery/Gallery.jsx";
-import { gallery2025, gallery2024, gallery2023, gallery2022, gallery2021, gallery2019 } from "../data/constans_gallery_editions.js";
+import { gallery2026, gallery2025, gallery2024, gallery2023, gallery2022, gallery2021, gallery2019 } from "../data/constans_gallery_editions.js";
 
 changeLanguage("es");
 ---
-
 <Layout title='RE+ MEXICO | Galeria '>
   <section class='my-10 container mx-auto px-4'>
     <p class='text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
+      {t('menu.submenu_5.option_1')} RE+ 2026
+    </p>
+    <GalleryComponent year={gallery2026} client:visible/>
+
+    <p class='text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} RE+ 2025
     </p>
-    <GalleryComponent year={gallery2025} client:load/>
+    <GalleryComponent year={gallery2025} client:visible/>
 
     <p class='text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} SMM 2024
     </p>
-    <GalleryComponent year={gallery2024} client:load/>
+    <GalleryComponent year={gallery2024} client:visible/>
 
     <p class='mt-10 text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} SMM 2023
     </p>
-    <GalleryComponent year={gallery2023} client:load/>
+    <GalleryComponent year={gallery2023} client:visible/>
 
     <p class='mt-10 text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} SPM 2022
     </p>
-    <GalleryComponent year={gallery2022} client:load/>
+    <GalleryComponent year={gallery2022} client:visible/>
 
     <p class='mt-10 text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} SPM 2021
     </p>
-    <GalleryComponent year={gallery2021} client:load/>
+    <GalleryComponent year={gallery2021} client:visible/>
 
     <p class='mt-10 text-center text-3xl text-[#565078] m-7 font-bold uppercase'>
       {t('menu.submenu_5.option_1')} SPM 2019
     </p>
-    <GalleryComponent year={gallery2019} client:load/>
+    <GalleryComponent year={gallery2019} client:visible/>
 
   </section>
 </Layout>
