@@ -125,21 +125,21 @@ const base = lang === "es" ? "" : `/${lang}`;
             >
               <li class="hover:bg-blue-100 font-semibold">
                 <a
+                  href={i18next.language === "es"
+                    ? "/doc/Factsheet _RE+_2027_esp v1_300405.pdf"
+                    : "/doc/Factsheet _RE+_2027_eng v1_300405.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2"
+                >
+                  {t("menu.submenu_2.option_6")} 2027
+                </a>
+              </li>
+              <!-- <li class="hover:bg-blue-100 font-semibold">
+                <a
                   href={`${base}/quiero-ser-expositor`}
                   class="block px-4 py-2"
                 >
                   {t("menu.submenu_2.option_2")}
-                </a>
-              </li>
-              <li class="hover:bg-blue-100 font-semibold">
-                <a
-                  href={i18next.language === "es"
-                    ? "/doc/RE+ FS 2026 ESP_05122025.pdf"
-                    : "/doc/RE+ FS 2026 ENG_05122025.pdf"}
-                  target="_blank"
-                  class="block px-4 py-2"
-                >
-                  {t("menu.submenu_2.option_6")}
                 </a>
               </li>
               <li class="hover:bg-blue-100 font-semibold">
@@ -193,7 +193,7 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_8")}
                 </a>
               </li>
-              <!--Manual del expositor -->
+              Manual del expositor
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={i18next.language === "es"
@@ -205,7 +205,7 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_12")}
                 </a>
               </li>
-              <!-- Contrato de Exposición -->
+              Contrato de Exposición
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href="/doc/CONTRATO-DE-EXPOSICION-REMEX-2026.pdf"
@@ -215,7 +215,7 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_7")}
                 </a>
               </li>
-              <!-- Formato de contrato de lectoras -->
+              Formato de contrato de lectoras
               <li class="hover:bg-blue-100 font-semibold">
                 <a
                   href={i18next.language === "es"
@@ -227,35 +227,29 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_18")}
                 </a>
               </li>
-              <!-- Toolkit 2026 -->
+              Toolkit 2026
               <li class="hover:bg-blue-100 font-semibold">
                 <a href={`${base}/toolkit`} class="block px-4 py-2">
                   TOOLKIT 2026
                 </a>
               </li>
-              {
-                /* 
-                  <li class='hover:bg-blue-100 font-semibold'>
-                    <a
-                      href='/doc/REMEX_2025_SpaceAgreement_V2_23_08_24.pdf'
-                      target='_blank'
-                      class='block px-4 py-2'
-                    >
-                      {t('menu.submenu_2.option_7')}
-                    </a>
-                  </li>
-
-                  
-                  <li class='hover:bg-blue-100 font-semibold'>
-                    <a
-                      href={`${base}/servicios-expositores`}
-                      class='block px-4 py-2'
-                    >
-                      {t('menu.submenu_2.option_4')}
-                    </a>
-                  </li>
-              */
-              }
+              <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href="/doc/REMEX_2025_SpaceAgreement_V2_23_08_24.pdf"
+                  target="_blank"
+                  class="block px-4 py-2"
+                >
+                  {t("menu.submenu_2.option_7")}
+                </a>
+              </li>
+              <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href={`${base}/servicios-expositores`}
+                  class="block px-4 py-2"
+                >
+                  {t("menu.submenu_2.option_4")}
+                </a>
+              </li> -->
             </ul>
           </div>
         </li>
