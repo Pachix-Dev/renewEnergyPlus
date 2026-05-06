@@ -1,31 +1,52 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("es");
+changeLanguage("en");
 
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 ---
 
-<Layout title='RE+ MEXICO | Plano RE+ 2026'>
+<Layout title='RE+ MEXICO | Plano RE+ 2027'>
   <!-- Hero Section -->
-  <div class='bg-gradient-to-br from-[#1E293B] via-[#5E5884] to-[#7B6FA8] py-5'>
-    <div class='container mx-auto px-4'>
-      <div class='text-center text-white'>
-        <h1 class='text-4xl md:text-6xl font-bold mb-4 uppercase'>
-          <span class='block text-2xl md:text-3xl font-semibold text-white mb-2'>
-            RE+ MEXICO 2026
+  <section class='relative overflow-hidden bg-[radial-gradient(circle_at_15%_20%,rgba(250,204,21,0.18),transparent_36%),radial-gradient(circle_at_85%_25%,rgba(14,116,144,0.28),transparent_34%),linear-gradient(130deg,#0f172a_10%,#1e293b_48%,#334155_100%)] py-8 md:py-12'>
+    <div class='pointer-events-none absolute inset-0'>
+      <div class='absolute -left-12 top-8 h-28 w-28 rounded-full bg-cyan-300/10 blur-2xl md:h-44 md:w-44'></div>
+      <div class='absolute -right-10 bottom-4 h-32 w-32 rounded-full bg-amber-300/20 blur-2xl md:h-52 md:w-52'></div>
+    </div>
+
+    <div class='container relative mx-auto px-4'>
+      <div class='mx-auto max-w-6xl rounded-3xl border border-white/15 bg-white/5 px-6 py-8 text-center text-white shadow-[0_25px_80px_rgba(2,6,23,0.45)] backdrop-blur-md md:px-10 md:py-10'>
+
+        <h1 class='text-4xl font-black uppercase leading-tight md:text-6xl'>
+          <span class='mb-2 block text-xl font-semibold tracking-[0.18em] text-cyan-100/95 md:text-2xl'>
+            RE+ MEXICO 2027
           </span>
           {i18next.language === 'es' ? 'Plano del evento' : 'Event floor plan'}
         </h1>
-        <p class='text-xl text-white/90 max-w-3xl mx-auto'>
+
+        <p class='mx-auto mt-4 max-w-4xl text-base text-white/85 md:text-xl'>
           {
             i18next.language === 'es'
               ? 'Explora la distribución completa del evento y planifica tu visita de manera eficiente'
               : 'Explore the complete event layout and plan your visit efficiently'
           }
         </p>
-        <div
+
+        <div class='mt-6 flex flex-wrap items-center justify-center gap-3'>
+          <span class='inline-flex items-center rounded-full border border-white/20 bg-black/20 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-white/90'>
+            {
+              i18next.language === 'es'
+                ? '20 al 22 de abril, 2027'
+                : 'April 20-22, 2027'
+            }
+          </span>
+          <span class='inline-flex items-center rounded-full border border-white/20 bg-black/20 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-white/90'>
+            {i18next.language === 'es' ? 'Expo Guadalajara' : 'Expo Guadalajara'}
+          </span>
+        </div>
+        <!-- horarios del evento -->
+        <!-- <div
           class='mt-6 mx-auto max-w-2xl rounded-2xl border border-white/25 bg-white/10 backdrop-blur-md p-4 md:p-5 text-left text-white shadow-lg'
         >
           <div class='flex items-center gap-2 mb-3'>
@@ -47,7 +68,6 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
               {i18next.language === 'es' ? 'Horario del evento' : 'Event schedule'}
             </p>
           </div>
-
           <div class='grid gap-2 md:grid-cols-2'>
             <div class='rounded-xl bg-white/15 border border-white/20 px-4 py-3'>
               <p class='text-xs md:text-sm font-semibold text-white/85 uppercase'>
@@ -67,18 +87,18 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
               <p class='text-base md:text-lg font-extrabold text-white'>11:00 - 17:00</p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- PDF Viewer Section -->
-  <div class='bg-gray-50 py-12'>
+  <section class='bg-[linear-gradient(180deg,#f8fafc_0%,#eef2ff_36%,#f8fafc_100%)] py-12 md:py-16'>
     <div class='container mx-auto px-4'>
       <div class='max-w-7xl mx-auto'>
         <!-- Toolbar -->
         <div
-          class='bg-white rounded-t-2xl shadow-lg border-b border-gray-200 p-4'
+          class='rounded-t-3xl border border-slate-200/70 border-b-0 bg-white/95 p-4 shadow-[0_14px_36px_rgba(15,23,42,0.08)] backdrop-blur-sm md:p-5'
         >
           <div
             class='flex flex-col sm:flex-row items-center justify-between gap-4'
@@ -87,7 +107,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
               <div class='flex items-center gap-2'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6 text-[#5E5884]'
+                  class='h-6 w-6 text-cyan-700'
                   fill='none'
                   viewBox='0 0 24 24'
                   stroke='currentColor'
@@ -99,7 +119,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                     d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
                   ></path>
                 </svg>
-                <h2 class='text-xl font-bold text-gray-900'>
+                <h2 class='text-xl font-black tracking-tight text-slate-900'>
                   {
                     i18next.language === 'es'
                       ? 'Plano interactivo'
@@ -108,10 +128,8 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                 </h2>
               </div>
 
-              <div
-                class='hidden sm:flex items-center gap-2 text-sm text-gray-600'
-              >
-                <span class='w-2 h-2 bg-green-500 rounded-full'></span>
+              <div class='hidden sm:flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-sm text-emerald-700 ring-1 ring-emerald-200'>
+                <span class='h-2 w-2 animate-pulse rounded-full bg-emerald-500'></span>
                 <span
                   >{
                     i18next.language === 'es'
@@ -125,9 +143,9 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
             <div class='flex items-center gap-3'>
               <!-- Download Button -->
               <a
-                href='/doc/RE+_MEX_2026 040926_model.pdf'
+                href='/doc/RE+_MEX_06_05_2026_model.pdf'
                 download
-                class='group inline-flex items-center gap-2 px-4 py-2 bg-[#5E5884] text-white rounded-lg hover:bg-[#4A4674] transition-colors duration-300'
+                class='group inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -151,7 +169,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
               <!-- Fullscreen Button -->
               <button
                 onclick='toggleFullscreen()'
-                class='group inline-flex items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300'
+                class='group inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2 text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-50'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -181,21 +199,21 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 
         <!-- PDF Container -->
         <div
-          class='relative bg-white rounded-b-2xl shadow-2xl overflow-hidden'
+          class='relative overflow-hidden rounded-b-3xl border border-slate-200/70 border-t-0 bg-white shadow-[0_22px_55px_rgba(15,23,42,0.16)]'
           id='pdf-container'
         >
           <div class='relative'>
             <!-- Loading Overlay -->
             <div
               id='pdf-loading'
-              class='absolute inset-0 bg-gray-100 flex items-center justify-center z-10'
+              class='absolute inset-0 z-10 flex items-center justify-center bg-slate-100/95'
             >
               <div class='text-center'>
                 <div
-                  class='animate-spin rounded-full h-12 w-12 border-b-2 border-[#5E5884] mx-auto mb-4'
+                  class='mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-cyan-700'
                 >
                 </div>
-                <p class='text-gray-600 font-medium'>
+                <p class='font-medium text-slate-600'>
                   {
                     i18next.language === 'es'
                       ? 'Cargando plano...'
@@ -208,29 +226,29 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
             <!-- PDF Iframe -->
             <iframe
               id='pdf-iframe'
-              src='/doc/RE+_MEX_2026 040926_model.pdf'
-              class='w-full h-[100vh] border-0'
+              src='/doc/RE+_MEX_06_05_2026_model.pdf'
+              class='w-full h-[82vh] min-h-[560px] border-0 lg:h-[88vh]'
               onload='hidePdfLoading()'
               title={i18next.language === 'es'
-                ? 'Plano RE+ Mexico 2026'
-                : 'RE+ Mexico 2026 Floor Plan'}></iframe>
+                ? 'Plano RE+ Mexico 2027'
+                : 'RE+ Mexico 2027 Floor Plan'}></iframe>
           </div>
         </div>
 
         <!-- Alternative Download Section (Fallback) -->
         <div
-          class='mt-8 bg-white rounded-2xl p-6 shadow-lg border border-gray-200'
+          class='mt-8 rounded-3xl border border-slate-200 bg-[linear-gradient(145deg,#ffffff_0%,#f8fafc_56%,#eef2ff_100%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] md:p-8'
         >
           <div
             class='flex flex-col md:flex-row items-center justify-between gap-6'
           >
             <div class='flex items-start gap-4'>
               <div
-                class='w-12 h-12 bg-[#5E5884]/10 rounded-xl flex items-center justify-center flex-shrink-0'
+                class='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-cyan-700/10'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  class='h-6 w-6 text-[#5E5884]'
+                  class='h-6 w-6 text-cyan-700'
                   fill='none'
                   viewBox='0 0 24 24'
                   stroke='currentColor'
@@ -244,14 +262,14 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
                 </svg>
               </div>
               <div>
-                <h3 class='text-lg font-bold text-gray-900 mb-2'>
+                <h3 class='mb-2 text-lg font-extrabold text-slate-900'>
                   {
                     i18next.language === 'es'
                       ? '¿No puedes ver el plano?'
                       : "Can't see the floor plan?"
                   }
                 </h3>
-                <p class='text-gray-600'>
+                <p class='max-w-2xl text-slate-600'>
                   {
                     i18next.language === 'es'
                       ? 'Si tienes problemas para visualizar el documento, puedes descargarlo directamente o abrirlo en una nueva pestaña.'
@@ -263,10 +281,10 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 
             <div class='flex flex-col sm:flex-row gap-3'>
               <a
-                href='/doc/RE+_MEX_2026 040926_model.pdf'
+                href='/doc/RE+_MEX_06_05_2026_model.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
-                class='group inline-flex items-center gap-2 px-6 py-3 border border-[#5E5884] text-[#5E5884] rounded-lg hover:bg-[#5E5884] hover:text-white transition-colors duration-300'
+                class='group inline-flex items-center gap-2 rounded-xl border border-cyan-700 px-6 py-3 text-cyan-700 transition-colors duration-300 hover:bg-cyan-700 hover:text-white'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -292,9 +310,9 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
               </a>
 
               <a
-                href='/doc/RE+_MEX_2026 040926_model.pdf'
+                href='/doc/RE+_MEX_06_05_2026_model.pdf'
                 download
-                class='group inline-flex items-center gap-2 px-6 py-3 bg-[#5E5884] text-white rounded-lg hover:bg-[#4A4674] transition-colors duration-300'
+                class='group inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -319,7 +337,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </Layout>
 
 <script is:inline>
@@ -355,7 +373,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
     if (document.fullscreenElement) {
       iframe.style.height = '100vh'
     } else {
-      iframe.style.height = '80vh'
+      iframe.style.height = '82vh'
     }
   })
 </script>
@@ -404,7 +422,8 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
   /* Responsive improvements */
   @media (max-width: 768px) {
     #pdf-iframe {
-      height: 70vh;
+      height: 72vh;
+      min-height: 430px;
     }
 
     #pdf-container.fullscreen #pdf-iframe {
