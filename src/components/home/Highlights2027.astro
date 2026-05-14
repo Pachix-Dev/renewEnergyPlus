@@ -1,0 +1,471 @@
+---
+import i18next, { t } from "i18next";
+
+const currentLanguage = i18next.language;
+
+const cards = [
+  {
+    img: "/img/highlights/hgt_compradores.webp",
+    imgAlt: "Compradores profesionales RE+ Mexico 2026",
+    metric: "+12,500",
+    description: t("home.highlights_1"),
+    duration: "100",
+    numColor: "#ff5db0",
+    ringColor: "#e91e8c",
+    ringGlow: "rgba(233,30,140,0.55)",
+    overlayRadial: "rgba(233,30,140,0.45)",
+    overlayTopLeft: "rgba(233,30,140,0.72)",
+    shadowDark: "#7a0040",
+    floatDelay: "0s",
+    floatDuration: "3.8s",
+    size: "lg",
+    pos: "left",
+  },
+  {
+    img: "/img/highlights/hgt_empresas.webp",
+    imgAlt: "Empresas expositoras RE+ Mexico 2026",
+    metric: "+165",
+    description: t("home.highlights_2"),
+    duration: "200",
+    numColor: "#c084fc",
+    ringColor: "#a855f7",
+    ringGlow: "rgba(168,85,247,0.55)",
+    overlayRadial: "rgba(168,85,247,0.45)",
+    overlayTopLeft: "rgba(168,85,247,0.72)",
+    shadowDark: "#4a0080",
+    floatDelay: "0.9s",
+    floatDuration: "4.4s",
+    size: "md",
+    pos: "center-top",
+  },
+  {
+    img: "/img/highlights/hgt_asistentes.webp",
+    imgAlt: "Asistentes a conferencias RE+ Mexico 2026",
+    metric: "+2,800",
+    description: t("home.highlights_3"),
+    duration: "300",
+    numColor: "#22d3ee",
+    ringColor: "#00c2e0",
+    ringGlow: "rgba(0,194,224,0.55)",
+    overlayRadial: "rgba(0,194,224,0.45)",
+    overlayTopLeft: "rgba(0,194,224,0.72)",
+    shadowDark: "#004a5c",
+    floatDelay: "0.4s",
+    floatDuration: "4.1s",
+    size: "md",
+    pos: "center-bot",
+  },
+  {
+    img: "/img/highlights/hgt_piso.webp",
+    imgAlt: "Piso expositor RE+ Mexico 2026",
+    metric: "+10,000 m²",
+    description: t("home.highlights_4"),
+    duration: "400",
+    numColor: "#7b9fe8",
+    ringColor: "#4158A7",
+    ringGlow: "rgba(65,88,167,0.55)",
+    overlayRadial: "rgba(65,88,167,0.45)",
+    overlayTopLeft: "rgba(65,88,167,0.72)",
+    shadowDark: "#1a2e6e",
+    floatDelay: "1.3s",
+    floatDuration: "3.5s",
+    size: "lg",
+    pos: "right",
+  },
+];
+---
+
+<section
+  class="rp-wrap"
+  aria-label="Cifras destacadas RE+ Mexico 2027"
+  itemscope
+  itemtype="https://schema.org/Event"
+>
+  <meta itemprop="name" content="RE+ Mexico 2027" />
+  <meta itemprop="location" content="Expo Guadalajara, Jalisco, México" />
+
+  <header class="rp-header">
+    <div class="rp-eyebrow">
+      <span class="rp-rule"></span>
+      <span class="rp-eyebrow-text">RE+ Mexico 2027 · Expo Guadalajara</span>
+      <span class="rp-rule rp-rule-r"></span>
+    </div>
+    <h2 class="rp-title">
+      <span class="rp-title-dark">
+        {currentLanguage === "es"
+          ? "EL MERCADO DE ENERGÍAS RENOVABLES"
+          : "THE LARGEST RENEWABLE ENERGY MARKET"}
+      </span>
+      <span class="rp-title-animated">
+        {currentLanguage === "es" ? "MÁS GRANDE DE MÉXICO" : "IN MEXICO"}
+      </span>
+    </h2>
+    <p class="rp-sub">
+      {currentLanguage === "es"
+        ? "Datos basados en la edición 2026 — Únete como expositor"
+        : "Data based on the 2026 edition — Join as an exhibitor"}
+    </p>
+  </header>
+
+  <div class="rp-stage">
+    {cards.map((card) => (
+      <article
+        class={`rp-circle rp-circle--${card.size} rp-circle--${card.pos}`}
+        style={[
+          `--rc: ${card.ringColor}`,
+          `--rg: ${card.ringGlow}`,
+          `--nc: ${card.numColor}`,
+          `--ov: ${card.overlayRadial}`,
+          `--tl: ${card.overlayTopLeft}`,
+          `--sd: ${card.shadowDark}`,
+          `--fd: ${card.floatDuration}`,
+          `--fl: ${card.floatDelay}`,
+        ].join(";")}
+        data-aos="fade-up"
+        data-aos-delay={card.duration}
+        aria-label={`${card.metric} — ${card.description}`}
+      >
+        <img src={card.img} alt={card.imgAlt} class="rp-img" loading="lazy" decoding="async" width="400" height="400" />
+        <div class="rp-overlay-tl" aria-hidden="true"></div>
+        <div class="rp-overlay"    aria-hidden="true"></div>
+        <div class="rp-ring"       aria-hidden="true"></div>
+        <div class="rp-flare"      aria-hidden="true"></div>
+        <div class="rp-content">
+          <p class="rp-number">{card.metric}</p>
+          <p class="rp-label">{card.description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+
+</section>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@700;800&display=swap');
+
+  @keyframes gradientFlow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .rp-wrap {
+    background: #f4f7f5;
+    padding-bottom: clamp(48px, 7vw, 96px);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .rp-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .rp-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .rp-rule {
+    flex: 0 1 40px;
+    min-width: 10px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(233,30,140,0.7));
+  }
+  .rp-rule-r {
+    background: linear-gradient(to left, transparent, rgba(233,30,140,0.7));
+  }
+
+  .rp-eyebrow-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #e91e8c;
+    font-size: clamp(0.68rem, 2.2vw, 1.3rem);
+    white-space: nowrap;
+    flex-shrink: 1;
+  }
+
+  .rp-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 7vw, 6rem);
+    line-height: 1.05;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.05em;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+
+  .rp-title-dark { color: #0d1a2e; }
+
+  .rp-title-animated {
+    background: linear-gradient(
+      90deg,
+      #e91e8c 0%, #a855f7 25%, #00c2e0 50%, #a855f7 75%, #e91e8c 100%
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 4s linear infinite;
+  }
+
+  .rp-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
+    font-style: italic;
+    color: #555555;
+    margin: 0;
+    max-width: 90%;
+    word-break: break-word;
+  }
+
+  .rp-stage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: clamp(300px, 42vw, 500px);
+  }
+
+  .rp-circle {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: default;
+    animation: float var(--fd, 4s) ease-in-out var(--fl, 0s) infinite;
+    transition:
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      box-shadow 0.25s ease;
+  }
+
+  .rp-circle:hover {
+    animation-play-state: paused;
+  }
+
+  .rp-circle--lg {
+    width: clamp(200px, 26vw, 360px);
+    height: clamp(200px, 26vw, 360px);
+  }
+  .rp-circle--md {
+    width: clamp(160px, 20vw, 290px);
+    height: clamp(160px, 20vw, 290px);
+  }
+
+  .rp-circle--left       { margin-right: clamp(-30px, -3.5vw, -55px); z-index: 2; }
+  .rp-circle--center-top { margin-bottom: clamp(25px, 4vw, 65px); margin-right: clamp(-20px, -2.5vw, -40px); z-index: 3; }
+  .rp-circle--center-bot { margin-top: clamp(25px, 4vw, 65px);   margin-right: clamp(-20px, -2.5vw, -40px); z-index: 3; }
+  .rp-circle--right      { z-index: 2; }
+
+  .rp-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.62) saturate(0.82);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .rp-overlay-tl {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, var(--tl) 0%, rgba(0,0,0,0) 55%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .rp-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, var(--ov) 0%, transparent 65%);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .rp-ring {
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    pointer-events: none;
+    z-index: 5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .rp-flare {
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+    transform: skewX(-15deg);
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0;
+  }
+
+  .rp-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18%;
+    z-index: 4;
+  }
+
+  .rp-number {
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1;
+    margin: 0 0 6px;
+    font-size: clamp(1.6rem, 4vw, 4.5rem);
+    color: var(--nc);
+    text-shadow:
+      0 0 28px var(--ov),
+      2px 3px 0 var(--sd);
+    white-space: nowrap;
+    transition: transform 0.25s ease, text-shadow 0.25s ease;
+  }
+
+  .rp-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin: 0;
+    /* ── Tamaño aumentado ── */
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.6);
+    word-break: break-word;
+    transition: letter-spacing 0.25s ease;
+  }
+
+  @media (hover: hover) {
+    .rp-circle:hover {
+      transform: scale(1.1) translateY(-8px);
+      z-index: 10 !important;
+      box-shadow:
+        0 16px 48px var(--rg),
+        0 0 0 3px var(--nc),
+        0 0 22px var(--nc);
+    }
+
+    .rp-circle:hover .rp-img {
+      transform: scale(1.06);
+      filter: brightness(0.78) saturate(1.05);
+    }
+
+    .rp-circle:hover .rp-ring {
+      border-color: var(--nc);
+      box-shadow:
+        inset 0 0 0 1px var(--nc),
+        0 0 18px var(--rg),
+        0 0 40px var(--rg);
+    }
+
+    .rp-circle:hover .rp-flare {
+      opacity: 1;
+      transform: skewX(-15deg) translateX(350%);
+      transition: transform 0.35s ease, opacity 0s;
+    }
+
+    .rp-circle:hover .rp-number {
+      transform: translateY(-3px);
+      text-shadow:
+        0 0 36px var(--ov),
+        0 0 14px var(--ov),
+        2px 3px 0 var(--sd);
+    }
+
+    .rp-circle:hover .rp-label {
+      letter-spacing: 0.08em;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .rp-stage {
+      flex-wrap: wrap;
+      gap: 20px;
+      min-height: auto;
+      padding: 1rem;
+    }
+
+    .rp-circle--left,
+    .rp-circle--center-top,
+    .rp-circle--center-bot,
+    .rp-circle--right {
+      margin: 0;
+      z-index: 1;
+    }
+
+    .rp-circle--lg,
+    .rp-circle--md {
+      width: clamp(150px, 40vw, 240px);
+      height: clamp(150px, 40vw, 240px);
+    }
+
+    .rp-number { font-size: clamp(1.4rem, 5.5vw, 2.8rem); }
+    .rp-label  { font-size: clamp(0.85rem, 2.8vw, 1.2rem); }
+  }
+
+  @media (max-width: 560px) {
+    .rp-stage {
+      flex-direction: column;
+      gap: 16px;
+      min-height: auto;
+      padding: 0.5rem 0;
+    }
+
+    .rp-circle--lg,
+    .rp-circle--md {
+      width: 240px;
+      height: 240px;
+      margin: 0 !important;
+      z-index: 1 !important;
+    }
+
+    .rp-number { font-size: 3rem; }
+    .rp-label  { font-size: 1.1rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rp-circle { animation: none; }
+  }
+</style>
