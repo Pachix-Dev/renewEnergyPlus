@@ -142,23 +142,24 @@ const base = lang === "es" ? "" : `/${lang}`;
                   {t("menu.submenu_2.option_8")} 2027
                 </a>
               </li>
-              <!-- <li class="hover:bg-blue-100 font-semibold">
+
+              <li class="hover:bg-blue-100 font-semibold">
+                <a
+                  href={i18next.language === "es"
+                    ? "/doc/RE+_MEXICO_PATROCINIOS_2027_ESP_V1_150526.pdf"
+                    : "/doc/RE+_MEXICO_SPONSORSHIPS_2027_ENG_V1_150526.pdf"}
+                  target="_blank"
+                  class="block px-4 py-2"
+                >
+                  {t("menu.submenu_2.option_14")} 2027
+                </a>
+              </li>
+              <!-- <li class="hover:bg-blue-100 font-semibold" >
                 <a
                   href={`${base}/quiero-ser-expositor`}
                   class="block px-4 py-2"
                 >
                   {t("menu.submenu_2.option_2")}
-                </a>
-              </li>
-              <li class="hover:bg-blue-100 font-semibold">
-                <a
-                  href={i18next.language === "es"
-                    ? "/doc/RE-MEXICO-SPONSORSHIPS-2026-ESP-V7_compressed.pdf"
-                    : "/doc/RE-MEXICO-SPONSORSHIPS-2026-ING-V7_compressed.pdf"}
-                  target="_blank"
-                  class="block px-4 py-2"
-                >
-                  {t("menu.submenu_2.option_14")}
                 </a>
               </li>
               <li class="hover:bg-blue-100 font-semibold">
