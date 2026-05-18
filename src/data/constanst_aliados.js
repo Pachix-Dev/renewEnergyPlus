@@ -1,6 +1,6 @@
 const aliados = [
   {link: '',src: '/img/strategicAllies2026/merm.webp', alt: 'logo Merm', width: 200, height: 103,},
-  {link: '',src: '/img/strategicAllies2026/gobiernoJalisco.webp', alt: 'logo Gobierno de Jalisco', width: 150, height: 150,},
+  // {link: '',src: '/img/strategicAllies2026/gobiernoJalisco.webp', alt: 'logo Gobierno de Jalisco', width: 150, height: 150,},
   {link: '',src: '/img/strategicAllies2026/emmerge.webp', alt: 'Logo emmerge', width: 110, height: 120,},
   {link: '',src: '/img/strategicAllies2026/CPEF.webp', alt: 'Logo CPEF', width: 150, height: 103,},
   {link: '',src: '/img/strategicAllies2026/AlianzaEnergetica.webp', alt: 'Logo Alianza Energetica', width: 200, height: 67,},
@@ -8,7 +8,7 @@ const aliados = [
   {link: '',src: '/img/strategicAllies2026/80-amsoc.webp', alt: 'Logo 80-Amsoc', width: 150, height: 98,},
   {link: '',src: '/img/strategicAllies2026/anes.webp', alt: 'Logo 80-Amsoc', width: 110, height: 98,},
   {link: '',src: '/img/strategicAllies2026/SEI.webp', alt: 'Logo Sei', width: 150, height: 107,},
-  {link: '',src: '/img/strategicAllies2026/redMujeres.webp', alt: 'Logo Red Mujeres', width: 200, height: 65,},
+  // {link: '',src: '/img/strategicAllies2026/redMujeres.webp', alt: 'Logo Red Mujeres', width: 200, height: 65,},
   {link: '',src: '/img/strategicAllies2026/KAS.webp', alt: 'Logo Kas', width: 200, height: 46,},
   {link: '',src: '/img/strategicAllies2026/giz.webp', alt: 'Logo Giz', width: 250, height: 108,},
   {link: '',src: '/img/strategicAllies2026/ire_unam.webp', alt: 'IER', width: 160, height: 50,},
