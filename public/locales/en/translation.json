@@ -260,7 +260,16 @@
             "desc8": "Hydrogen production and storage technologies",
             "cta_text": "Interested in exhibiting in any of these segments?",
             "cta_button": "Exhibitor Information"
-            }
+            },
+        "segments_title": "Main sectors that our visitors are looking for at RE+ MEXICO",
+        "segments01": "Photovoltaic technology systems",
+        "segments02": "Renewable energy and solar thermal heating",
+        "segments03": "Storage",
+        "segments04": "Components and equipment",
+        "segments05": "Information, communication and services",
+        "segments06": "Grid infrastructure",
+        "segments07": "Renewable hydrogen",
+        "segments08": "Wind energy"
     },
     "AboutSSM": {
         "title": "ABOUT RE+ MEXICO",

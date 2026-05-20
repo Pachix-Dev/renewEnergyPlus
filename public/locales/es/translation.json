@@ -260,7 +260,16 @@
             "desc8": "Tecnologías de producción y almacenamiento de hidrógeno",
             "cta_text": "¿Interesado en exponer en alguno de estos segmentos?",
             "cta_button": "Información para Expositores"
-        }
+        },
+        "segments_title": "Principales sectores que nuestros visitantes están buscando en RE+ MEXICO",
+        "segments01": "Sistemas de tecnología fotovoltaica",
+        "segments02": "Energías renovables y calentamiento termo solar",
+        "segments03": "Almacenamiento",
+        "segments04": "Componentes y equipo",
+        "segments05": "Información, comunicación y servicios",
+        "segments06": "Infraestructura de red",
+        "segments07": "Hidrógeno renovable",
+        "segments08": "Eólico"
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
