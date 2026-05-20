@@ -1,54 +1,123 @@
 ---
 import i18next, { t } from "i18next";
+import { SegmentCard } from "./SegmentCard.jsx";
+
 const currentLanguage = i18next.language;
+
+const segments = [
+  {
+    imgSrc: "/img/imagen2027/segment_01.webp",
+    imgAlt: "Segmento 1",
+    percent: "59%",
+    label: t("home.segments01"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 200,
+  },
+  {
+    imgSrc: "/img/imagen2027/segment_02.webp",
+    imgAlt: "Segmento 2",
+    percent: "55%",
+    label: t("home.segments02"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 400,
+  },
+  {
+    imgSrc: "/img/imagen2027/segment_03.webp",
+    imgAlt: "Segmento 3",
+    percent: "47%",
+    label: t("home.segments03"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 600,
+  },
+  {
+    imgSrc: "/img/imagen2027/segment_04.webp",
+    imgAlt: "Segmento 4",
+    percent: "42%",
+    label: t("home.segments04"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 800,
+  },
+  {
+    imgSrc: "/img/imagen2027/segment_05.webp",
+    imgAlt: "Segmento 5",
+    percent: "39%",
+    label: t("home.segments05"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 1000,
+  },
+  {
+    imgSrc: "/img/imagen2027/segment_06.webp",
+    imgAlt: "Segmento 6",
+    percent: "33%",
+    label: t("home.segments06"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 1200,
+  },
+  {
+    imgSrc: "/img/imagen2027/segment_07.webp",
+    imgAlt: "Segmento 7",
+    percent: "32%",
+    label: t("home.segments07"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 1400,
+  },
+  {
+    imgSrc: "/img/imagen2027/segment_08.webp",
+    imgAlt: "Segmento 8",
+    percent: "31%",
+    label: t("home.segments08"),
+    hoverText:
+      currentLanguage === "es"
+        ? "De los visitantes están interesados en este segmento"
+        : "Of visitors are interested in this segment",
+    delay: 1600,
+  },
+];
 ---
-<section class="h-auto flex flex-col items-center justify-center sm:gap-4 px-4 sm:px-8 lg:px-16 xl:px-24 py-10 sm:py-12">
-    <div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl text-center font-bold mb-8 max-w-6xl mx-auto text-[#3333ff]">
-            {t("home.segments_title")}
-        </h2>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-3 sm:gap-x-6 gap-y-12 sm:gap-y-28 py-0 sm:py-8 lg:py-10 w-full max-w-7xl mx-auto">
 
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_01.webp" alt="Segmento 1" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">59%</span><br> {t("home.segments01")} </p>
-        </div>
+<section
+  class="h-auto flex flex-col items-center justify-center sm:gap-4 px-4 sm:px-8 lg:px-16 xl:px-24 py-10 sm:py-12"
+>
+  <div data-aos="fade-down" data-aos-duration="2000" data-aos-delay="100">
+    <h2
+      class="text-3xl sm:text-4xl lg:text-5xl text-center font-bold mb-8 max-w-3xl mx-auto text-[#3333ff]"
+    >
+      {t("home.segments_title")}
+    </h2>
+  </div>
 
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_02.webp" alt="Segmento 2" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">55%</span><br> {t("home.segments02")} </p>
-        </div>
 
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_03.webp" alt="Segmento 3" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">47%</span><br> {t("home.segments03")} </p>
-        </div>
-
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_04.webp" alt="Segmento 4" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">42%</span><br> {t("home.segments04")} </p>
-        </div>
-
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_05.webp" alt="Segmento 5" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">39%</span><br> {t("home.segments05")} </p>
-        </div>
-
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_06.webp" alt="Segmento 6" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">33%</span><br> {t("home.segments06")} </p>
-        </div>
-
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_07.webp" alt="Segmento 7" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">32%</span><br> {t("home.segments07")} </p>
-        </div>
-
-        <div class="flex flex-row items-center text-start gap-2 sm:gap-4">
-            <img src="/img/imagen2027/segment_08.webp" alt="Segmento 8" class="w-12 sm:w-[100px] h-auto">
-            <p class="text-xs sm:text-base"><span class="text-[#3333ff] font-extrabold text-2xl sm:text-5xl">31%</span><br> {t("home.segments08")} </p>
-        </div>
-
-    </div>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-8 py-0 w-full max-w-7xl mx-auto">
+    {segments.map((segment) => (
+      <SegmentCard
+        imgSrc={segment.imgSrc}
+        imgAlt={segment.imgAlt}
+        percent={segment.percent}
+        label={segment.label}
+        hoverText={segment.hoverText}
+        delay={segment.delay}
+      />
+    ))}
+  </div>
 </section>
