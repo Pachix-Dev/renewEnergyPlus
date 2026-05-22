@@ -7,19 +7,19 @@ changeLanguage("es");
 ---
 
 <Layout title='RE+ MEXICO | Contacto'>
-  <section>
+  <section class="px-2 my-10 ">
     <img
       src='/img/BgContact.webp'
       alt='fondo contacto'
-      class='fixed z-[-10] w-full'
+      class='fixed inset-0 z-[-10] h-full w-full object-cover'
     />
     <Contacts />
   </section>
   <div class='bg-white'>
-    <p class='relative text-5xl font-bold z-0 text-center p-10'>
+    <!-- <p class='relative z-0 px-4 py-8 text-center text-3xl font-bold sm:py-10 sm:text-4xl md:text-5xl'>
       {t('contactForm.title')}
     </p>
-    <div class='mx-10'>
+    <div class='mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8'>
       <p class='form-label my-3'>{t('footer.name')}</p>
       <input
         name='name'
@@ -27,20 +27,20 @@ changeLanguage("es");
         autocomplete='false'
         type='text'
         id='formBasicPassword'
-        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+        class='w-full rounded-md border border-[#DEE2E6] bg-[#F4F4F4] px-3 py-2'
       />
     </div>
-    <div class='mb-3 mx-10'>
+    <div class='mx-auto mb-3 w-full max-w-4xl px-4 sm:px-6 lg:px-8'>
       <p class='form-label my-3'>{t('footer.email')}</p><input
         name='email'
         required=''
         autocomplete='false'
         type='email'
         id='formBasicEmail'
-        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+        class='w-full rounded-md border border-[#DEE2E6] bg-[#F4F4F4] px-3 py-2'
       />
     </div>
-    <div class='mx-10'>
+    <div class='mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8'>
       <p class='form-label my-3'>{t('contactForm.subject')}</p>
       <input
         name='name'
@@ -48,10 +48,10 @@ changeLanguage("es");
         autocomplete='false'
         type='text'
         id='formBasicPassword'
-        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+        class='w-full rounded-md border border-[#DEE2E6] bg-[#F4F4F4] px-3 py-2'
       />
     </div>
-    <div class='mx-10'>
+    <div class='mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8'>
       <p class='form-label my-3'>{t('contactForm.message')}</p>
       <input
         name='name'
@@ -59,11 +59,11 @@ changeLanguage("es");
         autocomplete='false'
         type='text'
         id='formBasicPassword'
-        class='bg-[#F4F4F4] border-[#DEE2E6] rounded-md w-full'
+        class='w-full rounded-md border border-[#DEE2E6] bg-[#F4F4F4] px-3 py-2'
       />
     </div>
-    <div class='py-5 px-10'>
-      <div style='width: 304px; height: 78px;'>
+    <div class='mx-auto w-full max-w-4xl px-4 py-5 sm:px-6 lg:px-8'>
+      <div class='max-w-full overflow-x-auto' style='width: 304px; height: 78px;'>
         <div>
           <iframe
             title='reCAPTCHA'
@@ -84,17 +84,17 @@ changeLanguage("es");
         ></textarea>
       </div><iframe style='display: none;'></iframe>
     </div>
-    <button class='bg-black px-5 rounded-lg text-white text-xl font-bold mx-10'>
+    <button class='mx-auto rounded-lg bg-black px-5 text-lg font-bold text-white sm:mx-6 md:mx-8 md:text-xl lg:mx-10'>
       <p class='form-label my-3'>{t('contactForm.send')}</p>
-    </button>
-    <div class='flex justify-center items-center py-10'>
+    </button> -->
+    <div class='mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-6 px-4 py-10 text-center sm:px-6 md:flex-row md:gap-8 md:text-left lg:px-8'>
       <img
         src='/img/igeco_logo_negro.webp'
         alt='logo igeco'
-        class='w-[200px] h-[116px] m-10'
+        class='h-auto w-[160px] sm:w-[190px] md:w-[200px]'
       />
 
-      <div class='text-center my-auto border-l-[1px] border-black pl-5'>
+      <div class='my-auto border-t border-black pt-5 md:border-l md:border-t-0 md:pl-5 md:pt-0'>
         <p>
           <strong>IGECO <br /></strong>
           Blvd. Francisco Villa 102, piso 14<br />
