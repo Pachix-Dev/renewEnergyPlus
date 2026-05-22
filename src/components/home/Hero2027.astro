@@ -13,12 +13,15 @@ const currentLanguage = i18next.language;
     loading="lazy"
   />
   <div class="absolute inset-0 bg-black/5"></div>
-  <div class="relative z-10 flex flex-col lg:flex-wrap items-center justify-center gap-8 lg:gap-10 text-white text-center px-4 sm:px-8 lg:px-16 xl:px-24 py-10 sm:py-12 lg:min-h-screen">
-    <div class="flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-6 lg:gap-8">
+  <div class="relative z-10 flex flex-col lg:flex-wrap items-center justify-center gap-8 lg:gap-10 text-white text-center px-4 sm:px-8 lg:px-16 xl:px-24 py-10 sm:py-12 lg:min-h-screen" data-aos="fade-up" data-aos-duration="1000">
+    <div class="flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-6 lg:gap-8" data-aos="zoom-in" data-aos-duration="1100" data-aos-delay="100">
       <img
         src="/img/imagen2027/slogan.webp"
         alt="REPLUS MEXICO 2027 Slogan"
         class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-3xl h-auto"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="200"
       />
       <img
           src={currentLanguage === "es"
@@ -26,9 +29,12 @@ const currentLanguage = i18next.language;
             : "/img/imagen2027/date_en_event_2027.webp"}
           alt="Date Event"
           class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl h-auto"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="300"
         />
     </div>
-    <p class="text-center lg:text-left text-xl md:text-2xl lg:text-3xl tracking-wide leading-relaxed font-semibold">
+    <p class="text-center lg:text-left text-xl md:text-2xl lg:text-3xl tracking-wide leading-relaxed font-semibold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
       {
         currentLanguage === "es"
           ? "LA FERIA LÍDER EN ENERGÍAS RENOVABLES"
