@@ -96,7 +96,7 @@ const stands = [
               <div class="tariff-content">
                 <div class="text-4xl sm:text-5xl font-extrabold text-white bg-[#ed216a] rounded-md px-3 py-2 w-max whitespace-pre-line mx-auto">
                   {stand.price}
-                  <span class="block text-sm font-semibold text-gray-200 mt-1">+ {stand.pricesDes}</span>
+                  <span class="block text-base font-semibold text-gray-100 mt-1">+ {stand.pricesDes}</span>
                 </div>
                 <div class="includes-box">
                   <p class="includes-title">{stand.includes}</p>
@@ -128,7 +128,7 @@ const stands = [
       }
     </div>
     <div>
-        <a href={`${base}/contacto`} class="">
+        <a href={`${base}/contacto`} class="hover:scale-105 transition-transform duration-300">
           <img src={currentLanguage ? "/img/imagen2027/btn_cotizar.webp" : "/img/imagen2027/btn_cotizar_en.webp"} alt="Contact Icon" class="w-[600px] tariff-image mx-auto pt-12" />
         </a>
     </div>
