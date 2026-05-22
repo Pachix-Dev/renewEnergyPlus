@@ -38,6 +38,8 @@ const stands = [
           "Unlimited visitor pre-registration code for your company",
           "Includes mention in the exhibitor directory",
         ],
+    price: "$540 USD",
+    pricesDes: currentLanguage ? "IVA por m²" : "VAT / sqm",
   },
   {
     cardTitle: currentLanguage ? "RAW SPACE" : "RAW SPACE",
@@ -59,6 +61,8 @@ const stands = [
     warning: currentLanguage
       ? "El espacio raw space no incluye construcción de stand, mobiliario, ni servicios adicionales."
       : "The raw space does not include stand construction, furniture, or additional services.",
+    price: "$480 USD",
+    pricesDes: currentLanguage ? "IVA por m²" : "VAT / sqm",
   },
 ];
 ---
@@ -90,6 +94,10 @@ const stands = [
               </div>
 
               <div class="tariff-content">
+                <div class="text-4xl sm:text-5xl font-extrabold text-white bg-[#ed216a] rounded-md px-3 py-2 w-max whitespace-pre-line mx-auto">
+                  {stand.price}
+                  <span class="block text-sm font-semibold text-gray-200 mt-1">+ {stand.pricesDes}</span>
+                </div>
                 <div class="includes-box">
                   <p class="includes-title">{stand.includes}</p>
                   <ul class="includes-list">
@@ -119,7 +127,6 @@ const stands = [
         ))
       }
     </div>
-
     <div>
         <a href={`${base}/contacto`} class="">
           <img src={currentLanguage ? "/img/imagen2027/btn_cotizar.webp" : "/img/imagen2027/btn_cotizar_en.webp"} alt="Contact Icon" class="w-[600px] tariff-image mx-auto pt-12" />
