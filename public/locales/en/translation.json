@@ -262,14 +262,13 @@
             "cta_button": "Exhibitor Information"
             },
         "segments_title": "Segments that you will find in RE+ MEXICO 2027",
-        "segments01": "Photovoltaic technology systems",
-        "segments02": "Renewable energy and solar thermal heating",
-        "segments03": "Storage",
-        "segments04": "Components and equipment",
-        "segments05": "Information, communication and services",
-        "segments06": "Grid infrastructure",
-        "segments07": "Renewable hydrogen",
-        "segments08": "Wind energy"
+        "segments01": "Solar Energy",
+        "segments02": "Energy Efficiency",
+        "segments03": "Energy Storage",
+        "segments04": "Wind Energy",
+        "segments05": "Renewable Hydrogen",
+        "segments06": "Services and Consulting",
+        "segments07": "Components and Equipment"
     },
     "AboutSSM": {
         "title": "ABOUT RE+ MEXICO",

@@ -6,9 +6,9 @@ const currentLanguage = i18next.language;
 
 const segments = [
   {
-    imgSrc: "/img/imagen2027/segment_01.webp",
+    imgSrc: "/img/imagen2027/icon_energia_solar.webp",
     imgAlt: "Segmento 1",
-    percent: "59%",
+    percent: "60%",
     label: t("home.segments01"),
     hoverText:
       currentLanguage === "es"
@@ -17,9 +17,9 @@ const segments = [
     delay: 200,
   },
   {
-    imgSrc: "/img/imagen2027/segment_02.webp",
+    imgSrc: "/img/imagen2027/icon_eficiencia_energetica.webp",
     imgAlt: "Segmento 2",
-    percent: "55%",
+    percent: "40%",
     label: t("home.segments02"),
     hoverText:
       currentLanguage === "es"
@@ -39,9 +39,9 @@ const segments = [
     delay: 600,
   },
   {
-    imgSrc: "/img/imagen2027/segment_04.webp",
+    imgSrc: "/img/imagen2027/icon_energia_eolica.webp",
     imgAlt: "Segmento 4",
-    percent: "42%",
+    percent: "31%",
     label: t("home.segments04"),
     hoverText:
       currentLanguage === "es"
@@ -50,9 +50,9 @@ const segments = [
     delay: 800,
   },
   {
-    imgSrc: "/img/imagen2027/segment_05.webp",
+    imgSrc: "/img/imagen2027/icon_hidrogeno_renovable.webp",
     imgAlt: "Segmento 5",
-    percent: "39%",
+    percent: "32%",
     label: t("home.segments05"),
     hoverText:
       currentLanguage === "es"
@@ -61,7 +61,7 @@ const segments = [
     delay: 1000,
   },
   {
-    imgSrc: "/img/imagen2027/segment_06.webp",
+    imgSrc: "/img/imagen2027/icon_servicio_consultoria.webp",
     imgAlt: "Segmento 6",
     percent: "33%",
     label: t("home.segments06"),
@@ -72,27 +72,16 @@ const segments = [
     delay: 1200,
   },
   {
-    imgSrc: "/img/imagen2027/segment_07.webp",
+    imgSrc: "/img/imagen2027/icon_componentes_equipo.webp",
     imgAlt: "Segmento 7",
-    percent: "32%",
+    percent: "42%",
     label: t("home.segments07"),
     hoverText:
       currentLanguage === "es"
         ? "De los visitantes están interesados en este segmento"
         : "Of visitors are interested in this segment",
     delay: 1400,
-  },
-  {
-    imgSrc: "/img/imagen2027/segment_08.webp",
-    imgAlt: "Segmento 8",
-    percent: "31%",
-    label: t("home.segments08"),
-    hoverText:
-      currentLanguage === "es"
-        ? "De los visitantes están interesados en este segmento"
-        : "Of visitors are interested in this segment",
-    delay: 1600,
-  },
+  }
 ];
 ---
 
@@ -108,8 +97,9 @@ const segments = [
   </div>
 
 
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-8 py-0 w-full max-w-7xl mx-auto">
-    {segments.map((segment) => (
+  <div class="flex flex-wrap justify-center gap-2 sm:gap-8 py-0 w-full max-w-7xl mx-auto">
+  {segments.map((segment) => (
+    <div class="basis-[48%] sm:basis-[22%]">
       <SegmentCard
         imgSrc={segment.imgSrc}
         imgAlt={segment.imgAlt}
@@ -118,6 +108,9 @@ const segments = [
         hoverText={segment.hoverText}
         delay={segment.delay}
       />
-    ))}
-  </div>
+    </div>
+  ))}
+</div>
+
+
 </section>
