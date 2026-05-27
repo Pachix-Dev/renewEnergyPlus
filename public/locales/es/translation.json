@@ -14,7 +14,7 @@
             "option_3": "Perfil del expositor",
             "option_4": "Servicios a Expositor",
             "option_5": "Contrato de Patrocinios RE+",
-            "option_6": "Factsheet RE+ 2027",
+            "option_6": "Factsheet RE+",
             "option_7": "Contrato de Exposición RE+",
             "option_8": "Plano RE+",
             "option_9": "PROGRAMA DE CONFERENCIAS PREMIUM",
@@ -272,8 +272,8 @@
     },
     "AboutSSM": {
         "title": "ACERCA DE RE+ MEXICO",
-        "description": "México se ha propuesto alcanzar un 45% de generación de energía renovable para 2030.<br /><br />Nuestro país cuenta con un extraordinario potencial en energía solar y eólica, por lo que para cumplir este objetivo se requiere el compromiso y la colaboración de toda la industria. <br /><br />RE+ MEXICO se establece como la plataforma estratégica para impulsar a nuestro país en esta acelerada transición hacia un futuro energético sostenible, conectando a los principales actores del sector para reducir las emisiones de gases de efecto invernadero y aprovechar al máximo la capacidad energética renovable de México.<br /><br />En nuestra séptima edición, del 14 al 16 de abril, en Expo Guadalajara, Jalisco, reuniremos a más de 220 expositores líderes en los sectores de Energía Solar y Almacenamiento, Hidrógeno Verde, Energía Eólica, Microrredes, así como a más de 50 especialistas en un programa académico y exclusivos espacios de networking para fortalecer toda la cadena de valor en energías renovables.",
-        "description2": "¡Nos vemos en RE+ MEXICO 2026! <br />14 al 16 de abril, Expo Guadalajara, Jalisco."
+        "description": "México se ha propuesto alcanzar un 45% de generación de energía renovable para 2030.<br /><br />Nuestro país cuenta con un extraordinario potencial en energía solar y eólica, por lo que para cumplir este objetivo se requiere el compromiso y la colaboración de toda la industria. <br /><br />RE+ MEXICO se establece como la plataforma estratégica para impulsar a nuestro país en esta acelerada transición hacia un futuro energético sostenible, conectando a los principales actores del sector para reducir las emisiones de gases de efecto invernadero y aprovechar al máximo la capacidad energética renovable de México.<br /><br />En nuestra séptima edición, del 20 al 22 de abril, en Expo Guadalajara, Jalisco, reuniremos a más de 220 expositores líderes en los sectores de Energía Solar y Almacenamiento, Hidrógeno sustentable, Energía Eólica, Componentes, Equipo especializado, Servicios y Consultoría, así como a más de 50 especialistas en un programa académico y exclusivos espacios de networking para fortalecer toda la cadena de valor en energías renovables.",
+        "description2": "¡Nos vemos en RE+ MEXICO 2027! <br />20 al 22 de abril, Expo Guadalajara, Jalisco"
     },
     "AboutReEvents": {
         "title": "Acerca de RE+ Events",
