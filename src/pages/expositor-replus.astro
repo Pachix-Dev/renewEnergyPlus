@@ -35,15 +35,26 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
     <!-- about expositor section -->
     <div
       class="w-full grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-10 max-w-5xl mx-auto px-4 m-5"
+      data-aos="fade-up"
+      data-aos-duration="1000"
     >
-      <div class="flex items-center justify-center">
+      <div
+        class="flex items-center justify-center"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
         <img
           src="/img/imagen2027/img_expositor_info.webp"
           alt=""
           class="w-[250px] sm:w-[450px]"
         />
       </div>
-      <div class="flex flex-col justify-center items-center">
+      <div
+        class="flex flex-col justify-center items-center"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="150"
+      >
         <p
           set:html={t("exhibitors.text_1")}
           class="text-gray-800 text-justify p-4 sm:p-6 lg:p-10 leading-relaxed"
@@ -57,21 +68,39 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
       </div>
     </div>
 
-    <!--  -->
-    <div class="bg-[url('/img/imagen2027/bg_itos_expositores.png')] sm:h-[450px] bg-cover bg-center flex flex-col items-center justify-center text-white text-center p-4"
+    <!-- accesos directos a materiales comerciales -->
+    <div
+      class="bg-[url('/img/imagen2027/bg_itos_expositores.png')] sm:h-[450px] bg-cover bg-center flex flex-col items-center justify-center text-white text-center p-4"
+      data-aos="fade-up"
+      data-aos-duration="1000"
     >
-      <p class="text-2xl sm:text-4xl font-bold max-w-5xl drop-shadow-2xl leading-relaxed">
+      <p
+        class="text-2xl sm:text-4xl font-bold max-w-5xl drop-shadow-2xl leading-relaxed"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         {t("exhibitors.text_2")}
       </p>
-      <div class="flex flex-wrap justify-center items-center gap-4 mt-8 p-4 rounded-lg">
-
+      <div
+        class="flex flex-wrap justify-center items-center gap-4 sm:mt-8 sm:p-4 rounded-lg"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="150"
+      >
         <!-- Factsheet download button -->
         <a
-          href={ currentLanguage === "es" ? "/doc/Factsheet _RE+_2027_esp_v2_26_05_2026.pdf" : "/doc/Factsheet _RE+_2027_eng_v2_26_05_2026.pdf" }
+          href={currentLanguage === "es"
+            ? "/doc/Factsheet _RE+_2027_esp_v2_26_05_2026.pdf"
+            : "/doc/Factsheet _RE+_2027_eng_v2_26_05_2026.pdf"}
           target="_blank"
           class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.06]"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="100"
         >
-          <span class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none">
+          <span
+            class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none"
+          >
             {t("menu.submenu_2.option_6")}
           </span>
           <span
@@ -89,18 +118,22 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
                 stroke="currentColor"
                 stroke-width="2.8"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
+                stroke-linejoin="round"></path>
             </svg>
           </span>
         </a>
 
         <!-- Plano section button -->
         <a
-          href={ `${base}/plano-re-plus-mexico-2027` }
+          href={`${base}/plano-re-plus-mexico-2027`}
           class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.02]"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="200"
         >
-          <span class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none">
+          <span
+            class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none"
+          >
             {t("menu.submenu_2.option_8")}
           </span>
           <span
@@ -118,19 +151,25 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
                 stroke="currentColor"
                 stroke-width="2.8"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
+                stroke-linejoin="round"></path>
             </svg>
           </span>
         </a>
-        
+
         <!-- Sponsorship download button -->
         <a
-          href={ currentLanguage === "es" ? "/doc/RE+_MEXICO_PATROCINIOS_2027_ESP_V3_26_05_2026.pdf" : "/doc/RE+_MEXICO_SPONSORSHIPS_2027_ENG_V3_26_05_2026.pdf" }
+          href={currentLanguage === "es"
+            ? "/doc/RE+_MEXICO_PATROCINIOS_2027_ESP_V3_26_05_2026.pdf"
+            : "/doc/RE+_MEXICO_SPONSORSHIPS_2027_ENG_V3_26_05_2026.pdf"}
           target="_blank"
           class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.02]"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="300"
         >
-          <span class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none">
+          <span
+            class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none"
+          >
             {t("menu.submenu_2.option_14")}
           </span>
           <span
@@ -148,12 +187,104 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
                 stroke="currentColor"
                 stroke-width="2.8"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
+                stroke-linejoin="round"></path>
             </svg>
           </span>
         </a>
-        
+      </div>
+    </div>
+
+    <!-- Segmentos de exhibición RE+ MEXICO 2027 -->
+    <div
+      class="flex items-center justify-center p-4"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="text-center mx-auto sm:p-6">
+        <p
+          class="text-xl sm:text-4xl font-extrabold text-[#3333FF] leading-relaxed uppercase"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          Segmentos de exhibición RE+ MEXICO 2027
+        </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 mt-8 p-0 sm:p-4 w-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="150"
+        >
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_energia_solar.webp"
+              : "/img/imagen2027/seg_energia_solar.webp_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_eficiencia_energetica.webp"
+              : "/img/imagen2027/seg_eficiencia_energetica_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_almacenamiento.webp"
+              : "/img/imagen2027/seg_almacenamiento_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_energia_eolica.webp"
+              : "/img/imagen2027/seg_energia_eolica_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_hidrogeno_renovable.webp"
+              : "/img/imagen2027/seg_hidrogeno_renovable_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_servicios_consultoria.webp"
+              : "/img/imagen2027/seg_servicios_consultoria_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_componente_equipo.webp"
+              : "/img/imagen2027/seg_componente_equipo_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="700"
+          />
+        </div>
       </div>
     </div>
   </section>
