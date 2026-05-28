@@ -61,7 +61,7 @@
         "title_experience_premium": "Experiencia Premium",
         "description_experience_premium": "Vive una experiencia inolvidable con nuestro acceso premium lleno de beneficios exclusivos.",
         "register_text": "Descubre las últimas tecnologías y asiste sin costo a talleres especializados.",
-        "event-date":"14 – 16 de Abril",
+        "event-date":"20 al 22 de Abril, 2027",
         "program": "Programa de conferencias premium",
         "sponsorship": "Patrocinios y experiencias",
         "results": "Resultados 2023",
@@ -392,7 +392,7 @@
         "subscription": "Suscribirse al boletín",
         "project_manager" : "Directora de proyecto",
         "sales_manager" : "Patrocinios y Experiencias",
-        "event-date":"14 – 16 de Abril, 2026",
+        "event-date":"20 – 22 de Abril, 2026",
         "message_button":"Enviar mensaje"
     },
     "hotels": {
@@ -767,5 +767,9 @@
         "tag02": "Bebidas",
         "tag03": "Networking",
         "button": "Adquiere tu acceso Premium"
+    },
+    "exhibitors": {
+        "text_1": "Forma parte de la plataforma líder en energía renovable y almacenamiento en México, y conecta con una audiencia altamente especializada.<br /><br />En RE+ MEXICO, reunimos a empresas, innovadores y líderes del sector energético que están impulsando la transición energética, generando oportunidades reales de negocio en industrias clave como solar, almacenamiento, eólica, hidrógeno y redes inteligentes.",
+        "text_2": "Descarga materiales esenciales para maximizar tu experiencia como expositor en RE+ MEXICO 2027"
     }
 }

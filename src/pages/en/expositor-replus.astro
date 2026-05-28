@@ -1,0 +1,160 @@
+---
+import i18next, { changeLanguage, t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("en");
+
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
+---
+
+<Layout title="RE+ MEXICO | Expositor">
+  <section>
+    <!-- header sección -->
+    <div
+      class="bg-[url('/img/imagen2027/bg_hero_about.jpg')] sm:min-h-80 bg-cover bg-center flex items-center justify-center"
+    >
+      <div
+        class="text-center max-w-4xl mx-auto flex flex-col items-center justify-center h-[80px] sm:h-full py-20 px-4 text-white"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
+        <h1
+          class="text-3xl sm:text-4xl lg:text-6xl font-black mb-6 leading-tight px-2 uppercase"
+        >
+          {
+            currentLanguage === "es"
+              ? " Quiero ser expositor"
+              : "I want to be an exhibitor"
+          }
+        </h1>
+        <div class="w-32 h-1 bg-white mx-auto rounded-full"></div>
+      </div>
+    </div>
+
+    <!-- about expositor section -->
+    <div
+      class="w-full grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-10 max-w-5xl mx-auto px-4 m-5"
+    >
+      <div class="flex items-center justify-center">
+        <img
+          src="/img/imagen2027/img_expositor_info.webp"
+          alt=""
+          class="w-[250px] sm:w-[450px]"
+        />
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <p
+          set:html={t("exhibitors.text_1")}
+          class="text-gray-800 text-justify p-4 sm:p-6 lg:p-10 leading-relaxed"
+        />
+        <span
+          class="text-white p-4 sm:p-6 lg:p-5 leading-relaxed font-extrabold uppercase text-sm sm:text-lg w-full text-center bg-[#3333FF] rounded-lg block"
+        >
+          {t("home.event-date")}
+          <br /> EXPO GUADALAJARA, JALISCO
+        </span>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="bg-[url('/img/imagen2027/bg_itos_expositores.png')] sm:h-[450px] bg-cover bg-center flex flex-col items-center justify-center text-white text-center p-4"
+    >
+      <p class="text-2xl sm:text-4xl font-bold max-w-5xl drop-shadow-2xl leading-relaxed">
+        {t("exhibitors.text_2")}
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-4 mt-8 p-4 rounded-lg">
+
+        <!-- Factsheet download button -->
+        <a
+          href={ currentLanguage === "es" ? "/doc/Factsheet _RE+_2027_esp_v2_26_05_2026.pdf" : "/doc/Factsheet _RE+_2027_eng_v2_26_05_2026.pdf" }
+          target="_blank"
+          class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.06]"
+        >
+          <span class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none">
+            {t("menu.submenu_2.option_6")}
+          </span>
+          <span
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff0066] rounded-full flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-10 h-10 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
+        </a>
+
+        <!-- Plano section button -->
+        <a
+          href={ `${base}/plano-re-plus-mexico-2027` }
+          class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.02]"
+        >
+          <span class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none">
+            {t("menu.submenu_2.option_8")}
+          </span>
+          <span
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff0066] rounded-full flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-10 h-10 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
+        </a>
+        
+        <!-- Sponsorship download button -->
+        <a
+          href={ currentLanguage === "es" ? "/doc/RE+_MEXICO_PATROCINIOS_2027_ESP_V3_26_05_2026.pdf" : "/doc/RE+_MEXICO_SPONSORSHIPS_2027_ENG_V3_26_05_2026.pdf" }
+          target="_blank"
+          class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.02]"
+        >
+          <span class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none">
+            {t("menu.submenu_2.option_14")}
+          </span>
+          <span
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff0066] rounded-full flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-10 h-10 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+</Layout>

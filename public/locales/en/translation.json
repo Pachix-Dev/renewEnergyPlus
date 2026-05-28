@@ -62,7 +62,7 @@
         "title_experience_premium": "Premium Experience",
         "description_experience_premium": "Enjoy an unforgettable experience with our premium access full of exclusive benefits.",
         "register_text": "Discover the latest technologies and attend specialized workshops for free.",
-        "event-date": "April 14th - 16th",
+        "event-date": "April 20th - 22nd, 2027",
         "program": "Premium Conference Program",
         "sponsorship": "Sponsorship & Experiences",
         "results": "Results report 2023",
@@ -769,5 +769,9 @@
         "tag02": "Industry Leaders",
         "tag03": "Networking",
         "button": "Get your Premium access"
+    },
+    "exhibitors": {
+        "text_1": "Be part of Mexico’s leading renewable energy and energy storage platform and connect with a highly specialized audience.<br /><br />At RE+ MEXICO, we bring together companies, innovators, and leaders in the energy sector who are driving the energy transition, creating real business opportunities in key industries such as solar, energy storage, wind, hydrogen, and smart grids.",
+        "text_2": "Download essential materials to maximize your experience as an exhibitor at RE+ MEXICO 2027"
     }
 }
