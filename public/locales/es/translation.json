@@ -770,6 +770,31 @@
     },
     "exhibitors": {
         "text_1": "Forma parte de la plataforma líder en energía renovable y almacenamiento en México, y conecta con una audiencia altamente especializada.<br /><br />En RE+ MEXICO, reunimos a empresas, innovadores y líderes del sector energético que están impulsando la transición energética, generando oportunidades reales de negocio en industrias clave como solar, almacenamiento, eólica, hidrógeno y redes inteligentes.",
-        "text_2": "Descarga materiales esenciales para maximizar tu experiencia como expositor en RE+ MEXICO 2027"
+        "text_2": "Descarga materiales esenciales para maximizar tu experiencia como expositor en RE+ MEXICO 2027",
+        "interests":{
+            "visitors": {
+                "title": "PRINCIPALES INTERESES DE NUESTROS VISITANTES",
+                "item_1": "Energía solar",
+                "item_2": "Asesoramiento energético",
+                "item_3": "Almacenamiento de energía",
+                "item_4": "Energía renovable",
+                "item_5": "Eficiencia energética",
+                "item_6": "Innovación",
+                "item_7": "Calidad de la energía",
+                "item_8": "Entre otras"
+            },
+            "industries": {
+                "title": "INDUSTRIAS CON MAYOR PRESENCIA",
+                "item_1": "Integradores solares",
+                "item_2": "Ingeniería de proyectos",
+                "item_3": "Instaladores",
+                "item_4": "Empresas de la industria eléctrica",
+                "item_5": "Distribuidores de paneles solares",
+                "item_6": "Fabricantes",
+                "item_7": "Servicios de consultoría",
+                "item_8": "Contratistas de la industria",
+                "item_9": "Entre otras"
+            }
+        }
     }
 }

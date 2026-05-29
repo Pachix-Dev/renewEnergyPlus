@@ -288,7 +288,75 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
         </div>
       </div>
     </div>
-    
+
+    <!-- Intereses e industrias RE+ MEXICO 2027 -->
+    <div class="flex justify-center items-center px-4" data-aos="fade-up" data-aos-duration="1000">
+      <div class="relative w-full max-w-[1080px] overflow-hidden rounded-[28px] shadow-[0_24px_48px_rgba(7,30,88,0.35)]">
+        <div class="relative px-5 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-14 text-white bg-[url('/img/imagen2027/background_hero_2027.webp')] sm:min-h-80 bg-cover bg-center flex items-center justify-center">
+          
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+            <div class="text-left">
+              <h3 class="text-center md:text-left text-[clamp(1.2rem,2.1vw,1.6rem)] font-semibold uppercase leading-[1.1] tracking-tight">
+                {t("exhibitors.interests.visitors.title")}
+              </h3>
+              <ul class="mt-5 space-y-2 text-[clamp(1rem,1.45vw,1.3rem)] leading-snug font-medium text-center md:text-left">
+                <li><strong class="font-black">23%</strong> {t("exhibitors.interests.visitors.item_1")}</li>
+                <li><strong class="font-black">13%</strong> {t("exhibitors.interests.visitors.item_2")}</li>
+                <li><strong class="font-black">13%</strong> {t("exhibitors.interests.visitors.item_3")}</li>
+                <li><strong class="font-black">6%</strong> {t("exhibitors.interests.visitors.item_4")}</li>
+                <li><strong class="font-black">5%</strong> {t("exhibitors.interests.visitors.item_5")}</li>
+                <li><strong class="font-black">3%</strong> {t("exhibitors.interests.visitors.item_6")}</li>
+                <li><strong class="font-black">3%</strong> {t("exhibitors.interests.visitors.item_7")}</li>
+                <li class="pl-0 md:pl-[3.8rem]">{t("exhibitors.interests.visitors.item_8")}</li>
+              </ul>
+            </div>
+
+            <div class="text-left md:pl-10 md:border-l md:border-white/60">
+              <h3 class="text-center md:text-left text-[clamp(1.2rem,2.1vw,1.6rem)] font-semibold uppercase leading-[1.1] tracking-tight">
+                {t("exhibitors.interests.industries.title")}
+              </h3>
+              <ul class="mt-5 space-y-2 text-[clamp(1rem,1.45vw,1.3rem)] leading-snug font-medium text-center md:text-left">
+                <li><strong class="font-black">15%</strong> {t("exhibitors.interests.industries.item_1")}</li>
+                <li><strong class="font-black">13%</strong> {t("exhibitors.interests.industries.item_2")}</li>
+                <li><strong class="font-black">11%</strong> {t("exhibitors.interests.industries.item_3")}</li>
+                <li><strong class="font-black">10%</strong> {t("exhibitors.interests.industries.item_4")}</li>
+                <li><strong class="font-black">8%</strong> {t("exhibitors.interests.industries.item_5")}</li>
+                <li><strong class="font-black">7%</strong> {t("exhibitors.interests.industries.item_6")}</li>
+                <li><strong class="font-black">6%</strong> {t("exhibitors.interests.industries.item_7")}</li>
+                <li><strong class="font-black">6%</strong> {t("exhibitors.interests.industries.item_8")}</li>
+                <li class="pl-0 md:pl-[3.8rem]">{t("exhibitors.interests.industries.item_9")}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href={`${base}/contacto`}
+          class="relative z-10 flex items-center justify-center gap-4 bg-gradient-to-r from-[#2E33EA] to-[#3938FF] py-4 sm:py-5 px-6 text-white uppercase tracking-[0.14em] sm:tracking-[0.18em] font-black text-[clamp(1.05rem,3.7vw,1.75rem)] leading-none border-t-8 border-white  transition-transform duration-300 hover:scale-[1.04]"
+          aria-label="Ir a contacto"
+        >
+          <span>{currentLanguage == "es" ? "CONTÁCTANOS" : "CONTACT US"}</span>
+          <span class="flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white text-[#2E33EA]">
+            <svg
+              class="h-6 w-6 sm:h-8 sm:w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
     <!-- Tarifas de Stand RE+ MEXICO 2027 -->
     <Tariffs />
   </section>

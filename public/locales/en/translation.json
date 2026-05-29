@@ -772,6 +772,31 @@
     },
     "exhibitors": {
         "text_1": "Be part of Mexico’s leading renewable energy and energy storage platform and connect with a highly specialized audience.<br /><br />At RE+ MEXICO, we bring together companies, innovators, and leaders in the energy sector who are driving the energy transition, creating real business opportunities in key industries such as solar, energy storage, wind, hydrogen, and smart grids.",
-        "text_2": "Download essential materials to maximize your experience as an exhibitor at RE+ MEXICO 2027"
+        "text_2": "Download essential materials to maximize your experience as an exhibitor at RE+ MEXICO 2027",
+          "interests":{
+            "visitors": {
+                "title": "OUR VISITORS' MAIN INTERESTS",
+                "item_1": "Solar Energy",
+                "item_2": "Energy Consulting",
+                "item_3": "Energy Storage",
+                "item_4": "Renewable Energy",
+                "item_5": "Energy Efficiency",
+                "item_6": "Innovation",
+                "item_7": "Energy Quality",
+                "item_8": "Among others"
+            },
+            "industries": {
+                "title": "INDUSTRIES WITH THE HIGHEST PRESENCE",
+                "item_1": "Solar Integrators",
+                "item_2": "Project Engineering",
+                "item_3": "Installers",
+                "item_4": "Electric Industry Companies",
+                "item_5": "Solar Panel Distributors",
+                "item_6": "Manufacturers",
+                "item_7": "Consulting Services",
+                "item_8": "Industry Contractors",
+                "item_9": "Among others"
+            }
+        }
     }
 }
