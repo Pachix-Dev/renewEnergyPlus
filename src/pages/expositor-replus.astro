@@ -1,6 +1,7 @@
 ---
 import i18next, { changeLanguage, t } from "i18next";
 import Layout from "../layouts/Layout.astro";
+import Tariffs from "../components/Tariffs.astro";
 
 changeLanguage("es");
 
@@ -287,5 +288,8 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
         </div>
       </div>
     </div>
+    
+    <!-- Tarifas de Stand RE+ MEXICO 2027 -->
+    <Tariffs />
   </section>
 </Layout>
