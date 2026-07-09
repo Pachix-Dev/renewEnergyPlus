@@ -34,12 +34,8 @@ const currentLanguage = i18next.language;
           data-aos-delay="300"
         />
     </div>
-    <p class="text-center lg:text-left text-xl md:text-2xl lg:text-3xl tracking-wide leading-relaxed font-semibold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-      {
-        currentLanguage === "es"
-          ? "LA FERIA LÍDER EN ENERGÍAS RENOVABLES"
-          : "THE LEADING FAIR IN RENEWABLE ENERGIES"
-      }
+    <p class="text-center lg:text-left text-xl md:text-2xl lg:text-3xl tracking-wide leading-relaxed font-semibold uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+      {t("home.slogan")}
     </p>
   </div>
 </section>
