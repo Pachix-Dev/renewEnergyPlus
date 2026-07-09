@@ -38,7 +38,7 @@ export function ContactForm({ language }) {
       setSendStatus(true)
 
       // Guardar datos en la base de datos
-      const res = await fetch('https://re-plus-mexico.com.mx/expositor-landing-email',
+      const res = await fetch('https://re-plus-mexico.com.mx/server/expositor-landing-email',
         leadRequestOptions
       )
       const contentType = res.headers.get('content-type') ?? ''
