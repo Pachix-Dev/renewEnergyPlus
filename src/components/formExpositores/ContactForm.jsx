@@ -85,12 +85,12 @@ export function ContactForm({ language }) {
       
       <form
         id='form-contact'
-        className='mt-10 space-y-6  mx-auto border border-[#10ba8c]/30 bg-gradient-to-br from-[#f3fbf7] via-white to-[#e7f7f1] text-[#01513b] backdrop-blur rounded-lg p-6 md:p-8 shadow-[0_18px_45px_rgba(1,81,59,0.12)]'
+        className='mt-10 space-y-6  mx-auto border border-[#1633A8]/30 bg-gradient-to-br from-[#f3fbf7] via-white to-[#e7f7f1] backdrop-blur rounded-lg p-6 md:p-8 shadow-[0_18px_45px_rgba(1,81,59,0.12)]'
         onSubmit={handleSubmit}
         aria-labelledby='contact-form-title'
       >
         <div className='mb-2'>
-          <h2 id='contact-form-title' className='text-xl md:text-2xl font-bold mb-10 text-center font-n27'>
+          <h2 id='contact-form-title' className='text-xl md:text-2xl font-bold mb-10 text-center'>
            {language === 'es' ? 'Completa el formulario y nos pondremos en contacto contigo.' : 'Complete the form and we will get in touch with you.'}
           </h2>
         </div>
@@ -98,10 +98,10 @@ export function ContactForm({ language }) {
         <div>
           <label
             htmlFor='company'
-            className='flex items-center gap-1 mb-1 text-sm font-semibold text-[#01513b] font-n27'
+            className='flex items-center gap-1 mb-1 text-sm font-semibold text-black font-n27'
           >
             <span>{language === 'es' ? 'Empresa' : 'Company'}</span>
-            <span className='text-[#0d803a]' aria-hidden='true'>*</span>
+            <span className='text-red-700' aria-hidden='true'>*</span>
           </label>
           <input
             type='text'
@@ -118,10 +118,10 @@ export function ContactForm({ language }) {
         <div>
           <label
             htmlFor='sector'
-            className='flex items-center gap-1 mb-1 text-sm font-semibold text-[#01513b] font-n27'
+            className='flex items-center gap-1 mb-1 text-sm font-semibold text-black font-n27'
           >
             <span>{language === 'es' ? 'Sector' : 'Industry Sector'}</span>
-            <span className='text-[#0d803a]' aria-hidden='true'>*</span>
+            <span className='text-red-700' aria-hidden='true'>*</span>
           </label>
           <select
             id='sector'
@@ -151,10 +151,10 @@ export function ContactForm({ language }) {
         <div>
           <label
             htmlFor='name'
-            className='flex items-center gap-1 mb-1 text-sm font-semibold text-[#01513b] font-n27'
+            className='flex items-center gap-1 mb-1 text-sm font-semibold text-black font-n27'
           >
             <span>{language === 'es' ? 'Nombre' : 'Name'}</span>
-            <span className='text-[#0d803a]' aria-hidden='true'>*</span>
+            <span className='text-red-700' aria-hidden='true'>*</span>
           </label>
           <input
             type='text'
@@ -171,10 +171,10 @@ export function ContactForm({ language }) {
         <div>
           <label
             htmlFor='email'
-            className='flex items-center gap-1 mb-1 text-sm font-semibold text-[#01513b] font-n27'
+            className='flex items-center gap-1 mb-1 text-sm font-semibold text-black font-n27'
           >
             <span>Email</span>
-            <span className='text-[#0d803a]' aria-hidden='true'>*</span>
+            <span className='text-red-700' aria-hidden='true'>*</span>
           </label>
           <input
             type='email'
@@ -191,7 +191,7 @@ export function ContactForm({ language }) {
         <div>
           <label
             htmlFor='countrycodes'
-            className='block mb-1 text-sm font-semibold text-[#01513b] font-n27'
+            className='block mb-1 text-sm font-semibold text-black font-n27'
           >
             {language === 'es' ? 'Código de país + número de teléfono' : 'Country code + phone number'}
           </label>
@@ -241,7 +241,7 @@ export function ContactForm({ language }) {
             className='flex items-center gap-1 mb-1 text-sm font-semibold text-[#01513b] font-n27'
           >
             <span>{language === 'es' ? 'Mensaje' : 'Message'}</span>
-            <span className='text-[#0d803a]' aria-hidden='true'>*</span>
+            <span className='text-red-700' aria-hidden='true'>*</span>
           </label>
           <textarea
             id='message'
@@ -252,10 +252,10 @@ export function ContactForm({ language }) {
             required
             aria-required='true'
           ></textarea>
-          <p className='mt-1 text-xs text-[#0d803a] font-n27'>{language === 'es' ? 'Sé específico para que podamos ayudarte mejor.' : 'Be specific so we can help you better.'}</p>
+          <p className='mt-1 text-xs text-blue-700 font-n27'>{language === 'es' ? 'Sé específico para que podamos ayudarte mejor.' : 'Be specific so we can help you better.'}</p>
         </div>
         {sendStatus ? (
-          <span className='text-[#01513b] flex items-center font-n27' aria-live='polite'>
+          <span className='text-blue-700 flex items-center font-n27' aria-live='polite'>
             <svg
               className='animate-spin -ml-1 mr-3 h-5 w-5 text-[#10ba8c]'
               xmlns='http://www.w3.org/2000/svg'
@@ -282,7 +282,7 @@ export function ContactForm({ language }) {
           <>
           <button
                 type='submit'
-                className='inline-flex items-center justify-center gap-2 text-white bg-[#0d803a] hover:bg-[#01513b] focus:ring-4 focus:outline-none focus:ring-[#10ba8c]/30 font-semibold rounded-lg w-full sm:w-auto px-5 py-2.5 text-center shadow-sm transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-ellipsis text-sm sm:text-base'
+                className='inline-flex items-center justify-center gap-2 text-white bg-blue-700 hover:bg-[#01513b] focus:ring-4 focus:outline-none focus:ring-[#10ba8c]/30 font-semibold rounded-lg w-full sm:w-auto px-5 py-2.5 text-center shadow-sm transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-ellipsis text-sm sm:text-base'
                 disabled={sendStatus}
                 aria-disabled={sendStatus}
               >

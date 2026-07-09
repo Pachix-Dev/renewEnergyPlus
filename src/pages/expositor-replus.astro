@@ -3,6 +3,7 @@ import i18next, { changeLanguage, t } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import Tariffs from "../components/Tariffs.astro";
 import { ContactForm } from "../components/formExpositores/ContactForm";
+import ExhibitorForm from "../components/formExpositores/ExhibitorForm.astro";
 
 changeLanguage("es");
 
@@ -13,29 +14,25 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 <Layout title="RE+ MEXICO | Expositor">
   <section>
     <!-- header sección -->
-    <div
-      class="bg-[url('/img/imagen2027/bg_hero_about.jpg')] sm:min-h-80 bg-cover bg-center flex items-center justify-center"
-    >
+    <div class="bg-[url('/img/imagen2027/bg_hero_about.jpg')] h-32 sm:min-h-52 bg-cover bg-center flex items-center justify-center" >
       <div
         class="text-center max-w-4xl mx-auto flex flex-col items-center justify-center h-[80px] sm:h-full py-20 px-4 text-white"
         data-aos="fade-down"
         data-aos-duration="1000"
       >
         <h1
-          class="text-3xl sm:text-4xl lg:text-6xl font-black mb-6 leading-tight px-2 uppercase"
+          class="text-3xl sm:text-4xl lg:text-6xl font-black leading-tight px-2 uppercase"
         >
-          {
-            currentLanguage === "es"
-              ? " Quiero ser expositor"
-              : "I want to be an exhibitor"
-          }
+          { currentLanguage === "es"? " Quiero ser expositor" : "I want to be an exhibitor"}
         </h1>
         <div class="w-32 h-1 bg-white mx-auto rounded-full"></div>
       </div>
     </div>
 
+    <ExhibitorForm />
+
     <!-- about expositor section -->
-    <div
+    <!-- <div
       class="w-full grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-10 max-w-5xl mx-auto px-4 m-5"
       data-aos="fade-up"
       data-aos-duration="1000"
@@ -70,7 +67,7 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
       </div>
     </div>
 
-    <ContactForm language={currentLanguage} client:visible />
+    <ContactForm language={currentLanguage} client:visible /> -->
 
     <!-- accesos directos a materiales comerciales -->
     <div
