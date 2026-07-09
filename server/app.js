@@ -406,6 +406,72 @@ app.post('/update-print-user', async (req, res) => {
     }
 });
 
+app.post('/expositor-landing-email', async (req, res) => {
+    try{
+        const { body } = req;
+
+        // Validar que el expositor no exista previamente
+        const expositorExists = await RegisterModel.check_expositor_exists(body.email);
+        if (expositorExists) {
+            return res.status(400).send({
+                status: false,
+                message: 'Ya has registrado una solicitud con este correo electrónico...'
+            });
+        }
+
+        // Guardar el lead en la base de datos
+        await RegisterModel.create_expositor_lead({...body}); 
+        
+        await resend.emails.send({
+          from: "REPLUS 2027 - LEAD EXPOSITOR  <noreply@re-plus-mexico.com.mx>",
+          to: "jesus.zermeno@igeco.mx",
+          cc: "",
+          subject: "Nuevo Lead Expositor REPLUS MEXICO 2027",
+          html: `
+            <h1>Un nuevo expositor ha solicitado información</h1>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <tr>
+                        <td>Sector</td>
+                        <td>${body.sector}</td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>${body.name}</td>
+                    </tr>
+                    <tr>
+                        <td>Correo</td>
+                        <td>${body.email}</td>
+                    </tr>
+                    <tr>
+                        <td>Empresa</td>
+                        <td>${body.company}</td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono</td>
+                        <td>${body.phone}</td>
+                    </tr>
+                    <tr>
+                        <td>Mensaje</td>
+                        <td>${body.message}</td>
+                    </tr>
+                </table>
+            `,
+        });
+
+        return res.send({
+            status: true,
+            message: 'Gracias por registrarte, te hemos enviado un correo de confirmación a tu bandeja de entrada...'
+        });
+
+    } catch (err) {
+        console.log(err);
+        return res.status(500).send({
+            status: false,
+            message: 'No pudimos enviarte el correo de confirmación de tu registro, por favor descarga tu registro en este pagina y presentalo hasta el dia del evento...'
+        });             
+    }          
+})
+
 app.get('/search-user', async (req, res) => {
     const { uuid } = req.query;
     const user = await RegisterModel.search_user(uuid);

@@ -1,0 +1,202 @@
+---
+import { ContactForm } from "./ContactForm";
+import i18next, { t } from "i18next";
+const currentLanguage = i18next.language;
+const es = currentLanguage === "es";
+---
+
+<section class="exhibitor-form" aria-labelledby="exhibitor-form-title">
+  <div class="exhibitor-form__inner">
+    <div
+      class="exhibitor-form__media"
+      data-aos="fade-right"
+      data-aos-duration="900"
+    >
+      <img
+        src="/img/gallery/2025/home/7_eco_gallery.webp"
+        alt={es
+          ? "Área de exhibición de Ecomondo Mexico"
+          : "Ecomondo Mexico exhibition area"}
+        class="exhibitor-form__image"
+        loading="lazy"
+      />
+      <div class="exhibitor-form__overlay" aria-hidden="true"></div>
+      <div class="exhibitor-form__copy">
+        <h2 id="exhibitor-form-title" class="exhibitor-form__title">
+          {currentLanguage === "es"
+            ? "¡Asegura tu espacio en Ecomondo Mexico 2027!"
+            : "Secure your space at Ecomondo Mexico 2027!"}
+        </h2>
+      </div>
+    </div>
+
+    <div
+      class="exhibitor-form__form"
+      data-aos="fade-left"
+      data-aos-duration="900"
+      data-aos-delay="120"
+    >
+      <ContactForm client:visible language={currentLanguage} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .exhibitor-form {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, #f4f7f5 0%, #ffffff 100%);
+    padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 4vw, 4rem);
+  }
+
+  .exhibitor-form__inner {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+    align-items: stretch;
+  }
+
+  .exhibitor-form__media {
+    position: relative;
+    height: 100%;
+    min-height: clamp(520px, 58vw, 760px);
+    overflow: hidden;
+    border-radius: 8px;
+    background: #01513b;
+    isolation: isolate;
+  }
+
+  .exhibitor-form__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.02);
+  }
+
+  .exhibitor-form__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(1, 81, 59, 0.12) 0%,
+        rgba(1, 81, 59, 0.54) 46%,
+        rgba(1, 81, 59, 0.94) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(1, 81, 59, 0.8) 0%,
+        rgba(13, 128, 58, 0.16) 100%
+      );
+    z-index: 1;
+  }
+
+  .exhibitor-form__copy {
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: clamp(1.75rem, 4vw, 3.25rem);
+    color: #ffffff;
+  }
+
+  .exhibitor-form__eyebrow {
+    font-family: "N27", sans-serif;
+    display: inline-flex;
+    max-width: 100%;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-radius: 999px;
+    background: rgba(1, 81, 59, 0.42);
+    font-size: clamp(0.68rem, 0.9vw, 0.8rem);
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .exhibitor-form__title {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    font-size: clamp(1.3rem, 5vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.06;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 0;
+    max-width: 12em;
+    text-wrap: balance;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.658);
+    text-align: left;
+  }
+
+  .exhibitor-form__title-line {
+    display: block;
+  }
+
+  .exhibitor-form__title-line--accent {
+    max-width: 11em;
+    color: #8cf05d;
+    font-size: 0.68em;
+    line-height: 1.12;
+  }
+
+  .exhibitor-form__form {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .exhibitor-form :global(#form-contact) {
+    width: min(100%, 640px) !important;
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 900px) {
+    .exhibitor-form {
+      padding: 2rem 1rem 3rem;
+    }
+
+    .exhibitor-form__inner {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .exhibitor-form__media {
+      min-height: clamp(520px, 58vw, 680px);
+    }
+
+    .exhibitor-form__title {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .exhibitor-form__media {
+      min-height: 90px;
+    }
+
+    .exhibitor-form__copy {
+      padding: 1.35rem;
+    }
+
+    .exhibitor-form__title {
+      font-size: clamp(1.45rem, 8vw, 2.25rem);
+      max-width: 100%;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.61);
+      text-align: center;
+    }
+  }
+</style>

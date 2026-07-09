@@ -2,6 +2,7 @@
 import i18next, { changeLanguage, t } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import Tariffs from "../../components/Tariffs.astro";
+import { ContactForm } from "../../components/formExpositores/ContactForm";
 
 changeLanguage("en");
 
@@ -68,6 +69,8 @@ const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
         </span>
       </div>
     </div>
+
+    <ContactForm language={currentLanguage} client:visible />
 
     <!-- accesos directos a materiales comerciales -->
     <div

@@ -25,7 +25,38 @@ const hableError = (error) => {
 
 export class RegisterModel {
 
-  static async create_suscriber ({               
+  // Guardar lead de expositor
+  static async create_expositor_lead({ sector, name, email, phone, message, company}) 
+  {
+    const connection = await mysql.createConnection(config)
+    try {
+      const [result] = await connection.query(
+        'INSERT INTO expositor_landing_replus	( sector, name, email, phone, message, company ) VALUES (?,?,?,?,?,?)',
+        [
+          sector,
+          name,
+          email,
+          phone,
+          message,
+          company
+        ]
+      )
+
+      return {
+        status: true,
+        insertId: result.insertId,
+        ...result,
+      }
+    } catch (error) {
+      console.log(error)
+      return hableError(error)
+    }
+    finally {
+      await connection.end()
+    }
+  }
+
+  static async create_suscriber ({            
       name,        
       email,      
     }) {
@@ -692,5 +723,18 @@ export class RegisterModel {
     }
   }
 
+  // Validar si un usuario ya existe en tabla eco_exhibitor_leads_2026
+  static async check_expositor_exists(email) {
+    const connection = await mysql.createConnection(config)
+    try {
+      const [users] = await connection.query(
+        'SELECT id FROM expositor_landing_replus WHERE email = ? LIMIT 1',
+        [email]
+      )
+      return users.length > 0
+    } finally {
+      await connection.end()
+    }
+  }
   
 }
