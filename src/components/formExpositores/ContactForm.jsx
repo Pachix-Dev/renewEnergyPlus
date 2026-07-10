@@ -133,17 +133,26 @@ export function ContactForm({ language }) {
             <option value='' defaultValue>
               {language === 'es' ? 'Elige una opción' : 'Choose an option'}
             </option>
-            <option value='Monitoreo y tratamiento del agua / Water Monitoring and Treatment'>
-              {language === 'es' ? 'Monitoreo y tratamiento del agua' : 'Water Monitoring and Treatment'}
+            <option value='Energía Solar'>
+              {language === 'es' ? 'Energía Solar' : 'Solar Energy'}
             </option>
-            <option value='Valorización de residuos y economía circular / Waste Valorization and Circular Economy'>
-              {language === 'es' ? 'Valorización de residuos y economía circular' : 'Waste Valorization and Circular Economy'}
+            <option value='Eficiencia Energética'>
+              {language === 'es' ? 'Eficiencia Energética' : 'Energy Efficiency'}
             </option>
-            <option value='Bioeconomía y aprovechamiento de recursos naturales / Bioeconomy and Natural Resource Utilization'>
-              {language === 'es' ? 'Bioeconomía y aprovechamiento de recursos naturales' : 'Bioeconomy and Natural Resource Utilization'}
+            <option value='Almacenamiento'>
+              {language === 'es' ? 'Almacenamiento' : 'Storage'}
             </option>
-            <option value='Infraestructura y ciudades sostenibles / Sustainable Infrastructure and Cities'>
-              {language === 'es' ? 'Infraestructura y ciudades sostenibles' : 'Sustainable Infrastructure and Cities'}
+            <option value='Energía Eólica'>
+              {language === 'es' ? 'Energía Eólica' : 'Wind Energy'}
+            </option>
+            <option value='Hidrógeno Renovable'>
+              {language === 'es' ? 'Hidrógeno Renovable' : 'Renewable Hydrogen'}
+            </option>
+            <option value='Servicios y consultoría'>
+              {language === 'es' ? 'Servicios y consultoría' : 'Services and Consulting'}
+            </option>
+            <option value='Componentes y equipos'>
+              {language === 'es' ? 'Componentes y equipos' : 'Components and Equipment'}
             </option>
           </select>
         </div>
