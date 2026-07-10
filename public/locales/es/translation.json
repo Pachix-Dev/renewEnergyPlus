@@ -796,5 +796,11 @@
                 "item_9": "Entre otras"
             }
         }
-    }
+    },
+    "thankYouPage": {
+    "title": "Gracias por contactarnos",
+    "description": "Hemos recibido tu información correctamente. Pronto uno de nuestros agentes se pondrá en contacto contigo.",
+    "back_home": "Regresar al inicio",
+    "textSocial": "Síguenos en "
+  }
 }

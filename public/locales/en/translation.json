@@ -798,5 +798,11 @@
                 "item_9": "Among others"
             }
         }
-    }
+    },
+    "thankYouPage": {
+    "title": "Thank you for contacting us",
+    "description": "We have received your information correctly. One of our agents will contact you soon.",
+    "back_home": "Back to Home",
+    "textSocial": "Follow us on our social networks"
+  }
 }
