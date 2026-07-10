@@ -424,8 +424,8 @@ app.post('/expositor-landing-email', async (req, res) => {
         
         await resend.emails.send({
           from: "REPLUS 2027 - LEAD EXPOSITOR  <noreply@re-plus-mexico.com.mx>",
-          to: "jesus.zermeno@igeco.mx",
-          cc: "",
+          to: "samuel.ramirez@Igeco.mx",
+          cc: "jesus.zermeno@igeco.mx, abigail.medina@Igeco.mx",
           subject: "Nuevo Lead Expositor REPLUS MEXICO 2027",
           html: `
             <h1>Un nuevo expositor ha solicitado información</h1>
@@ -453,6 +453,9 @@ app.post('/expositor-landing-email', async (req, res) => {
                     <tr>
                         <td>Mensaje</td>
                         <td>${body.message}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;"> Italian German Exhibition Company Mexico </td>
                     </tr>
                 </table>
             `,
