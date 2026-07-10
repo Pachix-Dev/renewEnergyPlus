@@ -425,7 +425,7 @@ app.post('/expositor-landing-email', async (req, res) => {
         await resend.emails.send({
           from: "REPLUS 2027 - LEAD EXPOSITOR  <noreply@re-plus-mexico.com.mx>",
           to: "samuel.ramirez@igeco.mx",
-          cc: "jesus.zermeno@igeco.mx",
+          cc: [ "jesus.zermeno@igeco.mx", "abigail.medina@Igeco.mx"],
           subject: "Nuevo Lead Expositor REPLUS MEXICO 2027",
           html: `
             <h1>Un nuevo expositor ha solicitado información</h1>
