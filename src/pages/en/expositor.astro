@@ -1,0 +1,549 @@
+---
+import i18next, { changeLanguage, t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Tariffs from "../../components/Tariffs.astro";
+import { ContactForm } from "../../components/formExpositores/ContactForm";
+import ExhibitorForm from "../../components/formExpositores/ExhibitorForm.astro";
+
+changeLanguage("en");
+
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
+---
+
+<Layout title="RE+ MEXICO | Expositor">
+  <section>
+    <!-- header sección -->
+    <div class="bg-[url('/img/imagen2027/bg_hero_about.jpg')] h-32 sm:min-h-52 bg-cover bg-center flex items-center justify-center" >
+      <div
+        class="text-center max-w-4xl mx-auto flex flex-col items-center justify-center h-[80px] sm:h-full py-20 px-4 text-white"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
+        <h1
+          class="text-3xl sm:text-4xl lg:text-6xl font-black leading-tight px-2 uppercase"
+        >
+          { currentLanguage === "es"? " Quiero ser expositor" : "I want to be an exhibitor"}
+        </h1>
+        <div class="w-32 h-1 bg-white mx-auto rounded-full"></div>
+      </div>
+    </div>
+
+    <ExhibitorForm />
+
+    <!-- about expositor section -->
+    <!-- <div
+      class="w-full grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-10 max-w-5xl mx-auto px-4 m-5"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div
+        class="flex items-center justify-center"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
+        <img
+          src="/img/imagen2027/img_expositor_info.webp"
+          alt=""
+          class="w-[250px] sm:w-[450px]"
+        />
+      </div>
+      <div
+        class="flex flex-col justify-center items-center"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="150"
+      >
+        <p
+          set:html={t("exhibitors.text_1")}
+          class="text-gray-800 text-justify p-4 sm:p-6 lg:p-10 leading-relaxed"
+        />
+        <span
+          class="text-white p-4 sm:p-6 lg:p-5 leading-relaxed font-extrabold uppercase text-sm sm:text-lg w-full text-center bg-[#3333FF] rounded-lg block"
+        >
+          {t("home.event-date")}
+          <br /> EXPO GUADALAJARA, JALISCO
+        </span>
+      </div>
+    </div>
+
+    <ContactForm language={currentLanguage} client:visible /> -->
+
+    <!-- Segmentos de exhibición RE+ MEXICO 2027 -->
+    <div
+      class="flex items-center justify-center p-4"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="text-center mx-auto sm:p-6">
+        <p
+          class="text-xl sm:text-4xl font-extrabold text-[#3333FF] leading-relaxed uppercase"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          Segmentos de exhibición RE+ MEXICO 2027
+        </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 mt-8 p-0 sm:p-4 w-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="150"
+        >
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_energia_solar.webp"
+              : "/img/imagen2027/seg_energia_solar.webp_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_eficiencia_energetica.webp"
+              : "/img/imagen2027/seg_eficiencia_energetica_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_almacenamiento.webp"
+              : "/img/imagen2027/seg_almacenamiento_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_energia_eolica.webp"
+              : "/img/imagen2027/seg_energia_eolica_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_hidrogeno_renovable.webp"
+              : "/img/imagen2027/seg_hidrogeno_renovable_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_servicios_consultoria.webp"
+              : "/img/imagen2027/seg_servicios_consultoria_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          />
+          <img
+            src={currentLanguage === "es"
+              ? "/img/imagen2027/seg_componente_equipo.webp"
+              : "/img/imagen2027/seg_componente_equipo_en.webp"}
+            alt=""
+            class="w-[150px] sm:w-[270px] m-0 sm:m-4"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="700"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- accesos directos a materiales comerciales -->
+    <div
+      class="bg-[url('/img/imagen2027/bg_itos_expositores.png')] sm:h-[450px] bg-cover bg-center flex flex-col items-center justify-center text-white text-center p-4 mb-8 sm:mb-12"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <p
+        class="text-2xl sm:text-4xl font-bold max-w-5xl drop-shadow-2xl leading-relaxed"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        {t("exhibitors.text_2")}
+      </p>
+      <div
+        class="flex flex-wrap justify-center items-center gap-4 sm:mt-8 sm:p-4 rounded-lg"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="150"
+      >
+        <!-- Factsheet download button -->
+        <a
+          href={currentLanguage === "es"
+            ? "/doc/Factsheet _RE+_2027_esp_v2_26_05_2026.pdf"
+            : "/doc/Factsheet _RE+_2027_eng_v2_26_05_2026.pdf"}
+          target="_blank"
+          class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.06]"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          <span
+            class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none"
+          >
+            {t("menu.submenu_2.option_6")}
+          </span>
+          <span
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff0066] rounded-full flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-10 h-10 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </span>
+        </a>
+
+        <!-- Plano section button -->
+        <a
+          href={`${base}/plano-re-plus-mexico-2027`}
+          class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.02]"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="200"
+        >
+          <span
+            class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none"
+          >
+            {t("menu.submenu_2.option_8")}
+          </span>
+          <span
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff0066] rounded-full flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-10 h-10 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </span>
+        </a>
+
+        <!-- Sponsorship download button -->
+        <a
+          href={currentLanguage === "es"
+            ? "/doc/RE+_MEXICO_PATROCINIOS_2027_ESP_V3_26_05_2026.pdf"
+            : "/doc/RE+_MEXICO_SPONSORSHIPS_2027_ENG_V3_26_05_2026.pdf"}
+          target="_blank"
+          class="mt-6 inline-flex items-center gap-4 bg-white rounded-full py-2 pl-8 pr-2 shadow-[0_12px_24px_rgba(0,0,0,0.25)] uppercase transition-transform duration-300 hover:scale-[1.02]"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="300"
+        >
+          <span
+            class="text-[#3333FF] font-extrabold tracking-[0.18em] text-xl sm:text-3xl leading-none"
+          >
+            {t("menu.submenu_2.option_14")}
+          </span>
+          <span
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-[#ff0066] rounded-full flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
+            <svg
+              class="w-10 h-10 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Intereses e industrias RE+ MEXICO 2027 -->
+    <div
+      class="flex justify-center items-center px-4"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div
+        class="relative w-full max-w-[1080px] overflow-hidden rounded-[28px] shadow-[0_24px_48px_rgba(7,30,88,0.35)]"
+      >
+        <div
+          class="relative px-5 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-14 text-white bg-[url('/img/imagen2027/background_hero_2027.webp')] sm:min-h-80 bg-cover bg-center flex items-center justify-center"
+        >
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div
+            class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12"
+          >
+            <div class="text-left">
+              <h3
+                class="text-center md:text-left text-[clamp(1.2rem,2.1vw,1.6rem)] font-semibold uppercase leading-[1.1] tracking-tight"
+              >
+                {t("exhibitors.interests.visitors.title")}
+              </h3>
+              <ul
+                class="mt-5 space-y-2 text-[clamp(1rem,1.45vw,1.3rem)] leading-snug font-medium text-center md:text-left"
+              >
+                <li>
+                  <strong class="font-black">23%</strong>
+                  {t("exhibitors.interests.visitors.item_1")}
+                </li>
+                <li>
+                  <strong class="font-black">13%</strong>
+                  {t("exhibitors.interests.visitors.item_2")}
+                </li>
+                <li>
+                  <strong class="font-black">13%</strong>
+                  {t("exhibitors.interests.visitors.item_3")}
+                </li>
+                <li>
+                  <strong class="font-black">6%</strong>
+                  {t("exhibitors.interests.visitors.item_4")}
+                </li>
+                <li>
+                  <strong class="font-black">5%</strong>
+                  {t("exhibitors.interests.visitors.item_5")}
+                </li>
+                <li>
+                  <strong class="font-black">3%</strong>
+                  {t("exhibitors.interests.visitors.item_6")}
+                </li>
+                <li>
+                  <strong class="font-black">3%</strong>
+                  {t("exhibitors.interests.visitors.item_7")}
+                </li>
+                <li class="pl-0 md:pl-[3.8rem]">
+                  {t("exhibitors.interests.visitors.item_8")}
+                </li>
+              </ul>
+            </div>
+
+            <div class="text-left md:pl-10 md:border-l md:border-white/60">
+              <h3
+                class="text-center md:text-left text-[clamp(1.2rem,2.1vw,1.6rem)] font-semibold uppercase leading-[1.1] tracking-tight"
+              >
+                {t("exhibitors.interests.industries.title")}
+              </h3>
+              <ul
+                class="mt-5 space-y-2 text-[clamp(1rem,1.45vw,1.3rem)] leading-snug font-medium text-center md:text-left"
+              >
+                <li>
+                  <strong class="font-black">15%</strong>
+                  {t("exhibitors.interests.industries.item_1")}
+                </li>
+                <li>
+                  <strong class="font-black">13%</strong>
+                  {t("exhibitors.interests.industries.item_2")}
+                </li>
+                <li>
+                  <strong class="font-black">11%</strong>
+                  {t("exhibitors.interests.industries.item_3")}
+                </li>
+                <li>
+                  <strong class="font-black">10%</strong>
+                  {t("exhibitors.interests.industries.item_4")}
+                </li>
+                <li>
+                  <strong class="font-black">8%</strong>
+                  {t("exhibitors.interests.industries.item_5")}
+                </li>
+                <li>
+                  <strong class="font-black">7%</strong>
+                  {t("exhibitors.interests.industries.item_6")}
+                </li>
+                <li>
+                  <strong class="font-black">6%</strong>
+                  {t("exhibitors.interests.industries.item_7")}
+                </li>
+                <li>
+                  <strong class="font-black">6%</strong>
+                  {t("exhibitors.interests.industries.item_8")}
+                </li>
+                <li class="pl-0 md:pl-[3.8rem]">
+                  {t("exhibitors.interests.industries.item_9")}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href={`${base}/contacto`}
+          class="relative z-10 flex items-center justify-center gap-4 bg-gradient-to-r from-[#2E33EA] to-[#3938FF] py-4 sm:py-5 px-6 text-white uppercase tracking-[0.14em] sm:tracking-[0.18em] font-black text-[clamp(1.05rem,3.7vw,1.75rem)] leading-none border-t-8 border-white transition-transform duration-300 hover:scale-[1.04]"
+          aria-label="Ir a contacto"
+        >
+          <span>{currentLanguage == "es" ? "CONTÁCTANOS" : "CONTACT US"}</span>
+          <span
+            class="flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white text-[#2E33EA]"
+          >
+            <svg
+              class="h-6 w-6 sm:h-8 sm:w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- información de visitantes profesionales -->
+    <div class="flex flex-col items-center justify-center mt-12" data-aos="fade-up" data-aos-duration="1000">
+      <div
+        class="relative border-b-8 border-b-white"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <img
+          src="/img/imagen2027/bg-section_exhibitors-01.webp"
+          alt="REPLUS MEXICO 2027 Background"
+          aria-hidden="true"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div
+          class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 min-h-[520px] bg-black/30 text-white px-4 sm:px-8 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16"
+        >
+          <div
+            class="flex flex-col items-start justify-center text-left"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            <h2
+              class="text-2xl sm:text-3xl lg:text-5xl font-bold uppercase max-w-xl leading-tight"
+            >
+              {currentLanguage === "es"
+                ? "49% de visitantes fuera de Jalisco"
+                : "49% of visitors from outside Jalisco"}
+            </h2>
+            <h3
+              class="text-lg sm:text-xl lg:text-2xl font-semibold uppercase mt-8 tracking-wide"
+            >
+              {currentLanguage === "es"
+                ? "PRINCIPALES ESTADOS QUE NOS VISITAN"
+                : "TOP STATES VISITING US"}
+            </h3>
+            <ul
+              class="mt-4 list-disc text-sm sm:text-base lg:text-lg leading-relaxed font-medium pl-5"
+            >
+              <li>Jalisco</li>
+              <li>Ciudad de México</li>
+              <li>Guanajuato</li>
+              <li>Michoacán</li>
+              <li>Nuevo León</li>
+              <li>Querétaro</li>
+            </ul>
+          </div>
+          <div
+            class="flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            <img
+              src="/img/imagen2027/icon_mexico.webp"
+              alt="REPLUS MEXICO 2027"
+              class="w-full max-w-[420px] sm:max-w-[520px] lg:max-w-[680px]"
+              data-aos="zoom-in"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="relative" data-aos="fade-up" data-aos-duration="1000">
+        <img
+          src="/img/imagen2027/bg-section_exhibitors-02.webp"
+          alt="REPLUS MEXICO 2027 Background"
+          aria-hidden="true"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 min-h-[520px] bg-black/30 text-white px-4 sm:px-8 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16"
+        >
+          <div
+            class="flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            <img
+              src="/img/imagen2027/icon_global.webp"
+              alt="REPLUS MEXICO 2027"
+              class="w-full max-w-[420px] sm:max-w-[520px] lg:max-w-[720px]"
+              data-aos="zoom-in"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            />
+          </div>
+          <div
+            class="flex flex-col items-start justify-center text-left"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            <h2
+              class="text-2xl sm:text-3xl lg:text-5xl font-bold uppercase max-w-xl leading-tight"
+            >
+              {currentLanguage === "es"
+                ? "PRINCIPALES PAÍSES QUE NOS VISITAN"
+                : "TOP COUNTRIES VISITING US"}
+            </h2>
+            <ul
+              class="mt-4 list-disc text-sm sm:text-base lg:text-lg leading-relaxed font-medium pl-5"
+            >
+              <li>{currentLanguage === "es" ? "México" : "Mexico"}</li>
+              <li>{currentLanguage === "es" ? "China" : "China"}</li>
+              <li>{currentLanguage === "es" ? "Estados Unidos" : "United States"}</li>
+              <li>{currentLanguage === "es" ? "Colombia" : "Colombia"}</li>
+              <li>{currentLanguage === "es" ? "España" : "Spain"}</li>
+              <li>{currentLanguage === "es" ? "Canadá" : "Canada"}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarifas de Stand RE+ MEXICO 2027 -->
+    <Tariffs />
+  </section>
+</Layout>
