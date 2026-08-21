@@ -42,8 +42,9 @@
             "directory": "Directorio de expositores"
         },
         "submenu_5": {
-            "title": "MEDIA HUB",
-            "option_1": "Galería"
+            "title": "CENTRO DE MEDIOS",
+            "option_1": "Noticias",
+            "option_2": "Galería"
         },
         "banner": "¡Regístrate ahora!",
         "directory":"Directorio de Expositores 2024"
