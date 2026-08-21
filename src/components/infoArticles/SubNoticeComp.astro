@@ -1,10 +1,11 @@
 ---
 import i18next from "i18next";
 const currentLanguage = i18next.language;
+const baseUrl = currentLanguage === "es" ? "/expositor" : "/en/expositor";
 ---
 
 <div class="flex justify-center">
-  <a href="" class="block w-full">
+  <a href={baseUrl} class="block w-full">
     <img
       src={currentLanguage === "es"
         ? "/img/banner_replus_es.webp"
