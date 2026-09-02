@@ -1,0 +1,64 @@
+---
+import { changeLanguage, t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("en");
+---
+
+<Layout title="Prerregistro Exitoso" description="RE+ MEXICO 2027 - Prerregistro Exitoso">
+  <section
+    class="relative flex min-h-[calc(100svh-80px)] w-full items-center justify-center overflow-hidden bg-hero-preregistro bg-cover bg-center bg-no-repeat px-5 py-16 sm:px-6 lg:px-8"
+  >
+    <div class="absolute inset-0 bg-black"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-blue-500/60"></div>
+
+    <div
+      class="relative z-10 flex w-full max-w-4xl flex-col items-center justify-center gap-10 text-center text-white"
+    >
+      <div
+        class="mx-auto flex max-w-3xl flex-col items-center text-center"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+        <p
+          class="text-xs font-semibold uppercase tracking-[0.28em] text-blue-500 sm:text-sm"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          {t("preRegistro.success.eyebrow")}
+        </p>
+
+        <h1
+          class="mt-4 text-4xl font-black uppercase leading-[1.02] text-white sm:text-5xl lg:text-6xl"
+          data-aos="fade-up"
+          data-aos-duration="850"
+          data-aos-delay="180"
+        >
+          {t("preRegistro.success.title")}
+        </h1>
+
+        <p
+          class="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8"
+          data-aos="fade-up"
+          data-aos-duration="850"
+          data-aos-delay="260"
+        >
+          {t("preRegistro.success.description")}
+        </p>
+
+        <div
+          class="mx-auto mt-8 max-w-2xl border-[0.01rem] rounded-md border-yellow-400/50 bg-yellow-400/15 px-5 py-5 text-center text-sm leading-6 text-white backdrop-blur-sm sm:text-base sm:leading-7"
+          data-aos="fade-up"
+          data-aos-duration="850"
+          data-aos-delay="340"
+        >
+          <strong class="font-extrabold text-yellow-300">
+            {t("preRegistro.success.importantLabel")}
+          </strong>{" "}
+          {t("preRegistro.success.importantText")}
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
