@@ -25,6 +25,28 @@ const hableError = (error) => {
 
 export class RegisterModel {
 
+  //Guardar prerregistro
+  static async create_preregistro({ name, email, typeRegister }) {
+    const connection = await mysql.createConnection(config);
+    try {
+      const [result] = await connection.query(
+        "INSERT INTO preregistros_replus_2027 ( name, email, typeRegister ) VALUES (?,?,?)",
+        [name, email, typeRegister],
+      );
+
+      return {
+        status: true,
+        insertId: result.insertId,
+        ...result,
+      };
+    } catch (error) {
+      console.log(error);
+      return hableError(error);
+    } finally {
+      await connection.end();
+    }
+  }
+
   // Guardar lead de expositor
   static async create_expositor_lead({ sector, name, email, phone, message, company}) 
   {

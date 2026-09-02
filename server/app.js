@@ -53,6 +53,21 @@ app.get('/check-user-visit', async (req, res) => {
     }
 });
 
+app.post('/preregister-replus', async (req, res) => {
+    try {
+        const { body } = req;
+
+        const result = await RegisterModel.create_preregistro(body);
+        return res.status(200).send(result);
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send({
+            status: false,
+            message: 'Error al registrar el prerregistro...'
+        });
+    }
+});
+
 app.post('/create-order-replus', async (req, res) => {
     const { body } = req;
     let total = 0;

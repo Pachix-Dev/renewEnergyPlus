@@ -23,7 +23,7 @@ export function PrerregistroForm({ translates, currentLanguage }) {
     setMessage("");
 
     try {
-      const response = await fetch(urlbase + "preregister-ecomondo", {
+      const response = await fetch(urlbase + "preregister-replus", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ export function PrerregistroForm({ translates, currentLanguage }) {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: translates.emailInvalid,
                 },
-                onChange: (e) => setEmail(e.target.value),
+                onChange: (e) => setEmail(e.target.value.trim()),
               })}
               placeholder={translates.emailPlaceholder}
               defaultValue={email}
