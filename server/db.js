@@ -12,7 +12,7 @@ const hableError = (error) => {
   if (error?.sqlState === '23000') {
     return {
       status: false,
-      message: 'Ya estas registrado con este correo electrónico...',
+      message: 'Ya estás registrado con este correo electrónico...',
     }
   }
 
