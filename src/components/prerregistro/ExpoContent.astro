@@ -1,0 +1,64 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+
+type ExpoContent = {
+  badge: string;
+  title: string;
+  cards: {
+    title: string;
+    description: string;
+  }[];
+};
+
+const content = t("preRegistro.expoContent", {
+  returnObjects: true,
+}) as ExpoContent;
+
+const icons = [
+  {
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.715 12c1.151 0 2-.849 2-2s-.849-2-2-2s-2 .849-2 2s.848 2 2 2"/><path fill="currentColor" d="M20 4H4c-1.103 0-2 .841-2 1.875v12.25C2 19.159 2.897 20 4 20h16c1.103 0 2-.841 2-1.875V5.875C22 4.841 21.103 4 20 4m0 14l-16-.011V6l16 .011z"/><path fill="currentColor" d="M14 9h4v2h-4zm1 4h3v2h-3zm-1.57 2.536c0-1.374-1.676-2.786-3.715-2.786S6 14.162 6 15.536V16h7.43z"/></svg>`,
+  },
+  {
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 14.5H1.5v-13h21v13H18m-.5 9.5a10.6 10.6 0 0 1 1.572-5.555l.428-.695v-.25h-15v.25l.428.695A10.6 10.6 0 0 1 6.5 24m9.5-9v-3.5s-1.5-1-4-1s-4 1-4 1V15m3.85-6.5s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z" />
+    </svg>`,
+  },
+  {
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M19 7s-5 7-12.5 7c-2 0-5.5 1-5.5 5v4h11v-4c0-2.5 3-1 7-8l-1.5-1.5M3 5V2h20v14h-3M11 1h4v2h-4zM6.5 14a3.5 3.5 0 1 0 0-7a3.5 3.5 0 0 0 0 7Z" />
+    </svg>`,
+  },
+  {
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16 14h.5c.827 0 1.5-.673 1.5-1.5v-9c0-.827-.673-1.5-1.5-1.5h-13C2.673 2 2 2.673 2 3.5V18l5.333-4zm-9.333-2L4 14V4h12v8z"/><path fill="currentColor" d="M20.5 8H20v6.001c0 1.1-.893 1.993-1.99 1.999H8v.5c0 .827.673 1.5 1.5 1.5h7.167L22 22V9.5c0-.827-.673-1.5-1.5-1.5"/></svg>`,
+  },
+];
+---
+
+<section class="w-full border-y border-slate-800 bg-[#101112] px-6 py-2 text-white sm:py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="text-center">
+      <h2
+        class="mx-auto mt-5 text-xl font-semibold leading-tight text-white sm:text-4xl"
+      >
+        {content.title}
+      </h2>
+    </div>
+
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {content.cards.map((card, index) => (
+        <article
+          class="min-h-[210px] rounded-lg border border-slate-800 bg-[#111315] p-7 shadow-[0_18px_60px_rgba(0,0,0,0.18)]"
+        >
+          <div
+            class="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 [&_svg]:h-6 [&_svg]:w-6"
+          >
+            <Fragment set:html={icons[index]?.svg ?? ""} />
+          </div>
+
+          <h3 class="text-lg font-bold text-white">{card.title}</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-400">{card.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

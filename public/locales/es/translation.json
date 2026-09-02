@@ -803,5 +803,61 @@
     "description": "Hemos recibido tu información correctamente. Pronto uno de nuestros agentes se pondrá en contacto contigo.",
     "back_home": "Regresar al inicio",
     "textSocial": "Síguenos en "
+  },
+  "preRegistro": {
+    "form": {
+      "title": "Preinscripción gratuita",
+      "description": "Completa el formulario y se parte de la comunidad RE+ MEXICO 2027. Entérate de información relevante sobre el evento, conferencias y actividades especiales.",
+      "nameLabel": "Nombre completo",
+      "namePlaceholder": "Ej. Juan Pérez",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "button": "Registrarme Ahora",
+      "buttonProcessing": "Enviando...",
+      "nameRequired": "El nombre es requerido",
+      "emailRequired": "El correo es requerido",
+      "emailInvalid": "Correo inválido",
+      "privacyRequired": "Debes aceptar el Aviso de Privacidad para continuar",
+      "privacyAcceptText": "He leído y acepto el",
+      "submitError": "No pudimos completar tu preregistro. Inténtalo de nuevo.",
+      "legalStart": "Al registrarte, aceptas nuestros",
+      "terms": "Términos de Servicio",
+      "legalMiddle": "Consulta nuestras",
+      "privacy": "Aviso de Privacidad"
+    },
+    "expoContent": {
+      "badge": "¿Qué incluye tu registro?",
+      "title": "Asiste a RE+ MEXICO 2027 y vive una experiencia única: tendencias, expertos, talleres y networking que impulsarán tu conocimiento y oportunidades de negocio.",
+      "cards": [
+        {
+          "title": "Acceso gratuito",
+          "description": "Entrada libre a piso expositor durante los días del evento."
+        },
+        {
+          "title": "Conferencias especializadas",
+          "description": "Entérate de las últimas tendencias, innovaciones y tecnologías en nuestro programa de conferencias."
+        },
+        {
+          "title": "Talleres y demostraciones",
+          "description": "Aprende de la mano de expertos en talleres y demostraciones durante los días del evento."
+        },
+        {
+          "title": "Networking y negocios",
+          "description": "Oportunidades de networking con otros profesionales durante los días del evento."
+        }
+      ]
+    },
+    "success": {
+      "metaTitle": "RE+ MEXICO 2027 | Prerregistro exitoso",
+      "metaDescription": "Gracias por sumarte a la comunidad de RE+ MEXICO 2027.",
+      "eyebrow": "Prerregistro recibido",
+      "title": "¡Gracias por sumarte a nuestra comunidad!",
+      "description": "Te avisaremos por correo electrónico cuando el registro oficial esté disponible.",
+      "importantLabel": "Importante:",
+      "importantText": "este formulario no genera un gafete ni sustituye el registro de visitante. Para asistir a RE+ MEXICO 2027 será necesario completar posteriormente el registro oficial.",
+      "confirmed": "Confirmado",
+      "event": "RE+ MEXICO 2027",
+      "nextStep": "Mantente atento a tu bandeja de entrada para continuar con el registro oficial."
+    }
   }
 }

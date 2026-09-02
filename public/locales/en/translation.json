@@ -805,5 +805,61 @@
     "description": "We have received your information correctly. One of our agents will contact you soon.",
     "back_home": "Back to Home",
     "textSocial": "Follow us on our social networks"
+  },
+  "preRegistro": {
+    "form": {
+      "title": "Pre-register",
+      "description": "Fill out the form below to pre-register RE+ Mexico. Once you submit your information, you will receive an email with your access to the event.",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Ex. John Smith",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "john@example.com",
+      "button": "Register Now",
+      "buttonProcessing": "Sending...",
+      "nameRequired": "Full name is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Invalid email address",
+      "privacyRequired": "You must accept the Privacy Notice to continue",
+      "privacyAcceptText": "I have read and accept the",
+      "submitError": "We could not complete your pre-registration. Please try again.",
+      "legalStart": "By registering, you accept our",
+      "terms": "Terms of Service",
+      "legalMiddle": "Check our",
+      "privacy": "Privacy Notice"
+    },
+    "expoContent": {
+      "badge": "What does your registration include?",
+      "title": "Attend RE+ MEXICO 2027 and enjoy a unique experience: trends, experts, workshops, and networking opportunities that will expand your knowledge and open up new business opportunities.",
+      "cards": [
+        {
+          "title": "Free access",
+          "description": "Free entry to the exhibition floor during the event days."
+        },
+        {
+          "title": "Specialized conferences",
+          "description": "Stay informed about the latest trends, innovations, and technologies in our conference program."
+        },
+        {
+          "title": "Workshops and demonstrations",
+          "description": "Learn from experts in workshops and demonstrations during the event days."
+        },
+        {
+          "title": "Networking and Business",
+          "description": "Networking opportunities with other professionals during the event days."
+        }
+      ]
+    },
+    "success": {
+      "metaTitle": "RE+ MEXICO 2027 | Successful Pre-Registration",
+      "metaDescription": "Thank you for joining the RE+ MEXICO 2027 community.",
+      "eyebrow": "Pre-registration received",
+      "title": "Thank you for joining our community!",
+      "description": "We will notify you by email when official registration is available.",
+      "importantLabel": "Important:",
+      "importantText": "this form does not generate a badge and does not replace visitor registration. To attend RE+ MEXICO 2027, you will need to complete the official registration later.",
+      "confirmed": "Confirmed",
+      "event": "RE+ MEXICO 2027",
+      "nextStep": "Keep an eye on your inbox to continue with the official registration."
+    }
   }
 }
