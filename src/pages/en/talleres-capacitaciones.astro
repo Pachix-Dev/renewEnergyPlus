@@ -8,20 +8,19 @@ changeLanguage("en");
 
 const translate = t("workshops", { returnObjects: true });
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+const currentLanguage = i18next.language;
 ---
 
 <Layout title="RE+ MEXICO | Talleres y Capacitaciones">
   <!-- Hero Section con video de fondo -->
-  <div class="relative min-h-screen bg-gradient-to-bl from-black via-blue-950 to-black">
-  
+  <div
+    class="relative min-h-screen bg-gradient-to-bl from-black via-blue-950 to-black"
+  >
     <!-- Contenido principal del hero -->
     <div class="relative z-10 min-h-screen flex flex-col justify-center">
       <div class="container mx-auto px-4 py-6 sm:py-8 lg:py-10">
         <!-- Main Title -->
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+        <div data-aos="fade-up" data-aos-duration="1000">
           <h1
             class="text-2xl sm:text-6xl font-black mb-6 leading-tight uppercase text-center sm:mb-4"
           >
@@ -39,7 +38,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         <p
           data-aos="fade-up"
           data-aos-duration="1200"
-          class="text-white text-center text-base md:text-xl sm:mb-12 max-w-2xl mx-auto leading-relaxed"
+          class="text-white text-center text-base md:text-xl mb-10 m:mb-12 max-w-2xl mx-auto leading-relaxed"
         >
           {
             i18next.language === "es"
@@ -48,16 +47,22 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
           }
         </p>
 
+        <p
+          data-aos="fade-up" 
+          data-aos-duration="1500"
+          class="text-white text-center text-lg sm:text-4xl mb-6 font-semibold"
+        >
+          {currentLanguage === "es" ? "PRÓXIMAMENTE" : "COMING SOON"}
+        </p>
+
         <!-- Program Component -->
         <ProgramPadre />
       </div>
     </div>
   </div>
-
 </Layout>
 
 <style>
-
   /* Responsive improvements */
   @media (max-width: 768px) {
     .container {
