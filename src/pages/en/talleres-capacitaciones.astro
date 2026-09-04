@@ -12,55 +12,20 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 
 <Layout title="RE+ MEXICO | Talleres y Capacitaciones">
   <!-- Hero Section con video de fondo -->
-  <div class="relative min-h-screen overflow-hidden">
-    <video
-      src="/video/bg_program_vip_720p.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-      class="absolute inset-0 w-full h-full object-cover"></video>
-
-    <!-- Overlay con gradiente -->
-    <div
-      class="absolute inset-0 bg-gradient-to-b from-[#1E293B]/90 via-[#1E293B]/70 to-[#5E5884]/80"
-    >
-    </div>
-
-    <!-- Elementos decorativos flotantes -->
-    <div class="absolute inset-0 overflow-hidden">
-      <div
-        class="absolute top-20 left-20 w-32 h-32 border-2 border-white/10 rounded-full animate-pulse"
-      >
-      </div>
-      <div
-        class="absolute bottom-32 right-32 w-24 h-24 border-2 border-[#5E5884]/30 rounded-full animate-bounce"
-      >
-      </div>
-      <div
-        class="absolute top-1/3 right-20 w-16 h-16 bg-[#5E5884]/20 rounded-full blur-xl animate-pulse"
-      >
-      </div>
-    </div>
-
+  <div class="relative min-h-screen bg-gradient-to-bl from-black via-blue-950 to-black">
+  
     <!-- Contenido principal del hero -->
     <div class="relative z-10 min-h-screen flex flex-col justify-center">
       <div class="container mx-auto px-4 py-6 sm:py-8 lg:py-10">
         <!-- Main Title -->
         <div
-          class="text-center sm:mb-16"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
           <h1
-            class="text-4xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
+            class="text-2xl sm:text-6xl font-black mb-6 leading-tight uppercase text-center sm:mb-4"
           >
-            <span
-              class="block text-3xl sm:text-4xl font-bold text-white mb-4 filter drop-shadow-lg"
-            >
-              RE+ MEXICO
-            </span>
-            <span class="text-white bg-clip-text">
+            <span class="text-white">
               {
                 i18next.language === "es"
                   ? "Talleres y Capacitaciones"
@@ -74,7 +39,7 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
         <p
           data-aos="fade-up"
           data-aos-duration="1200"
-          class="text-white text-center text-xl md:text-2xl sm:mb-12 max-w-4xl mx-auto leading-relaxed"
+          class="text-white text-center text-base md:text-xl sm:mb-12 max-w-2xl mx-auto leading-relaxed"
         >
           {
             i18next.language === "es"
@@ -89,36 +54,9 @@ const base = i18next.language === "es" ? "" : `/${i18next.language}`;
     </div>
   </div>
 
-  
-
-
-
 </Layout>
 
 <style>
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  /* Mejoras en las sombras de texto */
-  h1 {
-    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
-  }
-
-  /* Efectos de glassmorphism */
-  .backdrop-blur-sm {
-    backdrop-filter: blur(8px);
-  }
 
   /* Responsive improvements */
   @media (max-width: 768px) {
