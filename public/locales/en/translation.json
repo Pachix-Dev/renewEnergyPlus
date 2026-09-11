@@ -34,7 +34,8 @@
             "option_2": "Visitor Profile",
             "option_3": "Visa support",
             "option_4": "Special Hotel Rates",
-            "option_5": "ON-SITE WORKSHOPS AND TRAINING"
+            "option_5": "ON-SITE WORKSHOPS AND TRAINING",
+            "option_6": "Ambassadors"
         },
         "submenu_4": {
             "title": "PAST EDITIONS",
@@ -326,6 +327,11 @@
         "contact": "GENERAL EXHIBITOR CONTRACTING FORMAT",
         "contract_food": "FOOD AND BEVERAGE PROCUREMENT FORM",
         "instructions": "BOARDING INSTRUCTIONS"
+    },
+    "ambassadors": {
+    "title": "AMBASSADORS",
+    "subtitle": "RE+ MEXICO",
+    "read_more": "Read more"
     },
     "WhyVisit": {
         "title": "Why Visit?",

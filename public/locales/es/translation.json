@@ -34,7 +34,8 @@
             "option_2": "Perfil del visitante",
             "option_3": "Visados",
             "option_4": "Tarifas especiales en hoteles",
-            "option_5": "TALLERES Y CAPACITACIONES EN SITIO"
+            "option_5": "TALLERES Y CAPACITACIONES EN SITIO",
+            "option_6": "Embajadores"
         },
         "submenu_4": {
             "title": "EDICIONES",
@@ -326,6 +327,11 @@
         "contact": "FORMATO GENERAL DE CONTRATACIÓN A EXPOSITORES",
         "contract_food": "FORMATO DE CONTRATACIÓN DE ALIMENTOS Y BEBIDAS",
         "instructions": "INSTRUCCIONES DE EMBARQUE"
+    },
+    "ambassadors": {
+    "title": "EMBAJADORES",
+    "subtitle": "RE+ MEXICO",
+    "read_more": "Leer más"
     },
     "WhyVisit": {
         "title": "¿Por qué visitarnos?",

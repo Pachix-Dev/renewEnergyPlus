@@ -1,0 +1,19 @@
+---
+import i18next, { changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/ambassadors/Hero.astro";
+import AmbassadorList from "../components/ambassadors/AmbassadorList.astro";
+
+changeLanguage("es");
+
+const currentLanguage = i18next.language;
+---
+
+<Layout title="RE+ MEXICO | Embajadores">
+
+  <section>
+    <Hero />
+    <AmbassadorList />
+  </section>
+
+</Layout>

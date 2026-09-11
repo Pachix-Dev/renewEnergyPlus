@@ -1,0 +1,86 @@
+---
+import i18next from "i18next";
+import { ambassadors } from "../../data/ambassadors.js";
+import AmbassadorCard from "./AmbassadorCard.astro";
+import AmbassadorModal from "./AmbassadorModal.astro";
+const currentLanguage = i18next.language;
+---
+
+<section class="w-full py-10 px-6">
+  <div
+    class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+  >
+    {
+      ambassadors.map((ambassador) => (
+        <AmbassadorCard ambassador={ambassador} />
+      ))
+    }
+  </div>
+</section>
+
+<AmbassadorModal />
+<script define:vars={{ ambassadors, currentLanguage }}>
+
+  const modal = document.getElementById("ambassador-modal");
+  const modalName = document.getElementById(
+    "ambassador-modal-name"
+  );
+
+  const modalBiography = document.getElementById(
+    "ambassador-modal-biography"
+  );
+
+  const closeButton = document.getElementById(
+    "close-ambassador-modal"
+  );
+
+  const buttons = document.querySelectorAll(
+    ".ambassador-button"
+  );
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+
+      const ambassadorId = button.dataset.ambassadorId;
+      const ambassador = ambassadors.find(
+        (item) => item.id == ambassadorId
+      );
+      if (!ambassador) return;
+
+      modalName.textContent = ambassador.name;
+
+      modalBiography.textContent =
+        currentLanguage === "es"
+          ? ambassador.biography_es
+          : ambassador.biography_en;
+
+      modal.classList.remove("hidden");
+
+      modal.classList.add("flex");
+
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  const closeModal = () => {
+
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+  };
+
+  closeButton?.addEventListener(
+    "click",
+    closeModal
+  );
+
+  modal?.addEventListener(
+    "click",
+    (event) => {
+      if(event.target === modal){
+        closeModal();
+      }
+    }
+  );
+
+</script>

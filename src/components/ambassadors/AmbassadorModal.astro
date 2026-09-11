@@ -1,0 +1,56 @@
+  <div
+    id="ambassador-modal"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/60 px-4 py-6"
+  >
+
+  <div
+    class="relative bg-white w-full max-w-4xl max-h-[85vh] rounded-[28px] shadow-2xl overflow-hidden"
+  >
+
+    <!-- Cerrar -->
+  <button
+    id="close-ambassador-modal"
+    class="absolute top-5 right-6 text-gray-400 hover:text-[#ff0066] text-4xl font-light transition-colors z-10"
+  >
+    ×
+  </button>
+
+    <!-- Contenido -->
+  <div
+    class="p-8 sm:p-10 md:p-14 overflow-y-auto max-h-[85vh]"
+  >
+
+    <h2
+      id="ambassador-modal-name"
+      class="text-3xl sm:text-4xl md:text-5xl font-black uppercase text-[#3333FF] mb-6 pr-10"
+    >
+    </h2>
+
+  <div class="w-24 h-1 bg-[#ff0066] rounded-full mb-8"></div>
+
+  <div
+    id="ambassador-modal-biography"
+    class="text-gray-800 text-base sm:text-lg leading-relaxed text-justify whitespace-pre-line"
+  >
+  </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #ambassador-modal > div {
+    animation: modalEnter .3s ease-out;
+  }
+
+  @keyframes modalEnter {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(.96);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+</style>
