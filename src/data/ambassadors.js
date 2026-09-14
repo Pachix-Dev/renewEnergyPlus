@@ -42,8 +42,8 @@ export const ambassadors = [
   {
     id: 3,
     name: "Nallely Camarena",
-    position_es: "Ingeniera industrial",
-    position_en: "Industrial Engineer",
+    position_es: "Directra General",
+    position_en: "Director General",
     company: "Nos mueve el sol",
     image: "/img/embajadores/Nallely.webp",
     biography_es:
@@ -77,8 +77,8 @@ export const ambassadors = [
   {
     id: 4,
     name: "Valeria Padilla",
-    position_es: "",
-    position_en: "",
+    position_es: "Gerente de Marketing",
+    position_en: "Marketing Manager",
     company: "DM Solar",
     image: "/img/embajadores/Valeria.webp",
     biography_es:
@@ -89,8 +89,8 @@ export const ambassadors = [
   {
     id: 5,
     name: "Arturo Duhart",
-    position_es: "Ingeniero industrial",
-    position_en: "Industrial Engineer",
+    position_es: "CEO",
+    position_en: "CEO",
     company: "Sunwise",
     image: "/img/embajadores/Arturo.webp",
     biography_es:

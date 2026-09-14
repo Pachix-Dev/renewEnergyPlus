@@ -6,9 +6,10 @@ import AmbassadorModal from "./AmbassadorModal.astro";
 const currentLanguage = i18next.language;
 ---
 
-<section class="w-full py-10 px-6">
+<section class="w-full py-4 sm:py-8 lg:py-10 px-4">
+
   <div
-    class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+    class="max-w-[1300px] mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10"
   >
     {
       ambassadors.map((ambassador) => (
@@ -16,6 +17,7 @@ const currentLanguage = i18next.language;
       ))
     }
   </div>
+
 </section>
 
 <AmbassadorModal />
