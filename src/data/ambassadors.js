@@ -93,9 +93,7 @@ export const ambassadors = [
     position_en: "CEO",
     company: "Sunwise",
     image: "/img/embajadores/Arturo.webp",
-    biography_es:
-      `Sin biografía`,
-    biography_en:
-      `No biography available`,
+    biography_es:"Ingeniero Industrial con más de 15 años de experiencia impulsando la transición hacia la energía solar en México y Latinoamérica. Cofundador de la principal empresa mayorista de sistemas fotovoltaicos en México y actual CEO de Sunwise, plataforma líder de digitalización para empresas solares en la región.Especialista en expansión de mercados, estrategias de almacenamiento de energía (BESS) y políticas de Generación Distribuida. Reconocido conferencista y referente de opinión en el sector de las energías renovables en México.",
+    biography_en: "Industrial Engineer with over 15 years of experience driving the solar energy transition in Mexico and LATAM. Co-founder of Mexico's leading photovoltaic wholesaler and current CEO of the region's premier digitalization platform for solar companies. Expert in market expansion, energy storage (BESS) strategies, and Distributed Generation policy. A recognized public speaker and key influencer in the Mexican renewable energy sector.",
   },
 ];
