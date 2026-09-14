@@ -2,9 +2,9 @@ export const ambassadors = [
   {
     id: 1,
     name: "Alma Aldana",
-    position_es: "Líder en Marketing Estratégico & Comunicación",
-    position_en: "Strategic Marketing & Communication Leader",
-    company: "Industria Energética",
+    position_es: "Gerente de Marketing para Latam",
+    position_en: "Marketing Manager for Latam",
+    company: "AP Systems",
     image: "/img/embajadores/AlmaAldana.webp",
     biography_es:
       `Alma Aldana es una líder en marketing estratégico y comunicación en la industria energética a nivel LATAM, reconocida por su capacidad para posicionar marcas en entornos altamente specializados y competitivos. Su trayectoria se ha construido desde una visión clara: comunicar con propósito en un sector donde la precisión técnica y la confianza son fundamentales, consolidándose como un perfil clave en la evolución del marketing dentro de la industria. 
