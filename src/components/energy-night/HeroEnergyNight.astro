@@ -1,33 +1,47 @@
 ---
 const heroImage = "/img/energyNigth_2027/bg_hero_energy_night.webp";
+const logoImage = "/img/energyNigth_2027/energy_nightlogo.webp";
 ---
 
 <section
-  class="relative isolate w-full overflow-hidden bg-[#031833]"
+  class="relative isolate min-h-[420px] w-full overflow-hidden bg-[#031833] sm:min-h-[500px] lg:min-h-[620px]"
   aria-labelledby="energy-night-title"
 >
+  <!-- Imagen de fondo -->
   <img
     src={heroImage}
     alt=""
     aria-hidden="true"
     loading="eager"
+    fetchpriority="high"
     decoding="async"
     width="6972"
     height="3278"
-    class="block h-auto w-full"
+    class="absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-[58%_center] md:object-[55%_center] lg:object-center"
   />
-  <div
-    class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/15"
-  >
-  </div>
 
+  <!-- Capa para mejorar el contraste -->
   <div
-    class="absolute inset-0 z-10 mx-auto flex w-full max-w-7xl items-center justify-center sm:justify-start px-4 py-8 sm:px-6 sm:py-10 lg:px-8"
+    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#031833]/20 via-transparent to-[#031833]/30"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenido -->
+  <div
+    class="relative z-10 mx-auto flex min-h-[420px] w-full max-w-7xl items-center justify-center px-5 py-12 sm:min-h-[500px] sm:px-8 lg:min-h-[620px] lg:justify-start lg:px-10 xl:px-12"
   >
-    <img
-      src="/img/energyNigth_2027/energy_nightlogo.webp"
-      alt=""
-      class="w-[200px] sm:w-[300px] lg:w-[600px]"
-    />
+    <div class="flex w-full justify-center lg:justify-start">
+      <h1 id="energy-night-title" class="sr-only">
+        Energy Night 2027
+      </h1>
+
+      <img
+        src={logoImage}
+        alt="Energy Night 2027"
+        loading="eager"
+        decoding="async"
+        class="h-auto w-[min(78vw,300px)] object-contain sm:w-[380px] md:w-[470px] lg:w-[560px] xl:w-[640px]"
+      />
+    </div>
   </div>
 </section>

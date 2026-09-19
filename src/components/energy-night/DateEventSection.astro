@@ -1,0 +1,74 @@
+---
+import i18next, { t } from "i18next";
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
+---
+
+<section
+  class="text-center"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+  data-aos-anchor-placement="top-bottom"
+>
+  <div class="max-w-[1080px] mx-auto flex flex-col gap-y-4 py-10">
+    <p
+      class="uppercase font-aton-regular text-[30px] sm:text-[90px] text-[#003366]"
+      data-aos="zoom-in"
+      data-aos-duration="900"
+      data-aos-delay="120"
+    >
+      {t("energynight.date")}
+    </p>
+    <span
+      class="font-montserrat-italic text-[20px] sm:text-[40px] uppercase"
+      data-aos="fade-up"
+      data-aos-duration="900"
+      data-aos-delay="220"
+    >
+      {t("energynight.place")}
+    </span>
+    <p
+      class="font-montserrat-regular text-base sm:text-3xl"
+      data-aos="fade-up"
+      data-aos-duration="900"
+      data-aos-delay="320"
+    >
+      {t("energynight.description")}
+    </p>
+  </div>
+</section>
+<style>
+  @font-face {
+    font-family: "Aton";
+    src: url("/fonts/Anton-Regular.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Montserrat Italic";
+    src: url("/fonts/Montserrat-Italic-VariableFont_wght.ttf")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Montserrat Regular";
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .font-aton-regular {
+    font-family: "Aton", sans-serif;
+  }
+
+  .font-montserrat-italic {
+    font-family: "Montserrat Italic", sans-serif;
+  }
+
+  .font-montserrat-regular {
+    font-family: "Montserrat Regular", sans-serif;
+  }
+</style>
