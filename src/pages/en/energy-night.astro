@@ -5,6 +5,7 @@ import { AddEnergyNight } from "../../components/ecommerce/AddEnergyNight.jsx";
 import Carousel from "../../components/energy-night/Carousel.astro";
 import HeroEnergyNight from "../../components/energy-night/HeroEnergyNight.astro";
 import DateEventSection from "../../components/energy-night/DateEventSection.astro";
+import InfoSection from "../../components/energy-night/InfoSection.astro";
 
 changeLanguage("en");
 
@@ -38,4 +39,5 @@ const translate = t("ecommerce", { returnObjects: true });
 <Layout title="Energy Night - Evento Exclusivo">
   <HeroEnergyNight />
   <DateEventSection />
+  <InfoSection />
 </Layout>

@@ -1,0 +1,58 @@
+---
+import { t } from "i18next";
+---
+<section>
+  <div
+    class="flex min-h-[360px] items-center justify-center bg-[url(/img/energyNigth_2027/bg_info_energy_night.webp)] bg-cover bg-center px-5 py-12 sm:min-h-[400px] sm:px-8 lg:min-h-[460px] xl:min-h-[500px]"
+  >
+    <div
+      class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center justify-items-center gap-8 text-center lg:grid-cols-[minmax(0,1fr)_auto] lg:justify-items-start lg:gap-12 lg:text-left"
+    >
+      <h2
+        class="font-aton-regular max-w-[12ch] break-words text-[52px]/[0.95] text-white sm:text-[76px]/[0.95] md:text-[96px]/[0.95] lg:max-w-3xl lg:text-[112px]/[0.95] xl:text-[120px]/[0.95]"
+      >
+        {t("energynight.text_26")}
+      </h2>
+      <a
+        href="http://"
+        class="font-montserrat-regular inline-flex w-full max-w-[360px] items-center justify-center gap-3 rounded-xl border-4 border-[#3333ff] bg-[#ffffff] px-5 py-4 text-center text-lg leading-tight text-gray-700 transition hover:bg-[#ff0066] hover:text-white hover:scale-105 hover:shadow-lg hover:border-[#ff0066] focus:outline-none focus:ring-4 focus:ring-[#3333ff]/30 sm:w-auto sm:max-w-none sm:px-6 sm:text-2xl md:text-3xl lg:text-4xl"
+      >
+        <span>{t("energynight.text_29")}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 shrink-0 sm:h-7 sm:w-7"
+          viewBox="0 0 15 15"
+          aria-hidden="true"
+        >
+          <path
+            fill="currentColor"
+            d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"
+          ></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+  @font-face {
+    font-family: "Aton";
+    src: url("/fonts/Anton-Regular.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Montserrat Regular";
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .font-montserrat-regular {
+    font-family: "Montserrat Regular", sans-serif;
+  }
+
+  .font-aton-regular {
+    font-family: "Aton", sans-serif;
+  }
+</style>
