@@ -1,6 +1,9 @@
 ---
 import { t } from "i18next";
+
+const marqueeItems = Array.from({ length: 8 });
 ---
+
 <section>
   <div
     class="flex min-h-[360px] items-center justify-center bg-[url(/img/energyNigth_2027/bg_info_energy_night.webp)] bg-cover bg-center px-5 py-12 sm:min-h-[400px] sm:px-8 lg:min-h-[460px] xl:min-h-[500px]"
@@ -33,6 +36,85 @@ import { t } from "i18next";
     </div>
   </div>
 </section>
+<section
+  class="overflow-hidden bg-[#3333ff] py-4 sm:py-5 lg:py-6"
+  aria-label="Energy Night"
+>
+  <div class="energy-night-marquee" aria-hidden="true">
+    <div class="energy-night-marquee__track">
+      {[...marqueeItems, ...marqueeItems].map(() => (
+        <div class="flex shrink-0 items-center justify-center">
+          <img
+            src="/img/energyNigth_2027/energy_night_logo_02.webp"
+            alt="energy night 2027"
+            width="240"
+            height="88"
+            loading="lazy"
+            decoding="async"
+            class="h-auto w-[90px] sm:w-[150px]"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .energy-night-marquee {
+    --gap: clamp(1.25rem, 5vw, 4rem);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+  }
+
+  .energy-night-marquee__track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: var(--gap);
+    animation: energy-night-marquee 28s linear infinite;
+    will-change: transform;
+  }
+
+  .energy-night-marquee:hover .energy-night-marquee__track {
+    animation-play-state: paused;
+  }
+
+  @keyframes energy-night-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-50% - (var(--gap) / 2)));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .energy-night-marquee {
+      overflow-x: auto;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+
+    .energy-night-marquee__track {
+      animation: none;
+    }
+  }
+</style>
 <style>
   @font-face {
     font-family: "Aton";
