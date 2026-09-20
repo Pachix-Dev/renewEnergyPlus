@@ -1,0 +1,22 @@
+---
+const galleryImages = Array.from({ length: 9 }, (_, index) => ({
+    src: `/img/energyNigth_2027/galeria_${String(index + 1).padStart(2, "0")}.webp`,
+    alt: "energy night 2027",
+}));
+---
+<section class="border-t-4 border-b-4 sm:border-t-8 sm:border-b-8 border-t-white border-b-white">
+    <div class="grid grid-cols-3 gap-1 sm:gap-2">
+        {
+            galleryImages.map((image, index) => (
+                <img
+                    src={image.src}
+                    alt={image.alt}
+                    data-aos="zoom-in"
+                    data-aos-duration="700"
+                    data-aos-delay={index * 80}
+                    data-aos-anchor-placement="top-bottom"
+                />
+            ))
+        }
+    </div>
+</section>
