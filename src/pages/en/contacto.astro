@@ -1,11 +1,18 @@
 ---
 import Contacts from "../../components/Contacts.astro";
+import { ContactForm } from "../../components/formExpositores/ContactForm";
 import Layout from "../../layouts/Layout.astro";
-import { t, changeLanguage } from "i18next";
+import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
+
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
 <Layout title='RE+ MEXICO | Contacto'>
-  <Contacts />
+   <div  class="max-w-4xl mx-auto mb-4">
+    <ContactForm language={currentLanguage} client:visible />
+   </div>
+  <!-- <Contacts /> -->
 </Layout>
