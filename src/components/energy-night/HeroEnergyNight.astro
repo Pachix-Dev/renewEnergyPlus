@@ -1,10 +1,14 @@
 ---
 const heroImage = "/img/energyNigth_2027/bg_hero_energy_night.webp";
 const logoImage = "/img/energyNigth_2027/energy_nightlogo.webp";
+
+import i18next, { t } from "i18next";
+const currentLanguage = i18next.language;
+const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
 <section
-  class="relative isolate w-full overflow-hidden bg-[#031833] sm:min-h-[500px] lg:min-h-[620px]"
+  class="relative isolate h-auto w-full overflow-hidden bg-[#031833] sm:min-h-[500px] lg:min-h-[620px] py-4"
 >
   <!-- Imagen de fondo -->
   <img
@@ -23,29 +27,63 @@ const logoImage = "/img/energyNigth_2027/energy_nightlogo.webp";
   <div
     class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#031833]/20 via-transparent to-[#031833]/30"
     aria-hidden="true"
-  ></div>
+  >
+  </div>
 
   <!-- Contenido -->
   <div
-    class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-center px-5 py-12 sm:min-h-[500px] sm:px-8 lg:min-h-[620px] lg:justify-start lg:px-10 xl:px-12"
+    class="relative z-10 mx-auto flex h-auto w-full max-w-7xl items-center justify-center px-5 sm:py-12 sm:min-h-[500px] sm:px-8 lg:min-h-[620px] lg:px-10 xl:px-12"
   >
     <div
-      class="flex w-full justify-center lg:justify-start"
+      class="grid w-full grid-cols-1 items-center justify-items-center gap-8 text-center md:grid-cols-[minmax(0,1fr)_minmax(280px,500px)] md:gap-10 md:text-left lg:gap-14"
       data-aos="zoom-in"
       data-aos-duration="1000"
       data-aos-delay="150"
     >
-      <h1 id="energy-night-title" class="sr-only">
-        Energy Night 2027
-      </h1>
-
       <img
         src={logoImage}
         alt="Energy Night 2027"
         loading="eager"
         decoding="async"
-        class="h-auto w-[min(78vw,300px)] object-contain sm:w-[380px] md:w-[470px] lg:w-[560px] xl:w-[640px]"
+        class="h-auto w-full max-w-[200px] object-contain sm:max-w-[360px] md:max-w-[440px] lg:max-w-[520px]"
       />
+      <div class="w-full max-w-[500px] bg-black/10 p-4 backdrop-blur-sm sm:p-5 md:justify-self-start flex flex-col gap-y-4">
+        <p class="font-aton-regular whitespace-nowrap text-[clamp(2rem,11vw,5rem)] leading-none tracking-[.05em] text-white sm:tracking-[.08em] md:text-[clamp(3rem,6vw,5rem)] md:tracking-[.10em]">20.04.2027</p>
+        <span class="font-montserrat-italic block text-[clamp(1.05rem,5vw,2.5rem)] font-black uppercase leading-tight tracking-[.04em] text-white sm:tracking-[.07em] md:text-[clamp(1.35rem,3vw,2.25rem)] md:tracking-[.10em]">{t("energynight.place")}</span>
+      </div>
     </div>
   </div>
 </section>
+<style>
+  @font-face {
+    font-family: "Aton";
+    src: url("/fonts/Anton-Regular.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Montserrat Regular";
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Montserrat Italic";
+    src: url("/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .font-montserrat-regular {
+    font-family: "Montserrat Regular", sans-serif;
+  }
+
+  .font-aton-regular {
+    font-family: "Aton", sans-serif;
+  }
+  .font-montserrat-italic {
+    font-family: "Montserrat Italic", sans-serif;
+  }
+</style>
