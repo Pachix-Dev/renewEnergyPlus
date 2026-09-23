@@ -1,3 +1,16 @@
+/**
+ * Ordena un array de logos alfabéticamente por el nombre del archivo en src
+ * @param {Array} logos - Array de objetos con la propiedad src
+ * @return {Array} - Nuevo array ordenado alfabéticamente
+ **/
+const sortLogosAlphabetically = (logos) => {
+  return [...logos].sort((a, b) => {
+    const nameA = a.src.split("/").pop()?.toLowerCase() || "";
+    const nameB = b.src.split("/").pop()?.toLowerCase() || "";
+    return nameA.localeCompare(nameB);
+  });
+};
+
 const aliados = [
   {link: '',src: '/img/strategicAllies2026/merm.webp', alt: 'logo Merm', width: 200, height: 103,},
   // {link: '',src: '/img/strategicAllies2026/gobiernoJalisco.webp', alt: 'logo Gobierno de Jalisco', width: 150, height: 150,},
@@ -15,6 +28,8 @@ const aliados = [
   {link: '',src: '/img/strategicAllies2026/EUPD-Research.webp', alt: 'logo EUPD Research', width: 200, height: 38,},
   {link: '',src: '/img/logogdl.webp', alt: 'Guadalajara Logo', width: 200, height: 50,},
   {link: '',src: '/img/strategicAllies2026/ameneer.webp', alt: 'Logo Ameneer', width: 200, height: 50,},
+  {link: '', src: '/img/strategicAllies2026/camara_verde.png', alt:'Camara Verde', width: 200, height: 100,},
+  {link: '', src: '/img/strategicAllies2026/holland_house.webp', alt:'Holland House', width: 130, height: 0,}
 ];
 const Broadcasting1 = [
   {link: '',src: '/img/logoga.webp', alt: 'Logo World Energy', width: 200, height: 68,},
@@ -40,4 +55,4 @@ const Broadcasting2 = [
   {link: '',src: '/img/aliadosEstrategicos/Broadcasting2/discoverCleanTech.webp', alt: 'Logo Discover Clean Tech', width: 200, height: 48,},
 
 ];
-export { aliados,Broadcasting1,Broadcasting2};
+export { aliados,Broadcasting1,Broadcasting2 , sortLogosAlphabetically};
