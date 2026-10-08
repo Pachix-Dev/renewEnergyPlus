@@ -3,35 +3,59 @@ import i18next, { t } from "i18next";
 const currentLanguage = i18next.language;
 const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
-<section class="bg-gradient-to-r from-[#18188d] via-[#3333ff] to-[#3333ff] text-white text-center py-10 relative overflow-hidden sm:border-t-8 border-t-white">
-  <div class="mx-auto px-4 relative z-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-    <div
-      class="flex flex-col justify-center items-center"
-      data-aos="zoom-in"
-      data-aos-duration="2000"
-      data-aos-delay="300"
+
+<section
+  class="bg-gradient-to-r from-[#18188d] via-[#3333ff] to-[#3333ff] text-white text-center py-10 relative overflow-hidden sm:border-t-8 border-t-white"
+>
+  <div class="mx-auto px-4 relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-6xl"
+  >
+    <a
+      href={`${base}/expositor`}
+      class="hover:scale-105 transition-transform duration-300"
     >
-      <h3 class="text-3xl sm:text-4xl lg:text-5xl">
-        {currentLanguage === "es" ? "CONVIÉRTETE EN" : "BECOME AN"}
-        <span class="font-extrabold">
-          {currentLanguage === "es" ? "EXPOSITOR" : "EXHIBITOR"}
-        </span>
-      </h3>
-    </div>
-    <div class="flex flex-col items-center" 
+      <div
+        class="flex flex-col justify-center items-start"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        data-aos-delay="300"
+      >
+        <h3 class="text-3xl sm:text-4xl lg:text-5xl flex flex-col items-start">
+          {currentLanguage === "es" ? "CONVIÉRTETE" : "BECOME AN"}
+          <span class="font-extrabold">
+            {currentLanguage === "es" ? "EN EXPOSITOR" : "EXHIBITOR"}
+          </span>
+        </h3>
+        <span
+          class="text-base sm:text-2xl flex justify-center items-center gap-2"
+          >{
+            currentLanguage === "es"
+              ? "Da click aquí para más información"
+              : "Click here for more information"
+          }<svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 sm:w-8"
+            viewBox="0 0 15 15"
+            ><path
+              fill="currentColor"
+              d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"
+            ></path></svg
+          ></span
+        >
+      </div>
+    </a>
+    <div
+      class="flex flex-col items-start"
       data-aos="fade-down"
       data-aos-duration="2000"
       data-aos-delay="100"
-      >
-      <a href={`${base}/contacto`} class="">
-        <img
-          src={currentLanguage === "es"
-            ? "/img/imagen2027/btn_contact_es.webp"
-            : "/img/imagen2027/btn_contact_en.webp"}
-          alt="replus mexico 2027 contact"
-          class="w-48 sm:w-56 md:w-64 lg:w-72 hover:scale-105 transition-transform duration-300 mx-auto mt-4 sm:mt-6"
-        />
-      </a>
+    >
+      <p class="text-xl sm:text-2xl text-start max-w-[450px]">
+        {
+          currentLanguage === "es"
+            ? "Conoce el piso de exposición y elige el mejor espacio"
+            : "Check out the exhibition floor and choose the best space"
+        }
+      </p>
       <a href={`${base}/plano-re-plus-mexico-2027`}>
         <img
           src="/img/imagen2027/btn_floorplant.webp"
