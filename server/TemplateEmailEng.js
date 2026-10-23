@@ -1,5 +1,5 @@
 
-const email_template_eng = async ({ name, paternSurname, maternSurname=''}) => {          
+const email_template_eng = async ({ name, lastName }) => {          
     
     return (
    `<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="max-width: 680px;">
@@ -12,7 +12,7 @@ const email_template_eng = async ({ name, paternSurname, maternSurname=''}) => {
         <tr>
           <td colspan="2">
             <h2 style="text-align: center;margin:0;font-weight:bold;text-transform: uppercase;margin-top: 20px;">
-              WELCOME, ${name} ${paternSurname} ${maternSurname}.<BR /> YOUR REGISTRATION WAS SUCCESSFUL.
+              WELCOME, ${name} ${lastName}.<BR /> YOUR REGISTRATION WAS SUCCESSFUL.
             </h2>
             <h2 style='text-align: center;'>
               THANK YOU FOR BEING PART OF <span style="color:#E94568;font-weight:bold;">RE+ MEXICO 2026, </span>THE FAIR OF MEXICO'S ENERGY FUTURE.

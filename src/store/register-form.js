@@ -8,8 +8,7 @@ const useRegisterForm = create(
             idUser: 0,
             uuid: "",            
             name: "",
-            paternSurname: "",
-            maternSurname: "",
+            lastName: "",
             email: "",
             phone: "",
             typeRegister: "",
@@ -48,8 +47,7 @@ const useRegisterForm = create(
             setIdUser: (idUser) => set({ idUser }),
             setUuid: (uuid) => set({ uuid }),
             setName: (name) => set({ name }),
-            setPaternSurname: (paternSurname) => set({ paternSurname }),
-            setMaternSurname: (maternSurname) => set({ maternSurname }),
+            setLastName: (lastName) => set({ lastName }),
             setEmail: (email) => set({ email }),
             setPhone: (phone) => set({ phone }),
             setTypeRegister: (typeRegister) => set({ typeRegister }),
@@ -176,9 +174,8 @@ const useRegisterForm = create(
                 uuid: "",
                 step: 0,            
                 name: "",
-                email: "",
-                paternSurname: "",
-                maternSurname: "",               
+                lastName: "",
+                email: "",             
                 phone: "",
                 typeRegister: "",
                 genre: "",               
@@ -214,8 +211,7 @@ const useRegisterForm = create(
                 idUser: 0,
                 uuid: "",
                 name: "",
-                paternSurname: "",
-                maternSurname: "",
+                lastName: "",
                 email: "",
                 phone: "",
                 company: "",                
@@ -223,7 +219,7 @@ const useRegisterForm = create(
             })
 
         }), 
-        { name: "register-replus-2026" }
+        { name: "register-form-visit-replus" }
     )
 )
 

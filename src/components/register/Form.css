@@ -73,6 +73,11 @@
     white-space: inherit;
     overflow: hidden;
   }
+
+  .react-select__input:focus {
+  box-shadow: none;
+}
+
   @keyframes shine {
     0% {
       left: -100px;

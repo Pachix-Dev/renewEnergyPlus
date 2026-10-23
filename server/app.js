@@ -12,6 +12,7 @@ import {email_template_eng_student} from './TemplateEmailEng_student.js';
 import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice, generatePDFInvoice_energynight, generatePDF_freePass_student } from './generatePdf.js';
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
+import { readFile } from 'node:fs/promises';
 
 const { json } = pkg
 const app = express()
@@ -283,23 +284,19 @@ app.post('/susbribe-email', async (req, res) => {
 
 })
 
+// Registro gratuito para visitantes REPLUS
 app.post('/free-register', async (req, res) => {
     const { body } = req;
 
     try {    
         
-        // Validar que el usuario no exista previamente
-        const userExists = await RegisterModel.check_user_exists_2026(body.email);
-        if (userExists) {
-            return res.status(400).send({
-                status: false,
-                message: 'Ya estás registrado con este correo electrónico...'
-            });
-        }
+        // revisar el tipo de registro y asignar "VISITANTE" si no está definido
+        const typeRegister = String(body.typeRegister || "").trim() || "VISITANTE";
 
         const data = { 
             uuid: uuidv4(),            
-            ...body
+            ...body,
+            typeRegister,
         };          
         const userResponse = await RegisterModel.create_user({ ...data }); 
         
@@ -309,7 +306,10 @@ app.post('/free-register', async (req, res) => {
             });
         }                 
 
-        const pdfAtch = await generatePDF_freePass(body, data.uuid );
+        const pdfAtch = await generatePDF_freePass(body, data.uuid ).catch((error) => {
+            console.error('No se pudo generar el PDF. Se enviará la confirmación sin adjunto:', error.message);
+            return null;
+        });
 
         const mailResponse = await sendEmail(data, pdfAtch, data.uuid);   
 
@@ -734,37 +734,68 @@ app.get('/template-email', async (req, res) => {
     res.send(emailContent);
 });
 
-/* EMAIL RE+ MEXICO */
+// Envia correo de confirmación de registro visitante
 async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){    
-    try{     
-                  
-        const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });       
-        await resend.emails.send({
-            from: 'RE+ MEXICO 2026 <noreply@re-plus-mexico.com.mx>',
+    try {
+        const emailContent = data.currentLanguage === 'es'
+            ? await email_template({ ...data })
+            : await email_template_eng({ ...data });
+
+        const email = {
+            from: 'RE+ MEXICO <noreply@re-plus-mexico.com.mx>',
             to: data.email,
-            subject: 'Confirmación de pre registro RE+ MEXICO 2026',
+            subject: 'REGISTRO CONFIRMADO RE+ MEXICO 2027',
             html: emailContent,
-            attachments: [
-                {
-                    filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://re-plus-mexico.com.mx/invoices/${paypal_id_transaction}.pdf`,
-                    content_type: 'application/pdf'
-                },
-              ],           
-        })        
+        };
+        const attachPdf = String(process.env.EMAIL_ATTACH_PDF ?? 'true').trim().toLowerCase() !== 'false';
+
+        if (attachPdf && pdfAtch) {
+            try {
+                const pdf = await readFile(pdfAtch);
+                if (pdf.length === 0) {
+                    throw new Error('El archivo PDF está vacío.');
+                }
+                email.attachments = [{
+                    filename: paypal_id_transaction ? `${paypal_id_transaction}.pdf` : 'registro.pdf',
+                    content: pdf.toString('base64'),
+                    content_type: 'application/pdf',
+                }];
+            } catch (error) {
+                console.warn('No se pudo leer el PDF. Se enviará el correo sin adjunto:', error.message);
+            }
+        }
+
+        const initialResponse = await resend.emails.send(email);
+        const attachmentRejected = initialResponse.error
+            && /attachment/i.test(`${initialResponse.error.name} ${initialResponse.error.message}`);
+        const { attachments, ...emailWithoutPdf } = email;
+
+        if (attachments && attachmentRejected) {
+            console.warn('Resend rechazó el adjunto. Se enviará el correo sin PDF:', initialResponse.error.message);
+        }
+        const response = attachments && attachmentRejected
+            ? await resend.emails.send(emailWithoutPdf)
+            : initialResponse;
+
+        if (response.error) {
+            throw new Error(response.error.message);
+        }
+        if (!response.data?.id) {
+            throw new Error('Resend no confirmó la aceptación del correo.');
+        }
 
         return {
             status: true,
             message: 'Gracias por registrarte, te hemos enviado un correo de confirmación a tu bandeja de entrada...'
         };
 
-    } catch (err) {
-        console.log(err);
+    } catch (error) {
+        console.error('No se pudo enviar el correo de confirmación:', error.message);
         return {
             status: false,
             message: 'No pudimos enviarte el correo de confirmación de tu registro, por favor descarga tu registro en este pagina y presentalo hasta el dia del evento...'
-        };              
-    }    
+        };
+    }
 }
 
 async function sendEmailStudent(data, pdfAtch = null, paypal_id_transaction = null){    

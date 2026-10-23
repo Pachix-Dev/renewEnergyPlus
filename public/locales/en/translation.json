@@ -460,7 +460,7 @@
         "area_4": "SECONDARY SCHOOL",
         "finish": "FINISH",
         "info_survey": "SURVEY",
-        "genre": "Genre",
+        "genre": "Gender",
         "genre_1": "Male",
         "genre_2": "Female",
         "genre_3": "I prefer not to say",
@@ -478,6 +478,7 @@
         "placeholder_code_invitation": "Enter your invitation code (optional)",
         "email": "Email",
         "placeholder_email": "Enter your email",
+         "no_email_business": "Please enter a valid business email",
         "no_email_valid": "Please enter a valid email address",
         "text_email": "Please enter a valid email address, your access will be sent to this email address.",
         "phone": "Phone",
@@ -503,6 +504,7 @@
         "placeholder_address": "Enter your address",
         "country": "Country",
         "postal_code": "Postal code",
+        "no_country_valid": "Select a valid country first",
         "placeholder_postal_code": "Enter your postal code",
         "no_postal_code_valid": "Please enter a valid postal code",
         "state": "State",
@@ -594,6 +596,7 @@
         "student_register": "* The access for students is only valid on April 16 from 15:00 hrs. to 17:00 hrs.",
         "register_student": "Register as student",
         "select_country_first": "Please select a country first",
+        "privacy_information_consent": "I agree to receive personalized information, including industry insights, exclusive networking opportunities, access to event offers and products from IGECO Mexico. You can unsubscribe at any time by clicking unsubscribe or contacting us.",
         "media_messege": "For media inquiries, please contact "      
     },
     "thanks_page":{

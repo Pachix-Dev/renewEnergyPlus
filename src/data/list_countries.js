@@ -1,4 +1,5 @@
-export const countries = [ 
+export const countries = [
+    {name: 'Mexico', code: 'MX'},  
     {name: 'Afghanistan', code: 'AF'}, 
     {name: 'Åland Islands', code: 'AX'}, 
     {name: 'Albania', code: 'AL'}, 
@@ -139,8 +140,7 @@ export const countries = [
     {name: 'Martinique', code: 'MQ'}, 
     {name: 'Mauritania', code: 'MR'}, 
     {name: 'Mauritius', code: 'MU'}, 
-    {name: 'Mayotte', code: 'YT'}, 
-    {name: 'Mexico', code: 'MX'}, 
+    {name: 'Mayotte', code: 'YT'},
     {name: 'Micronesia, Federated States of', code: 'FM'}, 
     {name: 'Moldova, Republic of', code: 'MD'}, 
     {name: 'Monaco', code: 'MC'}, 

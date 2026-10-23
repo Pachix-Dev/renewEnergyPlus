@@ -9,13 +9,27 @@ const config = {
 
 const hableError = (error) => {
 
+  if (error?.code === "ER_DUP_ENTRY") {
+    return {
+      status: false,
+      statusCode: 409,
+      message: "Ya estás registrado con este correo electrónico...",
+    };
+  }
+
   if (error?.sqlState === '23000') {
     return {
       status: false,
-      message: 'Ya estás registrado con este correo electrónico...',
+      message: 'Valida los datos capturados',
     }
   }
 
+  if (error?.code === 500) {
+    return {
+      status: false,
+      message: 'Error al guardar tus datos, por favor intenta de nuevo',
+    }
+  }
 
   return {
     status: false,
@@ -262,14 +276,14 @@ export class RegisterModel {
   static async create_user ({
       uuid,             
       name,
-      paternSurname,
-      maternSurname,
+      lastName,
       email,
       phone,
       typeRegister,
       genre,
       nacionality,
       code_invitation,
+
       company,
       industry,
       position,
@@ -283,27 +297,31 @@ export class RegisterModel {
       postalCode,
       webPage,
       phoneCompany,
+
       eventKnowledge,
       productInterest,
       levelInfluence,
       wannaBeExhibitor,
       alreadyVisited,
+      registro_en_sitio = 0,
+      imprimir_gafete = 0,
+
     }) {
       const connection = await mysql.createConnection(config)
       try {      
         const [result] = await connection.query(
-          'INSERT INTO users_2026 (uuid, name, paternSurname, maternSurname, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+          'INSERT INTO users_replus_2027 (uuid, name, lastName, email, phone, typeRegister, genre, nacionality, code_invitation, company, industry, position, area, country, municipality, state, city, address, colonia, postalCode, webPage, phoneCompany, eventKnowledge, productInterest, levelInfluence, wannaBeExhibitor, alreadyVisited, registro_en_sitio, imprimir_gafete ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
           [
             uuid,             
             name,
-            paternSurname,
-            maternSurname,
+            lastName,
             email,
             phone,
             typeRegister,
             genre,
             nacionality,
-            code_invitation,    
+            code_invitation,  
+
             company,
             industry,
             position,
@@ -317,11 +335,15 @@ export class RegisterModel {
             postalCode,
             webPage,
             phoneCompany,
+
             eventKnowledge,
             productInterest,
             levelInfluence,
             wannaBeExhibitor,
-            alreadyVisited,   
+            alreadyVisited,
+            
+            registro_en_sitio,
+            imprimir_gafete
           ]
         )
                                 
