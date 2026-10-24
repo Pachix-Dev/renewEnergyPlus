@@ -101,12 +101,12 @@ export function PrivacyNoticeAcceptance({
           })}
         />
         <span>
-          {translates.privacy_information_consent.replace(/\.$/, "")}
+          {translates.privacy_information_consent} 
           <a
             href="mailto:social.media@igeco.mx"
             className="font-semibold text-green-700 underline"
           >
-            {isEnglish ? "here" : "aquí"}
+            {isEnglish ? " here " : " aquí "}
           </a>
           .
         </span>
