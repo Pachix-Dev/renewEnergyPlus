@@ -118,6 +118,10 @@ const email_template_eng = async ({ name, lastName } = {}) => {
                 <tr><td style="padding:0;">
                     <a href="https://re-plus-mexico.com.mx/en/" target="_blank"><img src="https://re-plus-mexico.com.mx/img/email/visitor-2027/shared/footer.png" width="680" alt="Organized by: Italian Exhibition Group, Deutsche Messe, RE+ Events and SNEC · re-plus-mexico.com.mx" style="width:100%;max-width:680px;"></a>
                 </td></tr>
+                <tr><td align="center" class="email-padding" style="padding:20px 34px;color:#9199a1;">
+                    <p style="margin:0 0 4px;font-size:12px;line-height:18px;font-weight:800;">ITALIAN GERMAN EXHIBITION COMPANY MEXICO</p>
+                    <p style="margin:0;font-size:12px;line-height:18px;">Blvd. Francisco Villa 102. Piso 14, Colonia Oriental, León, Guanajuato, 37510, Mexico</p>
+                </td></tr>
             </table>
             <!--[if mso]></td></tr></table><![endif]-->
         </td></tr>
