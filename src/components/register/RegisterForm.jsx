@@ -366,13 +366,16 @@ export function RegisterForm({ translates, currentLanguage }) {
           webPage,
           phoneCompany,
           eventKnowledge,
-          productInterest: selectedProductInterests.map((item) => item.value).join(),
+          productInterest: selectedProductInterests
+            .map((item) => item.value)
+            .join(),
           levelInfluence,
           wannaBeExhibitor,
           alreadyVisited,
           currentLanguage,
           privacyNoticeAccepted: formData.privacyNoticeAccepted,
-          personalizedInformationAccepted: formData.personalizedInformationAccepted,
+          personalizedInformationAccepted:
+            formData.personalizedInformationAccepted,
         }),
       });
       const orderData = await response.json();
@@ -876,9 +879,7 @@ export function RegisterForm({ translates, currentLanguage }) {
                 <option value="CONSTRUCCION E INFRAESTRUCTURA">
                   {translates.industry_option_3}
                 </option>
-                <option value="ENERGIA">
-                  {translates.industry_option_4}
-                </option>
+                <option value="ENERGIA">{translates.industry_option_4}</option>
                 <option value="GOBIERNO, CAMARA Y ASOCIACIONES">
                   {translates.industry_option_5}
                 </option>
@@ -1460,7 +1461,7 @@ export function RegisterForm({ translates, currentLanguage }) {
               )}
             </div>
           </div>
-          
+
           {/*  Este campo se debe de incluir en la base de datos solo aplica para ECOMONDO */}
           {/* <div className='grid md:grid-cols-2 gap-6 mt-5'>
             <div>
@@ -1497,20 +1498,46 @@ export function RegisterForm({ translates, currentLanguage }) {
           currentLanguage={currentLanguage}
         />
 
+        {/* Renderiza un mensaje de error si existe */}
+        {message && (
+          <div className="text-red-600 bg-red-100 flex flex-col sm:flex-row items-center justify-center gap-2 my-5 py-5 px-6 rounded-md">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8 sm:w-6 sm:h-6"
+              viewBox="0 0 24 24"
+            >
+              <path fill="currentColor" d="M11 7h2v6h-2zm0 8h2v2h-2z" />
+              <path
+                fill="currentColor"
+                d="M12 22c5.51 0 10-4.49 10-10S17.51 2 12 2S2 6.49 2 12s4.49 10 10 10m0-18c4.41 0 8 3.59 8 8s-3.59 8-8 8s-8-3.59-8-8s3.59-8 8-8"
+              />
+            </svg>
+            <p className="font-bold text-center">{message}</p>
+          </div>
+        )}
+
         {/* Button para finalizar el registro */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center sm:mt-8">
           <button type="submit" className="button">
             {translates.finish}
+            <div className="bg-slate-900/50 hover:bg-slate-800 p-1 border rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M18 9.804v1.392l-5.688 5.883l-1.436-1.39L14.93 11.5H1v-2h13.923l-4.047-4.165l1.434-1.394z"
+                />
+              </svg>
+            </div>
           </button>
         </div>
 
-        {message && (
-          <p className="mt-5 text-red-600 bg-red-100 p-4 font-bold text-center">
-            {message}
-          </p>
-        )}
+        {/* Muestra el loader si se procesa el registro */}
         {processing && (
-          <div className="absolute top-0 left-0 bg-gray-400 bg-opacity-85 z-[999] w-full h-full px-4">
+          <div className="absolute top-0 left-0 bg-gray-600 bg-opacity-85 z-[999] w-full h-full px-4">
             <div
               role="status"
               className="grid content-end justify-center w-full h-full p-10"
@@ -1532,7 +1559,7 @@ export function RegisterForm({ translates, currentLanguage }) {
                     fill="currentFill"
                   />
                 </svg>
-                <span className="font-bold text-black text-2xl">
+                <span className="font-bold text-white text-2xl">
                   Estamos procesando la información por favor espere...
                 </span>
               </p>
