@@ -13,6 +13,7 @@ import { generatePDF_freePass, generateQRDataURL, generatePDFInvoice, generatePD
 import PDFDocument from 'pdfkit';
 import { Resend } from "resend";
 import { readFile } from 'node:fs/promises';
+import { basename } from 'node:path';
 
 const { json } = pkg
 const app = express()
@@ -730,21 +731,32 @@ app.get('/template-email', async (req, res) => {
             {name: 'item 2', quantity: 2},
         ]
     }
-    const emailContent = await email_template({ ...data });
+    const emailContent = req.query.lang === 'en'
+        ? await email_template_eng(data)
+        : await email_template(data);
     res.send(emailContent);
 });
 
 // Envia correo de confirmación de registro visitante
 async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){    
     try {
-        const emailContent = data.currentLanguage === 'es'
-            ? await email_template({ ...data })
-            : await email_template_eng({ ...data });
+        const templateData = {
+            ...data,
+            invoiceFilename: pdfAtch ? basename(pdfAtch) : null,
+            // Offer badge recovery if PDF generation failed.
+            uuid: pdfAtch ? data.uuid : null,
+        };
+        const language = data.currentLanguage === 'es' ? 'es' : 'en';
+        const emailContent = language === 'es'
+            ? await email_template(templateData)
+            : await email_template_eng(templateData);
 
         const email = {
             from: 'RE+ MEXICO <noreply@re-plus-mexico.com.mx>',
             to: data.email,
-            subject: 'REGISTRO CONFIRMADO RE+ MEXICO 2027',
+            subject: language === 'es'
+                ? 'REGISTRO CONFIRMADO RE+ MEXICO 2027'
+                : 'REGISTRATION CONFIRMED RE+ MEXICO 2027',
             html: emailContent,
         };
         const attachPdf = String(process.env.EMAIL_ATTACH_PDF ?? 'true').trim().toLowerCase() !== 'false';
