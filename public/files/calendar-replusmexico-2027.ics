@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//RE+ MEXICO//Visitor Registration 2027//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:replus-mexico-2027@re-plus-mexico.com.mx
+DTSTAMP:20261024T000000Z
+DTSTART:20270420T170000Z
+DTEND:20270422T230000Z
+SUMMARY:RE+ MEXICO 2027
+DESCRIPTION:20-22 de abril / April 20-22\, 2027.\n
+ Expo Guadalajara.\n20-21: 11:00-18:00 hrs.\n22: 11:00-17:00 hrs.\n
+ Hora local / Local time: Guadalajara (UTC-6).
+LOCATION:Expo Guadalajara\, Av. Mariano Otero 1499\, Guadalajara\, Jalisco
+URL:https://re-plus-mexico.com.mx/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
