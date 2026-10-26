@@ -60,7 +60,7 @@ export function PrivacyNoticeAcceptance({
           })}
         />
         <span>
-          {isEnglish ? "I have read and accept the " : "He leido y acepto el "}
+          {isEnglish ? "I have read and accept the " : "He leído y acepto el "}
           <a
             href={PRIVACY_NOTICE_URL}
             target="_blank"
