@@ -870,36 +870,47 @@ export function RegisterForm({ translates, currentLanguage }) {
                 className="mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm *:text-black"
               >
                 <option value="">{translates.select_option}</option>
-                <option value="AGROINDUSTRIA">
+                <option value="ALIMENTOS Y BEBIDAS">
                   {translates.industry_option_1}
                 </option>
-                <option value="ALIMENTOS Y BEBIDAS">
+                <option value="CAMARAS Y ASOCIACIONES">
                   {translates.industry_option_2}
                 </option>
-                <option value="CONSTRUCCION E INFRAESTRUCTURA">
+                <option value="CONSTRUCCIÓN">
                   {translates.industry_option_3}
                 </option>
-                <option value="ENERGIA">{translates.industry_option_4}</option>
-                <option value="GOBIERNO, CAMARA Y ASOCIACIONES">
+                <option value="DISTRIBUIDORES">
+                  {translates.industry_option_4}
+                </option>
+                <option value="EMPRESAS DE LA INDUSTRIA ELECTRICA">
                   {translates.industry_option_5}
                 </option>
-                <option value="HOTELERIA, TURISMO Y HOSPITALIDAD">
+                <option value="FABRICANTES">
                   {translates.industry_option_6}
                 </option>
-                <option value="MANUFACTURA E INDUSTRIA">
+                <option value="FINANCIERA">
                   {translates.industry_option_7}
                 </option>
-                <option value="MOVILIDAD Y AUTOMOTRIZ">
+                <option value="GOBIERNO">
                   {translates.industry_option_8}
                 </option>
-                <option value="ORGANISMOS OPERADORES DE AGUA">
+                <option value="HOTELERIA">
                   {translates.industry_option_9}
                 </option>
-                <option value="PLASTICOS, METALES Y DERIVADOS">
+                <option value="INSTALADORES">
                   {translates.industry_option_10}
                 </option>
-                <option value="QUÍMICA Y FARMACÉUTICA">
+                <option value="INTEGRADORES">
                   {translates.industry_option_11}
+                </option>
+                <option value="INVERSIONISTAS">
+                  {translates.industry_option_12}
+                </option>
+                <option value="MANUFACTURA">
+                  {translates.industry_option_13}
+                </option>
+                <option value="SERVICIOS DE CONSULTORIA">
+                  {translates.industry_option_14}
                 </option>
               </select>
               {errors.industry && (
@@ -1501,7 +1512,7 @@ export function RegisterForm({ translates, currentLanguage }) {
         {/* Renderiza un mensaje de error si existe */}
         {message && (
           <div className="text-red-600 bg-red-100 flex flex-col sm:flex-row items-center justify-center gap-2 my-5 py-5 px-6 rounded-md">
-            <svg 
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8 sm:w-6 sm:h-6"
               viewBox="0 0 24 24"

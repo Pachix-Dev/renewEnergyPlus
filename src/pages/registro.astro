@@ -1,102 +1,14 @@
 ---
-import i18next, { changeLanguage, t } from "i18next";
+import { changeLanguage, t } from "i18next";
 import LayoutRegister from "../layouts/LayoutRegister.astro";
-import { sponsors } from "../data/constanst_logos.js";
-import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
-import RegisterAccessModule from "../components/register/RegisterAccessModule.astro";
+import RegistrationLanding from "../components/register/RegistrationLanding.astro";
 
 changeLanguage("es");
-
-const currentLanguage = i18next.language;
-const base = currentLanguage === "es" ? "" : `/${currentLanguage}`;
 ---
 
-<LayoutRegister title="RE+ MEXICO REGISTRO">
-  <main
-    class="min-h-screen max-md:container mx-auto md:flex md:p-5 gap-5 justify-center items-center"
-  >
-     <div
-      class="md:w-1/2 bg-gradient-to-r from-[#766EA6] to-[#565078] p-12 text-white relative md:rounded-2xl md:mt-0"
-    >
-      <div class="absolute inset-0 overflow-hidden z-0">
-        <div
-          class="absolute top-10 right-10 w-32 h-32 bg-white bg-opacity-10 rounded-full"
-        >
-        </div>
-        <div
-          class="absolute bottom-20 left-10 w-24 h-24 bg-white bg-opacity-5 rounded-full"
-        >
-        </div>
-        <div
-          class="absolute top-1/2 right-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full"
-        >
-        </div>
-      </div>
-      <img src="/img/replusR.webp" alt="RE+ Mexico Logo" class="w-32 mb-8" />
-      <div class="relative z-10 text-left mb-8">
-        <p
-          class="font-[Tungsten-Medium] text-white text-3xl lg:text-4xl text-left uppercase font-bold tracking-wider"
-        >
-          {t("home.slogan")}
-        </p>
-        <p
-          class="font-[Tungsten-Medium] text-white text-3xl lg:text-4xl text-left"
-        >
-          {t("home.event-date")}
-          <span class="">| 2026</span>
-        </p>
-      </div>
-
-      <div class="bg-[#FFFFFF] rounded-2xl p-5 shadow-2xl relative z-10">
-        <MarqueeSponsors partners={sponsors} isLeftToRight />
-      </div>
-      <p class="mt-5 font-bold text-amber-400 text-2xl">
-        {t("register.student_register")}
-      </p>
-    </div>
-
-    <div class="md:w-1/2 bg-white overflow-hidden rounded-2xl shadow-2xl border border-[#d8cff9]">
-      <div class="p-12 bg-white">
-
-        <div class="mb-4 text-center md:text-left">
-          <h1 class="font-extrabold text-4xl">
-            {t("register.title")}
-          </h1>
-          <p class="text-gray-600 font-bold text-sm">
-            {t("register.welcome")}
-          </p>
-        </div>
-
-        <RegisterAccessModule
-          base={base}
-          language={currentLanguage}
-          firstTimeLabel={t("register.first_time")}
-        />
-
-        <div
-          class="mt-6 p-4 border rounded-xl bg-gray-50 flex flex-wrap items-center justify-center md:justify-between gap-4 text-center md:text-left"
-        >
-          <p class="text-gray-700 font-medium">
-            {t("home.register.reprint_hint")}
-          </p>
-          <a
-            href={`${base}/reimprimir-gafete`}
-            class="shrink-0 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl font-bold"
-          >
-            {t("home.register.reprint_button")}
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-   
-  </main>
+<LayoutRegister
+  title={t("register.landing.meta_title")}
+  description={String(t("register.landing.description"))}
+>
+  <RegistrationLanding />
 </LayoutRegister>
-
-<style>
-  body {
-    background-color: white;
-    color: black;
-  }
-</style>

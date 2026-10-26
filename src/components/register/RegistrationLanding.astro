@@ -1,0 +1,313 @@
+---
+import i18next, { t } from "i18next";
+
+const base = i18next.language === "es" ? "" : `/${i18next.language}`;
+const buttonClass =
+  "inline-flex min-h-[4.375rem] flex-wrap items-center justify-center gap-4 rounded-xl px-5 py-4 text-center text-sm font-extrabold transition-colors duration-150 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none sm:text-base";
+const iconClass = "size-6 shrink-0";
+---
+
+<main
+  class="registration-landing flex min-h-screen items-center px-5 py-10 text-white sm:px-8 lg:px-[3.65vw]"
+  aria-labelledby="registration-title"
+>
+  <div
+    class="mx-auto grid w-full max-w-[1368px] items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] xl:gap-16"
+  >
+    <div class="min-w-0">
+      <img
+        src="/img/replus_logo_2027_ed.webp"
+        alt="RE+ MEXICO"
+        width="1667"
+        height="692"
+        class="mb-3 h-auto w-[min(40%,10rem)]"
+      />
+      <img
+        src="/img/imagen2027/slogan.webp"
+        width="2615"
+        height="1152"
+        class="mb-5 h-auto w-[clamp(10rem,60%,80rem)] max-w-full"
+        alt="Powering the Future"
+      />
+
+      <h1
+        id="registration-title"
+        class="text-[clamp(2.25rem,4.4vw,4rem)] font-black uppercase leading-[1.08] tracking-[-0.045em]"
+      >
+        <span class="block subtitle">{t("register.landing.title")}</span>
+        <span class="titleRegistration block">
+          <span>RE+ MEXICO 2027</span>
+        </span>
+      </h1>
+
+      <p class="mt-4 max-w-[44rem] text-base leading-[1.75] sm:text-xl">
+        {t("register.landing.description")}
+      </p>
+
+      <!-- <p class="mt-6 text-sm leading-relaxed text-[#e3ebff]">
+        {t("register.landing.hint")}
+      </p> -->
+    </div>
+
+    <div class="w-full min-w-0 max-w-md justify-self-center lg:justify-self-end lg:self-start">
+      <nav
+        class="flex flex-col items-stretch gap-3"
+        aria-label={t("register.type_register")}
+      >
+        <a
+          href={`${base}/registro-nuevo`}
+          aria-describedby="registration-confirmation-notice"
+          class={`${buttonClass} w-full bg-[#3333ff] uppercase shadow-[0_12px_32px_rgba(51,51,255,0.24)] hover:bg-[#df005b] sm:min-h-[4.75rem] sm:gap-6 sm:px-10`}
+        >
+          <span class="min-w-0">{t("home.free_register")}</span>
+          <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white text-[#3333ff]" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 15 15"
+              focusable="false"
+              ><path
+                fill="currentColor"
+                d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"
+              ></path></svg
+            >
+          </span>
+        </a>
+        <p
+          id="registration-confirmation-notice"
+          class="text-center text-sm leading-relaxed text-[#e3ebff]"
+        >
+          {t("register.landing.confirmation_notice")}
+        </p>
+
+        <!-- <div class="grid w-full max-w-[38rem] gap-3 sm:grid-cols-[1.13fr_1fr]">
+          <a
+            href={`${base}/registro-estudiante`}
+            class={`${buttonClass} border border-white/45 bg-white/[0.07] hover:bg-white/15`}
+          >
+            <svg
+              class={iconClass}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="m2 9 10-5 10 5-10 5L2 9Zm4 2v6c4 3 8 3 12 0v-6m4-2v8"
+              ></path>
+            </svg>
+            {t("register.register_student")}
+          </a>
+          <a
+            href="mailto:social.media@igeco.mx"
+            class={`${buttonClass} border border-white/45 bg-white/[0.07] hover:bg-white/15`}
+          >
+            <svg
+              class={iconClass}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="M7 9h4v6H7zm7 0h3m-3 3h3m-3 3h3"></path>
+            </svg>
+            {t("register.landing.media")}
+          </a>
+        </div> -->
+      </nav>
+
+      <div
+        id="registro-panel-derecho"
+        class="mt-6 w-full min-w-0 rounded-3xl bg-white p-6 text-[#10213e] sm:p-8"
+        role="region"
+        aria-labelledby="event-info-title"
+      >
+        <h2
+          id="event-info-title"
+          class="text-center text-xl font-extrabold leading-tight tracking-[-0.035em] sm:text-2xl"
+        >
+          {t("register.landing.event_info")}
+        </h2>
+  
+        <dl class="mt-6 divide-y divide-[#e0e6ef]">
+          <div class="event-info-group relative pb-5 pl-9">
+            <dt class="text-sm font-semibold leading-6 text-[#5e708b]">
+              <svg
+                class={`${iconClass} absolute left-0 top-1 text-[#3333ff]`}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M16 3v4M8 3v4M3 11h18"></path>
+              </svg>
+              {t("register.landing.dates")}
+            </dt>
+            <dd class="mt-1 text-lg font-extrabold leading-snug sm:text-xl">
+              {t("home.event-date")}
+            </dd>
+          </div>
+  
+          <div class="event-info-group relative py-5 pl-9">
+            <dt class="text-sm font-semibold leading-6 text-[#5e708b]">
+              <svg
+                class={`${iconClass} absolute left-0 top-6 text-[#3333ff]`}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+              {t("register.landing.venue")}
+            </dt>
+            <dd class="mt-1">
+              <p class="text-lg font-extrabold leading-snug sm:text-xl">
+                {t("thanks_page.registration.venue")}
+              </p>
+              <p class="mt-1 text-sm leading-relaxed text-[#5e708b]">
+                {t("register.landing.location")}
+              </p>
+            </dd>
+          </div>
+  
+          <div class="event-info-group relative pt-5 pl-9">
+            <dt class="text-sm font-semibold leading-6 text-[#5e708b]">
+              <svg
+                class={`${iconClass} absolute left-0 top-6 text-[#3333ff]`}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 6v6l3 2"></path>
+              </svg>
+              {t("register.landing.visiting_hours")}
+            </dt>
+            <dd class="mt-2">
+              <ul class="space-y-3 text-sm leading-relaxed">
+                <li class="event-hours-row grid gap-x-4 gap-y-1">
+                  <span class="text-[#5e708b]">{t("register.landing.first_days")}</span>
+                  <span class="font-bold">{t("register.landing.first_days_hours")}</span>
+                </li>
+                <li class="event-hours-row grid gap-x-4 gap-y-1">
+                  <span class="text-[#5e708b]">{t("register.landing.last_day")}</span>
+                  <span class="font-bold">{t("register.landing.last_day_hours")}</span>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</main>
+
+<style>
+  @font-face {
+    font-family: "RegistrationMontserrat";
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat-Black";
+    src: url("/fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat-Italic";
+    src: url("/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  .titleRegistration {
+    font-family: "Montserrat-Black", "RegistrationMontserrat", sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-family: "Montserrat-Italic", "RegistrationMontserrat", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .registration-landing {
+    min-height: 100svh;
+    overflow-wrap: anywhere;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 18, 51, 0.76),
+        rgba(8, 20, 78, 0.5) 58%,
+        rgba(14, 22, 98, 0.25)
+      ),
+      url("/img/bg_replus_v2.webp") center / cover no-repeat;
+    font-family: "RegistrationMontserrat", sans-serif;
+  }
+
+  #registro-panel-derecho {
+    container-type: inline-size;
+  }
+
+  @container (max-width: 18rem) {
+    .event-info-group {
+      padding-left: 0;
+    }
+
+    .event-info-group > dt {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .event-info-group > dt svg {
+      position: static;
+    }
+  }
+
+  @container (max-width: 12rem) {
+    .event-info-group > dt {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  @container (min-width: 22rem) {
+    .event-hours-row {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+  }
+</style>
