@@ -600,6 +600,23 @@
         "media_messege": "For media inquiries, please contact "      
     },
     "thanks_page":{
+        "registration": {
+            "meta_title": "RE+ MEXICO 2027 | Registration confirmed",
+            "title": "Registration confirmed",
+            "welcome": "See you at",
+            "event_name": "RE+ MEXICO 2027!",
+            "description": "Get ready to connect with companies, technologies and specialists shaping the future of energy in Mexico.",
+            "dates": "April 20–22, 2027",
+            "venue": "Expo Guadalajara",
+            "email_notice": "Check your email: you will receive your registration confirmation and important information to help you prepare for your visit.",
+            "access_title": "Your access to RE+ MEXICO",
+            "download_qr": "Download QR",
+            "access_description": "Present this code to enter the event.",
+            "visit_title": "Plan your visit",
+            "exhibitors": "Meet the exhibitors",
+            "premium_program": "Discover the premium program",
+            "social_title": "Follow us on social media:"
+        },
         "title": "Thank you for registering",
         "title2": "Thank_you_for_registering",
         "description": "Your registration has been successfully completed. We will send you an email with your access to the event....",

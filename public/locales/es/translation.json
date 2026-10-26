@@ -599,6 +599,23 @@
         "media_messege": "Para atención a medios, favor de contactar a "
     },
     "thanks_page":{
+        "registration": {
+            "meta_title": "RE+ MEXICO 2027 | Registro confirmado",
+            "title": "Registro confirmado",
+            "welcome": "¡Nos vemos en",
+            "event_name": "RE+ MEXICO 2027!",
+            "description": "Prepárate para conectar con empresas, tecnologías y especialistas que están impulsando el futuro de la energía en México.",
+            "dates": "20–22 abril 2027",
+            "venue": "Expo Guadalajara",
+            "email_notice": "Revisa tu correo electrónico: recibirás la confirmación de tu registro e información importante para preparar tu visita.",
+            "access_title": "Tu acceso a RE+ MEXICO",
+            "download_qr": "Descargar QR",
+            "access_description": "Presenta este código para ingresar al evento.",
+            "visit_title": "Prepara tu visita",
+            "exhibitors": "Conoce a los expositores",
+            "premium_program": "Descubre el programa premium",
+            "social_title": "Síguenos en redes sociales:"
+        },
         "title": "Gracias por registrarte",
         "title2": "Gracias_por_registrarte",
         "description": "Tu registro ha sido exitoso, te hemos enviado un correo con tu gafete de acceso al evento o también puedes descargarlo dando click en el boton descargar tu gafete",
