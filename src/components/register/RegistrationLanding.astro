@@ -3,7 +3,7 @@ import i18next, { t } from "i18next";
 
 const base = i18next.language === "es" ? "" : `/${i18next.language}`;
 const buttonClass =
-  "inline-flex min-h-[4.375rem] flex-wrap items-center justify-center gap-4 rounded-xl px-5 py-4 text-center text-sm font-extrabold transition-colors duration-150 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none sm:text-base";
+  "inline-flex min-h-[4.375rem] flex-wrap items-center justify-center gap-4 rounded-xl sm:px-5 py-4 text-center text-xl font-extrabold transition-colors duration-150 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none sm:text-2xl";
 const iconClass = "size-6 shrink-0";
 ---
 
@@ -57,7 +57,7 @@ const iconClass = "size-6 shrink-0";
         <a
           href={`${base}/registro-nuevo`}
           aria-describedby="registration-confirmation-notice"
-          class={`${buttonClass} w-full bg-[#3333ff] uppercase shadow-[0_12px_32px_rgba(51,51,255,0.24)] hover:bg-[#df005b] sm:min-h-[4.75rem] sm:gap-6 sm:px-10`}
+          class={`${buttonClass} w-full bg-[#3333ff] uppercase shadow-[0_12px_32px_rgba(51,51,255,0.24)] hover:bg-[#df005b] sm:min-h-[4.75rem] sm:gap-6 sm:px-10 border-2 border-white`}
         >
           <span class="min-w-0">{t("home.free_register")}</span>
           <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white text-[#3333ff]" aria-hidden="true">
