@@ -77,10 +77,10 @@ export function RegisterForm({ translates, currentLanguage }) {
   const selectedProductInterests = Array.isArray(productInterest)
     ? productInterest
     : (productInterest || "")
-        .split(",")
-        .map((value) => value.trim())
-        .filter(Boolean)
-        .map((value) => ({ label: value, value }));
+      .split(",")
+      .map((value) => value.trim())
+      .filter(Boolean)
+      .map((value) => ({ label: value, value }));
 
   const {
     register,
@@ -1058,15 +1058,14 @@ export function RegisterForm({ translates, currentLanguage }) {
                   })}
                   name="postalCode"
                   id="postalCode"
-                  className={`w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm transition-all duration-200 ${
-                    !country
+                  className={`w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm transition-all duration-200 ${!country
                       ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                       : "bg-transparent"
-                  }`}
+                    }`}
                   placeholder={
                     !country
                       ? translates.select_country_first ||
-                        "Selecciona un país primero"
+                      "Selecciona un país primero"
                       : translates.placeholder_postal_code
                   }
                   autoComplete="postalCode"
@@ -1081,9 +1080,8 @@ export function RegisterForm({ translates, currentLanguage }) {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className={`h-4 w-4 transition-colors duration-200 ${
-                      !country ? "text-gray-300" : "text-gray-400"
-                    }`}
+                    className={`h-4 w-4 transition-colors duration-200 ${!country ? "text-gray-300" : "text-gray-400"
+                      }`}
                   >
                     <path
                       strokeLinecap="round"
@@ -1367,32 +1365,72 @@ export function RegisterForm({ translates, currentLanguage }) {
                 {translates.product_interest}
                 <span className="text-red-600"> * </span>
               </p>
-              <Select
-                isMulti
-                options={translates.list_interest_product.map((item) => ({
-                  label: item,
-                  value: item,
-                }))}
-                value={selectedProductInterests}
-                onChange={(selected) => {
-                  const selectedArray = Array.isArray(selected) ? selected : [];
-                  setProductInterest(selectedArray);
-                  // Actualizar el valor en react-hook-form
-                  setValue(
-                    "productInterest",
-                    selectedArray.length > 0 ? selectedArray : null,
-                  );
-                }}
-                placeholder={
-                  translates.select_option || "Seleccionar opciones..."
-                }
-                noOptionsMessage={() =>
-                  translates.select_option || "No hay opciones disponibles"
-                }
-                className="mt-2 w-full max-w-full text-sm uppercase"
-                classNamePrefix="react-select"
-                closeMenuOnSelect={false}
-              />
+
+              {/* Selector de productos de interés */}
+              <div className="max-w-2xl">
+                <Select
+                  isMulti
+                  options={translates.list_interest_product.map((item) => ({
+                    label: item,
+                    value: item,
+                  }))}
+                  value={selectedProductInterests}
+                  onChange={(selected) => {
+                    const selectedArray = Array.isArray(selected)
+                      ? selected
+                      : [];
+
+                    setProductInterest(selectedArray);
+
+                    setValue(
+                      "productInterest",
+                      selectedArray.length > 0 ? selectedArray : null,
+                    );
+                  }}
+                  placeholder={
+                    translates.select_option || "Seleccionar opciones..."
+                  }
+                  noOptionsMessage={() =>
+                    translates.select_option || "No hay opciones disponibles"
+                  }
+                  className="mt-2 w-full max-w-full text-sm uppercase"
+                  classNamePrefix="react-select"
+                  // Mantener menú abierto al seleccionar varias opciones
+                  closeMenuOnSelect={false}
+                  closeMenuOnScroll={false}
+                  blurInputOnSelect={false}
+                  // Posicionamiento responsive
+                  menuPortalTarget={
+                    typeof document !== "undefined" ? document.body : undefined
+                  }
+                  menuPosition="fixed"
+                  menuPlacement="auto"
+                  menuShouldScrollIntoView={false}
+                  menuShouldBlockScroll={false}
+                  // Altura y desplazamiento
+                  maxMenuHeight={250}
+                  styles={{
+                    menuPortal: (base) => ({
+                      ...base,
+                      zIndex: 9999,
+                    }),
+
+                    menu: (base) => ({
+                      ...base,
+                      zIndex: 9999,
+                    }),
+
+                    menuList: (base) => ({
+                      ...base,
+                      maxHeight: 250,
+                      overflowY: "auto",
+                      WebkitOverflowScrolling: "touch",
+                      overscrollBehavior: "contain",
+                      touchAction: "pan-y",
+                    }),
+                  }}
+                />
+              </div>
 
               {/* Campo oculto para validación con react-hook-form */}
               <input
@@ -1528,7 +1566,7 @@ export function RegisterForm({ translates, currentLanguage }) {
         )}
 
         {/* Button para finalizar el registro */}
-        <div className="flex justify-center sm:mt-8">
+        <div className="flex justify-center mt-6 sm:mt-8">
           <button type="submit" className="button">
             {translates.finish}
             <div className="bg-slate-900/50 hover:bg-slate-800 p-1 border rounded-full">
