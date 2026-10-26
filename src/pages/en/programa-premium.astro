@@ -28,14 +28,20 @@ const language = i18next.language || "es";
   <section
     class="relative overflow-hidden bg-gradient-to-b from-[#0B1224] via-[#0f172a] to-[#1E293B]"
   >
+    <div class="relative sm:h-screen flex items-center justify-center">
+      <div class="text-center mx-auto p-10">
+        <h1 class="text-white titleProgramPremium italic text-4xl sm:text-6xl uppercase">{language === "es" ? "Programa Premium" : "Premium Program"}</h1>
+        <p class="text-white text-lg sm:text-2xl tracking-[7px]">{language === "es" ? "Próximamente" : "Coming soon"}</p>
+      </div>
+    </div>
     <!-- Programa Premium Hero -->
-    <ProgramaPremiumHero />
+    <!-- <ProgramaPremiumHero /> -->
 
     <!-- Keynote Speakers Carousel -->
-    <KeynoteSpeakersCarousel language={language} client:load />
+    <!-- <KeynoteSpeakersCarousel language={language} client:load /> -->
 
     <!-- Boton para descargar Programa Premium -->
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mb-8 grid grid-cols-1 items-end gap-4 lg:grid-cols-[max-content,minmax(0,1fr)] lg:gap-6">
         <DownloadProgramButton
           language={language}
@@ -81,22 +87,62 @@ const language = i18next.language || "es";
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Render dinámico en cliente para datos vivos -->
-    <ProgramaEscenarioClient
+    <!-- <ProgramaEscenarioClient
       client:load
       apiUrl={API_URL}
       language={i18next.language}
       escenarioIndex={0}
       showCompanyLogo={true}
-    />
+    /> -->
 
     <!-- Sección de precios -->
-    <ProductosPremiumPreview />
+    <!-- <ProductosPremiumPreview /> -->
   </section>
 </Layout>
 <style>
+
+
+@font-face {
+    font-family: "RegistrationMontserrat";
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat-Black";
+    src: url("/fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat-Italic";
+    src: url("/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  .titleProgramPremium {
+    font-family: "Montserrat-Black", "RegistrationMontserrat", sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-family: "Montserrat-Italic", "RegistrationMontserrat", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+
+
   @keyframes spin-slow {
     from {
       transform: rotate(0deg);
