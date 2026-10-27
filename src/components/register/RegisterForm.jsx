@@ -1,14 +1,24 @@
 import { useRegisterForm } from "../../store/register-form";
-import { useForm } from "react-hook-form";
-import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import Select from "react-select";
 import { countries } from "../../data/list_countries";
 import { PrivacyNoticeAcceptance } from "./PrivacyNoticeAcceptance.jsx";
-import "react-phone-number-input/style.css";
 import "./Form.css";
 import { useEffect, useState } from "react";
 import { flushSync } from "react-dom";
-import { CountrySelectWithCode } from "./CountrySelectWithCode";
+
+import { getCountries, getCountryCallingCode, parsePhoneNumber } from "react-phone-number-input";
+import phoneLabels from "react-phone-number-input/locale/es.json";
+
+const phoneCountryOptions = getCountries().map((countryCode) => {
+  const callingCode = `+${getCountryCallingCode(countryCode)}`;
+
+  return {
+    value: countryCode,
+    label: `${phoneLabels[countryCode]} ${callingCode}`,
+    callingCode,
+  };
+});
 
 export function RegisterForm({ translates, currentLanguage }) {
   const {
@@ -82,6 +92,8 @@ export function RegisterForm({ translates, currentLanguage }) {
       .filter(Boolean)
       .map((value) => ({ label: value, value }));
 
+  const savedPhone = phone ? parsePhoneNumber(phone) : undefined;
+
   const {
     register,
     control,
@@ -94,6 +106,8 @@ export function RegisterForm({ translates, currentLanguage }) {
       municipality,
       city,
       colonia,
+      phoneCountry: savedPhone?.country || "MX",
+      mobileNumber: savedPhone?.nationalNumber || "",
       productInterest: selectedProductInterests,
       privacyNoticeAccepted: false,
       personalizedInformationAccepted: false,
@@ -330,6 +344,9 @@ export function RegisterForm({ translates, currentLanguage }) {
   const handleRegister = async (formData) => {
     if (processing) return;
 
+    const completePhone = `+${getCountryCallingCode(formData.phoneCountry)}${formData.mobileNumber}`;
+    setPhone(completePhone);
+
     setProcessing(true);
     setMessage("");
     const fallbackMessage =
@@ -347,7 +364,7 @@ export function RegisterForm({ translates, currentLanguage }) {
           name,
           lastName,
           email,
-          phone,
+          phone: completePhone,
           typeRegister: "VISITANTE",
           genre,
           nacionality,
@@ -698,29 +715,96 @@ export function RegisterForm({ translates, currentLanguage }) {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Telefono (predeterminado +52 Mexico ) */}
+          <div className="grid md:grid-cols-2 gap-6  items-end">
+            {/* Teléfono móvil */}
             <div>
               <p className="mt-5 text-black">
-                {translates.phone} <span className="text-red-600">*</span>
+                {translates.phone} <span className="text-red-600"> * </span>
               </p>
-              <div className="relative mt-2">
-                <PhoneInputWithCountry
-                  name="phone"
-                  control={control}
-                  defaultValue={phone}
-                  onChange={(e) => setPhone(e)}
-                  defaultCountry="MX"
-                  countrySelectComponent={CountrySelectWithCode}
-                  international
-                  withCountryCallingCode
-                  className="w-full rounded-lg border border-gray-200 ps-4 text-sm shadow-sm"
-                  placeholder={translates.placeholder_phone}
-                />
+
+              <div className="mt-2 grid sm:grid-cols-2 gap-3">
+                <div>
+                  <label
+                    htmlFor="phone-country"
+                    className="mb-1 block text-sm"
+                  >
+                    {translates.phone_country_code}
+                  </label>
+
+                  <Controller
+                    name="phoneCountry"
+                    control={control}
+                    rules={{ required: translates.requiered }}
+                    render={({ field }) => (
+                      <Select
+                        {...field}
+                        inputId="phone-country"
+                        options={phoneCountryOptions}
+                        value={phoneCountryOptions.find(
+                          (option) => option.value === field.value,
+                        )}
+                        onChange={(option) =>
+                          field.onChange(option?.value || "")
+                        }
+                        formatOptionLabel={(option, { context }) =>
+                          context === "value"
+                            ? option.callingCode
+                            : option.label
+                        }
+                        className="text-sm"
+                        classNamePrefix="react-select"
+                        styles={{
+                          control: (base) => ({
+                            ...base,
+                            minHeight: 54,
+                            borderRadius: "0.5rem",
+                            borderColor: "#e5e7eb",
+                          }),
+                          menu: (base) => ({
+                            ...base,
+                            width: 280,
+                            zIndex: 20,
+                          }),
+                        }}
+                      />
+                    )}
+                  />
+                </div>
+
+                <label>
+                  <span className="mb-1 block text-sm">
+                   {translates.phone_number}
+                  </span>
+
+                  <input
+                    type="tel"
+                    inputMode="numeric"
+                    autoComplete="tel-national"
+                    maxLength={15}
+                    placeholder={translates.phone_help}
+                    className="w-full rounded-lg border border-gray-200 p-4 text-sm"
+                    {...register("mobileNumber", {
+                      required: translates.requiered,
+                      pattern: {
+                        value: /^[0-9]{1,15}$/,
+                        message: translates.no_phone_valid,
+                      },
+                      onChange: (event) => {
+                        const digits = event.target.value
+                          .replace(/\D/g, "")
+                          .slice(0, 15);
+
+                        event.target.value = digits;
+                        setValue("mobileNumber", digits, { shouldDirty: true });
+                      },
+                    })}
+                  />
+                </label>
               </div>
-              {errors.phone && (
+
+              {errors.mobileNumber && (
                 <p className="text-red-600 font-light">
-                  {errors.phone.message}
+                  {errors.mobileNumber.message}
                 </p>
               )}
             </div>
