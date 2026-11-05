@@ -569,24 +569,8 @@ export function RegisterForm({ translates, currentLanguage }) {
             <div>
               <p className="mt-5 font-semibold text-black flex flex-wrap items-center gap-2">
                 {translates.email} <span className="text-red-600">*</span>
-                <span className="text-red-600 flex items-center gap-1 text-[11px] sm:text-sm font-normal">
-                  (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0m9-4v4m0 4h.01"
-                    />
-                  </svg>
-                  {translates.no_email_business})
+                <span className="text-blue-800 font-semibold italic flex items-center gap-1 text-[11px] sm:text-sm">
+                  ( {translates.no_email_business} )
                 </span>
               </p>
               <div className="relative mt-2 ">
@@ -1108,24 +1092,8 @@ export function RegisterForm({ translates, currentLanguage }) {
             <div>
               <p className="text-black flex flex-wrap items-center gap-2 font-semibold">
                 {translates.postal_code} <span className="text-red-600">*</span>
-                <span className="text-red-600 flex items-center gap-1 text-sm font-normal">
-                  (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0m9-4v4m0 4h.01"
-                    />
-                  </svg>
-                  {translates.no_country_valid})
+                <span className="text-blue-800 font-semibold italic flex items-center gap-1 text-sm">
+                  ( {translates.no_country_valid} )
                 </span>
               </p>
               <div className="relative mt-2">
