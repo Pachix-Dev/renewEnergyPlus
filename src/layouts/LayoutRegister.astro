@@ -79,7 +79,10 @@ const { title, description = title } = Astro.props
         'script',
         'https://connect.facebook.net/en_US/fbevents.js'
       )
-      fbq('init', '1047851480332189')
+      fbq('init', '1047851480332189',
+        { em: 'email@email.com' ,  // Values will be hashed automatically by the pixel using SHA-256
+          ph: '1234567890'
+        });
       fbq('track', 'PageView')
     </script>
     <noscript
