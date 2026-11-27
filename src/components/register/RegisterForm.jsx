@@ -569,9 +569,9 @@ export function RegisterForm({ translates, currentLanguage }) {
             <div>
               <p className="mt-5 font-semibold text-black flex flex-wrap items-center gap-2">
                 {translates.email} <span className="text-red-600">*</span>
-                <span className="text-blue-800 font-semibold italic flex items-center gap-1 text-[11px] sm:text-sm">
+                {/* <span className="text-blue-800 font-semibold italic flex items-center gap-1 text-[11px] sm:text-sm">
                   ( {translates.no_email_business} )
-                </span>
+                </span> */}
               </p>
               <div className="relative mt-2 ">
                 <input
